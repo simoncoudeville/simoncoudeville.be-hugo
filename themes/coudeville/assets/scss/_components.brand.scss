@@ -6,6 +6,7 @@
 
 .c-brand {
     color: var(--highlight-color);
+    font-family: $alpha-font-family;
     // font-weight: normal;
     font-feature-settings: "salt";
     @include font-height($root-font-size,$root-baseline-multiplier);
