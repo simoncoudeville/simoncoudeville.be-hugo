@@ -8,12 +8,12 @@
   </url>
   
   <url>
-    <loc>https://simoncoudeville.be/tags/</loc>
-    <priority>0</priority>
+    <loc>https://simoncoudeville.be/</loc>
   </url>
   
   <url>
-    <loc>https://simoncoudeville.be/</loc>
+    <loc>https://simoncoudeville.be/tags/</loc>
+    <priority>0</priority>
   </url>
   
 </urlset>

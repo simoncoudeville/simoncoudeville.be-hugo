@@ -8,13 +8,3 @@
     list-style: none;
     padding-left: 0;
 }
-
-.o-list--horizontal {
-    @include clearfix;
-}
-
-    .o-list__item {
-        .o-list--horizontal & {
-            float: left;
-        }
-    }

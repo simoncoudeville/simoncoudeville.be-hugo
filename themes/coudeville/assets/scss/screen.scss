@@ -21,7 +21,6 @@
 @import 'settings.colors';
 
 // Tools
-@import 'tools.functions';
 @import 'tools.mixins';
 @import 'tools.spacing';
 @import 'tools.typography';
@@ -36,51 +35,24 @@
 @import 'elements.fonts';
 @import 'elements.page';
 @import 'elements.typography';
-//@import 'elements.images';
-//@import 'elements.forms';
-//@import 'elements.tables';
 
 /* Objects */
-// @import 'objects.grid';
-//@import 'objects.media';
-//@import 'objects.media-embed';
+@import 'objects.grid';
 @import 'objects.list';
-//@import 'objects.tables';
-// @import 'objects.flexbox';
 
 /* Components */
-//@import 'components.header';
 @import 'components.footer';
-//@import 'components.navigation';
 @import 'components.brand';
 @import 'components.row';
-//@import 'components.icons';
-//@import 'components.alerts';
-//@import 'components.buttons';
-//@import 'components.input';
-//@import 'components.label';
-//@import 'components.lists';
-//@import 'components.pagination';
-//@import 'components.cards';
-//@import 'components.styleguide';
 
 /* Plugins */
-//@import 'plugins.syntax';
-//@import 'plugins.googlemaps';
 
 /* Utilities */
 @import 'utilities.max-widths';
-//@import 'utilities.widths';
-//@import 'utilities.push';
-//@import 'utilities.pull';
-//@import 'utilities.order';
 //@import 'utilities.spacing';
 // @import 'utilities.ms';
 @import 'utilities.align';
-//@import 'utilities.flex';
 // @import 'utilities.colors';
-// @import 'utilities.opacities';
-//@import 'utilities.layers';
 //@import 'utilities.states';
 @import 'utilities.print';
 @import 'utilities.shame';
