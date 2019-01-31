@@ -1,0 +1,112 @@
+/*
+    Components: Navigation
+    ---
+    Site navigation, breadcrumbs, etc.
+*/
+
+.c-nav-main {
+    display: none;
+    font-family: $alpha-font-family;
+
+    @include mq(bp3) {
+        display: block;
+        @include margin-right($columns-gutter * -1);
+    }
+
+    &.is-visible {
+        display: block;
+    }
+
+    .c-header & {
+
+        @if $flexbox == false {
+            @include mq(bp3) {
+                float: right;
+            }
+        }
+    }
+}
+
+    .c-nav-main__list {
+        border: 1px dotted palette(color-neutral,light);
+        border-width: 1px 0;
+        margin-bottom: 0;
+
+        @include mq(bp3) {
+            border: 0;
+
+            @if $flexbox {
+                display: flex;
+            }
+        }
+    }
+
+    .c-nav-main__item {
+        & + & {
+            border-top: 1px dotted palette(color-neutral,light);
+        }
+
+        @include mq(bp3) {
+            @if $flexbox == false {
+                float: left;
+            }
+
+            & + & {
+                border-top: 0;
+            }
+        }
+    }
+
+    .c-nav-main__link {
+        display: block;
+        color: palette(color-alpha);
+        text-decoration: none;
+        font-weight: $beta-font-weight;
+        @include padding-lr($columns-gutter, $columns-gutter);
+        @include text-dimensions($alpha-font-size,1,0,1,1);
+
+        @include mq(bp1) {
+            @include padding-lr($columns-gutter * 2, $columns-gutter * 2);
+        }
+
+        @include mq(bp3) {
+            @include padding-tb(1.25,1.25);
+            @include padding-lr($columns-gutter, $columns-gutter);
+        }
+
+        @include mq(bp4) {
+            @include padding-lr($columns-gutter, $columns-gutter);
+        }
+
+        &:hover,
+        .is-selected & {
+            color: palette(color-alpha,dark);
+        }
+    }
+
+.c-nav-main-trigger {
+    user-select: none;
+    display: block;
+    color: palette(color-alpha);
+    background-color: palette(color-neutral,x-light);
+    outline: 0;
+    border-radius: $radius;
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include padding-lr($columns-gutter,$columns-gutter);
+    @include text-dimensions($alpha-font-size,1,0,1.25,1.25);
+
+    &.is-active {
+        color: palette(color-neutral);
+    }
+
+    @include mq(bp1) {
+        @include padding-lr($columns-gutter * 2, $columns-gutter * 2);
+    }
+
+    @include mq(bp3) {
+        display: none;
+    }
+}

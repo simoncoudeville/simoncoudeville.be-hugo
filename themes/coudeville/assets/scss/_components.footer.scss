@@ -1,0 +1,42 @@
+/*
+    Components: Footer
+    ---
+    The footer of the website
+*/
+
+.c-footer {
+    @include mq(bp3) {
+        display: flex;
+    }
+}
+
+    .c-footer__item {
+        @include margin-right(1);
+    }
+
+.c-footer-links,
+.c-footer-text {
+    @include text-dimensions($ms-1,.875);
+
+    @include mq(bp3) {
+        @include text-dimensions($ms-2,.75);
+    }
+}
+
+.c-footer-links {
+    @include mq(bp1) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+    .c-footer-links__item {
+        @include margin-right(1);
+    }
+
+    .c-footer-links__link {
+        &,
+        &:hover {
+            text-decoration: none;
+        }
+    }

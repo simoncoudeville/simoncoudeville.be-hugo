@@ -1,0 +1,28 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta charset="utf-8">
+<meta http-equiv="cleartype" content="on">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="{{ .Params.Description }}">
+<meta name="author" content="{{ .Site.Params.Author }}">
+<title>{{ block "title" . }}{{ .Params.Title }} - {{ with .Site.Title }}{{ . }}{{ end }}{{ end }}</title>
+
+<link rel="stylesheet" href="https://use.typekit.net/iac8gyg.css">
+
+{{ $options := (dict "targetPath" "css/screen.css" "outputStyle" "compressed" "enableSourceMap" true ) }}
+{{ $style := resources.Get "scss/screen.scss" | resources.ToCSS $options }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+<link rel="icon" href="/favicon.png">
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-72285109-1', 'auto');
+    ga('send', 'pageview');
+</script>

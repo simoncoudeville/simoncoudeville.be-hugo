@@ -1,0 +1,11 @@
+baseURL = "http://simoncoudeville.be/"
+languageCode = "en-us"
+title = "Simon Coudeville"
+theme = "Coudeville"
+relativeURLS = true
+canonifyurls = true
+enableEmoji = true
+
+[params]
+  author = "Simon Coudeville"
+  description = "Tesla's Awesome Hugo Site"

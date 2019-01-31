@@ -1,0 +1,21 @@
+/*
+    Components: Brand
+    ---
+    Brand image/logo
+*/
+
+.c-brand {
+    color: palette(color-neutral,xxxx-light);
+    // font-weight: normal;
+    font-feature-settings: "salt";
+    @include text-dimensions($ms-1,.875);
+
+    @include mq(bp3) {
+        @include text-dimensions($ms-2,.75);
+    }
+}
+
+.c-brand__line {
+    color: $body-color;
+    font-weight: normal;
+}

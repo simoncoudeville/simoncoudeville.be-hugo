@@ -1,0 +1,26 @@
+/*
+    Components: Row
+    ---
+    Creates a horizontal row with padding
+*/
+
+.c-row {
+    position: relative;
+    width: 100%;
+
+    & + & {
+        @include padding-top($alpha-leading);
+
+        @include mq(bp3) {
+            @include padding-top($alpha-leading * 2);
+        }
+
+        @include mq(bp4) {
+            @include padding-top($alpha-leading * 3);
+        }
+
+        @include mq(bp5) {
+            @include padding-top($alpha-leading * 4);
+        }
+    }
+}

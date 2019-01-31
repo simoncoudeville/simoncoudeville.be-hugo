@@ -1,0 +1,82 @@
+//
+//  Settings: Colors
+//  ---
+//  The palette function works with a base color and a tint.
+//
+
+// Palette function > eg. palette(color-alpha,base)
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+
+// LightSteelBlue
+// Khaki PaleGoldenRod
+// Lavender thistle
+// CornflowerBlue
+// Salmon
+// SkyBlue
+// LightCoral
+// LightGreen
+// LightSalmon
+// PaleTurquoise
+// LightBlue
+//
+// PowderBlue
+
+// Base colors
+$color-alpha                : #0033cc !default;
+//$color-alpha                : #0EEAFF !default;
+//$color-alpha                : blue !default;
+//$color-alpha                : khaki !default;
+$color-beta                 : #2ECC40 !default;
+
+$color-error                : #FF4136 !default;
+$color-success              : #2ECC40 !default;
+$color-notice               : #FF851B !default;
+
+$color-neutral              : hsl(hue($color-alpha),10,50) !default;
+
+// Palettes
+$palettes: (
+    color-neutral: (
+        xxxx-light          : hsl(hue($color-neutral),2.5,97),
+        xxx-light           : hsl(hue($color-neutral),2.5,95),
+        xx-light            : hsl(hue($color-neutral),5,87.5),
+        x-light             : hsl(hue($color-neutral),7.5,75),
+        light               : hsl(hue($color-neutral),saturation($color-neutral),62.5),
+        base                : $color-neutral,
+        dark                : hsl(hue($color-neutral),saturation($color-neutral),37.5),
+        x-dark              : hsl(hue($color-neutral),saturation($color-neutral),25),
+        xx-dark             : hsl(hue($color-neutral),saturation($color-neutral),12.5),
+        xxx-dark            : hsl(hue($color-neutral),saturation($color-neutral),7.5),
+        xxxx-dark           : hsl(hue($color-neutral),saturation($color-neutral),5)
+    ),
+    color-alpha: (
+        x-light             : hsl(hue($color-alpha),saturation($color-alpha),75),
+        light               : hsl(hue($color-alpha),saturation($color-alpha),50),
+        base                : $color-alpha,
+        dark                : hsl(hue($color-alpha),saturation($color-alpha),25),
+        x-dark              : hsl(hue($color-alpha),saturation($color-alpha),15)
+    ),
+    color-beta: (
+        light               : hsl(hue($color-beta),70,60),
+        base                : $color-beta,
+        dark                : hsl(hue($color-beta),100,25),
+        x-dark              : hsl(hue($color-beta),100,15)
+    ),
+    color-error: (
+        light               : hsl(hue($color-error),70,60),
+        base                : $color-error,
+        dark                : hsl(hue($color-error),100,35),
+    ),
+    color-success: (
+        light               : hsl(hue($color-success),70,60),
+        base                : $color-success,
+        dark                : hsl(hue($color-success),100,35),
+    ),
+    color-notice: (
+        light               : hsl(hue($color-notice),70,60),
+        base                : $color-notice,
+        dark                : hsl(hue($color-notice),100,35),
+    )
+);

@@ -1,0 +1,125 @@
+/*
+    Elements: Page
+    ---
+    Default markup for page level elements
+*/
+
+// ---
+// Variables
+// ---
+
+$html-font-family                   : $alpha-font-family !default;
+$html-font-weight                   : $alpha-font-weight !default;
+$html-font-size                     : $alpha-font-size !default;
+$html-line-height                   : $alpha-line-height !default;
+
+$html-responsive-font-size          : true !default;
+$html-responsive-font-breakpoint    : bp1 !default;
+$html-responsive-font-magnification : 112.5% !default;
+
+$html-background-color              : palette(color-neutral,xx-dark) !default;
+$body-background-color              : palette(color-alpha) !default;
+$body-color                         : palette(color-neutral,x-light) !default;
+
+$body-font-smoothing                : true !default;
+
+$body-selection-background-color    : palette(color-neutral,xxxx-light) !default;
+$body-selection-color               : palette(color-neutral,xxxx-dark) !default;
+$body-selection-text-shadow         : none !default;
+
+// Styles
+
+html {
+    font: $html-font-weight #{$html-font-size/16*100%}/#{$html-line-height} $html-font-family;
+    -webkit-overflow-scrolling: touch;
+    background-color: $html-background-color;
+    background-attachment: fixed;
+
+    @include mq(bp1) {
+        font-size: $alpha-font-size/16*112.5%;
+    }
+
+    @include mq(bp3) {
+        font-size: $alpha-font-size/16*125%;
+    }
+
+    @include mq(bp4) {
+        font-size: $alpha-font-size/16*137.5%;
+    }
+
+    @include mq(bp5) {
+        font-size: $alpha-font-size/16*150%;
+    }
+
+    @include mq(bp6) {
+        font-size: $alpha-font-size/16*162.5%;
+    }
+}
+
+body {
+    color: $body-color;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    @include padding-tb($alpha-leading, 0);
+    @include padding-lr($columns-gutter,$columns-gutter);
+
+    @if $body-font-smoothing == true {
+        -webkit-font-smoothing: antialiased;
+    }
+
+    // &:before {
+    //    content: '';
+    //    position: fixed;
+    //    top: 0;
+    //    right: 0;
+    //    bottom: 0;
+    //    left: 0;
+    //    background: transparent url('../img/wallpaper-516.gif') 0 0 repeat;
+    //    background-size: 600px 607px;
+    //    opacity: .05;
+    //    min-height: 100%;
+    //    //z-index: 1;
+    //
+    //    @include mq(bp3) {
+    //        background-size: auto auto;
+    //    }
+    //
+    // }
+
+    @include mq(bp1) {
+        @include padding-tb($alpha-leading * 2,$alpha-leading);
+        @include padding-lr($columns-gutter * 2,$columns-gutter * 2);
+    }
+
+    @include mq(bp3) {
+        @include padding-tb($alpha-leading * 3,$alpha-leading * 2);
+        @include padding-lr($columns-gutter * 3,$columns-gutter * 3);
+    }
+
+    @include mq(bp4) {
+        @include padding-tb($alpha-leading * 4,$alpha-leading * 3);
+        @include padding-lr($columns-gutter * 4,$columns-gutter * 4);
+    }
+
+    @include mq(bp5) {
+        @include padding-tb($alpha-leading * 5,$alpha-leading * 4);
+        @include padding-lr($columns-gutter * 5,$columns-gutter * 5);
+    }
+
+}
+
+::-moz-selection {
+    background-color: $body-selection-background-color;
+    color: $body-selection-color;
+    text-shadow: $body-selection-text-shadow;
+}
+
+::selection {
+    background-color: $body-selection-background-color;
+    color: $body-selection-color;
+    text-shadow: $body-selection-text-shadow;
+}

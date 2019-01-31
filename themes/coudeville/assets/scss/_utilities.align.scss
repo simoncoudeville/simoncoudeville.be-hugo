@@ -1,0 +1,38 @@
+/*
+    Utilities: Align
+    ---
+    Align utility classes
+*/
+
+// object align
+
+@if $flexbox == false {
+    .u-align-vertical {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.u-align-horizontal {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.u-align-right {
+    margin-left: auto;
+}
+
+.u-align-left {
+    margin-right: auto;
+}
+
+// text align
+
+.u-text-align-center {
+    text-align: center;
+}
+
+.u-text-align-right {
+    text-align: center;
+}
