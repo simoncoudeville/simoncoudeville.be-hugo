@@ -5,13 +5,13 @@
 */
 
 .c-brand {
-    color: palette(color-neutral,xxxx-light);
+    color: var(--highlight-color);
     // font-weight: normal;
     font-feature-settings: "salt";
-    @include font-height(ms(0),$root-baseline-multiplier);
+    @include font-height($root-font-size,$root-baseline-multiplier);
 }
 
 .c-brand__line {
-    color: $body-color;
+    color: var(--foreground-color);
     font-weight: normal;
 }

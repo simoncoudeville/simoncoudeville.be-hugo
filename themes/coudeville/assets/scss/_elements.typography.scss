@@ -21,19 +21,6 @@ $h3-baseline-multiplier: 4;
 $h4-font-size: ms(-1);
 $h4-baseline-multiplier: 4;
 
-$link-transition               : all $animation-duration-alpha $animation-easing-alpha !default;
-
-$link-decoration               : none !default;
-$link-decoration--hover        : none !default;
-
-$link-color                    : palette(color-neutral,xxxx-light) !default;
-$link-color--visited           : palette(color-neutral,xxxx-light) !default;
-$link-color--hover             : palette(color-neutral,x-light) !default;
-$link-color--focus             : palette(color-alpha,xxxx-light) !default;
-
-$link-outline                  : 0 !default;
-$link-outline--focus           : thin dotted !default;
-
 // ---
 // Styles
 // ---
@@ -110,29 +97,27 @@ pre {
 // Links
 
 a {
-    text-decoration: $link-decoration;
-    color: $link-color;
-    transition: $link-transition;
-    position: relative;
+    text-decoration: none;
+    color: var(--highlight-color);
+    transition: all $animation-duration-alpha $animation-easing-alpha;
     display: inline-block;
-    // font-weight: $beta-font-weight;
 
     &:visited {
-        color: $link-color--visited;
+        color: var(--highlight-color);
     }
 
     &:hover {
-        text-decoration: $link-decoration--hover;
-        color: $link-color--hover;
+        text-decoration: none;
+        color: var(--foreground-color);
     }
 
     &:focus {
-        outline: $link-outline--focus;
-        color: $link-color--focus;
+        outline: thin dotted;
+        color: var(--foreground-color);
     }
 
     &:hover,
     &:active {
-        outline: $link-outline;
+        outline: 0;
     }
 }

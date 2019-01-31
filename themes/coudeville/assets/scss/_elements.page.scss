@@ -4,32 +4,35 @@
     Default markup for page level elements
 */
 
-// ---
-// Variables
-// ---
+// CSS vars
 
-$html-background-color              : palette(color-neutral,xxx-dark) !default;
-$body-background-color              : palette(color-alpha) !default;
-$body-color                         : palette(color-neutral,x-light) !default;
+:root {
+    --background-color: #{palette(color-neutral,xx-dark)};
+    --foreground-color: #{palette(color-neutral,x-light)};
+    --highlight-color: #{palette(color-neutral,xxxx-light)};
+    --link-color: #{palette(color-alpha)};
+}
 
-$body-font-smoothing                : true !default;
+// light version
 
-$body-selection-background-color    : palette(color-neutral,xxxx-light) !default;
-$body-selection-color               : palette(color-neutral,xxxx-dark) !default;
-$body-selection-text-shadow         : none !default;
+.is-light {
+    --background-color: #{palette(color-neutral,xxxx-light)};
+    --foreground-color: #{palette(color-neutral,dark)};
+    --highlight-color: #{palette(color-neutral,xxx-dark)}
+}
 
-// Styles
+// styles
 
 html {
     font: $alpha-font-weight #{$root-font-size/16px*100%}/#{$root-line-height/$root-font-size} $alpha-font-family;
     -webkit-overflow-scrolling: touch;
-    background-color: $html-background-color;
-    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--background-color);
+    color: var(--foreground-color);
 }
 
 body {
     margin: 0;
-    color: $body-color;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -37,10 +40,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: baseline($root-baseline-multiplier) baseline($root-baseline-multiplier) 0;
-
-    @if $body-font-smoothing == true {
-        -webkit-font-smoothing: antialiased;
-    }
 
     // &:before {
     //    content: '';
@@ -80,13 +79,13 @@ body {
 }
 
 ::-moz-selection {
-    background-color: $body-selection-background-color;
-    color: $body-selection-color;
-    text-shadow: $body-selection-text-shadow;
+    background-color: var(--foreground-color);
+    color: var(--background-color);
+    text-shadow: none;
 }
 
 ::selection {
-    background-color: $body-selection-background-color;
-    color: $body-selection-color;
-    text-shadow: $body-selection-text-shadow;
+    background-color: var(--foreground-color);
+    color: var(--background-color);
+    text-shadow: none;
 }

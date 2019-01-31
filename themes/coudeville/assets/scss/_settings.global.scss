@@ -20,7 +20,7 @@ $modularscale: (
 // Baseline settings
 // Think in pixels, let SCSS and the browser do the converting
 $baseline: 7px;
-$root-font-size: ms(0); // Modular scale size 0
+$root-font-size: ms(1); // Modular scale size 0
 $root-baseline-multiplier: 4;
 $root-line-height: $baseline * $root-baseline-multiplier; // In this setup this equals a line-height of 28px
 
