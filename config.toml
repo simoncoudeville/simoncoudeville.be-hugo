@@ -5,6 +5,7 @@ theme = "Coudeville"
 relativeURLS = true
 canonifyurls = true
 enableEmoji = true
+publishDir = "docs"
 
 [params]
   author = "Simon Coudeville"
