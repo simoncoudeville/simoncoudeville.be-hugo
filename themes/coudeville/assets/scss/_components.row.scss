@@ -9,18 +9,18 @@
     width: 100%;
 
     & + & {
-        @include padding-top($alpha-leading);
+        padding-top: baseline($root-baseline-multiplier);
 
         @include mq(bp3) {
-            @include padding-top($alpha-leading * 2);
+            padding-top: baseline($root-baseline-multiplier * 2);
         }
 
         @include mq(bp4) {
-            @include padding-top($alpha-leading * 3);
+            padding-top: baseline($root-baseline-multiplier * 3);
         }
 
         @include mq(bp5) {
-            @include padding-top($alpha-leading * 4);
+            padding-top: baseline($root-baseline-multiplier * 4);
         }
     }
 }

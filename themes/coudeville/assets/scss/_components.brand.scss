@@ -8,11 +8,7 @@
     color: palette(color-neutral,xxxx-light);
     // font-weight: normal;
     font-feature-settings: "salt";
-    @include text-dimensions($ms-1,.875);
-
-    @include mq(bp3) {
-        @include text-dimensions($ms-2,.75);
-    }
+    @include font-height(ms(0),$root-baseline-multiplier);
 }
 
 .c-brand__line {

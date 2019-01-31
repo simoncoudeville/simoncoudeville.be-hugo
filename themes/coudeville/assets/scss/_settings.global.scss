@@ -5,44 +5,36 @@
 //
 
 // ---
+// Modular scale settings
+// ---
+
+$modularscale: (
+  base: 18px,
+  ratio: 1.067
+);
+
+// ---
 // Typography
 // ---
 
-// manual modular scale font sizes
-// based on http://modularscale.com/scale/?px1=16&px2=18&ra1=1.333&ra2=0
+// Baseline settings
+// Think in pixels, let SCSS and the browser do the converting
+$baseline: 7px;
+$root-font-size: ms(0); // Modular scale size 0
+$root-baseline-multiplier: 4;
+$root-line-height: $baseline * $root-baseline-multiplier; // In this setup this equals a line-height of 28px
 
-$ms-3                       : 10 !default;
-$ms-2                       : 12 !default;
-$ms-1                       : 14 !default;
-$ms0                        : 16 !default;
-$ms1                        : 18 !default;
-$ms2                        : 21 !default;
-$ms3                        : 23 !default;
-$ms4                        : 28 !default;
-$ms5                        : 31 !default;
-$ms6                        : 37 !default;
-$ms7                        : 42 !default;
-$ms8                        : 50 !default;
-$ms9                        : 56 !default;
-$ms10                       : 67 !default;
-$ms11                       : 75 !default;
-$ms12                       : 89 !default;
-$ms13                       : 100 !default;
+// Default whitespace settings e.g. margins and paddings
+$alpha-whitespace: baseline($root-baseline-multiplier); // Default whitespace between elements e.g. paragraphs, titles
+$beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace between elements e.g. between paragraphs and h2
 
 // Basic font settings
 
 $alpha-font-family          : "Graphik Web", sans-serif;
 
-$alpha-font-size            : $ms0;
-
 $alpha-font-weight          : 400;
 $beta-font-weight           : 500;
 $gamma-font-weight          : 600;
-
-$alpha-line-height          : 1.5;
-
-$alpha-leading              : 1;
-$beta-leading               : 2;
 
 // ---
 // UI
@@ -82,7 +74,7 @@ $breakpoints: (
 // Grid
 // ---
 
-// 1 times the $alpha-font-size. It's calculated in rem in _tools.spacing.scss
+// 1 times the $root-font-size. It's calculated in rem in _tools.spacing.scss
 $columns-gutter             : 1 !default;
 
 // Define the amount of columns in the grid

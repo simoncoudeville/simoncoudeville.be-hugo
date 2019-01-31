@@ -11,17 +11,8 @@
 }
 
     .c-footer__item {
-        @include margin-right(1);
+        margin-right: baseline(4);
     }
-
-.c-footer-links,
-.c-footer-text {
-    @include text-dimensions($ms-1,.875);
-
-    @include mq(bp3) {
-        @include text-dimensions($ms-2,.75);
-    }
-}
 
 .c-footer-links {
     @include mq(bp1) {
@@ -31,7 +22,7 @@
 }
 
     .c-footer-links__item {
-        @include margin-right(1);
+        margin-right: baseline(4);
     }
 
     .c-footer-links__link {

@@ -16,21 +16,17 @@
  *  Utilities: contains helpers and overrides
  */
 
+// Tools
 @import 'modularscale';
+@import 'tools.mixins';
+@import 'tools.functions';
 
 // Settings
 @import 'settings.global';
 @import 'settings.colors';
 
-// Tools
-@import 'tools.mixins';
-@import 'tools.spacing';
-@import 'tools.typography';
-@import 'tools.ms';
-
 /* Generic */
-// @import 'generic.normalize';
-@import 'generic.reset';
+@import 'generic.normalize';
 @import 'generic.box-sizing';
 
 /* Elements */
@@ -39,7 +35,6 @@
 @import 'elements.typography';
 
 /* Objects */
-@import 'objects.grid';
 @import 'objects.list';
 
 /* Components */
@@ -51,11 +46,7 @@
 
 /* Utilities */
 @import 'utilities.max-widths';
-//@import 'utilities.spacing';
-// @import 'utilities.ms';
 @import 'utilities.align';
-// @import 'utilities.colors';
-//@import 'utilities.states';
+@import 'utilities.colors';
 @import 'utilities.print';
 @import 'utilities.shame';
-//@import 'utilities.debug';

@@ -8,15 +8,6 @@
 // Variables
 // ---
 
-$html-font-family                   : $alpha-font-family !default;
-$html-font-weight                   : $alpha-font-weight !default;
-$html-font-size                     : $alpha-font-size !default;
-$html-line-height                   : $alpha-line-height !default;
-
-$html-responsive-font-size          : true !default;
-$html-responsive-font-breakpoint    : bp1 !default;
-$html-responsive-font-magnification : 112.5% !default;
-
 $html-background-color              : palette(color-neutral,xxx-dark) !default;
 $body-background-color              : palette(color-alpha) !default;
 $body-color                         : palette(color-neutral,x-light) !default;
@@ -30,33 +21,14 @@ $body-selection-text-shadow         : none !default;
 // Styles
 
 html {
-    font: $html-font-weight #{$html-font-size/16*100%}/#{$html-line-height} $html-font-family;
+    font: $alpha-font-weight #{$root-font-size/16px*100%}/#{$root-line-height/$root-font-size} $alpha-font-family;
     -webkit-overflow-scrolling: touch;
     background-color: $html-background-color;
     background-attachment: fixed;
-
-    @include mq(bp1) {
-        font-size: $alpha-font-size/16*112.5%;
-    }
-
-    @include mq(bp3) {
-        font-size: $alpha-font-size/16*125%;
-    }
-
-    @include mq(bp4) {
-        font-size: $alpha-font-size/16*137.5%;
-    }
-
-    @include mq(bp5) {
-        font-size: $alpha-font-size/16*150%;
-    }
-
-    @include mq(bp6) {
-        font-size: $alpha-font-size/16*162.5%;
-    }
 }
 
 body {
+    margin: 0;
     color: $body-color;
     min-height: 100vh;
     width: 100%;
@@ -64,8 +36,7 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
-    @include padding-tb($alpha-leading, 0);
-    @include padding-lr($columns-gutter,$columns-gutter);
+    padding: baseline($root-baseline-multiplier) baseline($root-baseline-multiplier) 0;
 
     @if $body-font-smoothing == true {
         -webkit-font-smoothing: antialiased;
@@ -90,24 +61,20 @@ body {
     //
     // }
 
-    @include mq(bp1) {
-        @include padding-tb($alpha-leading * 2,$alpha-leading);
-        @include padding-lr($columns-gutter * 2,$columns-gutter * 2);
+    @include mq(bp2) {
+        padding: baseline($root-baseline-multiplier * 2) baseline($root-baseline-multiplier * 2) baseline($root-baseline-multiplier);
     }
 
     @include mq(bp3) {
-        @include padding-tb($alpha-leading * 3,$alpha-leading * 2);
-        @include padding-lr($columns-gutter * 3,$columns-gutter * 3);
+        padding: baseline($root-baseline-multiplier * 3) baseline($root-baseline-multiplier * 3) baseline($root-baseline-multiplier * 2);
     }
 
     @include mq(bp4) {
-        @include padding-tb($alpha-leading * 4,$alpha-leading * 3);
-        @include padding-lr($columns-gutter * 4,$columns-gutter * 4);
+        padding: baseline($root-baseline-multiplier * 4) baseline($root-baseline-multiplier * 4) baseline($root-baseline-multiplier * 3);
     }
 
     @include mq(bp5) {
-        @include padding-tb($alpha-leading * 5,$alpha-leading * 4);
-        @include padding-lr($columns-gutter * 5,$columns-gutter * 5);
+        padding: baseline($root-baseline-multiplier * 5) baseline($root-baseline-multiplier * 5) baseline($root-baseline-multiplier * 4);
     }
 
 }

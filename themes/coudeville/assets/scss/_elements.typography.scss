@@ -1,69 +1,25 @@
 /*
-    Elements: typography
-    ---
-    Default markup for typographic elements
+Elements: typography
+---
+Default markup for typographic elements
 */
 
 // ---
 // Variables
 // ---
 
-$h1-font-family                : $alpha-font-family !default;
-$h1-font-weight                : $beta-font-weight !default;
-$h1-font-size                  : $ms6 !default;
-$h1-line-height                : 2 !default;
-$h1-margin-bottom              : $alpha-leading !default;
-
-$h2-font-family                : $alpha-font-family !default;
-$h2-font-weight                : $alpha-font-weight !default;
-$h2-font-size                  : $ms4 !default;
-$h2-line-height                : 1.5 !default;
-$h2-margin-bottom              : $alpha-leading !default;
-
-$h3-font-family                : $alpha-font-family !default;
-$h3-font-weight                : $alpha-font-weight !default;
-$h3-font-size                  : $ms3 !default;
-$h3-line-height                : 1.25 !default;
-$h3-margin-bottom              : $alpha-leading !default;
-
-$h4-font-family                : $alpha-font-family !default;
-$h4-font-weight                : $alpha-font-weight !default;
-$h4-font-size                  : $ms2 !default;
-$h4-line-height                : 1.25 !default;
-$h4-margin-bottom              : $alpha-leading !default;
-
-$h5-font-family                : $alpha-font-family !default;
-$h5-font-weight                : $alpha-font-weight !default;
-$h5-font-size                  : $ms2 !default;
-$h5-line-height                : 1 !default;
-$h5-margin-bottom              : $alpha-leading !default;
-
-$h6-font-family                : $alpha-font-family !default;
-$h6-font-weight                : $alpha-font-weight !default;
-$h6-font-size                  : $ms1 !default;
-$h6-line-height                : 1 !default;
-$h6-margin-bottom              : $alpha-leading !default;
-
-$base-font-size                : $alpha-font-size !default;
-$base-line-height              : 1 !default;
-$base-margin-bottom            : $alpha-leading !default;
-$base-indent                   : 2 !default;
-
-$blockquote-font-style         : italic !default;
-$blockquote-font-size          : $ms1 !default;
-$blockquote-line-height        : 1 !default;
-$blockquote-margin-bottom      : $alpha-leading !default;
-
-$small-font-size               : $ms1 !default;
-$small-line-height             : 1 !default;
-$small-margin-bottom           : $alpha-leading !default;
-
-$horizontal-rule-border-width  : 1px 0 0 !default;
-$horizontal-rule-border-style  : solid !default;
-$horizontal-rule-border-color  : palette(color-neutral,light) !default;
-
-$horizontal-rule-margin-top    : 0 !default;
-$horizontal-rule-margin-bottom : $alpha-leading !default;
+$h1-font-size: ms(8);
+$h1-baseline-multiplier: 7;
+$h1-font-size-large: ms(11);
+$h1-baseline-multiplier-large: 10;
+$h1-font-size-xlarge: ms(14);
+$h1-baseline-multiplier-xlarge: 14;
+$h2-font-size: ms(2);
+$h2-baseline-multiplier: 4;
+$h3-font-size: ms(-1);
+$h3-baseline-multiplier: 4;
+$h4-font-size: ms(-1);
+$h4-baseline-multiplier: 4;
 
 $link-transition               : all $animation-duration-alpha $animation-easing-alpha !default;
 
@@ -74,10 +30,6 @@ $link-color                    : palette(color-neutral,xxxx-light) !default;
 $link-color--visited           : palette(color-neutral,xxxx-light) !default;
 $link-color--hover             : palette(color-neutral,x-light) !default;
 $link-color--focus             : palette(color-alpha,xxxx-light) !default;
-//$link-color                    : palette(color-alpha) !default;
-//$link-color--visited           : palette(color-alpha) !default;
-//$link-color--hover             : palette(color-alpha,light) !default;
-//$link-color--focus             : palette(color-alpha,xxxx-light) !default;
 
 $link-outline                  : 0 !default;
 $link-outline--focus           : thin dotted !default;
@@ -86,100 +38,73 @@ $link-outline--focus           : thin dotted !default;
 // Styles
 // ---
 
+h1,
+h2,
+h3,
+h4,
+p,
+pre,
+ul {
+  margin-top: 0; // Reset browser defaults
+}
+
 h1 {
-    font-family: $h1-font-family;
-    font-weight: $h1-font-weight;
-    @include text-dimensions($h1-font-size,$h1-line-height);
-    @include margin-bottom($h1-margin-bottom);
+    font-weight: $beta-font-weight;
+    margin-bottom: $alpha-whitespace;
+    @include font-height($h1-font-size,$h1-baseline-multiplier); // Font size calculated by the font-height mixin
+}
+
+// Increase the font-size and line-height at a wider viewport
+@media (min-width: 600px) {
+    h1 {
+        @include font-height($h1-font-size-large,$h1-baseline-multiplier-large);
+    }
+}
+
+@media (min-width: 900px) {
+    h1 {
+        @include font-height($h1-font-size-xlarge,$h1-baseline-multiplier-xlarge);
+    }
 }
 
 h2 {
-    font-family: $h2-font-family;
-    font-weight: $h2-font-weight;
-    @include text-dimensions($h2-font-size,$h2-line-height);
-    @include margin-bottom($h2-margin-bottom);
+    font-weight: $beta-font-weight;
+    margin-bottom: $alpha-whitespace;
+    @include font-height($h2-font-size,$h2-baseline-multiplier);
+
+    * + & {
+        margin-top: $beta-whitespace; // Add extra margin on top
+    }
 }
 
 h3 {
-    font-family: $h3-font-family;
-    font-weight: $h3-font-weight;
-    @include text-dimensions($h3-font-size,$h3-line-height);
-    @include margin-bottom($h3-margin-bottom);
+    font-weight: $beta-font-weight;
+    margin-bottom: $alpha-whitespace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    @include font-height($h3-font-size,$h3-baseline-multiplier);
 }
 
 h4 {
-    font-family: $h4-font-family;
-    font-weight: $h4-font-weight;
-    @include text-dimensions($h4-font-size,$h4-line-height);
-    @include margin-bottom($h4-margin-bottom);
-}
-
-h5 {
-    font-family: $h5-font-family;
-    font-weight: $h5-font-weight;
-    @include text-dimensions($h5-font-size,$h5-line-height);
-    @include margin-bottom($h5-margin-bottom);
-}
-
-h6 {
-    font-family: $h6-font-family;
-    font-weight: $h6-font-weight;
-    @include text-dimensions($h6-font-size,$h6-line-height);
-    @include margin-bottom($h6-margin-bottom);
+    font-weight: $beta-font-weight;
+    margin-bottom: $alpha-whitespace;
+    @include font-height($h4-font-size,$h4-baseline-multiplier);
 }
 
 p,
-ol,
 ul,
-dl,
-table,
-address {
-    @include text-dimensions($base-font-size,$base-line-height);
-    @include margin-bottom($base-margin-bottom);
+ol {
+    margin-bottom: $alpha-whitespace;
 }
 
-p {
-    & + & {
-        @include mq(bp1) {
-            @include padding-top(1);
-        }
-    }
+blockquote {
+    margin: $alpha-whitespace;
 }
 
 pre {
-    tab-size: $base-indent;
-}
-
-ul,
-ol,
-blockquote {
-    padding-left: #{$base-indent}em;
-}
-
-li {
-    > ul,
-    > ol {
-        margin-bottom: 0;
-    }
-}
-
-blockquote {
-    font-style: $blockquote-font-style;
-    @include text-dimensions($blockquote-font-size,$blockquote-line-height);
-    @include margin-bottom($blockquote-margin-bottom);
-}
-
-small {
-    @include text-dimensions($small-font-size,$small-line-height);
-    @include margin-bottom($small-margin-bottom);
-}
-
-hr {
-    border-width: $horizontal-rule-border-width;
-    border-style: $horizontal-rule-border-style;
-    border-color: $horizontal-rule-border-color;
-    clear: both;
-    @include margin-tb($horizontal-rule-margin-top,$horizontal-rule-margin-bottom);
+    white-space: pre-wrap;
+    margin-bottom: $alpha-whitespace;
+    @include font-height(ms(0),4);
 }
 
 // Links
