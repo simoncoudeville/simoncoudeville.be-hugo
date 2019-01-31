@@ -1,8 +1,8 @@
-baseURL = "http://simoncoudeville.be/"
+baseURL = "https://simoncoudeville.be/"
 languageCode = "en-us"
 title = "Simon Coudeville"
 theme = "Coudeville"
-relativeURLS = true
+relativeURLS = false
 canonifyurls = true
 enableEmoji = true
 publishDir = "docs"
