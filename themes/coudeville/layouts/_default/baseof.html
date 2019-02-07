@@ -1,13 +1,7 @@
 <!DOCTYPE html>
-<html class="">
+<html {{ if .Params.light }}class="is-light"{{ end }} {{ if .Params.hue }}style="--hue: {{ .Params.hue }}"{{ end }}>
     {{- partial "head.html" . -}}
     <body>
-        {{- partial "header.html" . -}}
-
-        <div class="c-row">
-            {{- block "main" . }}{{- end }}
-        </div>
-
-        {{- partial "footer.html" . -}}
+        {{- block "main" . }}{{- end }}
     </body>
 </html>

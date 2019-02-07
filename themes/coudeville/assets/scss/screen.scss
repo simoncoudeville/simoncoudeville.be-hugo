@@ -23,7 +23,6 @@
 
 // Settings
 @import 'settings.global';
-@import 'settings.colors';
 
 /* Generic */
 @import 'generic.normalize';
@@ -43,11 +42,15 @@
 @import 'components.brand';
 @import 'components.row';
 
+/* Scoping */
+@import 'scoping.content';
+
+
 /* Plugins */
 
 /* Utilities */
 @import 'utilities.max-widths';
 @import 'utilities.align';
-@import 'utilities.colors';
+// @import 'utilities.colors';
 @import 'utilities.print';
 @import 'utilities.shame';

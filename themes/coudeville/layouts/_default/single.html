@@ -1,6 +1,36 @@
 {{ define "main" }}
-    <div class="o-container">
-        <h1>{{ .Title }}</h1>    
+<div class="c-row">
+    <div class="c-single">
+        <p class="c-back">
+            <a class="c-link-back" href="/">
+                <!-- <svg class="c-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-labelledby="chevronLeftIconTitle chevronLeftIconDesc">
+                  <title id="chevronLeftIconTitle">Chevron Left</title>
+                  <desc id="chevronLeftIconDesc">Icon of a chevron pointing left</desc>
+                  <polyline points="14 18 8 12 14 6 14 6"></polyline>
+                </svg> -->
+                <svg class="c-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-labelledby="arrowLeftIconTitle arrowLeftIconDesc">
+                    <title id="arrowLeftIconTitle">Arrow Left</title>
+                    <desc id="arrowLeftIconDesc">Icon of an arrow pointing left</desc>
+                    <path d="M9 6l-6 6 6 6"/>
+                    <path d="M21 12H4"/>
+                    <path d="M3 12h1"/>
+                </svg>
+                Home
+            </a>
+        </p>
+        <div class="c-single__header">
+            <div class="s-content">
+                <p class="c-type-meta u-mb-alpha">
+                    Published {{ .Date.Format "January 2, 2006" }}
+                </p>
+                <h1>{{ .Title }}</h1>
+            </div>
+        </div>
+        <div class="c-single__content">
+            <div class="s-content">
+                {{ .Content }}
+            </div>
+        </div>
     </div>
-
+</div>
 {{ end }}

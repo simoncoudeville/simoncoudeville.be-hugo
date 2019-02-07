@@ -1,41 +1,68 @@
 /*
-    Elements: Fonts
-    ---
-    Font-face declarations
+Elements: Fonts
+---
+Font-face declarations
 */
 
 @font-face {
- font-family: 'Graphik Web';
- src: url('../fonts/Graphik-Regular-Web.woff2') format('woff2'),
-      url('../fonts/Graphik-Regular-Web.woff') format('woff');
- font-weight:  400;
- font-style:   normal;
- font-stretch: normal;
+    font-family: 'Graphik Web';
+    src: url('../fonts/Graphik-Regular-Web.woff2') format('woff2'),
+    url('../fonts/Graphik-Regular-Web.woff') format('woff');
+    font-weight:  400;
+    font-style:   normal;
+    font-stretch: normal;
 }
 
 @font-face {
- font-family: 'Graphik Web';
- src: url('../fonts/Graphik-Medium-Web.woff2') format('woff2'),
-      url('../fonts/Graphik-Medium-Web.woff') format('woff');
- font-weight:  500;
- font-style:   normal;
- font-stretch: normal;
+    font-family: 'Graphik Web';
+    src: url('../fonts/Graphik-Medium-Web.woff2') format('woff2'),
+    url('../fonts/Graphik-Medium-Web.woff') format('woff');
+    font-weight:  500;
+    font-style:   normal;
+    font-stretch: normal;
 }
 
 @font-face {
- font-family: 'Graphik Web';
- src: url('../fonts/Graphik-Semibold-Web.woff2') format('woff2'),
-      url('../fonts/Graphik-Semibold-Web.woff') format('woff');
- font-weight:  600;
- font-style:   normal;
- font-stretch: normal;
+    font-family: 'Graphik Web';
+    src: url('../fonts/Graphik-Semibold-Web.woff2') format('woff2'),
+    url('../fonts/Graphik-Semibold-Web.woff') format('woff');
+    font-weight:  600;
+    font-style:   normal;
+    font-stretch: normal;
 }
 
 @font-face {
- font-family: 'Graphik Web Condensed';
- src: url('../fonts/GraphikCondensed-Semibold-Web.woff2') format('woff2'),
-      url('../fonts/GraphikCondensed-Semibold-Web.woff') format('woff');
- font-weight:  600;
- font-style:   normal;
- font-stretch: normal;
+    font-family: 'Graphik Web Compact';
+    src: url('../fonts/GraphikCompact-Semibold-Web.woff2') format('woff2'),
+    url('../fonts/GraphikCompact-Semibold-Web.woff') format('woff');
+    font-weight:  600;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Graphik Web Condensed';
+    src: url('../fonts/GraphikCondensed-Semibold-Web.woff2') format('woff2'),
+    url('../fonts/GraphikCondensed-Semibold-Web.woff') format('woff');
+    font-weight:  600;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Atlas Typewriter';
+    src: url('../fonts/AtlasTypewriter-Regular-Web.woff2') format('woff2'),
+    url('../fonts/AtlasTypewriter-Regular-Web.woff') format('woff');
+    font-weight:  600;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Suisse Intl Mono';
+    src: url('../fonts/SuisseIntlMono-Regular-WebS.woff2') format('woff2'),
+    url('../fonts/SuisseIntlMono-Regular-WebS.woff') format('woff');
+    font-weight:  600;
+    font-style:   normal;
+    font-stretch: normal;
 }

@@ -7,12 +7,16 @@
 .c-brand {
     color: var(--highlight-color);
     font-family: $alpha-font-family;
-    // font-weight: normal;
+    font-weight: $beta-font-weight;
     font-feature-settings: "salt";
+    margin-bottom: $alpha-whitespace;
     @include font-height($root-font-size,$root-baseline-multiplier);
 }
 
 .c-brand__line {
+    // font-family: $delta-font-family;
     color: var(--foreground-color);
-    font-weight: normal;
+    font-weight: $alpha-font-weight;
+    display: block;
+    // @include font-height(ms(-1),4);
 }

@@ -3,12 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://simoncoudeville.be/writing/</loc>
+    <lastmod>2019-01-12T21:40:40+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://simoncoudeville.be/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://simoncoudeville.be/</loc>
+  </url>
+  
+  <url>
+    <loc>https://simoncoudeville.be/writing/setting-up-a-spacing-system-with-scss/</loc>
   </url>
   
   <url>

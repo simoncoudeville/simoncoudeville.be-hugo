@@ -8,18 +8,18 @@ Default markup for typographic elements
 // Variables
 // ---
 
-$h1-font-size: ms(8);
-$h1-baseline-multiplier: 7;
-$h1-font-size-large: ms(11);
-$h1-baseline-multiplier-large: 10;
-$h1-font-size-xlarge: ms(22);
-$h1-baseline-multiplier-xlarge: 14;
+$h1-font-size: ms(7);
+$h1-baseline-multiplier: 9;
+$h1-font-size-large: ms(10);
+$h1-baseline-multiplier-large: 12;
+$h1-font-size-xlarge: ms(13);
+$h1-baseline-multiplier-xlarge: 16;
 $h2-font-size: ms(2);
-$h2-baseline-multiplier: 4;
+$h2-baseline-multiplier: $root-baseline-multiplier;
 $h3-font-size: ms(-1);
-$h3-baseline-multiplier: 4;
+$h3-baseline-multiplier: $root-baseline-multiplier;
 $h4-font-size: ms(-1);
-$h4-baseline-multiplier: 4;
+$h4-baseline-multiplier: $root-baseline-multiplier;
 
 // ---
 // Styles
@@ -36,33 +36,30 @@ ul {
 }
 
 h1 {
-    font-family: $beta-font-family;
+    font-family: $gamma-font-family;
     font-weight: $beta-font-weight;
-    margin-bottom: $alpha-whitespace;
+    // font-weight: $alpha-font-weight;
+    margin-bottom: $beta-whitespace;
     @include font-height($h1-font-size,$h1-baseline-multiplier); // Font size calculated by the font-height mixin
-}
 
-// Increase the font-size and line-height at a wider viewport
-@media (min-width: 600px) {
-    h1 {
+    // Increase the font-size and line-height at a wider viewport
+
+    @include mq(bp3) {
         @include font-height($h1-font-size-large,$h1-baseline-multiplier-large);
     }
-}
 
-@media (min-width: 900px) {
-    h1 {
+    @include mq(bp5) {
         @include font-height($h1-font-size-xlarge,$h1-baseline-multiplier-xlarge);
     }
 }
 
 h2 {
+    font-family: $beta-font-family;
+    // font-family: $gamma-font-family;
     font-weight: $beta-font-weight;
+    // font-weight: $alpha-font-weight;
     margin-bottom: $alpha-whitespace;
     @include font-height($h2-font-size,$h2-baseline-multiplier);
-
-    * + & {
-        margin-top: $beta-whitespace; // Add extra margin on top
-    }
 }
 
 h3 {
@@ -83,6 +80,10 @@ p,
 ul,
 ol {
     margin-bottom: $alpha-whitespace;
+
+    // @include mq(bp4) {
+    //     @include font-height(ms(1),5)
+    // }
 }
 
 blockquote {
@@ -108,7 +109,7 @@ a {
     }
 
     &:hover {
-        text-decoration: none;
+        // text-decoration: none;
         color: var(--foreground-color);
     }
 

@@ -9,8 +9,8 @@
 // ---
 
 $modularscale: (
-  base: 18px,
-  ratio: 1.067
+  base: 20px,
+  ratio: 1.125
 );
 
 // ---
@@ -19,19 +19,24 @@ $modularscale: (
 
 // Baseline settings
 // Think in pixels, let SCSS and the browser do the converting
-$baseline: 7px;
-$root-font-size: ms(1); // Modular scale size 0
-$root-baseline-multiplier: 4;
+$baseline: 6px;
+$root-font-size: ms(0); // Modular scale size 0
+$root-baseline-multiplier: 5;
 $root-line-height: $baseline * $root-baseline-multiplier; // In this setup this equals a line-height of 28px
 
 // Default whitespace settings e.g. margins and paddings
 $alpha-whitespace: baseline($root-baseline-multiplier); // Default whitespace between elements e.g. paragraphs, titles
 $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace between elements e.g. between paragraphs and h2
 
+$show-baseline: false;
+
 // Basic font settings
 
 $alpha-font-family          : "Graphik Web", sans-serif;
-$beta-font-family          : "Graphik Web Condensed", sans-serif;
+$beta-font-family           : "Graphik Web Compact", sans-serif;
+$gamma-font-family           : "Graphik Web Condensed", sans-serif;
+// $delta-font-family          : "Atlas Typewriter", sans-serif;
+$delta-font-family          : "Suisse Intl Mono", sans-serif;
 
 $alpha-font-weight          : 400;
 $beta-font-weight           : 500;

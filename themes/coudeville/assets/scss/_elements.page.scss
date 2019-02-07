@@ -7,18 +7,37 @@
 // CSS vars
 
 :root {
-    --background-color: #{palette(color-neutral,xxx-dark)};
-    --foreground-color: #{palette(color-neutral,x-light)};
-    --highlight-color: #{palette(color-neutral,xxxx-light)};
-    --link-color: #{palette(color-alpha)};
+    --hue: 240;
+
+    --color-alpha-xxxx-light: hsla(var(--hue), 50%, 97.5%, 1);
+    --color-alpha-xxx-light: hsla(var(--hue), 62.5%, 95%, 1);
+    --color-alpha-xx-light: hsla(var(--hue), 75%, 87.5%, 1);
+    --color-alpha-x-light: hsla(var(--hue), 87.5%, 75%, 1);
+    --color-alpha-light: hsla(var(--hue), 95%, 62.5%, 1);
+    --color-alpha: hsla(var(--hue), 97.5%, 50%, 1);
+
+    --color-neutral-xxxx-light: hsla(var(--hue), 5%, 97.5%, 1);
+    --color-neutral-xxx-light: hsla(var(--hue), 5%, 95%, 1);
+    --color-neutral-xx-light: hsla(var(--hue), 5%, 87.5%, 1);
+    --color-neutral-x-light: hsla(var(--hue), 5%, 75%, 1);
+    --color-neutral-light: hsla(var(--hue), 5%, 62.5%, 1);
+    --color-neutral: hsla(var(--hue), 5%, 50%, 1);
+    --color-neutral-dark: hsla(var(--hue), 5%, 37.5%, 1);
+    --color-neutral-x-dark: hsla(var(--hue), 7.5%, 25%, 1);
+    --color-neutral-xx-dark: hsla(var(--hue), 10%, 15%, 1);
+    --color-neutral-xxx-dark: hsla(var(--hue), 12.5%, 7.5%, 1);
+
+    --background-color: var(--color-neutral-xxx-dark);
+    --foreground-color: var(--color-neutral-light);
+    --highlight-color: var(--color-alpha-xxxx-light);
 }
 
 // light version
 
 .is-light {
-    --background-color: #{palette(color-neutral,xxxx-light)};
-    --foreground-color: #{palette(color-neutral,dark)};
-    --highlight-color: #{palette(color-neutral,xxx-dark)}
+    --background-color: var(--color-alpha-xxx-light);
+    --foreground-color: var(--color-neutral-dark);
+    --highlight-color: var(--color-neutral-xx-dark);
 }
 
 // styles
@@ -33,13 +52,6 @@ html {
 
 body {
     margin: 0;
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: baseline($root-baseline-multiplier) baseline($root-baseline-multiplier) 0;
 
     // &:before {
     //    content: '';
@@ -59,33 +71,46 @@ body {
     //    }
     //
     // }
-
-    @include mq(bp2) {
-        padding: baseline($root-baseline-multiplier * 2) baseline($root-baseline-multiplier * 2) baseline($root-baseline-multiplier);
-    }
-
-    @include mq(bp3) {
-        padding: baseline($root-baseline-multiplier * 3) baseline($root-baseline-multiplier * 3) baseline($root-baseline-multiplier * 2);
-    }
-
-    @include mq(bp4) {
-        padding: baseline($root-baseline-multiplier * 4) baseline($root-baseline-multiplier * 4) baseline($root-baseline-multiplier * 3);
-    }
-
-    @include mq(bp5) {
-        padding: baseline($root-baseline-multiplier * 5) baseline($root-baseline-multiplier * 5) baseline($root-baseline-multiplier * 4);
-    }
-
 }
 
 ::-moz-selection {
-    background-color: var(--foreground-color);
+    background-color: var(--highlight-color);
     color: var(--background-color);
     text-shadow: none;
 }
 
 ::selection {
-    background-color: var(--foreground-color);
+    background-color: var(--highlight-color);
     color: var(--background-color);
     text-shadow: none;
+}
+
+@if $show-baseline {
+
+    body {
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            background: repeating-linear-gradient(
+                to bottom,
+                transparent,
+                transparent pxtorem($baseline - 1),
+                rgba(Cyan, 0.75) pxtorem($baseline)
+            );
+            background-size: 100% pxtorem($baseline);
+            pointer-events: none;
+        }
+    }
+
+    h1,
+    h2,
+    p {
+         background-color: rgba(Cyan, 0.25);
+    }
 }

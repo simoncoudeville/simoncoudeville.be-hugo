@@ -4,24 +4,141 @@
     Hacks and quick fixes
 */
 
-.u-text-align-justify {
-    text-align: justify;
-}
-
 div:empty {
    display: none;
 }
 
-.c-type-intro {
-    @include mq(bp3) {
-        @include font-height(ms(2),5);
+.c-link-back {
+    font-family: $delta-font-family;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    border-radius: $radius;
+    @include font-height(ms(-3),$root-baseline-multiplier);
+
+    .c-icon {
+        margin-right: baseline(2);
+
+        @include mq(bp2) {
+            margin-left: baseline(-6);
+        }
+
+        @include mq(bp5) {
+            margin-left: 0;
+        }
     }
 
-    @include mq(bp4) {
-        @include font-height(ms(4),5);
+    &:hover {
+        .c-icon {
+            transform: translateX(baseline(-.5));
+        }
     }
-    
+}
+
+.c-type-meta {
+    font-family: $delta-font-family;
+    margin-bottom: baseline(1);
+    opacity: .75;
+    @include font-height(ms(-3),$root-baseline-multiplier);
+}
+
+.c-icon {
+    width: baseline(4);
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.25;
+    transition: all $animation-duration-alpha $animation-easing-alpha;
+}
+
+.c-back {
+    margin-bottom: $beta-whitespace;
+    height: baseline($root-baseline-multiplier);
+    position: sticky;
+    top: baseline(4);
+}
+
+.c-single {
+    max-width: 36em;
+    margin: 0 auto;
+
     @include mq(bp5) {
-        @include font-height(ms(6),6);
+        max-width: none;
+        margin: 0;
+        display: grid;
+        grid: " .            content        .      "
+              / var(--side)  var(--middle)  var(--side);
+        grid-gap: 0 baseline($root-baseline-multiplier);
+      --middle: 36em;
+      --side: minmax(min-content, 1fr);
     }
+}
+
+.c-single__content {
+    grid-column: content;
+}
+
+.c-single__header {
+    grid-column-end: span 2;
+}
+
+.c-section {
+    & + & {
+        padding-top: baseline($root-baseline-multiplier);
+
+        @include mq(bp3) {
+            padding-top: baseline($root-baseline-multiplier * 2);
+        }
+
+        @include mq(bp4) {
+            padding-top: baseline($root-baseline-multiplier * 3);
+        }
+
+        @include mq(bp5) {
+            padding-top: baseline($root-baseline-multiplier * 4);
+        }
+    }
+}
+
+//
+// .c-row--home {
+//
+//     @include mq(bp4) {
+//         padding-right: baseline($root-baseline-multiplier * 4);
+//     }
+//
+//     @include mq(bp5) {
+//         padding-right: baseline($root-baseline-multiplier * 5);
+//     }
+//
+//     @include mq(bp4) {
+//         width: 50%;
+//     }
+// }
+//
+// .c-background {
+//     @include mq(bp4) {
+//         background: transparent url("https://thomas-williams.imgix.net/wp-content/uploads/2018/10/Thomas-Williams_Home-Crop.jpg") 0 0 no-repeat;
+//         background-size: cover;
+//         position: absolute;
+//         width: 50%;
+//         right: 0;
+//         top: 0;
+//         bottom: 0;
+//     }
+// }
+
+.c-type-intro {
+    // font-family: $delta-font-family;
+    // @include font-height(ms(-1),4.5);
+    // @include mq(bp3) {
+    //     @include font-height(ms(2),5);
+    // }
+    //
+    // @include mq(bp4) {
+    //     @include font-height(ms(3),5);
+    // }
+
+    // @include mq(bp5) {
+    //     @include font-height(ms(5),6);
+    // }
 }
