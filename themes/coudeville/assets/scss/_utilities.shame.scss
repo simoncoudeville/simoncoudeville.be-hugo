@@ -20,12 +20,19 @@ div:empty {
         margin-right: baseline(2);
 
         @include mq(bp2) {
-            margin-left: baseline(-6);
+            margin-right: baseline(3);
+            margin-left: baseline(-7);
         }
 
         @include mq(bp5) {
+            margin-right: baseline(2);
             margin-left: 0;
         }
+    }
+
+    &,
+    &:visited {
+        color: var(--background-color);
     }
 
     &:hover {
@@ -50,35 +57,154 @@ div:empty {
     transition: all $animation-duration-alpha $animation-easing-alpha;
 }
 
-.c-back {
-    margin-bottom: $beta-whitespace;
-    height: baseline($root-baseline-multiplier);
-    position: sticky;
-    top: baseline(4);
+.c-single {
+    display: grid;
+    grid: " . content ." / auto minmax(min-content, 36em) auto;
+    grid-gap: 0 baseline($root-baseline-multiplier);
+    grid-template-rows: baseline(2.5) auto auto;
+
+    &:after {
+        content: '';
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: baseline(10);
+        background-color: var(--highlight-color);
+    }
+
+    @include mq(bp2) {
+        grid-gap: 0 baseline($root-baseline-multiplier * 2);
+    }
+
+    @include mq(bp3) {
+        grid-template-rows: baseline($root-baseline-multiplier * 2) auto auto;
+    }
+
+    @include mq(bp5) {
+        grid: " . left content right ." / 1fr 2fr 36em 2fr 1fr;
+        grid-template-rows: minmax(baseline($root-baseline-multiplier * 5), calc(100vh - #{baseline($root-baseline-multiplier * 20)})) auto auto auto;
+        grid-gap: 0 baseline($root-baseline-multiplier);
+
+        &:after {
+            height: baseline($root-baseline-multiplier * 2.75);
+        }
+    }
+}
+
+.c-single__background {
+    display: block !important;
+    background-color: var(--highlight-color);
+    grid-column: 1 / -1;
+    grid-row: 1 / 4;
+
+    @include mq(bp5) {
+        grid-row: 1 / 4;
+    }
+}
+
+// Z-indexes
+
+.c-single__content {
+    z-index: 10;
+}
+
+.c-single__background {
+    z-index: 60;
 }
 
 .c-single {
-    max-width: 36em;
-    margin: 0 auto;
+    &:after {
+        z-index: 90;
+
+        @include mq(bp5) {
+            z-index: 40;
+        }
+    }
+}
+
+.c-single__top-title {
+    z-index: 150;
+}
+
+.c-single__header {
+    z-index: 80;
+}
+
+.c-single__back {
+    z-index: 100;
+}
+
+.c-single__back {
+    margin-bottom: $beta-whitespace;
+    position: sticky;
+    top: baseline($root-baseline-multiplier/2);
+    align-self: start;
+    grid-column: content;
+    grid-row: 2;
 
     @include mq(bp5) {
-        max-width: none;
-        margin: 0;
-        display: grid;
-        grid: " .            content        .      "
-              / var(--side)  var(--middle)  var(--side);
-        grid-gap: 0 baseline($root-baseline-multiplier);
-      --middle: 36em;
-      --side: minmax(min-content, 1fr);
+        grid-column: left;
+        grid-row: 2;
+        top: baseline(4);
     }
 }
 
 .c-single__content {
     grid-column: content;
+    padding-top: baseline($root-baseline-multiplier * 2);
+
+    @include mq(bp5) {
+        padding-top: baseline($root-baseline-multiplier * 5);
+    }
 }
 
 .c-single__header {
-    grid-column-end: span 2;
+    grid-column: content;
+    color: var(--background-color);
+    grid-row: 3;
+    // transform: translateY(baseline(3));
+    opacity: 0;
+    transition: all $animation-duration-gamma $animation-easing-alpha;
+
+    &.is-shown {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    @include mq(bp5){
+        grid-column-end: span 2;
+        grid-row: 2;
+        padding-bottom: baseline($root-baseline-multiplier * 3);
+    }
+}
+
+.c-single__top-title {
+    display: none;
+    position: sticky;
+    top: baseline(2.5);
+    grid-column: content;
+    grid-row-start: 2;
+    align-self: end;
+    color: var(--background-color);
+    font-feature-settings: "salt";
+    font-weight: $beta-font-weight;
+    font-family: $beta-font-family;
+    // margin-bottom: 0;
+    // transform: translateY(baseline(3));
+    opacity: 0;
+    transition: all $animation-duration-alpha $animation-easing-alpha;
+
+    &.is-shown {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    @include mq(bp5) {
+        display: block;
+        top: baseline(4);
+        text-align: left;
+    }
 }
 
 .c-section {
@@ -98,34 +224,6 @@ div:empty {
         }
     }
 }
-
-//
-// .c-row--home {
-//
-//     @include mq(bp4) {
-//         padding-right: baseline($root-baseline-multiplier * 4);
-//     }
-//
-//     @include mq(bp5) {
-//         padding-right: baseline($root-baseline-multiplier * 5);
-//     }
-//
-//     @include mq(bp4) {
-//         width: 50%;
-//     }
-// }
-//
-// .c-background {
-//     @include mq(bp4) {
-//         background: transparent url("https://thomas-williams.imgix.net/wp-content/uploads/2018/10/Thomas-Williams_Home-Crop.jpg") 0 0 no-repeat;
-//         background-size: cover;
-//         position: absolute;
-//         width: 50%;
-//         right: 0;
-//         top: 0;
-//         bottom: 0;
-//     }
-// }
 
 .c-type-intro {
     // font-family: $delta-font-family;

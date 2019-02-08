@@ -1,15 +1,25 @@
 .s-content {
-    // h1 {
-    //     font-feature-settings: "salt";
-    // }
-
     h1,
     h2 {
         font-feature-settings: "salt";
-        color: var(--highlight-color);
+        // color: var(--text-color-dark);
+    }
+
+    h1 {
+        // text-transform: uppercase;
+        // color: var(--color-neutral-xxxx-light);
+    }
+
+    h2 {
+        color: var(--text-color-dark);
     }
 
     * + h2 {
         margin-top: $beta-whitespace; // Add extra margin on top
+    }
+
+    a {
+        text-decoration: underline;
+        font-weight: $beta-font-weight;
     }
 }

@@ -13,7 +13,7 @@
         padding: baseline($root-baseline-multiplier * 2) baseline($root-baseline-multiplier * 2) baseline($root-baseline-multiplier);
     }
 
-    @include mq(bp3) {
+    @include mq(bp4) {
         padding: baseline($root-baseline-multiplier * 3) baseline($root-baseline-multiplier * 3) baseline($root-baseline-multiplier * 2);
     }
 

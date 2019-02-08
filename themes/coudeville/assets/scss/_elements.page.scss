@@ -9,18 +9,11 @@
 :root {
     --hue: 240;
 
-    --color-alpha-xxxx-light: hsla(var(--hue), 50%, 97.5%, 1);
-    --color-alpha-xxx-light: hsla(var(--hue), 62.5%, 95%, 1);
-    --color-alpha-xx-light: hsla(var(--hue), 75%, 87.5%, 1);
-    --color-alpha-x-light: hsla(var(--hue), 87.5%, 75%, 1);
-    --color-alpha-light: hsla(var(--hue), 95%, 62.5%, 1);
-    --color-alpha: hsla(var(--hue), 97.5%, 50%, 1);
-
     --color-neutral-xxxx-light: hsla(var(--hue), 5%, 97.5%, 1);
     --color-neutral-xxx-light: hsla(var(--hue), 5%, 95%, 1);
     --color-neutral-xx-light: hsla(var(--hue), 5%, 87.5%, 1);
     --color-neutral-x-light: hsla(var(--hue), 5%, 75%, 1);
-    --color-neutral-light: hsla(var(--hue), 5%, 62.5%, 1);
+    --color-neutral-light: hsla(var(--hue), 5%, 65%, 1);
     --color-neutral: hsla(var(--hue), 5%, 50%, 1);
     --color-neutral-dark: hsla(var(--hue), 5%, 37.5%, 1);
     --color-neutral-x-dark: hsla(var(--hue), 7.5%, 25%, 1);
@@ -28,16 +21,26 @@
     --color-neutral-xxx-dark: hsla(var(--hue), 12.5%, 7.5%, 1);
 
     --background-color: var(--color-neutral-xxx-dark);
-    --foreground-color: var(--color-neutral-light);
-    --highlight-color: var(--color-alpha-xxxx-light);
+    --text-color: var(--color-neutral-light);
+    --text-color-dark: var(--color-neutral-xxxx-light);
+    --highlight-color: var(--color-neutral-xxxx-light);
+
+    // a little bit of responsive typography
+
+    font-size: round(ms(-1));
+
+    @include mq(bp3) {
+        font-size: round(ms(0))
+    }
 }
 
 // light version
 
 .is-light {
-    --background-color: var(--color-alpha-xxx-light);
-    --foreground-color: var(--color-neutral-dark);
-    --highlight-color: var(--color-neutral-xx-dark);
+    --background-color: hsla(var(--hue), 75%, 97%, 1);
+    --text-color: hsla(var(--hue), 15%, 35%, 1);
+    --text-color-dark: hsla(var(--hue), 15%, 20%, 1);
+    --highlight-color: hsla(var(--hue), 75%, 60%, 1);
 }
 
 // styles
@@ -47,7 +50,7 @@ html {
     -webkit-overflow-scrolling: touch;
     -webkit-font-smoothing: antialiased;
     background-color: var(--background-color);
-    color: var(--foreground-color);
+    color: var(--text-color);
 }
 
 body {

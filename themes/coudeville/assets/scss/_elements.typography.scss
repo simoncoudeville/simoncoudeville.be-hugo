@@ -8,7 +8,7 @@ Default markup for typographic elements
 // Variables
 // ---
 
-$h1-font-size: ms(7);
+$h1-font-size: ms(8);
 $h1-baseline-multiplier: 9;
 $h1-font-size-large: ms(10);
 $h1-baseline-multiplier-large: 12;
@@ -38,7 +38,6 @@ ul {
 h1 {
     font-family: $gamma-font-family;
     font-weight: $beta-font-weight;
-    // font-weight: $alpha-font-weight;
     margin-bottom: $beta-whitespace;
     @include font-height($h1-font-size,$h1-baseline-multiplier); // Font size calculated by the font-height mixin
 
@@ -110,12 +109,12 @@ a {
 
     &:hover {
         // text-decoration: none;
-        color: var(--foreground-color);
+        color: var(--text-color);
     }
 
     &:focus {
         outline: thin dotted;
-        color: var(--foreground-color);
+        color: var(--text-color);
     }
 
     &:hover,

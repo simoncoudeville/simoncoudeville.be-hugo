@@ -5,7 +5,7 @@
 */
 
 .c-brand {
-    color: var(--highlight-color);
+    color: var(--text-color-dark);
     font-family: $alpha-font-family;
     font-weight: $beta-font-weight;
     font-feature-settings: "salt";
@@ -15,7 +15,7 @@
 
 .c-brand__line {
     // font-family: $delta-font-family;
-    color: var(--foreground-color);
+    color: var(--text-color);
     font-weight: $alpha-font-weight;
     display: block;
     // @include font-height(ms(-1),4);

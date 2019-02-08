@@ -25,10 +25,10 @@
 
 // Font height mixin
 @mixin font-height($font-size,$baseline-multiplier) {
-  font-size: round($font-size); // font-size in pixels
+  // font-size: round($font-size); // font-size in pixels
   font-size: pxtorem($font-size); // font-size in rem
-  line-height: $baseline-multiplier * $baseline; // line-height in pixels
-  line-height: baseline($baseline-multiplier); // line-height in rem
-  line-height: #{$baseline-multiplier * $baseline / round($font-size)}em; // line-height in em
+  // line-height: $baseline-multiplier * $baseline; // line-height in pixels
+  // line-height: baseline($baseline-multiplier); // line-height in rem
+  // line-height: #{$baseline-multiplier * $baseline / round($font-size)}em; // line-height in em
   line-height: #{$baseline-multiplier * $baseline / round($font-size)}; // unitless line-height
 }

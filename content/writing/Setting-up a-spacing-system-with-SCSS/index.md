@@ -4,14 +4,15 @@ title: Setting up a vertical rhythm system with SCSS
 description: blabla
 draft: false
 light: true
-hue: 180
+#hue: 100
 ---
 
-This is the demo of an article I'm planning to write about creating a simple baseline grid system with CSS. The main idea is to choose a baseline unit and to multiply that for widths, heights, line-heights, margin and padding values. It's build on a flexible foundation using relative units. Try changing the variables and the multipliers in the CSS panel.
+In this article I will describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. I also use the [modular scale plugin](https://www.google.com) to set up a typographic scale. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design. It also provides control and a predictable outcome.
 
-## Same old new medium?
+## Flexible foundations
 
-If you’ve never watched early television programs, it’s instructive viewing. Television was at that time often referred to as “radio with pictures,” and that’s a pretty accurate description. Much of television followed the format of popular radio at that time. Indeed programs like the Tonight Show, with its variants found on virtually every channel in the world (featuring a band, the talk to the camera host, and seated guests), or the news, with the suited sober news reader, remain as traces of the medium television grew out of. A palimpsest of media past.
+Pixels are easy to work with. I still think in pixels. All design software for interactive products work with pixels. I can imagine what a title with font-size of 66px looks like. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it. All browsers have a setting that let’s people choose what
+
 
 ## The Way
 
