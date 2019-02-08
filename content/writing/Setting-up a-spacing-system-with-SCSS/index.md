@@ -4,7 +4,7 @@ title: Setting up a vertical rhythm system with SCSS
 description: blabla
 draft: false
 light: true
-#hue: 100
+hue: 200
 ---
 
 In this article I will describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. I also use the [modular scale plugin](https://www.google.com) to set up a typographic scale. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design. It also provides control and a predictable outcome.

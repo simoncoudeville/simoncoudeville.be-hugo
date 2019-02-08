@@ -20,9 +20,11 @@
     --color-neutral-xx-dark: hsla(var(--hue), 10%, 15%, 1);
     --color-neutral-xxx-dark: hsla(var(--hue), 12.5%, 7.5%, 1);
 
-    --background-color: var(--color-neutral-xxx-dark);
-    --text-color: var(--color-neutral-light);
-    --text-color-dark: var(--color-neutral-xxxx-light);
+    --content-background-color: var(--color-neutral-xxx-dark);
+    --header-background-color: var(--color-neutral-xxx-dark);
+    --header-text-color: var(--color-neutral-xxxx-light);
+    --content-text-color: var(--color-neutral-light);
+    --content-text-color-highlight: var(--color-neutral-xxxx-light);
     --highlight-color: var(--color-neutral-xxxx-light);
 
     // a little bit of responsive typography
@@ -37,10 +39,12 @@
 // light version
 
 .is-light {
-    --background-color: hsla(var(--hue), 75%, 97%, 1);
-    --text-color: hsla(var(--hue), 15%, 35%, 1);
-    --text-color-dark: hsla(var(--hue), 15%, 20%, 1);
-    --highlight-color: hsla(var(--hue), 75%, 60%, 1);
+    --content-background-color: hsla(var(--hue), 85%, 97.5%, 1);
+    --header-background-color: hsla(var(--hue), 75%, 60%, 1);
+    --header-text-color: var(--content-background-color);
+    --content-text-color: hsla(var(--hue), 15%, 35%, 1);
+    --content-text-color-highlight: hsla(var(--hue), 15%, 20%, 1);
+    --highlight-color: var(--header-background-color);
 }
 
 // styles
@@ -49,8 +53,8 @@ html {
     font: $alpha-font-weight #{$root-font-size/16px*100%}/#{$root-line-height/$root-font-size} $alpha-font-family;
     -webkit-overflow-scrolling: touch;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--content-background-color);
+    color: var(--content-text-color);
 }
 
 body {
@@ -78,13 +82,13 @@ body {
 
 ::-moz-selection {
     background-color: var(--highlight-color);
-    color: var(--background-color);
+    color: var(--header-text-color);
     text-shadow: none;
 }
 
 ::selection {
     background-color: var(--highlight-color);
-    color: var(--background-color);
+    color: var(--header-text-color);
     text-shadow: none;
 }
 

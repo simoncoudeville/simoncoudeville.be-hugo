@@ -32,7 +32,7 @@ div:empty {
 
     &,
     &:visited {
-        color: var(--background-color);
+        color: var(--header-text-color);
     }
 
     &:hover {
@@ -69,8 +69,8 @@ div:empty {
         top: 0;
         right: 0;
         left: 0;
-        height: baseline(10);
-        background-color: var(--highlight-color);
+        height: baseline($root-baseline-multiplier * 2.75);
+        background-color: var(--header-background-color);
     }
 
     @include mq(bp2) {
@@ -82,8 +82,8 @@ div:empty {
     }
 
     @include mq(bp5) {
-        grid: " . left content right ." / 1fr 2fr 36em 2fr 1fr;
-        grid-template-rows: minmax(baseline($root-baseline-multiplier * 5), calc(100vh - #{baseline($root-baseline-multiplier * 20)})) auto auto auto;
+        grid: " . left content right ." / minmax(baseline($root-baseline-multiplier * 2),1fr) minmax(baseline($root-baseline-multiplier * 2), baseline($root-baseline-multiplier * 8)) 36em minmax(baseline($root-baseline-multiplier * 2), baseline($root-baseline-multiplier * 8)) minmax(baseline($root-baseline-multiplier * 2),1fr);
+        grid-template-rows: baseline($root-baseline-multiplier * 10) auto auto auto;
         grid-gap: 0 baseline($root-baseline-multiplier);
 
         &:after {
@@ -94,7 +94,7 @@ div:empty {
 
 .c-single__background {
     display: block !important;
-    background-color: var(--highlight-color);
+    background-color: var(--header-background-color);
     grid-column: 1 / -1;
     grid-row: 1 / 4;
 
@@ -103,42 +103,10 @@ div:empty {
     }
 }
 
-// Z-indexes
-
-.c-single__content {
-    z-index: 10;
-}
-
-.c-single__background {
-    z-index: 60;
-}
-
-.c-single {
-    &:after {
-        z-index: 90;
-
-        @include mq(bp5) {
-            z-index: 40;
-        }
-    }
-}
-
-.c-single__top-title {
-    z-index: 150;
-}
-
-.c-single__header {
-    z-index: 80;
-}
-
-.c-single__back {
-    z-index: 100;
-}
-
 .c-single__back {
     margin-bottom: $beta-whitespace;
     position: sticky;
-    top: baseline($root-baseline-multiplier/2);
+    top: baseline(4);
     align-self: start;
     grid-column: content;
     grid-row: 2;
@@ -152,18 +120,18 @@ div:empty {
 
 .c-single__content {
     grid-column: content;
-    padding-top: baseline($root-baseline-multiplier * 2);
+    padding: baseline($root-baseline-multiplier * 2) 0 baseline($root-baseline-multiplier);
 
     @include mq(bp5) {
-        padding-top: baseline($root-baseline-multiplier * 5);
+        padding: baseline($root-baseline-multiplier * 5) 0 baseline($root-baseline-multiplier * 4);
     }
 }
 
 .c-single__header {
     grid-column: content;
-    color: var(--background-color);
+    color: var(--header-text-color);
     grid-row: 3;
-    // transform: translateY(baseline(3));
+    // transform: translateY(baseline(-3));
     opacity: 0;
     transition: all $animation-duration-gamma $animation-easing-alpha;
 
@@ -182,20 +150,21 @@ div:empty {
 .c-single__top-title {
     display: none;
     position: sticky;
-    top: baseline(2.5);
+    top: baseline(4);
     grid-column: content;
     grid-row-start: 2;
-    align-self: end;
-    color: var(--background-color);
+    align-self: start;
+    color: var(--header-text-color);
     font-feature-settings: "salt";
     font-weight: $beta-font-weight;
     font-family: $beta-font-family;
-    // margin-bottom: 0;
-    // transform: translateY(baseline(3));
+    visibility: hidden;
+    transform: translateY(baseline(2));
     opacity: 0;
     transition: all $animation-duration-alpha $animation-easing-alpha;
 
     &.is-shown {
+        visibility: visible;
         opacity: 1;
         transform: translateY(0);
     }
@@ -205,6 +174,39 @@ div:empty {
         top: baseline(4);
         text-align: left;
     }
+}
+
+// Z-indexes
+
+.c-single__content {
+    z-index: 10;
+}
+
+.c-single__background {
+    z-index: 60;
+}
+
+.c-single {
+    &:after {
+        z-index: 40;
+        // z-index: 90;
+        //
+        // @include mq(bp5) {
+        //     z-index: 40;
+        // }
+    }
+}
+
+.c-single__top-title {
+    z-index: 150;
+}
+
+.c-single__header {
+    z-index: 80;
+}
+
+.c-single__back {
+    z-index: 100;
 }
 
 .c-section {
