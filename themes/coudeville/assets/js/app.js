@@ -1,18 +1,15 @@
-var topTitle = document.querySelector('.js-single-top-title');
-var singleHeader = document.querySelector('.js-single-header');
+var single = document.querySelector('.js-single');
 
 var options = {
-  rootMargin: '-84px'
+  rootMargin: '-85px'
 }
 
 function handler(entries, observer) {
   for (entry of entries) {
     if (entry.isIntersecting) {
-      topTitle.classList.remove("is-shown");
-      singleHeader.classList.add("is-shown");
+      single.classList.remove("has-scrolled");
     } else {
-      topTitle.classList.add("is-shown")
-      singleHeader.classList.remove("is-shown")
+      single.classList.add("has-scrolled")
     }
   }
 }

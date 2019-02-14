@@ -7,15 +7,15 @@
 // CSS vars
 
 :root {
-    --hue: 240;
+    --hue: 245;
 
-    --color-neutral-xxxx-light: hsla(var(--hue), 5%, 97.5%, 1);
-    --color-neutral-xxx-light: hsla(var(--hue), 5%, 95%, 1);
-    --color-neutral-xx-light: hsla(var(--hue), 5%, 87.5%, 1);
-    --color-neutral-x-light: hsla(var(--hue), 5%, 75%, 1);
-    --color-neutral-light: hsla(var(--hue), 5%, 65%, 1);
-    --color-neutral: hsla(var(--hue), 5%, 50%, 1);
-    --color-neutral-dark: hsla(var(--hue), 5%, 37.5%, 1);
+    --color-neutral-xxxx-light: hsla(var(--hue), 2.5%, 97.5%, 1);
+    --color-neutral-xxx-light: hsla(var(--hue), 2.5%, 95%, 1);
+    --color-neutral-xx-light: hsla(var(--hue), 2.5%, 87.5%, 1);
+    --color-neutral-x-light: hsla(var(--hue), 2.5%, 75%, 1);
+    --color-neutral-light: hsla(var(--hue), 2.5%, 67.5%, 1);
+    --color-neutral: hsla(var(--hue), 2.5%, 50%, 1);
+    --color-neutral-dark: hsla(var(--hue), 2.5%, 37.5%, 1);
     --color-neutral-x-dark: hsla(var(--hue), 7.5%, 25%, 1);
     --color-neutral-xx-dark: hsla(var(--hue), 10%, 15%, 1);
     --color-neutral-xxx-dark: hsla(var(--hue), 12.5%, 7.5%, 1);
@@ -23,7 +23,8 @@
     --content-background-color: var(--color-neutral-xxx-dark);
     --header-background-color: var(--color-neutral-xxx-dark);
     --header-text-color: var(--color-neutral-xxxx-light);
-    --content-text-color: var(--color-neutral-light);
+    --header-meta-color: var(--color-neutral-x-light);
+    --content-text-color: var(--color-neutral-x-light);
     --content-text-color-highlight: var(--color-neutral-xxxx-light);
     --highlight-color: var(--color-neutral-xxxx-light);
 
@@ -39,12 +40,33 @@
 // light version
 
 .is-light {
-    --content-background-color: hsla(var(--hue), 85%, 97.5%, 1);
-    --header-background-color: hsla(var(--hue), 75%, 60%, 1);
+    --content-background-color: hsla(var(--hue), 1%, 92.5%, 1);
+    --header-background-color: var(--content-background-color);
+    --header-text-color: hsla(var(--hue), 5%, 10%, 1);
+    --header-meta-color: hsla(var(--hue), 5%, 50%, 1);
+    --content-text-color: hsla(var(--hue), 5%, 25%, 1);
+    --content-text-color-highlight: hsla(var(--hue), 5%, 10%, 1);
+    --highlight-color: hsla(var(--hue), 80%, 60%, 1);
+
+    --content-background-color: hsla(var(--hue), 1%, 92.5%, 1);
+    --header-background-color: hsla(var(--hue), 70%, 45%, 1);
     --header-text-color: var(--content-background-color);
+    --header-meta-color: hsla(var(--hue), 1%, 92.5%, .75);
     --content-text-color: hsla(var(--hue), 15%, 35%, 1);
     --content-text-color-highlight: hsla(var(--hue), 15%, 20%, 1);
     --highlight-color: var(--header-background-color);
+
+    // --content-background-color: hsla(var(--hue), 1%, 92.5%, 1);
+    // --header-background-color: hsla(var(--hue), 25%, 85%, 1);
+    // --header-text-color: hsla(var(--hue), 15%, 35%, 1);
+    // --header-meta-color: hsla(var(--hue), 15%, 35%, .75);
+    // --content-text-color: hsla(var(--hue), 15%, 35%, 1);
+    // --content-text-color-highlight: hsla(var(--hue), 15%, 20%, 1);
+    // --highlight-color: hsla(var(--hue), 50%, 45%, 1);
+
+    body:before {
+        display: none;
+    }
 }
 
 // styles
@@ -53,66 +75,71 @@ html {
     font: $alpha-font-weight #{$root-font-size/16px*100%}/#{$root-line-height/$root-font-size} $alpha-font-family;
     -webkit-overflow-scrolling: touch;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--content-background-color);
+    background-color: var(--header-background-color);
     color: var(--content-text-color);
+
+    // @include mq(bp5) {
+    //     padding: 0 baseline(13) baseline(13);
+    // }
 }
 
 body {
-    margin: 0;
+    position: relative;
+    min-height: 100vh;
+    margin: baseline(1) 0 0;
+    background-color: var(--content-background-color);
 
-    // &:before {
-    //    content: '';
-    //    position: fixed;
-    //    top: 0;
-    //    right: 0;
-    //    bottom: 0;
-    //    left: 0;
-    //    background: transparent url('../img/wallpaper-516.gif') 0 0 repeat;
-    //    background-size: 600px 607px;
-    //    opacity: .05;
-    //    min-height: 100%;
-    //    //z-index: 1;
-    //
-    //    @include mq(bp3) {
-    //        background-size: auto auto;
-    //    }
-    //
-    // }
+    &:after {
+        content: '';
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: baseline(1);
+        background-color: var(--highlight-color);
+        z-index: 100;
+    }
+
+    @include mq(bp5) {
+        margin: 0 baseline(13) baseline(13);
+    }
+
+    // max-width: 75em;
+    // margin: 0 auto;
 }
 
 ::-moz-selection {
     background-color: var(--highlight-color);
-    color: var(--header-text-color);
+    color: white;
     text-shadow: none;
 }
 
 ::selection {
     background-color: var(--highlight-color);
-    color: var(--header-text-color);
+    color: white;
     text-shadow: none;
 }
 
 @if $show-baseline {
 
-    body {
-        &:after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            height: 100%;
-            background: repeating-linear-gradient(
-                to bottom,
-                transparent,
-                transparent pxtorem($baseline - 1),
-                rgba(Cyan, 0.75) pxtorem($baseline)
-            );
-            background-size: 100% pxtorem($baseline);
-            pointer-events: none;
-        }
+    .c-baseline-overlay {
+        display: block !important;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        background: repeating-linear-gradient(
+            to bottom,
+            transparent,
+            transparent pxtorem($baseline - 1),
+            rgba(Cyan, 0.75) pxtorem($baseline)
+        );
+        background-size: 100% pxtorem($baseline);
+        pointer-events: none;
+        z-index: 1000;
     }
 
     h1,

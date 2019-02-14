@@ -6,18 +6,18 @@
     <description>Recent content in Designer, teacher and nerd on Simon Coudeville</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 06 Feb 2019 21:40:40 +0100</lastBuildDate>
     
 	<atom:link href="https://simoncoudeville.be/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Setting up a spacing and baseline system in CSS</title>
+      <title>Setting up a vertical rhythm system with SCSS</title>
       <link>https://simoncoudeville.be/writing/setting-up-a-spacing-system-with-scss/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 06 Feb 2019 21:40:40 +0100</pubDate>
       
       <guid>https://simoncoudeville.be/writing/setting-up-a-spacing-system-with-scss/</guid>
-      <description>This is the demo of an article I&amp;rsquo;m planning to write about creating a simple baseline grid system with CSS. The main idea is to choose a baseline unit and to multiply that for widths, heights, line-heights, margin and padding values. It&amp;rsquo;s build on a flexible foundation using relative units. Try changing the variables and the multipliers in the CSS panel.
-Same old new medium? If you’ve never watched early television programs, it’s instructive viewing.</description>
+      <description>In this article I will describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. I also use the modular scale plugin to set up a typographic scale. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design.</description>
     </item>
     
   </channel>

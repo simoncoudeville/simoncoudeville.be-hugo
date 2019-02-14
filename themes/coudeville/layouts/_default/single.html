@@ -1,22 +1,13 @@
 {{ define "main" }}
-<div class="c-single">
+<div class="c-single js-single">
     <div class="c-single__background js-single-background"></div>
-    <p class="c-single__back">
-        <a class="c-link-back" href="/">
-            <svg class="c-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-labelledby="arrowLeftIconTitle arrowLeftIconDesc">
-                <title id="arrowLeftIconTitle">Arrow Left</title>
-                <desc id="arrowLeftIconDesc">Icon of an arrow pointing left</desc>
-                <path d="M9 6l-6 6 6 6"/>
-                <path d="M21 12H4"/>
-                <path d="M3 12h1"/>
-            </svg>
-            Blog
-        </a>
+    <p class="c-single__logo c-single__logo--sticky">
+        <a class="c-logo__link" href="/">Simon Coudeville</a>
+    </p>
+    <p class="c-single__meta">
+        {{ .Date.Format "January 2, 2006" }}
     </p>
     <div class="c-single__header js-single-header">
-        <p class="c-type-meta u-mb-alpha">
-            Published {{ .Date.Format "January 2, 2006" }}
-        </p>
         <h1>{{ .Title }}</h1>
     </div>
     <div class="c-single__content">
@@ -24,6 +15,21 @@
             {{ .Content }}
         </div>
     </div>
+    <div class="c-single__footer">
+        {{- partial "footer.html" . -}}
+    </div>
     <p class="c-single__top-title js-single-top-title">{{ .Title }}</p>
 </div>
+<!-- <p class="c-single__back">
+    <a class="c-link-back" href="/">
+        <svg class="c-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-labelledby="arrowLeftIconTitle arrowLeftIconDesc">
+            <title id="arrowLeftIconTitle">Arrow Left</title>
+            <desc id="arrowLeftIconDesc">Icon of an arrow pointing left</desc>
+            <path d="M9 6l-6 6 6 6"/>
+            <path d="M21 12H4"/>
+            <path d="M3 12h1"/>
+        </svg>
+        Home
+    </a>
+</p> -->
 {{ end }}

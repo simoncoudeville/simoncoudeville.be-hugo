@@ -6,17 +6,35 @@
 
 .c-brand {
     color: var(--content-text-color-highlight);
-    font-family: $alpha-font-family;
+    font-family: $gamma-font-family;
     font-weight: $beta-font-weight;
     font-feature-settings: "salt";
+    text-transform: uppercase;
+    letter-spacing: .1em;
     margin-bottom: $alpha-whitespace;
     @include font-height($root-font-size,$root-baseline-multiplier);
 }
 
 .c-brand__line {
-    // font-family: $delta-font-family;
+    font-family: $alpha-font-family;
+    text-transform: none;
+    letter-spacing: 0;
     color: var(--content-text-color);
     font-weight: $alpha-font-weight;
     display: block;
     // @include font-height(ms(-1),4);
+}
+
+.c-logo__link {
+    &,
+    &:visited {
+        // text-decoration: underline;
+        color: var(--header-text-color);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--highlight-color);
+    }
 }
