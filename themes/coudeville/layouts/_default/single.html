@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="c-single js-single">
-    <div class="c-single__background js-single-background"></div>
+    <!-- <div class="c-single__background js-single-background"></div> -->
     <p class="c-single__logo c-single__logo--sticky">
         <a class="c-logo__link" href="/">Simon Coudeville</a>
     </p>
@@ -8,16 +8,25 @@
         {{ .Date.Format "January 2, 2006" }}
     </p>
     <div class="c-single__header js-single-header">
-        <h1>{{ .Title }}</h1>
+        <h1 class="js-single-title">{{ .Title }}</h1>
     </div>
     <div class="c-single__content">
         <div class="s-content">
             {{ .Content }}
         </div>
     </div>
+    {{/*
+    <div class="c-single__footer">
+        <label class="c-toggle">
+            <input class="c-toggle__checkbox js-toggle-baseline" type="checkbox"> Show baseline
+        </label>
+    </div>
+    */}}
+    {{/*
     <div class="c-single__footer">
         {{- partial "footer.html" . -}}
     </div>
+    */}}
     <p class="c-single__top-title js-single-top-title">{{ .Title }}</p>
 </div>
 <!-- <p class="c-single__back">

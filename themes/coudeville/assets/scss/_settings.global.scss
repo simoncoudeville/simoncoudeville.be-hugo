@@ -9,7 +9,7 @@
 // ---
 
 $modularscale: (
-  base: 20px,
+  base: 19px,
   ratio: 1.125
 );
 
@@ -19,7 +19,7 @@ $modularscale: (
 
 // Baseline settings
 // Think in pixels, let SCSS and the browser do the converting
-$baseline: 7px;
+$baseline: 6px;
 $root-font-size: ms(0); // Modular scale size 0
 $root-baseline-multiplier: 5;
 $root-line-height: $baseline * $root-baseline-multiplier; // In this setup this equals a line-height of 28px
@@ -33,10 +33,12 @@ $show-baseline: false;
 // Basic font settings
 
 $alpha-font-family          : "Graphik Web", sans-serif;
+// $alpha-font-family          : "Suisse Intl", sans-serif;
 $beta-font-family           : "Graphik Web Compact", sans-serif;
 $gamma-font-family           : "Graphik Web Condensed", sans-serif;
-$delta-font-family          : "Atlas Typewriter", sans-serif;
+// $delta-font-family          : "Atlas Typewriter", sans-serif;
 // $delta-font-family          : "Suisse Intl Mono", sans-serif;
+$delta-font-family          : "Suisse Works", sans-serif;
 
 $alpha-font-weight          : 400;
 $beta-font-weight           : 500;

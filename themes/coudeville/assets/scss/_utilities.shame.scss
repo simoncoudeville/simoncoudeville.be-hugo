@@ -63,6 +63,7 @@ div:empty {
     display: grid;
     grid: " . content ." / auto minmax(min-content, 36em) auto;
     grid-gap: 0 baseline($root-baseline-multiplier);
+    scroll-snap-type: y mandatory;
 
     @include mq(bp2) {
         grid-gap: 0 baseline($root-baseline-multiplier * 2);
@@ -71,7 +72,7 @@ div:empty {
     @include mq(bp5) {
         grid: "left content right" / 1fr 36rem 1fr;
         grid-gap: 0 baseline($root-baseline-multiplier);
-        grid-template-rows: auto baseline($root-baseline-multiplier * 20) auto;
+        // grid-template-rows: auto baseline($root-baseline-multiplier * 13) auto;
         // grid-gap: 0;
 
         &:after {
@@ -139,8 +140,11 @@ div:empty {
     margin-bottom: 0;
     margin-top: baseline($root-baseline-multiplier);
     color: var(--header-text-color);
-    font-weight: $beta-font-weight;
-    white-space: nowrap;
+    font-family: $alpha-font-family;
+    // font-weight: $beta-font-weight;
+    // font-family: $delta-font-family;
+    // text-transform: uppercase;
+    // white-space: nowrap;
     // @include font-height(ms(-1),4);
 
     @include mq(bp2) {
@@ -152,7 +156,7 @@ div:empty {
         grid-column: left;
         grid-row: 1;
         align-self: start;
-        // justify-self: end;
+        justify-self: end;
         // margin-top: 0;
 
     }
@@ -169,14 +173,25 @@ div:empty {
     grid-column: content;
     color: var(--header-meta-color);
     // font-family: $delta-font-family;
-    font-feature-settings: "salt";
+    // font-feature-settings: "salt";
+    font-family: $alpha-font-family;
+    font-feature-settings: "ss01", "zero";
     margin-bottom: 0;
     // @include font-height(ms(-1),5);
+    transition: all $animation-duration-alpha $animation-easing-alpha;
 
     @include mq(bp5) {
         grid-row: 1;
         margin-top: baseline($root-baseline-multiplier * 2);
         // margin-top: baseline(4);
+        position: sticky;
+        top: baseline(4);
+    }
+
+    .has-scrolled & {
+        // display: none;
+        opacity: 0;
+        transform: translateY(baseline(-2));
     }
 }
 
@@ -190,23 +205,34 @@ div:empty {
 
 .c-single__footer {
     grid-column: content;
+    z-index: 2000;
+
+    @include mq(bp5) {
+        grid-column: right;
+        grid-row: 3;
+        align-self: end;
+        justify-self: end;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+    }
 }
 
 .c-single__header {
     grid-column: content;
     color: var(--header-text-color);
     padding-top: baseline($root-baseline-multiplier * 2);
-    transition: all $animation-duration-gamma $animation-easing-alpha;
+    transition: all $animation-duration-alpha $animation-easing-alpha;
 
     .has-scrolled & {
         opacity: 0;
     }
 
     @include mq(bp5){
-        grid-column-end: span 2;
+        // grid-column-end: span 2;
         grid-row: 2;
         align-self: end;
-        // padding-top: baseline($root-baseline-multiplier * 4);
+        padding-top: baseline($root-baseline-multiplier * 4);
         // padding-top: baseline($root-baseline-multiplier * 6);
     }
 
@@ -223,13 +249,13 @@ div:empty {
     grid-row-start: 2;
     // align-self: end;
     align-self: start;
-    color: var(--header-text-color);
+    // color: var(--header-text-color);
     // color: var(--content-text-color);
-    // color: var(--header-meta-color);
+    color: var(--header-meta-color);
     // color: var(--highlight-color);
     font-feature-settings: "salt";
     // font-weight: $beta-font-weight;
-    // font-family: $delta-font-family;
+    font-family: $alpha-font-family;
     visibility: hidden;
     transform: translateY(baseline(2));
     opacity: 0;
@@ -262,7 +288,7 @@ div:empty {
 
 .c-single {
     &:after {
-        z-index: 40;
+        z-index: 90;
     }
 }
 

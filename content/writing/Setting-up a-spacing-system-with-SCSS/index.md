@@ -3,7 +3,7 @@ date: 2019-02-06T21:40:40+01:00
 title: How to create vertical rhythm with SCSS
 description: blabla
 draft: false
-light: true
+#light: true
 #hue: 360
 #hue: 25
 #hue: 50
@@ -24,3 +24,15 @@ Pixels are easy to work with. I still think in pixels. All design software for i
 So what can be done to design for adaptability, and so accessibility? Firstly, there are a couple of ways of thinking which might be helpful. Then I have some practical suggestions about steps you can take to avoid making your pages inaccessible.
 
 If you use style sheets properly, to suggest the appearance of a page, not to control the appearance of a page, and you don’t rely on your style sheet to convey information, then your pages will “work” fine in any browser, past or future. Browsers which don’t support style sheets simply present pages that look a little on the plain side. Our biggest concern is browsers which have buggy style sheets support. Today this is an issue. Not too long from now, it won’t be much of an issue. For now, you can limit yourself to a subset of CSS which is well enough supported, and still have more presentational effect than using presentational HTML. I’ve written quite a bit about this elsewhere, so I won’t repeat myself here.
+
+<pre><code class="language-css">body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+
+.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}</code></pre>

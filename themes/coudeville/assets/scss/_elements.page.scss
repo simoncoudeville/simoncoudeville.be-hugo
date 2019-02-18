@@ -9,23 +9,23 @@
 :root {
     --hue: 245;
 
-    --color-neutral-xxxx-light: hsla(var(--hue), 2.5%, 97.5%, 1);
-    --color-neutral-xxx-light: hsla(var(--hue), 2.5%, 95%, 1);
-    --color-neutral-xx-light: hsla(var(--hue), 2.5%, 87.5%, 1);
-    --color-neutral-x-light: hsla(var(--hue), 2.5%, 75%, 1);
-    --color-neutral-light: hsla(var(--hue), 2.5%, 67.5%, 1);
-    --color-neutral: hsla(var(--hue), 2.5%, 50%, 1);
-    --color-neutral-dark: hsla(var(--hue), 2.5%, 37.5%, 1);
-    --color-neutral-x-dark: hsla(var(--hue), 7.5%, 25%, 1);
-    --color-neutral-xx-dark: hsla(var(--hue), 10%, 15%, 1);
-    --color-neutral-xxx-dark: hsla(var(--hue), 12.5%, 7.5%, 1);
+    --color-neutral-xxxx-light: hsla(var(--hue), 1%, 97.5%, 1);
+    --color-neutral-xxx-light: hsla(var(--hue), 1%, 95%, 1);
+    --color-neutral-xx-light: hsla(var(--hue), 1%, 87.5%, 1);
+    --color-neutral-x-light: hsla(var(--hue), 1%, 75%, 1);
+    --color-neutral-light: hsla(var(--hue), 1%, 67.5%, 1);
+    --color-neutral: hsla(var(--hue), 1%, 50%, 1);
+    --color-neutral-dark: hsla(var(--hue), 1%, 37.5%, 1);
+    --color-neutral-x-dark: hsla(var(--hue), 1%, 25%, 1);
+    --color-neutral-xx-dark: hsla(var(--hue), 5%, 15%, 1);
+    --color-neutral-xxx-dark: hsla(var(--hue), 7.5%, 7.5%, 1);
 
-    --content-background-color: var(--color-neutral-xxx-dark);
-    --header-background-color: var(--color-neutral-xxx-dark);
-    --header-text-color: var(--color-neutral-xxxx-light);
-    --header-meta-color: var(--color-neutral-x-light);
-    --content-text-color: var(--color-neutral-x-light);
-    --content-text-color-highlight: var(--color-neutral-xxxx-light);
+    --content-background-color: var(--color-neutral-dark);
+    --header-background-color: var(--color-neutral-dark);
+    --header-text-color: var(--color-neutral-xxx-light);
+    --header-meta-color: var(--color-neutral-light);
+    --content-text-color: var(--color-neutral-xxx-light);
+    --content-text-color-highlight: var(--color-neutral-xxx-light);
     --highlight-color: var(--color-neutral-xxxx-light);
 
     // a little bit of responsive typography
@@ -40,21 +40,22 @@
 // light version
 
 .is-light {
-    --content-background-color: hsla(var(--hue), 1%, 92.5%, 1);
+    --content-background-color: hsla(var(--hue), 2%, 85%, 1);
+    --content-background-color: hsla(var(--hue), 2%, 95%, 1);
     --header-background-color: var(--content-background-color);
-    --header-text-color: hsla(var(--hue), 5%, 10%, 1);
-    --header-meta-color: hsla(var(--hue), 5%, 50%, 1);
-    --content-text-color: hsla(var(--hue), 5%, 25%, 1);
-    --content-text-color-highlight: hsla(var(--hue), 5%, 10%, 1);
+    --header-text-color: hsla(var(--hue), 2%, 10%, 1);
+    --header-meta-color: hsla(var(--hue), 2%, 50%, 1);
+    --content-text-color: hsla(var(--hue), 2%, 10%, 1);
+    --content-text-color-highlight: hsla(var(--hue), 2%, 2%, 1);
     --highlight-color: hsla(var(--hue), 80%, 60%, 1);
 
-    --content-background-color: hsla(var(--hue), 1%, 92.5%, 1);
-    --header-background-color: hsla(var(--hue), 70%, 45%, 1);
-    --header-text-color: var(--content-background-color);
-    --header-meta-color: hsla(var(--hue), 1%, 92.5%, .75);
-    --content-text-color: hsla(var(--hue), 15%, 35%, 1);
-    --content-text-color-highlight: hsla(var(--hue), 15%, 20%, 1);
-    --highlight-color: var(--header-background-color);
+    // --content-background-color: hsla(var(--hue), 1%, 92.5%, 1);
+    // --header-background-color: hsla(var(--hue), 70%, 45%, 1);
+    // --header-text-color: var(--content-background-color);
+    // --header-meta-color: hsla(var(--hue), 1%, 92.5%, .75);
+    // --content-text-color: hsla(var(--hue), 15%, 35%, 1);
+    // --content-text-color-highlight: hsla(var(--hue), 15%, 20%, 1);
+    // --highlight-color: var(--header-background-color);
 
     // --content-background-color: hsla(var(--hue), 1%, 92.5%, 1);
     // --header-background-color: hsla(var(--hue), 25%, 85%, 1);
@@ -75,7 +76,7 @@ html {
     font: $alpha-font-weight #{$root-font-size/16px*100%}/#{$root-line-height/$root-font-size} $alpha-font-family;
     -webkit-overflow-scrolling: touch;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--header-background-color);
+    // background-color: var(--header-background-color);
     color: var(--content-text-color);
 
     // @include mq(bp5) {
@@ -86,23 +87,26 @@ html {
 body {
     position: relative;
     min-height: 100vh;
-    margin: baseline(1) 0 0;
+    // margin: baseline(1) 0 0;
+    margin: 0;
     background-color: var(--content-background-color);
+    // font-feature-settings: "ss02", "zero";
+    font-feature-settings: "zero";
 
-    &:after {
-        content: '';
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: baseline(1);
-        background-color: var(--highlight-color);
-        z-index: 100;
-    }
+    // &:after {
+    //     content: '';
+    //     display: block;
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     height: baseline(1);
+    //     background-color: var(--highlight-color);
+    //     z-index: 100;
+    // }
 
     @include mq(bp5) {
-        margin: 0 baseline(13) baseline(13);
+        padding: 0 baseline(13);
     }
 
     // max-width: 75em;
@@ -121,7 +125,7 @@ body {
     text-shadow: none;
 }
 
-@if $show-baseline {
+.has-baseline {
 
     .c-baseline-overlay {
         display: block !important;
