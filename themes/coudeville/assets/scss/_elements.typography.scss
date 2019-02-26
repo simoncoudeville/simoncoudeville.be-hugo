@@ -13,7 +13,7 @@ $h1-baseline-multiplier: 8;
 $h1-font-size-large: ms(10);
 $h1-baseline-multiplier-large: 12;
 $h1-font-size-xlarge: ms(12);
-$h1-baseline-multiplier-xlarge: 14;
+$h1-baseline-multiplier-xlarge: $root-baseline-multiplier * 3;
 $h2-font-size: ms(2);
 $h2-baseline-multiplier: $root-baseline-multiplier;
 $h3-font-size: ms(-1);
@@ -36,13 +36,11 @@ ul {
 }
 
 h1 {
-    // font-family: $gamma-font-family;
-    // font-weight: $beta-font-weight;
     font-feature-settings: "salt";
     font-weight: $alpha-font-weight;
-    // font-weight: 200;
+    // font-weight: $beta-font-weight;
     // font-family: $delta-font-family;
-    // font-family: $alpha-font-family;
+    // font-family: $gamma-font-family;
     margin-bottom: $beta-whitespace;
     font-kerning: none;
     @include font-height($h1-font-size,$h1-baseline-multiplier); // Font size calculated by the font-height mixin
@@ -53,18 +51,15 @@ h1 {
         @include font-height($h1-font-size-large,$h1-baseline-multiplier-large);
     }
 
-    // @include mq(bp5) {
-    //     @include font-height($h1-font-size-xlarge,$h1-baseline-multiplier-xlarge);
-    // }
+    @include mq(bp5) {
+        @include font-height($h1-font-size-xlarge,$h1-baseline-multiplier-xlarge);
+    }
 }
 
 h2 {
-    // font-family: $beta-font-family;
-    // font-family: $gamma-font-family;
-    // font-weight: $beta-font-weight;
-    font-family: $delta-font-family;
     font-family: $alpha-font-family;
     font-weight: $alpha-font-weight;
+    // font-weight: $beta-font-weight;
     margin-bottom: $alpha-whitespace;
     @include font-height($h2-font-size,$h2-baseline-multiplier);
 }
@@ -87,6 +82,7 @@ p,
 ul,
 ol {
     margin-bottom: $alpha-whitespace;
+    // @include font-height(ms(0),$root-baseline-multiplier);
 
     // @include mq(bp4) {
     //     @include font-height(ms(1),5)
@@ -107,22 +103,22 @@ pre {
 
 a {
     text-decoration: none;
-    color: var(--highlight-color);
+    color: var(--page-link-color);
     transition: all $animation-duration-alpha $animation-easing-alpha;
     display: inline-block;
 
     &:visited {
-        color: var(--highlight-color);
+        color: var(--page-link-color);
     }
 
     &:hover {
         // text-decoration: none;
-        color: var(--text-color);
+        color: var(--page-text-color);
     }
 
     &:focus {
         outline: thin dotted;
-        color: var(--text-color);
+        color: var(--page-text-color);
     }
 
     &:hover,

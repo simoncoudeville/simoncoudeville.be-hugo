@@ -6,7 +6,7 @@
 
 // simple px to rem converter
 @function pxtorem($pixelvalue) {
-    @return #{round($pixelvalue) / $root-font-size}rem;
+    @return #{$pixelvalue / $root-font-size}rem;
 }
 
 // Simple baseline-unit multiplier converted to rem

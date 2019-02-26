@@ -10,8 +10,13 @@
 {{ $options := (dict "targetPath" "css/screen.css" "outputStyle" "compressed" ) }}
 {{ $style := resources.Get "scss/screen.scss" | resources.ToCSS $options }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
+{{/* Conditional css if the post needs code highlighting */}}
+{{ if .Params.Code }}
+{{ $prismoptions := (dict "targetPath" "css/prism.css" "outputStyle" "compressed" ) }}
+{{ $prismstyle := resources.Get "scss/prism.scss" | resources.ToCSS $prismoptions }}
+<link rel="stylesheet" href="{{ $prismstyle.Permalink }}">
+{{ end }}
 <link rel="icon" href="/favicon.png">
-
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

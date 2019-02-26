@@ -20,11 +20,12 @@ $modularscale: (
 // Baseline settings
 // Think in pixels, let SCSS and the browser do the converting
 $baseline: 6px;
-$root-font-size: ms(0); // Modular scale size 0
+$root-font-size: ms(0); // Modular scale size 0 = 19px
+$root-font-size-small: ms(-1); // Modular scale size -1 for mobile
 $root-baseline-multiplier: 5;
-$root-line-height: $baseline * $root-baseline-multiplier; // In this setup this equals a line-height of 28px
+$root-line-height: $baseline * $root-baseline-multiplier;
 
-// Default whitespace settings e.g. margins and paddings
+// Default whitespace settings for margins and paddings between elements
 $alpha-whitespace: baseline($root-baseline-multiplier); // Default whitespace between elements e.g. paragraphs, titles
 $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace between elements e.g. between paragraphs and h2
 
@@ -36,9 +37,10 @@ $alpha-font-family          : "Graphik Web", sans-serif;
 // $alpha-font-family          : "Suisse Intl", sans-serif;
 $beta-font-family           : "Graphik Web Compact", sans-serif;
 $gamma-font-family           : "Graphik Web Condensed", sans-serif;
-// $delta-font-family          : "Atlas Typewriter", sans-serif;
-// $delta-font-family          : "Suisse Intl Mono", sans-serif;
 $delta-font-family          : "Suisse Works", sans-serif;
+// $delta-font-family          : "Suisse Neue", sans-serif;
+$code-font-family           : "Atlas Typewriter", sans-serif;
+// $code-font-family           : "Suisse Intl Mono", sans-serif;
 
 $alpha-font-weight          : 400;
 $beta-font-weight           : 500;

@@ -19,7 +19,7 @@
     font-family: $alpha-font-family;
     text-transform: none;
     letter-spacing: 0;
-    color: var(--content-text-color);
+    color: var(--page-text-color);
     font-weight: $alpha-font-weight;
     display: block;
     // @include font-height(ms(-1),4);
@@ -29,12 +29,12 @@
     &,
     &:visited {
         // text-decoration: underline;
-        color: var(--header-text-color);
+        color: var(--page-heading-color);
     }
 
     &:hover,
     &:focus,
     &:active {
-        color: var(--highlight-color);
+        color: var(--page-link-color);
     }
 }

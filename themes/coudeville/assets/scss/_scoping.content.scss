@@ -2,7 +2,7 @@
     h1,
     h2 {
         font-feature-settings: "salt";
-        // color: var(--text-color-dark);
+        color: var(--page-heading-color);
     }
 
     h1 {
@@ -11,7 +11,7 @@
     }
 
     h2 {
-        color: var(--content-text-color-highlight);
+        color: var(--page-heading-color);
     }
 
     * + h2 {

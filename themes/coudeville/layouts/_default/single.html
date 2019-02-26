@@ -1,44 +1,36 @@
 {{ define "main" }}
 <div class="c-single js-single">
-    <!-- <div class="c-single__background js-single-background"></div> -->
     <p class="c-single__logo c-single__logo--sticky">
         <a class="c-logo__link" href="/">Simon Coudeville</a>
     </p>
-    <p class="c-single__meta">
+    <p class="c-single__meta c-single__meta--sticky">
         {{ .Date.Format "January 2, 2006" }}
     </p>
-    <div class="c-single__header js-single-header">
-        <h1 class="js-single-title">{{ .Title }}</h1>
-    </div>
+    <h1 class="c-single__title js-single-title">{{ .Title }}</h1>
     <div class="c-single__content">
         <div class="s-content">
             {{ .Content }}
         </div>
+        <div class="c-columns">
+            <div class="c-columns__item">
+                <p class="u-ms4">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+            </div>
+            <div class="c-columns__item">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem suscipit velit, maiores totam labore, rem, expedita unde saepe facilis reprehenderit sed repellat magni. Unde quos, repellendus sapiente minima, nulla dolor? Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dignissimos omnis perspiciatis sunt nesciunt placeat sint quo.
+                </p>
+            </div>
+        </div>
     </div>
-    {{/*
-    <div class="c-single__footer">
-        <label class="c-toggle">
-            <input class="c-toggle__checkbox js-toggle-baseline" type="checkbox"> Show baseline
-        </label>
-    </div>
-    */}}
-    {{/*
-    <div class="c-single__footer">
-        {{- partial "footer.html" . -}}
-    </div>
-    */}}
-    <p class="c-single__top-title js-single-top-title">{{ .Title }}</p>
+    <p class="c-single__sticky-title js-single-sticky-title">{{ .Title }}</p>
+    <div class="c-single__background js-single-background"></div>
+    <div class="c-single__sticky-bar-observer js-single-sticky-bar-observer"></div>
+    <div class="c-single__sticky-bar js-single-sticky-bar"></div>
 </div>
-<!-- <p class="c-single__back">
-    <a class="c-link-back" href="/">
-        <svg class="c-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-labelledby="arrowLeftIconTitle arrowLeftIconDesc">
-            <title id="arrowLeftIconTitle">Arrow Left</title>
-            <desc id="arrowLeftIconDesc">Icon of an arrow pointing left</desc>
-            <path d="M9 6l-6 6 6 6"/>
-            <path d="M21 12H4"/>
-            <path d="M3 12h1"/>
-        </svg>
-        Home
-    </a>
-</p> -->
+<div class="c-baseline-overlay"></div>
+<label class="c-baseline-toggle c-toggle">
+    <input class="c-toggle__checkbox js-toggle-baseline" type="checkbox"> Show baseline
+</label>
 {{ end }}
