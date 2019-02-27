@@ -37,4 +37,6 @@
     &:active {
         color: var(--page-link-color);
     }
+
+    margin-bottom: baseline($root-baseline-multiplier);
 }

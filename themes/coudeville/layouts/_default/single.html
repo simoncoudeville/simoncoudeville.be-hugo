@@ -1,12 +1,11 @@
 {{ define "main" }}
 <div class="c-single js-single">
     <p class="c-single__logo c-single__logo--sticky">
-        <a class="c-logo__link" href="/">Simon Coudeville</a>
+        <a class="c-logo__link" href="/">Simon Coudeville</a> February 6, 2019
     </p>
-    <p class="c-single__meta c-single__meta--sticky">
-        {{ .Date.Format "January 2, 2006" }}
-    </p>
-    <h1 class="c-single__title js-single-title">{{ .Title }}</h1>
+    <div class="c-single__header">
+        <h1 class="c-single__title js-single-title">{{ .Title }}</h1>
+    </div>
     <div class="c-single__content">
         <div class="s-content">
             {{ .Content }}
@@ -24,13 +23,14 @@
             </div>
         </div>
     </div>
-    <p class="c-single__sticky-title js-single-sticky-title">{{ .Title }}</p>
     <div class="c-single__background js-single-background"></div>
-    <div class="c-single__sticky-bar-observer js-single-sticky-bar-observer"></div>
     <div class="c-single__sticky-bar js-single-sticky-bar"></div>
 </div>
-<div class="c-baseline-overlay"></div>
-<label class="c-baseline-toggle c-toggle">
+<!-- <p class="c-single__meta c-single__meta--sticky">
+    {{ .Date.Format "January 2, 2006" }}
+</p> -->
+<!-- <div class="c-baseline-overlay"></div> -->
+<!-- <label class="c-baseline-toggle c-toggle">
     <input class="c-toggle__checkbox js-toggle-baseline" type="checkbox"> Show baseline
-</label>
+</label> -->
 {{ end }}
