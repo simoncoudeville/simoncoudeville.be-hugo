@@ -81,8 +81,8 @@ pre[class*="language-"] {
 	background: var(--color-neutral-x-dark);
 
 	.is-light & {
-		background: var(--color-neutral-xxxx-light);
-		// background-color: #fff;
+		// background: var(--color-neutral-xxxx-light);
+		background-color: #fff;
 		// background-color: hsla(0,0,0,.025);
 	}
 }

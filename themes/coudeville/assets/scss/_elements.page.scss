@@ -11,7 +11,7 @@
     // --hue: 222;
 
     --color-neutral-xxxx-light: hsla(var(--hue), 1%, 97.5%, 1);
-    --color-neutral-xxx-light: hsla(var(--hue), 1%, 92.5%, 1);
+    --color-neutral-xxx-light: hsla(var(--hue), 1%, 95%, 1);
     --color-neutral-xx-light: hsla(var(--hue), 1%, 87.5%, 1);
     --color-neutral-x-light: hsla(var(--hue), 1%, 75%, 1);
     --color-neutral-light: hsla(var(--hue), 1%, 67.5%, 1);
@@ -39,15 +39,15 @@
     // --page-header-background-color: hsla(var(--hue), 50%, 97.5%, 1);
     // --page-background-color: white;
     --page-header-background-color: white;
-    --page-background-color: var(--color-neutral-xxxx-light);
-    --page-header-background-color: hsla(var(--hue), 100%, 43%, 1);
+    --page-background-color: var(--color-neutral-xxx-light);
+    --page-header-background-color: hsla(var(--hue), 95%, 45%, 1);
     --page-sticky-bar-background: white;
     // --page-sticky-bar-background: var(--color-neutral);
     --page-heading-color: var(--color-neutral-xxx-dark);
     --page-title-color: white;
     // --page-title-color: var(--page-heading-color);
-    --page-text-color: var(--color-neutral-dark);
-    --page-meta-color: var(--color-neutral);
+    --page-text-color: var(--color-neutral-xxx-dark);
+    --page-meta-color: var(--color-neutral-light);
     // --page-meta-color: hsla(var(--hue), 100%, 100%, .75);
     --page-link-color: hsla(var(--hue), 100%, 43%, 1);
     --page-selection-color: var(--page-link-color);
