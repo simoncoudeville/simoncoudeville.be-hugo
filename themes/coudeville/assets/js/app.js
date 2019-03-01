@@ -46,7 +46,7 @@ function showTopTitle() {
     var single = document.querySelector('.js-single');
 
     var options = {
-        rootMargin: '-95px'
+        rootMargin: '-100px'
         // rootMargin: '-20px'
     }
 

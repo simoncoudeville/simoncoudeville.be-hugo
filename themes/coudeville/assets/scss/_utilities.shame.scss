@@ -148,7 +148,7 @@ div:empty {
 }
 
 .c-single__title {
-    color: var(--page-heading-color);
+    color: var(--page-header-color);
     transition: all $animation-duration-alpha $animation-easing-alpha;
     margin-top: baseline($root-baseline-multiplier * 2);
 
@@ -210,7 +210,7 @@ div:empty {
     background-color: var(--page-sticky-bar-background);
     // box-shadow: 0 0 0 1px rgba(white,.1);
     // box-shadow: 0 0 baseline(1) hsla(var(--hue), 5%, 10%, .2);
-    // opacity: 0;
+    // opacity: .95;
     transition: opacity $animation-duration-beta $animation-easing-alpha;
 
     &:after {
@@ -224,10 +224,25 @@ div:empty {
         background-color: var(--page-sticky-bar-background);
     }
 
+    // &:before {
+    //     content: '';
+    //     display: block;
+    //     position: absolute;
+    //     bottom: baseline($root-baseline-multiplier * -5);
+    //     right: 0;
+    //     left: 0;
+    //     height: baseline($root-baseline-multiplier * 5);
+    //     background-image: linear-gradient(to bottom, rgba(white,1), rgba(white,0));
+    //     pointer-events: none;
+    // }
+
+
+
     .is-light & {
         // box-shadow: 0 0 baseline(10) hsla(var(--hue), 1%, 10%, .15);
         // box-shadow: 0 0 baseline(1) hsla(var(--hue), 5%, 10%, .15);
         // box-shadow: 0 0 0 1px hsla(var(--hue), 1%, 10%, .1);
+        // box-shadow: 0 0 baseline(20) white;
     }
 
     &.is-shown {
