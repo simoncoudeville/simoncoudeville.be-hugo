@@ -4,7 +4,7 @@ title: How I create vertical rhythm with SCSS
 description: blabla
 draft: false
 code: true
-light: true
+#light: true
 #hue: 360
 #hue: 25
 #hue: 50
