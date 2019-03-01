@@ -24,7 +24,7 @@ div:empty {
             margin-left: baseline(-7);
         }
 
-        @include mq(bp6) {
+        @include mq(bp5) {
             margin-right: baseline(2);
             margin-left: 0;
         }
@@ -60,11 +60,11 @@ div:empty {
         padding: 0 baseline($root-baseline-multiplier * 2);
     }
 
-    @include mq(bp6) {
+    @include mq(bp5) {
         max-width: none;
         padding: 0;
         display: grid;
-        grid: ". left content right ." / minmax(baseline($root-baseline-multiplier * 2),1fr) minmax(6rem,24rem) 36rem minmax(6rem,24rem) minmax(baseline($root-baseline-multiplier * 2),1fr);
+        grid: ". left content right ." / baseline($root-baseline-multiplier * 2) minmax(min-content,20rem) 36rem minmax(auto,20rem) 1fr;
         grid-gap: 0 baseline($root-baseline-multiplier);
     }
 }
@@ -74,13 +74,15 @@ div:empty {
     margin-top: baseline($root-baseline-multiplier);
     color: var(--page-heading-color);
     font-family: $alpha-font-family;
+    white-space: nowrap;
+    // text-decoration: line-through;
     // font-weight: $beta-font-weight;
 
     @include mq(bp2) {
         margin-top: baseline($root-baseline-multiplier * 2);
     }
 
-    @include mq(bp6) {
+    @include mq(bp5) {
         margin-top: baseline($root-baseline-multiplier * 3);
         grid-column: content;
         grid-column: left;
@@ -93,7 +95,7 @@ div:empty {
 }
 
 .c-single__logo--sticky {
-    @include mq(bp6) {
+    @include mq(bp5) {
         position: sticky;
         top: baseline(5);
     }
@@ -102,13 +104,13 @@ div:empty {
 .c-single__meta {
     color: var(--page-meta-color);
     // font-family: $alpha-font-family;
-    font-family: $code-font-family;
+    // font-family: $code-font-family;
     font-feature-settings: "ss01", "zero";
     margin-bottom: 0;
     transition: all $animation-duration-alpha $animation-easing-alpha;
-    @include font-height(ms(-1),$root-baseline-multiplier)
+    // @include font-height(ms(-1),$root-baseline-multiplier)
 
-    @include mq(bp6) {
+    @include mq(bp5) {
         grid-column: content;
         grid-row: 1;
         align-self: start;
@@ -122,7 +124,7 @@ div:empty {
 }
 
 .c-single__meta--sticky {
-    @include mq(bp6) {
+    @include mq(bp5) {
         position: sticky;
         top: baseline(5);
     }
@@ -130,13 +132,13 @@ div:empty {
 
 .c-single__header {
     grid-column: content;
-    min-height: calc(100vh - #{baseline(35)});
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    align-items: flex-end;
 
-    @include mq(bp6){
+    @include mq(bp5){
+        min-height: calc(100vh - #{baseline(45)});
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        align-items: flex-end;
         grid-column: left;
         grid-column-end: span 2;
         grid-row: 2;
@@ -155,19 +157,25 @@ div:empty {
     }
 
     @include mq(bp3) {
-        margin-top: baseline($root-baseline-multiplier * 8);
+        margin-top: baseline($root-baseline-multiplier * 4);
         margin-bottom: baseline($root-baseline-multiplier * 4);
     }
 
-    @include mq(bp6,max) {
+    @include mq(bp5) {
+        margin-top: baseline($root-baseline-multiplier * 7);
+    }
+
+    @include mq(bp5,max) {
         opacity: 1 !important;
     }
 }
 
 .c-single__content {
     grid-column: content;
+    padding-bottom: baseline($root-baseline-multiplier);
 
-    @include mq(bp6) {
+    @include mq(bp5) {
+        padding-bottom: baseline($root-baseline-multiplier * 3);
         // padding-top: baseline(28);
         // padding: baseline(15 + $root-baseline-multiplier * 2) 0 baseline($root-baseline-multiplier * 3);
     }
@@ -177,7 +185,7 @@ div:empty {
     grid-column: content;
     background-color: var(--page-background-color);
 
-    @include mq(bp6) {
+    @include mq(bp5) {
         grid-column: right;
         grid-row: 3;
         align-self: end;
@@ -200,9 +208,9 @@ div:empty {
     left: 0;
     height: baseline(15);
     background-color: var(--page-sticky-bar-background);
-    // box-shadow: 0 0 0 1px rgba(white,.5);
+    // box-shadow: 0 0 0 1px rgba(white,.1);
     // box-shadow: 0 0 baseline(1) hsla(var(--hue), 5%, 10%, .2);
-    opacity: 0;
+    // opacity: 0;
     transition: opacity $animation-duration-beta $animation-easing-alpha;
 
     &:after {
@@ -217,20 +225,21 @@ div:empty {
     }
 
     .is-light & {
-        // box-shadow: 0 0 50px hsla(var(--hue), 1%, 10%, .15);
-        // box-shadow: 0 0 baseline(5) hsla(var(--hue), 5%, 10%, .15);
-        // box-shadow: 0 0 0 1px hsla(var(--hue), 1%, 10%, .075);
+        // box-shadow: 0 0 baseline(10) hsla(var(--hue), 1%, 10%, .15);
+        // box-shadow: 0 0 baseline(1) hsla(var(--hue), 5%, 10%, .15);
+        // box-shadow: 0 0 0 1px hsla(var(--hue), 1%, 10%, .1);
     }
 
     &.is-shown {
-        opacity: .95;
+        // opacity: .95;
+        // opacity: 1;
     }
 
     // .has-scrolled & {
     //     box-shadow: 0 0 baseline(3) hsla(var(--hue), 1%, 10%, .15);
     // }
 
-    @include mq(bp6,max) {
+    @include mq(bp5,max) {
         display: none !important;
     }
 }
@@ -244,7 +253,7 @@ div:empty {
     bottom: 0;
     left: 0;
 
-    @include mq(bp6,max) {
+    @include mq(bp5,max) {
         display: none !important;
     }
 }
@@ -256,15 +265,15 @@ div:empty {
     grid-column: 1 / -1;
     grid-row: 1 / 4;
 
-    @include mq(bp6) {
+    @include mq(bp5) {
         grid-row: 1 / 4;
     }
 }
 
 .c-single__sticky-title {
     display: none;
-    font-family: $code-font-family;
-    @include font-height(ms(-1),$root-baseline-multiplier)
+    // font-family: $code-font-family;
+    // @include font-height(ms(-1),$root-baseline-multiplier)
     position: sticky;
     top: baseline(5);
     grid-column: content;
@@ -280,7 +289,7 @@ div:empty {
     margin-bottom: baseline(4);
     transition: all $animation-duration-alpha $animation-easing-alpha;
 
-    @include mq(bp6) {
+    @include mq(bp5) {
         display: block;
         text-align: left;
 
@@ -342,7 +351,7 @@ div:empty {
             padding-top: baseline($root-baseline-multiplier * 3);
         }
 
-        @include mq(bp6) {
+        @include mq(bp5) {
             padding-top: baseline($root-baseline-multiplier * 4);
         }
     }
@@ -359,7 +368,7 @@ div:empty {
     //     @include font-height(ms(3),5);
     // }
 
-    // @include mq(bp6) {
+    // @include mq(bp5) {
     //     @include font-height(ms(5),6);
     // }
 }

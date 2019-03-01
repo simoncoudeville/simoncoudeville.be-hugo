@@ -1,5 +1,5 @@
 function showTopBar(){var topBarObserver=document.querySelector('.js-single-sticky-bar-observer');var topBar=document.querySelector('.js-single-sticky-bar');let observer=new IntersectionObserver(function(entries){entries.forEach(entry=>{if(entry.isIntersecting){topBar.classList.remove("is-shown");}else{topBar.classList.add("is-shown")}});});observer.observe(topBarObserver);}
-function showTopTitle(){var topTitleObserver=document.querySelector('.js-single-title');var single=document.querySelector('.js-single');var options={rootMargin:'-19px'}
+function showTopTitle(){var topTitleObserver=document.querySelector('.js-single-title');var single=document.querySelector('.js-single');var options={rootMargin:'-95px'}
 let observer=new IntersectionObserver(function(entries){entries.forEach(entry=>{if(entry.isIntersecting){single.classList.remove("has-scrolled");}else{single.classList.add("has-scrolled")}});},options);observer.observe(topTitleObserver);}
 function toggleBaseline(){let toggleObserver=document.querySelector(".js-toggle-baseline");let toggleTarget=document.querySelector("html");toggleObserver.addEventListener("click",function(){if(this.checked==true){toggleTarget.classList.toggle("has-baseline");}else{toggleTarget.classList.toggle("has-baseline");}});}
-document.addEventListener("DOMContentLoaded",function(){toggleBaseline();showTopBar();showTopTitle();});
+document.addEventListener("DOMContentLoaded",function(){showTopBar();showTopTitle();});

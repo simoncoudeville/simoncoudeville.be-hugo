@@ -12,8 +12,10 @@ $h1-font-size: ms(6);
 $h1-baseline-multiplier: 8;
 $h1-font-size-large: ms(10);
 $h1-baseline-multiplier-large: 12;
-$h1-font-size-xlarge: ms(16);
-$h1-baseline-multiplier-xlarge: 22;
+$h1-font-size-xlarge: ms(12);
+$h1-baseline-multiplier-xlarge: 14;
+$h1-font-size-xxlarge: ms(14);
+$h1-baseline-multiplier-xxlarge: 18;
 $h2-font-size: ms(2);
 $h2-baseline-multiplier: $root-baseline-multiplier;
 $h3-font-size: ms(-1);
@@ -37,10 +39,10 @@ ul {
 
 h1 {
     font-feature-settings: "salt";
-    // font-weight: $alpha-font-weight;
+    font-weight: $alpha-font-weight;
     // font-weight: $beta-font-weight;
     // font-family: $delta-font-family;
-    font-family: $gamma-font-family;
+    // font-family: $gamma-font-family;
     margin-bottom: $beta-whitespace;
     font-kerning: none;
     @include font-height($h1-font-size,$h1-baseline-multiplier); // Font size calculated by the font-height mixin
@@ -51,8 +53,12 @@ h1 {
         @include font-height($h1-font-size-large,$h1-baseline-multiplier-large);
     }
 
-    @include mq(bp6) {
+    @include mq(bp5) {
         @include font-height($h1-font-size-xlarge,$h1-baseline-multiplier-xlarge);
+    }
+
+    @include mq(bp6) {
+        @include font-height($h1-font-size-xxlarge,$h1-baseline-multiplier-xxlarge);
     }
 }
 
