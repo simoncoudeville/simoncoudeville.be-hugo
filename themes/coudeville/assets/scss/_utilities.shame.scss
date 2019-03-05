@@ -210,7 +210,9 @@ div:empty {
     background-color: var(--page-sticky-bar-background);
     // box-shadow: 0 0 0 1px rgba(white,.1);
     // box-shadow: 0 0 baseline(1) hsla(var(--hue), 5%, 10%, .2);
-    // opacity: .95;
+    opacity: .95;
+    // opacity: 0;
+    backdrop-filter: blur(20px);
     transition: opacity $animation-duration-beta $animation-easing-alpha;
 
     &:after {

@@ -29,16 +29,14 @@
 </script>
 <body>
 <div class="c-single js-single">
-    
-    <div class="c-single__top-bar-trigger js-single-top-bar-trigger"></div>
     <p class="c-single__logo c-single__logo--sticky">
         <a class="c-logo__link" href="https://simoncoudeville.be/">Simon Coudeville</a>
     </p>
-    <p class="c-single__meta">
+    <p class="c-single__meta c-single__meta--sticky">
         February 6, 2019
     </p>
-    <div class="c-single__header js-single-header">
-        <h1 class="js-single-title">How I create vertical rhythm with SCSS</h1>
+    <div class="c-single__header">
+        <h1 class="c-single__title js-single-title">How I create vertical rhythm with SCSS</h1>
     </div>
     <div class="c-single__content">
         <div class="s-content">
@@ -48,7 +46,9 @@
 
 <h2 id="flexible-foundations">Flexible foundations</h2>
 
-<p>Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser will compute all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.</p>
+<p>Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.</p>
+
+<h2 id="round-pixels">Round pixels</h2>
 
 <pre><code class="language-scss">$modularscale: (
   base: 19px,
@@ -87,24 +87,18 @@ $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace 
 }</code></pre>
 
         </div>
+        
     </div>
-
-    <div class="c-single__footer">
-        <label class="c-toggle">
-            <input class="c-toggle__checkbox js-toggle-baseline" type="checkbox"> Show baseline
-        </label>
-    </div>
-
-    
-    <p class="c-single__top-title js-single-top-title">How I create vertical rhythm with SCSS</p>
-    <div class="c-single__top-bar js-single-top-bar"></div>
+    <p class="c-single__sticky-title js-single-sticky-title">How I create vertical rhythm with SCSS</p>
+    <div class="c-single__background js-single-background"></div>
+    <div class="c-single__sticky-bar-observer js-single-sticky-bar-observer"></div>
+    <div class="c-single__sticky-bar js-single-sticky-bar"></div>
 </div>
 
 
-        <div class="c-baseline-overlay"></div>
 
 
-<script type="text/javascript" src="https://simoncoudeville.be/js/app.min.7d9ee030184917edc693f26b674d2f502f78add29c545c11a63822983e40fcf5066a1dc235b149fdf446595db22c078437a5803b41dba29a0297529f24b41dfa.js" integrity="sha512-fZ7gMBhJF&#43;3Gk/JrZ00vUC94rdKcVFwRpjgimD5A/PUGah3CNbFJ/fRGWV2yLAeEN6WAO0HbopoCl1KfJLQd&#43;g=="></script>
+<script type="text/javascript" src="https://simoncoudeville.be/js/app.min.8a12fc6e6bbfca00cea500c3adfb8b70bbddc95d33cd44721f6e646bb7a84cdb2de6c4830384ef6736ed612321434aa35450e14d61f80cd3d8def830ac8e24d2.js" integrity="sha512-ihL8bmu/ygDOpQDDrfuLcLvdyV0zzURyH25ka7eoTNst5sSDA4TvZzbtYSMhQ0qjVFDhTWH4DNPY3vgwrI4k0g=="></script>
 
 
 
