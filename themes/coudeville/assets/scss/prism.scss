@@ -20,7 +20,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
 
 code[class*="language-"],
 pre[class*="language-"] {
-	color: var(--color-neutral-xxx-light);
+	color: var(--color-neutral-xxxx-light);
 	background: none;
 	font-family: $code-font-family;
 	text-align: left;
@@ -44,7 +44,7 @@ pre[class*="language-"] {
 	}
 
 	.is-light & {
-		color: var(--color-neutral-x-dark);
+		color: var(--color-neutral-dark);
 	}
 }
 
@@ -77,13 +77,11 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	// border-radius: $radius;
+	border-radius: $radius;
 	background: var(--color-neutral-x-dark);
 
 	.is-light & {
 		background: var(--color-neutral-xxxx-light);
-		// background-color: #fff;
-		// background-color: hsla(0,0,0,.025);
 	}
 }
 
@@ -100,10 +98,10 @@ pre[class*="language-"] {
 }
 
 .token.punctuation {
-	color: var(--color-neutral-xxx-light);
+	color: var(--color-neutral-xxxx-light);
 
 	.is-light & {
-		color: var(--color-neutral-x-dark);
+		color: var(--color-neutral-dark);
 	}
 }
 
@@ -118,7 +116,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-	// color: hsla(var(--hue), 90%, 70%, 1);
+	// color: var(--color-alpha);
 }
 
 .token.selector,
@@ -127,7 +125,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: hsl(355, 95%, 70%);
+	color: var(--color-neutral-dark);
 }
 
 .token.operator,
@@ -141,18 +139,19 @@ pre[class*="language-"] {
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-	color: hsl(286, 77%, 71%);
+	color: var(--color-beta);
 }
 
 .token.function,
 .token.class-name {
-	color: hsl(var(--hue), 100%, 43%);
+	color: var(--color-beta);
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-	color: hsl(355, 95%, 70%);
+	// color: var(--color-beta);
+	color: var(--color-alpha);
 }
 
 .token.important,

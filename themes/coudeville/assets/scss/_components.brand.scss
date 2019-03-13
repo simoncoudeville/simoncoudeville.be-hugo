@@ -26,10 +26,16 @@
 }
 
 .c-logo__link {
+
+    display: inline-block;
+    // padding: baseline(2) baseline(3);
+    // background-color: var(--page-link-color);
+
     &,
     &:visited {
         text-decoration: underline;
-        color: var(--page-heading-color);
+        color: inherit;
+        // color: white;
     }
 
     &:hover,

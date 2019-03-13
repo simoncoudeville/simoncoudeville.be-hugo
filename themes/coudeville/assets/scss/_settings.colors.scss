@@ -9,45 +9,37 @@
     @return map-get(map-get($palettes, $palette), $tone);
 }
 
-// GhostWhite
-// WhiteSmoke
-// Snow
-// HoneyDew
-// MintCream
-// AliceBlue
-// Azure
-// Ivory
-// LemonChiffon
-// LightGoldenRodYellow
-// LightYellow
-// Cornsilk
-// LightCyan
+// MediumSpringGreen
+// MediumSlateBlue
+// MediumAquamarine
+// MediumTurquoise
+// MediumBlue
+// MediumVioletRed
+// MediumPurple
+// DarkCyan
 
 // Base colors
-$color-alpha                : GhostWhite !default;
-$color-neutral              : hsl(hue($color-alpha),5,50) !default;
+$color-alpha                : MediumSlateBlue;
+$color-beta                 : MediumAquamarine;
+$color-gamma                : MediumAquamarine;
 
 // Palettes
 $palettes: (
     color-neutral: (
-        xxxx-light          : hsl(hue($color-neutral),saturation($color-neutral),97.5),
-        xxx-light           : hsl(hue($color-neutral),saturation($color-neutral),92.5),
-        xx-light            : hsl(hue($color-neutral),saturation($color-neutral),82.5),
-        x-light             : hsl(hue($color-neutral),saturation($color-neutral),72.5),
-        light               : hsl(hue($color-neutral),saturation($color-neutral),62.5),
-        base                : $color-neutral,
-        dark                : hsl(hue($color-neutral),saturation($color-neutral),35),
-        x-dark              : hsl(hue($color-neutral),saturation($color-neutral),25),
-        xx-dark             : hsl(hue($color-neutral),saturation($color-neutral),15),
-        xxx-dark            : hsl(hue($color-neutral),saturation($color-neutral),10),
-        xxxx-dark           : hsl(hue($color-neutral),saturation($color-neutral),5)
+        xxxx-light          : WhiteSmoke,
+        xxx-light           : Gainsboro,
+        xx-light            : LightGray,
+        x-light             : Silver,
+        light               : DarkGray,
+        base                : Gray,
+        dark                : DimGrey,
+        x-dark              : #333,
+        xx-dark             : #1a1a1a,
+        xxx-dark            : Black
     ),
     color-alpha: (
-        xx-light            : hsl(hue($color-alpha),saturation($color-alpha),95),
-        x-light             : hsl(hue($color-alpha),saturation($color-alpha),75),
         light               : hsl(hue($color-alpha),saturation($color-alpha),50),
         base                : $color-alpha,
         dark                : hsl(hue($color-alpha),saturation($color-alpha),25),
-        x-dark              : hsl(hue($color-alpha),saturation($color-alpha),15)
     )
 );

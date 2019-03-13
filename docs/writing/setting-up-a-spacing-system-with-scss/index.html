@@ -36,19 +36,21 @@
         February 6, 2019
     </p>
     <div class="c-single__header">
-        <h1 class="c-single__title js-single-title">How I create vertical rhythm with SCSS</h1>
+        <h1 class="c-single__title js-single-title">
+            <span class="c-multiline-background">How I create vertical rhythm with SCSS</span>
+        </h1>
     </div>
     <div class="c-single__content">
         <div class="s-content">
             
 
-<p>In this article I will describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. I also use the <a href="https://www.google.com">modular scale plugin</a> to set up a typographic scale. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing perfect control and a predictable outcome.</p>
+<p>In this article I will describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. I also use the <a href="https://www.google.com">modular scale plugin</a> to set up a typographic scale. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing perfect control and a predictable outcome.</p>
 
 <h2 id="flexible-foundations">Flexible foundations</h2>
 
 <p>Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.</p>
 
-<h2 id="round-pixels">Round pixels</h2>
+<h2 id="round-computed-pixels">Round computed pixels</h2>
 
 <pre><code class="language-scss">$modularscale: (
   base: 19px,
@@ -86,8 +88,64 @@ $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace 
     @return pxtorem($baseline * $multiplier);
 }</code></pre>
 
+<h2 id="baseline-grid">Baseline Grid</h2>
+
+<p>In order to align text to a baseline grid on the web you. With this technique you have the possibility to align text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that line-height and if the margin between the items is the same as the base line-height you these items will all align to eachother. It&rsquo;s simple math, really.</p>
+
+<div class="c-example has-baseline js-example">    
+    <div class="c-example__body">
+        <div class="c-example__content">
+            <div class="c-columns">
+                <h2 class="e-baseline-title">            
+                    Legibility, <br> readability, <br> &amp; aesthetics
+                </h2>
+                <p class="e-baseline-paragraph">
+                    Three fundamental aspects of typography are legibility, readability, and aesthetics. Although in a non-technical sense "legible" and "readable" are often used synonymously, typographically they are separate but related concepts. Legibility and readability tend to support aesthetic aspects of a product.
+                </p>
+                <p class="e-baseline-paragraph">
+                    Recent research in psychology has studied the effects of typography on human cognition. The research points toward multiple applications such as helping readers remember the content better and strategically use fonts to help dyslexic readers.
+                </p>                
+                <p class="e-baseline-paragraph">
+                    Traditionally, text is composed to create a readable, coherent, and visually satisfying typeface that works invisibly, without the awareness of the reader. Even distribution of typeset material, with a minimum of distractions and anomalies, is aimed at producing clarity and transparency.
+                </p>
+            </div>
         </div>
-        
+        <div class="c-baseline-overlay c-baseline-overlay--unit"></div>
+    </div>    
+    <div class="c-example__toggle">
+        <label class="c-toggle">
+            <input class="c-toggle__checkbox js-toggle-example-baseline" type="checkbox" checked> Show baseline
+        </label>
+    </div>
+</div>
+<div class="c-example has-baseline js-example">    
+    <div class="c-example__body">
+        <div class="c-example__content">
+            <div class="c-columns">
+                <h2 class="e-baseline-title">            
+                    Legibility, <br> readability, <br> &amp; aesthetics
+                </h2>
+                <p class="e-baseline-paragraph">
+                    Three fundamental aspects of typography are legibility, readability, and aesthetics. Although in a non-technical sense "legible" and "readable" are often used synonymously, typographically they are separate but related concepts. Legibility and readability tend to support aesthetic aspects of a product.
+                </p>
+                <p class="e-baseline-paragraph">
+                    Recent research in psychology has studied the effects of typography on human cognition. The research points toward multiple applications such as helping readers remember the content better and strategically use fonts to help dyslexic readers.
+                </p>                
+                <p class="e-baseline-paragraph">
+                    Traditionally, text is composed to create a readable, coherent, and visually satisfying typeface that works invisibly, without the awareness of the reader. Even distribution of typeset material, with a minimum of distractions and anomalies, is aimed at producing clarity and transparency.
+                </p>
+            </div>
+        </div>
+        <div class="c-baseline-overlay c-baseline-overlay--unit"></div>
+    </div>    
+    <div class="c-example__toggle">
+        <label class="c-toggle">
+            <input class="c-toggle__checkbox js-toggle-example-baseline" type="checkbox" checked> Show baseline
+        </label>
+    </div>
+</div>
+
+        </div>
     </div>
     <p class="c-single__sticky-title js-single-sticky-title">How I create vertical rhythm with SCSS</p>
     <div class="c-single__background js-single-background"></div>
@@ -97,8 +155,7 @@ $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace 
 
 
 
-
-<script type="text/javascript" src="https://simoncoudeville.be/js/app.min.8a12fc6e6bbfca00cea500c3adfb8b70bbddc95d33cd44721f6e646bb7a84cdb2de6c4830384ef6736ed612321434aa35450e14d61f80cd3d8def830ac8e24d2.js" integrity="sha512-ihL8bmu/ygDOpQDDrfuLcLvdyV0zzURyH25ka7eoTNst5sSDA4TvZzbtYSMhQ0qjVFDhTWH4DNPY3vgwrI4k0g=="></script>
+<script type="text/javascript" src="https://simoncoudeville.be/js/app.min.1e6827f7889ff5b02c50c3cfefbc6e1caec6fe12d3be78112b1a3c7cc6b6ee0954fff3e1a148cf7e940b898a671b44b637131c9faaab3b98bb2032c749633ba4.js" integrity="sha512-Hmgn94if9bAsUMPP77xuHK7G/hLTvngRKxo8fMa27glU//PhoUjPfpQLiYpnG0S2NxMcn6qrO5i7IDLHSWM7pA=="></script>
 
 
 
