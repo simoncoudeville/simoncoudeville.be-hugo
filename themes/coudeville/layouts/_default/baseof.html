@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html {{ if .Params.light }}class="is-light"{{ end }} {{ if .Params.hue }}style="--hue: {{ .Params.hue }}"{{ end }}>
+<html {{ if .Params.light }}class="is-light"{{ end }}>
     {{- partial "head.html" . -}}
     <body>
-        {{- block "main" . }}{{- end }}        
+        {{- block "main" . }}{{- end }}
         {{- partial "javascript.html" . -}}
     </body>
 </html>

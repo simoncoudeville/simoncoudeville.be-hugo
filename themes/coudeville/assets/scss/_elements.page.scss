@@ -30,14 +30,14 @@
     --color-neutral-xx-dark: hsla(var(--hue-alpha), 1%, 15%, 1);
     --color-neutral-xxx-dark: hsla(var(--hue-alpha), 1%, 7.5%, 1);
 
-    --html-background-color: var(--color-neutral-xxx-dark);
-    --page-background-color: var(--color-neutral-xxx-dark);
+    --html-background-color: var(--color-neutral-xx-dark);
+    --page-background-color: var(--color-neutral-xx-dark);
     --page-header-background-color: var(--page-background-color);
     --page-sticky-bar-background: var(--page-background-color);
-    --page-heading-color: white;
-    --page-header-color: white;
-    --page-text-color: var(--color-neutral-xx-light);
-    --page-meta-color: var(--color-neutral-x-light);
+    --page-heading-color: var(--color-neutral-xxx-light);
+    --page-header-color: var(--color-neutral-xxx-light);
+    --page-text-color: var(--color-neutral-xxx-light);
+    --page-meta-color: var(--color-neutral-light);
     --page-link-color: var(--color-alpha);
     --page-selection-color: var(--page-link-color);
     --scrollbar-thumb-color: var(--page-link-color);
@@ -56,8 +56,8 @@
     --page-sticky-bar-background: var(--page-header-background-color);
     --page-header-color: var(--color-neutral-xx-dark);
     --page-heading-color: var(--page-header-color);
-    --page-text-color: var(--color-neutral-dark);
-    --page-meta-color: var(--color-neutral-dark);
+    --page-text-color: var(--color-neutral-xx-dark);
+    --page-meta-color: var(--color-neutral);
     --page-link-color: var(--color-alpha);
     --page-selection-color: var(--page-link-color);
     --scrollbar-thumb-color: var(--page-link-color);
@@ -66,12 +66,12 @@
 // styles
 
 html {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     font-family: $alpha-font-family;
     font-weight: $alpha-font-weight;
     background-color: var(--html-background-color);
     color: var(--page-text-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     // a little bit of responsive typography
 
@@ -103,7 +103,7 @@ body {
     text-shadow: none;
 }
 
-@include scrollbars(baseline(1), var(--scrollbar-thumb-color), var(--scrollbar-track-color));
+// @include scrollbars(baseline(1), var(--scrollbar-thumb-color), var(--scrollbar-track-color));
 
 .c-baseline-overlay {
     display: none;

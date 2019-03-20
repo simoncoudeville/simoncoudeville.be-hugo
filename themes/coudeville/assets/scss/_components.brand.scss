@@ -25,17 +25,10 @@
     // @include font-height(ms(-1),4);
 }
 
-.c-logo__link {
-
-    display: inline-block;
-    // padding: baseline(2) baseline(3);
-    // background-color: var(--page-link-color);
-
+.c-logo__link {    
     &,
     &:visited {
-        // text-decoration: underline;
         color: inherit;
-        // color: white;
     }
 
     &:hover,

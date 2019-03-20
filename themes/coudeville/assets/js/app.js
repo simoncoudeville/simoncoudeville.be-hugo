@@ -21,8 +21,8 @@ function showTopTitle() {
     var single = document.querySelector('.js-single');
 
     var options = {
-        // rootMargin: '-90px'
-        rootMargin: '-20px'
+        rootMargin: '-95px'
+        // rootMargin: '-20px'
     }
 
     let observer = new IntersectionObserver(function (entries) {

@@ -41,7 +41,6 @@ h1 {
     font-feature-settings: "ss01";
     font-weight: $alpha-font-weight;
     margin-bottom: $alpha-whitespace;
-    letter-spacing: .0125em;
 
     @include font-height($h1-font-size,$h1-baseline-multiplier); // Font size calculated by the font-height mixin
 
@@ -63,9 +62,9 @@ h1 {
 h2 {
     font-feature-settings: "ss01";
     font-weight: $alpha-font-weight;
+    margin-bottom: $alpha-whitespace;
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: subpixel-antialiased;
-    margin-bottom: $alpha-whitespace;
     @include font-height($h2-font-size,$h2-baseline-multiplier);
 }
 
