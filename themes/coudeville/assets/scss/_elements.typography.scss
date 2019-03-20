@@ -12,13 +12,13 @@ $h1-font-size: ms(6);
 $h1-baseline-multiplier: 9;
 $h1-font-size-large: ms(10);
 $h1-baseline-multiplier-large: 13;
-$h1-font-size-xlarge: ms(12);
-$h1-baseline-multiplier-xlarge: 16;
-$h1-font-size-xxlarge: ms(14);
-$h1-baseline-multiplier-xxlarge: 20;
+$h1-font-size-xlarge: ms(13);
+$h1-baseline-multiplier-xlarge: 17;
+$h1-font-size-xxlarge: ms(15);
+$h1-baseline-multiplier-xxlarge: 19;
 $h2-font-size: ms(2);
 $h2-baseline-multiplier: $root-baseline-multiplier;
-$h3-font-size: ms(-1);
+$h3-font-size: ms(0);
 $h3-baseline-multiplier: $root-baseline-multiplier;
 $h4-font-size: ms(-1);
 $h4-baseline-multiplier: $root-baseline-multiplier;
@@ -38,15 +38,11 @@ ul {
 }
 
 h1 {
-    font-feature-settings: "salt";
+    font-feature-settings: "ss01";
     font-weight: $alpha-font-weight;
-    // font-weight: $beta-font-weight;
-    // font-family: $delta-font-family;
-    // font-family: $gamma-font-family;
-    margin-bottom: $beta-whitespace;
-    // text-transform: uppercase;
-    // letter-spacing: .025em;
-    font-kerning: none;
+    margin-bottom: $alpha-whitespace;
+    letter-spacing: .0125em;
+
     @include font-height($h1-font-size,$h1-baseline-multiplier); // Font size calculated by the font-height mixin
 
     // Increase the font-size and line-height at a wider viewport
@@ -58,27 +54,28 @@ h1 {
     // @include mq(bp4) {
     //     @include font-height($h1-font-size-xlarge,$h1-baseline-multiplier-xlarge);
     // }
-    //
+
     // @include mq(bp5) {
     //     @include font-height($h1-font-size-xxlarge,$h1-baseline-multiplier-xxlarge);
     // }
 }
 
 h2 {
-    font-family: $alpha-font-family;
-    // font-family: $beta-font-family;
+    font-feature-settings: "ss01";
     font-weight: $alpha-font-weight;
-    // font-weight: $beta-font-weight;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: subpixel-antialiased;
     margin-bottom: $alpha-whitespace;
     @include font-height($h2-font-size,$h2-baseline-multiplier);
 }
 
 h3 {
-    font-weight: $beta-font-weight;
+    font-feature-settings: "ss01";
+    font-weight: $alpha-font-weight;
     margin-bottom: $alpha-whitespace;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    @include font-height($h3-font-size,$h3-baseline-multiplier);
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: subpixel-antialiased;
+    @include font-height($h3-font-size, $h3-baseline-multiplier);
 }
 
 h4 {
@@ -91,11 +88,6 @@ p,
 ul,
 ol {
     margin-bottom: $alpha-whitespace;
-    // @include font-height(ms(0),$root-baseline-multiplier);
-
-    // @include mq(bp4) {
-    //     @include font-height(ms(1),5)
-    // }
 }
 
 blockquote {
@@ -111,7 +103,6 @@ pre {
 // Links
 
 a {
-    text-decoration: none;
     color: var(--page-link-color);
     transition: all $animation-duration-alpha $animation-easing-alpha;
     display: inline-block;
@@ -121,7 +112,6 @@ a {
     }
 
     &:hover {
-        // text-decoration: none;
         color: var(--page-text-color);
     }
 

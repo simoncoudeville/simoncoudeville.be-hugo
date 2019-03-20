@@ -34,14 +34,17 @@ $show-baseline: false;
 // Basic font settings
 
 $alpha-font-family          : "Graphik Web", sans-serif;
+// $alpha-font-family          : "HK Grotesk Web", sans-serif;
 // $alpha-font-family          : "Suisse Intl", sans-serif;
 // $alpha-font-family          : "GT Walsheim", sans-serif;
 $beta-font-family           : "Graphik Web Compact", sans-serif;
 $gamma-font-family           : "Graphik Web Condensed", sans-serif;
 $delta-font-family          : "Suisse Works", sans-serif;
+// $delta-font-family          : "Dala Floda", sans-serif;
 // $delta-font-family          : "Suisse Neue", sans-serif;
-$code-font-family           : "Atlas Typewriter", sans-serif;
+// $code-font-family           : "Atlas Typewriter", sans-serif;
 // $code-font-family           : "Suisse Intl Mono", sans-serif;
+$code-font-family           : "Roboto Mono", monospace;
 
 $alpha-font-weight          : 400;
 $beta-font-weight           : 500;
@@ -51,7 +54,7 @@ $gamma-font-weight          : 600;
 // UI
 // ---
 
-$radius                     : baseline(1);
+$radius                     : 0;
 $border-width               : 1px;
 $border-style               : solid;
 

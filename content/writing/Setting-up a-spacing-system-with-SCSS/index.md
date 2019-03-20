@@ -1,7 +1,7 @@
 ---
 date: 2019-02-06T21:40:40+01:00
-title: How I create vertical rhythm with SCSS
-description: blabla
+title: Creating vertical rhythm with SCSS
+description: In this article I will describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS.
 draft: false
 code: true
 light: true
@@ -22,7 +22,10 @@ In this article I will describe how I set up a spacing system with SCSS. It’s 
 
 Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.  
 
-## Round computed pixels
+### Round computed pixels
+
+Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.  
+
 
 <pre><code class="language-scss">$modularscale: (
   base: 19px,
@@ -65,7 +68,8 @@ $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace 
 In order to align text to a baseline grid on the web you. With this technique you have the possibility to align text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that line-height and if the margin between the items is the same as the base line-height you these items will all align to eachother. It's simple math, really.
 
 <div class="c-example has-baseline js-example">    
-    <div class="c-example__body">
+    <h3>Baseline grid example</h3>
+    <div class="c-example__body">        
         <div class="c-example__content">
             <div class="c-columns">
                 <h2 class="e-baseline-title">            

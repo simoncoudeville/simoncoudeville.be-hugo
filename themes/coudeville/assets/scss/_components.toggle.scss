@@ -27,28 +27,28 @@
     // height: baseline(3);
     border-radius: 20px;
     width: 40px;
-    height: 18px;
+    height: 16px;
     transition: all $animation-duration-alpha $animation-easing-alpha;
     outline: none;
 
     &:after {
         content: "";
         display: block;
-        background-color: #fff;
+        background-color: white;
         border: 1px solid white;
-        box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         border-radius: 100%;
         width: 22px;
         height: 22px;
-        transform: translate(0,-2px);
-        transition: all $animation-duration-beta $animation-easing-alpha;
+        transform: translate(0,-3px);
+        transition: all $animation-duration-alpha $animation-easing-alpha;
     }
 
     &:checked {
         background-color: hsl(var(--hue-alpha),var(--saturation-alpha),90%);
 
         &:after {
-            transform: translate(18px,-2px);
+            transform: translate(18px,-3px);
             background-color: var(--color-alpha);
             border-color: var(--color-alpha);
         }

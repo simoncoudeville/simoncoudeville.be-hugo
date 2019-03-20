@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="blabla">
 <meta name="author" content="Simon Coudeville">
-<title>Simon Coudeville - How I create vertical rhythm with SCSS</title>
+<title>Simon Coudeville - Creating vertical rhythm with SCSS</title>
 
 
 <link rel="stylesheet" href="https://simoncoudeville.be/css/screen.css">
@@ -37,7 +37,7 @@
     </p>
     <div class="c-single__header">
         <h1 class="c-single__title js-single-title">
-            <span class="c-multiline-background">How I create vertical rhythm with SCSS</span>
+            <span class="c-multiline-background">Creating vertical rhythm with SCSS</span>
         </h1>
     </div>
     <div class="c-single__content">
@@ -50,7 +50,9 @@
 
 <p>Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.</p>
 
-<h2 id="round-computed-pixels">Round computed pixels</h2>
+<h3 id="round-computed-pixels">Round computed pixels</h3>
+
+<p>Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.</p>
 
 <pre><code class="language-scss">$modularscale: (
   base: 19px,
@@ -93,7 +95,8 @@ $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace 
 <p>In order to align text to a baseline grid on the web you. With this technique you have the possibility to align text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that line-height and if the margin between the items is the same as the base line-height you these items will all align to eachother. It&rsquo;s simple math, really.</p>
 
 <div class="c-example has-baseline js-example">    
-    <div class="c-example__body">
+    <h3>Baseline grid example</h3>
+    <div class="c-example__body">        
         <div class="c-example__content">
             <div class="c-columns">
                 <h2 class="e-baseline-title">            
@@ -147,7 +150,7 @@ $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace 
 
         </div>
     </div>
-    <p class="c-single__sticky-title js-single-sticky-title">How I create vertical rhythm with SCSS</p>
+    <p class="c-single__sticky-title js-single-sticky-title">Creating vertical rhythm with SCSS</p>
     <div class="c-single__background js-single-background"></div>
     <div class="c-single__sticky-bar-observer js-single-sticky-bar-observer"></div>
     <div class="c-single__sticky-bar js-single-sticky-bar"></div>
@@ -155,7 +158,7 @@ $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace 
 
 
 
-<script type="text/javascript" src="https://simoncoudeville.be/js/app.min.1e6827f7889ff5b02c50c3cfefbc6e1caec6fe12d3be78112b1a3c7cc6b6ee0954fff3e1a148cf7e940b898a671b44b637131c9faaab3b98bb2032c749633ba4.js" integrity="sha512-Hmgn94if9bAsUMPP77xuHK7G/hLTvngRKxo8fMa27glU//PhoUjPfpQLiYpnG0S2NxMcn6qrO5i7IDLHSWM7pA=="></script>
+<script type="text/javascript" src="https://simoncoudeville.be/js/app.min.220a4c4c5e22ac4568825278c39d54f654ea6c4452b157cd741971d882f19b9e236c85874725985d842b66c88f0a0d49a2ad75ce8d488afbcdbae95b83a1a441.js" integrity="sha512-IgpMTF4irEVoglJ4w51U9lTqbERSsVfNdBlx2ILxm54jbIWHRyWYXYQrZsiPCg1Joq11zo1IivvNuulbg6GkQQ=="></script>
 
 
 

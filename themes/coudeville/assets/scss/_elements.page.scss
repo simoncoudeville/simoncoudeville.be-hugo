@@ -7,32 +7,6 @@
 // CSS vars
 
 :root {
-    // --hue: 173.5;
-    // --hue: 250;
-    // --hue: 222;
-
-    // --color-neutral-xxxx-light: hsla(var(--hue-alpha), 1%, 97.5%, 1);
-    // --color-neutral-xxx-light: hsla(var(--hue-alpha), 1%, 92.5%, 1);
-    // --color-neutral-xx-light: hsla(var(--hue-alpha), 1%, 87.5%, 1);
-    // --color-neutral-x-light: hsla(var(--hue-alpha), 1%, 75%, 1);
-    // --color-neutral-light: hsla(var(--hue-alpha), 1%, 67.5%, 1);
-    // --color-neutral: hsla(var(--hue-alpha), 1%, 50%, 1);
-    // --color-neutral-dark: hsla(var(--hue-alpha), 1%, 40%, 1);
-    // --color-neutral-x-dark: hsla(var(--hue-alpha), 1%, 25%, 1);
-    // --color-neutral-xx-dark: hsla(var(--hue-alpha), 2%, 15%, 1);
-    // --color-neutral-xxx-dark: hsla(var(--hue-alpha), 3%, 7.5%, 1);
-
-    --color-neutral-xxxx-light: #{map-get(map-get($palettes, color-neutral), xxxx-light)};
-    --color-neutral-xxx-light: #{map-get(map-get($palettes, color-neutral), xxx-light)};
-    --color-neutral-xx-light: #{map-get(map-get($palettes, color-neutral), xx-light)};
-    --color-neutral-x-light: #{map-get(map-get($palettes, color-neutral), x-light)};
-    --color-neutral-light: #{map-get(map-get($palettes, color-neutral), light)};
-    --color-neutral: #{map-get(map-get($palettes, color-neutral), base)};
-    --color-neutral-dark: #{map-get(map-get($palettes, color-neutral), dark)};
-    --color-neutral-x-dark: #{map-get(map-get($palettes, color-neutral), x-dark)};
-    --color-neutral-xx-dark: #{map-get(map-get($palettes, color-neutral), xx-dark)};
-    --color-neutral-xxx-dark: #{map-get(map-get($palettes, color-neutral), xxx-dark)};
-
     --color-alpha: #{$color-alpha};
     --color-beta: #{$color-beta};
     --color-gamma: #{$color-gamma};
@@ -45,34 +19,37 @@
     --saturation-gamma: #{saturation($color-gamma)};
     --lightness-gamma: #{lightness($color-gamma)};
 
-    --html-background-color: var(--color-neutral-dark);
-    --page-background-color: var(--color-neutral-dark);
+    --color-neutral-xxxx-light: hsla(var(--hue-alpha), 1%, 97.5%, 1);
+    --color-neutral-xxx-light: hsla(var(--hue-alpha), 1%, 92.5%, 1);
+    --color-neutral-xx-light: hsla(var(--hue-alpha), 1%, 85%, 1);
+    --color-neutral-x-light: hsla(var(--hue-alpha), 1%, 75%, 1);
+    --color-neutral-light: hsla(var(--hue-alpha), 1%, 65%, 1);
+    --color-neutral: hsla(var(--hue-alpha), 1%, 50%, 1);
+    --color-neutral-dark: hsla(var(--hue-alpha), 1%, 35%, 1);
+    --color-neutral-x-dark: hsla(var(--hue-alpha), 1%, 25%, 1);
+    --color-neutral-xx-dark: hsla(var(--hue-alpha), 1%, 15%, 1);
+    --color-neutral-xxx-dark: hsla(var(--hue-alpha), 1%, 7.5%, 1);
+
+    --html-background-color: var(--color-neutral-xxx-dark);
+    --page-background-color: var(--color-neutral-xxx-dark);
     --page-header-background-color: var(--page-background-color);
     --page-sticky-bar-background: var(--page-background-color);
-    --page-heading-color: var(--color-neutral-xxxx-light);
-    --page-text-color: var(--color-neutral-xxxx-light);
-    --page-meta-color: var(--color-neutral-light);
+    --page-heading-color: white;
+    --page-header-color: white;
+    --page-text-color: var(--color-neutral-xx-light);
+    --page-meta-color: var(--color-neutral-x-light);
     --page-link-color: var(--color-alpha);
     --page-selection-color: var(--page-link-color);
     --scrollbar-thumb-color: var(--page-link-color);
     --scrollbar-track-color: var(--page-background-color);
+
+    --root-font-size: #{$root-font-size};
+    --root-font-size-small: #{round($root-font-size-small)};
 }
 
 // light version
 
 .is-light {
-    // --html-background-color: hsla(var(--hue-alpha), 70%, 60%, 1);
-    // --page-background-color: white;
-    // --page-header-background-color: var(--page-background-color);
-    // --page-sticky-bar-background: var(--page-header-background-color);
-    // --page-header-color: var(--color-neutral-xxx-dark);
-    // --page-heading-color: var(--color-neutral-xxx-dark);
-    // --page-text-color: var(--color-neutral-xxx-dark);
-    // --page-meta-color: var(--color-neutral);
-    // --page-link-color: hsla(var(--hue-alpha), 70%, 60%, 1);
-    // --page-selection-color: var(--page-link-color);
-    // --scrollbar-thumb-color: var(--page-link-color);
-
     --html-background-color: White;
     --page-background-color: White;
     --page-header-background-color: var(--page-background-color);
@@ -80,7 +57,7 @@
     --page-header-color: var(--color-neutral-xx-dark);
     --page-heading-color: var(--page-header-color);
     --page-text-color: var(--color-neutral-dark);
-    --page-meta-color: var(--color-neutral);
+    --page-meta-color: var(--color-neutral-dark);
     --page-link-color: var(--color-alpha);
     --page-selection-color: var(--page-link-color);
     --scrollbar-thumb-color: var(--page-link-color);
@@ -89,8 +66,10 @@
 // styles
 
 html {
-    -webkit-overflow-scrolling: touch;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $alpha-font-family;
+    font-weight: $alpha-font-weight;
     background-color: var(--html-background-color);
     color: var(--page-text-color);
 
@@ -99,14 +78,13 @@ html {
     font-size: #{$root-font-size-small/16px*100%};
 
     @include mq(bp3) {
+        // font-size: 118.75%;
         font-size: #{$root-font-size/16px*100%};
     }
 }
 
 body {
     position: relative;
-    font-family: $alpha-font-family;
-    font-weight: $alpha-font-weight;
     min-height: 100vh;
     margin: 0;
     background-color: var(--page-background-color);
@@ -125,7 +103,7 @@ body {
     text-shadow: none;
 }
 
-// @include scrollbars(baseline(1), var(--scrollbar-thumb-color), var(--scrollbar-track-color));
+@include scrollbars(baseline(1), var(--scrollbar-thumb-color), var(--scrollbar-track-color));
 
 .c-baseline-overlay {
     display: none;
@@ -139,7 +117,7 @@ body {
         to bottom,
         transparent,
         transparent pxtorem($baseline * $root-baseline-multiplier - 1),
-        var(--color-neutral) pxtorem($baseline * $root-baseline-multiplier)
+        var(--color-neutral-x-light) pxtorem($baseline * $root-baseline-multiplier)
     );
 
     background-size: 100% pxtorem($baseline * $root-baseline-multiplier);
@@ -151,7 +129,7 @@ body {
         to bottom,
         transparent,
         transparent pxtorem($baseline - 1),
-        var(--color-neutral-x-light) pxtorem($baseline)
+        var(--color-neutral-xx-light) pxtorem($baseline)
     );
 
     background-size: 100% pxtorem($baseline);
