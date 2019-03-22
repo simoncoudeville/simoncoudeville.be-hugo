@@ -13,9 +13,9 @@ $h1-baseline-multiplier: 9;
 $h1-font-size-large: ms(10);
 $h1-baseline-multiplier-large: 13;
 $h1-font-size-xlarge: ms(13);
-$h1-baseline-multiplier-xlarge: 17;
+$h1-baseline-multiplier-xlarge: 18;
 $h1-font-size-xxlarge: ms(15);
-$h1-baseline-multiplier-xxlarge: 19;
+$h1-baseline-multiplier-xxlarge: 20;
 $h2-font-size: ms(2);
 $h2-baseline-multiplier: $root-baseline-multiplier;
 $h3-font-size: ms(0);
@@ -39,7 +39,10 @@ ul {
 
 h1 {
     font-feature-settings: "ss01";
+    // font-feature-settings: "salt";
     font-weight: $alpha-font-weight;
+    // font-family: $gamma-font-family;
+    // font-weight: $beta-font-weight;
     margin-bottom: $alpha-whitespace;
 
     @include font-height($h1-font-size,$h1-baseline-multiplier); // Font size calculated by the font-height mixin
@@ -62,6 +65,7 @@ h1 {
 h2 {
     font-feature-settings: "ss01";
     font-weight: $alpha-font-weight;
+    // font-weight: $beta-font-weight;
     margin-bottom: $alpha-whitespace;
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: subpixel-antialiased;
@@ -71,6 +75,7 @@ h2 {
 h3 {
     font-feature-settings: "ss01";
     font-weight: $alpha-font-weight;
+    // font-weight: $beta-font-weight;
     margin-bottom: $alpha-whitespace;
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: subpixel-antialiased;

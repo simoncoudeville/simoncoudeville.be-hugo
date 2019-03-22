@@ -77,10 +77,14 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: var(--color-neutral-xxx-dark);
+	background: var(--color-neutral-xx-dark);
+
+	@include scrollbars(baseline(3), var(--color-neutral-dark), var(--color-neutral-xx-dark));
 
 	.is-light & {
 		background: var(--color-neutral-xxxx-light);
+
+		@include scrollbars(baseline(3), var(--color-neutral-xx-light), var(--color-neutral-xxxx-light));
 	}
 }
 

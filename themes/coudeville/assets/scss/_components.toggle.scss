@@ -12,8 +12,12 @@
     // margin-bottom: 0;
     // font-family: $alpha-font-family;
     // margin: baseline(4);
-    color: var(--color-neutral);
+    color: var(--color-neutral-light);
     @include font-height(ms(-2),4);
+
+    .is-light & {
+        color: var(--color-neutral);
+    }
 }
 
 .c-toggle__checkbox {
@@ -21,15 +25,16 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-color: var(--color-neutral-xxx-light);
-    // border-radius: baseline(3);
-    // width: baseline(6);
-    // height: baseline(3);
     border-radius: 20px;
-    width: 40px;
+    width: 38px;
     height: 16px;
     transition: all $animation-duration-alpha $animation-easing-alpha;
     outline: none;
+
+    .is-light & {
+        background-color: var(--color-neutral-xxx-light);
+        border: 2px solid var(--color-neutral-xxx-light);
+    }
 
     &:after {
         content: "";
@@ -40,17 +45,24 @@
         border-radius: 100%;
         width: 22px;
         height: 22px;
-        transform: translate(0,-3px);
+        transform: translate(-2px,-5px);
         transition: all $animation-duration-alpha $animation-easing-alpha;
     }
 
     &:checked {
-        background-color: hsl(var(--hue-alpha),var(--saturation-alpha),90%);
+
+        .is-light & {
+            background-color: hsl(var(--hue-alpha),var(--saturation-alpha),90%);
+            border-color: hsl(var(--hue-alpha),var(--saturation-alpha),90%);
+        }
 
         &:after {
-            transform: translate(18px,-3px);
-            background-color: var(--color-alpha);
-            border-color: var(--color-alpha);
+            transform: translate(15px,-5px);
+
+            .is-light & {
+                background-color: var(--color-alpha);
+                border-color: var(--color-alpha);
+            }
         }
     }
 

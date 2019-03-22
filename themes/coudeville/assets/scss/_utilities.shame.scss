@@ -31,6 +31,8 @@ div:empty {
     margin-bottom: 0;
     margin-top: baseline($root-baseline-multiplier);
     color: var(--page-header-color);
+    // -webkit-font-smoothing: subpixel-antialiased;
+    // -moz-osx-font-smoothing: subpixel-antialiased;
 
     @include mq(bp2) {
         margin-top: baseline($root-baseline-multiplier * 2);
@@ -86,6 +88,9 @@ div:empty {
 
 .c-single__header {
     margin: baseline($root-baseline-multiplier * 2) 0;
+    // min-height: calc(100vh - #{baseline($root-baseline-multiplier * 19)});
+    // display: flex;
+    // align-items: flex-end;
 
     @include mq(bp3){
         margin-top: baseline($root-baseline-multiplier * 4);
@@ -93,6 +98,8 @@ div:empty {
 
     @include mq(bp5){
         grid-column: content;
+        // grid-column: left;
+        // grid-column-end: span 2;
         grid-row: 2;
         margin-top: baseline($root-baseline-multiplier * 5);
     }
@@ -190,6 +197,8 @@ div:empty {
     grid-row-start: 2;
     align-self: start;
     color: var(--page-meta-color);
+    // color: var(--page-header-color);
+    // font-weight: $beta-font-weight;
     font-feature-settings: "ss01";
     visibility: hidden;
     transform: translateY(baseline(2));
@@ -254,23 +263,26 @@ div:empty {
 	margin-left: baseline($root-baseline-multiplier * -1);
 	margin-right: baseline($root-baseline-multiplier * -1);
     margin-bottom: $alpha-whitespace;
-    background: var(--color-neutral-xxx-dark);
+    background: var(--color-neutral-xx-dark);
+
+    &:after {
+        display: block;
+        content: '';
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        box-shadow: inset 0 0 0 1px var(--color-neutral-xx-dark);
+        z-index: 100;
+    }
 
 	.is-light & {
 		background: var(--color-neutral-xxxx-light);
 
         &:after {
-            display: block;
-            content: '';
-            pointer-events: none;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            border-radius: $radius;
             box-shadow: inset 0 0 0 1px var(--color-neutral-xxxx-light);
-            z-index: 100;
         }
     }
 
@@ -298,7 +310,8 @@ div:empty {
 }
 
 .e-columns {
-    column-count: 2;
+    // column-count: 2;
+    column-width: 15em;
     column-gap: $alpha-whitespace;
 }
 
