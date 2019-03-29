@@ -51,8 +51,8 @@
 
   &::-webkit-scrollbar-thumb {
       background: $foreground-color;
-      border-radius: $size;
-      border: baseline(1) solid $background-color;
+      // border-radius: $size;
+      // border: baseline(1) solid $background-color;
   }
 
   &::-webkit-scrollbar-track {

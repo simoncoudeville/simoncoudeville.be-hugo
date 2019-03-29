@@ -8,12 +8,12 @@ Default markup for typographic elements
 // Variables
 // ---
 
-$h1-font-size: ms(6);
-$h1-baseline-multiplier: 9;
+$h1-font-size: ms(7);
+$h1-baseline-multiplier: 8;
 $h1-font-size-large: ms(10);
-$h1-baseline-multiplier-large: 13;
+$h1-baseline-multiplier-large: 12;
 $h1-font-size-xlarge: ms(13);
-$h1-baseline-multiplier-xlarge: 18;
+$h1-baseline-multiplier-xlarge: 16;
 $h1-font-size-xxlarge: ms(15);
 $h1-baseline-multiplier-xxlarge: 20;
 $h2-font-size: ms(2);
@@ -41,30 +41,34 @@ h1 {
     font-feature-settings: "ss01";
     // font-feature-settings: "salt";
     font-weight: $alpha-font-weight;
-    // font-family: $gamma-font-family;
-    // font-weight: $beta-font-weight;
+    // font-weight: 200;
+    font-family: $gamma-font-family;
+    // font-family: $beta-font-family;
+    font-weight: $beta-font-weight;
+    // font-family: $delta-font-family;
     margin-bottom: $alpha-whitespace;
 
     @include font-height($h1-font-size,$h1-baseline-multiplier); // Font size calculated by the font-height mixin
 
     // Increase the font-size and line-height at a wider viewport
 
-    @include mq(bp3) {
+    @include mq(bp2) {
         @include font-height($h1-font-size-large,$h1-baseline-multiplier-large);
     }
 
-    // @include mq(bp4) {
-    //     @include font-height($h1-font-size-xlarge,$h1-baseline-multiplier-xlarge);
-    // }
+    @include mq(bp3) {
+        @include font-height($h1-font-size-xlarge,$h1-baseline-multiplier-xlarge);
+    }
 
-    // @include mq(bp5) {
-    //     @include font-height($h1-font-size-xxlarge,$h1-baseline-multiplier-xxlarge);
-    // }
+    @include mq(bp5) {
+        @include font-height($h1-font-size-xxlarge,$h1-baseline-multiplier-xxlarge);
+    }
 }
 
 h2 {
     font-feature-settings: "ss01";
     font-weight: $alpha-font-weight;
+    // font-family: $beta-font-family;
     // font-weight: $beta-font-weight;
     margin-bottom: $alpha-whitespace;
     -webkit-font-smoothing: subpixel-antialiased;

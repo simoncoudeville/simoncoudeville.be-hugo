@@ -15,6 +15,10 @@
     --saturation-alpha: #{saturation($color-alpha)};
     --lightness-alpha: #{lightness($color-alpha)};
 
+    --hue-beta: #{hue($color-beta)};
+    --saturation-beta: #{saturation($color-beta)};
+    --lightness-beta: #{lightness($color-beta)};
+
     --hue-gamma: #{hue($color-gamma)};
     --saturation-gamma: #{saturation($color-gamma)};
     --lightness-gamma: #{lightness($color-gamma)};
@@ -26,20 +30,21 @@
     --color-neutral-light: hsla(var(--hue-alpha), 5%, 65%, 1);
     --color-neutral: hsla(var(--hue-alpha), 5%, 50%, 1);
     --color-neutral-dark: hsla(var(--hue-alpha), 5%, 35%, 1);
-    --color-neutral-x-dark: hsla(var(--hue-alpha), 5%, 25%, 1);
-    --color-neutral-xx-dark: hsla(var(--hue-alpha), 5%, 15%, 1);
-    --color-neutral-xxx-dark: hsla(var(--hue-alpha), 5%, 7.5%, 1);
-    --color-neutral-xxxx-dark: hsla(var(--hue-alpha), 100%, 4%, 1);
+    --color-neutral-x-dark: hsla(var(--hue-alpha), 7.5%, 25%, 1);
+    --color-neutral-xx-dark: hsla(var(--hue-alpha), 7.5%, 15%, 1);
+    --color-neutral-xxx-dark: hsla(var(--hue-alpha), 10%, 10%, 1);
+    --color-neutral-xxxx-dark: hsla(var(--hue-alpha), 40%, 5%, 1);
 
-    --html-background-color: var(--color-neutral-xxxx-dark);
-    --page-background-color: var(--color-neutral-xxxx-dark);
+    --html-background-color: var(--color-neutral-x-dark);
+    --page-background-color: var(--color-neutral-x-dark);
     --page-header-background-color: var(--page-background-color);
     --page-sticky-bar-background: var(--page-background-color);
     --page-heading-color: var(--color-neutral-xxx-light);
     --page-header-color: var(--color-neutral-xxx-light);
+    // --page-header-color: var(--color-beta);
     --page-text-color: var(--color-neutral-x-light);
     --page-meta-color: var(--color-neutral-x-light);
-    --page-link-color: var(--color-alpha);
+    --page-link-color: var(--color-beta);
     --page-selection-color: var(--page-link-color);
     --scrollbar-thumb-color: var(--page-link-color);
     --scrollbar-track-color: var(--page-background-color);
@@ -91,19 +96,13 @@ body {
     @include font-height($root-font-size,$root-baseline-multiplier);
 }
 
-::-moz-selection {
-    background-color: var(--page-selection-color);
-    color: white;
-    text-shadow: none;
-}
-
 ::selection {
     background-color: var(--page-selection-color);
-    color: white;
+    color: var(--page-background-color);
     text-shadow: none;
 }
 
-@include scrollbars(baseline(3), var(--scrollbar-thumb-color), var(--scrollbar-track-color));
+@include scrollbars(baseline(1), var(--scrollbar-thumb-color), var(--scrollbar-track-color));
 
 .c-baseline-overlay {
     display: none;

@@ -22,7 +22,8 @@ div:empty {
         max-width: none;
         padding: 0;
         display: grid;
-        grid: ". left content right ." / minmax($alpha-whitespace,1fr) minmax(baseline(25),20rem) 36rem minmax(baseline(25),20rem) minmax($alpha-whitespace,1fr);
+        // grid: ". left content right ." / minmax($alpha-whitespace,1fr) minmax(min-content,21.5rem) 36rem minmax(min-content,21.5rem) minmax($alpha-whitespace,1fr);
+        grid: ". left content right ." / minmax($alpha-whitespace,1fr) minmax(min-content, 21rem) 36rem minmax(auto,21rem) minmax($alpha-whitespace,1fr);
         grid-gap: 0 baseline($root-baseline-multiplier);
     }
 }
@@ -30,7 +31,12 @@ div:empty {
 .c-single__logo {
     margin-bottom: 0;
     margin-top: baseline($root-baseline-multiplier);
-    color: var(--page-header-color);
+    color: var(--page-heading-color);
+    // font-weight: $beta-font-weight;
+    // font-family: $beta-font-family;
+    // font-family: $gamma-font-family;
+    // letter-spacing: .05em;
+    // text-transform: uppercase;
     // -webkit-font-smoothing: subpixel-antialiased;
     // -moz-osx-font-smoothing: subpixel-antialiased;
 
@@ -39,10 +45,10 @@ div:empty {
     }
 
     @include mq(bp5) {
-        margin-top: baseline($root-baseline-multiplier * 3);
         grid-column: left;
         grid-row: 1;
-        align-self: start;
+        // align-self: start;
+        justify-self: start;
     }
 }
 
@@ -57,6 +63,7 @@ div:empty {
 .c-single__meta {
     color: var(--page-meta-color);
     font-feature-settings: "ss01";
+    // font-family: $code-font-family;
     margin-bottom: 0;
     transition: all $animation-duration-alpha $animation-easing-alpha;
 
@@ -69,7 +76,7 @@ div:empty {
         grid-column: content;
         grid-row: 1;
         align-self: start;
-        margin-top: baseline($root-baseline-multiplier * 3);
+        margin-top: baseline($root-baseline-multiplier * 2);
     }
 
     @include mq(bp5,max) {
@@ -88,18 +95,18 @@ div:empty {
 
 .c-single__header {
     margin: baseline($root-baseline-multiplier * 2) 0;
-    // min-height: calc(100vh - #{baseline($root-baseline-multiplier * 19)});
-    // display: flex;
-    // align-items: flex-end;
+    min-height: calc(100vh - #{baseline($root-baseline-multiplier * 18)});
+    display: flex;
+    align-items: flex-end;
 
     @include mq(bp3){
         margin-top: baseline($root-baseline-multiplier * 4);
     }
 
     @include mq(bp5){
-        grid-column: content;
-        // grid-column: left;
-        // grid-column-end: span 2;
+        // grid-column: content;
+        grid-column: left;
+        grid-column-end: span 2;
         grid-row: 2;
         margin-top: baseline($root-baseline-multiplier * 5);
     }
@@ -108,6 +115,19 @@ div:empty {
 .c-single__title {
     color: var(--page-header-color);
     transition: opacity $animation-duration-alpha $animation-easing-alpha;
+
+    // color: transparent;
+    // background: linear-gradient(to bottom left, var(--color-alpha), var(--color-beta));
+    // background-color: var(--page-header-color);
+    // background-image: url('https://www.apple.com/v/apple-card/a/images/shared/masked_copy__b4wazt46bss2_large.jpg');
+    // background-image: url("../img/copied-2.jpg");
+    // background-size: 400px 300px;
+    // background-image: url("../img/wallpaper-516-invert.gif");
+    // background-size: 1200px 1214px;
+    // background-size: 600px 607px;
+    // background-repeat: repeat;
+    // -webkit-background-clip: text;
+    // background-clip: text;
 
     .has-scrolled & {
         opacity: 0;
@@ -141,23 +161,23 @@ div:empty {
     grid-column-start: 2;
     grid-column-end: -2;
     grid-row: 1;
-    margin-top: baseline(10);
+    margin-top: baseline(5);
     top: 0;
     left: 0;
     height: baseline(15);
     background-color: var(--page-sticky-bar-background);
     transition: opacity $animation-duration-alpha $animation-easing-alpha;
 
-    &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: baseline(-20);
-        right: 0;
-        left: 0;
-        height: baseline(20);
-        background-color: var(--page-sticky-bar-background);
-    }
+    // &:after {
+    //     content: '';
+    //     display: block;
+    //     position: absolute;
+    //     top: baseline(-20);
+    //     right: 0;
+    //     left: 0;
+    //     height: baseline(20);
+    //     background-color: var(--page-sticky-bar-background);
+    // }
 
     @include mq(bp5,max) {
         display: none !important;
@@ -295,6 +315,7 @@ div:empty {
         h2,
         p {
             background-color: hsla(var(--hue-alpha), 100%, 75%, .3);
+            // background-color: hsla(var(--hue-beta), var(--saturation-beta), var(--lightness-beta), .5);
         }
     }
 }
@@ -327,4 +348,16 @@ div:empty {
 .e-baseline-paragraph {
     // padding-top: baseline(.75);
     // margin-bottom: baseline(4.25);
+}
+
+.c-multiline-background {
+    // background-color: hsla(var(--hue-beta), var(--saturation-beta), var(--lightness-beta), .8);
+    // color: var(--page-background-color);
+    // display: inline;
+    // // padding: baseline(.5) baseline(4) baseline(1.5);
+    // padding: 0 baseline(3);
+    //
+    // /* Needs prefixing */
+    // box-decoration-break: clone;
+    // -webkit-box-decoration-break: clone;
 }
