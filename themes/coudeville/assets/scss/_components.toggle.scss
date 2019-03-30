@@ -10,14 +10,10 @@
     margin-bottom: $alpha-whitespace;
     // font-weight: 600;
     // margin-bottom: 0;
-    // font-family: $alpha-font-family;
+    // font-family: $code-font-family;
     // margin: baseline(4);
-    color: var(--color-neutral-x-light);
+    color: var(--toggle-label-color);
     @include font-height(ms(-2),4);
-
-    .is-light & {
-        color: var(--color-neutral);
-    }
 }
 
 .c-toggle__checkbox {
@@ -30,13 +26,8 @@
     height: 16px;
     transition: all $animation-duration-alpha $animation-easing-alpha;
     outline: none;
-    // background-color: var(--color-neutral);
-    border: 2px solid var(--color-neutral);
-
-    .is-light & {
-        background-color: var(--color-neutral-xxx-light);
-        border-color: var(--color-neutral-xxx-light);
-    }
+    border: 2px solid var(--toggle-border-color);
+    background-color: var(--toggle-background-color);
 
     &:after {
         content: "";
@@ -52,33 +43,23 @@
     }
 
     &:checked {
-        border-color: var(--color-beta);
-        // background-color: var(--color-beta);
-
-        .is-light & {
-            background-color: hsl(var(--hue-alpha),var(--saturation-alpha),90%);
-            border-color: hsl(var(--hue-alpha),var(--saturation-alpha),90%);
-        }
+        border-color: var(--toggle-border-color-checked);
+        background-color: var(--toggle-background-color-checked);
 
         &:after {
             transform: translate(15px,-5px);
-
-            .is-light & {
-                background-color: var(--color-alpha);
-                border-color: var(--color-alpha);
-            }
         }
     }
 
-    &:focus,
-    &:active {
-        &:after {
-            box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2), 0 0 0 3px hsla(var(--hue-alpha),100%,95%,.5);
-
-            .is-light & {
-                border-color: hsl(var(--hue-alpha),var(--saturation-alpha),60%);
-                box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2), 0 0 0 3px hsla(var(--hue-alpha),var(--saturation-alpha),60%,.25);
-            }
-        }
-    }
+    // &:focus,
+    // &:active {
+    //     &:after {
+    //         box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2), 0 0 0 3px hsla(var(--hue-alpha),100%,95%,.5);
+    //
+    //         .is-light & {
+    //             border-color: hsl(var(--hue-alpha),var(--saturation-alpha),60%);
+    //             box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2), 0 0 0 3px hsla(var(--hue-alpha),var(--saturation-alpha),60%,.25);
+    //         }
+    //     }
+    // }
 }

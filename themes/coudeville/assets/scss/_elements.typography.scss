@@ -10,10 +10,10 @@ Default markup for typographic elements
 
 $h1-font-size: ms(7);
 $h1-baseline-multiplier: 8;
-$h1-font-size-large: ms(10);
-$h1-baseline-multiplier-large: 12;
-$h1-font-size-xlarge: ms(13);
-$h1-baseline-multiplier-xlarge: 16;
+$h1-font-size-large: ms(9);
+$h1-baseline-multiplier-large: 11;
+$h1-font-size-xlarge: ms(12);
+$h1-baseline-multiplier-xlarge: 14;
 $h1-font-size-xxlarge: ms(15);
 $h1-baseline-multiplier-xxlarge: 20;
 $h2-font-size: ms(2);
@@ -38,13 +38,15 @@ ul {
 }
 
 h1 {
-    font-feature-settings: "ss01";
+    // font-feature-settings: "ss01";
+    // font-feature-settings: "ss02";
     // font-feature-settings: "salt";
     font-weight: $alpha-font-weight;
     // font-weight: 200;
-    font-family: $gamma-font-family;
+    // font-family: $gamma-font-family;
     // font-family: $beta-font-family;
-    font-weight: $beta-font-weight;
+    // font-weight: $beta-font-weight;
+    // font-weight: $gamma-font-weight;
     // font-family: $delta-font-family;
     margin-bottom: $alpha-whitespace;
 
@@ -56,33 +58,35 @@ h1 {
         @include font-height($h1-font-size-large,$h1-baseline-multiplier-large);
     }
 
-    @include mq(bp3) {
-        @include font-height($h1-font-size-xlarge,$h1-baseline-multiplier-xlarge);
-    }
+    // @include mq(bp3) {
+    //     @include font-height($h1-font-size-xlarge,$h1-baseline-multiplier-xlarge);
+    // }
 
-    @include mq(bp5) {
-        @include font-height($h1-font-size-xxlarge,$h1-baseline-multiplier-xxlarge);
-    }
+    // @include mq(bp5) {
+    //     @include font-height($h1-font-size-xxlarge,$h1-baseline-multiplier-xxlarge);
+    // }
 }
 
 h2 {
-    font-feature-settings: "ss01";
-    font-weight: $alpha-font-weight;
+    // font-feature-settings: "ss01";
+    // font-weight: $alpha-font-weight;
     // font-family: $beta-font-family;
-    // font-weight: $beta-font-weight;
+    font-weight: $beta-font-weight;
+    // font-weight: $gamma-font-weight;
     margin-bottom: $alpha-whitespace;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: subpixel-antialiased;
+    // -webkit-font-smoothing: subpixel-antialiased;
+    // -moz-osx-font-smoothing: subpixel-antialiased;
     @include font-height($h2-font-size,$h2-baseline-multiplier);
 }
 
 h3 {
-    font-feature-settings: "ss01";
-    font-weight: $alpha-font-weight;
-    // font-weight: $beta-font-weight;
+    // font-feature-settings: "ss01";
+    // font-weight: $alpha-font-weight;
+    font-weight: $beta-font-weight;
+    // font-weight: $gamma-font-weight;
     margin-bottom: $alpha-whitespace;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: subpixel-antialiased;
+    // -webkit-font-smoothing: subpixel-antialiased;
+    // -moz-osx-font-smoothing: subpixel-antialiased;
     @include font-height($h3-font-size, $h3-baseline-multiplier);
 }
 

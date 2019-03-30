@@ -19,27 +19,9 @@
 // DarkCyan
 
 // Base colors
-$color-alpha                : MediumSlateBlue; // MediumSlateBlue #735FED
-$color-beta                 : MediumSpringGreen;
-$color-gamma                : MediumSpringGreen;
 
-// Palettes
-$palettes: (
-    color-neutral: (
-        xxxx-light          : WhiteSmoke,
-        xxx-light           : Gainsboro,
-        xx-light            : LightGray,
-        x-light             : Silver,
-        light               : DarkGray,
-        base                : Gray,
-        dark                : DimGrey,
-        x-dark              : #333,
-        xx-dark             : #1a1a1a,
-        xxx-dark            : Black
-    ),
-    color-alpha: (
-        light               : hsl(hue($color-alpha),saturation($color-alpha),50),
-        base                : $color-alpha,
-        dark                : hsl(hue($color-alpha),saturation($color-alpha),25),
-    )
-);
+$color-alpha      : SlateBlue;
+$color-beta       : MediumSeaGreen;
+
+$color-alpha-light : MediumSlateBlue;
+$color-beta-light  : MediumSpringGreen;

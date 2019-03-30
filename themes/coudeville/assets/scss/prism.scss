@@ -20,7 +20,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
 
 code[class*="language-"],
 pre[class*="language-"] {
-	color: var(--color-neutral-xxxx-light);
+	color: var(--prism-text-color);
 	background: none;
 	font-family: $code-font-family;
 	text-align: left;
@@ -41,10 +41,6 @@ pre[class*="language-"] {
 
 	* + & {
 		margin-top: baseline(6);
-	}
-
-	.is-light & {
-		color: var(--color-neutral-dark);
 	}
 }
 
@@ -77,15 +73,9 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: var(--color-neutral-xx-dark);
+	background: var(--prism-background-color);
 
-	@include scrollbars(baseline(1), var(--color-neutral-dark), var(--color-neutral-xx-dark));
-
-	.is-light & {
-		background: var(--color-neutral-xxxx-light);
-
-		@include scrollbars(baseline(1), var(--color-neutral-xx-light), var(--color-neutral-xxxx-light));
-	}
+	@include scrollbars(baseline(1), var(--prism-scroll-thumb-color), var(--prism-background-color));
 }
 
 /* Inline code */
@@ -97,19 +87,11 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: var(--color-neutral);
-
-	.is-light & {
-		color: var(--color-neutral-light);
-	}
+	color: var(--prism-comment-color);
 }
 
 .token.punctuation {
-	color: var(--color-neutral-xxxx-light);
-
-	.is-light & {
-		color: var(--color-neutral-dark);
-	}
+	color: var(--prism-punctuation-color);
 }
 
 .namespace {
