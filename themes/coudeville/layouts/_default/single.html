@@ -10,13 +10,15 @@
         <h1 class="c-single__title js-single-title">
             <span class="c-multiline-background">{{ .Title }}</span>
         </h1>
-        <!-- <p class="c-single__description">
-            {{ .Description }}
-        </p> -->
+        <!-- <hr class="c-hr"> -->
     </div>
     <div class="c-single__content">
         <div class="s-content">
+            <p class="c-type-intro">
+                {{ .Description }}
+            </p>
             {{ .Content }}
+            <hr class="c-hr">
         </div>
     </div>
     <p class="c-single__sticky-title js-single-sticky-title">{{ .Title }}</p>

@@ -33,20 +33,23 @@ $show-baseline: false;
 
 // Basic font settings
 
-// $alpha-font-family          : "Graphik Web", sans-serif;
-$alpha-font-family          : "Lab Grotesque Web", sans-serif;
+$alpha-font-family          : "Graphik Web", sans-serif;
+// $alpha-font-family          : "Lab Grotesque Web", sans-serif;
 // $alpha-font-family          : "HK Grotesk Web", sans-serif;
 // $alpha-font-family          : "Suisse Intl", sans-serif;
 // $alpha-font-family          : "GT Walsheim", sans-serif;
 $beta-font-family           : "Graphik Web Compact", sans-serif;
 $gamma-font-family           : "Graphik Web Condensed", sans-serif;
-$delta-font-family          : "Suisse Works", sans-serif;
-// $delta-font-family          : "Dala Floda", sans-serif;
+// $delta-font-family          : "Suisse Works", sans-serif;
+$delta-font-family          : "Dala Floda Web", sans-serif;
 // $delta-font-family          : "Suisse Neue", sans-serif;
 // $code-font-family           : "Atlas Typewriter", sans-serif;
 // $code-font-family           : "Suisse Intl Mono", sans-serif;
 // $code-font-family           : "Roboto Mono", monospace;
 $code-font-family           : "Lab Grotesque Mono Web", monospace;
+$pixel-font-family          : "SLKSCR Web", monospace;
+$pixel-font-family          : "lores-21-serif", monospace;
+$pixel-font-family-2        : "lores-12", monospace;
 
 $alpha-font-weight          : 400;
 $beta-font-weight           : 500;

@@ -1,13 +1,13 @@
 ---
 date: 2019-02-06T21:40:40+01:00
 title: Creating vertical rhythm with SCSS
-description: In this article I will describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS.
+description: In this article I will describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing perfect control and a predictable outcome.
 draft: false
 code: true
-dark: true
+#inverted: true
 ---
 
-In this article I will describe how I set up a spacing* system with SCSS. It’s* based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. I also use the [modular scale plugin](https://www.google.com) to set up a typographic scale. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing perfect control and a predictable outcome.
+<!-- I also use the [modular scale plugin](https://www.google.com) to set up a typographic scale.  -->
 
 ## Flexible foundations
 
@@ -85,3 +85,7 @@ In order to align text to a baseline grid on the web you. With this technique yo
         </label>
     </div>
 </div>
+
+## Baseline Grid
+
+In order to align text to a baseline grid on the web you. With this technique you have the possibility to align text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that line-height and if the margin between the items is the same as the base line-height you these items will all align to eachother. It's simple math, really.

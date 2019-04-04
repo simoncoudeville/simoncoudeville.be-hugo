@@ -23,6 +23,30 @@
     }
 }
 
+@mixin dark-mode {
+    @media (prefers-color-scheme: dark) {
+        :root {
+            @content;
+        }
+    }
+
+    .is-inverted {
+        @content;
+    }
+}
+
+@mixin light-mode {
+    :root {
+        @content;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .is-inverted {
+            @content;    
+        }
+    }
+}
+
 // Font height mixin
 @mixin font-height($font-size,$baseline-multiplier) {
   // font-size: $font-size; // font-size in pixels

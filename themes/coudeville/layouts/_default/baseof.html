@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html {{ if .Params.dark }}class="is-dark"{{ end }}>
+<html {{ if .Params.inverted }}class="is-inverted"{{ end }}>
     {{- partial "head.html" . -}}
     <body>
         {{- block "main" . }}{{- end }}
