@@ -11,7 +11,7 @@ Default markup for typographic elements
 $h1-font-size: ms(7);
 $h1-baseline-multiplier: 8;
 $h1-font-size-large: ms(9);
-$h1-baseline-multiplier-large: 11;
+$h1-baseline-multiplier-large: 12;
 $h1-font-size-xlarge: ms(13);
 $h1-baseline-multiplier-xlarge: 14;
 $h1-font-size-xxlarge: ms(15);
@@ -46,7 +46,7 @@ h1 {
     // font-weight: 200;
     // font-family: $gamma-font-family;
     // font-family: $beta-font-family;
-    // font-weight: $beta-font-weight;
+    font-weight: $beta-font-weight;
     // font-weight: $gamma-font-weight;
     // font-family: $delta-font-family;
     // margin-bottom: $beta-whitespace;
@@ -75,11 +75,11 @@ h2 {
     font-feature-settings: "ss01", "liga", "zero";
     font-weight: $alpha-font-weight;
     // font-family: $beta-font-family;
-    // font-weight: $beta-font-weight;
+    font-weight: $beta-font-weight;
     // font-weight: $gamma-font-weight;
     margin-bottom: $alpha-whitespace;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: subpixel-antialiased;
+    // -webkit-font-smoothing: subpixel-antialiased;
+    // -moz-osx-font-smoothing: subpixel-antialiased;
     @include font-height($h2-font-size,$h2-baseline-multiplier);
 }
 
@@ -87,11 +87,11 @@ h3 {
     // font-feature-settings: "ss01";
     font-feature-settings: "ss01", "liga", "zero";
     font-weight: $alpha-font-weight;
-    // font-weight: $beta-font-weight;
+    font-weight: $beta-font-weight;
     // font-weight: $gamma-font-weight;
     margin-bottom: $alpha-whitespace;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: subpixel-antialiased;
+    // -webkit-font-smoothing: subpixel-antialiased;
+    // -moz-osx-font-smoothing: subpixel-antialiased;
     @include font-height($h3-font-size, $h3-baseline-multiplier);
 }
 

@@ -59,7 +59,6 @@ $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace 
 In order to align text to a baseline grid on the web you. With this technique you have the possibility to align text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that line-height and if the margin between the items is the same as the base line-height you these items will all align to eachother. It's simple math, really.
 
 <div class="c-example has-baseline js-example">    
-    <h3>Baseline grid example</h3>
     <div class="c-example__body">        
         <div class="c-example__content">
             <div class="e-columns">

@@ -21,7 +21,7 @@ function showHeaderTitle() {
     var body = document.querySelector('body');
 
     var options = {
-        rootMargin: '-110px'
+        rootMargin: '-100px'
     }
 
     let observer = new IntersectionObserver(function (entries) {

@@ -8,12 +8,12 @@
     color: var(--page-heading-color);
     // color: var(--color-alpha);
     // font-family: $gamma-font-family;
-    // font-weight: $beta-font-weight;
+    font-weight: $beta-font-weight;
     // font-feature-settings: "salt";
     // text-transform: uppercase;
     // letter-spacing: .1em;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: subpixel-antialiased;
+    // -webkit-font-smoothing: subpixel-antialiased;
+    // -moz-osx-font-smoothing: subpixel-antialiased;
     margin-bottom: $alpha-whitespace;
     @include font-height($root-font-size,$root-baseline-multiplier);
 }
