@@ -36,7 +36,7 @@ div:empty {
     color: var(--page-heading-color);
     grid-column: content;
     // font-family: $code-font-family;
-    font-weight: $beta-font-weight;
+    // font-weight: $beta-font-weight;
     // font-family: $pixel-font-family;
     // font-weight: $gamma-font-weight;
     // font-family: $beta-font-family;
@@ -45,8 +45,8 @@ div:empty {
     // font-weight: $gamma-font-weight;
     // letter-spacing: .05em;
     // text-transform: uppercase;
-    // -webkit-font-smoothing: subpixel-antialiased;
-    // -moz-osx-font-smoothing: subpixel-antialiased;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: subpixel-antialiased;
     // @include font-height(ms(2),$root-baseline-multiplier);
 
     @include mq(bp2) {
@@ -70,7 +70,7 @@ div:empty {
 
 .c-single__meta {
     color: var(--page-meta-color);
-    font-feature-settings: "onum", "ss01", "liga", "zero";
+    font-feature-settings: "ss01", "liga", "zero";
     // font-feature-settings: "ss02", "liga", "zero";
     // font-feature-settings: "ss01";
     // font-family: $code-font-family;
