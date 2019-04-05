@@ -8,315 +8,132 @@ div:empty {
    display: none;
 }
 
-.c-single {
-    --content-max-width: 35rem;
-    position: relative;
+body {
     display: grid;
-    grid: ". content ." / minmax($alpha-whitespace,1fr) minmax(min-content, var(--content-max-width)) minmax($alpha-whitespace,1fr);
-    // padding: 0 baseline($root-baseline-multiplier);
-    // max-width: calc(#{baseline($root-baseline-multiplier * 2)} + 35rem);
-    margin: 0 auto;
+    grid-column-gap: $alpha-whitespace;
+    grid: ". content ." / minmax(0,1fr) minmax(0, 35rem) minmax(0,1fr);
 
-    // @include mq(bp3) {
-    //     padding: 0 baseline($root-baseline-multiplier);
-    // }
+    @include mq(bp4) {
+        grid: ". left content ." / minmax($alpha-whitespace,1fr) minmax(0, 9rem) minmax(0, 35rem) minmax($alpha-whitespace,1fr);
+    }
 
     @include mq(bp5) {
-        max-width: none;
-        padding: 0;
-        // grid: ". left content right ." / minmax($alpha-whitespace,1fr) minmax(min-content,21.5rem) 36rem minmax(min-content,21.5rem) minmax($alpha-whitespace,1fr);
-        grid: ". left content right ." / minmax($alpha-whitespace,1fr) minmax(min-content, 21rem) var(--content-max-width) minmax(auto,21rem) minmax($alpha-whitespace,1fr);
-        grid-gap: 0 $alpha-whitespace;
+        grid: ". left content right ." / minmax($alpha-whitespace,1fr) minmax(0, 9rem) minmax(0, 35rem) minmax(0,9rem) minmax($alpha-whitespace,1fr);
     }
 }
 
-.c-single__logo {
-    margin-bottom: 0;
-    margin-top: baseline($root-baseline-multiplier);
-    color: var(--page-heading-color);
-    grid-column: content;
-    // font-family: $code-font-family;
-    // font-weight: $beta-font-weight;
-    // font-family: $pixel-font-family;
-    // font-weight: $gamma-font-weight;
-    // font-family: $beta-font-family;
-    // font-family: $gamma-font-family;
-    // font-family: $delta-font-family;
-    // font-weight: $gamma-font-weight;
-    // letter-spacing: .05em;
-    // text-transform: uppercase;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: subpixel-antialiased;
-    // @include font-height(ms(2),$root-baseline-multiplier);
+.c-header,
+.c-intro,
+.c-content {
+    // grid-column: full;
+    grid-column: 1 / -1;
+    display: grid;
+    grid: inherit;
+    grid-gap: inherit;
+}
 
-    @include mq(bp2) {
-        margin-top: baseline($root-baseline-multiplier * 2);
+.c-header {
+    padding: $alpha-whitespace 0;
+    background-color: var(--page-sticky-bar-background);
+    margin-bottom: $alpha-whitespace;
+
+    @include mq(bp3) {
+        margin-top: $alpha-whitespace;
     }
 
-    @include mq(bp5) {
+    @include mq(bp4) {
+        position: sticky;
+        top: baseline(1);
+    }
+}
+
+.c-header__logo {
+    grid-column: content;
+    margin-bottom: 0;
+    grid-row: 1;
+
+    @include mq(bp4) {
         grid-column: left;
-        grid-row: 1;
         justify-self: end;
     }
 }
 
-.c-single__logo--sticky {
-    @include mq(bp5) {
-        position: -webkit-sticky;
-        position: sticky;
-        top: baseline($root-baseline-multiplier + 1);
-    }
-}
-
-.c-single__meta {
-    color: var(--page-meta-color);
-    font-feature-settings: "ss01", "liga", "zero";
-    // font-feature-settings: "ss02", "liga", "zero";
-    // font-feature-settings: "ss01";
-    // font-family: $code-font-family;
-    margin-bottom: 0;
-    transition: all $animation-duration-alpha $animation-easing-alpha;
-    grid-column: content;
-
-    .has-scrolled & {
-        opacity: 0;
-        transform: translateY(baseline(-2));
-    }
-
-    @include mq(bp5) {
-        grid-column: content;
+.c-header__meta {
+    @include mq(bp2) {
         grid-row: 1;
-        align-self: start;
-        margin-top: baseline($root-baseline-multiplier * 2);
+        justify-self: end;
     }
 
-    @include mq(bp5,max) {
-        opacity: 1;
-        transform: none;
+    @include mq(bp4) {
+        justify-self: start;
     }
 }
 
-.c-single__meta--sticky {
-    @include mq(bp5) {
-        position: -webkit-sticky;
-        position: sticky;
-        top: baseline($root-baseline-multiplier + 1);
-    }
-}
-
-.c-single__header {
-    margin-top: $beta-whitespace;
-    // min-height: calc(100vh - #{baseline($root-baseline-multiplier * 18)});
-    // display: flex;
-    // align-items: flex-end;
-    grid-column: content;
-
-    @include mq(bp3){
-        margin-top: baseline($root-baseline-multiplier * 4);
-    }
-
-    @include mq(bp5){
-        grid-column: content;
-        // grid-column: left;
-        // grid-column-end: span 2;
-        grid-row: 2;
-    }
-}
-
-.c-single__title {
-    color: var(--page-header-color);
-    transition: opacity $animation-duration-alpha $animation-easing-alpha;
-    // font-family: $pixel-font-family;
-
-    // color: transparent;
-    // background: linear-gradient(to bottom left, var(--color-alpha), var(--color-beta));
-    // background-color: var(--page-header-color);
-    // background-image: url('https://www.apple.com/v/apple-card/a/images/shared/masked_copy__b4wazt46bss2_large.jpg');
-    // background-image: url("../img/copied-2.jpg");
-    // background-size: 400px 300px;
-    // background-image: url("../img/wallpaper-516-invert.gif");
-    // background-size: 1200px 1214px;
-    // background-size: 600px 607px;
-    // background-repeat: repeat;
-    // -webkit-background-clip: text;
-    // background-clip: text;
-
-    .has-scrolled & {
-        opacity: 0;
-    }
-
-    // &::after {
-    //     content: '____________';
-    //     // content: '‾‾‾';
-    //     // content: '―――';
-    //     // content: '‗‗‗';
-    //     // font-family: $code-font-family;
-    //     display: block;
-    //     letter-spacing: .15em;
-    //     // letter-spacing: 3px;
-    //     font-weight: $beta-font-weight;
-    //     color: var(--page-meta-color);
-    //     @include font-height(ms(0),$root-baseline-multiplier)
-    //     margin-top: baseline($root-baseline-multiplier);
-    // }
-
-    @include mq(bp5,max) {
-        opacity: 1;
-    }
-}
-
-.c-single__separator {
-    letter-spacing: .1em;
+.c-header__meta,
+.c-header__title {
     color: var(--page-meta-color);
-}
-
-.c-single__content {
     grid-column: content;
-    padding-bottom: baseline($root-baseline-multiplier);
-
-    @include mq(bp3) {
-        // padding-top: baseline($root-baseline-multiplier * 2);
-    }
-
-    @include mq(bp5) {
-        padding-bottom: baseline($root-baseline-multiplier * 2);
-        // padding-top: baseline($root-baseline-multiplier * 3);
-        // padding: baseline(15 + $root-baseline-multiplier * 2) 0 baseline($root-baseline-multiplier * 3);
-    }
-}
-
-
-.c-single__sticky-bar {
-    display: block !important;
-    position: -webkit-sticky;
-    position: sticky;
-    grid-column-start: 1;
-    grid-column-end: -1;
-    grid-row: 1;
-    margin-top: baseline(5);
-    top: baseline(1);
-    left: 0;
-    height: baseline(15);
-    opacity: 0;
-    background-color: var(--page-sticky-bar-background);
-    // box-shadow: var(--page-sticky-bar-shadow);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    // transition: opacity $animation-duration-alpha $animation-easing-alpha;
-
-    &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: baseline(-20);
-        right: 0;
-        left: 0;
-        height: baseline(20);
-        background-color: var(--page-sticky-bar-background);
-    }
-
-    &.is-shown {
-        opacity: 1;
-    }
-
-    @include mq(bp5,max) {
-        display: none !important;
-    }
-}
-
-.c-single__sticky-bar-observer {
-    display: block !important;
-    height: baseline(5);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    @include mq(bp5,max) {
-        display: none;
-    }
-}
-
-.c-single__background {
-    display: block !important;
-    background-color: var(--page-header-background-color);
-    grid-column: 1 / -1;
-    grid-row: 1 / 4;
-
-    @include mq(bp5) {
-        grid-row: 1 / 4;
-    }
-}
-
-.c-single__sticky-title {
-    display: none;
-    position: -webkit-sticky;
-    position: sticky;
-    top: baseline($root-baseline-multiplier + 1);
-    grid-column: content;
-    grid-row-start: 2;
-    align-self: start;
-    color: var(--page-meta-color);
-    font-feature-settings: "tnum", "ss01", "liga", "zero";
-    // font-family: $code-font-family;
-    // color: var(--page-header-color);
-    // font-weight: $beta-font-weight;
-    // font-feature-settings: "ss01";
-    visibility: hidden;
-    transform: translateY(baseline(2));
-    opacity: 0;
-    margin-bottom: baseline(4);
     transition: all $animation-duration-alpha $animation-easing-alpha;
+    margin-bottom: 0;
 
-    @include mq(bp5) {
-        display: block;
-        text-align: left;
+    @include mq(bp4) {
+        grid-row: 1;
+    }
+}
 
+.c-header__meta {
+    @include mq(bp4) {
         .has-scrolled & {
-            visibility: visible;
-            opacity: 1;
-            transform: translateY(0);
+            opacity: 0;
+            transform: translateY(baseline(-2));
         }
     }
 }
 
-// Z-indexes
+.c-header__title {
+    display: none;
 
-.c-single {
-    z-index: 100;
+    @include mq(bp4) {
+        display: block;
+        opacity: 0;
+        transform: translateY(baseline(2));
+
+        .has-scrolled & {
+            opacity: 1;
+            transform: translateY(baseline(0));
+        }
+    }
 }
 
-.c-single__content {
-    z-index: 10;
+.c-intro {
+    @include mq(bp3) {
+        margin-top: $beta-whitespace;
+    }
 }
 
-.c-single__background {
-    z-index: 60;
+.c-intro__title {
+    color: var(--page-heading-color);
+    grid-column: content;
 }
 
-.c-single__sticky-bar {
-    z-index: 90;
+.c-content * {
+    grid-column: content;
 }
 
-.c-single__sticky-title {
-    z-index: 150;
+.c-header {
+    z-index: 40;
 }
 
-.c-single__logo {
-    z-index: 160;
+.c-intro {
+    z-index: 30;
 }
 
-.c-single__meta {
-    z-index: 170;
-}
-
-.c-single__header {
-    z-index: 80;
+.c-content {
+    z-index: 20;
 }
 
 .c-example {
-    margin: baseline($root-baseline-multiplier * 2) 0;
+    margin: $alpha-whitespace 0 0;
 }
 
 .c-example__body {
@@ -401,7 +218,7 @@ div:empty {
 .c-hr {
     border : 0;
     height: auto;
-    margin: baseline($root-baseline-multiplier + 1) 0 baseline($root-baseline-multiplier * 2);
+    margin: 0 0 baseline($root-baseline-multiplier * 2);
     width: 49%;
     // text-align: center;
     // margin-left: auto;

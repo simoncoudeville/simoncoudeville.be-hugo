@@ -1,4 +1,28 @@
 {{ define "main" }}
+<header class="c-header">
+    <p class="c-logo c-header__logo">
+        <a href="/" class="c-logo__link">Simon Coudeville</a>
+    </p>
+    <p class="c-header__meta js-header-meta">
+        {{ .Date.Format "January 2, 2006" }}
+    </p>
+    <p class="c-header__title js-header-title">
+        {{ .Title }}
+    </p>
+</header>
+<div class="c-intro">
+    <h1 class="c-intro__title js-intro-title">
+        {{ .Title }}
+    </h1>
+</div>
+<div class="c-content s-content">
+    <p class="c-type-intro">
+        {{ .Description }}
+    </p>
+    {{ .Content }}
+    <hr class="c-hr">
+</div>
+{{/*
 <div class="c-single js-single">
     <p class="c-single__logo c-single__logo--sticky">
         <a class="c-logo__link" href="/">Simon Coudeville</a>
@@ -26,4 +50,5 @@
     <div class="c-single__sticky-bar-observer js-single-sticky-bar-observer"></div>
     <div class="c-single__sticky-bar js-single-sticky-bar"></div>
 </div>
+*/}}
 {{ end }}

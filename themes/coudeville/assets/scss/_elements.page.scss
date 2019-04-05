@@ -133,7 +133,6 @@ html {
     -moz-osx-font-smoothing: grayscale;
     // font-feature-settings: "ss02", "liga", "zero";
     font-feature-settings: "liga", "zero";
-    padding: baseline(1) 0;
 
     // a little bit of responsive typography
 
@@ -142,6 +141,16 @@ html {
     // @include mq(bp3) {
         font-size: #{$root-font-size/16px*100%};
     // }
+
+
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: baseline(1) 0;
+    background-color: var(--page-background-color);
+    @include font-height($root-font-size,$root-baseline-multiplier);
 
     &::after {
         content: '';
@@ -154,14 +163,6 @@ html {
         left: 0;
         z-index: 1000;
     }
-}
-
-body {
-    position: relative;
-    min-height: 100vh;
-    margin: 0;
-    background-color: var(--page-background-color);
-    @include font-height($root-font-size,$root-baseline-multiplier);
 }
 
 ::selection {
