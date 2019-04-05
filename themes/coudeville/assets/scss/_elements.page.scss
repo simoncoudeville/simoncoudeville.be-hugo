@@ -20,7 +20,8 @@
     --saturation-beta: #{saturation($color-beta)};
     --lightness-beta: #{lightness($color-beta)};
 
-    --color-neutral-xxxx-light: hsla(var(--hue-alpha), 5%, 97.5%, 1);
+    --color-neutral-xxxxx-light: hsla(var(--hue-alpha), 5%, 100%, 1);
+    --color-neutral-xxxx-light: hsla(var(--hue-alpha), 5%, 95%, 1);
     --color-neutral-xxx-light: hsla(var(--hue-alpha), 5%, 92.5%, 1);
     --color-neutral-xx-light: hsla(var(--hue-alpha), 5%, 85%, 1);
     --color-neutral-x-light: hsla(var(--hue-alpha), 5%, 75%, 1);
@@ -37,8 +38,8 @@
 }
 
 @mixin light-scheme {
-    --html-background-color: var(--color-alpha);
-    --page-background-color: white;
+    --html-background-color: var(--color-neutral-xxx-dark);
+    --page-background-color: var(--color-neutral-xxxx-light);
     --page-header-background-color: var(--page-background-color);
     // --page-header-background-color: var(--color-beta);
     // --page-sticky-bar-background: hsla(var(--hue-alpha), 100%, 100%, .95);
@@ -56,8 +57,7 @@
     --scrollbar-track-color: var(--page-background-color);
     --scrollbar-thumb-color: var(--color-alpha-light);
     --prism-text-color: var(--color-neutral-x-dark);
-    --prism-background-color: var(--color-neutral-xxxx-light);
-    --prism-background-color: var(--color-neutral-xxxx-light);
+    --prism-background-color: var(--color-neutral-xxx-light);
     --prism-scroll-thumb-color: var(--color-neutral-xx-light);
     --prism-comment-color: var(--color-neutral);
     --prism-punctuation-color: var(--prism-text-color);
@@ -76,7 +76,7 @@
     --color-alpha: #{$color-alpha-light};
     --color-beta: #{$color-beta-light};
 
-    --html-background-color: var(--color-neutral-dark);
+    // --html-background-color: var(--color-neutral-dark);
     --page-background-color: var(--color-neutral-xx-dark);
     --page-header-background-color: var(--page-background-color);
     --page-sticky-bar-background: var(--page-background-color);
@@ -148,21 +148,21 @@ html {
 body {
     position: relative;
     min-height: 100vh;
-    margin: baseline(1) 0;
+    // margin: baseline(1) 0;
     background-color: var(--page-background-color);
     @include font-height($root-font-size,$root-baseline-multiplier);
 
-    &::after {
-        content: '';
-        display: block;
-        height: baseline(1);
-        background-color: var(--html-background-color);
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1000;
-    }
+    // &::after {
+    //     content: '';
+    //     display: block;
+    //     height: baseline(1);
+    //     background-color: var(--html-background-color);
+    //     position: fixed;
+    //     top: 0;
+    //     right: 0;
+    //     left: 0;
+    //     z-index: 1000;
+    // }
 }
 
 ::selection {

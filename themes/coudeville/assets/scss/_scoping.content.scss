@@ -1,14 +1,8 @@
 .s-content {
     h2,
     h3 {
-        // font-feature-settings: "salt";
-        // font-feature-settings: "ss01";
         color: var(--page-heading-color);
     }
-
-    // h3 {
-    //     color: var(--page-meta-color);
-    // }
 
     * + h2 {
         margin-top: $alpha-whitespace; // Add extra margin on top
@@ -16,7 +10,6 @@
 
     a {
         text-decoration: underline;
-        // font-weight: $beta-font-weight;
     }
 
     p {
@@ -48,4 +41,10 @@
         hyphenate-limit-last: always;
         hyphenate-limit-zone: 8%;
     }
+
+    // .c-code {
+    //     @include mq(bp5) {
+    //         grid-column: content / right;
+    //     }
+    // }
 }

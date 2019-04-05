@@ -9,23 +9,24 @@ div:empty {
 }
 
 body {
+    --content-max-width: 35rem;
+    --aside-max-width: 15rem;
     display: grid;
     grid-column-gap: $alpha-whitespace;
     grid: ". content ." / minmax(0,1fr) minmax(0, 35rem) minmax(0,1fr);
 
     @include mq(bp4) {
-        grid: ". left content ." / minmax($alpha-whitespace,1fr) minmax(0, 9rem) minmax(0, 35rem) minmax($alpha-whitespace,1fr);
+        grid: ". left content ." / minmax($alpha-whitespace,1fr) minmax(0, var(--aside-max-width)) var(--content-max-width) minmax($alpha-whitespace,1fr);
     }
 
     @include mq(bp5) {
-        grid: ". left content right ." / minmax($alpha-whitespace,1fr) minmax(0, 9rem) minmax(0, 35rem) minmax(0,9rem) minmax($alpha-whitespace,1fr);
+        grid: ". left content right ." / minmax($alpha-whitespace,1fr) minmax(0, var(--aside-max-width)) var(--content-max-width) minmax(0,var(--aside-max-width)) minmax($alpha-whitespace,1fr);
     }
 }
 
 .c-header,
 .c-intro,
 .c-content {
-    // grid-column: full;
     grid-column: 1 / -1;
     display: grid;
     grid: inherit;
@@ -43,7 +44,8 @@ body {
 
     @include mq(bp4) {
         position: sticky;
-        top: baseline(1);
+        top: 0;
+        // top: baseline(1);
     }
 }
 
@@ -54,7 +56,7 @@ body {
 
     @include mq(bp4) {
         grid-column: left;
-        justify-self: end;
+        // justify-self: end;
     }
 }
 
@@ -71,6 +73,7 @@ body {
 
 .c-header__meta,
 .c-header__title {
+    font-feature-settings: "ss01", "liga", "zero";
     color: var(--page-meta-color);
     grid-column: content;
     transition: all $animation-duration-alpha $animation-easing-alpha;
@@ -107,13 +110,31 @@ body {
 
 .c-intro {
     @include mq(bp3) {
-        margin-top: $beta-whitespace;
+        margin: $beta-whitespace 0;
     }
+}
+
+.c-intro__visual {
+    grid-column: content;
+    margin-bottom: $beta-whitespace;
+
+    @include mq(bp4) {
+        grid-column: left / content;
+        // grid-column: content / right;
+    }
+
+    // @include mq(bp5) {
+    //     grid-column: left / right;
+    // }
 }
 
 .c-intro__title {
     color: var(--page-heading-color);
     grid-column: content;
+}
+
+.c-content {
+    background-color: var(--page-background-color);
 }
 
 .c-content * {

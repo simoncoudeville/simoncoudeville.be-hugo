@@ -12,6 +12,8 @@
     // font-feature-settings: "salt";
     // text-transform: uppercase;
     // letter-spacing: .1em;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: subpixel-antialiased;
     margin-bottom: $alpha-whitespace;
     @include font-height($root-font-size,$root-baseline-multiplier);
 }

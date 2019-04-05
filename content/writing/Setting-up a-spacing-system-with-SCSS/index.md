@@ -18,7 +18,7 @@ Pixels are easy to work with. I still think in pixels. I can imagine what a titl
 Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.  
 
 
-<pre><code class="language-scss">$modularscale: (
+<pre class="c-code"><code class="language-scss">$modularscale: (
   base: 19px,
   ratio: 1.125
 );
@@ -34,17 +34,17 @@ $root-line-height: $baseline * $root-baseline-multiplier; // In this setup this 
 $alpha-whitespace: baseline($root-baseline-multiplier); // Default whitespace between elements e.g. paragraphs, titles
 $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace between elements e.g. between paragraphs and h2</code></pre>
 
-<pre><code class="language-scss">// Font height mixin
+<pre class="c-code"><code class="language-scss">// Font height mixin
 @mixin font-height($font-size,$baseline-multiplier) {
   font-size: pxtorem($font-size); // font-size in rem
   line-height: #{$baseline-multiplier * $baseline / round($font-size)}em; // line-height in em
 }</code></pre>
 
-<pre><code class="language-scss">h2 {    
+<pre class="c-code"><code class="language-scss">h2 {    
     margin-bottom: baseline($root-baseline-multiplier);
     @include font-height(ms(2),$root-baseline-multiplier);
 }</code></pre>
-<pre><code class="language-scss">// simple px to rem converter
+<pre class="c-code"><code class="language-scss">// simple px to rem converter
 @function pxtorem($pixelvalue) {
     @return #{round($pixelvalue) / $root-font-size}rem;
 }
