@@ -35,7 +35,7 @@ body {
 
 .c-header {
     padding: $alpha-whitespace 0;
-    background-color: var(--page-sticky-bar-background);
+    background-color: var(--page-header-background-color);
     margin-bottom: $alpha-whitespace;
 
     @include mq(bp3) {
@@ -188,8 +188,23 @@ body {
 
         h2,
         p {
-            background-color: hsla(var(--hue-alpha), 100%, 75%, .3);
+            position: relative;
+            // background-color: hsla(var(--hue-alpha), 100%, 50%, .3);
+            // background-color: var(--color-alpha);
             // background-color: hsla(var(--hue-beta), var(--saturation-beta), var(--lightness-beta), .5);
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: var(--color-alpha);
+                opacity: .35;
+                z-index: -1;
+            }
         }
     }
 }
