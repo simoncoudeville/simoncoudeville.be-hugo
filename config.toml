@@ -1,7 +1,7 @@
 baseURL = "https://simoncoudeville.be/"
 languageCode = "en-us"
 title = "Simon Coudeville"
-theme = "Coudeville"
+theme = "coudeville"
 relativeURLS = false
 canonifyurls = true
 enableEmoji = true
