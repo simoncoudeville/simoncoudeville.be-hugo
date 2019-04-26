@@ -1,0 +1,4 @@
+function showHeaderTitle(){var introTitle=document.querySelector('.js-intro-title');var body=document.querySelector('body');var options={rootMargin:'-105px'}
+let observer=new IntersectionObserver(function(entries){entries.forEach(entry=>{if(entry.isIntersecting){body.classList.remove("has-scrolled");}else{body.classList.add("has-scrolled")}});},options);observer.observe(introTitle);}
+function toggleBaselines(){const toggles=document.querySelectorAll(".js-toggle-example-baseline");for(t of toggles){t.addEventListener('change',function(){this.closest(".js-example").classList.toggle("has-baseline");});}}
+document.addEventListener("DOMContentLoaded",function(){toggleBaselines();showHeaderTitle();});

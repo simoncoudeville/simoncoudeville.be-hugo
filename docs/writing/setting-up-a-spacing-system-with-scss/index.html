@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html ><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<html >
+    <head><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta charset="utf-8">
 <meta http-equiv="cleartype" content="on">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="In this article I will describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS.">
+<meta name="description" content="In this article I will describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing perfect control and a predictable outcome.">
 <meta name="author" content="Simon Coudeville">
 <title>Simon Coudeville - Creating vertical rhythm with SCSS</title>
+<link rel="stylesheet" href="https://use.typekit.net/bsy6jaw.css">
 
 
 <link rel="stylesheet" href="https://simoncoudeville.be/css/screen.css">
@@ -19,25 +21,34 @@
 
 <link rel="icon" href="https://simoncoudeville.be/favicon.png">
 
-<body>
-<div class="c-single js-single">
-    <p class="c-single__logo c-single__logo--sticky">
-        <a class="c-logo__link" href="https://simoncoudeville.be/">Simon Coudeville</a>
+</head>
+    <body>
+<header class="c-header">
+    <p class="c-logo c-header__logo">
+        <a href="https://simoncoudeville.be/" class="c-logo__link">Simon Coudeville</a>
     </p>
-    <p class="c-single__meta c-single__meta--sticky">
+    <p class="c-header__meta js-header-meta">
         February 6, 2019
     </p>
-    <div class="c-single__header">
-        <h1 class="c-single__title js-single-title">
-            <span class="c-multiline-background">Creating vertical rhythm with SCSS</span>
-        </h1>
-        
-    </div>
-    <div class="c-single__content">
-        <div class="s-content">
-            
+    <p class="c-header__title js-header-title">
+        Creating vertical rhythm with SCSS
+    </p>
+</header>
+<div class="c-intro">
+    <h1 class="c-intro__title js-intro-title">
+        Creating vertical rhythm with SCSS
+    </h1>
+    <p class="c-intro__visual">
+        <img src="https://static1.squarespace.com/static/55c8e052e4b01bd89f02a45e/t/59038bc6b8a79b029f4a0be0/1493404623987/?format=2500w" alt="">
+    </p>
+</div>
+<div class="c-content s-content">
+    <p class="c-type-intro">
+        In this article I will describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing perfect control and a predictable outcome.
+    </p>
+    
 
-<p>In this article I will describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. I also use the <a href="https://www.google.com">modular scale plugin</a> to set up a typographic scale. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing perfect control and a predictable outcome.</p>
+<!-- I also use the [modular scale plugin](https://www.google.com) to set up a typographic scale.  -->
 
 <h2 id="flexible-foundations">Flexible foundations</h2>
 
@@ -47,7 +58,7 @@
 
 <p>Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.</p>
 
-<pre><code class="language-scss">$modularscale: (
+<pre class="c-code"><code class="language-scss">$modularscale: (
   base: 19px,
   ratio: 1.125
 );
@@ -63,17 +74,17 @@ $root-line-height: $baseline * $root-baseline-multiplier; // In this setup this 
 $alpha-whitespace: baseline($root-baseline-multiplier); // Default whitespace between elements e.g. paragraphs, titles
 $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace between elements e.g. between paragraphs and h2</code></pre>
 
-<pre><code class="language-scss">// Font height mixin
+<pre class="c-code"><code class="language-scss">// Font height mixin
 @mixin font-height($font-size,$baseline-multiplier) {
   font-size: pxtorem($font-size); // font-size in rem
   line-height: #{$baseline-multiplier * $baseline / round($font-size)}em; // line-height in em
 }</code></pre>
 
-<pre><code class="language-scss">h2 {    
+<pre class="c-code"><code class="language-scss">h2 {    
     margin-bottom: baseline($root-baseline-multiplier);
     @include font-height(ms(2),$root-baseline-multiplier);
 }</code></pre>
-<pre><code class="language-scss">// simple px to rem converter
+<pre class="c-code"><code class="language-scss">// simple px to rem converter
 @function pxtorem($pixelvalue) {
     @return #{round($pixelvalue) / $root-font-size}rem;
 }
@@ -88,7 +99,6 @@ $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace 
 <p>In order to align text to a baseline grid on the web you. With this technique you have the possibility to align text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that line-height and if the margin between the items is the same as the base line-height you these items will all align to eachother. It&rsquo;s simple math, really.</p>
 
 <div class="c-example has-baseline js-example">    
-    <h3>Baseline grid example</h3>
     <div class="c-example__body">        
         <div class="c-example__content">
             <div class="e-columns">
@@ -115,17 +125,16 @@ $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace 
     </div>
 </div>
 
-        </div>
-    </div>
-    <p class="c-single__sticky-title js-single-sticky-title">Creating vertical rhythm with SCSS</p>
-    <div class="c-single__background js-single-background"></div>
-    <div class="c-single__sticky-bar-observer js-single-sticky-bar-observer"></div>
-    <div class="c-single__sticky-bar js-single-sticky-bar"></div>
+<h2 id="baseline-grid-1">Baseline Grid</h2>
+
+<p>In order to align text to a baseline grid on the web you. With this technique you have the possibility to align text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that line-height and if the margin between the items is the same as the base line-height you these items will all align to eachother. It&rsquo;s simple math, really.</p>
+
+    <hr class="c-hr">
 </div>
 
 
 
-<script type="text/javascript" src="https://simoncoudeville.be/js/app.min.599267416cc86f50037203dae7c3daaf27c3433ff60c2cf26cab7ca2b6a069879e1651746fc4a7046d1b7dd42ea5bb5b9f412df42a85d02ada9426ab7736e0aa.js" integrity="sha512-WZJnQWzIb1ADcgPa58ParyfDQz/2DCzybKt8oragaYeeFlF0b8SnBG0bfdQupbtbn0Et9CqF0CralCardzbgqg=="></script>
+<script type="text/javascript" src="https://simoncoudeville.be/js/app.min.a706618730e0e99a386789014f8f5a9ca785a1cda59bb6ea12c12e11f79c1e7af7f3c4b6d19e3c3664d4d94db59996eaaae53f1665eb933f8c7662f1abd0756d.js" integrity="sha512-pwZhhzDg6Zo4Z4kBT49anKeFoc2lm7bqEsEuEfecHnr388S20Z48NmTU2U21mZbqquU/FmXrkz&#43;MdmLxq9B1bQ=="></script>
 
 
 
