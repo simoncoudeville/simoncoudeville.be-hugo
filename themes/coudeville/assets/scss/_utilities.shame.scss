@@ -37,12 +37,15 @@ body {
     padding: $alpha-whitespace 0;
     background-color: var(--page-header-background-color);
     margin-bottom: $alpha-whitespace;
+    // backdrop-filter: blur(5px);
+    // -webkit-backdrop-filter: blur(5px);
 
     @include mq(bp3) {
         margin-top: $alpha-whitespace;
     }
 
     @include mq(bp4) {
+        position: -webkit-sticky;
         position: sticky;
         top: 0;
         // top: baseline(1);
@@ -159,24 +162,26 @@ body {
 
 .c-example__body {
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     padding: baseline($root-baseline-multiplier) baseline($root-baseline-multiplier) 0;
 	margin-left: baseline($root-baseline-multiplier * -1);
 	margin-right: baseline($root-baseline-multiplier * -1);
     margin-bottom: $alpha-whitespace;
-    background: var(--prism-background-color);
+    background: var(--example-background-color);
+    // background: var(--page-background-color);
 
     &:after {
         display: block;
         content: '';
         pointer-events: none;
         position: absolute;
-        top: 0;
+        top: -1px;
         right: 0;
         bottom: 0;
         left: 0;
-        // box-shadow: inset 0 0 0 pxtorem($baseline - 1 ) var(--prism-background-color);
-        box-shadow: inset 0 0 0 1px var(--prism-background-color);
+        box-shadow: inset 0 0 0 pxtorem($baseline * $root-baseline-multiplier ) var(--prism-background-color);
+        // box-shadow: inset 0 0 0 1px var(--prism-background-color);
+        // box-shadow: inset 0 0 40px 10px var(--prism-background-color);
         z-index: 100;
     }
 
@@ -189,22 +194,7 @@ body {
         h2,
         p {
             position: relative;
-            // background-color: hsla(var(--hue-alpha), 100%, 50%, .3);
-            // background-color: var(--color-alpha);
-            // background-color: hsla(var(--hue-beta), var(--saturation-beta), var(--lightness-beta), .5);
-
-            &::before {
-                content: '';
-                display: block;
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                background-color: var(--color-alpha);
-                opacity: .35;
-                z-index: -1;
-            }
+            background-color: var(--baseline-background);
         }
     }
 }
