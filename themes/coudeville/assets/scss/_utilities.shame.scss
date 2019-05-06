@@ -26,6 +26,7 @@ body {
 
 .c-header,
 .c-intro,
+.c-visual,
 .c-content {
     grid-column: 1 / -1;
     display: grid;
@@ -102,10 +103,12 @@ body {
     @include mq(bp4) {
         display: block;
         opacity: 0;
+        pointer-events: none;
         transform: translateY(baseline(2));
 
         .has-scrolled & {
             opacity: 1;
+            pointer-events: auto;
             transform: translateY(baseline(0));
         }
     }
@@ -113,27 +116,39 @@ body {
 
 .c-intro {
     @include mq(bp3) {
-        margin: $beta-whitespace 0;
+        margin: $beta-whitespace 0 0;
     }
 }
 
-.c-intro__visual {
-    grid-column: content;
-    margin-bottom: $beta-whitespace;
+.c-visual {
+    margin: 0 0 $beta-whitespace;
+    background-color: var(--intro-visual-background);
+
+    // grid-column: left / right;
+
+    // @include mq(bp3) {
+    //     margin: baseline($root-baseline-multiplier) 0 baseline($root-baseline-multiplier * 3);
+    // }
 
     @include mq(bp4) {
-        grid-column: left / content;
-        // grid-column: content / right;
+        // grid-column: content;
+        // grid-column: left / content;
+        // grid-column: left / right;
+        // text-align: center;
     }
+}
 
-    // @include mq(bp5) {
-    //     grid-column: left / right;
-    // }
+.c-visual__img {
+    grid-column: content;
 }
 
 .c-intro__title {
     color: var(--page-heading-color);
     grid-column: content;
+
+    // @include mq(bp5) {
+    //     grid-column: left / content;
+    // }
 }
 
 .c-content {
@@ -218,7 +233,7 @@ body {
 .e-baseline-title {
     // padding-top: baseline(1.25); ;
     // margin-bottom: baseline(3.75);
-    font-weight: $alpha-font-weight;
+    // font-weight: $alpha-font-weight;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     @include font-height(ms(8),$root-baseline-multiplier * 2);

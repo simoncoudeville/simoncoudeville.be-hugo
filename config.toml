@@ -5,6 +5,7 @@ theme = "Coudeville"
 relativeURLS = false
 canonifyurls = true
 enableEmoji = true
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [params]
   author = "Simon Coudeville"

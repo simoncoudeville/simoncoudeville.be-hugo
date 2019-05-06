@@ -39,34 +39,33 @@
     --html-background-color: var(--color-neutral-xxxx-light);
     --page-background-color: var(--html-background-color);
     --page-header-background-color: var(--page-background-color);
-    --page-heading-color: var(--color-neutral-xxx-dark);
+    --page-heading-color: var(--color-neutral-xxxx-dark);
     --page-text-color: var(--color-neutral-dark);
     --page-link-color: var(--page-heading-color);
     --page-meta-color: var(--page-text-color);
-    --page-selection-color: var(--color-beta);
+    --page-selection-color: var(--color-alpha);
     --scrollbar-track-color: var(--page-background-color);
     --scrollbar-thumb-color: var(--color-alpha);
+    --intro-visual-background: var(--color-alpha);
     --prism-text-color: var(--page-text-color);
     --prism-background-color: var(--color-neutral-xxxxx-light);
     --prism-scroll-thumb-color: var(--color-neutral-xx-light);
     --prism-comment-color: var(--color-neutral);
     --prism-punctuation-color: var(--prism-text-color);
     --example-background-color: var(--prism-background-color);
-    --baseline-color:  hsla(var(--hue-beta), var(--saturation-beta), var(--lightness-beta), 1);
-    --baseline-color-transparent: hsla(var(--hue-beta), var(--saturation-beta), var(--lightness-beta), 0);
-    --baseline-background: hsla(var(--hue-beta), var(--saturation-beta), var(--lightness-beta), .3);
-    --toggle-border-color: var(--color-neutral-xx-light);
+    --baseline-color:  hsla(var(--hue-beta), var(--saturation-beta), var(--lightness-beta), .75);
+    --baseline-background: hsla(var(--hue-beta), var(--saturation-beta), var(--lightness-beta), .35);
     --toggle-background-color: var(--color-neutral-xx-light);
-    --toggle-border-color-checked: var(--color-alpha);
     --toggle-background-color-checked: var(--color-alpha);
     --toggle-label-color: var(--color-neutral);
 }
 
 @mixin dark-scheme {
     --html-background-color: var(--color-neutral-xx-dark);
-    --page-heading-color: var(--color-neutral-xxxx-light);
-    --page-text-color: var(--color-neutral-x-light);
-    --prism-background-color: var(--color-neutral-xxx-dark);
+    --page-heading-color: var(--color-neutral-xxxxx-light);
+    --page-text-color: var(--color-neutral-xx-light);
+    --intro-visual-background: var(--color-neutral-xxxx-dark);
+    --prism-background-color: var(--color-neutral-xxxx-dark);
     --prism-scroll-thumb-color: var(--color-neutral-x-dark);
 }
 
@@ -124,7 +123,7 @@ body {
     text-shadow: none;
 }
 
-@include scrollbars(baseline(1), var(--scrollbar-thumb-color), var(--scrollbar-track-color));
+// @include scrollbars(baseline(1), var(--scrollbar-thumb-color), var(--scrollbar-track-color));
 
 .c-baseline-overlay {
     display: none;
@@ -148,8 +147,9 @@ body {
 .c-baseline-overlay--unit {
     background: repeating-linear-gradient(
         to bottom,
-        var(--baseline-color-transparent),
-        var(--baseline-color-transparent) pxtorem($baseline - 1),
+        transparent,
+        transparent pxtorem($baseline - 1),
+        var(--baseline-color) pxtorem($baseline - 1),
         var(--baseline-color) pxtorem($baseline)
     );
 
