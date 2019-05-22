@@ -39,11 +39,11 @@ function observeIntroTitle() {
 }
 
 function toggleBaselines() {
-    const toggles = document.querySelectorAll(".js-toggle-example-baseline");
+    const toggles = document.querySelectorAll(".js-toggle-baseline-example");
 
     for(t of toggles) {
         t.addEventListener('change', function() {
-            this.closest(".js-example").classList.toggle("has-baseline");
+            this.closest(".js-baseline-example").classList.toggle("has-baseline");
         });
     }
 }

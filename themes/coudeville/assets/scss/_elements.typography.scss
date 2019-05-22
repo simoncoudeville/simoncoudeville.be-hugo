@@ -48,7 +48,7 @@ ul {
 
 h1 {
     font-weight: $beta-font-weight;
-    // font-weight: $alpha-font-weight;
+    letter-spacing: -0.01em;
     margin-bottom: $alpha-whitespace;
 
     @include font-height($h1-font-size,$h1-baseline-multiplier); // Font size calculated by the font-height mixin

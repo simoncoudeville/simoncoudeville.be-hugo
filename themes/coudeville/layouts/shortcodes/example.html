@@ -1,0 +1,18 @@
+<div class="c-example{{ if eq (.Get "type") "baseline" }} has-baseline js-baseline-example{{ end }}">
+    {{ with .Get "title" }}
+    <h3 class="c-example__title">{{ . }}</h3>
+    {{ end }}
+    <div class="c-example__body{{ with .Get "size" }} c-example__body--{{ . }}{{ end }}">
+        <div class="c-example__content">
+            {{.Inner}}
+        </div>
+        <div class="c-baseline-overlay c-baseline-overlay--unit"></div>
+    </div>
+    {{ if eq (.Get "type") "baseline" }}
+    <div class="c-example__toggle">
+        <label class="c-toggle">
+            <input class="c-toggle__checkbox js-toggle-baseline-example" type="checkbox" checked> Show baseline
+        </label>
+    </div>
+    {{ end }}
+</div>

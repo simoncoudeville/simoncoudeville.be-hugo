@@ -248,7 +248,7 @@ body {
 }
 
 .c-example {
-    padding: baseline($root-baseline-multiplier) 0 0;
+    padding: baseline($root-baseline-multiplier * 3) 0 $beta-whitespace;
     // margin: $alpha-whitespace baseline($root-baseline-multiplier * -1);
     margin: $alpha-whitespace 0;
     background: var(--example-background-color);
@@ -259,6 +259,10 @@ body {
 }
 
 .c-example__title {
+    position: relative;
+    margin-top: -#{$beta-whitespace};
+    // margin-bottom: $beta-whitespace;
+    font-feature-settings: inherit;
     font-weight: normal;
     color: var(--page-meta-color);
     // font-family: $code-font-family;
@@ -329,9 +333,11 @@ body {
     }
 }
 
-// .c-example__toggle {
-//     margin-top: $alpha-whitespace;
-// }
+.c-example__toggle {
+    position: relative;
+    // margin-top: $alpha-whitespace;
+    margin-bottom: -#{$beta-whitespace};
+}
 
 .e-columns {
     column-width: 15em;
