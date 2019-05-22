@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="665" height="665" viewBox="0 0 665 665">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="665" height="540" viewBox="0 0 665 540">
   <defs>
-    <clipPath id="clip-cover-1">
-      <rect width="665" height="665"/>
+    <clipPath id="clip-cover-3">
+      <rect width="665" height="540"/>
     </clipPath>
   </defs>
-  <g id="cover-1" clip-path="url(#clip-cover-1)">
-    <g id="Group_6" data-name="Group 6" transform="translate(0 285)">
+  <g id="cover-3" clip-path="url(#clip-cover-3)">
+    <g id="Group_6" data-name="Group 6" transform="translate(0 222)">
       <rect id="Rectangle_1" data-name="Rectangle 1" width="665" height="6" transform="translate(0)" fill="#fff"/>
       <rect id="Rectangle_2" data-name="Rectangle 2" width="665" height="6" transform="translate(0 30)" fill="#fff"/>
       <rect id="Rectangle_3" data-name="Rectangle 3" width="665" height="6" transform="translate(0 60)" fill="#fff"/>

@@ -105,7 +105,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-	// color: var(--color-alpha);
+	color: var(--prism-property-color);
 }
 
 .token.selector,
@@ -114,9 +114,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	// .is-light & {
-	// 	color: var(--color-neutral-dark);
-	// }
+	color: var(--prism-selector-color);
 }
 
 .token.operator,
@@ -130,19 +128,18 @@ pre[class*="language-"] {
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-	color: var(--color-beta);
+	color: var(--prism-keyword-color);
 }
 
 .token.function,
 .token.class-name {
-	color: var(--color-beta);
+	color: var(--prism-function-color);
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-	// color: var(--color-beta);
-	color: var(--color-alpha);
+	color: var(--prism-variable-color);
 }
 
 .token.important,

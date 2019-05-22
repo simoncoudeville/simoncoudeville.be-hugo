@@ -1,8 +1,9 @@
 .s-content {
-    h2,
-    h3 {
-        color: var(--page-heading-color);
-    }
+    // h2,
+    // h3,
+    // h4 {
+    //     color: var(--page-heading-color);
+    // }
 
     * + h2 {
         margin-top: $alpha-whitespace; // Add extra margin on top

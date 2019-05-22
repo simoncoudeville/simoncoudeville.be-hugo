@@ -1,36 +1,45 @@
 {{ define "main" }}
-
-<header class="c-header">
-    <p class="c-logo c-header__logo">
-        <a href="/" class="c-logo__link">Simon Coudeville</a>
-    </p>
-    <p class="c-header__meta js-header-meta">
-        {{ .Date.Format "January 2, 2006" }}
-    </p>
-    <p class="c-header__title js-header-title">
-        {{ .Title }}
-    </p>
-</header>
-<div class="c-intro">
-    <h1 class="c-intro__title js-intro-title">
-        {{ .Title }}
-    </h1>
-</div>
-{{ if .Params.Cover }}
-<figure class="c-visual">
-    {{ $cover := .Params.Cover }}
-    {{ $image := .Resources.GetMatch $cover }}
-
-        <img class="c-visual__img" src="{{ $image.Permalink }}" alt="{{ .Title }} illustration">
-        <!-- <img src="https://static1.squarespace.com/static/55c8e052e4b01bd89f02a45e/t/59038bc6b8a79b029f4a0be0/1493404623987/?format=2500w" alt="{{ .Title }} illustration"> -->
-
-</figure>
-{{ end }}
-<div class="c-content s-content">
-    <p class="c-type-intro">
-        {{ .Description }}
-    </p>
-    {{ .Content }}
-    <hr class="c-hr">
-</div>
+    <span class="c-header-observer js-header-observer"></span>
+    <header class="c-header js-header">
+        <p class="c-logo c-header__logo">
+            <a href="/" class="c-logo__link">Simon Coudeville</a>
+        </p>
+        <p class="c-header__meta js-header-meta">
+            {{ .Date.Format "January 2, 2006" }}
+        </p>
+        <p class="c-header__title js-header-title">
+            {{ .Title }}
+        </p>
+    </header>
+    <div class="c-intro">
+        <h1 class="c-intro__title js-intro-title">
+            {{ .Title }}
+        </h1>
+    </div>
+    {{ if .Params.Cover }}
+    <figure class="c-cover">
+        {{ $cover := .Params.Cover }}
+        {{ $image := .Resources.GetMatch $cover }}
+        <img class="c-cover__img" src="{{ $image.Permalink }}" alt="{{ .Title }} illustration">
+    </figure>
+    {{ end }}
+    <div class="c-content s-content">
+        <p class="c-type-intro">
+            {{ .Description }}
+        </p>
+        {{ .Content }}
+    </div>
+    <aside class="c-about">
+        <figure class="c-avatar">
+            <img src="/img/me@2x.png" alt="Avatar">
+        </figure>
+        <p>
+            Hey, I’m Simon, a designer and teacher from Belgium. Read a bit more <a href="/">about me</a>, <a href="#!">email me</a>, or follow me on <a href="">Twitter</a>.
+        </p>
+    </aside>
+    <footer class="c-footer">
+        <p>
+            &copy; {{ now.Format "2006" }} Simon Coudeville
+        </p>
+    </footer>
 {{ end }}

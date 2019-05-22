@@ -6,10 +6,10 @@
   </defs>
   <g id="cover-2" clip-path="url(#clip-cover-2)">
     <g id="Group_6" data-name="Group 6" transform="translate(0 285)">
-      <rect id="Rectangle_1" data-name="Rectangle 1" width="665" height="6" transform="translate(0)" fill="#fff"/>
-      <rect id="Rectangle_2" data-name="Rectangle 2" width="665" height="6" transform="translate(0 30)" fill="#fff"/>
-      <rect id="Rectangle_3" data-name="Rectangle 3" width="665" height="6" transform="translate(0 60)" fill="#fff"/>
-      <rect id="Rectangle_4" data-name="Rectangle 4" width="332.5" height="6" transform="translate(0 90)" fill="#fff"/>
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="665" height="6" transform="translate(0)" fill="#6495ed"/>
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="665" height="6" transform="translate(0 30)" fill="#6495ed"/>
+      <rect id="Rectangle_3" data-name="Rectangle 3" width="665" height="6" transform="translate(0 60)" fill="#6495ed"/>
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="332.5" height="6" transform="translate(0 90)" fill="#6495ed"/>
     </g>
   </g>
 </svg>

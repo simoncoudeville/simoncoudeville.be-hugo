@@ -8,22 +8,26 @@
 
 :root {
     --color-alpha: #{$color-alpha};
-    --color-beta: #{$color-beta};
-
     --hue-alpha: #{hue($color-alpha)};
     --saturation-alpha: #{saturation($color-alpha)};
     --lightness-alpha: #{lightness($color-alpha)};
 
+    --color-beta: #{$color-beta};
     --hue-beta: #{hue($color-beta)};
     --saturation-beta: #{saturation($color-beta)};
     --lightness-beta: #{lightness($color-beta)};
 
-    --color-neutral-xxxxx-light: hsla(var(--hue-alpha), 2.5%, 98%, 1);
+    --color-gamma: #{$color-gamma};
+    --hue-gamma: #{hue($color-gamma)};
+    --saturation-gamma: #{saturation($color-gamma)};
+    --lightness-gamma: #{lightness($color-gamma)};
+
+    --color-neutral-xxxxx-light: hsla(var(--hue-alpha), 2.5%, 97%, 1);
     --color-neutral-xxxx-light: hsla(var(--hue-alpha), 2.5%, 95%, 1);
     --color-neutral-xxx-light: hsla(var(--hue-alpha), 2.5%, 92.5%, 1);
     --color-neutral-xx-light: hsla(var(--hue-alpha), 2.5%, 85%, 1);
     --color-neutral-x-light: hsla(var(--hue-alpha), 2.5%, 75%, 1);
-    --color-neutral-light: hsla(var(--hue-alpha), 2.5%, 65%, 1);
+    --color-neutral-light: hsla(var(--hue-alpha), 2.5%, 62.5%, 1);
     --color-neutral: hsla(var(--hue-alpha), 2.5%, 50%, 1);
     --color-neutral-dark: hsla(var(--hue-alpha), 5%, 35%, 1);
     --color-neutral-x-dark: hsla(var(--hue-alpha), 7.5%, 25%, 1);
@@ -36,37 +40,47 @@
 }
 
 @mixin light-scheme {
-    --html-background-color: var(--color-neutral-xxxx-light);
+    --html-background-color: hsla(var(--hue-alpha), 2.5%, 100%, .95);
     --page-background-color: var(--html-background-color);
-    --page-header-background-color: var(--page-background-color);
-    --page-heading-color: var(--color-neutral-xxxx-dark);
+    --page-header-background-color: var(--html-background-color);
+    --page-header-border-color: hsla(var(--hue-alpha), 15%, 5%, .075);
+    --page-heading-color: var(--color-neutral-xxx-dark);
     --page-text-color: var(--color-neutral-dark);
+    // --page-link-color: var(--color-alpha);
     --page-link-color: var(--page-heading-color);
-    --page-meta-color: var(--page-text-color);
+    // --page-meta-color: var(--page-text-color);
+    --page-meta-color: var(--color-neutral);
     --page-selection-color: var(--color-alpha);
     --scrollbar-track-color: var(--page-background-color);
     --scrollbar-thumb-color: var(--color-alpha);
-    --intro-visual-background: var(--color-alpha);
-    --prism-text-color: var(--page-text-color);
-    --prism-background-color: var(--color-neutral-xxxxx-light);
-    --prism-scroll-thumb-color: var(--color-neutral-xx-light);
-    --prism-comment-color: var(--color-neutral);
-    --prism-punctuation-color: var(--prism-text-color);
-    --example-background-color: var(--prism-background-color);
-    --baseline-color:  hsla(var(--hue-beta), var(--saturation-beta), var(--lightness-beta), .75);
-    --baseline-background: hsla(var(--hue-beta), var(--saturation-beta), var(--lightness-beta), .35);
+    // --cover-background-color: var(--color-neutral-xxx-dark);
+    --cover-background-color: var(--color-alpha);
+    --prism-text-color: var(--color-neutral-xx-light);
+    --prism-comment-color: var(--color-neutral-light);
+    --prism-background-color: var(--color-neutral-xxx-dark);
+    --prism-scroll-thumb-color: var(--color-neutral-dark);
+    --prism-keyword-color: var(--color-beta);
+    --prism-function-color: var(--color-alpha);
+    --prism-variable-color: var(--color-gamma);
+    --prism-selector-color: var(--color-gamma);
+    --prism-property-color: var(--prism-text-color);
+    --example-background-color: var(--color-neutral-xxxxx-light);
+    --baseline-color: hsla(var(--hue-gamma), var(--saturation-gamma), var(--lightness-gamma), .50);
+    --baseline-background: hsla(var(--hue-gamma), var(--saturation-gamma), var(--lightness-gamma), .25);
     --toggle-background-color: var(--color-neutral-xx-light);
     --toggle-background-color-checked: var(--color-alpha);
     --toggle-label-color: var(--color-neutral);
 }
 
 @mixin dark-scheme {
-    --html-background-color: var(--color-neutral-xx-dark);
+    --html-background-color: hsla(var(--hue-alpha), 15%, 5%, .95);
+    --page-header-border-color: hsla(var(--hue-alpha), 2.5%, 95%, .1);
+    // --page-header-border-color: transparent;
     --page-heading-color: var(--color-neutral-xxxxx-light);
-    --page-text-color: var(--color-neutral-xx-light);
-    --intro-visual-background: var(--color-neutral-xxxx-dark);
-    --prism-background-color: var(--color-neutral-xxxx-dark);
-    --prism-scroll-thumb-color: var(--color-neutral-x-dark);
+    --page-text-color: var(--color-neutral-x-light);
+    --cover-background-color: var(--color-neutral-xx-dark);
+    --example-background-color: var(--prism-background-color);
+    --toggle-background-color: var(--color-neutral);
 }
 
 :root {

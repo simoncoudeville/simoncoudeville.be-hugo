@@ -20,7 +20,7 @@
 }
 
 .c-logo__link {
-    // text-decoration: none;
+    text-decoration: none;
     position: relative;
 
     &,
@@ -32,6 +32,18 @@
     &:hover,
     &:focus,
     &:active {
+        text-decoration: underline;
         color: var(--page-link-color);
     }
+
+    // &::after {
+    //     content: '';
+    //     display: block;
+    //     position: absolute;
+    //     bottom: 3px;
+    //     left: 0;
+    //     right: 0;
+    //     height: 2px;
+    //     background-color: currentColor;
+    // }
 }

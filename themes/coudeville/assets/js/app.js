@@ -1,37 +1,36 @@
-// function showTopBar() {
-//     var topBarObserver = document.querySelector('.js-single-sticky-bar-observer');
-//     var topBar = document.querySelector('.js-single-sticky-bar');
-//
-//     let observer = new IntersectionObserver(function (entries) {
-//         // entries: Array of observed elements
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 topBar.classList.remove("is-shown");
-//             } else {
-//                 topBar.classList.add("is-shown")
-//             }
-//         });
-//     });
-//
-//     observer.observe(topBarObserver);
-// }
+function observeHeader() {
+    var headerObserver = document.querySelector('.js-header-observer');
+    var header = document.querySelector('.js-header');
 
-function showHeaderTitle() {
+    let observer = new IntersectionObserver(function (entries) {
+        // entries: Array of observed elements
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                header.classList.remove("is-sticky");
+            } else {
+                header.classList.add("is-sticky")
+            }
+        });
+    });
+
+    observer.observe(headerObserver);
+}
+
+function observeIntroTitle() {
     var introTitle = document.querySelector('.js-intro-title');
-    var body = document.querySelector('body');
+    var target = document.querySelector('body');
 
     var options = {
-        rootMargin: '-105px'
-        // rootMargin: '-16px'
+        rootMargin: '-30px'
     }
 
     let observer = new IntersectionObserver(function (entries) {
         // entries: Array of observed elements
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                body.classList.remove("has-scrolled");
+                target.classList.remove("has-scrolled");
             } else {
-                body.classList.add("has-scrolled")
+                target.classList.add("has-scrolled")
             }
         });
     }, options);
@@ -51,6 +50,6 @@ function toggleBaselines() {
 
 document.addEventListener("DOMContentLoaded", function() {
     toggleBaselines();
-    // showTopBar();
-    showHeaderTitle();
+    observeHeader();
+    observeIntroTitle();
 });

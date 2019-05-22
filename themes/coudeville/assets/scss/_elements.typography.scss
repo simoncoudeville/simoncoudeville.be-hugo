@@ -20,7 +20,7 @@ $h2-font-size: ms(2);
 $h2-baseline-multiplier: $root-baseline-multiplier;
 $h3-font-size: ms(0);
 $h3-baseline-multiplier: $root-baseline-multiplier;
-$h4-font-size: ms(-1);
+$h4-font-size: ms(0);
 $h4-baseline-multiplier: $root-baseline-multiplier;
 
 // ---
@@ -31,7 +31,8 @@ h1,
 h2,
 h3,
 h4 {
-    font-feature-settings: "ss01", "liga", "zero";
+    font-feature-settings: "ss01", "liga";
+    color: var(--page-heading-color);
 }
 
 
@@ -48,7 +49,7 @@ ul {
 h1 {
     font-weight: $beta-font-weight;
     // font-weight: $alpha-font-weight;
-    margin-bottom: $beta-whitespace;
+    margin-bottom: $alpha-whitespace;
 
     @include font-height($h1-font-size,$h1-baseline-multiplier); // Font size calculated by the font-height mixin
 
@@ -58,9 +59,10 @@ h1 {
         @include font-height($h1-font-size-large,$h1-baseline-multiplier-large);
     }
 
-    // @include mq(bp3) {
-    //     @include font-height($h1-font-size-xlarge,$h1-baseline-multiplier-xlarge);
-    // }
+    @include mq(bp3) {
+        margin-bottom: $beta-whitespace;
+        // @include font-height($h1-font-size-xlarge,$h1-baseline-multiplier-xlarge);
+    }
 
     // @include mq(bp5) {
     //     @include font-height($h1-font-size-xxlarge,$h1-baseline-multiplier-xxlarge);
@@ -97,6 +99,10 @@ p,
 ul,
 ol {
     margin-bottom: $alpha-whitespace;
+}
+
+figure {
+    margin: 0 0 $alpha-whitespace;
 }
 
 blockquote {

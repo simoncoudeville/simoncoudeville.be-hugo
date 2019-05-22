@@ -34,6 +34,7 @@ $show-baseline: false;
 // Basic font settings
 
 $alpha-font-family          : "Graphik Web", sans-serif;
+// $alpha-font-family          : "Helvetica Neue", sans-serif;
 // $alpha-font-family          : "Lab Grotesque Web", sans-serif;
 // $alpha-font-family          : "HK Grotesk Web", sans-serif;
 // $alpha-font-family          : "Suisse Intl", sans-serif;
@@ -124,10 +125,10 @@ $increments: (
 // Animations
 // ---
 
-$animation-duration-alpha   : .1s;
-$animation-duration-beta    : .2s;
-$animation-duration-gamma   : .3s;
-$animation-easing-alpha     : ease-in-out;
+$animation-duration-alpha   : .125s;
+$animation-duration-beta    : .25s;
+$animation-duration-gamma   : .375s;
+$animation-easing-alpha     : ease-out;
 $animation-easing-beta      : cubic-bezier(.68, -.55, .265, 1.55); // bouncy
 
 // ---
