@@ -9,8 +9,8 @@ div:empty {
 }
 
 body {
-    --content-max-width: 35rem;
-    --aside-max-width: 22rem;
+    --content-max-width: 35em;
+    --aside-max-width: 22em;
     display: grid;
     grid-column-gap: $alpha-whitespace;
     grid: ". content ." / minmax(0,1fr) minmax(0, 35rem) minmax(0,1fr);
@@ -22,15 +22,6 @@ body {
     @include mq(bp5) {
         grid: ". left content right ." / minmax($alpha-whitespace,1fr) minmax(0, var(--aside-max-width)) var(--content-max-width) minmax(0,var(--aside-max-width)) minmax($alpha-whitespace,1fr);
     }
-}
-
-.c-header-observer {
-    display: block;
-    height: baseline($root-baseline-multiplier);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
 }
 
 .c-header,
@@ -50,39 +41,49 @@ body {
     margin-bottom: $alpha-whitespace;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 1px;
+        background-color: var(--page-header-border-color);
+        bottom: -1px;
+        // height: baseline(1);
+        // background: linear-gradient(to bottom, var(--page-header-border-color), transparent);
+        // bottom: baseline(-1);
+        right: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity $animation-duration-alpha $animation-easing-out;
+    }
+
+    &.is-sticky {
+
+        &::after {
+            opacity: 1;
+        }
+    }
 
     @include mq(bp3) {
         margin-top: $alpha-whitespace;
     }
+}
 
-    @include mq(bp4) {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
 
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            height: 1px;
-            background-color: var(--page-header-border-color);
-            bottom: -1px;
-            // height: baseline(1);
-            // background: linear-gradient(to bottom, var(--page-header-border-color), transparent);
-            // bottom: baseline(-1);
-            right: 0;
-            left: 0;
-            opacity: 0;
-            transition: opacity $animation-duration-alpha $animation-easing-alpha;
-        }
+.c-header__observer {
+    display: block;
+    height: baseline($root-baseline-multiplier);
+    position: absolute;
+    top: calc(#{baseline($root-baseline-multiplier * -1)} - 1px);
+    left: 0;
+    right: 0;
 
-        &.is-sticky {
-            // box-shadow: 0 0 5px rgba(0,0,0,.15);
-
-            &::after {
-                opacity: 1;
-            }
-        }
+    @include mq(bp3) {
+        top: calc(#{baseline($root-baseline-multiplier * -1)} - 1px);
     }
 }
 
@@ -90,21 +91,23 @@ body {
     grid-column: content;
     margin-bottom: 0;
     grid-row: 1;
+    display: none;
 
     @include mq(bp4) {
         grid-column: left;
         // justify-self: end;
+        margin-left: baseline($root-baseline-multiplier * 2);
     }
 }
 
-.c-header__meta {
-    @include mq(bp2) {
-        grid-row: 1;
-        justify-self: end;
-    }
+.c-header__back {
+    margin-bottom: 0;
+    grid-row: 1;
+    grid-column: content;
+    // justify-self: start;
 
     @include mq(bp4) {
-        justify-self: start;
+        grid-column: left;
     }
 }
 
@@ -112,44 +115,74 @@ body {
 .c-header__title {
     position: relative;
     font-feature-settings: "ss01", "liga", "zero";
-    // color: var(--page-meta-color);
+    // font-family: $code-font-family;
+    color: var(--page-meta-color);
     grid-column: content;
-    transition: all $animation-duration-alpha $animation-easing-alpha;
+    grid-row: 1;
+    justify-self: end;
     margin-bottom: 0;
+    width: calc(100% - #{baseline($root-baseline-multiplier * 2)});
+    text-align: right;
+    // padding-left: baseline($root-baseline-multiplier * 2);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    // @include font-height(ms(-1),$root-baseline-multiplier);
+
+    // @include mq(bp4) {
+        grid-row: 1;
+        transition: all $animation-duration-alpha $animation-easing-out;
+    // }
 
     @include mq(bp4) {
-        grid-row: 1;
+        text-align: left;
+        // padding-left: 0;
+        justify-self: start;
+        width: auto;
     }
 }
 
 .c-header__meta {
-    @include mq(bp4) {
+    // @include mq(bp4) {
+        transition-delay: $animation-duration-beta;
+
         .has-scrolled & {
             opacity: 0;
             transform: translateY(baseline(-2));
+            transition-delay: 0s;
+            transition-timing-function: $animation-easing-in;
         }
-    }
+    // }
 }
 
 .c-header__title {
     display: none;
 
-    @include mq(bp4) {
+    // @include mq(bp4) {
         display: block;
         opacity: 0;
         pointer-events: none;
         transform: translateY(baseline(2));
+        transition-timing-function: $animation-easing-in;
+        transition-delay: 0s;
 
         .has-scrolled & {
             opacity: 1;
             pointer-events: auto;
             transform: translateY(baseline(0));
+            transition-delay: $animation-duration-beta;
+            transition-timing-function: $animation-easing-out;
         }
-    }
+    // }
 }
 
 .c-intro {
-    min-height: calc(50vh - #{baseline(25)});
+    // min-height: calc(50vh - #{baseline(25)});
+    min-height: calc(50vh - #{baseline($root-baseline-multiplier * 4)});
+
+    @include mq(bp3) {
+        min-height: calc(50vh - #{baseline($root-baseline-multiplier * 5)});
+    }
 }
 
 .c-intro__title {
@@ -247,8 +280,21 @@ body {
     z-index: 20;
 }
 
+.c-back-link {
+    display: block;
+    height: baseline($root-baseline-multiplier);
+}
+
+.c-back-link__icon {
+    height: baseline($root-baseline-multiplier);
+    stroke: var(--page-text-color);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
 .c-example {
-    padding: baseline($root-baseline-multiplier * 3) 0 $beta-whitespace;
+    padding: baseline($root-baseline-multiplier * 2) 0 $alpha-whitespace;
     // margin: $alpha-whitespace baseline($root-baseline-multiplier * -1);
     margin: $alpha-whitespace 0;
     background: var(--example-background-color);
@@ -260,12 +306,12 @@ body {
 
 .c-example__title {
     position: relative;
-    margin-top: -#{$beta-whitespace};
+    margin-top: -#{$alpha-whitespace};
     // margin-bottom: $beta-whitespace;
     font-feature-settings: inherit;
     font-weight: normal;
     color: var(--page-meta-color);
-    // font-family: $code-font-family;
+    font-family: $code-font-family;
     @include font-height(ms(-2),$root-baseline-multiplier);
 }
 
@@ -336,7 +382,9 @@ body {
 .c-example__toggle {
     position: relative;
     // margin-top: $alpha-whitespace;
-    margin-bottom: -#{$beta-whitespace};
+    margin-bottom: -#{$alpha-whitespace};
+    // margin-bottom: baseline($root-baseline-multiplier * -2);
+    // bottom: baseline($root-baseline-multiplier * -4);
 }
 
 .e-columns {
@@ -388,7 +436,7 @@ body {
 
 .e-profile__location {
     margin-bottom: baseline(4);
-    color: var(--color-neutral-light);
+    color: var(--page-meta-color);
     @include font-height(ms(-2),3);
 }
 

@@ -48,7 +48,6 @@
     --page-text-color: var(--color-neutral-dark);
     // --page-link-color: var(--color-alpha);
     --page-link-color: var(--page-heading-color);
-    // --page-meta-color: var(--page-text-color);
     --page-meta-color: var(--color-neutral);
     --page-selection-color: var(--color-alpha);
     --scrollbar-track-color: var(--page-background-color);
@@ -69,6 +68,11 @@
     --baseline-background: hsla(var(--hue-gamma), var(--saturation-gamma), var(--lightness-gamma), .25);
     --toggle-background-color: var(--color-neutral-xx-light);
     --toggle-background-color-checked: var(--color-alpha);
+    --toggle-border-color: var(--toggle-background-color);
+    --toggle-border-color-checked: var(--toggle-background-color-checked);
+    --toggle-switch-border-color-checked: hsl(var(--hue-alpha),var(--saturation-alpha),var(--lightness-alpha));
+    --toggle-switch-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    --toggle-switch-shadow-checked: 0 1px 3px rgba(0, 0, 0, 0.2), 0 0 0 3px hsla(var(--hue-alpha),var(--saturation-alpha),var(--lightness-alpha),.25);
     --toggle-label-color: var(--color-neutral);
 }
 
@@ -78,9 +82,14 @@
     // --page-header-border-color: transparent;
     --page-heading-color: var(--color-neutral-xxxxx-light);
     --page-text-color: var(--color-neutral-x-light);
-    --cover-background-color: var(--color-neutral-xx-dark);
+    --cover-background-color: var(--prism-background-color);
     --example-background-color: var(--prism-background-color);
-    --toggle-background-color: var(--color-neutral);
+    --toggle-background-color: transparent;
+    --toggle-border-color: var(--color-neutral);
+    --toggle-background-color-checked: var(--toggle-background-color);
+    --toggle-border-color-checked: var(--color-alpha);
+    --toggle-switch-border-color-checked: white;
+    --toggle-switch-shadow-checked: 0 0 0 1px rgba(0,0,0,.25), 0 0 0 4px hsla(var(--hue-alpha),var(--saturation-alpha),var(--lightness-alpha),.75);
 }
 
 :root {

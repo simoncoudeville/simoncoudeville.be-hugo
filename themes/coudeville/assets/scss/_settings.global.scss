@@ -34,6 +34,7 @@ $show-baseline: false;
 // Basic font settings
 
 $alpha-font-family          : "Graphik Web", sans-serif;
+// $alpha-font-family          : "GT America Trial", sans-serif;
 // $alpha-font-family          : "Helvetica Neue", sans-serif;
 // $alpha-font-family          : "Lab Grotesque Web", sans-serif;
 // $alpha-font-family          : "HK Grotesk Web", sans-serif;
@@ -42,7 +43,7 @@ $alpha-font-family          : "Graphik Web", sans-serif;
 $beta-font-family           : "Graphik Web Compact", sans-serif;
 $gamma-font-family           : "Graphik Web Condensed", sans-serif;
 // $delta-font-family          : "Suisse Works", sans-serif;
-$delta-font-family          : "Dala Floda Web", sans-serif;
+// $delta-font-family          : "Dala Floda Web", sans-serif;
 // $delta-font-family          : "Suisse Neue", sans-serif;
 // $code-font-family           : "Atlas Typewriter", sans-serif;
 // $code-font-family           : "Suisse Intl Mono", sans-serif;
@@ -125,11 +126,11 @@ $increments: (
 // Animations
 // ---
 
-$animation-duration-alpha   : .125s;
-$animation-duration-beta    : .25s;
-$animation-duration-gamma   : .375s;
-$animation-easing-alpha     : ease-out;
-$animation-easing-beta      : cubic-bezier(.68, -.55, .265, 1.55); // bouncy
+$animation-duration-alpha   : .1s;
+$animation-duration-beta    : .15s;
+$animation-duration-gamma   : .2s;
+$animation-easing-out       : cubic-bezier(0.390, 0.575, 0.565, 1.000);
+$animation-easing-in        : cubic-bezier(0.470, 0.000, 0.745, 0.715);
 
 // ---
 // Tools

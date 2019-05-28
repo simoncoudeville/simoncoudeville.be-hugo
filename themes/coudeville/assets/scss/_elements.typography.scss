@@ -48,6 +48,7 @@ ul {
 
 h1 {
     font-weight: $beta-font-weight;
+    // font-family: $gamma-font-family;
     letter-spacing: -0.01em;
     margin-bottom: $alpha-whitespace;
 
@@ -119,7 +120,7 @@ pre {
 
 a {
     color: var(--page-link-color);
-    transition: all $animation-duration-alpha $animation-easing-alpha;
+    transition: all $animation-duration-alpha $animation-easing-out;
     display: inline-block;
 
     &:visited {
