@@ -6,6 +6,7 @@ draft: false
 code: true
 cover: cover-1.svg
 #coverBackground: Gold
+#coverBackground: LightCoral
 #coverBackground: GoldenRod
 #coverBackground: SandyBrown
 #coverBackground: Tomato
@@ -42,6 +43,8 @@ $root-line-height: $baseline * $root-baseline-multiplier; // In this setup this 
 // Default whitespace settings for margins and paddings between elements
 $alpha-whitespace: baseline($root-baseline-multiplier); // Default whitespace between elements e.g. paragraphs, titles
 $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace between elements e.g. between paragraphs and h2{{< /code >}}
+
+Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.
 
 {{< code scss >}}// Font height mixin
 @mixin font-height($font-size,$baseline-multiplier) {

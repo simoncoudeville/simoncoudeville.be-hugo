@@ -31,7 +31,10 @@ h1,
 h2,
 h3,
 h4 {
-    font-feature-settings: "ss01", "liga";
+    // font-feature-settings: "ss01", "liga";
+    // font-feature-settings: "ss03", "liga";
+    // font-feature-settings: "salt", "liga";
+    // letter-spacing: -0.01em;
     color: var(--page-heading-color);
 }
 
@@ -48,7 +51,9 @@ ul {
 
 h1 {
     font-weight: $beta-font-weight;
+    // font-weight: $alpha-font-weight;
     // font-family: $gamma-font-family;
+    font-feature-settings: "ss01", "liga";
     letter-spacing: -0.01em;
     margin-bottom: $alpha-whitespace;
 

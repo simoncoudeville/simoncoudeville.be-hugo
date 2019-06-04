@@ -46,6 +46,7 @@
     --page-header-border-color: hsla(var(--hue-alpha), 15%, 5%, .075);
     --page-heading-color: var(--color-neutral-xxx-dark);
     --page-text-color: var(--color-neutral-dark);
+    // --page-text-color: var(--color-neutral-xxx-dark);
     // --page-link-color: var(--color-alpha);
     --page-link-color: var(--page-heading-color);
     --page-meta-color: var(--color-neutral);
@@ -120,7 +121,8 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     // font-feature-settings: "ss02", "liga", "zero";
-    font-feature-settings: "liga", "zero";
+    font-feature-settings: "liga", "zero", "tnum";
+    // font-feature-settings: "liga", "zero";
 
     // a little bit of responsive typography
 

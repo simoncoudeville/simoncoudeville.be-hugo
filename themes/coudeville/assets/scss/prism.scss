@@ -29,6 +29,7 @@ pre[class*="language-"] {
 	word-break: normal;
 	word-wrap: normal;
 	@include font-height(ms(-1),$root-baseline-multiplier);
+	// @include font-height(ms(-2),$root-baseline-multiplier);
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -39,9 +40,9 @@ pre[class*="language-"] {
 	-ms-hyphens: none;
 	hyphens: none;
 
-	* + & {
-		margin-top: baseline(6);
-	}
+	// * + & {
+	// 	margin-top: baseline(6);
+	// }
 }
 
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
