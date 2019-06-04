@@ -9,9 +9,9 @@ Default markup for typographic elements
 // ---
 
 $h1-font-size: ms(7);
-$h1-baseline-multiplier: 8;
+$h1-baseline-multiplier: 9;
 $h1-font-size-large: ms(9);
-$h1-baseline-multiplier-large: 12;
+$h1-baseline-multiplier-large: 11;
 $h1-font-size-xlarge: ms(11);
 $h1-baseline-multiplier-xlarge: 13;
 $h1-font-size-xxlarge: ms(12);
@@ -31,10 +31,6 @@ h1,
 h2,
 h3,
 h4 {
-    // font-feature-settings: "ss01", "liga";
-    // font-feature-settings: "ss03", "liga";
-    // font-feature-settings: "salt", "liga";
-    // letter-spacing: -0.01em;
     color: var(--page-heading-color);
 }
 
@@ -51,10 +47,7 @@ ul {
 
 h1 {
     font-weight: $beta-font-weight;
-    // font-weight: $alpha-font-weight;
-    // font-family: $gamma-font-family;
     font-feature-settings: "ss01", "liga";
-    // font-weight: $gamma-font-weight;
     letter-spacing: -0.01em;
     margin-bottom: $alpha-whitespace;
 
@@ -68,30 +61,17 @@ h1 {
 
     @include mq(bp3) {
         margin-bottom: $beta-whitespace;
-        // @include font-height($h1-font-size-xlarge,$h1-baseline-multiplier-xlarge);
     }
-
-    // @include mq(bp5) {
-    //     @include font-height($h1-font-size-xxlarge,$h1-baseline-multiplier-xxlarge);
-    // }
 }
-
-// h2,
-// h3 {
-//     -webkit-font-smoothing: subpixel-antialiased;
-//     -moz-osx-font-smoothing: unset;
-// }
 
 h2 {
     font-weight: $beta-font-weight;
-    // font-weight: $alpha-font-weight;
     margin-bottom: $alpha-whitespace;
     @include font-height($h2-font-size,$h2-baseline-multiplier);
 }
 
 h3 {
     font-weight: $beta-font-weight;
-    // font-weight: $alpha-font-weight;
     margin-bottom: $alpha-whitespace;
     @include font-height($h3-font-size, $h3-baseline-multiplier);
 }

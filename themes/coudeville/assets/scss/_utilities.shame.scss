@@ -10,17 +10,12 @@ div:empty {
 
 body {
     --content-max-width: 35em;
-    --aside-max-width: 22em;
+    --whitespace: #{$alpha-whitespace};
     display: grid;
-    grid-column-gap: $alpha-whitespace;
-    grid: ". content ." / minmax(0,1fr) minmax(0, 35rem) minmax(0,1fr);
+    grid: ". content ." / minmax(var(--whitespace),1fr) minmax(0, var(--content-max-width)) minmax(var(--whitespace),1fr);
 
-    @include mq(bp4) {
-        grid: ". left content ." / minmax($alpha-whitespace,1fr) minmax(0, var(--aside-max-width)) var(--content-max-width) minmax($alpha-whitespace,1fr);
-    }
-
-    @include mq(bp5) {
-        grid: ". left content right ." / minmax($alpha-whitespace,1fr) minmax(0, var(--aside-max-width)) var(--content-max-width) minmax(0,var(--aside-max-width)) minmax($alpha-whitespace,1fr);
+    @include mq(bp3) {
+        --whitespace: #{$beta-whitespace};
     }
 }
 
@@ -37,63 +32,13 @@ body {
 .c-header {
     position: relative;
     padding: $alpha-whitespace 0;
-    background-color: var(--page-header-background-color);
     margin-bottom: $alpha-whitespace;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    // position: -webkit-sticky;
-    // position: sticky;
-    // top: 0;
-
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        height: 1px;
-        background-color: var(--page-header-border-color);
-        bottom: -1px;
-        // height: baseline(1);
-        // background: linear-gradient(to bottom, var(--page-header-border-color), transparent);
-        // bottom: baseline(-1);
-        right: 0;
-        left: 0;
-        opacity: 0;
-        transition: opacity $animation-duration-alpha $animation-easing-out;
-    }
-
-    &.is-sticky {
-
-        &::after {
-            opacity: 1;
-        }
-    }
-
-    @include mq(bp3) {
-        // margin-top: $alpha-whitespace;
-        // position: -webkit-sticky;
-        // position: sticky;
-        // top: 0;
-    }
-}
-
-.c-header__observer {
-    display: block;
-    height: baseline($root-baseline-multiplier);
-    position: absolute;
-    top: calc(#{baseline($root-baseline-multiplier * -1)} - 1px);
-    left: 0;
-    right: 0;
-
-    @include mq(bp3) {
-        top: calc(#{baseline($root-baseline-multiplier * -1)} - 1px);
-    }
 }
 
 .c-header__body {
     grid-column: content;
 
     @include mq(bp3) {
-        // display: flex;
         display: grid;
         grid-template-columns: auto 1fr;
         grid-column-gap: $alpha-whitespace;
@@ -101,105 +46,20 @@ body {
 }
 
 .c-header__logo {
-    // grid-column: content;
     margin-bottom: 0;
     grid-row: 1;
-    // display: none;
-
-    // @include mq(bp3) {
-    //     margin-right: baseline($root-baseline-multiplier);
-    // }
-
-    @include mq(bp4) {
-        // grid-column: left;
-        // justify-self: end;
-        // margin-left: baseline($root-baseline-multiplier * 2);
-    }
-}
-
-.c-header__back {
-    margin-bottom: 0;
-    grid-row: 1;
-    grid-column: content;
-    // justify-self: start;
-    display: none;
-
-    @include mq(bp4) {
-        grid-column: left;
-    }
-}
-
-.c-header__meta,
-.c-header__title {
-    position: relative;
-    // font-feature-settings: "ss01", "liga", "zero";
-    // font-family: $code-font-family;
-    color: var(--page-meta-color);
-    // grid-column: content;
-    grid-column: 2;
-    grid-row: 1;
-    // justify-self: end;
-    margin-bottom: 0;
-    // width: calc(100% - #{baseline($root-baseline-multiplier * 2)});
-    // text-align: right;
-    // padding-left: baseline($root-baseline-multiplier * 2);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    // @include font-height(ms(-1),$root-baseline-multiplier);
-    @include font-height(ms(-1),$root-baseline-multiplier);
-
-    @include mq(bp3) {
-        grid-row: 1;
-        // justify-self: end;
-        // text-align: right;
-        transition: all $animation-duration-alpha $animation-easing-out;
-    }
-
-    @include mq(bp4) {
-        // text-align: left;
-        // padding-left: 0;
-        // justify-self: start;
-        width: auto;
-    }
 }
 
 .c-header__meta {
-    // @include mq(bp4) {
-        transition-delay: $animation-duration-beta;
-
-        .has-scrolled & {
-            opacity: 0;
-            transform: translateY(baseline(-2));
-            transition-delay: 0s;
-            transition-timing-function: $animation-easing-in;
-        }
-    // }
-}
-
-.c-header__title {
-    display: none;
-
-    @include mq(bp4) {
-        display: block;
-        opacity: 0;
-        pointer-events: none;
-        transform: translateY(baseline(2));
-        transition-timing-function: $animation-easing-in;
-        transition-delay: 0s;
-
-        .has-scrolled & {
-            opacity: 1;
-            pointer-events: auto;
-            transform: translateY(baseline(0));
-            transition-delay: $animation-duration-beta;
-            transition-timing-function: $animation-easing-out;
-        }
-    }
+    position: relative;
+    color: var(--page-meta-color);
+    grid-column: 2;
+    grid-row: 1;
+    margin-bottom: 0;
+    @include font-height(ms(-1),$root-baseline-multiplier);
 }
 
 .c-intro {
-    // min-height: calc(50vh - #{baseline(25)});
     min-height: calc(50vh - #{baseline($root-baseline-multiplier * 5)});
 
     @include mq(bp3) {
@@ -262,22 +122,8 @@ body {
     width: baseline($root-baseline-multiplier * 5);
     height: baseline($root-baseline-multiplier * 5);
     border-radius: 100%;
-    // border-radius: baseline(1);
     overflow: hidden;
-    // box-shadow: inset 0 baseline($root-baseline-multiplier * .25) baseline($root-baseline-multiplier) rgba(black,.1);
-    // background-color: var(--color-alpha);
-    // background-color: lighten($color-gamma,22.5);
-    // background-color: lighten($color-alpha,30);
-    // background-color: hsla(var(--hue-alpha), 50%, 92.5%, 1);
-    // background-color: lighten($color-beta,25);
-    // background-color: hsla(var(--hue-gamma), var(--saturation-gamma), 95%, 1);
-    // background-color: hsla(var(--hue-alpha), var(--saturation-alpha), 95%, 1);
-    // background-color: hsla(var(--hue-beta), var(--saturation-beta), 95%, 1);
-    // background-color: var(--color-neutral-xxx-light);
-    // background-color: #fff;
     background: linear-gradient(to bottom, var(--color-neutral-xxxx-light), var(--color-neutral-xxxxx-light) );
-    // background: linear-gradient(to bottom, hsla(var(--hue-alpha), 50%, 92.5%, 1), hsla(var(--hue-alpha), 50%, 95%, 1) );
-    // background: linear-gradient(to bottom, hsla(var(--hue-gamma), var(--saturation-gamma), 95%, 1), hsla(var(--hue-gamma), var(--saturation-gamma), 95%, 1) );
 
     img {
         opacity: .75;
@@ -290,34 +136,8 @@ body {
     padding-bottom: 0;
 }
 
-.c-header {
-    z-index: 40;
-}
-
-.c-intro {
-    z-index: 30;
-}
-
-.c-content {
-    z-index: 20;
-}
-
-.c-back-link {
-    display: block;
-    height: baseline($root-baseline-multiplier);
-}
-
-.c-back-link__icon {
-    height: baseline($root-baseline-multiplier);
-    stroke: var(--page-text-color);
-    stroke-width: 1.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
 .c-example {
     padding: baseline($root-baseline-multiplier * 2) 0 $alpha-whitespace;
-    // margin: $alpha-whitespace baseline($root-baseline-multiplier * -1);
     margin: $alpha-whitespace 0;
     background: var(--example-background-color);
     grid-column: 1 / -1;
@@ -329,12 +149,8 @@ body {
 .c-example__title {
     position: relative;
     margin-top: -#{$alpha-whitespace};
-    // margin-bottom: $beta-whitespace;
-    // font-feature-settings: inherit;
     font-weight: normal;
-    // color: var(--page-text-color);
     color: var(--page-meta-color);
-    // font-family: $code-font-family;
     @include font-height(ms(-1),$root-baseline-multiplier);
 }
 
@@ -375,25 +191,17 @@ body {
     }
 }
 
-.c-example__body--dark {
-    --example-background-color: var(--prism-background-color);
-}
-
 .c-example__body--xl {
-    padding: baseline($root-baseline-multiplier);
+    padding: baseline($root-baseline-multiplier) 0;
 
     @include mq(bp3) {
         padding: baseline($root-baseline-multiplier * 2) baseline($root-baseline-multiplier);
     }
-    // @include mq(bp4) {
-    //     padding: baseline($root-baseline-multiplier * 3) baseline($root-baseline-multiplier);
-    // }
 }
 
 .c-example__content {
     position: relative;
     z-index: 110;
-    // padding-top: $alpha-whitespace;
 
     > *:last-child,
     > *:last-child > *:last-child,
@@ -404,10 +212,7 @@ body {
 
 .c-example__toggle {
     position: relative;
-    // margin-top: $alpha-whitespace;
     margin-bottom: -#{$alpha-whitespace};
-    // margin-bottom: baseline($root-baseline-multiplier * -2);
-    // bottom: baseline($root-baseline-multiplier * -4);
 }
 
 .e-columns {
@@ -416,7 +221,6 @@ body {
 }
 
 .e-baseline-title {
-    // font-weight: normal;
     font-feature-settings: "ss01", "liga";
     @include font-height(ms(8),$root-baseline-multiplier * 2);
 }
@@ -425,7 +229,6 @@ body {
     margin: 0 auto;
     max-width: 16em;
     background-color: white;
-    // margin-bottom: $alpha-whitespace;
     border-radius: baseline(1);
     box-shadow: 0 0 0 1px rgba(black, 0.05), 0 2px 4px rgba(black,.075);
 
