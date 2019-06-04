@@ -7,7 +7,6 @@
 <meta name="description" content="{{ .Params.Description }}">
 <meta name="author" content="{{ .Site.Params.Author }}">
 <title>{{ block "title" . }}{{ with .Site.Title }}{{ . }}{{ end }} - {{ .Params.Title }}{{ end }}</title>
-<link rel="stylesheet" href="https://use.typekit.net/bsy6jaw.css">
 {{ $options := (dict "targetPath" "css/screen.css" "outputStyle" "compressed" ) }}
 {{ $style := resources.Get "scss/screen.scss" | resources.ToCSS $options }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
