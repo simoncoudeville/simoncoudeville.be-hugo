@@ -47,13 +47,12 @@
     --page-heading-color: var(--color-neutral-xxx-dark);
     --page-text-color: var(--color-neutral-dark);
     // --page-text-color: var(--color-neutral-xxx-dark);
-    // --page-link-color: var(--color-alpha);
-    --page-link-color: var(--page-heading-color);
+    --page-link-color: var(--color-alpha);
+    // --page-link-color: var(--page-heading-color);
     --page-meta-color: var(--color-neutral);
     --page-selection-color: var(--color-alpha);
     --scrollbar-track-color: var(--page-background-color);
     --scrollbar-thumb-color: var(--color-alpha);
-    // --cover-background-color: var(--color-neutral-xxx-dark);
     --cover-background-color: var(--color-alpha);
     --prism-text-color: var(--color-neutral-xx-light);
     --prism-comment-color: var(--color-neutral-light);
@@ -80,7 +79,6 @@
 @mixin dark-scheme {
     --html-background-color: hsla(var(--hue-alpha), 15%, 5%, .95);
     --page-header-border-color: hsla(var(--hue-alpha), 2.5%, 95%, .1);
-    // --page-header-border-color: transparent;
     --page-heading-color: var(--color-neutral-xxxxx-light);
     --page-text-color: var(--color-neutral-x-light);
     --cover-background-color: var(--prism-background-color);
@@ -121,7 +119,7 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     // font-feature-settings: "ss02", "liga", "zero";
-    font-feature-settings: "liga", "zero", "tnum";
+    font-feature-settings: "liga", "tnum";
     // font-feature-settings: "liga", "zero";
 
     // a little bit of responsive typography
