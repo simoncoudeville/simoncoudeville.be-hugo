@@ -1,3 +1,4 @@
+<title>{{ block "title" . }}{{ with .Site.Title }}{{ . }}{{ end }} - {{ .Params.Title }}{{ end }}</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta charset="utf-8">
 <meta http-equiv="cleartype" content="on">
@@ -6,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="{{ .Params.Description }}">
 <meta name="author" content="{{ .Site.Params.Author }}">
-<title>{{ block "title" . }}{{ with .Site.Title }}{{ . }}{{ end }} - {{ .Params.Title }}{{ end }}</title>
 {{ $css := resources.Get "css/screen.scss" | toCSS | postCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.Permalink }}">
 {{/* Conditional css if the post needs code highlighting */}}
