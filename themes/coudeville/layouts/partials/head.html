@@ -7,14 +7,12 @@
 <meta name="description" content="{{ .Params.Description }}">
 <meta name="author" content="{{ .Site.Params.Author }}">
 <title>{{ block "title" . }}{{ with .Site.Title }}{{ . }}{{ end }} - {{ .Params.Title }}{{ end }}</title>
-{{ $options := (dict "targetPath" "css/screen.css" "outputStyle" "compressed" ) }}
-{{ $style := resources.Get "scss/screen.scss" | resources.ToCSS $options }}
-<link rel="stylesheet" href="{{ $style.Permalink }}">
+{{ $css := resources.Get "css/screen.scss" | toCSS | postCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.Permalink }}">
 {{/* Conditional css if the post needs code highlighting */}}
 {{ if .Params.Code }}
-{{ $prismoptions := (dict "targetPath" "css/prism.css" "outputStyle" "compressed" ) }}
-{{ $prismstyle := resources.Get "scss/prism.scss" | resources.ToCSS $prismoptions }}
-<link rel="stylesheet" href="{{ $prismstyle.Permalink }}">
+{{ $prismcss := resources.Get "css/prism.scss" | toCSS | postCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $prismcss.Permalink }}">
 {{ end }}
 <link rel="icon" href="/favicon.png">
 <!-- <script>

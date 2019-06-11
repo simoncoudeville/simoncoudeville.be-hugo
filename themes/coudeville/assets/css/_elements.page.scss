@@ -120,9 +120,7 @@ html {
     color: var(--page-text-color);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    // font-feature-settings: "ss02", "liga", "zero";
     font-feature-settings: "liga", "tnum";
-    // font-feature-settings: "liga", "zero";
 
     // a little bit of responsive typography
 
