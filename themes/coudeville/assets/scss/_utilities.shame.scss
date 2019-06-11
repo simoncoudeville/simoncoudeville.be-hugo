@@ -9,7 +9,7 @@ div:empty {
 }
 
 body {
-    --content-max-width: 35em;
+    --content-max-width: #{baseline($root-baseline-multiplier * 22)};
     --whitespace: #{$alpha-whitespace};
     display: grid;
     grid: ". content ." / minmax(var(--whitespace),1fr) minmax(0, var(--content-max-width)) minmax(var(--whitespace),1fr);
@@ -75,18 +75,20 @@ body {
 
 .c-cover {
     min-height: 50vh;
-    margin: 0;
     background-color: var(--cover-background-color);
     margin-bottom: $alpha-whitespace;
+    // padding: $alpha-whitespace 0;
 
     @include mq(bp3) {
         margin-bottom: $beta-whitespace;
+        padding: $beta-whitespace 0;
     }
 }
 
 .c-cover__img {
     grid-column: content;
     align-self: center;
+    justify-self: center;
 }
 
 .c-content {
@@ -137,21 +139,26 @@ body {
 }
 
 .c-example {
-    padding: baseline($root-baseline-multiplier * 2) 0 $alpha-whitespace;
+    padding: baseline($root-baseline-multiplier * 3) 0 $alpha-whitespace;
     margin: $alpha-whitespace 0;
     background: var(--example-background-color);
     grid-column: 1 / -1;
     display: grid;
     grid: inherit;
     grid-gap: inherit;
+
+    & + * {
+        margin-top: $alpha-whitespace;
+    }
 }
 
 .c-example__title {
     position: relative;
-    margin-top: -#{$alpha-whitespace};
+    margin-top: -#{$beta-whitespace};
     font-weight: normal;
     color: var(--page-meta-color);
-    @include font-height(ms(-1),$root-baseline-multiplier);
+    // @include font-height(ms(-1),$root-baseline-multiplier);
+    @include font-height(ms(-2),$root-baseline-multiplier);
 }
 
 .c-example__body {
@@ -175,7 +182,7 @@ body {
 
         .c-baseline-overlay {
             display: block;
-            z-index: 120;
+            // z-index: 120;
         }
 
         &::before {
@@ -183,6 +190,7 @@ body {
         }
 
         h2,
+        h3,
         h4,
         p {
             position: relative;
@@ -192,22 +200,16 @@ body {
 }
 
 .c-example__body--xl {
-    padding: baseline($root-baseline-multiplier) 0;
+    padding: $alpha-whitespace 0 0;
 
     @include mq(bp3) {
-        padding: baseline($root-baseline-multiplier * 2) baseline($root-baseline-multiplier);
+        padding: $beta-whitespace 0 $alpha-whitespace;
     }
 }
 
 .c-example__content {
     position: relative;
     z-index: 110;
-
-    > *:last-child,
-    > *:last-child > *:last-child,
-    > *:last-child > *:last-child > *:last-child {
-        margin-bottom: 0;
-    }
 }
 
 .c-example__toggle {
@@ -216,7 +218,7 @@ body {
 }
 
 .e-columns {
-    column-width: 15em;
+    column-width: calc((var(--content-max-width) / 2) - #{$alpha-whitespace});
     column-gap: $alpha-whitespace;
 }
 
@@ -225,12 +227,26 @@ body {
     @include font-height(ms(8),$root-baseline-multiplier * 2);
 }
 
+.e-baseline-paragraph {
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
 .e-card {
+    position: relative;
     margin: 0 auto;
     max-width: 16em;
     background-color: white;
     border-radius: baseline(1);
     box-shadow: 0 0 0 1px rgba(black, 0.05), 0 2px 4px rgba(black,.075);
+    margin-bottom: $alpha-whitespace;
+    overflow: hidden;
+}
+
+.e-card__body {
+    position: relative;
+    padding: baseline($root-baseline-multiplier);
 
     // Reset bottom margins on children to make equal paddings possible
     > *:last-child,
@@ -240,29 +256,27 @@ body {
     }
 }
 
-.e-card__body {
-    padding: baseline($root-baseline-multiplier);
-}
-
 .e-profile {
     text-align: center;
 }
 
 .e-profile__avatar {
     display: block;
-    width: baseline(11);
+    width: baseline(10);
     margin: 0 auto;
     border-radius: 100%;
     margin-bottom: baseline(1);
+    // opacity: .75;
+    mix-blend-mode: multiply;
 }
 
 .e-profile__name {
     margin-bottom: 0;
     color: var(--color-neutral-xx-dark);
-    // @include font-height(ms(0),5);
 }
 
 .e-profile__location {
+    position: relative;
     margin-bottom: baseline(4);
     color: var(--page-meta-color);
     @include font-height(ms(-2),3);
@@ -311,7 +325,7 @@ body {
 }
 
 .e-button--small {
-    padding: pxtorem($baseline - 1) baseline(3.5) pxtorem($baseline + 1);
+    padding: pxtorem($baseline - 1) baseline(3) pxtorem($baseline + 1);
     @include font-height(ms(-2),4);
 }
 
@@ -322,4 +336,54 @@ body {
 
 .e-button--large {
     padding: pxtorem($baseline * 3 - 1) baseline(7) pxtorem($baseline * 3 + 1);
+}
+
+.e-grid {
+    display: grid;
+    grid-column-gap: $alpha-whitespace;
+    grid-template-columns: repeat(auto-fill, minmax(calc((var(--content-max-width) / 2) - #{$alpha-whitespace}), 1fr));
+}
+
+.e-grid__item {
+    grid-column: auto;
+}
+
+.e-grid__icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: baseline($root-baseline-multiplier * 2);
+    height: baseline($root-baseline-multiplier * 2);
+    margin-bottom: baseline(4);
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: var(--color-beta);
+        border-radius: 100%;
+        opacity: .25;
+    }
+
+    svg {
+        position: relative;
+        width: baseline($root-baseline-multiplier);
+        height: baseline($root-baseline-multiplier);
+        fill: var(--color-beta);
+    }
+}
+
+.e-grid__title {
+    margin-bottom: baseline(3);
+    color: var(--color-beta);
+    @include font-height(ms(0),4.5)
+}
+
+.e-grid__paragraph {
+    @include font-height(ms(-1),4.5)
 }

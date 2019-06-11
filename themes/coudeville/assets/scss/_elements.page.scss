@@ -40,20 +40,20 @@
 }
 
 @mixin light-scheme {
-    --html-background-color: hsla(var(--hue-alpha), 2.5%, 100%, .95);
+    --html-background-color: white;
     --page-background-color: var(--html-background-color);
-    --page-header-background-color: var(--html-background-color);
-    --page-header-border-color: hsla(var(--hue-alpha), 15%, 5%, .075);
     --page-heading-color: var(--color-neutral-xxx-dark);
     --page-text-color: var(--color-neutral-dark);
     // --page-text-color: var(--color-neutral-xxx-dark);
-    --page-link-color: var(--color-alpha);
-    // --page-link-color: var(--page-heading-color);
+    // --page-link-color: var(--color-alpha);
+    // --page-link-color: var(--color-beta);
+    --page-link-color: var(--page-heading-color);
     --page-meta-color: var(--color-neutral);
     --page-selection-color: var(--color-alpha);
     --scrollbar-track-color: var(--page-background-color);
     --scrollbar-thumb-color: var(--color-alpha);
     --cover-background-color: var(--color-alpha);
+    // --cover-background-color: var(--color-neutral-xxx-dark);
     --prism-text-color: var(--color-neutral-xx-light);
     --prism-comment-color: var(--color-neutral-light);
     --prism-background-color: var(--color-neutral-xxx-dark);
@@ -66,6 +66,8 @@
     --example-background-color: var(--color-neutral-xxxxx-light);
     --baseline-color: hsla(var(--hue-gamma), var(--saturation-gamma), var(--lightness-gamma), .50);
     --baseline-background: hsla(var(--hue-gamma), var(--saturation-gamma), var(--lightness-gamma), .25);
+    // --baseline-color: hsla(var(--hue-gamma), var(--saturation-gamma), var(--lightness-gamma), .75);
+    // --baseline-background: hsla(var(--hue-gamma), var(--saturation-gamma), var(--lightness-gamma), .25);
     --toggle-background-color: var(--color-neutral-xx-light);
     --toggle-background-color-checked: var(--color-alpha);
     --toggle-border-color: var(--toggle-background-color);
@@ -77,11 +79,11 @@
 }
 
 @mixin dark-scheme {
-    --html-background-color: hsla(var(--hue-alpha), 15%, 5%, .95);
-    --page-header-border-color: hsla(var(--hue-alpha), 2.5%, 95%, .1);
+    --html-background-color: var(--color-neutral-xxxx-dark);
     --page-heading-color: var(--color-neutral-xxxxx-light);
     --page-text-color: var(--color-neutral-x-light);
     --cover-background-color: var(--prism-background-color);
+    // --cover-background-color: var(--html-background-color);
     --example-background-color: var(--prism-background-color);
     --toggle-background-color: transparent;
     --toggle-border-color: var(--color-neutral);
@@ -124,7 +126,9 @@ html {
 
     // a little bit of responsive typography
 
-    // font-size: #{$root-font-size-small/16px*100%};
+    // font-size: 100%;
+
+    // font-size: #{$root-font-size/16px*90%};
 
     // @include mq(bp3) {
         font-size: #{$root-font-size/16px*100%};

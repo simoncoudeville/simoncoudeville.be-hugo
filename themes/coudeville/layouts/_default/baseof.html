@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html{{ if .Params.inverted }} class="is-inverted"{{ end }}{{ if .Params.coverBackground }} style="--cover-background-color: {{.Params.coverBackground}};"{{ end }}{{ if .Params.pageBackgroundCover }} style="--cover-background-color: var(--page-background-color);"{{ end }}>
+<html lang="en"{{ if .Params.inverted }} class="is-inverted"{{ end }}{{ if .Params.coverBackground }} style="--cover-background-color: {{.Params.coverBackground}};"{{ end }}{{ if .Params.pageBackgroundCover }} style="--cover-background-color: var(--page-background-color);"{{ end }}>
     <head>
         {{- partial "head.html" . -}}
     </head>

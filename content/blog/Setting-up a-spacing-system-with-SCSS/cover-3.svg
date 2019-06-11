@@ -1,15 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="665" height="540" viewBox="0 0 665 540">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="660" height="540" viewBox="0 0 660 540">
   <defs>
     <clipPath id="clip-cover-3">
-      <rect width="665" height="540"/>
+      <rect width="660" height="540"/>
     </clipPath>
   </defs>
   <g id="cover-3" clip-path="url(#clip-cover-3)">
-    <g id="Group_6" data-name="Group 6" transform="translate(0 222)">
-      <rect id="Rectangle_1" data-name="Rectangle 1" width="665" height="6" transform="translate(0)" fill="#fff"/>
-      <rect id="Rectangle_2" data-name="Rectangle 2" width="665" height="6" transform="translate(0 30)" fill="#fff"/>
-      <rect id="Rectangle_3" data-name="Rectangle 3" width="665" height="6" transform="translate(0 60)" fill="#fff"/>
-      <rect id="Rectangle_4" data-name="Rectangle 4" width="332.5" height="6" transform="translate(0 90)" fill="#fff"/>
+    <rect width="660" height="540" fill="#6495ed"/>
+    <g id="Group_38" data-name="Group 38">
+      <path id="Union_1" data-name="Union 1" d="M-1613,512h-6V452h6v54h120V386h-54v-6h60V512Z" transform="translate(1679 -380)" fill="#fff" opacity="0.8"/>
+      <path id="Union_2" data-name="Union 2" d="M-1613,650h-6V518h6V644h258V386h-126v-6h132V650Z" transform="translate(1679 -380)" fill="#fff" opacity="0.6"/>
+      <path id="Union_3" data-name="Union 3" d="M-1613,920h-6V656h6V914h528V386h-258v-6h264V920Z" transform="translate(1679 -380)" fill="#fff" opacity="0.4"/>
+      <g id="Path_4" data-name="Path 4" transform="translate(60)" fill="none">
+        <path d="M0,0H66V66H0Z" stroke="none"/>
+        <path d="M 6 6 L 6 60 L 60 60 L 60 6 L 6 6 M 0 0 L 66 0 L 66 66 L 0 66 L 0 0 Z" stroke="none" fill="#fff"/>
+      </g>
     </g>
   </g>
 </svg>

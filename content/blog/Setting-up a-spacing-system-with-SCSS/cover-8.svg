@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="660" height="540" viewBox="0 0 660 540">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="315" height="264" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect width="315" height="174" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect width="315" height="294" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-cover-8">
+      <rect width="660" height="540"/>
+    </clipPath>
+  </defs>
+  <g id="cover-8" clip-path="url(#clip-cover-8)">
+    <rect width="660" height="540" fill="#6495ed"/>
+    <g id="Group_8" data-name="Group 8" transform="translate(345 240)">
+      <g id="Repeat_Grid_1" data-name="Repeat Grid 1" clip-path="url(#clip-path)">
+        <rect id="Rectangle_1" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        <g transform="translate(0 30)">
+          <rect id="Rectangle_1-2" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+        <g transform="translate(0 60)">
+          <rect id="Rectangle_1-3" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+        <g transform="translate(0 90)">
+          <rect id="Rectangle_1-4" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+        <g transform="translate(0 120)">
+          <rect id="Rectangle_1-5" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+        <g transform="translate(0 150)">
+          <rect id="Rectangle_1-6" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+        <g transform="translate(0 180)">
+          <rect id="Rectangle_1-7" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+        <g transform="translate(0 210)">
+          <rect id="Rectangle_1-8" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+        <g transform="translate(0 240)">
+          <rect id="Rectangle_1-9" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+      </g>
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="157.739" height="6" transform="translate(0 270)" fill="#fff"/>
+    </g>
+    <g id="Group_34" data-name="Group 34" transform="translate(345)">
+      <g id="Repeat_Grid_1-2" data-name="Repeat Grid 1" clip-path="url(#clip-path-2)">
+        <rect id="Rectangle_1-10" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        <g transform="translate(0 30)">
+          <rect id="Rectangle_1-11" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+        <g transform="translate(0 60)">
+          <rect id="Rectangle_1-12" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+        <g transform="translate(0 90)">
+          <rect id="Rectangle_1-13" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+        <g transform="translate(0 120)">
+          <rect id="Rectangle_1-14" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+        <g transform="translate(0 150)">
+          <rect id="Rectangle_1-15" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+      </g>
+      <rect id="Rectangle_4-2" data-name="Rectangle 4" width="157.739" height="6" transform="translate(0 180)" fill="#fff"/>
+    </g>
+    <g id="Group_33" data-name="Group 33" transform="translate(0 210)">
+      <g id="Repeat_Grid_1-3" data-name="Repeat Grid 1" clip-path="url(#clip-path-3)">
+        <rect id="Rectangle_1-16" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        <g transform="translate(0 30)">
+          <rect id="Rectangle_1-17" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+        <g transform="translate(0 60)">
+          <rect id="Rectangle_1-18" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+        <g transform="translate(0 90)">
+          <rect id="Rectangle_1-19" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+        <g transform="translate(0 120)">
+          <rect id="Rectangle_1-20" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+        <g transform="translate(0 150)">
+          <rect id="Rectangle_1-21" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+        <g transform="translate(0 180)">
+          <rect id="Rectangle_1-22" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+        <g transform="translate(0 210)">
+          <rect id="Rectangle_1-23" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+        <g transform="translate(0 240)">
+          <rect id="Rectangle_1-24" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+        <g transform="translate(0 270)">
+          <rect id="Rectangle_1-25" data-name="Rectangle 1" width="660" height="6" fill="#fff"/>
+        </g>
+      </g>
+      <rect id="Rectangle_4-3" data-name="Rectangle 4" width="157.739" height="6" transform="translate(0 300)" fill="#fff"/>
+    </g>
+    <g id="Rectangle_33" data-name="Rectangle 33" fill="none" stroke="#fff" stroke-width="6">
+      <rect width="315" height="36" stroke="none"/>
+      <rect x="3" y="3" width="309" height="30" fill="none"/>
+    </g>
+    <g id="Rectangle_34" data-name="Rectangle 34" transform="translate(0 60)" fill="none" stroke="#fff" stroke-width="6">
+      <rect width="315" height="36" stroke="none"/>
+      <rect x="3" y="3" width="309" height="30" fill="none"/>
+    </g>
+    <g id="Rectangle_35" data-name="Rectangle 35" transform="translate(0 120)" fill="none" stroke="#fff" stroke-width="6">
+      <rect width="315" height="36" stroke="none"/>
+      <rect x="3" y="3" width="309" height="30" fill="none"/>
+    </g>
+  </g>
+</svg>

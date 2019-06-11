@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="540" height="540" viewBox="0 0 540 540">
+  <defs>
+    <clipPath id="clip-cover-11">
+      <rect width="540" height="540"/>
+    </clipPath>
+  </defs>
+  <g id="cover-11" clip-path="url(#clip-cover-11)">
+    <g id="Group_41" data-name="Group 41" transform="translate(0 42)">
+      <rect id="Rectangle_63" data-name="Rectangle 63" width="255" height="18" transform="translate(0 210)" fill="#fff"/>
+      <rect id="Rectangle_64" data-name="Rectangle 64" width="138" height="18" transform="translate(0 234)" fill="#fff"/>
+      <rect id="Rectangle_65" data-name="Rectangle 65" width="255" height="6" transform="translate(0 276)" fill="#fff"/>
+      <rect id="Rectangle_67" data-name="Rectangle 67" width="255" height="6" transform="translate(0 300)" fill="#fff"/>
+      <rect id="Rectangle_68" data-name="Rectangle 68" width="174" height="6" transform="translate(0 324)" fill="#fff"/>
+      <g id="Ellipse_14" data-name="Ellipse 14" transform="translate(0 126)" fill="none" stroke="#fff" stroke-width="6">
+        <circle cx="30" cy="30" r="30" stroke="none"/>
+        <circle cx="30" cy="30" r="27" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_42" data-name="Group 42" transform="translate(285 42)">
+      <rect id="Rectangle_63-2" data-name="Rectangle 63" width="231" height="18" transform="translate(0 210)" fill="#fff"/>
+      <rect id="Rectangle_65-2" data-name="Rectangle 65" width="255" height="6" transform="translate(0 252)" fill="#fff"/>
+      <rect id="Rectangle_67-2" data-name="Rectangle 67" width="255" height="6" transform="translate(0 276)" fill="#fff"/>
+      <rect id="Rectangle_68-2" data-name="Rectangle 68" width="174" height="6" transform="translate(0 300)" fill="#fff"/>
+      <g id="Ellipse_14-2" data-name="Ellipse 14" transform="translate(0 126)" fill="none" stroke="#fff" stroke-width="6">
+        <circle cx="30" cy="30" r="30" stroke="none"/>
+        <circle cx="30" cy="30" r="27" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

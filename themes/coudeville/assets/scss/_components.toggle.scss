@@ -40,7 +40,7 @@
         width: 22px;
         height: 22px;
         transform: translate(-2px,-5px);
-        transition: transform $animation-duration-alpha $animation-easing-out;
+        transition: transform $animation-duration-beta $animation-easing-out;
     }
 
     &:checked {

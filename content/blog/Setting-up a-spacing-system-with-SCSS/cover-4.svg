@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="660" height="660" viewBox="0 0 660 660">
+  <defs>
+    <clipPath id="clip-cover-4">
+      <rect width="660" height="660"/>
+    </clipPath>
+  </defs>
+  <g id="cover-4" clip-path="url(#clip-cover-4)">
+    <g id="Group_9" data-name="Group 9" transform="translate(-162 -342)">
+      <g id="Rectangle_18" data-name="Rectangle 18" transform="translate(162 342)" fill="none" stroke="#fff" stroke-width="7" opacity="0.254">
+        <rect width="660" height="660" stroke="none"/>
+        <rect x="3.5" y="3.5" width="653" height="653" fill="none"/>
+      </g>
+      <g id="Rectangle_19" data-name="Rectangle 19" transform="translate(162 672)" fill="none" stroke="#fff" stroke-width="7" opacity="0.503">
+        <rect width="330" height="330" stroke="none"/>
+        <rect x="3.5" y="3.5" width="323" height="323" fill="none"/>
+      </g>
+      <g id="Rectangle_20" data-name="Rectangle 20" transform="translate(162 837)" fill="none" stroke="#fff" stroke-width="7" opacity="0.755">
+        <rect width="165" height="165" stroke="none"/>
+        <rect x="3.5" y="3.5" width="158" height="158" fill="none"/>
+      </g>
+      <g id="Rectangle_17" data-name="Rectangle 17" transform="translate(162 919.5)" fill="none" stroke="#fff" stroke-width="7">
+        <rect width="82.5" height="82.5" stroke="none"/>
+        <rect x="3.5" y="3.5" width="75.5" height="75.5" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>
