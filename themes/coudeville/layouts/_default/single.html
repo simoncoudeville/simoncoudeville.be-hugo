@@ -28,9 +28,10 @@
     </div>
     {{ if .Params.Cover }}
     <figure class="c-cover">
-        {{ $cover := .Params.Cover }}
-        {{ $image := .Resources.GetMatch $cover }}
-        <img class="c-cover__img" src="{{ $image.Permalink }}" alt="{{ .Title }} illustration">
+        <div class="c-cover__body" {{ if .Params.CoverPattern }} style="background-image: url({{ .Params.CoverPattern }});"{{ end }}>
+            {{ $cover := .Resources.GetMatch .Params.Cover }}
+            <img class="c-cover__img" src="{{ $cover.Permalink }}" alt="{{ .Title }} illustration">
+        </div>
     </figure>
     {{ end }}
     <div class="c-content s-content">

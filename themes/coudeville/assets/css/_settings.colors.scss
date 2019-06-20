@@ -1,13 +1,6 @@
 //
 //  Settings: Colors
-//  ---
-//  The palette function works with a base color and a tint.
 //
-
-// Palette function > eg. palette(color-alpha,base)
-@function palette($palette, $tone: 'base') {
-    @return map-get(map-get($palettes, $palette), $tone);
-}
 
 // MediumSpringGreen
 // MediumSeaGreen
@@ -21,7 +14,11 @@
 // CornFlowerBlue
 // DeepSkyBlue
 // RoyalBlue
+// CornFlowerBlue
+// MediumSlateBlue
+// LightCoral
 // Aquamarine
+// MediumAquamarine
 
 // Base colors
 

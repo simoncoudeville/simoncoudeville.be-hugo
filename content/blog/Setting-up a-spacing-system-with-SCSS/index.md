@@ -1,25 +1,16 @@
 ---
 date: 2019-02-06T21:40:40+01:00
-title: Creating vertical rhythm with SCSS
+title: Creating vertical rhythm with CSS
+#title: Creating Design Components in Framer X
 description: In this article I will describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing perfect control and a predictable outcome.
 draft: false
 code: true
 cover: cover-10.svg
-#coverBackground: Gold
+coverPattern: cover-11-pattern-2.svg
+#coverBackground: CornFlowerBlue (default)
 #coverBackground: LightCoral
-#coverBackground: GoldenRod
-#coverBackground: SandyBrown
-#coverBackground: Tomato
-#coverBackground: Coral
-#coverBackground: Salmon
-#coverBackground: MediumSeaGreen
-#coverBackground: CadetBlue
-#coverBackground: RoyalBlue
-#coverBackground: DeepSkyBlue
-#coverBackground: SteelBlue
 #coverBackground: MediumSlateBlue
-#coverBackground: LightSlateGrey
-#coverBackground: Aquamarine
+#coverBackground: MediumAquamarine
 #pageBackgroundCover: true
 #inverted: true
 ---
@@ -142,6 +133,22 @@ In order to align text to a baseline grid on the web you. With this technique yo
             </p>            
         </div>
     </div>
+{{< /example  >}}
+
+## Final thoughts
+
+In order to align text to a baseline grid on the web you. With this technique you have the possibility to align text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that line-height and if the margin between the items is the same as the base line-height you these items will all align to eachother. It's simple math, really.
+
+{{< example type="baseline" title="Dropcap example" >}}
+    <p class="e-dropcap">
+        <span aria-labelledby="word--first" role="text">
+            <span aria-hidden="true">
+            <span class="e-dropcap__first-letter">D</span>rop
+            </span>
+            <span id="word--first" class="e-dropcap__first-word">Drop</span>
+        </span>
+        caps are a specific kind of initial letter, large letters that appear at the beginning of a block of text. Occasionally referred to as “drop initials” or “sunken initials,” drop caps might be intricately illustrated, or just set slightly larger than the rest of the text, but they’re always “dropped” over the side, with rest of the text flowing around them. A drop cap is often used to signify that the reader’s moved into a significant new section, or that a new chapter’s begun. Drop caps are also incredibly old, appearing throughout the history of the printed page: in illuminated monastic manuscripts, in renaissance cookbooks, and even in more contemporary texts.
+    </p>
 {{< /example  >}}
 
 ## Final thoughts

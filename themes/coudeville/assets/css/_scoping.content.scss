@@ -1,13 +1,13 @@
 .s-content {
     * + h2 {
-        margin-top: $alpha-whitespace; // Add extra margin on top
+        margin-top: var(--whitespace-default); // Add extra margin on top
     }
 
     a {
         text-decoration: underline;
     }
 
-    p {        
+    p {
         hyphens: auto;
         hyphenate-limit-chars: 6 3 3;
         hyphenate-limit-lines: 2;

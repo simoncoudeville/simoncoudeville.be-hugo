@@ -4,16 +4,6 @@
     Print stylesheet
 */
 
-// ---
-// Variables
-// ---
-
-
-
-// ---
-// Styles
-// ---
-
 @media print {
 
     // ---
@@ -22,7 +12,7 @@
 
     * {
         background: transparent !important;
-        color: palette(color-neutral,x-dark) !important;
+        color: var(--color-neutral-xxxx-dark) !important;
         box-shadow: none !important;
         text-shadow: none !important;
         filter: none !important;
@@ -42,7 +32,7 @@
 
     pre,
     blockquote {
-        border: 1px solid palette(color-neutral,light);
+        border: 1px solid var(--color-neutral);
         page-break-inside: avoid;
     }
 

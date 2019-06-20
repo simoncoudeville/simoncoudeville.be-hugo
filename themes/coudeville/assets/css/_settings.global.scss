@@ -21,10 +21,12 @@ $modularscale: (
 // Baseline settings
 // Think in pixels, let SCSS and the browser do the converting
 $baseline: 6px;
-$root-font-size: ms(0); // Modular scale size 0 = 19px
-$root-font-size-small: ms(-1); // Modular scale size -1 for mobile
+$root-font-size: round(ms(0)); // Modular scale size 0 = 19px
 $root-baseline-multiplier: 5;
-$root-line-height: $baseline * $root-baseline-multiplier;
+
+$baseline-sm: 5px;
+$root-font-size-sm: round(ms(-1)); // Modular scale size -1 for mobile
+$root-baseline-multiplier-sm: 5;
 
 // Default whitespace settings for margins and paddings between elements
 $alpha-whitespace: baseline($root-baseline-multiplier); // Default whitespace between elements e.g. paragraphs, titles
@@ -35,52 +37,14 @@ $show-baseline: false;
 // Basic font settings
 
 $alpha-font-family          : "Graphik Web", sans-serif;
-// $alpha-font-family          : "acumin-pro", sans-serif;
-// $alpha-font-family          : "Fakt Web", sans-serif;
-// $alpha-font-family          : "GT America Trial", sans-serif;
-// $alpha-font-family          : "Helvetica Neue", sans-serif;
-// $alpha-font-family          : "Lab Grotesque Web", sans-serif;
-// $alpha-font-family          : "HK Grotesk Web", sans-serif;
-// $alpha-font-family          : "Suisse Intl", sans-serif;
-// $alpha-font-family          : "GT Walsheim", sans-serif;
+// $alpha-font-family          : "Basier Circle Web", sans-serif;
 $beta-font-family           : "Graphik Web Compact", sans-serif;
-$gamma-font-family           : "Graphik Web Condensed", sans-serif;
-// $delta-font-family          : "Suisse Works", sans-serif;
-// $delta-font-family          : "Dala Floda Web", sans-serif;
-// $delta-font-family          : "Suisse Neue", sans-serif;
-// $code-font-family           : "Atlas Typewriter", sans-serif;
-// $code-font-family           : "Suisse Intl Mono", monospace;
+$gamma-font-family          : "Graphik Web Condensed", sans-serif;
 $code-font-family           : "Roboto Mono", monospace;
-// $code-font-family           : "Lab Grotesque Mono Web", monospace;
-$pixel-font-family          : "SLKSCR Web", monospace;
-$pixel-font-family          : "lores-21-serif", monospace;
-$pixel-font-family-2        : "lores-12", monospace;
 
 $alpha-font-weight          : 400;
 $beta-font-weight           : 500;
-// $beta-font-weight           : 600;
 $gamma-font-weight          : 600;
-
-// ---
-// UI
-// ---
-
-$radius                     : baseline(.5);
-$border-width               : 1px;
-$border-style               : solid;
-
-
-// ---
-// Z-indexes
-// ---
-
-$z-indexes: (
-    alpha                   : 1,
-    beta                    : 2,
-    gamma                   : 3,
-    delta                   : 4,
-    epsilon                 : 5
-) !default;
 
 // ---
 // Breakpoints
@@ -93,37 +57,6 @@ $breakpoints: (
     bp4                     : 960/16*1em,
     bp5                     : 1140/16*1em,
     bp6                     : 1440/16*1em
-) !default;
-
-// ---
-// Grid
-// ---
-
-// 1 times the $root-font-size. It's calculated in rem in _tools.spacing.scss
-$columns-gutter             : 1 !default;
-
-// Define the amount of columns in the grid
-$columns: (
-    2,
-    3,
-    4,
-    5,
-    6
-) !default;
-
-// want to use flexbox?
-$flexbox: true !default;
-
-// ---
-// Increments
-// ---
-
-$increments: (
-    alpha                   : 0,
-    beta                    : .5,
-    gamma                   : 1,
-    delta                   : 1.5,
-    epsilon                 : 2
 ) !default;
 
 // ---
