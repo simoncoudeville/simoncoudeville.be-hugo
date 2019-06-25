@@ -121,11 +121,8 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "liga", "tnum";
-    font-size: #{$root-font-size-sm};
 
     // a little bit of responsive typography
-
-    // font-size: 100%;
 
     font-size: #{$root-font-size-sm/16px*100%};
 
