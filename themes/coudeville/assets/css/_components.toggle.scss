@@ -7,7 +7,7 @@
     flex-direction: row-reverse;
     width: auto;
     align-items: center;
-    margin-bottom: $alpha-whitespace;
+    margin-bottom: var(--whitespace-default);
     // font-weight: 600;
     // margin-bottom: 0;
     // font-family: $code-font-family;

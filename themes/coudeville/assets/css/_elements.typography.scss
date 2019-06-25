@@ -64,7 +64,7 @@ h1 {
     // }
 
     @include mq(bp3) {
-        margin-bottom: $beta-whitespace;
+        margin-bottom: var(--whitespace-double);
     }
 }
 
@@ -94,11 +94,11 @@ ol {
 }
 
 figure {
-    margin: 0 0 $alpha-whitespace;
+    margin: 0 0 var(--whitespace-default);
 }
 
 blockquote {
-    margin: $alpha-whitespace;
+    margin: var(--whitespace-default);
 }
 
 pre {

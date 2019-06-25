@@ -9,7 +9,6 @@
 // ---
 
 $modularscale: (
-  // base: 20px,
   base: 19px,
   ratio: 1.125
 );
@@ -28,17 +27,9 @@ $baseline-sm: 6px;
 $root-font-size-sm: 16px; // Modular scale size -1 for mobile
 $root-baseline-multiplier-sm: 4;
 
-// Default whitespace settings for margins and paddings between elements
-$alpha-whitespace: baseline($root-baseline-multiplier); // Default whitespace between elements e.g. paragraphs, titles
-$beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace between elements e.g. between paragraphs and h2
-
-$show-baseline: false;
-
 // Basic font settings
 
 $alpha-font-family          : "Graphik Web", sans-serif;
-// $alpha-font-family          : "Matter TRIAL", sans-serif;
-// $alpha-font-family          : "Basier Circle Web", sans-serif;
 $beta-font-family           : "Graphik Web Compact", sans-serif;
 $gamma-font-family          : "Graphik Web Condensed", sans-serif;
 $code-font-family           : "Roboto Mono", monospace;
