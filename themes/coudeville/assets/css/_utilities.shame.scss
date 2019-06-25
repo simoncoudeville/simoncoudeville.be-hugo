@@ -79,10 +79,11 @@ body {
     min-height: 50vh;
     background-color: var(--cover-background-color);
     margin-bottom: var(--whitespace-default);
-    // padding: baseline(2) 0;
+    padding: baseline(var(--baseline-multiplier)) 0;
 
     @include mq(bp3) {
         margin-bottom: var(--whitespace-double);
+        padding: baseline(calc(var(--baseline-multiplier) * 2)) 0;
     }
 }
 
@@ -333,17 +334,8 @@ body {
 }
 
 .e-button--small {
-    padding: pxtorem($baseline - 1) baseline(3) pxtorem($baseline + 1);
+    padding: calc(var(--baseline) - 1px) baseline(3) calc(var(--baseline) + 1px);
     @include font-height(ms(-2),4);
-}
-
-.e-button--normal {
-    padding: pxtorem($baseline * 2 - 1) baseline(5) pxtorem($baseline * 2 + 1);
-    @include font-height(ms(-1),4);
-}
-
-.e-button--large {
-    padding: pxtorem($baseline * 3 - 1) baseline(7) pxtorem($baseline * 3 + 1);
 }
 
 .e-grid {

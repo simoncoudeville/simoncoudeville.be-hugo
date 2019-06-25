@@ -15,7 +15,7 @@
 //
 //     observer.observe(headerObserver);
 // }
-// 
+//
 // function observeIntroTitle() {
 //     var introTitle = document.querySelector('.js-intro-title');
 //     var target = document.querySelector('body');

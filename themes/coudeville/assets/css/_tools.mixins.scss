@@ -49,15 +49,8 @@
 
 // Font height mixin
 @mixin font-height($font-size,$baseline-multiplier) {
-  // font-size: $font-size; // font-size in pixels
-  // font-size: round($font-size); // font-size in rounded pixels
   font-size: pxtorem(round($font-size)); // font-size in rem
-  // font-size: calc(#{round($font-size)});
-  // line-height: $baseline-multiplier * $baseline; // line-height in pixels
-  // line-height: baseline($baseline-multiplier); // line-height in rem
-  line-height: calc(#{$baseline-multiplier} * var(--baseline)); // line-height with calc
-  // line-height: #{$baseline-multiplier * $baseline / round($font-size)}em; // line-height in em
-  // line-height: #{$baseline-multiplier * $baseline / round($font-size)}; // unitless line-height
+  line-height: calc(#{$baseline-multiplier} * var(--baseline)); // line-height with calc in rem
 }
 
 /// Mixin to customize scrollbars

@@ -121,17 +121,17 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "liga", "tnum";
-    font-size: #{$root-font-size-sm};
+    // font-size: #{$root-font-size-sm};
 
     // a little bit of responsive typography
 
-    // font-size: 100%;
+    font-size: 100%;
 
     // font-size: #{$root-font-size/16px*90%};
 
     @include mq(bp3) {
-        // font-size: #{$root-font-size/16px*100%};
-        font-size: #{$root-font-size};
+        font-size: #{$root-font-size/16px*100%};
+        // font-size: #{$root-font-size};
         // line-height: #{$root-baseline-multiplier * $baseline / round($root-font-size)};
     }
 
@@ -159,14 +159,6 @@ body {
     bottom: 0;
     left: 0;
     height: 100%;
-    background: repeating-linear-gradient(
-        to bottom,
-        transparent,
-        transparent pxtorem($baseline * $root-baseline-multiplier - 1),
-        var(--baseline-color) pxtorem($baseline * $root-baseline-multiplier)
-    );
-
-    background-size: 100% pxtorem($baseline * $root-baseline-multiplier);
     pointer-events: none;
 }
 
@@ -178,6 +170,13 @@ body {
         var(--baseline-color) pxtorem($baseline - 1),
         var(--baseline-color) pxtorem($baseline)
     );
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent calc(var(--baseline) - 1px),
+        var(--baseline-color) calc(var(--baseline) - 1px),
+        var(--baseline-color) var(--baseline)
+    );
 
-    background-size: 100% pxtorem($baseline);
+    background-size: 100% var(--baseline);
 }
