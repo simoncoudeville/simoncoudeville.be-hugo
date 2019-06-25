@@ -1,6 +1,6 @@
 ---
 date: 2019-02-06T21:40:40+01:00
-title: Creating vertical rhythm with CSS
+title: Creating vertical rhythm on the web
 #title: Creating Design Components in Framer X
 description: In this article I will describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing perfect control and a predictable outcome.
 draft: false

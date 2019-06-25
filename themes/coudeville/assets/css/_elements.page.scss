@@ -121,21 +121,17 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "liga", "tnum";
-    // font-size: #{$root-font-size-sm};
+    font-size: #{$root-font-size-sm};
 
     // a little bit of responsive typography
 
-    font-size: 100%;
+    // font-size: 100%;
 
-    // font-size: #{$root-font-size/16px*90%};
+    font-size: #{$root-font-size-sm/16px*100%};
 
     @include mq(bp3) {
         font-size: #{$root-font-size/16px*100%};
-        // font-size: #{$root-font-size};
-        // line-height: #{$root-baseline-multiplier * $baseline / round($root-font-size)};
     }
-
-
 }
 
 body {

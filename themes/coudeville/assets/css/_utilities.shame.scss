@@ -58,14 +58,14 @@ body {
     grid-row: 1;
     margin-bottom: 0;
     // font-feature-settings: "liga", "tnum";
-    @include font-height(ms(-1),$root-baseline-multiplier);
+    @include font-height(ms(-1),var(--baseline-multiplier));
 }
 
 .c-intro {
-    min-height: calc(50vh - #{baseline($root-baseline-multiplier * 5)});
+    min-height: calc(50vh - #{baseline(calc(var(--baseline-multiplier) * 5))});
 
     @include mq(bp3) {
-        min-height: calc(50vh - #{baseline($root-baseline-multiplier * 4)});
+        min-height: calc(50vh - #{baseline(calc(var(--baseline-multiplier) * 4))});
     }
 }
 
@@ -130,8 +130,8 @@ body {
 }
 
 .c-avatar {
-    width: baseline($root-baseline-multiplier * 5);
-    height: baseline($root-baseline-multiplier * 5);
+    width: baseline(calc(var(--baseline-multiplier) * 5));
+    height: baseline(calc(var(--baseline-multiplier) * 5));
     border-radius: 100%;
     overflow: hidden;
     background: linear-gradient(to bottom, var(--color-neutral-xxxx-light), var(--color-neutral-xxxxx-light) );
@@ -148,7 +148,7 @@ body {
 }
 
 .c-example {
-    padding: baseline($root-baseline-multiplier * 3) 0 var(--whitespace-default);
+    padding: baseline(calc(var(--baseline-multiplier) * 3)) 0 var(--whitespace-default);
     margin: var(--whitespace-default) 0;
     background: var(--example-background-color);
     grid-column: 1 / -1;
@@ -163,11 +163,10 @@ body {
 
 .c-example__title {
     position: relative;
-    margin-top: baseline($root-baseline-multiplier * -2);
+    margin-top: baseline(calc(var(--baseline-multiplier) * -2));
     font-weight: normal;
     color: var(--page-meta-color);
-    // @include font-height(ms(-1),$root-baseline-multiplier);
-    @include font-height(ms(-2),$root-baseline-multiplier);
+    @include font-height(ms(-2),var(--baseline-multiplier));
 }
 
 .c-example__body {
@@ -223,7 +222,7 @@ body {
 
 .c-example__toggle {
     position: relative;
-    margin-bottom: baseline($root-baseline-multiplier * -1);
+    margin-bottom: baseline(calc(var(--baseline-multiplier) * -1));
 }
 
 .e-columns {
@@ -233,7 +232,7 @@ body {
 
 .e-baseline-title {
     font-feature-settings: "ss01", "liga";
-    @include font-height(ms(8),$root-baseline-multiplier * 2);
+    @include font-height(ms(8),calc(var(--baseline-multiplier) * 2));
 }
 
 .e-baseline-paragraph {
@@ -255,7 +254,7 @@ body {
 
 .e-card__body {
     position: relative;
-    padding: baseline($root-baseline-multiplier);
+    padding: baseline(var(--baseline-multiplier));
 
     // Reset bottom margins on children to make equal paddings possible
     > *:last-child,
@@ -353,8 +352,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: baseline($root-baseline-multiplier * 2);
-    height: baseline($root-baseline-multiplier * 2);
+    width: baseline(calc(var(--baseline-multiplier) * 2));
+    height: baseline(calc(var(--baseline-multiplier) * 2));
     margin-bottom: baseline(4);
 
     &::before {
@@ -372,8 +371,8 @@ body {
 
     svg {
         position: relative;
-        width: baseline($root-baseline-multiplier);
-        height: baseline($root-baseline-multiplier);
+        width: baseline(var(--baseline-multiplier));
+        height: baseline(var(--baseline-multiplier));
         fill: var(--color-beta);
     }
 }
@@ -381,11 +380,11 @@ body {
 .e-grid__title {
     margin-bottom: baseline(3);
     color: var(--color-beta);
-    @include font-height(ms(0),4.5)
+    @include font-height(ms(0),calc(var(--baseline-multiplier) - .5));
 }
 
 .e-grid__paragraph {
-    @include font-height(ms(-1),4.5)
+    @include font-height(ms(-1),calc(var(--baseline-multiplier) - .5));
 }
 
 .e-dropcap {
@@ -398,7 +397,7 @@ body {
     font-weight: $gamma-font-weight;
     color: var(--page-heading-color);
     margin: baseline(2) baseline(2) 0 baseline(-1.2);
-    @include font-height(100px, $root-baseline-multiplier * 3);
+    @include font-height(100px, calc(var(--baseline-multiplier) * 3));
 
     &::before,
     &::after {

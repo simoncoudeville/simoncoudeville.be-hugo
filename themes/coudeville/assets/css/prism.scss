@@ -28,8 +28,7 @@ pre[class*="language-"] {
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-	@include font-height(ms(-1),$root-baseline-multiplier);
-	// @include font-height(ms(-2),$root-baseline-multiplier);
+	@include font-height(ms(-1),var(--baseline-multiplier));
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -66,10 +65,10 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 
 /* Code blocks */
 pre[class*="language-"] {
-	padding: baseline($root-baseline-multiplier);
+	padding: baseline(var(--baseline-multiplier));
 	overflow: auto;
-	margin-left: baseline($root-baseline-multiplier * -1);
-	margin-right: baseline($root-baseline-multiplier * -1);
+	margin-left: baseline(calc(var(--baseline-multiplier) * -1));
+	margin-right: baseline(calc(var(--baseline-multiplier) * -1));
 }
 
 :not(pre) > code[class*="language-"],

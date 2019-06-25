@@ -24,9 +24,9 @@ $baseline: 6px;
 $root-font-size: round(ms(0)); // Modular scale size 0 = 19px
 $root-baseline-multiplier: 5;
 
-$baseline-sm: 5px;
-$root-font-size-sm: round(ms(-1)); // Modular scale size -1 for mobile
-$root-baseline-multiplier-sm: 5;
+$baseline-sm: 6px;
+$root-font-size-sm: 16px; // Modular scale size -1 for mobile
+$root-baseline-multiplier-sm: 4;
 
 // Default whitespace settings for margins and paddings between elements
 $alpha-whitespace: baseline($root-baseline-multiplier); // Default whitespace between elements e.g. paragraphs, titles

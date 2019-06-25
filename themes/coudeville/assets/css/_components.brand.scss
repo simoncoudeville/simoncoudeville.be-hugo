@@ -16,11 +16,10 @@
     // -webkit-font-smoothing: subpixel-antialiased;
     // -moz-osx-font-smoothing: subpixel-antialiased;
     margin-bottom: $alpha-whitespace;
-    @include font-height($root-font-size,$root-baseline-multiplier);
-    // @include font-height(ms(-1),$root-baseline-multiplier);
+    @include font-height($root-font-size,var(--baseline-multiplier));
 
     @include mq(bp3) {
-        @include font-height(ms(-1),$root-baseline-multiplier);
+        @include font-height(ms(-1),var(--baseline-multiplier));
     }
 }
 

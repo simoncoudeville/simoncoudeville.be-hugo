@@ -13,8 +13,7 @@
     // font-family: $code-font-family;
     // margin: baseline(4);
     color: var(--toggle-label-color);
-    @include font-height(ms(-2),$root-baseline-multiplier);
-    // @include font-height(ms(-1),$root-baseline-multiplier);
+    @include font-height(ms(-2),var(--baseline-multiplier));
 }
 
 .c-toggle__checkbox {

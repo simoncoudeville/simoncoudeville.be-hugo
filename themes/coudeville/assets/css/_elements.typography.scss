@@ -9,7 +9,7 @@ Default markup for typographic elements
 // ---
 
 $h1-font-size: ms(7);
-$h1-baseline-multiplier: 9;
+$h1-baseline-multiplier: 8;
 $h1-font-size-large: ms(9);
 $h1-baseline-multiplier-large: 11;
 $h1-font-size-xlarge: ms(12);
@@ -17,11 +17,11 @@ $h1-baseline-multiplier-xlarge: 14;
 $h1-font-size-xxlarge: ms(12);
 $h1-baseline-multiplier-xxlarge: 15;
 $h2-font-size: ms(2);
-$h2-baseline-multiplier: $root-baseline-multiplier;
+$h2-baseline-multiplier: var(--baseline-multiplier);
 $h3-font-size: ms(0);
-$h3-baseline-multiplier: $root-baseline-multiplier;
+$h3-baseline-multiplier: var(--baseline-multiplier);
 $h4-font-size: ms(0);
-$h4-baseline-multiplier: $root-baseline-multiplier;
+$h4-baseline-multiplier: var(--baseline-multiplier);
 
 // ---
 // Styles
@@ -55,7 +55,7 @@ h1 {
 
     // Increase the font-size and line-height at a wider viewport
 
-    @include mq(bp2) {
+    @include mq(bp3) {
         @include font-height($h1-font-size-large,$h1-baseline-multiplier-large);
     }
 

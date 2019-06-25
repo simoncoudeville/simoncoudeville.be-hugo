@@ -5,7 +5,7 @@
 */
 
 .c-footer {
-    @include font-height(ms(-1),$root-baseline-multiplier);
+    @include font-height(ms(-1),var(--baseline-multiplier));
 
     @include mq(bp3) {
         display: flex;
