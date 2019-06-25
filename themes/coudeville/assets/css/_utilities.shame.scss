@@ -285,15 +285,15 @@ body {
 
 .e-profile__location {
     position: relative;
-    margin-bottom: baseline(4);
+    margin-bottom: baseline(3);
     color: var(--page-meta-color);
-    @include font-height(ms(-2),3);
+    @include font-height(ms(-2),calc(var(--baseline-multiplier) - 1));
 }
 
 .e-profile__occupation {
-    margin-bottom: baseline(4);
+    margin-bottom: baseline(3);
     color: var(--color-neutral-dark);
-    @include font-height(ms(-1),4);
+    @include font-height(ms(-1),calc(var(--baseline-multiplier) - 1));
 }
 
 .e-button {
@@ -354,7 +354,7 @@ body {
     justify-content: center;
     width: baseline(calc(var(--baseline-multiplier) * 2));
     height: baseline(calc(var(--baseline-multiplier) * 2));
-    margin-bottom: baseline(4);
+    margin-bottom: baseline(calc(var(--baseline-multiplier) - 2));
 
     &::before {
         content: '';
@@ -378,7 +378,7 @@ body {
 }
 
 .e-grid__title {
-    margin-bottom: baseline(3);
+    margin-bottom: baseline(calc(var(--baseline-multiplier) - 2));
     color: var(--color-beta);
     @include font-height(ms(0),calc(var(--baseline-multiplier) - .5));
 }
