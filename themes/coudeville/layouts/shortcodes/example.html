@@ -15,4 +15,13 @@
         </label>
     </div>
     {{ end }}
+    {{ with .Get "css" }}
+        {{ $file := resources.Get . | toCSS | postCSS }}
+        {{ $filelink := $file.Permalink }}
+
+        <link rel="stylesheet" href="{{ $filelink }}">
+
+        
+
+    {{ end }}
 </div>
