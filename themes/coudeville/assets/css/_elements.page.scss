@@ -135,7 +135,8 @@ body {
     position: relative;
     min-height: 100vh;
     background-color: var(--page-background-color);
-    @include font-height($root-font-size,var(--baseline-multiplier));
+    line-height: baseline(var(--baseline-multiplier));
+    // @include font-height($root-font-size,var(--baseline-multiplier));
 }
 
 ::selection {
