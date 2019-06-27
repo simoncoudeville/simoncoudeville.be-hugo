@@ -5,16 +5,6 @@
 */
 
 .c-about {
-    padding: var(--whitespace-default) 0 0;
-
-    @include mq(bp3) {
-        padding: var(--whitespace-double) 0 var(--whitespace-default);
-    }
-}
-
-.c-about__body {
-    grid-column: content;
-
     @include mq(bp2) {
         display: grid;
         grid-gap: var(--whitespace-default);

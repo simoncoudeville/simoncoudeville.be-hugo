@@ -43,7 +43,6 @@
     --html-background-color: var(--color-neutral-xxxx-dark);
     --page-heading-color: var(--color-neutral-xxxxx-light);
     --page-text-color: var(--color-neutral-x-light);
-    // --cover-background-color: var(--prism-background-color);
     --cover-background-color: var(--html-background-color);
     --example-background-color: var(--prism-background-color);
     --toggle-background-color: transparent;
@@ -83,14 +82,15 @@
     --color-neutral-xxx-dark: hsla(var(--hue-alpha), 10%, 10%, 1);
     --color-neutral-xxxx-dark: hsla(var(--hue-alpha), 15%, 5%, 1);
 
-    --baseline: #{$baseline-sm / round($root-font-size-sm)}rem;
-    --baseline-multiplier: #{$root-baseline-multiplier-sm};
+    --baseline: #{6px / round($root-font-size-sm)}rem;
+    --baseline-multiplier: 4;
+
     --whitespace-default: calc(var(--baseline) * var(--baseline-multiplier));
     --whitespace-double: calc(var(--baseline) * var(--baseline-multiplier) * 2);
 
     @include mq(bp3) {
-        --baseline: #{$baseline / round($root-font-size)}rem;
-        --baseline-multiplier: #{$root-baseline-multiplier};
+        --baseline: #{6px / round(ms(0))}rem;
+        --baseline-multiplier: 5;
     }
 
     @include light-scheme;
@@ -121,14 +121,13 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "liga", "tnum";
-
-    // a little bit of responsive typography
-
     font-size: #{$root-font-size-sm/16px*100%};
 
     @include mq(bp3) {
         font-size: #{$root-font-size/16px*100%};
     }
+
+
 }
 
 body {
@@ -136,41 +135,10 @@ body {
     min-height: 100vh;
     background-color: var(--page-background-color);
     line-height: baseline(var(--baseline-multiplier));
-    // @include font-height($root-font-size,var(--baseline-multiplier));
 }
 
 ::selection {
     background-color: var(--page-selection-color);
     color: white;
     text-shadow: none;
-}
-
-.c-baseline-overlay {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    pointer-events: none;
-}
-
-.c-baseline-overlay--unit {
-    background: repeating-linear-gradient(
-        to bottom,
-        transparent,
-        transparent pxtorem($baseline - 1),
-        var(--baseline-color) pxtorem($baseline - 1),
-        var(--baseline-color) pxtorem($baseline)
-    );
-    background: repeating-linear-gradient(
-        to bottom,
-        transparent,
-        transparent calc(var(--baseline) - 1px),
-        var(--baseline-color) calc(var(--baseline) - 1px),
-        var(--baseline-color) var(--baseline)
-    );
-
-    background-size: 100% var(--baseline);
 }

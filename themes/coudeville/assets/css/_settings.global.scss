@@ -17,15 +17,8 @@ $modularscale: (
 // Typography
 // ---
 
-// Baseline settings
-// Think in pixels, let SCSS and the browser do the converting
-$baseline: 6px;
 $root-font-size: round(ms(0)); // Modular scale size 0 = 19px
-$root-baseline-multiplier: 5;
-
-$baseline-sm: 6px;
 $root-font-size-sm: 16px; // Modular scale size -1 for mobile
-$root-baseline-multiplier-sm: 4;
 
 // Basic font settings
 

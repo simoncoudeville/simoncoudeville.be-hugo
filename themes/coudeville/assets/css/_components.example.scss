@@ -7,7 +7,7 @@
 
 .c-example {
     &,
-    .c-content & {
+    .c-post__row--content & {
         padding: baseline(calc(var(--baseline-multiplier) * 3)) 0 var(--whitespace-default);
         margin: var(--whitespace-default) 0;
         background: var(--example-background-color);

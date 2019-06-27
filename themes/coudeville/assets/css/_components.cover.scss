@@ -5,13 +5,16 @@
 */
 
 .c-cover {
+    grid-column: 1 / -1;
+    display: grid;
+    grid: inherit;
+    grid-gap: inherit;
+    align-self: center;
     min-height: 50vh;
     background-color: var(--cover-background-color);
-    margin-bottom: var(--whitespace-default);
     padding: baseline(var(--baseline-multiplier)) 0;
 
     @include mq(bp3) {
-        margin-bottom: var(--whitespace-double);
         padding: baseline(calc(var(--baseline-multiplier) * 2)) 0;
     }
 }

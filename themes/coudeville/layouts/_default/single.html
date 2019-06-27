@@ -1,52 +1,66 @@
 {{ define "main" }}
-<main class="c-post">
-    <header class="c-header js-header">
-        <div class="c-header__body">
-            <p class="c-header__logo c-logo">
-                <a href="/" class="c-logo__link">
-                    Simon Coudeville
-                </a>
-            </p>
-            <p class="c-header__meta js-header-meta">
-                {{ .Date.Format "January 2, 2006" }}
-            </p>
+<div class="c-post">
+    <header class="c-post__row c-post__row--header">
+        <div class="c-post__container">
+            <div class="c-header">
+                <p class="c-header__logo c-logo">
+                    <a href="/" class="c-logo__link">
+                        Simon Coudeville
+                    </a>
+                </p>
+                <p class="c-header__meta">
+                    {{ .Date.Format "January 2, 2006" }}
+                </p>
+            </div>
         </div>
     </header>
-    <div class="c-intro">
-        <h1 class="c-intro__title js-intro-title">
-            {{ .Title }}
-        </h1>
-    </div>
-    {{ if .Params.Cover }}
-    <figure class="c-cover">
-        <div class="c-cover__body" {{ if .Params.CoverPattern }} style="background-image: url({{ .Params.CoverPattern }});"{{ end }}>
-            {{ $cover := .Resources.GetMatch .Params.Cover }}
-            <img class="c-cover__img" src="{{ $cover.Permalink }}" alt="{{ .Title }} illustration">
-        </div>
-    </figure>
-    {{ end }}
-    <div class="c-content s-content">
-        <p class="c-type-intro">
-            {{ .Description }}
-        </p>
-        {{ .Content }}
-    </div>
-    <aside class="c-about">
-        <div class="c-about__body">
-            <figure class="c-avatar">
-                <img src="/img/me@2x.png" alt="Avatar">
+    <main class="c-post__row">
+        <article class="c-post__row">
+            <header class="c-post__row c-post__row--intro">
+                <div class="c-post__container">
+                    <h1 class="c-post__title">
+                        {{ .Title }}
+                    </h1>
+                </div>
+            </header>
+            {{ if .Params.Cover }}
+            <figure class="c-post__row">
+                <div class="c-cover">
+                    <div class="c-cover__body" {{ if .Params.CoverPattern }} style="background-image: url({{ .Params.CoverPattern }});"{{ end }}>
+                        {{ $cover := .Resources.GetMatch .Params.Cover }}
+                        <img class="c-cover__img" src="{{ $cover.Permalink }}" alt="{{ .Title }} illustration">
+                    </div>
+                </div>
             </figure>
-            <p>
-                Hey, I’m Simon, a designer and teacher from Belgium. Read a bit more <a href="/">about me</a>, <a href="#!">email me</a>, or follow me on <a href="">Twitter</a>.
-            </p>
+            {{ end }}
+            <div class="c-post__row c-post__row--content s-content">
+                <p class="c-type-intro">
+                    {{ .Description }}
+                </p>
+                {{ .Content }}
+            </div>
+        </article>
+    </main>
+    <aside class="c-post__row c-post__row--lg">
+        <div class="c-post__container">
+            <div class="c-about">
+                <figure class="c-avatar">
+                    <img src="/img/me@2x.png" alt="Avatar">
+                </figure>
+                <p>
+                    Hey, I’m Simon, a designer and teacher from Belgium. Read a bit more <a href="/">about me</a>, <a href="#!">email me</a>, or follow me on <a href="">Twitter</a>.
+                </p>
+            </div>
         </div>
     </aside>
-    <footer class="c-footer">
-        <div class="c-footer__body">
-            <p>
-                &copy; {{ now.Format "2006" }} Simon Coudeville
-            </p>
+    <footer class="c-post__row c-post__row--lg">
+        <div class="c-post__container">
+            <div class="c-footer">
+                <p>
+                    &copy; {{ now.Format "2006" }} Simon Coudeville
+                </p>
+            </div>
         </div>
     </footer>
-</main>
+</div>
 {{ end }}

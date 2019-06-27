@@ -5,13 +5,7 @@
 */
 
 .c-header {
-    position: relative;
-    padding: var(--whitespace-default) 0;
     margin-bottom: var(--whitespace-default);
-}
-
-.c-header__body {
-    grid-column: content;
 
     @include mq(bp3) {
         display: grid;

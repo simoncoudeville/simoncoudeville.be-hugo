@@ -7,7 +7,6 @@
 .c-logo {
     color: var(--page-heading-color);
     font-weight: $beta-font-weight;
-    margin-bottom: var(--whitespace-default);
     @include font-height($root-font-size,var(--baseline-multiplier));
 
     @include mq(bp3) {
