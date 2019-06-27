@@ -1,0 +1,65 @@
+//
+// Example: Profile card
+// ---
+// This file will be inlined
+//
+
+// Tools
+@import '../modularscale';
+@import '../tools.mixins';
+@import '../tools.functions';
+
+// Settings
+@import '../settings.colors';
+@import '../settings.global';
+
+
+.e-grid {
+    display: grid;
+    grid-column-gap: var(--whitespace-default);
+    grid-template-columns: repeat(auto-fill, minmax(calc((var(--content-max-width) / 2) - #{var(--whitespace-default)}), 1fr));
+}
+
+.e-grid__item {
+    grid-column: auto;
+}
+
+.e-grid__icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: baseline(calc(var(--baseline-multiplier) * 2));
+    height: baseline(calc(var(--baseline-multiplier) * 2));
+    margin-bottom: baseline(calc(var(--baseline-multiplier) - 2));
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: var(--color-beta);
+        border-radius: 100%;
+        opacity: .25;
+    }
+
+    svg {
+        position: relative;
+        width: baseline(var(--baseline-multiplier));
+        height: baseline(var(--baseline-multiplier));
+        fill: var(--color-beta);
+    }
+}
+
+.e-grid__title {
+    margin-bottom: baseline(calc(var(--baseline-multiplier) - 2));
+    color: var(--color-beta);
+    @include font-height(ms(0),calc(var(--baseline-multiplier) - .5));
+}
+
+.e-grid__paragraph {
+    @include font-height(ms(-1),calc(var(--baseline-multiplier) - .5));
+}

@@ -1,0 +1,19 @@
+/*
+    Components: Intro
+    ---
+    Intro section of a post
+*/
+
+.c-intro {
+    min-height: calc(50vh - #{baseline(calc(var(--baseline-multiplier) * 5))});
+
+    @include mq(bp3) {
+        min-height: calc(50vh - #{baseline(calc(var(--baseline-multiplier) * 4))});
+    }
+}
+
+.c-intro__title {
+    color: var(--page-heading-color);
+    grid-column: content;
+    align-self: flex-end;
+}

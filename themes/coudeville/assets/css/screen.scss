@@ -38,9 +38,15 @@
 /* Objects */
 
 /* Components */
+@import 'components.header';
+@import 'components.intro';
+@import 'components.cover';
 @import 'components.footer';
 @import 'components.brand';
 @import 'components.toggle';
+@import 'components.example';
+@import 'components.about';
+@import 'components.avatar';
 
 /* Scoping */
 @import 'scoping.content';

@@ -4,7 +4,7 @@
     {{ end }}
     <div class="c-example__body{{ with .Get "size" }} c-example__body--{{ . }}{{ end }}">
         <div class="c-example__content">
-            {{.Inner}}
+            {{ .Inner }}
         </div>
         <div class="c-baseline-overlay c-baseline-overlay--unit"></div>
     </div>
@@ -15,13 +15,12 @@
         </label>
     </div>
     {{ end }}
-    {{ with .Get "css" }}
-        {{ $file := resources.Get . | toCSS | postCSS }}
-        {{ $filelink := $file.Permalink }}
-
-        <link rel="stylesheet" href="{{ $filelink }}">
-
-        
-
-    {{ end }}
+    {{- with .Get "scss" -}}
+        {{- $scssfile := resources.Get . | toCSS | postCSS -}}
+        {{- $cssfile := $scssfile.RelPermalink -}}
+        {{- $url := print "public" $cssfile -}}
+        <style>
+            {{ $url | readFile | safeCSS }}
+        </style>
+    {{- end -}}
 </div>

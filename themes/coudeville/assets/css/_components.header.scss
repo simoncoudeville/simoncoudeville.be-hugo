@@ -1,0 +1,36 @@
+/*
+    Components: Header
+    ---
+    Header section of a post
+*/
+
+.c-header {
+    position: relative;
+    padding: var(--whitespace-default) 0;
+    margin-bottom: var(--whitespace-default);
+}
+
+.c-header__body {
+    grid-column: content;
+
+    @include mq(bp3) {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-column-gap: var(--whitespace-default);
+    }
+}
+
+.c-header__logo {
+    margin-bottom: 0;
+    grid-row: 1;
+}
+
+.c-header__meta {
+    position: relative;
+    color: var(--page-meta-color);
+    grid-column: 2;
+    grid-row: 1;
+    margin-bottom: 0;
+    font-feature-settings: "liga", "tnum";
+    @include font-height(ms(-1),var(--baseline-multiplier));
+}

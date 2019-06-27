@@ -5,36 +5,15 @@
 */
 
 .c-footer {
+    color: var(--page-meta-color);
+    padding: var(--whitespace-default) 0 0;
     @include font-height(ms(-1),var(--baseline-multiplier));
 
     @include mq(bp3) {
-        display: flex;
-        justify-content: space-between;
+        padding: var(--whitespace-double) 0 0;
     }
 }
 
-    .c-footer__item {
-        & + & {
-            margin-left: baseline(4);
-        }
-    }
-
-.c-footer-links {
-    @include mq(bp1) {
-        display: flex;
-        flex-wrap: wrap;
-    }
+.c-footer__body {
+    grid-column: content;
 }
-
-    .c-footer-links__item {
-        & + & {
-            margin-left: baseline(4);
-        }
-    }
-
-    .c-footer-links__link {
-        &,
-        &:hover {
-            text-decoration: none;
-        }
-    }

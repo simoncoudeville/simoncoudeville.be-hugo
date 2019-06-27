@@ -1,0 +1,110 @@
+//
+// Example: 2 column features
+// ---
+// This file will be inlined
+//
+
+// Tools
+@import '../modularscale';
+@import '../tools.mixins';
+@import '../tools.functions';
+
+// Settings
+@import '../settings.colors';
+@import '../settings.global';
+
+.e-card {
+    position: relative;
+    margin: 0 auto;
+    max-width: 16em;
+    background-color: white;
+    border-radius: baseline(1);
+    box-shadow: 0 0 0 1px rgba(black, 0.05), 0 2px 4px rgba(black,.075);
+    margin-bottom: var(--whitespace-default);
+    overflow: hidden;
+}
+
+.e-card__body {
+    position: relative;
+    padding: baseline(var(--baseline-multiplier));
+
+    // Reset bottom margins on children to make equal paddings possible
+    > *:last-child,
+    > *:last-child > *:last-child,
+    > *:last-child > *:last-child > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.e-profile {
+    text-align: center;
+}
+
+.e-profile__avatar {
+    display: block;
+    width: baseline(10);
+    margin: 0 auto;
+    border-radius: 100%;
+    margin-bottom: baseline(1);
+    // opacity: .75;
+    mix-blend-mode: multiply;
+}
+
+.e-profile__name {
+    margin-bottom: 0;
+    color: var(--color-neutral-xx-dark);
+}
+
+.e-profile__location {
+    position: relative;
+    margin-bottom: baseline(3);
+    color: var(--page-meta-color);
+    @include font-height(ms(-2),calc(var(--baseline-multiplier) - 1));
+}
+
+.e-profile__occupation {
+    margin-bottom: baseline(3);
+    color: var(--color-neutral-dark);
+    @include font-height(ms(-1),calc(var(--baseline-multiplier) - 1));
+}
+
+.e-button {
+    font-family: $alpha-font-family;
+    text-decoration: none;
+    display: inline-block;
+    border: 0;
+    text-decoration: none;
+    background-color: $color-beta;
+    color: #fff;
+    font-weight: 600;
+    border-radius: baseline(.5);
+    transition: all .1s ease-in;
+
+    &:hover {
+        background-color: lighten($color-beta,5);
+        color: #fff;
+    }
+
+    &:focus {
+        outline: none;
+        background-color: $color-beta;
+        box-shadow: inset 0 0 0 1px white, 0 0 0 3px rgba($color-beta,0.375);
+        color: #fff;
+    }
+
+    &:active {
+        background-color: darken($color-beta,5);
+        box-shadow: none;
+        color: #fff;
+    }
+
+    .s-content & {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.e-button--small {
+    padding: calc(var(--baseline) - 1px) baseline(3) calc(var(--baseline) + 1px);
+    @include font-height(ms(-2),4);
+}

@@ -1,13 +1,7 @@
 {{ define "main" }}
-
+<main class="c-post">
     <header class="c-header js-header">
-        <!-- <span class="c-header__observer js-header-observer"></span> -->
         <div class="c-header__body">
-            <!-- <p class="c-header__back">
-                <a href="/" class="c-back-link">
-                    <svg class="c-back-link__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-labelledby="arrowLeftIconTitle arrowLeftIconDesc" fill="none"> <title id="arrowLeftIconTitle">Arrow Left</title> <desc id="arrowLeftIconDesc">Icon of an arrow pointing left</desc> <path d="M9 6l-6 6 6 6"/> <path d="M21 12H4"/> <path stroke-linecap="round" d="M3 12h1"/> </svg>
-                </a>
-            </p> -->
             <p class="c-header__logo c-logo">
                 <a href="/" class="c-logo__link">
                     Simon Coudeville
@@ -15,10 +9,7 @@
             </p>
             <p class="c-header__meta js-header-meta">
                 {{ .Date.Format "January 2, 2006" }}
-            </p>
-            <!-- <p class="c-header__title js-header-title">
-                {{ .Title }}
-            </p> -->
+            </p>            
         </div>
     </header>
     <div class="c-intro">
@@ -34,23 +25,28 @@
         </div>
     </figure>
     {{ end }}
-    <div class="c-content s-content">
+    <div class="c-content">
         <p class="c-type-intro">
             {{ .Description }}
         </p>
         {{ .Content }}
     </div>
     <aside class="c-about">
-        <figure class="c-avatar">
-            <img src="/img/me@2x.png" alt="Avatar">
-        </figure>
-        <p>
-            Hey, I’m Simon, a designer and teacher from Belgium. Read a bit more <a href="/">about me</a>, <a href="#!">email me</a>, or follow me on <a href="">Twitter</a>.
-        </p>
+        <div class="c-about__body">
+            <figure class="c-avatar">
+                <img src="/img/me@2x.png" alt="Avatar">
+            </figure>
+            <p>
+                Hey, I’m Simon, a designer and teacher from Belgium. Read a bit more <a href="/">about me</a>, <a href="#!">email me</a>, or follow me on <a href="">Twitter</a>.
+            </p>
+        </div>
     </aside>
     <footer class="c-footer">
-        <p>
-            &copy; {{ now.Format "2006" }} Simon Coudeville
-        </p>
+        <div class="c-footer__body">
+            <p>
+                &copy; {{ now.Format "2006" }} Simon Coudeville
+            </p>
+        </div>
     </footer>
+</main>
 {{ end }}
