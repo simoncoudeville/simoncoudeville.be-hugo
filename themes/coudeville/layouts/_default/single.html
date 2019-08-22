@@ -24,11 +24,11 @@
                 </div>
             </header>
             {{ if .Params.Cover }}
-            <figure class="c-post__row">
+            <figure class="c-post__row" role="figure">
                 <div class="c-cover">
                     <div class="c-cover__body" {{ if .Params.CoverPattern }} style="background-image: url({{ .Params.CoverPattern }});"{{ end }}>
                         {{ $cover := .Resources.GetMatch .Params.Cover }}
-                        <img class="c-cover__img" src="{{ $cover.Permalink }}" alt="{{ .Title }} illustration">
+                        <img class="c-cover__img" src="{{ $cover.Permalink }}" alt="Illustration for {{ .Title }}">
                     </div>
                 </div>
             </figure>
