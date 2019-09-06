@@ -20,10 +20,13 @@
 
 .e-baseline-title {
     // font-feature-settings: "ss01", "liga";
+    font-family: $beta-font-family;
     @include font-height(ms(8),calc(var(--baseline-multiplier) * 2));
 }
 
 .e-baseline-paragraph {
+    // text-align: justify;
+
     &:last-child {
         margin-bottom: 0;
     }

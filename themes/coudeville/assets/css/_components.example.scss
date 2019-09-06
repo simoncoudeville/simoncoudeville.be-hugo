@@ -33,7 +33,11 @@
     margin-top: baseline(calc(var(--baseline-multiplier) * -2));
     font-weight: normal;
     color: var(--page-meta-color);
-    @include font-height(ms(-1),var(--baseline-multiplier));
+    @include font-height(ms(1),var(--baseline-multiplier));
+
+    // @include mq(bp3) {
+    //     @include font-height(ms(0), var(--baseline-multiplier));
+    // }
 }
 
 .c-example__body {

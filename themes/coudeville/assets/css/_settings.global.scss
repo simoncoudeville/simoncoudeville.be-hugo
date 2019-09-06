@@ -9,20 +9,20 @@
 // ---
 
 $modularscale: (
-  base: 19px,
-  ratio: 1.125
+  base: 16px 19px 21px,
+  ratio: 1.5
 );
 
 // ---
 // Typography
 // ---
 
-$root-font-size: round(ms(1)); // Modular scale size 0 = 19px
-$root-font-size-sm: 16px; // Modular scale size -1 for mobile
+$root-font-size: round(ms(2)); // Modular scale size 0 = 19px
+$root-font-size-sm: round(ms(0)); // Modular scale size -1 for mobile
 
 // Basic font settings
 
-$alpha-font-family          : "Graphik Web", sans-serif;
+// $alpha-font-family          : "Graphik Web", sans-serif;
 // $alpha-font-family          : "Untitled Sans Test", sans-serif;
 // $alpha-font-family          : "Suisse Intl", sans-serif;
 // $alpha-font-family          : "Inter", sans-serif;

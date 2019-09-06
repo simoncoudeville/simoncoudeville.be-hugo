@@ -6,14 +6,11 @@
 
 .c-logo {
     color: var(--page-intro-color);
-    // font-weight: $alpha-font-weight;
     font-weight: $beta-font-weight;
-    // -webkit-font-smoothing: auto;
-    // -moz-osx-font-smoothing: auto;
-    @include font-height($root-font-size,var(--baseline-multiplier));
+    @include font-height(ms(2),var(--baseline-multiplier));
 
     @include mq(bp3) {
-        @include font-height(ms(0),var(--baseline-multiplier));
+        @include font-height(ms(1),var(--baseline-multiplier));
     }
 }
 

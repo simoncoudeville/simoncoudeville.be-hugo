@@ -7,11 +7,15 @@
     align-items: center;
     margin-bottom: var(--whitespace-default);
     color: var(--toggle-label-color);
-    @include font-height(ms(-1),var(--baseline-multiplier));
+    @include font-height(ms(1),var(--baseline-multiplier));
+
+    @include mq(bp3) {
+        @include font-height(ms(0), var(--baseline-multiplier));
+    }
 }
 
 .c-toggle__checkbox {
-    margin: 0 0 0 baseline(4);
+    margin: 0 0 0 1rem;
     appearance: none;
     border-radius: 20px;
     width: 38px;

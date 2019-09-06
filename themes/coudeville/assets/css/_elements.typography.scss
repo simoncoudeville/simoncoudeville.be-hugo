@@ -47,14 +47,13 @@ h1 {
 }
 
 h2 {
-    // font-weight: $alpha-font-weight;
     font-weight: $beta-font-weight;
     margin-bottom: var(--whitespace-default);
-    @include font-height(ms(4),5);
+    @include font-height(ms(5),5);
 }
 
 h3 {
-    font-weight: $beta-font-weight;
+    font-weight: $gamma-font-weight;
     margin-bottom: var(--whitespace-default);
     @include font-height(ms(2),var(--baseline-multiplier));
 }

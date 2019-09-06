@@ -7,7 +7,7 @@
 .c-about {
     @include mq(bp2) {
         display: grid;
-        grid-gap: var(--whitespace-default);
+        grid-gap: var(--whitespace-double);
         grid-template-columns: auto 1fr;
         align-items: center;
     }

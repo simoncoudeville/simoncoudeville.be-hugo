@@ -28,7 +28,11 @@ pre[class*="language-"] {
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-	@include font-height(ms(-1),var(--baseline-multiplier));
+	@include font-height(ms(1),var(--baseline-multiplier));
+
+    @include mq(bp3) {
+        @include font-height(ms(0), 3.5);
+    }
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;

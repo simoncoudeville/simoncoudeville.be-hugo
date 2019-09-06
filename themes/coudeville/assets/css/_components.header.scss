@@ -26,10 +26,9 @@
     grid-column: 2;
     grid-row: 1;
     margin-bottom: 0;
-    // font-feature-settings: "liga", "tnum";
-    @include font-height($root-font-size,var(--baseline-multiplier));
+    @include font-height(ms(2),var(--baseline-multiplier));
 
     @include mq(bp3) {
-        @include font-height(ms(0),var(--baseline-multiplier));
+        @include font-height(ms(1),var(--baseline-multiplier));
     }
 }
