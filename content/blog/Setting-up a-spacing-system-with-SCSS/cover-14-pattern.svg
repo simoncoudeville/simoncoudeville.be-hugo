@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="660" height="546" viewBox="0 0 660 546">
+  <defs>
+    <clipPath id="clip-cover-14">
+      <rect width="660" height="546"/>
+    </clipPath>
+  </defs>
+  <g id="cover-14" clip-path="url(#clip-cover-14)">
+    <rect width="660" height="546" fill="#6495ed"/>
+    <line id="Line_1" data-name="Line 1" x2="680" transform="translate(-9 3)" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="6"/>
+    <line id="Line_2" data-name="Line 2" x2="680" transform="translate(-9 63)" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="6"/>
+    <line id="Line_3" data-name="Line 3" x2="680" transform="translate(-9 123)" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="6"/>
+    <line id="Line_4" data-name="Line 4" x2="680" transform="translate(-9 183)" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="6"/>
+    <line id="Line_5" data-name="Line 5" x2="680" transform="translate(-9 243)" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="6"/>
+    <line id="Line_6" data-name="Line 6" x2="680" transform="translate(-9 303)" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="6"/>
+    <line id="Line_7" data-name="Line 7" x2="680" transform="translate(-9 363)" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="6"/>
+    <line id="Line_8" data-name="Line 8" x2="680" transform="translate(-9 423)" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="6"/>
+    <line id="Line_9" data-name="Line 9" x2="680" transform="translate(-9 483)" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="6"/>
+    <line id="Line_10" data-name="Line 10" x2="680" transform="translate(-9 543)" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="6"/>
+  </g>
+</svg>

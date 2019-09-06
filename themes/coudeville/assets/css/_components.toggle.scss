@@ -6,12 +6,8 @@
     width: auto;
     align-items: center;
     margin-bottom: var(--whitespace-default);
-    // font-weight: 600;
-    // margin-bottom: 0;
-    // font-family: $code-font-family;
-    // margin: baseline(4);
     color: var(--toggle-label-color);
-    @include font-height(ms(-2),var(--baseline-multiplier));
+    @include font-height(ms(-1),var(--baseline-multiplier));
 }
 
 .c-toggle__checkbox {
@@ -50,8 +46,8 @@
     &:focus,
     &:active {
         &:after {
-            border-color: var(--toggle-switch-border-color-checked);
-            box-shadow: var(--toggle-switch-shadow-checked);
+            border-color: var(--toggle-switch-border-color-active);
+            box-shadow: var(--toggle-switch-shadow-active);
         }
     }
 }

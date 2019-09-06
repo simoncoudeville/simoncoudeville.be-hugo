@@ -8,15 +8,13 @@ Default markup for typographic elements
 // Variables
 // ---
 
-$h1-font-size: ms(8);
+$h1-font-size: ms(7);
 $h1-baseline-multiplier: 8;
-$h1-font-size-large: ms(9);
-$h1-baseline-multiplier-large: 11;
 $h2-font-size: ms(2);
 $h2-baseline-multiplier: var(--baseline-multiplier);
-$h3-font-size: ms(0);
+$h3-font-size: $root-font-size;
 $h3-baseline-multiplier: var(--baseline-multiplier);
-$h4-font-size: ms(0);
+$h4-font-size: $root-font-size;
 $h4-baseline-multiplier: var(--baseline-multiplier);
 
 // ---
@@ -42,34 +40,27 @@ ul {
 }
 
 h1 {
-    font-weight: $beta-font-weight;
-    font-feature-settings: "ss01", "liga";
-    letter-spacing: -0.01em;
+    font-weight: $alpha-font-weight;
+    font-family: $beta-font-family;
     margin-bottom: var(--whitespace-default);
-    @include font-height($h1-font-size,$h1-baseline-multiplier); // Font size calculated by the font-height mixin
-
-    // Increase the font-size and line-height at a wider viewport
-
-    @include mq(bp3) {
-        @include font-height($h1-font-size-large,$h1-baseline-multiplier-large);
-    }
+    @include font-height(ms(9),9);
 }
 
 h2 {
+    // font-weight: $alpha-font-weight;
     font-weight: $beta-font-weight;
-    font-feature-settings: "ss01", "liga";
     margin-bottom: var(--whitespace-default);
-    @include font-height($h2-font-size,$h2-baseline-multiplier);
+    @include font-height(ms(4),5);
 }
 
 h3 {
     font-weight: $beta-font-weight;
     margin-bottom: var(--whitespace-default);
-    @include font-height($h3-font-size, $h3-baseline-multiplier);
+    @include font-height(ms(2),var(--baseline-multiplier));
 }
 
 h4 {
-    font-weight: $beta-font-weight;
+    font-weight: $alpha-font-weight;
     margin-bottom: var(--whitespace-default);
     @include font-height($h4-font-size,$h4-baseline-multiplier);
 }

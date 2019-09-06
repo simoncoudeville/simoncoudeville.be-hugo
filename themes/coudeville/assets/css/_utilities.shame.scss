@@ -9,7 +9,7 @@ div:empty {
 }
 
 .c-post {
-    --content-max-width: calc(var(--baseline) * var(--baseline-multiplier) * 22);
+    --content-max-width: 35em;
     --whitespace: var(--whitespace-default);
     display: grid;
     grid: ". content ." / minmax(var(--whitespace),1fr) minmax(0, var(--content-max-width)) minmax(var(--whitespace),1fr);
@@ -24,12 +24,19 @@ div:empty {
     display: grid;
     grid: inherit;
     grid-gap: inherit;
+    // padding-top: var(--whitespace-default);
 
     & + & {
         @include mq(bp3) {
             margin-top: var(--whitespace-default);
         }
     }
+}
+
+.c-post__row--lg {
+    // @include mq(bp3) {
+    //     padding-top: var(--whitespace-double);
+    // }
 }
 
 .c-post__row--lg {
@@ -41,31 +48,19 @@ div:empty {
             margin-top: calc(var(--whitespace-double));
         }
 
-        // @include mq(bp4) {
-        //     margin-top: calc(var(--whitespace-double) + var(--whitespace-default));
-        // }
+        @include mq(bp4) {
+            margin-top: calc(var(--whitespace-double) + var(--whitespace-default));
+        }
     }
 }
 
 .c-post__row--intro {
-    min-height: calc(50vh - #{baseline(calc(var(--baseline-multiplier) * 4))});
+    min-height: calc(50vh - #{baseline(calc(var(--baseline-multiplier) * 3))});
     align-items: flex-end;
-    background-color: var(--cover-background-color);
-    margin-bottom: var(--whitespace-default);
-
-    @include mq(bp3) {
-        min-height: calc(50vh - #{baseline(calc(var(--baseline-multiplier) * 3))});
-        padding-bottom: var(--whitespace-default);
-    }
 }
 
 .c-post__row--header {
     padding-top: var(--whitespace-default);
-    background-color: var(--cover-background-color);
-}
-
-main.c-post__row {
-    margin-top: 0 !important;
 }
 
 .c-post__row--content {
@@ -83,4 +78,8 @@ main.c-post__row {
 .c-post__title {
     color: var(--page-intro-color);
     // color: #fff;
+}
+
+.u-pt-clear {
+    padding-top: 0;
 }

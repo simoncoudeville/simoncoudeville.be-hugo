@@ -17,15 +17,26 @@ $modularscale: (
 // Typography
 // ---
 
-$root-font-size: round(ms(0)); // Modular scale size 0 = 19px
+$root-font-size: round(ms(1)); // Modular scale size 0 = 19px
 $root-font-size-sm: 16px; // Modular scale size -1 for mobile
 
 // Basic font settings
 
 $alpha-font-family          : "Graphik Web", sans-serif;
-$beta-font-family           : "Graphik Web Compact", sans-serif;
-$gamma-font-family          : "Graphik Web Condensed", sans-serif;
+// $alpha-font-family          : "Untitled Sans Test", sans-serif;
+// $alpha-font-family          : "Suisse Intl", sans-serif;
+// $alpha-font-family          : "Inter", sans-serif;
+// $alpha-font-family          : "Fakt Web", sans-serif;
+// $alpha-font-family          : "Basis Grotesque Trial", sans-serif;
+// $alpha-font-family          : "Beausite Classic Trial", sans-serif;
+// $alpha-font-family          : "neue-haas-unica", sans-serif;
+$alpha-font-family          : "acumin-pro", sans-serif;
+$beta-font-family           : "acumin-pro-wide", sans-serif;
+// $alpha-font-family          : "Adapter PE Text TRIAL", sans-serif;
+// $alpha-font-family          : "Modern ERA TRIAL", sans-serif;
 $code-font-family           : "Roboto Mono", monospace;
+// $code-font-family           : "Basis Grotesque Mono Trial", monospace;
+// $code-font-family           : "Modern ERA Mono TRIAL", monospace;
 
 $alpha-font-weight          : 400;
 $beta-font-weight           : 500;

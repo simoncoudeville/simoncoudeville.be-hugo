@@ -19,7 +19,7 @@
 }
 
 .e-baseline-title {
-    font-feature-settings: "ss01", "liga";
+    // font-feature-settings: "ss01", "liga";
     @include font-height(ms(8),calc(var(--baseline-multiplier) * 2));
 }
 

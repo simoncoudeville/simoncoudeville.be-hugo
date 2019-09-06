@@ -9,9 +9,9 @@
 @mixin light-scheme {
     --html-background-color: white;
     --page-background-color: var(--html-background-color);
-    --page-heading-color: var(--color-neutral-xxx-dark);
-    --page-intro-color: white;
-    --page-text-color: var(--color-neutral-dark);
+    --page-heading-color: var(--color-neutral-xxxx-dark);
+    --page-intro-color: var(--page-heading-color);
+    --page-text-color: var(--color-neutral-xxx-dark);
     --page-link-color: var(--page-heading-color);
     --page-meta-color: var(--color-neutral);
     --page-selection-color: var(--color-alpha);
@@ -34,9 +34,9 @@
     --toggle-background-color-checked: var(--color-alpha);
     --toggle-border-color: var(--toggle-background-color);
     --toggle-border-color-checked: var(--toggle-background-color-checked);
-    --toggle-switch-border-color-checked: hsl(var(--hue-alpha),var(--saturation-alpha),var(--lightness-alpha));
+    --toggle-switch-border-color-active: hsl(var(--hue-alpha),var(--saturation-alpha),var(--lightness-alpha));
     --toggle-switch-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    --toggle-switch-shadow-checked: 0 1px 3px rgba(0, 0, 0, 0.2), 0 0 0 3px hsla(var(--hue-alpha),var(--saturation-alpha),var(--lightness-alpha),.25);
+    --toggle-switch-shadow-active: 0 1px 3px rgba(0, 0, 0, 0.2), 0 0 0 3px hsla(var(--hue-alpha),var(--saturation-alpha),var(--lightness-alpha),.25);
     --toggle-label-color: var(--color-neutral);
 }
 
@@ -77,9 +77,9 @@
     --color-neutral-x-light: hsla(var(--hue-alpha), 2.5%, 75%, 1);
     --color-neutral-light: hsla(var(--hue-alpha), 2.5%, 62.5%, 1);
     --color-neutral: hsla(var(--hue-alpha), 2.5%, 50%, 1);
-    --color-neutral-dark: hsla(var(--hue-alpha), 5%, 35%, 1);
-    --color-neutral-x-dark: hsla(var(--hue-alpha), 7.5%, 25%, 1);
-    --color-neutral-xx-dark: hsla(var(--hue-alpha), 7.5%, 15%, 1);
+    --color-neutral-dark: hsla(var(--hue-alpha), 5%, 40%, 1);
+    --color-neutral-x-dark: hsla(var(--hue-alpha), 7.5%, 30%, 1);
+    --color-neutral-xx-dark: hsla(var(--hue-alpha), 7.5%, 20%, 1);
     --color-neutral-xxx-dark: hsla(var(--hue-alpha), 10%, 10%, 1);
     --color-neutral-xxxx-dark: hsla(var(--hue-alpha), 15%, 5%, 1);
 
@@ -90,8 +90,8 @@
     --whitespace-double: calc(var(--baseline) * var(--baseline-multiplier) * 2);
 
     @include mq(bp3) {
-        --baseline: #{6px / round(ms(0))}rem;
-        --baseline-multiplier: 5;
+        --baseline: #{8px / $root-font-size}rem;
+        --baseline-multiplier: 4;
     }
 
     @include light-scheme;
@@ -121,7 +121,9 @@ html {
     color: var(--page-text-color);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: "liga", "tnum";
+    // font-feature-settings: "liga", "tnum";
+    font-feature-settings: "zero";
+    // font-kerning: normal;
     font-size: #{$root-font-size-sm/16px*100%};
 
     @include mq(bp3) {

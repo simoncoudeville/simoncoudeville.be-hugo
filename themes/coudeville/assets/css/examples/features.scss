@@ -52,31 +52,30 @@
 
 .e-profile__name {
     margin-bottom: 0;
-    color: var(--color-neutral-xx-dark);
+    font-weight: $beta-font-weight;
+    @include font-height(ms(0),calc(var(--baseline-multiplier) - 1));
 }
 
 .e-profile__location {
     position: relative;
     margin-bottom: baseline(3);
     color: var(--page-meta-color);
-    @include font-height(ms(-2),calc(var(--baseline-multiplier) - 1));
+    @include font-height(ms(-1),calc(var(--baseline-multiplier) - 1));
 }
 
 .e-profile__occupation {
     margin-bottom: baseline(3);
-    color: var(--color-neutral-dark);
-    @include font-height(ms(-1),calc(var(--baseline-multiplier) - 1));
+    @include font-height(ms(0),calc(var(--baseline-multiplier) - 1));
 }
 
 .e-button {
-    font-family: $alpha-font-family;
     text-decoration: none;
+    font-weight: $beta-font-weight;
     display: inline-block;
     border: 0;
     text-decoration: none;
     background-color: $color-beta;
     color: #fff;
-    font-weight: 600;
     border-radius: baseline(.5);
     transition: all .1s ease-in;
 
@@ -106,5 +105,5 @@
 
 .e-button--small {
     padding: calc(var(--baseline) - 1px) baseline(3) calc(var(--baseline) + 1px);
-    @include font-height(ms(-2),4);
+    @include font-height(ms(-1),4);
 }

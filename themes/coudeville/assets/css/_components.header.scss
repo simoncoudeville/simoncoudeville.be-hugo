@@ -6,7 +6,6 @@
 
 .c-header {
     margin-bottom: var(--whitespace-default);
-    color: #fff;
 
     @include mq(bp3) {
         display: grid;
@@ -22,11 +21,15 @@
 
 .c-header__meta {
     position: relative;
-    // color: var(--page-meta-color);
-    opacity: .75;
+    color: var(--page-meta-color);
+    // opacity: .6;
     grid-column: 2;
     grid-row: 1;
     margin-bottom: 0;
-    font-feature-settings: "liga", "tnum";
-    @include font-height(ms(-1),var(--baseline-multiplier));
+    // font-feature-settings: "liga", "tnum";
+    @include font-height($root-font-size,var(--baseline-multiplier));
+
+    @include mq(bp3) {
+        @include font-height(ms(0),var(--baseline-multiplier));
+    }
 }

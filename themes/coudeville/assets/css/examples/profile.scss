@@ -57,9 +57,10 @@
 .e-grid__title {
     margin-bottom: baseline(calc(var(--baseline-multiplier) - 2));
     color: var(--color-beta);
-    @include font-height(ms(0),calc(var(--baseline-multiplier) - .5));
+    font-weight: $beta-font-weight;
+    @include font-height(ms(1),calc(var(--baseline-multiplier) - .5));
 }
 
 .e-grid__paragraph {
-    @include font-height(ms(-1),calc(var(--baseline-multiplier) - .5));
+    @include font-height(ms(0),calc(var(--baseline-multiplier) - .5));
 }

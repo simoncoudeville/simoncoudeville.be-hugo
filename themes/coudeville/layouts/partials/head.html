@@ -7,6 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="{{ .Params.Description }}">
 <meta name="author" content="{{ .Site.Params.Author }}">
+
+<link rel="stylesheet" href="https://use.typekit.net/iac8gyg.css">
+
 {{ if .Site.IsServer }}
     {{ $css := resources.Get "css/screen.scss" | toCSS | postCSS }}
     <link rel="stylesheet" href="{{ $css.Permalink }}">
