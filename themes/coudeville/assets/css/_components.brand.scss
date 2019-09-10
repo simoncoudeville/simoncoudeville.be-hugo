@@ -5,7 +5,7 @@
 */
 
 .c-logo {
-    color: var(--page-intro-color);
+    color: var(--intro-color);
     font-weight: $beta-font-weight;
     @include font-height(ms(2),var(--baseline-multiplier));
 
@@ -30,3 +30,4 @@
         text-decoration: underline;
     }
 }
+

@@ -1,6 +1,7 @@
 {{ define "main" }}
 <div class="c-post">
-    <header class="c-post__row c-post__row--header">
+    <div class="c-post__header-observer js-header-observer"></div>
+    <header class="c-post__row c-post__row--header js-header">
         <div class="c-post__container">
             <div class="c-header">
                 <p class="c-header__logo c-logo">
@@ -11,14 +12,17 @@
                 <p class="c-header__meta">
                     {{ .Date.Format "January 2, 2006" }}
                 </p>
+                <p class="c-header__title">
+                    {{ .Title }}
+                </p>
             </div>
         </div>
     </header>
-    <main class="c-post__row u-pt-clear">
-        <article class="c-post__row u-pt-clear">
+    <main class="c-post__row c-post__row--main u-pt-clear">
+        <article class="c-post__row">
             <header class="c-post__row c-post__row--intro">
                 <div class="c-post__container">
-                    <h1 class="c-post__title">
+                    <h1 class="c-post__title js-title">
                         {{ .Title }}
                     </h1>
                 </div>

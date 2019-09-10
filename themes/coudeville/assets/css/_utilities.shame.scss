@@ -4,9 +4,9 @@
     Hacks and quick fixes
 */
 
-div:empty {
-   display: none;
-}
+// div:empty {
+//    display: none;
+// }
 
 .c-post {
     --content-max-width: 36em;
@@ -26,9 +26,7 @@ div:empty {
     grid-gap: inherit;
 
     & + & {
-        // @include mq(bp3) {
-            margin-top: var(--whitespace-default);
-        // }
+        margin-top: var(--whitespace-default);
     }
 }
 
@@ -41,19 +39,62 @@ div:empty {
             margin-top: calc(var(--whitespace-double));
         }
 
-        @include mq(bp4) {
-            margin-top: calc(var(--whitespace-double) + var(--whitespace-default));
-        }
+        // @include mq(bp4) {
+        //     margin-top: calc(var(--whitespace-double) + var(--whitespace-default));
+        // }
     }
 }
 
 .c-post__row--intro {
     min-height: calc(50vh - #{baseline(calc(var(--baseline-multiplier) * 3))});
     align-items: flex-end;
+    background-color: var(--intro-background-color);
+
+    // @include mq(bp3) {
+    //     padding-bottom: var(--whitespace-default);
+    // }
 }
 
 .c-post__row--header {
     padding-top: var(--whitespace-default);
+    background-color: var(--intro-background-color);
+    position: relative;
+    will-change: box-shadow;
+    transition: box-shadow $animation-duration-alpha;
+    z-index: 20;
+}
+
+@include mq(bp3) {
+    .c-post__header-observer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        opacity: 0;
+        display: block;
+    }
+
+    .c-post__row--header {
+        position: sticky;
+        top: 0;
+
+        &.is-sticky {
+            // box-shadow: 0 0 0 1px rgba(black,.05), 0 0 20px rgba(black,.1);
+            // box-shadow: 0 0 20px rgba(black,.1);
+            // box-shadow: 0 0 var(--baseline) rgba(black,.1);
+            // box-shadow: 0 0 0 1px rgba(black, 0.05), 0 0 var(--baseline) rgba(black,.1);
+            // box-shadow: 0 0 0 1px rgba(black,.1), 0 0 50px rgba(black,.1);
+            // box-shadow: 0 0 0 1px rgba(black,.1);
+            // box-shadow: 0 0 2px 2px rgba(black,.1);
+            box-shadow: 0 0 0 1px rgba(black, 0.05), 0 2px 4px rgba(black,.075);
+        }
+    }
+}
+
+.c-post__row--main {
+    position: relative;
+    z-index: 10;
 }
 
 .c-post__row--content {
@@ -69,9 +110,13 @@ div:empty {
 }
 
 .c-post__title {
-    color: var(--page-intro-color);
+    color: var(--intro-color);
 }
 
 .u-pt-clear {
-    padding-top: 0;
+    padding-top: 0 !important;
+}
+
+.u-mt-clear {
+    margin-top: 0 !important;
 }

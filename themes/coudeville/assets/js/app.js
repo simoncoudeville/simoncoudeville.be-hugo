@@ -17,11 +17,11 @@ function observeHeader() {
 }
 
 function observeIntroTitle() {
-    var introTitle = document.querySelector('.js-intro-title');
+    var title = document.querySelector('.js-title');
     var target = document.querySelector('body');
 
     var options = {
-        rootMargin: '-30px'
+        rootMargin: '-108px'
     }
 
     let observer = new IntersectionObserver(function (entries) {
@@ -35,7 +35,7 @@ function observeIntroTitle() {
         });
     }, options);
 
-    observer.observe(introTitle);
+    observer.observe(title);
 }
 
 function toggleBaselines() {

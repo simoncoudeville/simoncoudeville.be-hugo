@@ -7,16 +7,21 @@
 // CSS vars
 
 @mixin light-scheme {
-    --html-background-color: white;
+    --html-background-color: White;
     --page-background-color: var(--html-background-color);
-    --page-heading-color: var(--color-neutral-xxxx-dark);
-    --page-intro-color: var(--page-heading-color);
-    --page-text-color: var(--color-neutral-xxxx-dark);
+    --page-heading-color: var(--color-neutral-xxx-dark);
+    --page-text-color: var(--page-heading-color);
     --page-link-color: var(--page-heading-color);
     --page-meta-color: var(--color-neutral);
     --page-selection-color: var(--color-alpha);
     --scrollbar-track-color: var(--page-background-color);
     --scrollbar-thumb-color: var(--color-alpha);
+    // --header-meta-color: rgba(255,255,255,.5);
+    --header-meta-color: var(--page-meta-color);
+    // --intro-color: White;
+    // --intro-background-color: var(--color-alpha);
+    --intro-color: var(--page-heading-color);
+    --intro-background-color: var(--html-background-color);
     --cover-background-color: var(--color-alpha);
     --prism-text-color: var(--color-neutral-xx-light);
     --prism-comment-color: var(--color-neutral-light);
@@ -42,8 +47,7 @@
 
 @mixin dark-scheme {
     --html-background-color: var(--color-neutral-xxxx-dark);
-    --page-heading-color: var(--color-neutral-xxxxx-light);
-    --page-text-color: var(--color-neutral-x-light);
+    --page-heading-color: var(--color-neutral-xxx-light);
     --cover-background-color: var(--html-background-color);
     --example-background-color: var(--prism-background-color);
     --toggle-background-color: transparent;
@@ -70,13 +74,13 @@
     --saturation-gamma: #{saturation($color-gamma)};
     --lightness-gamma: #{lightness($color-gamma)};
 
-    --color-neutral-xxxxx-light: hsla(var(--hue-alpha), 2.5%, 97%, 1);
-    --color-neutral-xxxx-light: hsla(var(--hue-alpha), 2.5%, 95%, 1);
-    --color-neutral-xxx-light: hsla(var(--hue-alpha), 2.5%, 92.5%, 1);
-    --color-neutral-xx-light: hsla(var(--hue-alpha), 2.5%, 85%, 1);
-    --color-neutral-x-light: hsla(var(--hue-alpha), 2.5%, 75%, 1);
-    --color-neutral-light: hsla(var(--hue-alpha), 2.5%, 62.5%, 1);
-    --color-neutral: hsla(var(--hue-alpha), 2.5%, 50%, 1);
+    --color-neutral-xxxxx-light: hsla(var(--hue-alpha), 5%, 97%, 1);
+    --color-neutral-xxxx-light: hsla(var(--hue-alpha), 5%, 95%, 1);
+    --color-neutral-xxx-light: hsla(var(--hue-alpha), 5%, 92.5%, 1);
+    --color-neutral-xx-light: hsla(var(--hue-alpha), 5%, 85%, 1);
+    --color-neutral-x-light: hsla(var(--hue-alpha), 5%, 75%, 1);
+    --color-neutral-light: hsla(var(--hue-alpha), 5%, 62.5%, 1);
+    --color-neutral: hsla(var(--hue-alpha), 5%, 50%, 1);
     --color-neutral-dark: hsla(var(--hue-alpha), 5%, 40%, 1);
     --color-neutral-x-dark: hsla(var(--hue-alpha), 7.5%, 30%, 1);
     --color-neutral-xx-dark: hsla(var(--hue-alpha), 7.5%, 20%, 1);
