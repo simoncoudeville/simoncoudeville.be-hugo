@@ -50,7 +50,7 @@
 // Font height mixin
 @mixin font-height($font-size,$baseline-multiplier) {
   font-size: pxtorem(round($font-size)); // font-size in rem
-  line-height: calc(#{$baseline-multiplier} * var(--baseline)); // line-height with calc in rem
+  line-height: calc(#{$baseline-multiplier} * var(--global-baseline)); // line-height with calc in rem
 }
 
 /// Mixin to customize scrollbars

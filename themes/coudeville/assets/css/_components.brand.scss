@@ -7,10 +7,10 @@
 .c-logo {
     color: var(--intro-color);
     font-weight: $beta-font-weight;
-    @include font-height(ms(2),var(--baseline-multiplier));
+    @include font-height(ms(2),var(--global-baseline-multiplier));
 
     @include mq(bp3) {
-        @include font-height(ms(1),var(--baseline-multiplier));
+        @include font-height(ms(1),var(--global-baseline-multiplier));
     }
 }
 

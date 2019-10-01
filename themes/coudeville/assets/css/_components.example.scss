@@ -8,7 +8,7 @@
 .c-example {
     &,
     .c-post__row--content & {
-        padding: baseline(calc(var(--baseline-multiplier) * 3)) 0 var(--whitespace-default);
+        padding: baseline(calc(var(--global-baseline-multiplier) * 3)) 0 var(--whitespace-default);
         margin: var(--whitespace-default) 0;
         background: var(--example-background-color);
         grid-column: 1 / -1;
@@ -30,13 +30,13 @@
 
 .c-example__title {
     position: relative;
-    margin-top: baseline(calc(var(--baseline-multiplier) * -2));
+    margin-top: baseline(calc(var(--global-baseline-multiplier) * -2));
     font-weight: normal;
     color: var(--page-meta-color);
-    @include font-height(ms(1),var(--baseline-multiplier));
+    @include font-height(ms(1),var(--global-baseline-multiplier));
 
     // @include mq(bp3) {
-    //     @include font-height(ms(0), var(--baseline-multiplier));
+    //     @include font-height(ms(0), var(--global-baseline-multiplier));
     // }
 }
 
@@ -92,5 +92,5 @@
 
 .c-example__toggle {
     position: relative;
-    margin-bottom: baseline(calc(var(--baseline-multiplier) * -1));
+    margin-bottom: baseline(calc(var(--global-baseline-multiplier) * -1));
 }

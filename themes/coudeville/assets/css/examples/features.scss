@@ -26,7 +26,7 @@
 
 .e-card__body {
     position: relative;
-    padding: baseline(var(--baseline-multiplier));
+    padding: baseline(var(--global-baseline-multiplier));
 
     // Reset bottom margins on children to make equal paddings possible
     > *:last-child,
@@ -53,21 +53,21 @@
 .e-profile__name {
     margin-bottom: 0;
     font-weight: $beta-font-weight;
-    color: var(--color-neutral-xxxx-dark);
-    @include font-height(ms(1),calc(var(--baseline-multiplier) - 1));
+    color: var(--global-color-neutral-xxxx-dark);
+    @include font-height(ms(1),calc(var(--global-baseline-multiplier) - 1));
 }
 
 .e-profile__location {
     position: relative;
     margin-bottom: baseline(3);
     color: var(--page-meta-color);
-    @include font-height(ms(0),calc(var(--baseline-multiplier) - 1));
+    @include font-height(ms(0),calc(var(--global-baseline-multiplier) - 1));
 }
 
 .e-profile__occupation {
     margin-bottom: baseline(3);
-    color: var(--color-neutral-xxxx-dark);
-    @include font-height(ms(1),calc(var(--baseline-multiplier) - 1));
+    color: var(--global-color-neutral-xxxx-dark);
+    @include font-height(ms(1),calc(var(--global-baseline-multiplier) - 1));
 }
 
 .e-button {
@@ -106,6 +106,6 @@
 }
 
 .e-button--small {
-    padding: calc(var(--baseline) - 1px) baseline(2) calc(var(--baseline) + 1px);
+    padding: calc(var(--global-baseline) - 1px) baseline(2) calc(var(--global-baseline) + 1px);
     @include font-height(ms(0),3);
 }

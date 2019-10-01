@@ -5,11 +5,11 @@
 */
 
 .c-avatar {
-    width: baseline(calc(var(--baseline-multiplier) * 5));
-    height: baseline(calc(var(--baseline-multiplier) * 5));
+    width: baseline(calc(var(--global-baseline-multiplier) * 5));
+    height: baseline(calc(var(--global-baseline-multiplier) * 5));
     border-radius: 100%;
     overflow: hidden;
-    background: linear-gradient(to bottom, var(--color-neutral-xxxx-light), var(--color-neutral-xxxxx-light) );
+    background: linear-gradient(to bottom, var(--global-color-neutral-xxxx-light), var(--global-color-neutral-xxxxx-light) );
 
     img {
         opacity: .75;

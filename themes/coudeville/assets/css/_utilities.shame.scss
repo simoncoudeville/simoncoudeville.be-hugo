@@ -46,9 +46,9 @@
 }
 
 .c-post__row--intro {
-    min-height: calc(50vh - #{baseline(calc(var(--baseline-multiplier) * 3))});
+    min-height: calc(50vh - #{baseline(calc(var(--global-baseline-multiplier) * 3))});
     align-items: flex-end;
-    background-color: var(--intro-background-color);
+    // background-color: var(--intro-background-color);
 
     // @include mq(bp3) {
     //     padding-bottom: var(--whitespace-default);
@@ -57,7 +57,7 @@
 
 .c-post__row--header {
     padding-top: var(--whitespace-default);
-    background-color: var(--intro-background-color);
+    // background-color: var(--intro-background-color);
     position: relative;
     will-change: box-shadow;
     transition: box-shadow $animation-duration-alpha;
@@ -82,12 +82,25 @@
         &.is-sticky {
             // box-shadow: 0 0 0 1px rgba(black,.05), 0 0 20px rgba(black,.1);
             // box-shadow: 0 0 20px rgba(black,.1);
-            // box-shadow: 0 0 var(--baseline) rgba(black,.1);
-            // box-shadow: 0 0 0 1px rgba(black, 0.05), 0 0 var(--baseline) rgba(black,.1);
+            // box-shadow: 0 0 var(--global-baseline) rgba(black,.1);
+            // box-shadow: 0 0 0 1px rgba(black, 0.05), 0 0 var(--global-baseline) rgba(black,.1);
             // box-shadow: 0 0 0 1px rgba(black,.1), 0 0 50px rgba(black,.1);
-            // box-shadow: 0 0 0 1px rgba(black,.1);
+            box-shadow: 0 0 0 1px rgba(black,.1);
             // box-shadow: 0 0 2px 2px rgba(black,.1);
-            box-shadow: 0 0 0 1px rgba(black, 0.05), 0 2px 4px rgba(black,.075);
+            // box-shadow: 0 0 0 1px rgba(black, 0.05), 0 0 var(--global-baseline) rgba(black,.075);
+            // box-shadow: 0 0 var(--global-baseline) rgba(black,.1);
+            // box-shadow: 0 1px 1px rgba(0,0,0,0.02),
+            //               0 2px 2px rgba(0,0,0,0.02),
+            //               0 4px 4px rgba(0,0,0,0.02),
+            //               0 8px 8px rgba(0,0,0,0.02),
+            //               0 16px 16px rgba(0,0,0,0.02);
+            // box-shadow: 0 1px 1px rgba(0,0,0,0.02),
+                          // 0 2px 2px rgba(0,0,0,0.02),
+                          // 0 4px 4px rgba(0,0,0,0.02),
+                          // 0 8px 8px rgba(0,0,0,0.02),
+                          // 0 16px 16px rgba(0,0,0,0.02),
+                          // 0 32px 32px rgba(0,0,0,0.02);
+            background-color: var(--intro-background-color);
         }
     }
 }

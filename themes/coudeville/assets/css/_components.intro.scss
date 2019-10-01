@@ -5,10 +5,10 @@
 */
 
 .c-intro {
-    min-height: calc(50vh - #{baseline(calc(var(--baseline-multiplier) * 5))});
+    min-height: calc(50vh - #{baseline(calc(var(--global-baseline-multiplier) * 5))});
 
     @include mq(bp3) {
-        min-height: calc(50vh - #{baseline(calc(var(--baseline-multiplier) * 4))});
+        min-height: calc(50vh - #{baseline(calc(var(--global-baseline-multiplier) * 4))});
     }
 }
 

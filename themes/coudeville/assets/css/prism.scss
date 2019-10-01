@@ -28,7 +28,7 @@ pre[class*="language-"] {
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-	@include font-height(ms(1),var(--baseline-multiplier));
+	@include font-height(ms(1),var(--global-baseline-multiplier));
 
     @include mq(bp3) {
         @include font-height(17px, 3.5);
@@ -69,10 +69,10 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 
 /* Code blocks */
 pre[class*="language-"] {
-	padding: baseline(var(--baseline-multiplier));
+	padding: baseline(var(--global-baseline-multiplier));
 	overflow: auto;
-	margin-left: baseline(calc(var(--baseline-multiplier) * -1));
-	margin-right: baseline(calc(var(--baseline-multiplier) * -1));
+	margin-left: baseline(calc(var(--global-baseline-multiplier) * -1));
+	margin-right: baseline(calc(var(--global-baseline-multiplier) * -1));
 }
 
 :not(pre) > code[class*="language-"],

@@ -9,93 +9,88 @@
 @mixin light-scheme {
     --html-background-color: White;
     --page-background-color: var(--html-background-color);
-    --page-heading-color: var(--color-neutral-xxx-dark);
+    --page-heading-color: var(--global-color-neutral-xxx-dark);
     --page-text-color: var(--page-heading-color);
     --page-link-color: var(--page-heading-color);
     --page-meta-color: var(--color-neutral);
-    --page-selection-color: var(--color-alpha);
-    --scrollbar-track-color: var(--page-background-color);
-    --scrollbar-thumb-color: var(--color-alpha);
-    // --header-meta-color: rgba(255,255,255,.5);
+    --page-selection-color: var(--global-color-alpha);
     --header-meta-color: var(--page-meta-color);
-    // --intro-color: White;
-    // --intro-background-color: var(--color-alpha);
     --intro-color: var(--page-heading-color);
     --intro-background-color: var(--html-background-color);
-    --cover-background-color: var(--color-alpha);
-    --prism-text-color: var(--color-neutral-xx-light);
-    --prism-comment-color: var(--color-neutral-light);
-    --prism-background-color: var(--color-neutral-xxx-dark);
-    --prism-scroll-thumb-color: var(--color-neutral-dark);
-    --prism-keyword-color: var(--color-beta);
-    --prism-function-color: var(--color-alpha);
-    --prism-variable-color: var(--color-gamma);
-    --prism-selector-color: var(--color-gamma);
+    --cover-background-color: var(--global-color-alpha);
+    --prism-text-color: var(--global-color-neutral-xx-light);
+    --prism-comment-color: var(--global-color-neutral-light);
+    --prism-background-color: var(--global-color-neutral-xxx-dark);
+    --prism-scroll-thumb-color: var(--global-color-neutral-dark);
+    --prism-keyword-color: var(--global-color-beta);
+    --prism-function-color: var(--global-color-alpha);
+    --prism-variable-color: var(--global-color-gamma);
+    --prism-selector-color: var(--global-color-gamma);
     --prism-property-color: var(--prism-text-color);
-    --example-background-color: var(--color-neutral-xxxxx-light);
-    --baseline-color: hsla(var(--hue-gamma), var(--saturation-gamma), var(--lightness-gamma), .50);
-    --baseline-background: hsla(var(--hue-gamma), var(--saturation-gamma), var(--lightness-gamma), .25);
-    --toggle-background-color: var(--color-neutral-xx-light);
-    --toggle-background-color-checked: var(--color-alpha);
+    --example-background-color: var(--global-color-neutral-xxxxx-light);
+    --example-background-color: var(--global-color-neutral-xxxxx-light);
+    --baseline-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .50);
+    --baseline-background: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .25);
+    --toggle-background-color: var(--global-color-neutral-xx-light);
+    --toggle-background-color-checked: var(--global-color-alpha);
     --toggle-border-color: var(--toggle-background-color);
     --toggle-border-color-checked: var(--toggle-background-color-checked);
-    --toggle-switch-border-color-active: hsl(var(--hue-alpha),var(--saturation-alpha),var(--lightness-alpha));
+    --toggle-switch-border-color-active: hsl(var(--global-hue-color-alpha),var(--global-saturation-color-alpha),var(--global-lightness-color-alpha));
     --toggle-switch-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    --toggle-switch-shadow-active: 0 1px 3px rgba(0, 0, 0, 0.2), 0 0 0 3px hsla(var(--hue-alpha),var(--saturation-alpha),var(--lightness-alpha),.25);
+    --toggle-switch-shadow-active: 0 1px 3px rgba(0, 0, 0, 0.2), 0 0 0 3px hsla(var(--global-hue-color-alpha),var(--global-saturation-color-alpha),var(--global-lightness-color-alpha),.25);
     --toggle-label-color: var(--color-neutral);
 }
 
 @mixin dark-scheme {
-    --html-background-color: var(--color-neutral-xxxx-dark);
-    --page-heading-color: var(--color-neutral-xxx-light);
+    --html-background-color: var(--global-color-neutral-xxxx-dark);
+    --page-heading-color: var(--global-color-neutral-xxx-light);
     --cover-background-color: var(--html-background-color);
     --example-background-color: var(--prism-background-color);
     --toggle-background-color: transparent;
     --toggle-border-color: var(--color-neutral);
     --toggle-background-color-checked: var(--toggle-background-color);
-    --toggle-border-color-checked: var(--color-alpha);
+    --toggle-border-color-checked: var(--global-color-alpha);
     --toggle-switch-border-color-checked: white;
-    --toggle-switch-shadow-checked: 0 0 0 1px rgba(0,0,0,.25), 0 0 0 4px hsla(var(--hue-alpha),var(--saturation-alpha),var(--lightness-alpha),.75);
+    --toggle-switch-shadow-checked: 0 0 0 1px rgba(0,0,0,.25), 0 0 0 4px hsla(var(--global-hue-color-alpha),var(--global-saturation-color-alpha),var(--global-lightness-color-alpha),.75);
 }
 
 :root {
-    --color-alpha: #{$color-alpha};
-    --hue-alpha: #{hue($color-alpha)};
-    --saturation-alpha: #{saturation($color-alpha)};
-    --lightness-alpha: #{lightness($color-alpha)};
+    --global-color-alpha: #{$color-alpha};
+    --global-hue-color-alpha: #{hue($color-alpha)};
+    --global-saturation-color-alpha: #{saturation($color-alpha)};
+    --global-lightness-color-alpha: #{lightness($color-alpha)};
 
-    --color-beta: #{$color-beta};
-    --hue-beta: #{hue($color-beta)};
-    --saturation-beta: #{saturation($color-beta)};
-    --lightness-beta: #{lightness($color-beta)};
+    --global-color-beta: #{$color-beta};
+    --global-hue-color-beta: #{hue($color-beta)};
+    --global-saturation-color-beta: #{saturation($color-beta)};
+    --global-lightness-color-beta: #{lightness($color-beta)};
 
-    --color-gamma: #{$color-gamma};
-    --hue-gamma: #{hue($color-gamma)};
-    --saturation-gamma: #{saturation($color-gamma)};
-    --lightness-gamma: #{lightness($color-gamma)};
+    --global-color-gamma: #{$color-gamma};
+    --global-hue-color-gamma: #{hue($color-gamma)};
+    --global-saturation-color-gamma: #{saturation($color-gamma)};
+    --global-lightness-color-gamma: #{lightness($color-gamma)};
 
-    --color-neutral-xxxxx-light: hsla(var(--hue-alpha), 5%, 97%, 1);
-    --color-neutral-xxxx-light: hsla(var(--hue-alpha), 5%, 95%, 1);
-    --color-neutral-xxx-light: hsla(var(--hue-alpha), 5%, 92.5%, 1);
-    --color-neutral-xx-light: hsla(var(--hue-alpha), 5%, 85%, 1);
-    --color-neutral-x-light: hsla(var(--hue-alpha), 5%, 75%, 1);
-    --color-neutral-light: hsla(var(--hue-alpha), 5%, 62.5%, 1);
-    --color-neutral: hsla(var(--hue-alpha), 5%, 50%, 1);
-    --color-neutral-dark: hsla(var(--hue-alpha), 5%, 40%, 1);
-    --color-neutral-x-dark: hsla(var(--hue-alpha), 7.5%, 30%, 1);
-    --color-neutral-xx-dark: hsla(var(--hue-alpha), 7.5%, 20%, 1);
-    --color-neutral-xxx-dark: hsla(var(--hue-alpha), 10%, 10%, 1);
-    --color-neutral-xxxx-dark: hsla(var(--hue-alpha), 15%, 5%, 1);
+    --global-color-neutral-xxxxx-light: hsla(var(--global-hue-color-alpha), 5%, 97%, 1);
+    --global-color-neutral-xxxx-light: hsla(var(--global-hue-color-alpha), 5%, 95%, 1);
+    --global-color-neutral-xxx-light: hsla(var(--global-hue-color-alpha), 5%, 92.5%, 1);
+    --global-color-neutral-xx-light: hsla(var(--global-hue-color-alpha), 5%, 85%, 1);
+    --global-color-neutral-x-light: hsla(var(--global-hue-color-alpha), 5%, 75%, 1);
+    --global-color-neutral-light: hsla(var(--global-hue-color-alpha), 5%, 62.5%, 1);
+    --color-neutral: hsla(var(--global-hue-color-alpha), 5%, 50%, 1);
+    --global-color-neutral-dark: hsla(var(--global-hue-color-alpha), 5%, 40%, 1);
+    --global-color-neutral-x-dark: hsla(var(--global-hue-color-alpha), 7.5%, 30%, 1);
+    --global-color-neutral-xx-dark: hsla(var(--global-hue-color-alpha), 7.5%, 20%, 1);
+    --global-color-neutral-xxx-dark: hsla(var(--global-hue-color-alpha), 10%, 10%, 1);
+    --global-color-neutral-xxxx-dark: hsla(var(--global-hue-color-alpha), 15%, 5%, 1);
 
-    --baseline: #{6px / round($root-font-size-sm)}rem;
-    --baseline-multiplier: 4;
+    --global-baseline: #{6px / round($root-font-size-sm)}rem;
+    --global-baseline-multiplier: 4;
 
-    --whitespace-default: calc(var(--baseline) * var(--baseline-multiplier));
-    --whitespace-double: calc(var(--baseline) * var(--baseline-multiplier) * 2);
+    --whitespace-default: calc(var(--global-baseline) * var(--global-baseline-multiplier));
+    --whitespace-double: calc(var(--whitespace-default) * 2);
 
     @include mq(bp3) {
-        --baseline: #{8px / $root-font-size}rem;
-        --baseline-multiplier: 4;
+        --global-baseline: #{8px / $root-font-size}rem;
     }
 
     @include light-scheme;
@@ -133,15 +128,13 @@ html {
     @include mq(bp3) {
         font-size: #{$root-font-size/16px*100%};
     }
-
-
 }
 
 body {
     position: relative;
     min-height: 100vh;
-    background-color: var(--page-background-color);
-    line-height: baseline(var(--baseline-multiplier));
+    // background-color: var(--page-background-color);
+    line-height: baseline(var(--global-baseline-multiplier));
 }
 
 ::selection {

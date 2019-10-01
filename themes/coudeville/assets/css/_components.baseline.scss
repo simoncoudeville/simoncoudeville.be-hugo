@@ -19,10 +19,10 @@
     background: repeating-linear-gradient(
         to bottom,
         transparent,
-        transparent calc(var(--baseline) - 1px),
-        var(--baseline-color) calc(var(--baseline) - 1px),
-        var(--baseline-color) var(--baseline)
+        transparent calc(var(--global-baseline) - 1px),
+        var(--baseline-color) calc(var(--global-baseline) - 1px),
+        var(--baseline-color) var(--global-baseline)
     );
 
-    background-size: 100% var(--baseline);
+    background-size: 100% var(--global-baseline);
 }

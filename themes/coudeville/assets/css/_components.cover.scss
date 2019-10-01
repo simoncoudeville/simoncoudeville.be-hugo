@@ -12,10 +12,10 @@
     align-self: center;
     min-height: 50vh;
     // background-color: var(--cover-background-color);
-    // padding: baseline(var(--baseline-multiplier)) 0;
+    // padding: baseline(var(--global-baseline-multiplier)) 0;
     //
     // @include mq(bp3) {
-    //     padding: baseline(calc(var(--baseline-multiplier) * 2)) 0;
+    //     padding: baseline(calc(var(--global-baseline-multiplier) * 2)) 0;
     // }
 }
 

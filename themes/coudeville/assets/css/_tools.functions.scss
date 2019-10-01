@@ -12,5 +12,5 @@
 // Simple baseline-unit multiplier converted to rem
 @function baseline($multiplier) {
     // @return pxtorem($baseline * $multiplier);
-    @return calc(var(--baseline) * #{$multiplier});
+    @return calc(var(--global-baseline) * #{$multiplier});
 }
