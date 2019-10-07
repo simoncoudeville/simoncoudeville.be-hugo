@@ -59,7 +59,9 @@ h2 {
 h3 {
     font-weight: $beta-font-weight;
     margin-bottom: var(--whitespace-default);
-    @include font-height(ms(4),var(--global-baseline-multiplier));
+    // margin-bottom: calc(var(--whitespace-default) * .5);
+    // color: var(--page-meta-color);
+    @include font-height(ms(2),var(--global-baseline-multiplier));
 }
 
 h4 {

@@ -53,7 +53,7 @@
 .e-profile__name {
     margin-bottom: 0;
     font-weight: $beta-font-weight;
-    color: var(--global-color-neutral-xxxx-dark);
+    color: var(--page-heading-color);
     @include font-height(ms(1),calc(var(--global-baseline-multiplier) - 1));
 }
 
@@ -66,7 +66,7 @@
 
 .e-profile__occupation {
     margin-bottom: baseline(3);
-    color: var(--global-color-neutral-xxxx-dark);
+    color: var(--page-text-color);
     @include font-height(ms(1),calc(var(--global-baseline-multiplier) - 1));
 }
 
@@ -106,6 +106,6 @@
 }
 
 .e-button--small {
-    padding: calc(var(--global-baseline) - 1px) baseline(2) calc(var(--global-baseline) + 1px);
+    padding: calc(var(--global-baseline) * 1.5 - 1px) baseline(3) calc(var(--global-baseline) * 1.5 + 1px);
     @include font-height(ms(0),3);
 }

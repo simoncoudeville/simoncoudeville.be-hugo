@@ -7,10 +7,14 @@
 // CSS vars
 
 @mixin light-scheme {
+    --global-page-backgroundColor: White;
+    --global-page-color: var(--global-color-neutral-xxx-dark);
+    --global-heading-color: var(--global-page-color);
+
     --html-background-color: White;
     --page-background-color: var(--html-background-color);
     --page-heading-color: var(--global-color-neutral-xxx-dark);
-    --page-text-color: var(--page-heading-color);
+    --page-text-color: var(--global-color-neutral-x-dark);
     --page-link-color: var(--page-heading-color);
     --page-meta-color: var(--color-neutral);
     --page-selection-color: var(--global-color-alpha);
