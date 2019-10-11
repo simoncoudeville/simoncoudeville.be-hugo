@@ -20,8 +20,8 @@
         to bottom,
         transparent,
         transparent calc(var(--global-baseline) - 1px),
-        var(--baseline-color) calc(var(--global-baseline) - 1px),
-        var(--baseline-color) var(--global-baseline)
+        var(--global-baseline-color) calc(var(--global-baseline) - 1px),
+        var(--global-baseline-color) var(--global-baseline)
     );
 
     background-size: 100% var(--global-baseline);

@@ -25,7 +25,7 @@ h1,
 h2,
 h3,
 h4 {
-    color: var(--page-heading-color);
+    color: var(--global-heading-color);
 }
 
 
@@ -93,21 +93,21 @@ pre {
 // Links
 
 a {
-    color: var(--page-link-color);
+    color: var(--global-link-color);
     transition: all $animation-duration-alpha $animation-easing-out;
     display: inline-block;
 
     &:visited {
-        color: var(--page-link-color);
+        color: var(--global-link-color);
     }
 
     &:hover {
-        color: var(--page-text-color);
+        color: var(--global-page-color);
     }
 
     &:focus {
         outline: thin dotted;
-        color: var(--page-text-color);
+        color: var(--global-page-color);
     }
 
     &:hover,

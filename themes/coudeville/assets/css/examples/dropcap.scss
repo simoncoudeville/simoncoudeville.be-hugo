@@ -21,7 +21,7 @@
     float: left;
     display: block;
     font-weight: $gamma-font-weight;
-    color: var(--page-heading-color);
+    color: var(--global-heading-color);
     margin: baseline(2) baseline(2) 0 baseline(-1.2);
     @include font-height(100px, calc(var(--global-baseline-multiplier) * 3));
 

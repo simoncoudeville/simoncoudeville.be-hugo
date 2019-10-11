@@ -20,6 +20,15 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
 
 code[class*="language-"],
 pre[class*="language-"] {
+	--prism-text-color: var(--global-color-neutral-xxx-light);
+    --prism-comment-color: var(--global-color-neutral);
+    --prism-backgroundColor: var(--global-color-neutral-xxx-dark);
+    --prism-keyword-color: var(--global-color-beta);
+    --prism-function-color: var(--global-color-alpha);
+    --prism-variable-color: var(--global-color-gamma);
+    --prism-selector-color: var(--global-color-gamma);
+    --prism-property-color: var(--prism-text-color);
+
 	color: var(--prism-text-color);
 	background: none;
 	font-family: $code-font-family;
@@ -51,13 +60,13 @@ pre[class*="language-"] {
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
 	text-shadow: none;
-	background: var(--page-selection-color);
+	background: var(--global-selection-color);
 }
 
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
 	text-shadow: none;
-	background: var(--page-selection-color);
+	background: var(--global-selection-color);
 }
 
 @media print {
@@ -77,10 +86,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: var(--prism-background-color);
-	// border-radius: baseline(1);
-
-	// @include scrollbars(baseline(1), var(--prism-scroll-thumb-color), var(--prism-background-color));
+	background: var(--prism-backgroundColor);
 }
 
 /* Inline code */

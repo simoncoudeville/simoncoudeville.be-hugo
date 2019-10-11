@@ -50,6 +50,6 @@ function toggleBaselines() {
 
 document.addEventListener("DOMContentLoaded", function() {
     toggleBaselines();
-    observeHeader();
-    observeIntroTitle();
+    // observeHeader();
+    // observeIntroTitle();
 });

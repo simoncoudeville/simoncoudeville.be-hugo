@@ -7,55 +7,21 @@
 // CSS vars
 
 @mixin light-scheme {
-    --global-page-backgroundColor: White;
-    --global-page-color: var(--global-color-neutral-xxx-dark);
-    --global-heading-color: var(--global-page-color);
+    --global-page-backgroundColor: white;
+    --global-page-color: var(--global-color-neutral-x-dark);
+    --global-heading-color: var(--global-color-neutral-xxx-dark);
+    --global-link-color: var(--global-color-neutral-xxx-dark);
+    --global-meta-color: var(--global-color-neutral);
+    --global-selection-color: var(--global-color-beta);
 
-    --html-background-color: White;
-    --page-background-color: var(--html-background-color);
-    --page-heading-color: var(--global-color-neutral-xxx-dark);
-    --page-text-color: var(--global-color-neutral-x-dark);
-    --page-link-color: var(--page-heading-color);
-    --page-meta-color: var(--color-neutral);
-    --page-selection-color: var(--global-color-alpha);
-    --header-meta-color: var(--page-meta-color);
-    --intro-color: var(--page-heading-color);
-    --intro-background-color: var(--html-background-color);
-    --cover-background-color: var(--global-color-alpha);
-    --prism-text-color: var(--global-color-neutral-xx-light);
-    --prism-comment-color: var(--global-color-neutral-light);
-    --prism-background-color: var(--global-color-neutral-xxx-dark);
-    --prism-scroll-thumb-color: var(--global-color-neutral-dark);
-    --prism-keyword-color: var(--global-color-beta);
-    --prism-function-color: var(--global-color-alpha);
-    --prism-variable-color: var(--global-color-gamma);
-    --prism-selector-color: var(--global-color-gamma);
-    --prism-property-color: var(--prism-text-color);
-    --example-background-color: var(--global-color-neutral-xxxxx-light);
-    --example-background-color: var(--global-color-neutral-xxxxx-light);
-    --baseline-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .50);
-    --baseline-background: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .25);
-    --toggle-background-color: var(--global-color-neutral-xx-light);
-    --toggle-background-color-checked: var(--global-color-alpha);
-    --toggle-border-color: var(--toggle-background-color);
-    --toggle-border-color-checked: var(--toggle-background-color-checked);
-    --toggle-switch-border-color-active: hsl(var(--global-hue-color-alpha),var(--global-saturation-color-alpha),var(--global-lightness-color-alpha));
-    --toggle-switch-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    --toggle-switch-shadow-active: 0 1px 3px rgba(0, 0, 0, 0.2), 0 0 0 3px hsla(var(--global-hue-color-alpha),var(--global-saturation-color-alpha),var(--global-lightness-color-alpha),.25);
-    --toggle-label-color: var(--color-neutral);
+    --global-baseline-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .50);
+    --global-baseline-background: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .25);
 }
 
 @mixin dark-scheme {
-    --html-background-color: var(--global-color-neutral-xxxx-dark);
-    --page-heading-color: var(--global-color-neutral-xxx-light);
-    --cover-background-color: var(--html-background-color);
-    --example-background-color: var(--prism-background-color);
-    --toggle-background-color: transparent;
-    --toggle-border-color: var(--color-neutral);
-    --toggle-background-color-checked: var(--toggle-background-color);
-    --toggle-border-color-checked: var(--global-color-alpha);
-    --toggle-switch-border-color-checked: white;
-    --toggle-switch-shadow-checked: 0 0 0 1px rgba(0,0,0,.25), 0 0 0 4px hsla(var(--global-hue-color-alpha),var(--global-saturation-color-alpha),var(--global-lightness-color-alpha),.75);
+    --global-page-backgroundColor: var(--global-color-neutral-xxxx-dark);
+    --global-page-color: var(--global-color-neutral-x-light);
+    --global-heading-color: var(--global-color-neutral-xxx-light);
 }
 
 :root {
@@ -74,18 +40,20 @@
     --global-saturation-color-gamma: #{saturation($color-gamma)};
     --global-lightness-color-gamma: #{lightness($color-gamma)};
 
-    --global-color-neutral-xxxxx-light: hsla(var(--global-hue-color-alpha), 5%, 97%, 1);
-    --global-color-neutral-xxxx-light: hsla(var(--global-hue-color-alpha), 5%, 95%, 1);
-    --global-color-neutral-xxx-light: hsla(var(--global-hue-color-alpha), 5%, 92.5%, 1);
-    --global-color-neutral-xx-light: hsla(var(--global-hue-color-alpha), 5%, 85%, 1);
-    --global-color-neutral-x-light: hsla(var(--global-hue-color-alpha), 5%, 75%, 1);
-    --global-color-neutral-light: hsla(var(--global-hue-color-alpha), 5%, 62.5%, 1);
-    --color-neutral: hsla(var(--global-hue-color-alpha), 5%, 50%, 1);
-    --global-color-neutral-dark: hsla(var(--global-hue-color-alpha), 5%, 40%, 1);
-    --global-color-neutral-x-dark: hsla(var(--global-hue-color-alpha), 7.5%, 30%, 1);
-    --global-color-neutral-xx-dark: hsla(var(--global-hue-color-alpha), 7.5%, 20%, 1);
-    --global-color-neutral-xxx-dark: hsla(var(--global-hue-color-alpha), 10%, 10%, 1);
-    --global-color-neutral-xxxx-dark: hsla(var(--global-hue-color-alpha), 15%, 5%, 1);
+    --global-neutral-hue: var(--global-hue-color-beta);
+
+    --global-color-neutral-xxxxx-light: hsla(var(--global-neutral-hue), 5%, 97%, 1);
+    --global-color-neutral-xxxx-light: hsla(var(--global-neutral-hue), 5%, 95%, 1);
+    --global-color-neutral-xxx-light: hsla(var(--global-neutral-hue), 5%, 92.5%, 1);
+    --global-color-neutral-xx-light: hsla(var(--global-neutral-hue), 5%, 85%, 1);
+    --global-color-neutral-x-light: hsla(var(--global-neutral-hue), 5%, 75%, 1);
+    --global-color-neutral-light: hsla(var(--global-neutral-hue), 5%, 62.5%, 1);
+    --global-color-neutral: hsla(var(--global-neutral-hue), 5%, 50%, 1);
+    --global-color-neutral-dark: hsla(var(--global-neutral-hue), 5%, 40%, 1);
+    --global-color-neutral-x-dark: hsla(var(--global-neutral-hue), 7.5%, 30%, 1);
+    --global-color-neutral-xx-dark: hsla(var(--global-neutral-hue), 7.5%, 20%, 1);
+    --global-color-neutral-xxx-dark: hsla(var(--global-neutral-hue), 10%, 10%, 1);
+    --global-color-neutral-xxxx-dark: hsla(var(--global-neutral-hue), 15%, 5%, 1);
 
     --global-baseline: #{6px / round($root-font-size-sm)}rem;
     --global-baseline-multiplier: 4;
@@ -120,17 +88,39 @@
 html {
     font-family: $alpha-font-family;
     font-weight: $alpha-font-weight;
-    background-color: var(--html-background-color);
-    color: var(--page-text-color);
+    background-color: var(--global-page-backgroundColor);
+    color: var(--global-page-color);
+    // letter-spacing: -.0125em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     // font-feature-settings: "liga", "tnum";
-    font-feature-settings: "zero";
+    font-feature-settings: "zero", "liga";
     // font-kerning: normal;
     font-size: #{$root-font-size-sm/16px*100%};
+    // border-top: var(--global-baseline) solid var(--global-color-beta);
 
     @include mq(bp3) {
         font-size: #{$root-font-size/16px*100%};
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: var(--global-baseline);
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 200vh;
+
+        // background-image: url("../img/gradient-mesh.png");
+        // background-image: url("../img/asset-6.png");
+        // background-image: url("../img/asset-9.png");
+        // opacity: .125;
+        // background-image: url("https://assets.website-files.com/5bfd1275cc56e15ce750b18e/5c289afb9a15753de6893a93_60.%20Zircon.jpg");
+
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 }
 
@@ -142,7 +132,7 @@ body {
 }
 
 ::selection {
-    background-color: var(--page-selection-color);
+    background-color: var(--global-selection-color);
     color: white;
     text-shadow: none;
 }

@@ -5,7 +5,7 @@
 */
 
 .c-footer {
-    color: var(--page-meta-color);
+    color: var(--global-meta-color);
     @include font-height(ms(2),var(--global-baseline-multiplier));
 
     @include mq(bp3) {
