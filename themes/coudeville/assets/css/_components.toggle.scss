@@ -5,7 +5,7 @@
     flex-direction: row-reverse;
     width: auto;
     align-items: center;
-    margin-bottom: var(--whitespace-default);
+    margin-bottom: var(--global-whitespace-default);
     color: var(--toggle-color, var(--global-meta-color));
     @include font-height(ms(1),var(--global-baseline-multiplier));
 

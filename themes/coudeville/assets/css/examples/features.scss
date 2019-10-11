@@ -20,7 +20,7 @@
     background-color: white;
     border-radius: baseline(1);
     box-shadow: 0 0 0 1px rgba(black, 0.05), 0 2px 4px rgba(black,.075);
-    margin-bottom: var(--whitespace-default);
+    margin-bottom: var(--global-whitespace-default);
     overflow: hidden;
 }
 
@@ -77,9 +77,13 @@
     border: 0;
     text-decoration: none;
     background-color: $color-beta;
-    color: #fff;
     border-radius: baseline(.5);
     transition: all .1s ease-in;
+
+    &,
+    &:visited {
+        color: #fff;
+    }
 
     &:hover {
         background-color: lighten($color-beta,5);

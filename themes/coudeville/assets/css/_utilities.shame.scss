@@ -4,64 +4,54 @@
     Hacks and quick fixes
 */
 
-// div:empty {
-//    display: none;
-// }
+div:empty {
+   display: none;
+}
 
-.c-post {
+.o-grid {
     --content-max-width: 36em;
-    --whitespace: var(--whitespace-default);
+    --grid-whitespace: var(--global-whitespace-default);
     display: grid;
-    grid: ". content ." / minmax(var(--whitespace),1fr) minmax(0, var(--content-max-width)) minmax(var(--whitespace),1fr);
+    grid: ". content ." / minmax(var(--grid-whitespace),1fr) minmax(0, var(--content-max-width)) minmax(var(--grid-whitespace),1fr);
 
     @include mq(bp3) {
-        --whitespace: var(--whitespace-double);
+        --grid-whitespace: var(--global-whitespace-double);
     }
 }
 
-.c-post__row {
+.o-row {
     grid-column: 1 / -1;
     display: grid;
     grid: inherit;
     grid-gap: inherit;
+
+    & + & {
+        margin-top: var(--global-whitespace-default);
+    }
 }
 
-.c-post__title {
-    color: var(--post__title-color, var(--global-heading-color));
-    margin-bottom: var(--whitespace-double);
+.o-row--example {
+    background: var(--row--example-backgroundColor, var(--global-color-neutral-xxxxx-light));
+    margin-bottom: var(--global-whitespace-default);
 }
 
-.c-post__row--intro {
-    min-height: calc(50vh - #{baseline(calc(var(--global-baseline-multiplier)))});
+.o-row--header {
+    padding-top: var(--global-whitespace-default);
+}
+
+.o-row--intro {
+    min-height: calc(50vh - #{baseline(calc(var(--global-baseline-multiplier) * 3))});
     align-items: flex-end;
 }
 
-.c-post__row--header {
-    padding-top: var(--whitespace-default);
-    position: relative;
-    will-change: box-shadow;
-    transition: box-shadow $animation-duration-alpha;
-    z-index: 20;
-}
 
-.c-post__row--lg {
-    padding: var(--whitespace-default) 0;
-}
-
-.c-post__row--main {
-    position: relative;
-    z-index: 10;
-}
-
-.c-post__row--content {
-
-    & > * {
-        grid-column: content;
+@media (prefers-color-scheme: dark) {
+    .o-row--example {
+        --row--example-backgroundColor: var(--global-color-neutral-xxx-dark);
     }
-
 }
 
-.c-post__container {
+.o-container {
     grid-column: content;
 }
 

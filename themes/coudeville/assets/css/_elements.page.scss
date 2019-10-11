@@ -10,7 +10,7 @@
     --global-page-backgroundColor: white;
     --global-page-color: var(--global-color-neutral-x-dark);
     --global-heading-color: var(--global-color-neutral-xxx-dark);
-    --global-link-color: var(--global-color-neutral-xxx-dark);
+    --global-link-color: var(--global-heading-color);
     --global-meta-color: var(--global-color-neutral);
     --global-selection-color: var(--global-color-beta);
 
@@ -58,8 +58,8 @@
     --global-baseline: #{6px / round($root-font-size-sm)}rem;
     --global-baseline-multiplier: 4;
 
-    --whitespace-default: calc(var(--global-baseline) * var(--global-baseline-multiplier));
-    --whitespace-double: calc(var(--whitespace-default) * 2);
+    --global-whitespace-default: calc(var(--global-baseline) * var(--global-baseline-multiplier));
+    --global-whitespace-double: calc(var(--global-whitespace-default) * 2);
 
     @include mq(bp3) {
         --global-baseline: #{8px / $root-font-size}rem;
@@ -93,9 +93,7 @@ html {
     // letter-spacing: -.0125em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    // font-feature-settings: "liga", "tnum";
     font-feature-settings: "zero", "liga";
-    // font-kerning: normal;
     font-size: #{$root-font-size-sm/16px*100%};
     // border-top: var(--global-baseline) solid var(--global-color-beta);
 
@@ -111,7 +109,7 @@ html {
         top: 0;
         right: 0;
         width: 100vw;
-        height: 200vh;
+        height: 100vh;
 
         // background-image: url("../img/gradient-mesh.png");
         // background-image: url("../img/asset-6.png");

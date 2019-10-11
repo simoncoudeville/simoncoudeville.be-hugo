@@ -5,12 +5,12 @@
 */
 
 .c-header {
-    margin-bottom: var(--whitespace-default);
+    margin-bottom: var(--global-whitespace-default);
 
     @include mq(bp3) {
         display: grid;
         grid-template-columns: auto 1fr;
-        grid-column-gap: var(--whitespace-default);
+        grid-column-gap: var(--global-whitespace-default);
     }
 }
 
