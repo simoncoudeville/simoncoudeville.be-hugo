@@ -23,7 +23,6 @@
 .c-header__title {
     position: relative;
     color: var(--header__meta-color, var(--global-meta-color));
-    opacity: var(--header__meta-opacity, 1);
     grid-column: 2;
     grid-row: 1;
     margin-bottom: 0;
@@ -31,7 +30,6 @@
     transition-property: opacity, transform;
     transition-duration: $animation-duration-gamma;
     transition-timing-function: $animation-easing-out;
-    @include font-height(ms(2),var(--global-baseline-multiplier));
 
     @include mq(bp3) {
         @include font-height(ms(1),var(--global-baseline-multiplier));

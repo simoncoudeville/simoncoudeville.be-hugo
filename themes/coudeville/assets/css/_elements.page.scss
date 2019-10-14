@@ -7,11 +7,11 @@
 // CSS vars
 
 @mixin light-scheme {
-    --global-page-backgroundColor: white;
-    --global-page-color: var(--global-color-neutral-x-dark);
-    --global-heading-color: var(--global-color-neutral-xxx-dark);
+    --global-page-backgroundColor: var(--global-color-neutral-dark-05);
+    --global-page-color: var(--global-color-neutral-dark-85);
+    --global-heading-color: var(--global-color-neutral-dark-95);
     --global-link-color: var(--global-heading-color);
-    --global-meta-color: var(--global-color-neutral);
+    --global-meta-color: var(--global-color-neutral-dark-50);
     --global-selection-color: var(--global-color-beta);
 
     --global-baseline-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .50);
@@ -19,9 +19,10 @@
 }
 
 @mixin dark-scheme {
-    --global-page-backgroundColor: var(--global-color-neutral-xxxx-dark);
-    --global-page-color: var(--global-color-neutral-x-light);
-    --global-heading-color: var(--global-color-neutral-xxx-light);
+    --global-page-backgroundColor: var(--global-color-neutral-dark-95);
+    --global-page-color: var(--global-color-neutral-light-85);
+    --global-heading-color: var(--global-color-neutral-light-95);
+    --global-meta-color: var(--global-color-neutral-light-50);
 }
 
 :root {
@@ -42,18 +43,17 @@
 
     --global-neutral-hue: var(--global-hue-color-beta);
 
-    --global-color-neutral-xxxxx-light: hsla(var(--global-neutral-hue), 5%, 97%, 1);
-    --global-color-neutral-xxxx-light: hsla(var(--global-neutral-hue), 5%, 95%, 1);
-    --global-color-neutral-xxx-light: hsla(var(--global-neutral-hue), 5%, 92.5%, 1);
-    --global-color-neutral-xx-light: hsla(var(--global-neutral-hue), 5%, 85%, 1);
-    --global-color-neutral-x-light: hsla(var(--global-neutral-hue), 5%, 75%, 1);
-    --global-color-neutral-light: hsla(var(--global-neutral-hue), 5%, 62.5%, 1);
-    --global-color-neutral: hsla(var(--global-neutral-hue), 5%, 50%, 1);
-    --global-color-neutral-dark: hsla(var(--global-neutral-hue), 5%, 40%, 1);
-    --global-color-neutral-x-dark: hsla(var(--global-neutral-hue), 7.5%, 30%, 1);
-    --global-color-neutral-xx-dark: hsla(var(--global-neutral-hue), 7.5%, 20%, 1);
-    --global-color-neutral-xxx-dark: hsla(var(--global-neutral-hue), 10%, 10%, 1);
-    --global-color-neutral-xxxx-dark: hsla(var(--global-neutral-hue), 15%, 5%, 1);
+    --global-color-neutral-light-05: hsla(var(--global-neutral-hue), 25%, 95%, .03);
+    --global-color-neutral-light-15: hsla(var(--global-neutral-hue), 25%, 95%, .10);
+    --global-color-neutral-light-50: hsla(var(--global-neutral-hue), 25%, 95%, .5);
+    --global-color-neutral-light-85: hsla(var(--global-neutral-hue), 25%, 95%, .85);
+    --global-color-neutral-light-95: hsla(var(--global-neutral-hue), 25%, 95%, .95);
+
+    --global-color-neutral-dark-05: hsla(var(--global-neutral-hue), 25%, 5%, .03);
+    --global-color-neutral-dark-15: hsla(var(--global-neutral-hue), 25%, 5%, .10);
+    --global-color-neutral-dark-50: hsla(var(--global-neutral-hue), 25%, 5%, .5);
+    --global-color-neutral-dark-85: hsla(var(--global-neutral-hue), 25%, 5%, .85);
+    --global-color-neutral-dark-95: hsla(var(--global-neutral-hue), 25%, 5%, .95);
 
     --global-baseline: #{6px / round($root-font-size-sm)}rem;
     --global-baseline-multiplier: 4;
@@ -95,30 +95,13 @@ html {
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "zero", "liga";
     font-size: #{$root-font-size-sm/16px*100%};
-    // border-top: var(--global-baseline) solid var(--global-color-beta);
+    background-image: url("../svg/stripes-1.svg");
+    background-size: 2560px 500px;
+    background-position: 50% calc(50vh - 500px);
+    background-repeat: no-repeat;
 
     @include mq(bp3) {
         font-size: #{$root-font-size/16px*100%};
-    }
-
-    &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: var(--global-baseline);
-        top: 0;
-        right: 0;
-        width: 100vw;
-        height: 100vh;
-
-        // background-image: url("../img/gradient-mesh.png");
-        // background-image: url("../img/asset-6.png");
-        // background-image: url("../img/asset-9.png");
-        // opacity: .125;
-        // background-image: url("https://assets.website-files.com/5bfd1275cc56e15ce750b18e/5c289afb9a15753de6893a93_60.%20Zircon.jpg");
-
-        background-size: contain;
-        background-repeat: no-repeat;
     }
 }
 

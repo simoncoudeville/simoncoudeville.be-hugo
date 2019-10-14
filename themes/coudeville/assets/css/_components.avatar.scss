@@ -9,7 +9,8 @@
     height: baseline(calc(var(--global-baseline-multiplier) * 5));
     border-radius: 100%;
     overflow: hidden;
-    background: linear-gradient(to bottom, var(--global-color-neutral-xxxx-light), var(--global-color-neutral-xxxxx-light) );
+    // background: linear-gradient(to bottom, var(--global-color-neutral-dark-15), var(--global-color-neutral-dark-05) );
+    background: var(--global-color-neutral-dark-15);
     // background: linear-gradient(to bottom, hsla(var(--global-hue-color-beta), 50%, 90%, 1), var(--global-color-neutral-xxxxx-light) );
 
     img {

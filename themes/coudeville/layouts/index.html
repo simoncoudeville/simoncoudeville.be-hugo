@@ -11,16 +11,15 @@
     </div>
 </header>
 <article class="o-row">
-    <header class="o-row">
+    <!-- <header class="o-row o-row--intro">
         <div class="o-container">
             <h1>
-                Designer, <br>
-                Coder, <br>
-                Teacher
+                Designer, coder <br>
+                & teacher
             </h1>
         </div>
-    </header>
-    <div class="o-row">    
+    </header> -->
+    <div class="o-row o-row--intro">
         <div class="o-container s-content">
             <p>
                 I'm a designer from Belgium with over 10 years industry experience. I worked as a senior designer for <a href="http://wijs.be">Wijs</a> for 7 years. I specialize in responsive web-design, HTML &amp; CSS, typography and animation.
@@ -30,5 +29,45 @@
             </p>
         </div>
     </div>
+    <div class="o-row">
+        <div class="o-container">
+            <h3>Articles</h3>
+            <ul class="c-list">
+                {{ range (where .Site.RegularPages "Section" "blog") }}
+                    <li class="c-list__item">
+                        <span class="c-list__meta">{{ .Date.Format "January 2, 2006" }}</span>
+                        <h3 class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></h3>
+                    </li>
+                {{ end }}
+                {{ range (where .Site.RegularPages "Section" "blog") }}
+                    <li class="c-list__item">
+                        <span class="c-list__meta">{{ .Date.Format "January 2, 2006" }}</span>
+                        <h3 class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></h3>
+                    </li>
+                {{ end }}
+                {{ range (where .Site.RegularPages "Section" "blog") }}
+                    <li class="c-list__item">
+                        <span class="c-list__meta">{{ .Date.Format "January 2, 2006" }}</span>
+                        <h3 class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></h3>
+                    </li>
+                {{ end }}
+                {{ range (where .Site.RegularPages "Section" "blog") }}
+                    <li class="c-list__item">
+                        <span class="c-list__meta">{{ .Date.Format "January 2, 2006" }}</span>
+                        <h3 class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></h3>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
 </article>
+<footer class="o-row">
+    <div class="o-container">
+        <div class="c-footer">
+            <p>
+                &copy; {{ now.Format "2006" }} Simon Coudeville
+            </p>
+        </div>
+    </div>
+</footer>
 {{ end }}
