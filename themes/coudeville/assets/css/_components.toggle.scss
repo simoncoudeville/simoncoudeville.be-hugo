@@ -23,7 +23,7 @@
     transition: all $animation-duration-alpha $animation-easing-out;
     outline: none;
     border: 2px solid var(--toggle__checkbox-borderColor, transparent);
-    background-color: var(--toggle__checkbox-backgroundColor, var(--global-color-neutral-dark-15));
+    background-color: var(--toggle__checkbox-backgroundColor, var(--global-color-neutral-dark-a-075));
 
     &:after {
         content: "";
@@ -59,7 +59,7 @@
 @media (prefers-color-scheme: dark) {
     .c-toggle {
         --toggle__checkbox-backgroundColor: transparent;
-        --toggle__checkbox-borderColor: var(--global-color-neutral-light-50);
+        --toggle__checkbox-borderColor: var(--global-color-neutral-light-a-50);
         --toggle__checkbox-checked-backgroundColor: var(--toggle__checkbox-backgroundColor);
 
         --toggle__switch-focus-borderColor: white;

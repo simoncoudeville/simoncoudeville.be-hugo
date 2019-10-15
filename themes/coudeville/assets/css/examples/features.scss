@@ -53,20 +53,20 @@
 .e-profile__name {
     margin-bottom: 0;
     font-weight: $beta-font-weight;
-    color: var(--global-color-neutral-dark-95);
+    color: var(--global-color-neutral-dark-a-95);
     @include font-height(ms(1),calc(var(--global-baseline-multiplier) - 1));
 }
 
 .e-profile__location {
     position: relative;
     margin-bottom: baseline(3);
-    color: var(--global-color-neutral-dark-50);
+    color: var(--global-color-neutral-dark-a-50);
     @include font-height(ms(0),calc(var(--global-baseline-multiplier) - 1));
 }
 
 .e-profile__occupation {
     margin-bottom: baseline(3);
-    color: var(--global-color-neutral-dark-85);
+    color: var(--global-color-neutral-dark-a-85);
     @include font-height(ms(1),calc(var(--global-baseline-multiplier) - 1));
 }
 

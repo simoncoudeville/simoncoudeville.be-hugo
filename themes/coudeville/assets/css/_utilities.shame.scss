@@ -50,6 +50,12 @@ div:empty {
     align-items: end;
 }
 
+@media (prefers-color-scheme: dark) {
+    .o-row--example {
+        --row--example-backgroundColor: var(--global-color-neutral-light-a-05);
+    }
+}
+
 .o-container {
     grid-column: content;
 }

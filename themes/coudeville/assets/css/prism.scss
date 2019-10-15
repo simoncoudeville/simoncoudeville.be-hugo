@@ -20,9 +20,9 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
 
 code[class*="language-"],
 pre[class*="language-"] {
-	--prism-text-color: var(--global-color-neutral-light-95);
-    --prism-comment-color: var(--global-color-neutral-light-50);
-    --prism-backgroundColor: var(--global-color-neutral-dark-95);
+	--prism-text-color: var(--global-color-neutral-light-a-95);
+    --prism-comment-color: var(--global-color-neutral-light-a-50);
+    --prism-backgroundColor: var(--global-color-neutral-dark-a-95);
     --prism-keyword-color: var(--global-color-beta);
     --prism-function-color: var(--global-color-alpha);
     --prism-variable-color: var(--global-color-gamma);
@@ -163,4 +163,11 @@ pre[class*="language-"] {
 
 .token.entity {
 	cursor: help;
+}
+
+@media (prefers-color-scheme: dark) {
+	code[class*="language-"],
+	pre[class*="language-"] {
+	    --prism-backgroundColor: var(--global-color-neutral-light-a-05);
+	}
 }
