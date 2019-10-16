@@ -10,11 +10,18 @@
     border-radius: 100%;
     overflow: hidden;
     // background: linear-gradient(to bottom, var(--global-color-neutral-dark-a-075), var(--global-color-neutral-dark-a-025) );
-    background: var(--global-color-neutral-dark-a-075);
-    // background: linear-gradient(to bottom, hsla(var(--global-hue-color-beta), 50%, 90%, 1), var(--global-color-neutral-xxxxx-light) );
+    background: var(--avatar-background, var(--global-color-neutral-dark-a-05));
+    // background: var(--global-color-neutral-dark-a-075);
+    // background: linear-gradient(to bottom, hsla(var(--global-hue-color-beta), var(--global-saturation-color-beta), var(--global-lightness-color-beta), .25), hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .25));
 
     img {
-        opacity: .75;
+        opacity: var(--avatar__img-opacity, .75);
         mix-blend-mode: multiply;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .c-avatar {
+        // --avatar-background: var(--global-color-neutral-light-a-05);
     }
 }
