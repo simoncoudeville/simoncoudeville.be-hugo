@@ -1,5 +1,5 @@
 //
-// Example: Profile card
+// Example: 2 column features
 // ---
 // This file will be inlined
 //
@@ -13,54 +13,103 @@
 @import '../settings.colors';
 @import '../settings.global';
 
-
-.e-grid {
-    display: grid;
-    grid-column-gap: var(--global-whitespace-default);
-    grid-template-columns: repeat(auto-fill, minmax(calc((var(--content-max-width) / 2) - #{var(--global-whitespace-default)}), 1fr));
-}
-
-.e-grid__item {
-    grid-column: auto;
-}
-
-.e-grid__icon {
+.e-card {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: baseline(calc(var(--global-baseline-multiplier) * 2));
-    height: baseline(calc(var(--global-baseline-multiplier) * 2));
-    margin-bottom: baseline(calc(var(--global-baseline-multiplier) - 2));
+    margin: 0 auto;
+    max-width: 16em;
+    background-color: white;
+    border-radius: baseline(1);
+    box-shadow: 0 0 0 1px rgba(black, 0.05), 0 2px 4px rgba(black,.075);
+    margin-bottom: var(--global-whitespace-default);
+    overflow: hidden;
+}
 
-    &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: var(--global-color-beta);
-        border-radius: 100%;
-        opacity: .25;
-    }
+.e-card__body {
+    position: relative;
+    padding: baseline(var(--global-baseline-multiplier));
 
-    svg {
-        position: relative;
-        width: baseline(var(--global-baseline-multiplier));
-        height: baseline(var(--global-baseline-multiplier));
-        fill: var(--global-color-beta);
+    // Reset bottom margins on children to make equal paddings possible
+    > *:last-child,
+    > *:last-child > *:last-child,
+    > *:last-child > *:last-child > *:last-child {
+        margin-bottom: 0;
     }
 }
 
-.e-grid__title {
-    margin-bottom: baseline(calc(var(--global-baseline-multiplier) - 2));
-    color: var(--global-color-beta);
+.e-profile {
+    text-align: center;
+}
+
+.e-profile__avatar {
+    display: block;
+    width: baseline(10);
+    margin: 0 auto;
+    border-radius: 100%;
+    margin-bottom: baseline(1);
+    // opacity: .75;
+    mix-blend-mode: multiply;
+}
+
+.e-profile__name {
+    margin-bottom: 0;
     font-weight: $beta-font-weight;
-    @include font-height(ms(2),calc(var(--global-baseline-multiplier) - .5));
+    color: var(--global-color-neutral-dark-a-95);
+    @include font-height(ms(1),calc(var(--global-baseline-multiplier) - 1));
 }
 
-.e-grid__paragraph {
-    @include font-height(ms(1),calc(var(--global-baseline-multiplier) - .5));
+.e-profile__location {
+    position: relative;
+    margin-bottom: baseline(3);
+    color: var(--global-color-neutral-dark-a-50);
+    @include font-height(ms(0),calc(var(--global-baseline-multiplier) - 1));
+}
+
+.e-profile__occupation {
+    margin-bottom: baseline(3);
+    color: var(--global-color-neutral-dark-a-85);
+    @include font-height(ms(1),calc(var(--global-baseline-multiplier) - 1));
+}
+
+.e-button {
+    text-decoration: none;
+    font-weight: $beta-font-weight;
+    display: inline-block;
+    border: 0;
+    text-decoration: none;
+    background-color: $color-beta;
+    border-radius: baseline(.5);
+    transition: all .1s ease-in;
+
+    &,
+    &:visited {
+        color: #fff;
+    }
+
+    &:hover {
+        background-color: lighten($color-beta,5);
+        color: #fff;
+    }
+
+    &:focus {
+        outline: none;
+        background-color: $color-beta;
+        box-shadow: inset 0 0 0 1px white, 0 0 0 3px rgba($color-beta,0.375);
+        color: #fff;
+    }
+
+    &:active {
+        background-color: darken($color-beta,5);
+        box-shadow: none;
+        color: #fff;
+    }
+
+    .s-content & {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.e-button--small {
+    padding: calc(var(--global-baseline) * 1.5 - 1px) baseline(3) calc(var(--global-baseline) * 1.5 + 1px);
+    @include font-height(ms(0),3);
 }

@@ -100,22 +100,13 @@ html {
     font-weight: $alpha-font-weight;
     background-color: var(--global-page-backgroundColor);
     color: var(--global-page-color);
-    // letter-spacing: -.0125em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "zero", "liga";
     font-size: #{$root-font-size-sm/16px*100%};
-    background-image: url("../svg/stripes-1.svg");
-    background-size: 1280px 250px;
-    background-position: 50% calc(50vh - calc(250px - var(--global-whitespace-default)));
-    background-repeat: no-repeat;
 
     @include mq(bp3) {
         font-size: #{$root-font-size/16px*100%};
-        background-size: 2560px 500px;
-        // background-position: 50% calc(50vh - calc(500px - var(--global-whitespace-default)));
-        // background-position: 50% calc(50vh - 500px);
-        background-position: 50% calc(50vh - 468px);
     }
 }
 

@@ -22,18 +22,6 @@
             </h1>
         </div>
     </header>
-    {{ if .Params.Cover }}
-    <figure class="o-row" role="figure">
-        <div class="o-container">
-            <div class="c-cover">
-                <div class="c-cover__body" {{ if .Params.CoverPattern }} style="background-image: url({{ .Params.CoverPattern }});"{{ end }}>
-                    {{ $cover := .Resources.GetMatch .Params.Cover }}
-                    <img class="c-cover__img" src="{{ $cover.Permalink }}" alt="Illustration for {{ .Title }}">
-                </div>
-            </div>
-        </div>
-    </figure>
-    {{ end }}
     <div class="o-row">
         {{ .Content }}
     </div>
