@@ -1,0 +1,8 @@
+{{- with .Get "scss" -}}
+    {{- $scssfile := resources.Get . | toCSS | postCSS -}}
+    {{- $cssfile := $scssfile.RelPermalink -}}
+    {{- $url := print "public" $cssfile -}}
+    <style>
+        {{ $url | readFile | safeCSS }}
+    </style>
+{{- end -}}

@@ -1,0 +1,20 @@
+//
+// Example: Baseline grid
+// ---
+// This file will be inlined
+//
+
+// Tools
+@import '../modularscale';
+@import '../tools.mixins';
+@import '../tools.functions';
+
+// Settings
+@import '../settings.colors';
+@import '../settings.global';
+
+h1 {
+    @include mq(bp2) {
+        @include font-height(ms(14),8);
+    }
+}

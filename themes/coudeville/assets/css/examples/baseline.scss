@@ -16,15 +16,10 @@
 .e-columns {
     column-width: calc((var(--content-max-width) / 2) - #{var(--global-whitespace-default)});
     column-gap: var(--global-whitespace-default);
+    margin-bottom: calc(var(--global-whitespace-default) * -1);
 }
 
 .e-baseline-title {
     font-family: $beta-font-family;
     @include font-height(ms(14),calc(var(--global-baseline-multiplier) * 2));
-}
-
-.e-baseline-paragraph {
-    &:last-child {
-        margin-bottom: 0;
-    }
 }
