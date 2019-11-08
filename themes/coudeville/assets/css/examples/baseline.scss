@@ -20,6 +20,12 @@
 }
 
 .e-baseline-title {
-    font-family: $beta-font-family;
-    @include font-height(ms(14),calc(var(--global-baseline-multiplier) * 2));
+    // font-family: $beta-font-family;
+    // font-weight: $alpha-font-weight;
+    // font-weight: 300;
+    @include font-height(ms(6),calc(var(--global-baseline-multiplier) * 2));
+
+    // @include mq(bp2) {
+    //     @include font-height(ms(10),calc(var(--global-baseline-multiplier) * 2));
+    // }
 }

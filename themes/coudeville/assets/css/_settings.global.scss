@@ -9,15 +9,15 @@
 // ---
 
 $modularscale: (
-  base: 17px 19px 21px,
-  ratio: 1.25
+  base: 17px 19px,
+  ratio: 1.4
 );
 
 // ---
 // Typography
 // ---
 
-$root-font-size: round(ms(2)); // Modular scale size 0 = 19px
+$root-font-size: round(ms(1)); // Modular scale size 0 = 19px
 $root-font-size-sm: round(ms(0)); // Modular scale size -1 for mobile
 
 // Basic font settings
@@ -39,11 +39,22 @@ $root-font-size-sm: round(ms(0)); // Modular scale size -1 for mobile
 // $beta-font-family           : "aktiv-grotesk-extended", sans-serif;
 // $alpha-font-family          : "Messina Sans Trial", sans-serif;
 // $beta-font-family           : "Messina Sans Trial", sans-serif;
-$alpha-font-family          : "acumin-pro", sans-serif;
-$beta-font-family           : "acumin-pro-wide", sans-serif;
+// $alpha-font-family          : "FT Base Web", sans-serif;
+// $beta-font-family           : "FT Base Web", sans-serif;
+$alpha-font-family          : "Suisse Intl Web", sans-serif;
+$beta-font-family           : "Suisse Intl Web", sans-serif;
+// $alpha-font-family          : "UniversalSans-400", sans-serif;
+// $beta-font-family           : "UniversalSans-400", sans-serif;
+// $alpha-font-family          : -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+// $beta-font-family           : -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+// $alpha-font-family          : "Graphik Web", sans-serif;
+// $beta-font-family           : "Graphik Web", sans-serif;
+// $alpha-font-family          : "acumin-pro", sans-serif;
+// $beta-font-family           : "acumin-pro-wide", sans-serif;
 // $alpha-font-family          : "Adapter PE Text TRIAL", sans-serif;
 // $alpha-font-family          : "Modern ERA TRIAL", sans-serif;
-$code-font-family           : "roboto-mono", monospace;
+// $code-font-family           : "roboto-mono", monospace;
+$code-font-family           : "Suisse Intl Web Mono", monospace;
 // $code-font-family           : "Basis Grotesque Mono Trial", monospace;
 // $code-font-family           : "Modern ERA Mono TRIAL", monospace;
 

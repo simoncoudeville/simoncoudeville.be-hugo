@@ -14,7 +14,7 @@
 @import '../settings.global';
 
 html {
-    background-image: url("cover.svg");
+    background-image: url("stripes-3.svg");
     background-size: 1280px 250px;
     // background-position: 50% calc(50vh - calc(250px - var(--global-whitespace-default)));
     background-position: 50% calc(50vh - 202px);
@@ -23,6 +23,6 @@ html {
     @include mq(bp3) {
         background-size: 2560px 500px;
         // background-position: 50% calc(50vh - calc(500px - var(--global-whitespace-default)));
-        background-position: 50% calc(50vh - 468px);
+        background-position: 50% calc(50vh - 654px);
     }
 }

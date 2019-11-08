@@ -11,6 +11,7 @@
     --global-page-color: var(--global-color-neutral-dark-a-85);
     --global-heading-color: var(--global-color-neutral-dark-a-95);
     --global-link-color: var(--global-heading-color);
+    --global-link-hover-color: var(--global-page-color);
     --global-meta-color: var(--global-color-neutral-dark-a-50);
     --global-selection-color: var(--global-color-beta);
 
@@ -65,14 +66,16 @@
     --global-color-neutral-dark-a-85: hsla(var(--global-neutral-hue), 25%, 5%, .85);
     --global-color-neutral-dark-a-95: hsla(var(--global-neutral-hue), 25%, 5%, .95);
 
-    --global-baseline: #{6px / round($root-font-size-sm)}rem;
-    --global-baseline-multiplier: 4;
+    --global-baseline: #{5px / round($root-font-size-sm)}rem;
+    --global-baseline-multiplier: 5;
 
     --global-whitespace-default: calc(var(--global-baseline) * var(--global-baseline-multiplier));
     --global-whitespace-double: calc(var(--global-whitespace-default) * 2);
 
     @include mq(bp3) {
-        --global-baseline: #{8px / $root-font-size}rem;
+        --global-baseline: #{6px / round($root-font-size)}rem;
+        // --global-baseline-multiplier: 5;
+        // --global-baseline: #{8px / $root-font-size}rem;
     }
 
     @include light-scheme;
@@ -104,6 +107,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "zero", "liga";
     font-size: #{$root-font-size-sm/16px*100%};
+    // letter-spacing: .01em;
 
     @include mq(bp3) {
         font-size: #{$root-font-size/16px*100%};
@@ -113,8 +117,13 @@ html {
 body {
     position: relative;
     min-height: 100vh;
+    padding: var(--global-whitespace-default) 0 0;
     // background-color: var(--page-background-color);
     line-height: baseline(var(--global-baseline-multiplier));
+
+    // @include mq(bp3) {
+    //     padding: var(--global-whitespace-double) 0  var(--global-whitespace-default);
+    // }
 }
 
 ::selection {

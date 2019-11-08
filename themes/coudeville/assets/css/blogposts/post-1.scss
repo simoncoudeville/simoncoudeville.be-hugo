@@ -15,6 +15,6 @@
 
 h1 {
     @include mq(bp2) {
-        @include font-height(ms(14),8);
+        @include font-height(ms(16),12);
     }
 }

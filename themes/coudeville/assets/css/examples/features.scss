@@ -55,12 +55,12 @@
 }
 
 .e-grid__title {
-    margin-bottom: baseline(calc(var(--global-baseline-multiplier) - 2));
+    margin-bottom: baseline(calc(var(--global-baseline-multiplier) - 3));
     color: var(--global-color-beta);
     font-weight: $beta-font-weight;
-    @include font-height(ms(2),calc(var(--global-baseline-multiplier) - .5));
+    @include font-height(ms(1),calc(var(--global-baseline-multiplier) - .5));
 }
 
 .e-grid__paragraph {
-    @include font-height(ms(1),calc(var(--global-baseline-multiplier) - .5));
+    @include font-height(ms(0),calc(var(--global-baseline-multiplier) - .5));
 }

@@ -1,28 +1,30 @@
 {{ define "main" }}
-<header class="o-row o-row--header">
-    <div class="o-container">
-        <div class="c-header">
-            <p class="c-header__logo c-logo">
-                <a href="/" class="c-logo__link">
-                    Simon Coudeville
-                </a>
-            </p>
-        </div>
-    </div>
-</header>
+
 <article class="o-row">
     <!-- <header class="o-row o-row--intro">
         <div class="o-container">
+            <h1>
+                Simon <br>
+                Coudeville
+            </h1>
             <h1>
                 Designer, coder <br>
                 & teacher
             </h1>
         </div>
     </header> -->
-    <div class="o-row o-row--intro">
+
+    <div class="o-row">
+        <!-- <div class="o-aside">
+            <p class="c-logo">
+                <a href="/" class="c-logo__link">
+                    Simon Coudeville
+                </a>
+            </p>
+        </div> -->
         <div class="o-container s-content">
             <p>
-                I'm a designer from Belgium with over 10 years industry experience. I worked as a senior designer for <a href="http://wijs.be">Wijs</a> for 7 years. I specialize in responsive web-design, HTML &amp; CSS, typography and animation.
+                Hey, I’m Simon, a designer and teacher from Belgium with over 10 years industry experience. I worked as a senior designer for <a href="http://wijs.be">Wijs</a> for 7 years. I specialize in responsive web-design, HTML &amp; CSS, typography and animation.
                 Recently I started teaching UX and UI design at <a href="http://mct.be"title="mct.be">MCT</a> Howest in Kortrijk.
 
                 Some of my work is on <a href="https://dribbble.com/coudeville">Dribbble</a>. My code expermiments are on <a href="https://codepen.io/simoncoudeville/">Codepen</a>. You can send me an <a href="mailto:coudeville.simon@gmail.com">email</a> or follow me on <a href="https://twitter.com/simoncoudeville">Twitter</a>.
@@ -30,6 +32,9 @@
         </div>
     </div>
     <div class="o-row">
+        <!-- <div class="o-aside">
+            <h3 class="u-mb-clear">Articles</h3>
+        </div> -->
         <div class="o-container">
             <h3>Articles</h3>
             <ul class="c-list">
@@ -38,18 +43,9 @@
                         <span class="c-list__meta">{{ .Date.Format "January 2, 2006" }}</span>
                         <h3 class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></h3>
                     </li>
-                {{ end }}                              
+                {{ end }}
             </ul>
         </div>
     </div>
 </article>
-<footer class="o-row">
-    <div class="o-container">
-        <div class="c-footer">
-            <p>
-                &copy; {{ now.Format "2006" }} Simon Coudeville
-            </p>
-        </div>
-    </div>
-</footer>
 {{ end }}

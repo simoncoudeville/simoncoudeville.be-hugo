@@ -42,42 +42,40 @@
 
 .e-profile__avatar {
     display: block;
-    width: baseline(10);
+    width: baseline(12);
     margin: 0 auto;
     border-radius: 100%;
     margin-bottom: baseline(1);
-    // opacity: .75;
     mix-blend-mode: multiply;
 }
 
 .e-profile__name {
     margin-bottom: 0;
-    font-weight: $beta-font-weight;
     color: var(--global-color-neutral-dark-a-95);
-    @include font-height(ms(1),calc(var(--global-baseline-multiplier) - 1));
+    @include font-height(ms(0),calc(var(--global-baseline-multiplier) - 1));
 }
 
 .e-profile__location {
     position: relative;
     margin-bottom: baseline(3);
     color: var(--global-color-neutral-dark-a-50);
-    @include font-height(ms(0),calc(var(--global-baseline-multiplier) - 1));
+    @include font-height(15px, calc(var(--global-baseline-multiplier) - 1));
 }
 
 .e-profile__occupation {
-    margin-bottom: baseline(3);
+    margin-bottom: baseline(4);
     color: var(--global-color-neutral-dark-a-85);
-    @include font-height(ms(1),calc(var(--global-baseline-multiplier) - 1));
+    @include font-height(ms(0),calc(var(--global-baseline-multiplier) - 1));
 }
 
 .e-button {
     text-decoration: none;
-    font-weight: $beta-font-weight;
+    // font-weight: $beta-font-weight;
     display: inline-block;
     border: 0;
     text-decoration: none;
     background-color: $color-beta;
-    border-radius: baseline(.5);
+    border-radius: baseline(5);
     transition: all .1s ease-in;
 
     &,
@@ -110,6 +108,6 @@
 }
 
 .e-button--small {
-    padding: calc(var(--global-baseline) * 1.5 - 1px) baseline(3) calc(var(--global-baseline) * 1.5 + 1px);
-    @include font-height(ms(0),3);
+    padding: baseline(2) baseline(var(--global-baseline-multiplier)) baseline(2);
+    @include font-height(15px,calc(var(--global-baseline-multiplier) - 1));
 }

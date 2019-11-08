@@ -4,11 +4,12 @@
     }
 
     a {
-        font-weight: $beta-font-weight;
+        // font-weight: $beta-font-weight;
         text-decoration: underline;
     }
 
     p {
+        font-feature-settings: "zero", "liga", "ss02";
         hyphens: auto;
         hyphenate-limit-chars: 6 3 3;
         hyphenate-limit-lines: 2;

@@ -40,7 +40,7 @@ pre[class*="language-"] {
 	@include font-height(ms(1),var(--global-baseline-multiplier));
 
     @include mq(bp3) {
-        @include font-height(17px, 3.5);
+        @include font-height(ms(0), var(--global-baseline-multiplier));
     }
 
 	-moz-tab-size: 4;

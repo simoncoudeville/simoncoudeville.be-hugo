@@ -10,10 +10,11 @@ div:empty {
 
 .o-grid {
     --content-max-width: 35em;
-    --grid-whitespace: var(--global-whitespace-default);
+    --grid-whitespace: 0;
     display: grid;
     grid: ". content ." / minmax(var(--grid-whitespace),1fr) minmax(0, var(--content-max-width)) minmax(var(--grid-whitespace),1fr);
-    // grid-template-rows: auto;
+    grid-gap: var(--global-whitespace-default);
+    align-items: center;
 
     @include mq(bp3) {
         --grid-whitespace: var(--global-whitespace-double);
@@ -27,9 +28,9 @@ div:empty {
     // grid-template-rows: inherit;
     grid-gap: inherit;
 
-    & + & {
-        margin-top: var(--global-whitespace-default);
-    }
+    // & + & {
+    //     margin-top: var(--global-whitespace-default);
+    // }
 }
 
 .o-row--lg {
@@ -41,13 +42,20 @@ div:empty {
     margin-bottom: var(--global-whitespace-default);
 }
 
-.o-row--header {
-    padding-top: var(--global-whitespace-default);
-}
+// .o-row--header {
+//     padding-top: var(--global-whitespace-default);
+// }
 
 .o-row--intro {
-    min-height: calc(50vh - #{baseline(calc(var(--global-baseline-multiplier) * 3))});
+    min-height: calc(50vh - #{baseline(calc(var(--global-baseline-multiplier) * 5))});
+    padding-top: var(--global-whitespace-double);
     align-items: end;
+    grid-template-rows: auto;
+}
+
+.o-row--footer {
+    // margin-top: auto;
+    align-self: flex-end;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -56,8 +64,16 @@ div:empty {
     }
 }
 
-.o-container {
+.o-container,
+.o-aside {
     grid-column: content;
+}
+
+.o-aside {
+    @include mq(bp5) {
+        grid-column: 1;
+        text-align: right;
+    }
 }
 
 .c-list {
@@ -92,4 +108,12 @@ div:empty {
 
 .u-mt-clear {
     margin-top: 0 !important;
+}
+
+.u-mb-clear {
+    margin-bottom: 0 !important;
+}
+
+.u-color-meta {
+    color: var(--global-meta-color);
 }

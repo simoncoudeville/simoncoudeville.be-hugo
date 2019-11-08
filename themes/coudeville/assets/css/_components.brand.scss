@@ -6,13 +6,6 @@
 
 .c-logo {
     color: var(--logo-color, var(--global-heading-color));
-    font-weight: $beta-font-weight;
-    @include font-height(ms(1),var(--global-baseline-multiplier));
-    // @include font-height(ms(2),var(--global-baseline-multiplier));
-
-    @include mq(bp3) {
-        @include font-height(ms(1),var(--global-baseline-multiplier));
-    }
 }
 
 .c-logo__link {

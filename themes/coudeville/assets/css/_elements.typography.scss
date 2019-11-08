@@ -40,28 +40,35 @@ ul {
 }
 
 h1 {
+    // font-weight: $beta-font-weight;
+    // font-weight: 300;
     font-weight: $alpha-font-weight;
-    font-family: $beta-font-family;
+    // font-family: $beta-font-family;
+    // font-family: $alpha;
     margin-bottom: var(--global-whitespace-default);
-    @include font-height(ms(14),8);
+    // font-feature-settings: "ss01", "liga";
+    // @include font-height(ms(8),calc(var(--global-baseline-multiplier) * 2));
+    @include font-height(ms(4),calc(var(--global-baseline-multiplier) + 2));
 
-    @include mq(bp2) {
-        @include font-height(ms(16),9);
-    }
+    // @include mq(bp2) {
+    //     @include font-height(ms(10),calc(var(--global-baseline-multiplier) * 2));
+    // }
 }
 
 h2 {
-    font-weight: $beta-font-weight;
+    // font-weight: $beta-font-weight;
+    font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-default);
-    @include font-height(ms(7),5);
+    @include font-height(ms(2),var(--global-baseline-multiplier));
 }
 
 h3 {
-    font-weight: $beta-font-weight;
+    // font-weight: $beta-font-weight;
+    font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-default);
     // margin-bottom: calc(var(--global-whitespace-default) * .5);
-    // color: var(--page-meta-color);
-    @include font-height(ms(2),var(--global-baseline-multiplier));
+    // color: var(--global-meta-color);
+    @include font-height(ms(1),var(--global-baseline-multiplier));
 }
 
 h4 {
@@ -102,12 +109,12 @@ a {
     }
 
     &:hover {
-        color: var(--global-page-color);
+        color: var(--global-link-hover-color);
     }
 
     &:focus {
         outline: thin dotted;
-        color: var(--global-page-color);
+        color: var(--global-link-hover-color);
     }
 
     &:hover,

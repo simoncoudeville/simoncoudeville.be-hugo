@@ -7,11 +7,7 @@
     align-items: center;
     margin-bottom: var(--global-whitespace-default);
     color: var(--toggle-color, var(--global-meta-color));
-    @include font-height(ms(1),var(--global-baseline-multiplier));
-
-    @include mq(bp3) {
-        @include font-height(ms(0), var(--global-baseline-multiplier));
-    }
+    @include font-height(ms(0),var(--global-baseline-multiplier));
 }
 
 .c-toggle__checkbox {
