@@ -8,7 +8,7 @@
 
 @mixin light-scheme {
     --global-page-backgroundColor: var(--global-color-neutral-dark-a-025);
-    --global-page-color: var(--global-color-neutral-dark-a-85);
+    --global-page-color: var(--global-color-neutral-dark-a-95);
     --global-heading-color: var(--global-color-neutral-dark-a-95);
     --global-link-color: var(--global-heading-color);
     --global-link-hover-color: var(--global-page-color);
@@ -21,7 +21,7 @@
 
 @mixin dark-scheme {
     --global-page-backgroundColor: var(--global-color-neutral-dark-a-95);
-    --global-page-color: var(--global-color-neutral-light-a-85);
+    --global-page-color: var(--global-color-neutral-light-a-95);
     --global-heading-color: var(--global-color-neutral-light-a-95);
     --global-meta-color: var(--global-color-neutral-light-a-50);
 }
@@ -44,27 +44,27 @@
 
     --global-neutral-hue: var(--global-hue-color-beta);
 
-    --global-color-neutral-light-a-025: hsla(var(--global-neutral-hue), 25%, 95%, .025);
-    --global-color-neutral-light-a-075: hsla(var(--global-neutral-hue), 25%, 95%, .075);
-    --global-color-neutral-light-a-05: hsla(var(--global-neutral-hue), 25%, 95%, .05);
-    --global-color-neutral-light-a-10: hsla(var(--global-neutral-hue), 25%, 95%, .1);
-    --global-color-neutral-light-a-15: hsla(var(--global-neutral-hue), 25%, 95%, .15);
-    --global-color-neutral-light-a-25: hsla(var(--global-neutral-hue), 25%, 95%, .25);
-    --global-color-neutral-light-a-50: hsla(var(--global-neutral-hue), 25%, 95%, .5);
-    --global-color-neutral-light-a-75: hsla(var(--global-neutral-hue), 25%, 95%, .75);
-    --global-color-neutral-light-a-85: hsla(var(--global-neutral-hue), 25%, 95%, .85);
-    --global-color-neutral-light-a-95: hsla(var(--global-neutral-hue), 25%, 95%, .95);
+    --global-color-neutral-light-a-025: hsla(var(--global-neutral-hue), 5%, 95%, .025);
+    --global-color-neutral-light-a-075: hsla(var(--global-neutral-hue), 5%, 95%, .075);
+    --global-color-neutral-light-a-05: hsla(var(--global-neutral-hue), 5%, 95%, .05);
+    --global-color-neutral-light-a-10: hsla(var(--global-neutral-hue), 5%, 95%, .1);
+    --global-color-neutral-light-a-15: hsla(var(--global-neutral-hue), 5%, 95%, .15);
+    --global-color-neutral-light-a-25: hsla(var(--global-neutral-hue), 5%, 95%, .25);
+    --global-color-neutral-light-a-50: hsla(var(--global-neutral-hue), 5%, 95%, .5);
+    --global-color-neutral-light-a-75: hsla(var(--global-neutral-hue), 5%, 95%, .75);
+    --global-color-neutral-light-a-85: hsla(var(--global-neutral-hue), 5%, 95%, .85);
+    --global-color-neutral-light-a-95: hsla(var(--global-neutral-hue), 5%, 95%, .95);
 
-    --global-color-neutral-dark-a-025: hsla(var(--global-neutral-hue), 25%, 5%, .025);
-    --global-color-neutral-dark-a-075: hsla(var(--global-neutral-hue), 25%, 5%, .075);
-    --global-color-neutral-dark-a-05: hsla(var(--global-neutral-hue), 25%, 5%, .05);
-    --global-color-neutral-dark-a-10: hsla(var(--global-neutral-hue), 25%, 5%, .1);
-    --global-color-neutral-dark-a-15: hsla(var(--global-neutral-hue), 25%, 5%, .15);
-    --global-color-neutral-dark-a-25: hsla(var(--global-neutral-hue), 25%, 5%, .25);
-    --global-color-neutral-dark-a-50: hsla(var(--global-neutral-hue), 25%, 5%, .5);
-    --global-color-neutral-dark-a-75: hsla(var(--global-neutral-hue), 25%, 5%, .75);
-    --global-color-neutral-dark-a-85: hsla(var(--global-neutral-hue), 25%, 5%, .85);
-    --global-color-neutral-dark-a-95: hsla(var(--global-neutral-hue), 25%, 5%, .95);
+    --global-color-neutral-dark-a-025: hsla(var(--global-neutral-hue), 5%, 5%, .025);
+    --global-color-neutral-dark-a-075: hsla(var(--global-neutral-hue), 5%, 5%, .075);
+    --global-color-neutral-dark-a-05: hsla(var(--global-neutral-hue), 5%, 5%, .05);
+    --global-color-neutral-dark-a-10: hsla(var(--global-neutral-hue), 5%, 5%, .1);
+    --global-color-neutral-dark-a-15: hsla(var(--global-neutral-hue), 5%, 5%, .15);
+    --global-color-neutral-dark-a-25: hsla(var(--global-neutral-hue), 5%, 5%, .25);
+    --global-color-neutral-dark-a-50: hsla(var(--global-neutral-hue), 5%, 5%, .5);
+    --global-color-neutral-dark-a-75: hsla(var(--global-neutral-hue), 5%, 5%, .75);
+    --global-color-neutral-dark-a-85: hsla(var(--global-neutral-hue), 5%, 5%, .85);
+    --global-color-neutral-dark-a-95: hsla(var(--global-neutral-hue), 5%, 5%, .95);
 
     --global-baseline: #{5px / round($root-font-size-sm)}rem;
     --global-baseline-multiplier: 5;
@@ -117,7 +117,7 @@ html {
 body {
     position: relative;
     min-height: 100vh;
-    padding: var(--global-whitespace-default) 0 0;
+    // padding: var(--global-whitespace-default) 0 0;
     // background-color: var(--page-background-color);
     line-height: baseline(var(--global-baseline-multiplier));
 
