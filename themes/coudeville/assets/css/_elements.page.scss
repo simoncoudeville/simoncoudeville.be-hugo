@@ -72,6 +72,8 @@
     --global-whitespace-default: calc(var(--global-baseline) * var(--global-baseline-multiplier));
     --global-whitespace-double: calc(var(--global-whitespace-default) * 2);
 
+    --global-container-maxWidth: 35em;
+
     @include mq(bp3) {
         --global-baseline: #{6px / round($root-font-size)}rem;
         // --global-baseline-multiplier: 5;

@@ -9,10 +9,9 @@ div:empty {
 }
 
 .o-grid {
-    --content-max-width: 35em;
     --grid-whitespace: 0;
     display: grid;
-    grid: ". content ." / minmax(var(--grid-whitespace),1fr) minmax(0, var(--content-max-width)) minmax(var(--grid-whitespace),1fr);
+    grid: ". content ." / minmax(var(--grid-whitespace),1fr) minmax(0, var(--global-container-maxWidth)) minmax(var(--grid-whitespace),1fr);
     grid-gap: var(--global-whitespace-default);
     align-items: flex-start;
 
