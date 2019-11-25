@@ -34,10 +34,6 @@
     transition-property: opacity, transform;
     transition-duration: $animation-duration-gamma;
     transition-timing-function: $animation-easing-out;
-
-    // @include mq(bp3) {
-    //     @include font-height(ms(1),var(--global-baseline-multiplier));
-    // }
 }
 
 // .c-header__meta {

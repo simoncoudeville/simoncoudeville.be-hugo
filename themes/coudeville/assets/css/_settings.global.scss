@@ -9,16 +9,16 @@
 // ---
 
 $modularscale: (
-  base: 17px 19px,
-  ratio: 1.4
+  base: 19px,
+  ratio: 1.2
 );
 
 // ---
 // Typography
 // ---
 
-$root-font-size: round(ms(1)); // Modular scale size 0 = 19px
-$root-font-size-sm: round(ms(0)); // Modular scale size -1 for mobile
+$root-font-size: 19px; // Modular scale size 0 = 19px
+$root-font-size-sm: 17px; // Modular scale size -1 for mobile
 
 // Basic font settings
 

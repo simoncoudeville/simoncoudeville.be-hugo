@@ -66,6 +66,17 @@
     --global-color-neutral-dark-a-85: hsla(var(--global-neutral-hue), 5%, 5%, .85);
     --global-color-neutral-dark-a-95: hsla(var(--global-neutral-hue), 5%, 5%, .95);
 
+    /* type scale */
+    --global-modular-scale-ratio: 1.125;
+    --global-fontSize: #{$root-font-size-sm / 16px}rem;
+    --global-fontSize-xs: calc((1rem / var(--global-modular-scale-ratio)) / var(--global-modular-scale-ratio));
+    --global-fontSize-sm: calc(var(--global-fontSize-xs) * var(--global-modular-scale-ratio));
+    --global-fontSize-md: calc(1rem * var(--global-modular-scale-ratio));
+    --global-fontSize-lg: calc(var(--global-fontSize-md) * var(--global-modular-scale-ratio));
+    --global-fontSize-xl: calc(var(--global-fontSize-lg) * var(--global-modular-scale-ratio));
+    --global-fontSize-xxl: calc(var(--global-fontSize-xl) * var(--global-modular-scale-ratio));
+    --global-fontSize-xxxl: calc(var(--global-fontSize-xxl) * var(--global-modular-scale-ratio));
+
     --global-baseline: #{5px / round($root-font-size-sm)}rem;
     --global-baseline-multiplier: 5;
 
@@ -75,9 +86,8 @@
     --global-container-maxWidth: 35em;
 
     @include mq(bp3) {
-        --global-baseline: #{6px / round($root-font-size)}rem;
-        // --global-baseline-multiplier: 5;
-        // --global-baseline: #{8px / $root-font-size}rem;
+        --global-fontSize: #{$root-font-size / 16px}rem;
+        --global-baseline: #{6px / $root-font-size}rem;
     }
 
     @include light-scheme;
@@ -108,12 +118,13 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "zero", "liga";
-    font-size: #{$root-font-size-sm/16px*100%};
+    // font-size: #{$root-font-size-sm/16px*100%};
+    font-size: var(--global-fontSize);
     // letter-spacing: .01em;
 
-    @include mq(bp3) {
-        font-size: #{$root-font-size/16px*100%};
-    }
+    // @include mq(bp3) {
+    //     font-size: #{$root-font-size/16px*100%};
+    // }
 }
 
 body {

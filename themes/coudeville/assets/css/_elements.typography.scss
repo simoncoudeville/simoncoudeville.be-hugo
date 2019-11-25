@@ -40,40 +40,31 @@ ul {
 }
 
 h1 {
-    // font-weight: $beta-font-weight;
-    // font-weight: 300;
     font-weight: $alpha-font-weight;
-    // font-family: $alpha;
     margin-bottom: var(--global-whitespace-default);
-    // font-feature-settings: "ss01", "liga";
-    // @include font-height(ms(8),calc(var(--global-baseline-multiplier) * 2));
-    @include font-height(ms(4),calc(var(--global-baseline-multiplier) + 2));
-
-    // @include mq(bp2) {
-    //     @include font-height(ms(10),calc(var(--global-baseline-multiplier) * 2));
-    // }
+    font-size: var(--global-fontSize-xxxl);
+    line-height: calc(calc(var(--global-baseline-multiplier) + 2) * var(--global-baseline) );
 }
 
 h2 {
-    // font-weight: $beta-font-weight;
     font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-default);
-    @include font-height(ms(2),var(--global-baseline-multiplier));
+    font-size: var(--global-fontSize-lg);
+    line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline) );
 }
 
 h3 {
-    // font-weight: $beta-font-weight;
     font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-default);
-    // margin-bottom: calc(var(--global-whitespace-default) * .5);
-    // color: var(--global-meta-color);
-    @include font-height(ms(1),var(--global-baseline-multiplier));
+    font-size: 1rem;
+    line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline) );
 }
 
 h4 {
     font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-default);
-    @include font-height($h4-font-size,$h4-baseline-multiplier);
+    font-size: var(--global-fontSize);
+    line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline) );
 }
 
 p,
@@ -93,7 +84,8 @@ blockquote {
 pre {
     white-space: pre-wrap;
     margin-bottom: var(--global-whitespace-default);
-    @include font-height(ms(0),4);
+    font-size: var(--global-fontSize);
+    line-height: calc(var(--global-baseline) * var(--global-baseline-multiplier));
 }
 
 // Links

@@ -52,20 +52,23 @@
 .e-profile__name {
     margin-bottom: 0;
     color: var(--global-color-neutral-dark-a-95);
-    @include font-height(ms(0),calc(var(--global-baseline-multiplier) - 1));
+    font-size: var(--global-fontSize-sm);
+    line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
 }
 
 .e-profile__location {
     position: relative;
     margin-bottom: baseline(3);
     color: var(--global-color-neutral-dark-a-50);
-    @include font-height(15px, calc(var(--global-baseline-multiplier) - 1));
+    font-size: var(--global-fontSize-xs);
+    line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
 }
 
 .e-profile__occupation {
     margin-bottom: baseline(4);
     color: var(--global-color-neutral-dark-a-85);
-    @include font-height(ms(0),calc(var(--global-baseline-multiplier) - 1));
+    font-size: var(--global-fontSize-sm);
+    line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
 }
 
 .e-button {
@@ -109,5 +112,6 @@
 
 .e-button--small {
     padding: baseline(2) baseline(var(--global-baseline-multiplier)) baseline(2);
-    @include font-height(15px,calc(var(--global-baseline-multiplier) - 1));
+    font-size: var(--global-fontSize-xs);
+    line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
 }
