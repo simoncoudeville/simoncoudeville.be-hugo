@@ -7,12 +7,14 @@
 // CSS vars
 
 @mixin light-scheme {
+    /* Light theme */
     --global-page-backgroundColor: var(--global-color-neutral-dark-a-025);
     --global-page-color: var(--global-color-neutral-dark-a-95);
     --global-heading-color: var(--global-color-neutral-dark-a-95);
     --global-link-color: var(--global-heading-color);
     --global-link-hover-color: var(--global-page-color);
     --global-meta-color: var(--global-color-neutral-dark-a-50);
+    --global-border-color: var(--global-color-neutral-dark-a-10);
     --global-selection-color: var(--global-color-beta);
 
     --global-baseline-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .50);
@@ -20,13 +22,16 @@
 }
 
 @mixin dark-scheme {
+    /* Dark theme */
     --global-page-backgroundColor: var(--global-color-neutral-dark-a-95);
     --global-page-color: var(--global-color-neutral-light-a-95);
     --global-heading-color: var(--global-color-neutral-light-a-95);
     --global-meta-color: var(--global-color-neutral-light-a-50);
+    --global-border-color: var(--global-color-neutral-light-a-10);
 }
 
 :root {
+    /* colors */
     --global-color-alpha: #{$color-alpha};
     --global-hue-color-alpha: #{hue($color-alpha)};
     --global-saturation-color-alpha: #{saturation($color-alpha)};
@@ -68,44 +73,54 @@
 
     /* type scale */
     --global-modular-scale-ratio: 1.125;
-    --global-fontSize: #{$root-font-size-sm / 16px}rem;
-    --global-fontSize-xs: calc((1rem / var(--global-modular-scale-ratio)) / var(--global-modular-scale-ratio));
+    --global-root-fontSize: #{$root-font-size-sm/16px*100%};
+
+    --global-fontSize: 1rem;
+    --global-fontSize-xxs: calc((var(--global-fontSize-xs) / var(--global-modular-scale-ratio)) / var(--global-modular-scale-ratio));
+    --global-fontSize-xs: calc((var(--global-fontSize) / var(--global-modular-scale-ratio)) / var(--global-modular-scale-ratio));
     --global-fontSize-sm: calc(var(--global-fontSize-xs) * var(--global-modular-scale-ratio));
-    --global-fontSize-md: calc(1rem * var(--global-modular-scale-ratio));
+    --global-fontSize-md: calc(var(--global-fontSize) * var(--global-modular-scale-ratio));
     --global-fontSize-lg: calc(var(--global-fontSize-md) * var(--global-modular-scale-ratio));
     --global-fontSize-xl: calc(var(--global-fontSize-lg) * var(--global-modular-scale-ratio));
     --global-fontSize-xxl: calc(var(--global-fontSize-xl) * var(--global-modular-scale-ratio));
     --global-fontSize-xxxl: calc(var(--global-fontSize-xxl) * var(--global-modular-scale-ratio));
 
+    /* baseline */
     --global-baseline: #{5px / round($root-font-size-sm)}rem;
     --global-baseline-multiplier: 5;
 
     --global-whitespace-default: calc(var(--global-baseline) * var(--global-baseline-multiplier));
     --global-whitespace-double: calc(var(--global-whitespace-default) * 2);
 
+    --global-whitespace-xxs: var(--global-baseline);
+    --global-whitespace-xs: calc(var(--global-baseline) * 2);
+    --global-whitespace-sm: calc(var(--global-baseline) * 3);
+    --global-whitespace-md: calc(var(--global-baseline) * 4);
+
+    /* layout */
     --global-container-maxWidth: 35em;
 
     @include mq(bp3) {
-        --global-fontSize: #{$root-font-size / 16px}rem;
+        --global-root-fontSize: #{$root-font-size/16px*100%};
         --global-baseline: #{6px / $root-font-size}rem;
     }
 
     @include light-scheme;
 
 }
-
-.is-inverted {
-    @include dark-scheme;
-}
+//
+// .is-inverted {
+//     @include dark-scheme;
+// }
 
 @media (prefers-color-scheme: dark) {
     :root {
         @include dark-scheme;
     }
-
-    .is-inverted {
-        @include light-scheme;
-    }
+    //
+    // .is-inverted {
+    //     @include light-scheme;
+    // }
 }
 
 // styles
@@ -118,13 +133,8 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "zero", "liga";
-    // font-size: #{$root-font-size-sm/16px*100%};
-    font-size: var(--global-fontSize);
+    font-size: var(--global-root-fontSize);
     // letter-spacing: .01em;
-
-    // @include mq(bp3) {
-    //     font-size: #{$root-font-size/16px*100%};
-    // }
 }
 
 body {

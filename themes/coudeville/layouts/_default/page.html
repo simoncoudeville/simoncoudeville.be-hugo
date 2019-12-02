@@ -1,0 +1,34 @@
+{{ define "main" }}
+<!-- <div class="c-header-observer js-header-observer"></div> -->
+<header class="o-row o-row--header js-header">
+    <!-- <div class="o-aside">
+        <p class="c-logo">
+            <a href="/" class="c-logo__link">
+                Simon Coudeville
+            </a>
+        </p>
+    </div> -->
+    <div class="o-container">
+        <div class="c-header">
+            <p class="c-header__logo c-logo">
+                <a href="/" class="c-logo__link">Simon Coudeville</a>
+            </p>
+            <h1 class="c-header__meta c-text-base u-color-meta">
+                {{ .Title }}
+            </h1>
+        </div>
+    </div>
+</header>
+<article class="o-row">
+    {{ .Content }}
+</article>
+<footer class="o-row">
+    <div class="o-container">
+        <div class="c-footer">
+            <p>
+                &copy; {{ now.Format "2006" }} Simon Coudeville
+            </p>
+        </div>
+    </div>
+</footer>
+{{ end }}

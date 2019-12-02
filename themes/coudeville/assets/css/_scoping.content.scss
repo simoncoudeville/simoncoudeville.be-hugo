@@ -1,4 +1,6 @@
 .s-content {
+    max-width: var(--global-container-maxWidth);
+
     * + h2 {
         margin-top: var(--global-whitespace-double); // Add extra margin on top
     }
@@ -8,12 +10,14 @@
         text-decoration: underline;
     }
 
-    p {
-        // font-feature-settings: "zero", "liga", "ss02";
-        hyphens: auto;
-        hyphenate-limit-chars: 6 3 3;
-        hyphenate-limit-lines: 2;
-        hyphenate-limit-last: always;
-        hyphenate-limit-zone: 8%;
+    p,
+    ul,
+    ol {
+        font-feature-settings: "zero", "liga", "ss02";
+        // hyphens: auto;
+        // hyphenate-limit-chars: 6 3 3;
+        // hyphenate-limit-lines: 2;
+        // hyphenate-limit-last: always;
+        // hyphenate-limit-zone: 8%;
     }
 }

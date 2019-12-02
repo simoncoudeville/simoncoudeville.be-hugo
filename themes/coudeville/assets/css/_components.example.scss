@@ -14,8 +14,12 @@
     margin-top: baseline(calc(var(--global-baseline-multiplier) * -2));
     font-weight: normal;
     color: var(--example__title-color, var(--global-meta-color));
-    font-size: var(--global-fontSize-sm);
-    line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
+    // font-size: var(--global-fontSize-sm);
+    // line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
+    font-size: var(--global-fontSize-xs);
+    line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline) );
+    text-transform: uppercase;
+    font-family: $code-font-family;
 }
 
 .c-example__body {
