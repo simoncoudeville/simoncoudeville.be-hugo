@@ -1,13 +1,6 @@
 {{ define "main" }}
 <!-- <div class="c-header-observer js-header-observer"></div> -->
 <header class="o-row o-row--header js-header">
-    <!-- <div class="o-aside">
-        <p class="c-logo">
-            <a href="/" class="c-logo__link">
-                Simon Coudeville
-            </a>
-        </p>
-    </div> -->
     <div class="o-container">
         <div class="c-header">
             <p class="c-header__logo c-logo">
@@ -19,7 +12,7 @@
         </div>
     </div>
 </header>
-<article class="o-row">
+<main class="o-row">
     <header class="o-row o-row--intro">
         <div class="o-container">
             <h1 class="js-title">
@@ -30,7 +23,7 @@
     <div class="o-row">
         {{ .Content }}
     </div>
-</article>
+</main>
 <aside class="o-row o-row--lg">
     <div class="o-container s-content">
         <div class="c-about">
@@ -43,13 +36,5 @@
         </div>
     </div>
 </aside>
-<footer class="o-row">
-    <div class="o-container">
-        <div class="c-footer">
-            <p>
-                &copy; {{ now.Format "2006" }} Simon Coudeville, ou agree that you will not modify, copy, reproduce, sell, or distribute any content in any manner or medium without permission
-            </p>
-        </div>
-    </div>
-</footer>
+{{ partial "footer.html" . }}
 {{ end }}
