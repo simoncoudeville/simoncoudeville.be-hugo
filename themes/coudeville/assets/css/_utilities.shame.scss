@@ -8,164 +8,6 @@ div:empty {
    display: none;
 }
 
-.o-grid {
-    --grid-whitespace: 0;
-    display: grid;
-    grid: ". content ." / minmax(var(--grid-whitespace),1fr) minmax(0, var(--global-container-maxWidth)) minmax(var(--grid-whitespace),1fr);
-    grid-gap: var(--global-whitespace-default);
-    align-items: flex-start;
-
-    @include mq(bp4) {
-        --grid-whitespace: var(--global-whitespace-double);
-    }
-}
-
-.o-row {
-    grid-column: 1 / -1;
-    display: grid;
-    grid: inherit;
-    // grid-template-rows: inherit;
-    grid-gap: inherit;
-
-    // & + & {
-    //     margin-top: var(--global-whitespace-default);
-    // }
-
-    .o-row .o-row {
-        grid-gap: 0
-    }
-}
-
-.o-row--lg {
-    padding: var(--global-whitespace-default) 0;
-}
-
-.o-row--example {
-    background: var(--row--example-backgroundColor, var(--global-page-backgroundColor));
-    margin-bottom: var(--global-whitespace-default);
-}
-
-.o-row--header {
-    padding-top: var(--global-whitespace-default);
-    z-index: 1000;
-    transition: all $animation-duration-alpha;
-
-    // @include mq(bp3) {
-    //     position: sticky;
-    //     top: 0;
-    //     right: 0;
-    //     left: 0;
-    // }
-    //
-    // &.is-sticky {
-    //     background-color: hsla(var(--global-neutral-hue), 5%, 98%, .95);
-    //     box-shadow: 0 0 5px var(--global-color-neutral-dark-a-10);
-    // }
-}
-
-.o-row--intro {
-    min-height: calc(50vh - #{baseline(calc(var(--global-baseline-multiplier) * 4))});
-    padding-top: var(--global-whitespace-double);
-    align-items: end;
-    grid-template-rows: auto;
-}
-
-.o-row--intro-home {
-    min-height: 50vh;
-    padding-top: var(--global-whitespace-double);
-    align-items: end;
-    grid-template-rows: auto;
-}
-
-.o-row--footer {
-    // margin-top: auto;
-    align-self: flex-end;
-}
-
-@media (prefers-color-scheme: dark) {
-    .o-row--example {
-        --row--example-backgroundColor: var(--global-color-neutral-light-a-05);
-    }
-}
-
-.o-container,
-.o-aside {
-    grid-column: content;
-}
-
-.o-container--right {
-    @include mq(bp3) {
-        grid-column-end: 4;
-    }
-}
-
-.o-aside {
-    @include mq(bp5) {
-        grid-column: 1;
-        text-align: right;
-    }
-}
-
-.c-list {
-    list-style: none;
-    padding: 0;
-}
-
-.c-list__item {
-    margin-bottom: var(--global-whitespace-default);
-}
-
-.c-list__title {
-    font-size: var(--global-fontSize);
-    margin-bottom: 0;
-}
-
-.c-list__meta {
-    color: var(--global-meta-color);
-}
-
-.c-list__link {
-    &::after {
-        content:'→';
-        display: inline-block;
-        margin-left: var(--global-whitespace-xs);
-        opacity: 0;
-        transform: translateX(calc(var(--global-whitespace-xxs) * -1));
-        transition: all $animation-duration-alpha $animation-easing-in;
-    }
-
-    &:hover {
-        &::after {
-            opacity: 1;
-            transform: none;
-            transition-timing-function: $animation-easing-out;
-        }
-    }
-}
-
-
-.c-signature {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: -1;
-}
-
-.c-signature__signature {
-    display: block;
-    width: 80vw;
-}
-
-.path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: dash 10s ease alternate infinite;
-    stroke: var(--global-meta-color);
-}
-
 .c-gradient-background {
     --deg: 45deg;
     top: 0;
@@ -175,8 +17,6 @@ div:empty {
     display: flex;
     align-items: center;
     justify-content: center;
-    // align-items: flex-end;
-    // justify-content: flex-end;
     z-index: -1;
     // background: conic-gradient(from var(--deg), var(--gradient-background__image-start, white), var(--gradient-background__image-end, var(--global-color-neutral-dark-a-025)));
 }
@@ -193,7 +33,7 @@ div:empty {
     background: linear-gradient(var(--deg), var(--gradient-background__image-start, var(--global-color-neutral-dark-a-05)), var(--gradient-background__image-end, white));
     // background: conic-gradient(from var(--deg), var(--gradient-background__image-start, white), var(--gradient-background__image-end, var(--global-color-neutral-dark-a-05)));
     // transform: rotate(var(--deg));
-    // animation: rotate 10s linear infinite;
+    animation: rotate 10s linear infinite;
     // background: linear-gradient(var(--deg), var(--global-color-beta), var(--global-color-gamma));
     transition: transform 2s;
 
@@ -217,36 +57,6 @@ div:empty {
     100% {
         transform: rotate(360deg);
     }
-}
-
-@keyframes dash {
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
-
-// .c-header-observer {
-//     display: block !important;
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     height: 1px;
-// }
-
-.u-pt-clear {
-    padding-top: 0 !important;
-}
-
-.u-mt-clear {
-    margin-top: 0 !important;
-}
-
-.u-mb-clear {
-    margin-bottom: 0 !important;
-}
-
-.u-color-meta {
-    color: var(--global-meta-color);
 }
 
 .c-text-caption {
@@ -310,14 +120,6 @@ div:empty {
     }
 }
 
-.c-modularscale-base {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid var(--global-border-color);
-    border-width: 1px 0;
-    // padding: var(--global-whitespace-xs) 0;
-}
-
 .u-muted {
     color: var(--global-meta-color);
 }
@@ -349,7 +151,6 @@ div:empty {
         grid-template-columns: auto 1fr;
         grid-gap: var(--global-whitespace-sm) var(--global-whitespace-default);
         align-items: baseline;
-        // direction: rtl;
     }
 }
 
@@ -372,32 +173,7 @@ div:empty {
     text-overflow: ellipsis;
 }
 
-.c-modularscale-list__item {
-    display: flex;
-    // align-items: baseline;
-    align-items: center;
-    justify-content: space-between;
-
-    & + & {
-        border-top: 1px solid var(--global-border-color);
-        margin-top: var(--global-whitespace-xs);
-        padding-top: var(--global-whitespace-xs);
-    }
-}
-
-.c-modularscale-list__scale {
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-right: var(--global-whitespace-default);
-}
-
 .o-list {
     list-style: none;
     padding-left: 0;
-}
-
-.u-mt-clear {
-    margin-top: 0;
 }

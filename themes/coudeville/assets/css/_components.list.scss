@@ -1,0 +1,42 @@
+/*
+    Components: List
+    ---
+    List of articles
+*/
+
+.c-list {
+    list-style: none;
+    padding: 0;
+}
+
+.c-list__item {
+    margin-bottom: var(--global-whitespace-default);
+}
+
+.c-list__title {
+    font-size: var(--global-fontSize);
+    margin-bottom: 0;
+}
+
+.c-list__meta {
+    color: var(--global-meta-color);
+}
+
+.c-list__link {
+    &::after {
+        content:'→';
+        display: inline-block;
+        margin-left: var(--global-whitespace-xs);
+        opacity: 0;
+        transform: translateX(calc(var(--global-whitespace-xxs) * -1));
+        transition: all $animation-duration-alpha $animation-easing-in;
+    }
+
+    &:hover {
+        &::after {
+            opacity: 1;
+            transform: none;
+            transition-timing-function: $animation-easing-out;
+        }
+    }
+}

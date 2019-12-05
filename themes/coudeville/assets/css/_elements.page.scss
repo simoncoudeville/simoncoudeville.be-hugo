@@ -48,28 +48,29 @@
     --global-lightness-color-gamma: #{lightness($color-gamma)};
 
     --global-neutral-hue: var(--global-hue-color-beta);
+    --global-neutral-saturation: 5%;
 
-    --global-color-neutral-light-a-025: hsla(var(--global-neutral-hue), 5%, 95%, .025);
-    --global-color-neutral-light-a-075: hsla(var(--global-neutral-hue), 5%, 95%, .075);
-    --global-color-neutral-light-a-05: hsla(var(--global-neutral-hue), 5%, 95%, .05);
-    --global-color-neutral-light-a-10: hsla(var(--global-neutral-hue), 5%, 95%, .1);
-    --global-color-neutral-light-a-15: hsla(var(--global-neutral-hue), 5%, 95%, .15);
-    --global-color-neutral-light-a-25: hsla(var(--global-neutral-hue), 5%, 95%, .25);
-    --global-color-neutral-light-a-50: hsla(var(--global-neutral-hue), 5%, 95%, .5);
-    --global-color-neutral-light-a-75: hsla(var(--global-neutral-hue), 5%, 95%, .75);
-    --global-color-neutral-light-a-85: hsla(var(--global-neutral-hue), 5%, 95%, .85);
-    --global-color-neutral-light-a-95: hsla(var(--global-neutral-hue), 5%, 95%, .95);
+    --global-color-neutral-light-a-025: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 90%, .025);
+    --global-color-neutral-light-a-075: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 90%, .075);
+    --global-color-neutral-light-a-05: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 90%, .05);
+    --global-color-neutral-light-a-10: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 90%, .1);
+    --global-color-neutral-light-a-15: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 90%, .15);
+    --global-color-neutral-light-a-25: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 90%, .25);
+    --global-color-neutral-light-a-50: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 90%, .5);
+    --global-color-neutral-light-a-75: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 90%, .75);
+    --global-color-neutral-light-a-85: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 90%, .85);
+    --global-color-neutral-light-a-95: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 90%, .95);
 
-    --global-color-neutral-dark-a-025: hsla(var(--global-neutral-hue), 5%, 5%, .025);
-    --global-color-neutral-dark-a-075: hsla(var(--global-neutral-hue), 5%, 5%, .075);
-    --global-color-neutral-dark-a-05: hsla(var(--global-neutral-hue), 5%, 5%, .05);
-    --global-color-neutral-dark-a-10: hsla(var(--global-neutral-hue), 5%, 5%, .1);
-    --global-color-neutral-dark-a-15: hsla(var(--global-neutral-hue), 5%, 5%, .15);
-    --global-color-neutral-dark-a-25: hsla(var(--global-neutral-hue), 5%, 5%, .25);
-    --global-color-neutral-dark-a-50: hsla(var(--global-neutral-hue), 5%, 5%, .5);
-    --global-color-neutral-dark-a-75: hsla(var(--global-neutral-hue), 5%, 5%, .75);
-    --global-color-neutral-dark-a-85: hsla(var(--global-neutral-hue), 5%, 5%, .85);
-    --global-color-neutral-dark-a-95: hsla(var(--global-neutral-hue), 5%, 5%, .95);
+    --global-color-neutral-dark-a-025: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 15%, .025);
+    --global-color-neutral-dark-a-075: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 15%, .075);
+    --global-color-neutral-dark-a-05: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 15%, .05);
+    --global-color-neutral-dark-a-10: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 15%, .1);
+    --global-color-neutral-dark-a-15: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 15%, .15);
+    --global-color-neutral-dark-a-25: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 15%, .25);
+    --global-color-neutral-dark-a-50: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 15%, .5);
+    --global-color-neutral-dark-a-75: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 15%, .75);
+    --global-color-neutral-dark-a-85: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 15%, .85);
+    --global-color-neutral-dark-a-95: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 15%, .95);
 
     /* type scale */
     --global-modular-scale-ratio: 1.125;

@@ -125,7 +125,7 @@ a {
 
 hr {
     border: none;
-    height: 1px;
+    height: var(--global-baseline);
     background-color: var(--global-border-color);
     margin: var(--global-whitespace-double) 0;
     // margin: var(--global-whitespace-default) 0;
