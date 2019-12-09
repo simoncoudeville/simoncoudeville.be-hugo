@@ -82,13 +82,14 @@ div:empty {
     grid-template-columns: var(--global-whitespace-double) 1fr ;
     grid-gap: var(--global-whitespace-md) var(--global-whitespace-sm);
     align-items: center;
-    margin-bottom: var(--global-whitespace-default);
+    margin-bottom: calc(var(--global-whitespace-default) + var(--global-whitespace-xxs));
 }
 
 .c-swatches {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(var(--c-swatch-min, var(--global-whitespace-double)), 1fr));
-    margin-bottom: var(--global-whitespace-default);
+    // margin-bottom: var(--global-whitespace-default);
+    margin-bottom: calc(var(--global-whitespace-default) + var(--global-whitespace-xxs));
 }
 
 .c-swatch {

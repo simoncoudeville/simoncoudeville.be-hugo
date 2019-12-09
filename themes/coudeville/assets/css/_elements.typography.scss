@@ -43,28 +43,30 @@ h1 {
     font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-default);
     font-size: var(--global-fontSize-xxxl);
-    line-height: calc(calc(var(--global-baseline-multiplier) + 2) * var(--global-baseline) );
+    line-height: calc(calc(var(--global-baseline-multiplier) + 2) * var(--global-baseline));
 }
 
 h2 {
     font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-default);
     font-size: var(--global-fontSize-lg);
-    line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline) );
+    line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
 }
 
 h3 {
     font-weight: $alpha-font-weight;
+    // margin-bottom: var(--global-whitespace-xs);
+    // margin-bottom: var(--global-whitespace-sm);
     margin-bottom: var(--global-whitespace-default);
     font-size: var(--global-fontSize);
-    line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline) );
+    line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
 }
 
 h4 {
     font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-default);
     font-size: var(--global-fontSize);
-    line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline) );
+    line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
 }
 
 p,
