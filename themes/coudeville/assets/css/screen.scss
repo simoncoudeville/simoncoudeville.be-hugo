@@ -1,11 +1,5 @@
 /*
- *  Chopstick index
- *  ---
- *  Chopstick is a framework based on the [ITCSS](http://itcss.io/)
- *  architecture and a series of principles. It creates a structure
- *  to easily set-up and build bespoke web projects.
- *  ---
- *
+ *  Index
  *  Settings: contains global variables and config switches
  *  Tools: contains default mixins and functions
  *  Generic: contains ground-zero styles (Normalize.css, resets, box-sizing)
@@ -26,7 +20,7 @@
 @import 'settings.global';
 
 /* Generic */
-@import 'generic.normalize';
+// @import 'generic.normalize';
 @import 'generic.box-sizing';
 
 /* Elements */
@@ -37,6 +31,7 @@
 
 /* Objects */
 @import 'objects.layout';
+@import 'objects.list';
 
 /* Components */
 @import 'components.header';
@@ -44,6 +39,7 @@
 @import 'components.cover';
 @import 'components.footer';
 @import 'components.brand';
+@import 'components.text';
 @import 'components.toggle';
 @import 'components.list';
 @import 'components.example';
@@ -59,5 +55,7 @@
 
 /* Utilities */
 @import 'utilities.spacing';
+@import 'utilities.opentype';
+@import 'utilities.colors';
 @import 'utilities.print';
 @import 'utilities.shame';

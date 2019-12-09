@@ -2,8 +2,20 @@
 <div class="c-gradient-background js-gradient-background">
     <div class="c-gradient-background__image js-gradient-background-image"></div>
 </div>
+<header class="o-row o-row--header js-header">
+    <div class="o-container">
+        <div class="c-header">
+            <p class="c-header__logo c-logo">
+                <a href="/" class="c-logo__link">Simon Coudeville</a>
+            </p>
+            <h1 class="c-header__meta c-text-base">
+                {{ .Title }}
+            </h1>
+        </div>
+    </div>
+</header>
 <main class="o-row">
-    <div class="o-row o-row--intro-home">
+    <div class="o-row o-row--intro">
         <div class="o-container s-content">
             <p>
                 Hey, I’m Simon, a designer and teacher from Belgium with over 10 years industry experience. I worked as a senior designer for <a href="http://wijs.be">Wijs</a> for 7 years. I specialize in responsive web-design, HTML &amp; CSS, typography and animation.
@@ -29,6 +41,11 @@
                         <h3 class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></h3>
                     </li>
                 {{ end }}
+                <li class="c-list__item">
+                    <p class="c-list__title">
+                        <a href="archive" class="c-list__link">view all</a>
+                    </p>
+                </li>
             </ul>
         </div>
     </div>

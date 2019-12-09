@@ -9,7 +9,6 @@ div:empty {
 }
 
 .c-gradient-background {
-    --deg: 45deg;
     top: 0;
     width: 100vw;
     height: 100vh;
@@ -18,7 +17,6 @@ div:empty {
     align-items: center;
     justify-content: center;
     z-index: -1;
-    // background: conic-gradient(from var(--deg), var(--gradient-background__image-start, white), var(--gradient-background__image-end, var(--global-color-neutral-dark-a-025)));
 }
 
 .c-gradient-background__image {
@@ -29,12 +27,9 @@ div:empty {
     width: var(--dimension);
     height: var(--dimension);
     border-radius: 100%;
-    // background-color: var(--global-page-backgroundColor);
-    background: linear-gradient(var(--deg), var(--gradient-background__image-start, var(--global-color-neutral-dark-a-05)), var(--gradient-background__image-end, white));
-    // background: conic-gradient(from var(--deg), var(--gradient-background__image-start, white), var(--gradient-background__image-end, var(--global-color-neutral-dark-a-05)));
-    // transform: rotate(var(--deg));
+    // background: linear-gradient(var(--deg), var(--gradient-background__image-start, var(--global-color-neutral-20)), var(--gradient-background__image-end, white));
+    background: linear-gradient(var(--deg), var(--gradient-background__image-start, var(--global-page-backgroundColor--alt)), var(--gradient-background__image-end, white));
     animation: rotate 10s linear infinite;
-    // background: linear-gradient(var(--deg), var(--global-color-beta), var(--global-color-gamma));
     transition: transform 2s;
 
     @include mq(35em) {
@@ -43,13 +38,8 @@ div:empty {
 }
 
 @media (prefers-color-scheme: dark) {
-    .c-gradient-background {
-        --gradient-background__image-start: var(--global-color-neutral-light-a-05);
-        --gradient-background__image-end: var(--global-color-neutral-dark-a-50);
-    }
     .c-gradient-background__image {
-        --gradient-background__image-end: var(--global-color-neutral-light-a-05);
-        --gradient-background__image-start: var(--global-color-neutral-dark-a-85);
+        --gradient-background__image-end: hsla(0,0%,0%,50%);
     }
 }
 
@@ -59,93 +49,7 @@ div:empty {
     }
 }
 
-.c-text-caption {
-    font-size: var(--global-fontSize-xs);
-    line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline) );
-    text-transform: uppercase;
-    font-family: $code-font-family;
-    color: var(--global-meta-color);
-}
-
-.c-text-xxxl {
-  font-size: var(--global-fontSize-xxxl);
-  line-height: calc(calc(var(--global-baseline-multiplier) + 2) * var(--global-baseline));
-}
-
-.c-text-xxl {
-  font-size: var(--global-fontSize-xxl);
-  line-height: calc(calc(var(--global-baseline-multiplier) + 1) * var(--global-baseline));
-}
-
-.c-text-xl {
-  font-size: var(--global-fontSize-xl);
-  line-height: calc(calc(var(--global-baseline-multiplier) + 1) * var(--global-baseline));
-}
-
-.c-text-lg {
-  font-size: var(--global-fontSize-lg);
-}
-
-.c-text-base {
-  font-size: var(--global-fontSize-base);
-  line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
-}
-
-.c-text-md {
-  font-size: var(--global-fontSize-md);
-}
-
-.c-text-sm {
-  font-size: var(--global-fontSize-sm);
-  line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
-}
-
-.c-text-xs {
-  font-size: var(--global-fontSize-xs);
-  line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
-}
-
-.c-text-code {
-    font-family: $code-font-family;
-}
-
-.c-text-section-title {
-    border-bottom: 1px solid var(--global-border-color);
-    padding-bottom: var(--global-whitespace-default);
-}
-
-.c-section {
-    & + & {
-        margin-top: var(--global-whitespace-double);
-    }
-}
-
-.u-muted {
-    color: var(--global-meta-color);
-}
-
-.u-no-curvy-l {
-    font-feature-settings: "zero", "liga" !important;
-}
-
-.u-curvy-l {
-    font-feature-settings: "zero", "liga", "ss02" !important;
-}
-
-.u-no-slashed-zero {
-    font-feature-settings: "liga", "ss02" !important;
-}
-
-.u-slashed-zero {
-    font-feature-settings: "zero", "liga", "ss02" !important;
-}
-
-.u-mb-sm {
-    margin-bottom: var(--global-whitespace-sm);
-}
-
 .c-modularscale-list {
-
     @include mq(bp3) {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -173,7 +77,80 @@ div:empty {
     text-overflow: ellipsis;
 }
 
-.o-list {
-    list-style: none;
-    padding-left: 0;
+.c-palette {
+    display: grid;
+    grid-template-columns: var(--global-whitespace-double) 1fr ;
+    grid-gap: var(--global-whitespace-md) var(--global-whitespace-sm);
+    align-items: center;
+    margin-bottom: var(--global-whitespace-default);
+}
+
+.c-swatches {
+    display: grid;
+    // grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(var(--c-swatch-min, var(--global-whitespace-double)), 1fr));
+    margin-bottom: var(--global-whitespace-default);
+    grid-gap: var(--c-swatches-gap, 0);
+}
+
+.c-swatches--primary {
+    --c-swatches-gap: var(--global-whitespace-default);
+    --c-swatch-min: 7.5rem;
+    --text-caption-color: var(--global-color-neutral-10);
+}
+
+.c-swatch {
+    display: block !important;
+}
+
+.c-swatch--neutral-10 {
+    box-shadow: inset 0 0 0 1px hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 10%, .1);
+}
+
+.c-swatch--page-backgroundColor {
+    box-shadow: inset 0 0 0 1px hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 10%, .1);
+}
+
+@media (prefers-color-scheme: dark) {
+    .c-swatch--page-backgroundColor {
+        box-shadow: inset 0 0 0 1px hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 95%, .1);
+    }
+
+    .c-swatch--neutral-10 {
+        box-shadow: none;
+    }
+
+    .c-swatch--neutral-90 {
+        box-shadow: inset 0 0 0 1px hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 95%, .1);
+    }
+}
+
+
+.c-swatch--neutral-10,
+.c-swatch--neutral-20,
+.c-swatch--neutral-30,
+.c-swatch--neutral-40 {
+    --text-caption-color: var(--global-color-neutral-80);
+}
+
+.c-swatch--neutral-50,
+.c-swatch--neutral-60,
+.c-swatch--neutral-70,
+.c-swatch--neutral-80,
+.c-swatch--neutral-90 {
+    --text-caption-color: var(--global-color-neutral-20);
+}
+
+.c-swatch {
+    position: relative;
+    padding-bottom: 100%;
+    height: 0;
+}
+
+.c-swatch--half {
+    padding-bottom: 50%;
+}
+
+.c-swatch__name {
+    padding: var(--global-whitespace-xxs) var(--global-whitespace-xs);
 }

@@ -7,10 +7,11 @@
 
 .o-grid {
     --grid-whitespace: 0;
+    min-height: 100vh;
     display: grid;
     grid: ". content ." / minmax(var(--grid-whitespace),1fr) minmax(0, var(--global-container-maxWidth)) minmax(var(--grid-whitespace),1fr);
     grid-gap: var(--global-whitespace-default);
-    align-items: flex-start;
+    align-content: space-between;
 
     @include mq(bp4) {
         --grid-whitespace: var(--global-whitespace-double);
@@ -33,7 +34,7 @@
 }
 
 .o-row--example {
-    background: var(--row--example-backgroundColor, var(--global-page-backgroundColor));
+    background-color: var(--row--example-backgroundColor, var(--global-page-backgroundColor--alt));
     margin-bottom: var(--global-whitespace-default);
 }
 
@@ -41,6 +42,7 @@
     padding-top: var(--global-whitespace-default);
     z-index: 1000;
     transition: all $animation-duration-alpha;
+    // background-color: #fff;
 
     // @include mq(bp3) {
     //     position: sticky;
@@ -69,11 +71,11 @@
     grid-template-rows: auto;
 }
 
-@media (prefers-color-scheme: dark) {
-    .o-row--example {
-        --row--example-backgroundColor: var(--global-color-neutral-light-a-05);
-    }
-}
+// @media (prefers-color-scheme: dark) {
+//     .o-row--example {
+//         --row--example-backgroundColor: var(--global-color-neutral-80);
+//     }
+// }
 
 .o-container {
     grid-column: content;

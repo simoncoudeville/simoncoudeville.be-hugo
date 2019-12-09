@@ -51,7 +51,7 @@
 
 .e-profile__name {
     margin-bottom: 0;
-    color: var(--global-color-neutral-dark-a-95);
+    color: var(--global-color-neutral-80);
     font-size: var(--global-fontSize-sm);
     line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
 }
@@ -59,14 +59,14 @@
 .e-profile__location {
     position: relative;
     margin-bottom: baseline(3);
-    color: var(--global-color-neutral-dark-a-50);
+    color: var(--global-meta-color);
     font-size: var(--global-fontSize-xs);
     line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
 }
 
 .e-profile__occupation {
     margin-bottom: baseline(4);
-    color: var(--global-color-neutral-dark-a-85);
+    color: var(--global-color-neutral-80);
     font-size: var(--global-fontSize-sm);
     line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
 }

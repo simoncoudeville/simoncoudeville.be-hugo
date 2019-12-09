@@ -1,0 +1,57 @@
+/*
+    Components: Text
+    ---
+    Scecific text styles
+*/
+
+
+.c-text-caption {
+    display: block;
+    font-size: var(--global-fontSize-xs);
+    line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline) );
+    text-transform: uppercase;
+    font-family: $code-font-family;
+    color: var(--text-caption-color, var(--global-meta-color));
+}
+
+.c-text-xxxl {
+  font-size: var(--global-fontSize-xxxl);
+  line-height: calc(calc(var(--global-baseline-multiplier) + 2) * var(--global-baseline));
+}
+
+.c-text-xxl {
+  font-size: var(--global-fontSize-xxl);
+  line-height: calc(calc(var(--global-baseline-multiplier) + 1) * var(--global-baseline));
+}
+
+.c-text-xl {
+  font-size: var(--global-fontSize-xl);
+  line-height: calc(calc(var(--global-baseline-multiplier) + 1) * var(--global-baseline));
+}
+
+.c-text-lg {
+  font-size: var(--global-fontSize-lg);
+}
+
+.c-text-base {
+  font-size: var(--global-fontSize-base);
+  line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
+}
+
+.c-text-md {
+  font-size: var(--global-fontSize-md);
+}
+
+.c-text-sm {
+  font-size: var(--global-fontSize-sm);
+  line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
+}
+
+.c-text-xs {
+  font-size: var(--global-fontSize-xs);
+  line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
+}
+
+.c-text-code {
+    font-family: $code-font-family;
+}

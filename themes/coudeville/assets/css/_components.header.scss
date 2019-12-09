@@ -19,13 +19,8 @@
     grid-row: 1;
 }
 
-.c-header__meta {
-    margin-bottom: 0;
-    color: var(--global-meta-color);
-}
-
 .c-header__meta,
-.c-header__title {
+.c-header__title {    
     position: relative;
     color: var(--header__meta-color, var(--global-meta-color));
     grid-column: 2;
