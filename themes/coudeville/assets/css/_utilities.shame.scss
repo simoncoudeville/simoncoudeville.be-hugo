@@ -87,40 +87,29 @@ div:empty {
 
 .c-swatches {
     display: grid;
-    // grid-template-columns: repeat(9, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(var(--c-swatch-min, var(--global-whitespace-double)), 1fr));
     margin-bottom: var(--global-whitespace-default);
-    grid-gap: var(--c-swatches-gap, 0);
-}
-
-.c-swatches--primary {
-    --c-swatches-gap: var(--global-whitespace-default);
-    --c-swatch-min: 7.5rem;
-    --text-caption-color: var(--global-color-neutral-10);
 }
 
 .c-swatch {
     display: block !important;
 }
 
-.c-swatch--neutral-10 {
-    box-shadow: inset 0 0 0 1px hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 10%, .1);
-}
-
+.c-swatch--neutral-10,
 .c-swatch--page-backgroundColor {
     box-shadow: inset 0 0 0 1px hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 10%, .1);
 }
 
 @media (prefers-color-scheme: dark) {
-    .c-swatch--page-backgroundColor {
-        box-shadow: inset 0 0 0 1px hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 95%, .1);
-    }
-
     .c-swatch--neutral-10 {
         box-shadow: none;
     }
 
     .c-swatch--neutral-90 {
+        box-shadow: inset 0 0 0 1px hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 95%, .1);
+    }
+
+    .c-swatch--page-backgroundColor {
         box-shadow: inset 0 0 0 1px hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 95%, .1);
     }
 }

@@ -2,7 +2,7 @@
     <div class="o-container">
         <div class="c-example{{ if eq (.Get "type") "baseline" }} has-baseline js-baseline-example{{ end }}">
             {{ with .Get "title" }}
-            <h3 class="c-example__title">{{ . }}</h3>
+            <h3 class="c-example__title c-text-caption">{{ . }}</h3>
             {{ end }}
             <div class="c-example__body{{ with .Get "size" }} c-example__body--{{ . }}{{ end }}">
                 <div class="c-example__content">

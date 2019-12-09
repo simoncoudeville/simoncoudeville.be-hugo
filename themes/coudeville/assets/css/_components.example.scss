@@ -12,14 +12,6 @@
 .c-example__title {
     position: relative;
     margin-top: baseline(calc(var(--global-baseline-multiplier) * -2));
-    font-weight: normal;
-    color: var(--example__title-color, var(--global-meta-color));
-    // font-size: var(--global-fontSize-sm);
-    // line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
-    font-size: var(--global-fontSize-xs);
-    line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline) );
-    text-transform: uppercase;
-    font-family: $code-font-family;
 }
 
 .c-example__body {
@@ -28,16 +20,6 @@
     flex-direction: column;
     margin-bottom: var(--global-whitespace-default);
 
-    &::before {
-        content: '';
-        display: block;
-        height: 1px;
-        position: absolute;
-        top: -1px;
-        right: 0;
-        left: 0;
-    }
-
     .has-baseline & {
 
         .c-baseline-overlay {
@@ -45,6 +27,13 @@
         }
 
         &::before {
+            content: '';
+            display: block;
+            height: 1px;
+            position: absolute;
+            top: -1px;
+            right: 0;
+            left: 0;
             background-color: var(--global-baseline-color);
         }
 

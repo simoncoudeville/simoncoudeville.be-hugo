@@ -71,12 +71,6 @@
     grid-template-rows: auto;
 }
 
-// @media (prefers-color-scheme: dark) {
-//     .o-row--example {
-//         --row--example-backgroundColor: var(--global-color-neutral-80);
-//     }
-// }
-
 .o-container {
     grid-column: content;
 }
