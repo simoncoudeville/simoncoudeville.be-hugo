@@ -58,7 +58,8 @@
 }
 
 .o-row--intro {
-    min-height: calc(50vh - #{baseline(calc(var(--global-baseline-multiplier) * 4))});
+    min-height: calc(50vh - calc(var(--global-whitespace-default) * 5));
+    min-height: calc(50vh - calc(var(--global-baseline) * 17));
     padding-top: var(--global-whitespace-double);
     align-items: end;
     grid-template-rows: auto;

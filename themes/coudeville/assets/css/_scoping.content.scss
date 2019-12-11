@@ -14,14 +14,14 @@
     ul,
     ol {
         font-feature-settings: "zero", "liga", "ss02";
-        // hyphens: auto;
-        // hyphenate-limit-chars: 6 3 3;
-        // hyphenate-limit-lines: 2;
-        // hyphenate-limit-last: always;
-        // hyphenate-limit-zone: 8%;
+        hyphens: auto;
+        hyphenate-limit-chars: 6 3 3;
+        hyphenate-limit-lines: 2;
+        hyphenate-limit-last: always;
+        hyphenate-limit-zone: 8%;
     }
 
-    h3 {
-        margin-bottom: var(--global-whitespace-xs);
-    }
+    // h3 {
+    //     margin-bottom: var(--global-whitespace-xs);
+    // }
 }

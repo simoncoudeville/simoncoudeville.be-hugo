@@ -10,7 +10,7 @@
     /* Light theme */
     --global-page-backgroundColor: var(--global-color-neutral-10);
     --global-page-backgroundColor--alt: var(--global-color-neutral-20);
-    --global-page-color: var(--global-color-neutral-70);
+    --global-page-color: var(--global-color-neutral-90);
     --global-heading-color: var(--global-color-neutral-90);
     --global-link-color: var(--global-heading-color);
     --global-link-hover-color: var(--global-page-color);
@@ -76,16 +76,18 @@
     --global-fontSize-xxxl: calc(var(--global-fontSize-xxl) * var(--global-modular-scale-ratio));
 
     /* baseline */
-    --global-baseline: #{5px / round($root-font-size-sm)}rem;
+    --global-baseline: #{5px / $root-font-size-sm}rem;
     --global-baseline-multiplier: 5;
 
-    --global-whitespace-default: calc(var(--global-baseline) * var(--global-baseline-multiplier));
-    --global-whitespace-double: calc(var(--global-whitespace-default) * 2);
-
     --global-whitespace-xxs: var(--global-baseline);
-    --global-whitespace-xs: calc(var(--global-baseline) * 2);
-    --global-whitespace-sm: calc(var(--global-baseline) * 3);
-    --global-whitespace-md: calc(var(--global-baseline) * 4);
+    --global-whitespace-xs: calc(var(--global-baseline) * calc(var(--global-baseline-multiplier) - 3));
+    --global-whitespace-sm: calc(var(--global-baseline) * calc(var(--global-baseline-multiplier) - 2));
+    --global-whitespace-md: calc(var(--global-baseline) * calc(var(--global-baseline-multiplier) - 1));
+    --global-whitespace-lg: calc(var(--global-baseline) * var(--global-baseline-multiplier));
+
+    --global-whitespace-default: var(--global-whitespace-md);
+    --global-whitespace-double: calc(var(--global-whitespace-default) * 2);
+    --global-whitespace-quadruple: calc(var(--global-whitespace-double) * 2);
 
     /* layout */
     --global-container-maxWidth: 35em;

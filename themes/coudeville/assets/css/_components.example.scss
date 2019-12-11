@@ -6,12 +6,12 @@
 
 
 .c-example {
-    padding: baseline(calc(var(--global-baseline-multiplier) * 3)) 0 var(--global-whitespace-default);
+    padding: var(--global-whitespace-double) 0 var(--global-whitespace-default);
 }
 
 .c-example__title {
     position: relative;
-    margin-top: baseline(calc(var(--global-baseline-multiplier) * -2));
+    margin-top: calc(var(--global-whitespace-default) * -1);
 }
 
 .c-example__body {
@@ -24,17 +24,6 @@
 
         .c-baseline-overlay {
             display: block;
-        }
-
-        &::before {
-            content: '';
-            display: block;
-            height: 1px;
-            position: absolute;
-            top: -1px;
-            right: 0;
-            left: 0;
-            background-color: var(--global-baseline-color);
         }
 
         h2,
@@ -61,5 +50,5 @@
 
 .c-example__toggle {
     position: relative;
-    margin-bottom: baseline(calc(var(--global-baseline-multiplier) * -1));
+    margin-bottom: calc(var(--global-whitespace-default) * -1);
 }

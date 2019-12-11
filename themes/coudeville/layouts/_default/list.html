@@ -1,11 +1,28 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-<ul>
+<header class="o-row o-row--header js-header">
+    <div class="o-container">
+        <div class="c-header">
+            <p class="c-header__logo c-logo">
+                <a href="/" class="c-logo__link">Simon Coudeville</a>
+            </p>
+            <h1 class="c-header__meta c-text-base">
+                {{ .Title }}
+            </h1>
+        </div>
+    </div>
+</header>
+<main class="o-row">
     <!-- Ranges through content/posts/*.md -->
-    {{ range .Pages }}
-    <li>
-        <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
-    </li>
-    {{ end }}
-</ul>
+    <div class="o-container">
+        <ul class="c-list">
+            {{ range .Pages }}
+                <li class="c-list__item">
+                    <span class="c-list__meta">{{ .Date.Format "2 January 2006" }}</span>
+                    <h3 class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></h3>
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+</main>
+{{ partial "footer.html" . }}
 {{ end }}

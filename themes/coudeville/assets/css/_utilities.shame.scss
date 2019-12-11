@@ -4,9 +4,9 @@
     Hacks and quick fixes
 */
 
-div:empty {
-   display: none;
-}
+// div:empty {
+//    display: none;
+// }
 
 .c-gradient-background {
     top: 0;
@@ -92,13 +92,9 @@ div:empty {
     margin-bottom: calc(var(--global-whitespace-default) + var(--global-whitespace-xxs));
 }
 
-.c-swatch {
-    display: block !important;
-}
-
 .c-swatch--neutral-10,
 .c-swatch--page-backgroundColor {
-    box-shadow: inset 0 0 0 1px hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 10%, .1);
+    box-shadow: inset 0 0 0 1px var(--global-border-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -106,12 +102,9 @@ div:empty {
         box-shadow: none;
     }
 
-    .c-swatch--neutral-90 {
-        box-shadow: inset 0 0 0 1px hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 95%, .1);
-    }
-
+    .c-swatch--neutral-90,
     .c-swatch--page-backgroundColor {
-        box-shadow: inset 0 0 0 1px hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 95%, .1);
+        box-shadow: inset 0 0 0 1px var(--global-border-color);
     }
 }
 
@@ -143,4 +136,120 @@ div:empty {
 
 .c-swatch__name {
     padding: var(--global-whitespace-xxs) var(--global-whitespace-xs);
+}
+
+.hr-small {
+    // height: 1px;
+    height: 0;
+    margin: var(--global-whitespace-default) 0;
+}
+
+.s-baseline-calc {
+    &::after {
+        // display: block;
+	    white-space: pre;
+        content: "#{$root-font-size-sm} / 5px → #{5px / $root-font-size-sm}rem";
+
+        @include mq(bp3) {
+            content: "#{$root-font-size} / 6px → #{6px / $root-font-size}rem";
+        }
+    }
+}
+
+.s-spacing {
+    position: relative;
+
+    // .c-baseline-overlay {
+    //     display: block;
+    // }
+}
+
+.s-spacing__title {
+    display: inline-block;
+    // margin-top: calc(var(--global-whitespace-xxs) * -1);
+    white-space: nowrap;
+    // line-height: var(--global-whitespace-xs);
+    // padding: 0 var(--global-whitespace-xs) 0;
+    // background-color: var(--global-page-backgroundColor);
+    // display: none;
+}
+
+.s-spacing__body {
+    position: relative;
+    display: grid;
+    grid-template-columns: max-content min-content;
+    // grid-template-columns: auto;
+    grid-gap: var(--global-whitespace-sm) var(--global-whitespace-sm);
+    // grid-gap: var(--global-whitespace-xxs) var(--global-whitespace-sm);
+    // align-items: start;
+    align-items: center;
+    // padding: var(--global-whitespace-default);
+    margin-bottom: calc(var(--global-whitespace-default) + var(--global-whitespace-xxs));
+
+    // p {
+    //     display: none;
+    // }
+}
+
+.s-space {
+    position: relative;
+    background-color: $color-gamma;
+    // width: var(--s-space-dimension);
+    // height: var(--global-baseline);
+    // width: var(--global-baseline);
+    width: 1px;
+    height: var(--s-space-dimension);
+    // margin-left: -7px;
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 7px;
+        margin-left: -3px;
+        position: absolute;
+        left: 0;
+        background-color: $color-gamma;
+    }
+
+    &::before {
+        top: -1px;
+    }
+
+    &::after {
+        bottom: 0;
+    }
+}
+
+.s-space--xxs {
+    --s-space-dimension: var(--global-whitespace-xxs);
+}
+
+.s-space--xs {
+    --s-space-dimension: var(--global-whitespace-xs);
+}
+
+.s-space--sm {
+    --s-space-dimension: var(--global-whitespace-sm);
+}
+
+.s-space--md {
+    --s-space-dimension: var(--global-whitespace-md);
+}
+
+.s-space--lg {
+    --s-space-dimension: var(--global-whitespace-lg);
+}
+
+.s-space--default {
+    --s-space-dimension: var(--global-whitespace-default);
+}
+
+.s-space--double {
+    --s-space-dimension: var(--global-whitespace-double);
+}
+
+.s-space--quadruple {
+    --s-space-dimension: var(--global-whitespace-quadruple);
 }

@@ -128,19 +128,10 @@ a {
 hr {
     display: block;
     border: none;
-    height: var(--global-baseline);
-    height: 1px;
-    // height: var(--global-whitespace-default);
+    height: 0;
+    // height: 1px;
+    // height: var(--global-baseline);
     background-color: var(--global-border-color);
     margin: var(--global-whitespace-double) 0;
     // margin: var(--global-whitespace-default) 0;
-
-    &::before {
-        // content: "––––––––––––––––––––––––––––––––––––––––––––––––––––––";
-        display: block;
-        // line-height: var(--global-whitespace-default);
-        line-height: var(--global-baseline);
-        font-family: $code-font-family;
-        // text-align: center;
-    }
 }

@@ -1,6 +1,5 @@
 ---
-title: blablabla
-description: blabla
+title: Blog
+description: My blog
 draft: false
-light: true
 ---
