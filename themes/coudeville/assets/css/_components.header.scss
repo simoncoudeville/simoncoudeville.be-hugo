@@ -6,8 +6,6 @@
 
 .c-header {
     margin-bottom: var(--global-whitespace-default);
-    // padding-bottom: var(--global-whitespace-default);
-    // border-bottom: 1px solid var(--global-border-color);
 
     @include mq(bp3) {
         display: grid;
@@ -24,6 +22,7 @@
 .c-header__meta,
 .c-header__title {
     position: relative;
+    font-weight: $alpha-font-weight;
     color: var(--header__meta-color, var(--global-meta-color));
     grid-column: 2;
     grid-row: 1;

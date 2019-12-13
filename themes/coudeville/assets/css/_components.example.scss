@@ -5,9 +5,9 @@
 */
 
 
-.c-example {
-    padding: var(--global-whitespace-double) 0 var(--global-whitespace-default);
-}
+// .c-example {
+//     padding: var(--global-whitespace-double) 0 var(--global-whitespace-default);
+// }
 
 .c-example__title {
     position: relative;
@@ -50,5 +50,6 @@
 
 .c-example__toggle {
     position: relative;
+    // margin-top: var(--global-whitespace-double);
     margin-bottom: calc(var(--global-whitespace-default) * -1);
 }

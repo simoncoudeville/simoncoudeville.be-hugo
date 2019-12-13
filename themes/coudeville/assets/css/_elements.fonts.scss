@@ -21,3 +21,12 @@ Font-face declarations
     font-style:   normal;
     font-stretch: normal;
 }
+
+@font-face {
+    font-family: 'Suisse Intl Web';
+    src: url('../fonts/SuisseIntl-Book-WebXL.woff2') format('woff2'),
+    url('../fonts/SuisseIntl-Book-WebXL.woff') format('woff');
+    font-weight:  500;
+    font-style:   normal;
+    font-stretch: normal;
+}

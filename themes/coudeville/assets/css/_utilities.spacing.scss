@@ -9,12 +9,20 @@
     padding-top: 0 !important;
 }
 
+.u-pb-clear {
+    padding-bottom: 0 !important;
+}
+
 .u-mb-sm {
-    margin-bottom: var(--global-whitespace-sm);
+    margin-bottom: var(--global-whitespace-sm) !important;
 }
 
 .u-mb-xs {
-    margin-bottom: var(--global-whitespace-xs);
+    margin-bottom: var(--global-whitespace-xs) !important;
+}
+
+.u-mb-xxs {
+    margin-bottom: var(--global-whitespace-xxs) !important;
 }
 
 .u-mt-clear {

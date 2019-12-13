@@ -53,6 +53,7 @@
     margin-bottom: 0;
     color: var(--global-color-neutral-80);
     font-size: var(--global-fontSize-sm);
+    font-weight: $beta-font-weight;
     line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
 }
 
@@ -73,7 +74,7 @@
 
 .e-button {
     text-decoration: none;
-    // font-weight: $beta-font-weight;
+    font-weight: $beta-font-weight;
     display: inline-block;
     border: 0;
     text-decoration: none;

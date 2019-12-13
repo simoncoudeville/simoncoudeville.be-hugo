@@ -16,6 +16,10 @@
     {{ $prismcss := resources.Get "css/prism.scss" | toCSS | postCSS }}
     <link rel="stylesheet" href="{{ $prismcss.Permalink }}">
     {{ end }}
+    {{ if .Params.Style }}
+    {{ $styleguide := resources.Get "css/styleguide.scss" | toCSS | postCSS }}
+    <link rel="stylesheet" href="{{ $styleguide.Permalink }}">
+    {{ end }}
 {{ else }}
     {{ $css := resources.Get "css/screen.scss" | toCSS | postCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $css.Permalink }}">
@@ -23,6 +27,10 @@
     {{ if .Params.Code }}
     {{ $prismcss := resources.Get "css/prism.scss" | toCSS | postCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $prismcss.Permalink }}">
+    {{ end }}
+    {{ if .Params.Style }}
+    {{ $styleguide := resources.Get "css/styleguide.scss" | toCSS | postCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styleguide.Permalink }}">
     {{ end }}
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

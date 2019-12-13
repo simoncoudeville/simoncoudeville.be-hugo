@@ -39,31 +39,36 @@ ul {
   margin-top: 0; // Reset browser defaults
 }
 
-h1 {
-    font-weight: $alpha-font-weight;
+h1,
+.h1 {
+    // font-feature-settings: "zero", "liga", "ss01";
+    font-weight: $beta-font-weight;
+    // font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-default);
     font-size: var(--global-fontSize-xxxl);
-    line-height: calc(calc(var(--global-baseline-multiplier) + 2) * var(--global-baseline));
+    line-height: calc(calc(var(--global-baseline-multiplier) + 3) * var(--global-baseline));
 }
 
-h2 {
-    font-weight: $alpha-font-weight;
+h2,
+.h2 {
+    font-weight: $beta-font-weight;
+    // font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-default);
     font-size: var(--global-fontSize-lg);
-    line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
+    line-height: calc(calc(var(--global-baseline-multiplier) + 1) * var(--global-baseline));
 }
 
-h3 {
-    font-weight: $alpha-font-weight;
-    // margin-bottom: var(--global-whitespace-xs);
-    // margin-bottom: var(--global-whitespace-sm);
+h3,
+.h3 {
+    font-weight: $beta-font-weight;
     margin-bottom: var(--global-whitespace-default);
     font-size: var(--global-fontSize);
     line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
 }
 
-h4 {
-    font-weight: $alpha-font-weight;
+h4,
+.h4 {
+    font-weight: $beta-font-weight;
     margin-bottom: var(--global-whitespace-default);
     font-size: var(--global-fontSize);
     line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
@@ -76,6 +81,7 @@ dl,
 figure {
     margin: 0 0 var(--global-whitespace-default);
 }
+
 
 dd {
     margin-left: 0;
@@ -99,9 +105,14 @@ small {
     line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline) );
 }
 
+strong {
+    font-weight: $beta-font-weight;
+}
+
 // Links
 
 a {
+    font-weight: $beta-font-weight;
     color: var(--global-link-color);
     transition: all $animation-duration-alpha $animation-easing-out;
     display: inline-block;
@@ -128,9 +139,9 @@ a {
 hr {
     display: block;
     border: none;
-    height: 0;
+    // height: 0;
     // height: 1px;
-    // height: var(--global-baseline);
+    height: var(--global-baseline);
     background-color: var(--global-border-color);
     margin: var(--global-whitespace-double) 0;
     // margin: var(--global-whitespace-default) 0;

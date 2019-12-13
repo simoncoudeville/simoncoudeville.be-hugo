@@ -11,10 +11,11 @@
     display: grid;
     grid: ". content ." / minmax(var(--grid-whitespace),1fr) minmax(0, var(--global-container-maxWidth)) minmax(var(--grid-whitespace),1fr);
     grid-gap: var(--global-whitespace-default);
-    align-content: space-between;
+    // align-content: space-between;
+    align-content: start;
 
-    @include mq(bp4) {
-        --grid-whitespace: var(--global-whitespace-double);
+    @include mq(bp3) {
+        --grid-whitespace: var(--global-whitespace-default);
     }
 }
 
@@ -34,15 +35,15 @@
 }
 
 .o-row--example {
-    background-color: var(--row--example-backgroundColor, var(--global-page-backgroundColor--alt));
+    background-color: var(--global-page-backgroundColor--alt);
     margin-bottom: var(--global-whitespace-default);
+    padding: var(--global-whitespace-double) 0 var(--global-whitespace-default) 0;
 }
 
 .o-row--header {
     padding-top: var(--global-whitespace-default);
     z-index: 1000;
     transition: all $animation-duration-alpha;
-    // background-color: #fff;
 
     // @include mq(bp3) {
     //     position: sticky;
@@ -59,17 +60,21 @@
 
 .o-row--intro {
     min-height: calc(50vh - calc(var(--global-whitespace-default) * 5));
-    min-height: calc(50vh - calc(var(--global-baseline) * 17));
     padding-top: var(--global-whitespace-double);
     align-items: end;
     grid-template-rows: auto;
 }
 
 .o-row--intro-home {
-    min-height: 50vh;
+    min-height: calc(50vh - calc(var(--global-whitespace-default) * 1));
     padding-top: var(--global-whitespace-double);
     align-items: end;
     grid-template-rows: auto;
+}
+
+.o-row--divide {
+    border-top: 1px solid var(--global-border-color);
+    padding-top: var(--global-whitespace-double);
 }
 
 .o-container {
