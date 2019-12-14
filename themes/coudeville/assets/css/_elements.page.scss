@@ -59,7 +59,7 @@
     --global-color-neutral-40: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 75%);
     --global-color-neutral-50: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 45.75%);
     --global-color-neutral-60: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 35%);
-    --global-color-neutral-70: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 25%);
+    --global-color-neutral-70: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 20%);
     --global-color-neutral-80: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 15%);
     --global-color-neutral-90: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 10%);
 
@@ -83,13 +83,13 @@
 
     --global-whitespace-xxs: var(--global-baseline);
     --global-whitespace-xs: calc(var(--global-baseline) * calc(var(--global-baseline-multiplier) - 3));
-    --global-whitespace-sm: calc(var(--global-baseline) * calc(var(--global-baseline-multiplier) - 2));
-    --global-whitespace-md: calc(var(--global-baseline) * calc(var(--global-baseline-multiplier) - 1));
-    --global-whitespace-lg: calc(var(--global-baseline) * var(--global-baseline-multiplier));
+    --global-whitespace-s: calc(var(--global-baseline) * calc(var(--global-baseline-multiplier) - 2));
+    --global-whitespace-m: calc(var(--global-baseline) * calc(var(--global-baseline-multiplier) - 1));
+    --global-whitespace-l: calc(var(--global-baseline) * var(--global-baseline-multiplier));
 
-    --global-whitespace-default: var(--global-whitespace-lg);
-    --global-whitespace-double: calc(var(--global-whitespace-default) * 2);
-    --global-whitespace-triple: calc(var(--global-whitespace-double) + var(--global-whitespace-default));
+    --global-whitespace-base: var(--global-whitespace-l);
+    --global-whitespace-double: calc(var(--global-whitespace-base) * 2);
+    --global-whitespace-triple: calc(var(--global-whitespace-base) * 3);
     --global-whitespace-quadruple: calc(var(--global-whitespace-double) * 2);
 
     /* layout */
@@ -98,6 +98,7 @@
     @include mq(bp3) {
         --global-root-fontSize: #{$root-font-size/16px*100%};
         --global-baseline: #{6px / $root-font-size}rem;
+        // --global-baseline-multiplier: 6;
     }
 
     @include light-scheme;

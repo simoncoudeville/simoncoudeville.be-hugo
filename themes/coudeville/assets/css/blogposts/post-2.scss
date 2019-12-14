@@ -16,13 +16,13 @@
 html {
     background-image: url("stripes-2.svg");
     background-size: 1280px 250px;
-    // background-position: 50% calc(50vh - calc(250px - var(--global-whitespace-default)));
+    // background-position: 50% calc(50vh - calc(250px - var(--global-whitespace-base)));
     background-position: 50% calc(50vh - 202px);
     background-repeat: no-repeat;
 
     @include mq(bp3) {
         background-size: 2560px 500px;
-        // background-position: 50% calc(50vh - calc(500px - var(--global-whitespace-default)));
+        // background-position: 50% calc(50vh - calc(500px - var(--global-whitespace-base)));
         background-position: 50% calc(50vh - 654px);
     }
 }

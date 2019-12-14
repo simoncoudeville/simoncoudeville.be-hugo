@@ -14,9 +14,9 @@
 @import '../settings.global';
 
 .e-columns {
-    column-width: calc((var(--global-container-maxWidth) / 2) - #{var(--global-whitespace-default)});
-    column-gap: var(--global-whitespace-default);
-    margin-bottom: calc(var(--global-whitespace-default) * -1);
+    column-width: calc((var(--global-container-maxWidth) / 2) - #{var(--global-whitespace-base)});
+    column-gap: var(--global-whitespace-base);
+    margin-bottom: calc(var(--global-whitespace-base) * -1);
 }
 
 .e-baseline-title {

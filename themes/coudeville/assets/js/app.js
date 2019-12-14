@@ -21,7 +21,7 @@ function observeIntroTitle() {
     const target = document.querySelector('body');
 
     const options = {
-        rootMargin: '-108px'
+        rootMargin: '-98px'
     }
 
     let observer = new IntersectionObserver(function (entries) {
@@ -65,6 +65,6 @@ function rotateGradient() {
 document.addEventListener("DOMContentLoaded", function() {
     toggleBaselines();
     // rotateGradient();
-    // observeHeader();
-    // observeIntroTitle();
+    observeHeader();
+    observeIntroTitle();
 });

@@ -4,13 +4,19 @@
     Header section of a post
 */
 
+.c-header-observer {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 .c-header {
-    margin-bottom: var(--global-whitespace-default);
+    margin-bottom: var(--global-whitespace-base);
 
     @include mq(bp3) {
         display: grid;
         grid-template-columns: auto 1fr;
-        grid-column-gap: var(--global-whitespace-default);
+        grid-column-gap: var(--global-whitespace-base);
     }
 }
 
@@ -29,43 +35,38 @@
     margin-bottom: 0;
     will-change: opacity, transform;
     transition-property: opacity, transform;
-    transition-duration: $animation-duration-gamma;
+    transition-duration: $animation-duration-beta;
     transition-timing-function: $animation-easing-out;
 }
-
-// .c-header__meta {
-//     margin-top: calc(var(--global-whitespace-default) * -1);
-// }
 
 .c-header__title {
     display: none;
 }
 
 @include mq(bp3) {
-    // .c-header__meta {
-    //     transition-delay: $animation-duration-alpha;
-    //
-    //     .has-scrolled & {
-    //         transition-timing-function: $animation-easing-in;
-    //         transition-delay: 0s;
-    //         transition-duration: $animation-duration-alpha;
-    //         opacity: 0;
-    //         transform: translateY(-.5rem);
-    //     }
-    // }
-    //
-    // .c-header__title {
-    //     display: block;
-    //     opacity: 0;
-    //     transform: translateY(.5rem);
-    //     transition-timing-function: $animation-easing-in;
-    //     transition-duration: $animation-duration-alpha;
-    //
-    //     .has-scrolled & {
-    //         transition-timing-function: $animation-easing-out;
-    //         transition-delay: $animation-duration-alpha;
-    //         opacity: 1;
-    //         transform: translateY(0);
-    //     }
-    // }
+    .c-header__meta {
+        transition-delay: $animation-duration-alpha;
+
+        .has-scrolled & {
+            transition-timing-function: $animation-easing-in;
+            transition-delay: 0s;
+            // transition-duration: $animation-duration-alpha;
+            opacity: 0;
+            transform: translateY(calc(var(--global-whitespace-m) * -1));
+        }
+    }
+
+    .c-header__title {
+        display: block;
+        opacity: 0;
+        transform: translateY(var(--global-whitespace-m));
+        transition-timing-function: $animation-easing-in;
+
+        .has-scrolled & {
+            transition-timing-function: $animation-easing-out;
+            transition-delay: $animation-duration-alpha;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 }

@@ -21,9 +21,9 @@
     // &::before {
     //     content:'←';
     //     display: inline-block;
-    //     width: var(--global-whitespace-default);
+    //     width: var(--global-whitespace-base);
     //     text-align: right;
-    //     margin-left: calc(var(--global-whitespace-default) * -1);
+    //     margin-left: calc(var(--global-whitespace-base) * -1);
     //     opacity: 0;
     //     transform: translateX(calc(var(--global-whitespace-xxs) * -1));
     //     transition: all $animation-duration-alpha $animation-easing-in;

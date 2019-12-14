@@ -7,7 +7,7 @@ layout: page
 style: true
 ---
 
-<header class="o-row">
+<header class="o-row o-row--intro">
     <div class="o-container">
         <div class="s-content">
             <p>
@@ -16,143 +16,156 @@ style: true
         </div>
     </div>
 </header>
-<div class="o-row">
+<div class="o-row o-row--divide">
     <div class="o-container">
         <div class="s-content">
             <h2>Typography</h2>
             <p>
                 This site uses Suisse Int’l for text and Suisse Int’l Mono for code snippets and captions.
             </p>
-            <p class="c-text-lg u-no-curvy-l">
-                Suisse Int’l Regular
-            </p>
-            <p class="c-text-lg u-fw-beta u-no-curvy-l">
-                Suisse Int’l Book
-            </p>
-            <p class="c-text-lg c-text-code">
-                Suisse Int’l Mono Regular
-            </p>
+            <div class="s-example">
+                <p class="c-text-lg u-no-curvy-l">
+                    Suisse Int’l Regular
+                </p>
+                <p class="c-text-lg u-fw-beta u-no-curvy-l">
+                    Suisse Int’l Book
+                </p>
+                <p class="c-text-lg c-text-code">
+                    Suisse Int’l Mono Regular
+                </p>
+            </div>
+
             <hr class="hr-small">
+
             <h3>
                 Opentype features
             </h3>
             <p>
                 In standard body text every straight lowercase <span class="u-no-curvy-l">‘l’</span> is replaced by a curvy lowercase ‘l’ for maximum readability.
             </p>
-            <p class="c-text-lg u-no-curvy-l">
-                <span class="u-muted">I</span>ll<span class="u-muted">ustration</span> <span class="u-muted">→</span> <span class="u-curvy-l"><span class="u-muted">I</span>ll<span class="u-muted">ustration</span></span>
-            </p>
+            <div class="s-example">
+                <p class="c-text-lg u-no-curvy-l">
+                    <span class="u-muted">I</span>ll<span class="u-muted">ustration</span> <span class="u-muted">→</span> <span class="u-curvy-l"><span class="u-muted">I</span>ll<span class="u-muted">ustration</span></span>
+                </p>
+            </div>
             <p>
                 For the same reason and because it's cool every zero is a slashed one.
             </p>
-            <p class="c-text-lg u-no-slashed-zero">
-                <span class="u-muted">2</span>0<span class="u-muted">2</span>0 <span class="u-muted">→</span> <span class="u-muted">2</span><span class="u-slashed-zero">0</span><span class="u-muted">2</span><span class="u-slashed-zero">0</span> <br>
-                <!-- 0<span class="u-muted">123456789</span> <span class="u-muted">→</span> <span class="u-slashed-zero">0<span class="u-muted">123456789</span></span> -->
-            </p>
+            <div class="s-example">
+                <p class="c-text-lg u-no-slashed-zero">
+                    <span class="u-muted">2</span>0<span class="u-muted">2</span>0 <span class="u-muted">→</span> <span class="u-muted">2</span><span class="u-slashed-zero">0</span><span class="u-muted">2</span><span class="u-slashed-zero">0</span> <br>
+                    <!-- 0<span class="u-muted">123456789</span> <span class="u-muted">→</span> <span class="u-slashed-zero">0<span class="u-muted">123456789</span></span> -->
+                </p>
+            </div>
+
             <hr class="hr-small">
+
             <h3>
                 Modular scale
             </h3>
             <p>
                 Standard body text is 17px on small screens and 19px on larger screens (calculated to percentages obviously). Additional sizes are calculated by a 8:9 ratio modular scale.
             </p>
-            <dl class="c-modularscale-list">
-                <dt class="c-modularscale-list__term c-text-caption">
-                    XXXL
-                </dt>
-                <dd class="c-modularscale-list__description c-text-xxxl">
-                    Nymphs blitz quick vex dwarf jog
-                </dd>
-                <dt class="c-modularscale-list__term c-text-caption">
-                    XXL
-                </dt>
-                <dd class="c-modularscale-list__description c-text-xxl">
-                    Nymphs blitz quick vex dwarf jog
-                </dd>
-                <dt class="c-modularscale-list__term c-text-caption">
-                    XL
-                </dt>
-                <dd class="c-modularscale-list__description c-text-xl">
-                    Nymphs blitz quick vex dwarf jog
-                </dd>
-                <dt class="c-modularscale-list__term c-text-caption">
-                    L
-                </dt>
-                <dd class="c-modularscale-list__description c-text-lg">
-                    Nymphs blitz quick vex dwarf jog
-                </dd>
-                <dt class="c-modularscale-list__term c-text-caption">
-                    M
-                </dt>
-                <dd class="c-modularscale-list__description c-text-md">
-                    Nymphs blitz quick vex dwarf jog
-                </dd>
-                <dt class="c-modularscale-list__term c-text-caption">
-                    BASE
-                </dt>
-                <dd class="c-modularscale-list__description">
-                    Nymphs blitz quick vex dwarf jog
-                </dd>
-                <dt class="c-modularscale-list__term c-text-caption">
-                    S
-                </dt>
-                <dd class="c-modularscale-list__description c-text-sm">
-                    Nymphs blitz quick vex dwarf jog
-                </dd>
-                <dt class="c-modularscale-list__term c-text-caption">
-                    XS
-                </dt>
-                <dd class="c-modularscale-list__description c-text-xs">
-                    Nymphs blitz quick vex dwarf jog
-                </dd>
-            </dl>
+            <div class="s-example">
+                <dl class="c-modularscale-list">
+                    <dd class="c-modularscale-list__description c-text-xxxl">
+                        Nymphs blitz quick vex dwarf jog
+                    </dd>
+                    <dt class="c-modularscale-list__term c-text-caption">
+                        XXXL
+                    </dt>
+                    <dd class="c-modularscale-list__description c-text-xxl">
+                        Nymphs blitz quick vex dwarf jog
+                    </dd>
+                    <dt class="c-modularscale-list__term c-text-caption">
+                        XXL
+                    </dt>
+                    <dd class="c-modularscale-list__description c-text-xl">
+                        Nymphs blitz quick vex dwarf jog
+                    </dd>
+                    <dt class="c-modularscale-list__term c-text-caption">
+                        XL
+                    </dt>
+                    <dd class="c-modularscale-list__description c-text-lg">
+                        Nymphs blitz quick vex dwarf jog
+                    </dd>
+                    <dt class="c-modularscale-list__term c-text-caption">
+                        L
+                    </dt>
+                    <dd class="c-modularscale-list__description c-text-md">
+                        Nymphs blitz quick vex dwarf jog
+                    </dd>
+                    <dt class="c-modularscale-list__term c-text-caption">
+                        M
+                    </dt>
+                    <dd class="c-modularscale-list__description">
+                        Nymphs blitz quick vex dwarf jog
+                    </dd>
+                    <dt class="c-modularscale-list__term c-text-caption">
+                        BASE
+                    </dt>
+                    <dd class="c-modularscale-list__description c-text-sm">
+                        Nymphs blitz quick vex dwarf jog
+                    </dd>
+                    <dt class="c-modularscale-list__term c-text-caption">
+                        S
+                    </dt>
+                    <dd class="c-modularscale-list__description c-text-xs">
+                        Nymphs blitz quick vex dwarf jog
+                    </dd>
+                    <dt class="c-modularscale-list__term c-text-caption">
+                        XS
+                    </dt>
+                </dl>
+            </div>
             <hr class="hr-small">
             <h3>Text styles</h3>
-            <h1 class="u-mb-xxs">
-                Heading 1
-            </h1>
-            <p class="c-text-caption">
-                Suisse Int’l Book - Scale XXXL
-            </p>
-            <h2 class="u-mt-clear u-mb-xxs">Heading 2</h2>
-            <p class="c-text-caption">
-                Suisse Int’l Book - Scale L
-            </p>
-            <h3 class="u-mb-xxs">Heading 3</h3>
-            <p class="c-text-caption">
-                Suisse Int’l Book - Scale BASE
-            </p>
-            <p class="u-mb-xxs">
-                Paragraph
-            </p>
-            <p class="c-text-caption">
-                Suisse Int’l Regular - Scale BASE
-            </p>
-            <p class="u-mb-xxs">
-                <a href=">!">link</a>
-            </p>
-            <p class="c-text-caption">
-                Suisse Int’l Book - Scale BASE
-            </p>
-            <p class="c-text-label u-mb-xxs">
-                Label
-            </p>
-            <p class="c-text-caption">
-                Suisse Int’l Regular - Scale S
-            </p>
-            <p class="c-text-caption u-mb-xxs">
-                Caption
-            </p>
-            <p class="c-text-caption">
-                Suisse Int’l Mono - Scale XS
-            </p>
+            <div class="s-example">
+                <h1 class="u-mb-xxs">
+                    Heading 1
+                </h1>
+                <p class="c-text-caption">
+                    Suisse Int’l Book - Scale XXXL
+                </p>
+                <h2 class="u-mt-clear u-mb-xxs">Heading 2</h2>
+                <p class="c-text-caption">
+                    Suisse Int’l Book - Scale L
+                </p>
+                <h3 class="u-mb-xxs">Heading 3</h3>
+                <p class="c-text-caption">
+                    Suisse Int’l Book - Scale BASE
+                </p>
+                <p class="u-mb-xxs">
+                    Paragraph
+                </p>
+                <p class="c-text-caption">
+                    Suisse Int’l Regular - Scale BASE
+                </p>
+                <p class="u-mb-xxs">
+                    <a href=">!">link</a>
+                </p>
+                <p class="c-text-caption">
+                    Suisse Int’l Book - Scale BASE
+                </p>
+                <p class="c-text-label u-mb-xxs">
+                    Label
+                </p>
+                <p class="c-text-caption">
+                    Suisse Int’l Regular - Scale S
+                </p>
+                <p class="c-text-caption u-mb-xxs">
+                    Caption
+                </p>
+                <p class="c-text-caption">
+                    Suisse Int’l Mono - Scale XS
+                </p>
+            </div>
         </div>
-        </div>
-        </div>
+    </div>
+</div>
 <div class="o-row o-row--divide">
     <div class="o-container">
         <div class="s-content">
-
             <h2>
                 Color
             </h2>
@@ -258,8 +271,12 @@ style: true
                     Salmon
                 </p>
             </div>
-
-            <hr>
+        </div>
+    </div>
+</div>
+<div class="o-row o-row--divide">
+    <div class="o-container">
+        <div class="s-content">
 
             <h2>
                 Spacing
@@ -268,6 +285,55 @@ style: true
                 All spacing for components and typography is done in increments of 1 baseline unit. This baseline unit is calculated from px to rem using sass. It forms the basic unit of measurement for spacing.
             </p>
             <hr class="hr-small">
+            <h3>
+                Spacing scale
+            </h3>
+            <div class="s-squarespace-scale">
+                <div class="s-squarespace s-squarespace--xxs"></div>
+                <div class="s-space s-space--xxs"></div>
+                <p class="c-text-caption u-mb-clear">
+                    XXS
+                </p>
+
+                <div class="s-squarespace s-squarespace--xs"></div>
+                <div class="s-space s-space--xs"></div>
+                <p class="c-text-caption u-mb-clear">
+                    XS
+                </p>
+
+                <div class="s-squarespace s-squarespace--s"></div>
+                <div class="s-space s-space--s"></div>
+                <p class="c-text-caption u-mb-clear">
+                    S
+                </p>
+
+                <div class="s-squarespace s-squarespace--m"></div>
+                <div class="s-space s-space--m"></div>
+                <p class="c-text-caption u-mb-clear">
+                    M
+                </p>
+
+                <div class="s-squarespace s-squarespace--base"></div>
+                <div class="s-space s-space--base"></div>
+                <p class="c-text-caption u-mb-clear">
+                    Base
+                </p>
+
+                <div class="s-squarespace s-squarespace--double"></div>
+                <div class="s-space s-space--double"></div>
+                <p class="c-text-caption u-mb-clear">
+                    Double
+                </p>
+
+                <div class="s-squarespace s-squarespace--quadruple"></div>
+                <div class="s-space s-space--quadruple"></div>
+                <p class="c-text-caption u-mb-clear">
+                    Quadruple
+                </p>
+
+            </div>
+            <hr class="hr-small">
+            <!-- <hr class="hr-small">
             <h3>
                 Spacing scale
             </h3>
@@ -288,7 +354,7 @@ style: true
                     2 &times; Baseline Unit
                 </p>
 
-                <div class="s-space s-space--sm"></div>
+                <div class="s-space s-space--s"></div>
                 <p class="s-space-scale__title c-text-caption u-mb-clear">
                     S
                 </p>
@@ -296,17 +362,9 @@ style: true
                     3 &times; Baseline Unit
                 </p>
 
-                <div class="s-space s-space--md"></div>
+                <div class="s-space s-space--m"></div>
                 <p class="s-space-scale__title c-text-caption u-mb-clear">
                     M
-                </p>
-                <p class="s-space-scale__title c-text-caption u-mb-clear">
-                    4 &times; Baseline Unit
-                </p>
-
-                <div class="s-space s-space--lg"></div>
-                <p class="s-space-scale__title c-text-caption u-mb-clear">
-                    BASE
                 </p>
                 <p class="s-space-scale__title c-text-caption u-mb-clear">
                     5 &times; Baseline Unit
@@ -336,80 +394,82 @@ style: true
                     4 &times; BASE
                 </p>
             </div>
-            <hr class="hr-small">
+            <hr class="hr-small"> -->
             <h3>
                 Baseline grid
             </h3>
             <p>
                 Line heights are set in increments of the same baseline unit. This means Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos doloremque tempora nostrum esse minus, repudiandae!
             </p>
-            <div class="s-baseline">
-                <div class="c-baseline-overlay c-baseline-overlay--unit"></div>
-                <div class="s-baseline__item">
-                    <h1 class="s-baseline__example">
-                        Heading 1
-                    </h1>
-                    <div class="s-baseline__space">
-                        <div class="s-space"></div>
-                        <span class="s-baseline__times c-text-caption">
-                            7&times;
-                        </span>
+            <div class="s-example">
+                <div class="s-baseline">
+                    <div class="c-baseline-overlay c-baseline-overlay--unit"></div>
+                    <div class="s-baseline__item">
+                        <h1 class="s-baseline__example">
+                            Heading 1
+                        </h1>
+                        <div class="s-baseline__space">
+                            <div class="s-space"></div>
+                            <span class="s-baseline__times c-text-caption">
+                                7&times;
+                            </span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="s-baseline__item">
-                    <h2 class="s-baseline__example u-mt-clear">Heading 2</h2>
-                    <div class="s-baseline__space">
-                        <div class="s-space"></div>
-                        <span class="s-baseline__times c-text-caption">
-                            6&times;
-                        </span>
+                    <div class="s-baseline__item">
+                        <h2 class="s-baseline__example u-mt-clear">Heading 2</h2>
+                        <div class="s-baseline__space">
+                            <div class="s-space"></div>
+                            <span class="s-baseline__times c-text-caption">
+                                6&times;
+                            </span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="s-baseline__item">
-                    <h3 class="s-baseline__example">Heading 3</h3>
-                    <div class="s-baseline__space">
-                        <div class="s-space"></div>
-                        <span class="s-baseline__times c-text-caption">
-                            5&times;
-                        </span>
+                    <div class="s-baseline__item">
+                        <h3 class="s-baseline__example">Heading 3</h3>
+                        <div class="s-baseline__space">
+                            <div class="s-space"></div>
+                            <span class="s-baseline__times c-text-caption">
+                                5&times;
+                            </span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="s-baseline__item">
-                    <p class="s-baseline__example">
-                        Paragraph
-                    </p>
-                    <div class="s-baseline__space">
-                        <div class="s-space"></div>
-                        <span class="s-baseline__times c-text-caption">
-                            5&times;
-                        </span>
+                    <div class="s-baseline__item">
+                        <p class="s-baseline__example">
+                            Paragraph
+                        </p>
+                        <div class="s-baseline__space">
+                            <div class="s-space"></div>
+                            <span class="s-baseline__times c-text-caption">
+                                5&times;
+                            </span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="s-baseline__item">
-                    <p class="s-baseline__example c-text-label">
-                        Label
-                    </p>
-                    <div class="s-baseline__space">
-                        <div class="s-space"></div>
-                        <span class="s-baseline__times c-text-caption">
-                            4&times;
-                        </span>
+                    <div class="s-baseline__item">
+                        <p class="s-baseline__example c-text-label">
+                            Label
+                        </p>
+                        <div class="s-baseline__space">
+                            <div class="s-space"></div>
+                            <span class="s-baseline__times c-text-caption">
+                                4&times;
+                            </span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="s-baseline__item">
-                    <p class="s-baseline__example c-text-caption u-mb-clear">
-                        Caption
-                    </p>
-                    <div class="s-baseline__space">
-                        <div class="s-space"></div>
-                        <span class="s-baseline__times c-text-caption">
-                            4&times;
-                        </span>
+                    <div class="s-baseline__item">
+                        <p class="s-baseline__example c-text-caption u-mb-clear">
+                            Caption
+                        </p>
+                        <div class="s-baseline__space">
+                            <div class="s-space"></div>
+                            <span class="s-baseline__times c-text-caption">
+                                4&times;
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>

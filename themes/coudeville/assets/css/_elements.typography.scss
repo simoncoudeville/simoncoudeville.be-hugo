@@ -44,7 +44,7 @@ h1,
     // font-feature-settings: "zero", "liga", "ss01";
     font-weight: $beta-font-weight;
     // font-weight: $alpha-font-weight;
-    margin-bottom: var(--global-whitespace-default);
+    margin-bottom: var(--global-whitespace-base);
     font-size: var(--global-fontSize-xxxl);
     line-height: calc(calc(var(--global-baseline-multiplier) + 3) * var(--global-baseline));
 }
@@ -53,7 +53,7 @@ h2,
 .h2 {
     font-weight: $beta-font-weight;
     // font-weight: $alpha-font-weight;
-    margin-bottom: var(--global-whitespace-default);
+    margin-bottom: var(--global-whitespace-base);
     font-size: var(--global-fontSize-lg);
     line-height: calc(calc(var(--global-baseline-multiplier) + 1) * var(--global-baseline));
 }
@@ -61,7 +61,7 @@ h2,
 h3,
 .h3 {
     font-weight: $beta-font-weight;
-    margin-bottom: var(--global-whitespace-default);
+    margin-bottom: var(--global-whitespace-base);
     font-size: var(--global-fontSize);
     line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
 }
@@ -69,7 +69,7 @@ h3,
 h4,
 .h4 {
     font-weight: $beta-font-weight;
-    margin-bottom: var(--global-whitespace-default);
+    margin-bottom: var(--global-whitespace-base);
     font-size: var(--global-fontSize);
     line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
 }
@@ -79,7 +79,7 @@ ul,
 ol,
 dl,
 figure {
-    margin: 0 0 var(--global-whitespace-default);
+    margin: 0 0 var(--global-whitespace-base);
 }
 
 
@@ -88,12 +88,12 @@ dd {
 }
 
 blockquote {
-    margin: var(--global-whitespace-default);
+    margin: var(--global-whitespace-base);
 }
 
 pre {
     white-space: pre-wrap;
-    margin-bottom: var(--global-whitespace-default);
+    margin-bottom: var(--global-whitespace-base);
     font-family: $code-font-family;
     font-size: var(--global-fontSize-sm);
     line-height: calc(var(--global-baseline) * var(--global-baseline-multiplier));
@@ -144,5 +144,5 @@ hr {
     height: var(--global-baseline);
     background-color: var(--global-border-color);
     margin: var(--global-whitespace-double) 0;
-    // margin: var(--global-whitespace-default) 0;
+    // margin: var(--global-whitespace-base) 0;
 }

@@ -6,19 +6,19 @@
 
 
 // .c-example {
-//     padding: var(--global-whitespace-double) 0 var(--global-whitespace-default);
+//     padding: var(--global-whitespace-double) 0 var(--global-whitespace-base);
 // }
 
 .c-example__title {
     position: relative;
-    margin-top: calc(var(--global-whitespace-default) * -1);
+    margin-top: calc(var(--global-whitespace-base) * -1);
 }
 
 .c-example__body {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: var(--global-whitespace-default);
+    margin-bottom: var(--global-whitespace-base);
 
     .has-baseline & {
 
@@ -36,10 +36,10 @@
 }
 
 .c-example__body--xl {
-    padding: var(--global-whitespace-default) 0 0;
+    padding: var(--global-whitespace-base) 0 0;
 
     @include mq(bp3) {
-        padding: var(--global-whitespace-double) 0 var(--global-whitespace-default);
+        padding: var(--global-whitespace-double) 0 var(--global-whitespace-base);
     }
 }
 
@@ -51,5 +51,5 @@
 .c-example__toggle {
     position: relative;
     // margin-top: var(--global-whitespace-double);
-    margin-bottom: calc(var(--global-whitespace-default) * -1);
+    margin-bottom: calc(var(--global-whitespace-base) * -1);
 }
