@@ -1,7 +1,7 @@
 // Component: toggle checkbox
 
 .c-toggle {
-    display: flex;
+    display: inline-flex;
     flex-direction: row-reverse;
     width: auto;
     align-items: center;
@@ -16,7 +16,7 @@
     margin: 0 0 0 1rem;
     appearance: none;
     border-radius: 20px;
-    width: 38px;
+    width: 36px;
     height: 16px;
     transition: all $animation-duration-alpha $animation-easing-out;
     outline: none;
@@ -41,7 +41,7 @@
         background-color: var(--toggle__checkbox-checked-backgroundColor, var(--global-color-alpha));
 
         &:after {
-            transform: translate(14px,-5px);
+            transform: translate(12px,-5px);
             background-color: var(--toggle__switch-backgroundColor--focus, white);
             border-color: var(--toggle__switch-focus-borderColor, white);
         }

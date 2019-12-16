@@ -13,7 +13,7 @@
     --global-page-color: var(--global-color-neutral-90);
     --global-heading-color: var(--global-color-neutral-90);
     --global-meta-color: var(--global-color-neutral-50);
-    --global-border-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 10%, .10);
+    --global-border-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 10%, .125);
 
     --global-link-color: var(--global-heading-color);
     --global-link-hover-color: var(--global-page-color);
@@ -31,7 +31,7 @@
     --global-page-backgroundColor--alt: var(--global-color-neutral-80);
     --global-page-color: var(--global-color-neutral-10);
     --global-heading-color: var(--global-color-neutral-10);
-    --global-border-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 97%, .10);
+    --global-border-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 97%, .125);
 
     --global-color-neutral-50: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 51.75%);
 }
