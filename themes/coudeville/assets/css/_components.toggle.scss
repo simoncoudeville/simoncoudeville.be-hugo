@@ -41,13 +41,16 @@
         background-color: var(--toggle__checkbox-checked-backgroundColor, var(--global-color-alpha));
 
         &:after {
-            transform: translate(15px,-5px);
+            transform: translate(14px,-5px);
+            background-color: var(--toggle__switch-backgroundColor--focus, white);
+            border-color: var(--toggle__switch-focus-borderColor, white);
         }
     }
 
     &:focus,
     &:active {
         &:after {
+            background-color: var(--toggle__switch-focus-backgroundColor, white);
             border-color: var(--toggle__switch-focus-borderColor, hsl(var(--global-hue-color-alpha),var(--global-saturation-color-alpha),var(--global-lightness-color-alpha)));
             box-shadow: var(--toggle__switch-focus-shadow, 0 1px 3px rgba(0, 0, 0, 0.2), 0 0 0 3px hsla(var(--global-hue-color-alpha),var(--global-saturation-color-alpha),var(--global-lightness-color-alpha),.25));
         }
@@ -60,6 +63,8 @@
         --toggle__checkbox-borderColor: var(--global-border-color);
         --toggle__checkbox-checked-backgroundColor: var(--toggle__checkbox-backgroundColor);
 
+        --toggle__switch-backgroundColor: var(--global-color-neutral-50);
+        --toggle__switch-borderColor: var(--global-color-neutral-50);
         --toggle__switch-focus-borderColor: white;
         --toggle__switch-focus-shadow: 0 0 0 4px hsla(var(--global-hue-color-alpha),var(--global-saturation-color-alpha),var(--global-lightness-color-alpha),.75);
     }

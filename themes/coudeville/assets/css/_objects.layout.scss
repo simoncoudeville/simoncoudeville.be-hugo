@@ -51,8 +51,8 @@
         top: 0;
         right: 0;
         left: 0;
-        background-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 97%, .95);
         background-color: var(--global-page-backgroundColor);
+        // background-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 97%, 1);
     }
 
     &.is-sticky {
@@ -81,10 +81,10 @@
     padding-top: var(--global-whitespace-double);
 }
 
-.o-row--footer {
-    border-top: 1px solid var(--global-border-color);
-    padding-top: var(--global-whitespace-base);
-}
+// .o-row--footer {
+//     border-top: 1px solid var(--global-border-color);
+//     padding-top: var(--global-whitespace-base);
+// }
 
 .o-container {
     grid-column: content;

@@ -11,6 +11,7 @@
 }
 
 .c-header {
+    --c-header__meta-offset: var(--global-whitespace-s);
     margin-bottom: var(--global-whitespace-base);
 
     @include mq(bp3) {
@@ -35,7 +36,7 @@
     margin-bottom: 0;
     will-change: opacity, transform;
     transition-property: opacity, transform;
-    transition-duration: $animation-duration-beta;
+    transition-duration: $animation-duration-alpha;
     transition-timing-function: $animation-easing-out;
 }
 
@@ -50,16 +51,15 @@
         .has-scrolled & {
             transition-timing-function: $animation-easing-in;
             transition-delay: 0s;
-            // transition-duration: $animation-duration-alpha;
             opacity: 0;
-            transform: translateY(calc(var(--global-whitespace-m) * -1));
+            transform: translateY(calc(var(--c-header__meta-offset) * -1));
         }
     }
 
     .c-header__title {
         display: block;
         opacity: 0;
-        transform: translateY(var(--global-whitespace-m));
+        transform: translateY(var(--c-header__meta-offset));
         transition-timing-function: $animation-easing-in;
 
         .has-scrolled & {
