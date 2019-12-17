@@ -21,7 +21,7 @@
 
 /* Generic */
 // @import 'generic.normalize';
-@import 'generic.box-sizing';
+// @import 'generic.box-sizing';
 
 /* Elements */
 @import 'elements.fonts';
@@ -40,7 +40,9 @@
 @import 'components.footer';
 @import 'components.brand';
 @import 'components.text';
-@import 'components.toggle';
+// @import 'components.toggle';
+@import 'components.toggle-2';
+// @import 'components.toggle-3';
 @import 'components.list';
 @import 'components.example';
 @import 'components.about';

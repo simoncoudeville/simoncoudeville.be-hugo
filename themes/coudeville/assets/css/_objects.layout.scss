@@ -58,6 +58,7 @@
     &.is-sticky {
         box-shadow: 0 0 15px hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 10%, .1);
         // box-shadow: 0 0 0 1px hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 10%, .1)
+        // box-shadow: 0 0 0 1px var(--global-shadow-border-color);
         box-shadow: 0 0 0 1px var(--global-border-color);
     }
 }
