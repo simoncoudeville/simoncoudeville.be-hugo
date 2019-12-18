@@ -5,12 +5,12 @@
 */
 
 .c-about {
-    @include mq(bp2) {
+    // @include mq(bp2) {
         display: grid;
-        grid-gap: var(--global-whitespace-double);
+        grid-gap: var(--global-whitespace-base);
         grid-template-columns: auto 1fr;
         align-items: center;
-    }
+    // }
     // display: flex;
     // align-items: center;
     // flex-wrap: wrap;

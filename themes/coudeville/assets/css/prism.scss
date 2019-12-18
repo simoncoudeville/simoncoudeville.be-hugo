@@ -20,9 +20,9 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
 
 code[class*="language-"],
 pre[class*="language-"] {
-	--prism-text-color: var(--global-color-neutral-30);
+	--prism-text-color: var(--global-color-neutral-300);
     --prism-comment-color: var(--global-meta-color);
-    --prism-backgroundColor: var(--global-color-neutral-90);
+    --prism-backgroundColor: var(--global-color-neutral-900);
 	--prism-border: 0;
     --prism-keyword-color: var(--global-color-beta);
     --prism-function-color: var(--global-color-alpha);

@@ -25,17 +25,32 @@
 
     --global-neutral-hue: var(--global-hue-color-beta);
     --global-neutral-saturation: 3%;
-    --global-neutral-lightness: 5%;
 
-    --global-color-neutral-10: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 97%);
-    --global-color-neutral-20: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 95%);
-    --global-color-neutral-30: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 90%);
-    --global-color-neutral-40: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 80%);
-    --global-color-neutral-50: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 45.75%);
-    --global-color-neutral-60: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 25%);
-    --global-color-neutral-70: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 17.5%);
-    --global-color-neutral-80: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 10%);
-    --global-color-neutral-90: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 5%);
+    --global-color-neutral-100: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 97%);
+    --global-color-neutral-200: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 95%);
+    --global-color-neutral-300: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 90%);
+    --global-color-neutral-400: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 80%);
+    --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 45.75%);
+    --global-color-neutral-600: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 30%);
+    --global-color-neutral-700: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 20%);
+    --global-color-neutral-800: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 10%);
+    --global-color-neutral-900: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 5%);
+
+    /* Light theme */
+    --global-backgroundColor: var(--global-color-neutral-100);
+    --global-backgroundColor--alt: var(--global-color-neutral-200);
+    --global-text-color: var(--global-color-neutral-900);
+    --global-heading-color: var(--global-color-neutral-900);
+    --global-meta-color: var(--global-color-neutral-500);
+    --global-border-color: var(--global-color-neutral-300);
+    --global-border-color-hard: var(--global-color-neutral-400);
+    --global-link-color: var(--global-heading-color);
+    --global-link-hover-color: var(--global-text-color);
+    --global-selection-backgroundColor: var(--global-text-color);
+    --global-selection-color: var(--global-backgroundColor);
+
+    --global-baseline-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .50);
+    --global-baseline-background: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .25);
 
     /* type scale */
     --global-modular-scale-ratio: 1.125;
@@ -73,36 +88,18 @@
         --global-root-fontSize: #{$root-font-size/16px*100%};
         --global-baseline: #{6px / $root-font-size}rem;
     }
-
-    /* Light theme */
-    --global-backgroundColor: var(--global-color-neutral-10);
-    --global-backgroundColor--alt: var(--global-color-neutral-20);
-    --global-text-color: var(--global-color-neutral-90);
-    --global-heading-color: var(--global-color-neutral-90);
-    --global-meta-color: var(--global-color-neutral-50);
-    --global-border-color: var(--global-color-neutral-30);
-    --global-border-color-hard: var(--global-color-neutral-40);
-
-    --global-link-color: var(--global-heading-color);
-    --global-link-hover-color: var(--global-text-color);
-    --global-selection-backgroundColor: var(--global-text-color);
-    --global-selection-color: var(--global-backgroundColor);
-
-    --global-baseline-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .50);
-    --global-baseline-background: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .25);
-
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --global-color-neutral-50: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 50%);
+        --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 50%);
 
-        --global-backgroundColor: var(--global-color-neutral-90);
-        --global-backgroundColor--alt: var(--global-color-neutral-80);
-        --global-text-color: var(--global-color-neutral-10);
-        --global-heading-color: var(--global-color-neutral-10);
-        --global-border-color: var(--global-color-neutral-70);
-        --global-border-color-hard: var(--global-color-neutral-60);
+        --global-backgroundColor: var(--global-color-neutral-900);
+        --global-backgroundColor--alt: var(--global-color-neutral-800);
+        --global-text-color: var(--global-color-neutral-100);
+        --global-heading-color: var(--global-color-neutral-100);
+        --global-border-color: var(--global-color-neutral-700);
+        --global-border-color-hard: var(--global-color-neutral-600);
     }
 }
 

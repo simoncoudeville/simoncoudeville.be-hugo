@@ -6,4 +6,7 @@
 
 .c-footer {
     color: var(--global-meta-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

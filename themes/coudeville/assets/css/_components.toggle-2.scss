@@ -47,8 +47,8 @@
     &:focus,
     &:active {
         &:after {
-            border-color: var(--toggle__switch-focus-borderColor, var(--global-color-neutral-50));
-            box-shadow: var(--toggle__switch-focus-shadow, 0 0 0 3px hsla(var(--global-neutral-hue),var(--global-neutral-saturation),var(--global-neutral-lightness),.15));
+            border-color: var(--toggle__switch-focus-borderColor, var(--global-color-neutral-500));
+            box-shadow: var(--toggle__switch-focus-shadow, 0 0 0 3px hsla(0,0%,0%,.15));
         }
     }
 
@@ -56,9 +56,9 @@
 
 @media (prefers-color-scheme: dark) {
     .c-toggle {
-        --toggle__switch-checked-backgroundColor: var(--global-color-neutral-10);
-        --toggle__switch-checked-borderColor: var(--global-color-neutral-10);
-        --toggle__switch-focus-borderColor: var(--global-color-neutral-10);
-        --toggle__switch-focus-shadow: 0 0 0 3px hsla(var(--global-neutral-hue),var(--global-neutral-saturation),97%,.5);
+        --toggle__switch-checked-backgroundColor: var(--global-color-neutral-100);
+        --toggle__switch-checked-borderColor: var(--global-color-neutral-100);
+        --toggle__switch-focus-borderColor: var(--global-color-neutral-100);
+        --toggle__switch-focus-shadow: 0 0 0 3px hsla(0,0%,100%,.5);
     }
 }

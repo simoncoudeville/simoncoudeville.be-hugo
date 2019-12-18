@@ -63,8 +63,8 @@
         --toggle__checkbox-borderColor: var(--global-border-color);
         --toggle__checkbox-checked-backgroundColor: var(--toggle__checkbox-backgroundColor);
 
-        --toggle__switch-backgroundColor: var(--global-color-neutral-50);
-        --toggle__switch-borderColor: var(--global-color-neutral-50);
+        --toggle__switch-backgroundColor: var(--global-color-neutral-500);
+        --toggle__switch-borderColor: var(--global-color-neutral-500);
         --toggle__switch-focus-borderColor: white;
         --toggle__switch-focus-shadow: 0 0 0 4px hsla(var(--global-hue-color-alpha),var(--global-saturation-color-alpha),var(--global-lightness-color-alpha),.75);
     }

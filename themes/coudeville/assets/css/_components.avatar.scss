@@ -5,20 +5,16 @@
 */
 
 .c-avatar {
-    width: baseline(calc(var(--global-baseline-multiplier) * 5));
-    height: baseline(calc(var(--global-baseline-multiplier) * 5));
+    --c-avatar-dimension: var(--global-whitespace-quadruple);
+    display: inline-block;
+    width: var(--c-avatar-dimension);
+    height: var(--c-avatar-dimension);
     border-radius: 100%;
     overflow: hidden;
-    background: var(--avatar-background, var(--global-color-neutral-dark-a-05));
+    background-color: rgba(black,.075);
 
     img {
         opacity: var(--avatar__img-opacity, .75);
         mix-blend-mode: multiply;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    .c-avatar {
-        --avatar-background: var(--global-color-neutral-light-a-05);
     }
 }
