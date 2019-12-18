@@ -6,38 +6,6 @@
 
 // CSS vars
 
-@mixin light-scheme {
-    /* Light theme */
-    --global-page-backgroundColor: var(--global-color-neutral-10);
-    --global-page-backgroundColor--alt: var(--global-color-neutral-20);
-    --global-page-color: var(--global-color-neutral-90);
-    --global-heading-color: var(--global-color-neutral-90);
-    --global-meta-color: var(--global-color-neutral-50);
-    --global-border-color: var(--global-color-neutral-30);
-    --global-border-color-hard: var(--global-color-neutral-40);
-
-    --global-link-color: var(--global-heading-color);
-    --global-link-hover-color: var(--global-page-color);
-    --global-selection-backgroundColor: var(--global-page-color);
-    --global-selection-color: var(--global-page-backgroundColor);
-
-    --global-baseline-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .50);
-    --global-baseline-background: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .25);
-}
-
-@mixin dark-scheme {
-    /* Dark theme */
-
-    --global-page-backgroundColor: var(--global-color-neutral-90);
-    --global-page-backgroundColor--alt: var(--global-color-neutral-80);
-    --global-page-color: var(--global-color-neutral-10);
-    --global-heading-color: var(--global-color-neutral-10);
-    --global-border-color: var(--global-color-neutral-70);
-    --global-border-color-hard: var(--global-color-neutral-60);
-
-    --global-color-neutral-50: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 51.75%);
-}
-
 :root {
     /* colors */
     --global-color-alpha: #{$color-alpha};
@@ -73,10 +41,10 @@
     --global-modular-scale-ratio: 1.125;
     --global-root-fontSize: #{$root-font-size-sm/16px*100%};
 
-    --global-fontSize: 1rem;
     --global-fontSize-xxs: calc((var(--global-fontSize-xs) / var(--global-modular-scale-ratio)) / var(--global-modular-scale-ratio));
     --global-fontSize-xs: calc((var(--global-fontSize) / var(--global-modular-scale-ratio)) / var(--global-modular-scale-ratio));
     --global-fontSize-sm: calc(var(--global-fontSize-xs) * var(--global-modular-scale-ratio));
+    --global-fontSize: 1rem;
     --global-fontSize-md: calc(var(--global-fontSize) * var(--global-modular-scale-ratio));
     --global-fontSize-lg: calc(var(--global-fontSize-md) * var(--global-modular-scale-ratio));
     --global-fontSize-xl: calc(var(--global-fontSize-lg) * var(--global-modular-scale-ratio));
@@ -104,24 +72,45 @@
     @include mq(bp3) {
         --global-root-fontSize: #{$root-font-size/16px*100%};
         --global-baseline: #{6px / $root-font-size}rem;
-        // --global-baseline-multiplier: 6;
     }
 
-    @include light-scheme;
+    /* Light theme */
+    --global-backgroundColor: var(--global-color-neutral-10);
+    --global-backgroundColor--alt: var(--global-color-neutral-20);
+    --global-text-color: var(--global-color-neutral-90);
+    --global-heading-color: var(--global-color-neutral-90);
+    --global-meta-color: var(--global-color-neutral-50);
+    --global-border-color: var(--global-color-neutral-30);
+    --global-border-color-hard: var(--global-color-neutral-40);
+
+    --global-link-color: var(--global-heading-color);
+    --global-link-hover-color: var(--global-text-color);
+    --global-selection-backgroundColor: var(--global-text-color);
+    --global-selection-color: var(--global-backgroundColor);
+
+    --global-baseline-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .50);
+    --global-baseline-background: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .25);
 
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        @include dark-scheme;
+        --global-color-neutral-50: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 50%);
+
+        --global-backgroundColor: var(--global-color-neutral-90);
+        --global-backgroundColor--alt: var(--global-color-neutral-80);
+        --global-text-color: var(--global-color-neutral-10);
+        --global-heading-color: var(--global-color-neutral-10);
+        --global-border-color: var(--global-color-neutral-70);
+        --global-border-color-hard: var(--global-color-neutral-60);
     }
 }
 
 // styles
 
 html {
-    background-color: var(--global-page-backgroundColor);
-    color: var(--global-page-color);
+    background-color: var(--global-backgroundColor);
+    color: var(--global-text-color);
     font-family: $alpha-font-family;
     font-size: var(--global-root-fontSize);
     font-feature-settings: "zero", "liga";

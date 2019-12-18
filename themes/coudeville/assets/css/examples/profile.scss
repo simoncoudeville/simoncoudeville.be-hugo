@@ -20,6 +20,7 @@
     background-color: white;
     border-radius: baseline(1);
     box-shadow: 0 0 0 1px rgba(black, 0.05), 0 2px 4px rgba(black,.075);
+    // box-shadow: 0 0 0 1px var(--global-color-neutral-30);
     margin-bottom: var(--global-whitespace-base);
     overflow: hidden;
 }
@@ -43,10 +44,13 @@
 .e-profile__avatar {
     display: block;
     width: baseline(12);
+    height: baseline(12);
     margin: 0 auto;
     border-radius: 100%;
     margin-bottom: baseline(1);
-    mix-blend-mode: multiply;
+    // mix-blend-mode: multiply;
+    background-color: var(--global-color-neutral-20);
+    background-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), var(--global-neutral-lightness), .075);
 }
 
 .e-profile__name {

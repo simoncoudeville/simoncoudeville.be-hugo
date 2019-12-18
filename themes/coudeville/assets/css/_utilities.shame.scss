@@ -28,7 +28,7 @@
     height: var(--dimension);
     border-radius: 100%;
     // background: linear-gradient(var(--deg), var(--gradient-background__image-start, var(--global-color-neutral-20)), var(--gradient-background__image-end, white));
-    background: linear-gradient(var(--deg), var(--gradient-background__image-start, var(--global-page-backgroundColor--alt)), var(--gradient-background__image-end, white));
+    background: linear-gradient(var(--deg), var(--gradient-background__image-start, var(--global-backgroundColor--alt)), var(--gradient-background__image-end, white));
     animation: rotate 10s linear infinite;
     transition: transform 2s;
 
