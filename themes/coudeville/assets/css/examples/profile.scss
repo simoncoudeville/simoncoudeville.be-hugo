@@ -45,11 +45,15 @@
     display: block;
     width: baseline(12);
     height: baseline(12);
-    margin: 0 auto;
+    margin: 0 auto baseline(1);
     border-radius: 100%;
-    margin-bottom: baseline(1);
-    // mix-blend-mode: multiply;
+    overflow: hidden;
     background-color: rgba(black,.075);
+
+    img {
+        opacity: var(--avatar__img-opacity, .75);
+        mix-blend-mode: multiply;
+    }
 }
 
 .e-profile__name {

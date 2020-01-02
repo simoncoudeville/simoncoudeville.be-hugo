@@ -4,15 +4,13 @@ title: Creating vertical rhythm on the web
 description: In this article I describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing perfect control and a predictable outcome.
 draft: false
 code: true
+cover: "test-cover-2.png"
 ---
 
 <!-- {{< inline-css scss="css/blogposts/post-2.scss" >}} -->
 
 <div class="o-row">
     <div class="o-container">
-        <!-- <p class="h2 u-mb-double">
-            Curious about product design at Dropbox? Here’s a look at tools we use for solving problems, making decisions, and communicating ideas.
-        </p> -->
         <div class="s-content">
             <p>
                 In this article I will describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing perfect control and a predictable outcome.
@@ -103,7 +101,9 @@ $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace 
         <div class="c-baseline-overlay c-baseline-overlay--unit"></div>
         <div class="e-card__body">
             <div class="e-profile">
-                <img class="e-profile__avatar" src="https://cdn.dribbble.com/users/44218/avatars/normal/me3.jpg?1361562828" alt="Avatar">
+                <div class="e-profile__avatar">
+                    <img src="/img/me@2x.png" alt="Avatar">
+                </div>
                 <h4 class="e-profile__name c-highlight">Simon Coudeville</h4>
                 <p class="e-profile__location c-highlight">Bruges, Belgium</p>
                 <p class="e-profile__occupation c-highlight">Designer &amp; teacher at MCT Howest.</p>

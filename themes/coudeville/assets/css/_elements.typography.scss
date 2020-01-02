@@ -139,10 +139,7 @@ a {
 hr {
     display: block;
     border: none;
-    // height: 0;
-    // height: 1px;
-    height: var(--global-baseline);
-    background-color: var(--global-border-color);
+    height: 1px;
     margin: var(--global-whitespace-double) 0;
-    // margin: var(--global-whitespace-base) 0;
+    background-color: var(--global-border-color);
 }

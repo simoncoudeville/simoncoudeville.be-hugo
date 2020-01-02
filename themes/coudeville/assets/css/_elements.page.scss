@@ -28,7 +28,7 @@
 
     --global-color-neutral-100: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 97%);
     --global-color-neutral-200: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 95%);
-    --global-color-neutral-300: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 90%);
+    --global-color-neutral-300: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 88%);
     --global-color-neutral-400: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 80%);
     --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 45.75%);
     --global-color-neutral-600: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 30%);
@@ -44,6 +44,7 @@
     --global-meta-color: var(--global-color-neutral-500);
     --global-border-color: var(--global-color-neutral-300);
     --global-border-color-hard: var(--global-color-neutral-400);
+    --global-shadow-border-color: rgba(0, 0, 0, .1);
     --global-link-color: var(--global-heading-color);
     --global-link-hover-color: var(--global-text-color);
     --global-selection-backgroundColor: var(--global-text-color);
@@ -92,14 +93,15 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 50%);
+        --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 51.75%);
 
-        --global-backgroundColor: var(--global-color-neutral-900);
-        --global-backgroundColor--alt: var(--global-color-neutral-800);
+        --global-backgroundColor: var(--global-color-neutral-800);
+        --global-backgroundColor--alt: var(--global-color-neutral-900);
         --global-text-color: var(--global-color-neutral-100);
         --global-heading-color: var(--global-color-neutral-100);
         --global-border-color: var(--global-color-neutral-700);
         --global-border-color-hard: var(--global-color-neutral-600);
+        --global-shadow-border-color: rgba(255, 255, 255, .1);
     }
 }
 
@@ -110,6 +112,7 @@ html {
     color: var(--global-text-color);
     font-family: $alpha-font-family;
     font-size: var(--global-root-fontSize);
+    // font-weight: $beta-font-weight;
     font-feature-settings: "zero", "liga";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

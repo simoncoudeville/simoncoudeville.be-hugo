@@ -33,13 +33,10 @@
         transition: all $animation-duration-alpha $animation-easing-out;
     }
 
-
-
     &:checked {
-
         &:after {
             transform: translate(15px,-9.5px);
-            background-color: var(--toggle__switch-checked-backgroundColor, white);
+            background-color: var(--toggle__switch-checked-backgroundColor, var(--global-backgroundColor));
             border-color: var(--toggle__switch-checked-borderColor, var(--global-border-color-hard));
         }
     }

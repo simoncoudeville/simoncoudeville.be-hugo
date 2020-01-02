@@ -21,7 +21,7 @@ function observeIntroTitle() {
     const target = document.querySelector('body');
 
     const options = {
-        rootMargin: '-98px'
+        rootMargin: '-96px'
     }
 
     let observer = new IntersectionObserver(function (entries) {

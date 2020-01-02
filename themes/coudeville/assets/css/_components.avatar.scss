@@ -12,6 +12,7 @@
     border-radius: 100%;
     overflow: hidden;
     background-color: rgba(black,.075);
+    // background-color: var(--c-avatar-backgroundColor, var(--global-color-neutral-200));
 
     img {
         opacity: var(--avatar__img-opacity, .75);

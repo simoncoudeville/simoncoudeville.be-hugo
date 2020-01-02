@@ -20,10 +20,9 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
 
 code[class*="language-"],
 pre[class*="language-"] {
-	--prism-text-color: var(--global-color-neutral-300);
+	--prism-text-color: var(--global-text-color);
     --prism-comment-color: var(--global-meta-color);
-    --prism-backgroundColor: var(--global-color-neutral-900);
-	--prism-border: 0;
+    --prism-backgroundColor: var(--global-backgroundColor);
     --prism-keyword-color: var(--global-color-beta);
     --prism-function-color: var(--global-color-alpha);
     --prism-variable-color: var(--global-color-gamma);
@@ -55,17 +54,17 @@ pre[class*="language-"] {
 	// }
 }
 
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
-	text-shadow: none;
-	background: var(--global-selection-color);
-}
-
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
-	text-shadow: none;
-	background: var(--global-selection-color);
-}
+// pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+// code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+// 	text-shadow: none;
+// 	background: var(--global-selection-color);
+// }
+//
+// pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+// code[class*="language-"]::selection, code[class*="language-"] ::selection {
+// 	text-shadow: none;
+// 	background: var(--global-selection-color);
+// }
 
 @media print {
 	code[class*="language-"],
@@ -78,6 +77,7 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 pre[class*="language-"] {
 	padding: baseline(var(--global-baseline-multiplier));
 	overflow: auto;
+	box-shadow: 0 0 0 1px var(--global-shadow-border-color);
 	margin-left: baseline(calc(var(--global-baseline-multiplier) * -1));
 	margin-right: baseline(calc(var(--global-baseline-multiplier) * -1));
 }
@@ -161,10 +161,4 @@ pre[class*="language-"] {
 
 .token.entity {
 	cursor: help;
-}
-
-@media (prefers-color-scheme: dark) {
-	pre[class*="language-"] {
-	    box-shadow: 0 0 0 1px var(--global-border-color);
-	}
 }

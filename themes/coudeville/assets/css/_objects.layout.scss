@@ -6,15 +6,15 @@
 
 
 .o-grid {
-    --grid-whitespace: 0;
+    --grid-whitespace: var(--global-whitespace-base);
     min-height: 100vh;
     display: grid;
-    grid: ". content ." / minmax(var(--grid-whitespace),1fr) minmax(0, var(--global-container-maxWidth)) minmax(var(--grid-whitespace),1fr);
-    grid-gap: var(--global-whitespace-base);
+    grid: ". left content right ." / minmax(var(--grid-whitespace),1fr) 1fr minmax(0, var(--global-container-maxWidth)) 1fr minmax(var(--grid-whitespace),1fr);
+    grid-row-gap: var(--global-whitespace-base);
     align-content: start;
 
     @include mq(bp3) {
-        --grid-whitespace: var(--global-whitespace-base);
+        --grid-whitespace: var(--global-whitespace-double);
     }
 }
 
@@ -34,8 +34,9 @@
 }
 
 .o-row--alternate {
-    border: 1px solid var(--global-border-color);
+    border: 1px solid var(--global-shadow-border-color);
     border-width: 1px 0;
+    // background-color: var(--global-backgroundColor--alt);
     margin-bottom: var(--global-whitespace-base);
     padding: var(--global-whitespace-double) 0 var(--global-whitespace-base) 0;
 }
@@ -43,23 +44,63 @@
 .o-row--header {
     padding-top: var(--global-whitespace-base);
     z-index: 1000;
-    transition: all $animation-duration-alpha;
 
     @include mq(bp3) {
         position: sticky;
         top: 0;
         right: 0;
         left: 0;
-        background-color: var(--global-backgroundColor);
-    }
+        margin-top: var(--global-whitespace-base);
+        // background-color: var(--global-backgroundColor);
 
-    &.is-sticky {
-        // box-shadow: 0 0 0 1px var(--global-shadow-border-color);
-        box-shadow: 0 0 0 1px var(--global-border-color);
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: var(--global-backgroundColor);
+            // background-color: var(--row--header-backgroundColor, hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 97%, .8));
+            // opacity: .9;
+            // backdrop-filter: blur(10px);
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: var(--global-shadow-border-color);
+            opacity: 0;
+            transition: all $animation-duration-alpha;
+
+            .is-sticky & {
+                opacity: 1;
+            }
+        }
+
+        &.is-sticky {
+            // box-shadow: 0 0 5px rgba(0,0,0,.1);
+            &::after {
+                opacity: 1;
+            }
+        }
     }
 }
+//
+// @media (prefers-color-scheme: dark) {
+//     .o-row--header {
+//         --row--header-backgroundColor: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 10%, .8);
+//     }
+// }
 
 .o-row--intro {
+    // min-height: calc(50vh - calc(var(--global-whitespace-base) * 4));
     min-height: calc(50vh - calc(var(--global-whitespace-base) * 5));
     padding-top: var(--global-whitespace-double);
     align-items: end;
@@ -67,22 +108,35 @@
 }
 
 .o-row--intro-home {
-    min-height: calc(50vh - calc(var(--global-whitespace-base) * 1));
+    min-height: 50vh;
     padding-top: var(--global-whitespace-double);
     align-items: end;
     grid-template-rows: auto;
 }
 
 .o-row--divide {
-    border-top: 1px solid var(--global-border-color);
+    border-top: 1px solid var(--global-shadow-border-color);
     padding-top: var(--global-whitespace-double);
 }
 //
 // .o-row--footer {
-//     border-top: 1px solid var(--global-border-color);
+//     border-top: 1px solid var(--global-shadow-border-color);
 //     padding-top: var(--global-whitespace-base);
 // }
 
+.o-row--cover {
+    // min-height: calc(50vh - calc(var(--global-whitespace-base) * 5));
+    align-items: center;
+    padding: var(--global-whitespace-double) 0 var(--global-whitespace-base);
+}
+
 .o-container {
     grid-column: content;
+}
+
+.o-container--cover {
+    grid-column: left/right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

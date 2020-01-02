@@ -8,10 +8,14 @@
     position: absolute;
     top: 0;
     right: 0;
+    left: 0;
+    height: var(--global-whitespace-base);
+    // background-color: red;
 }
 
 .c-header {
     --c-header__meta-offset: var(--global-whitespace-s);
+    position: relative;
     margin-bottom: var(--global-whitespace-base);
 
     @include mq(bp3) {
