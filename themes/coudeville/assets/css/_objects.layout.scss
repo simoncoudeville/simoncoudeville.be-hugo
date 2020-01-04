@@ -127,7 +127,7 @@
 .o-row--cover {
     // min-height: calc(50vh - calc(var(--global-whitespace-base) * 5));
     align-items: center;
-    padding: var(--global-whitespace-double) 0 var(--global-whitespace-base);
+    // padding: var(--global-whitespace-double) 0 var(--global-whitespace-base);
 }
 
 .o-container {
@@ -136,7 +136,7 @@
 
 .o-container--cover {
     grid-column: left/right;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
 }
