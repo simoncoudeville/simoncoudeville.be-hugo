@@ -13,14 +13,11 @@ $root-font-size: 19px; // for larger screens
 
 // Basic font settings
 
-// $alpha-font-family          : "Graphik Web", sans-serif;
 $alpha-font-family          : "Suisse Intl Web", sans-serif;
-// $code-font-family           : "roboto-mono", monospace;
 $code-font-family           : "Suisse Intl Web Mono", monospace;
 
 $alpha-font-weight          : 400;
 $beta-font-weight           : 500;
-$gamma-font-weight          : 600;
 
 // ---
 // Breakpoints
@@ -31,7 +28,7 @@ $breakpoints: (
     bp2                     : 424/16*1em,
     bp3                     : 680/16*1em,
     bp4                     : 960/16*1em,
-    bp5                     : 1140/16*1em,
+    bp5                     : 1280/16*1em,
     bp6                     : 1440/16*1em
 ) !default;
 

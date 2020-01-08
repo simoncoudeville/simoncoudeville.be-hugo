@@ -11,11 +11,14 @@
     height: var(--c-avatar-dimension);
     border-radius: 100%;
     overflow: hidden;
-    background-color: rgba(black,.075);
+    // background-color: rgba(black,.15);
+    // background-color: var(--global-color-gamma);
+    background-color: hsla(var(--global-hue-color-beta),100%, 10%,.15);
     // background-color: var(--c-avatar-backgroundColor, var(--global-color-neutral-200));
 
     img {
-        opacity: var(--avatar__img-opacity, .75);
+        // opacity: var(--avatar__img-opacity, .75);
+        // opacity: 0;
         mix-blend-mode: multiply;
     }
 }

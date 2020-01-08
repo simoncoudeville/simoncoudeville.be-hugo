@@ -27,7 +27,7 @@
     --global-neutral-saturation: 3%;
 
     --global-color-neutral-100: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 97%);
-    --global-color-neutral-200: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 95%);
+    --global-color-neutral-200: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 94%);
     --global-color-neutral-300: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 88%);
     --global-color-neutral-400: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 80%);
     --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 45.75%);
@@ -37,8 +37,8 @@
     --global-color-neutral-900: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 5%);
 
     /* Light theme */
-    --global-backgroundColor: var(--global-color-neutral-100);
-    --global-backgroundColor--alt: var(--global-color-neutral-200);
+    --global-backgroundColor: var(--global-color-neutral-200);
+    --global-backgroundColor--alt: var(--global-color-neutral-100);
     --global-text-color: var(--global-color-neutral-900);
     --global-heading-color: var(--global-color-neutral-900);
     --global-meta-color: var(--global-color-neutral-500);
@@ -49,6 +49,7 @@
     --global-link-hover-color: var(--global-text-color);
     --global-selection-backgroundColor: var(--global-text-color);
     --global-selection-color: var(--global-backgroundColor);
+
     --global-baseline-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .50);
     --global-baseline-background: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .25);
 
@@ -56,8 +57,8 @@
     --global-modular-scale-ratio: 1.125;
     --global-root-fontSize: #{$root-font-size-sm/16px*100%};
 
-    --global-fontSize-xxs: calc((var(--global-fontSize-xs) / var(--global-modular-scale-ratio)) / var(--global-modular-scale-ratio));
-    --global-fontSize-xs: calc((var(--global-fontSize-sm) / var(--global-modular-scale-ratio)) / var(--global-modular-scale-ratio));
+    --global-fontSize-xxs: calc(var(--global-fontSize-xs) / var(--global-modular-scale-ratio));
+    --global-fontSize-xs: calc(var(--global-fontSize-sm) / var(--global-modular-scale-ratio));
     --global-fontSize-sm: calc(var(--global-fontSize) / var(--global-modular-scale-ratio));
     --global-fontSize: 1rem;
     --global-fontSize-md: calc(var(--global-fontSize) * var(--global-modular-scale-ratio));

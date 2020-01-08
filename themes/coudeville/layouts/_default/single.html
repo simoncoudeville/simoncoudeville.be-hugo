@@ -1,38 +1,19 @@
 {{ define "main" }}
 <div class="c-header-observer js-header-observer"></div>
 <header class="o-row o-row--header js-header">
-    <div class="o-container">
-        <div class="c-header">
-            <p class="c-header__logo c-logo">
-                <a href="/" class="c-logo__link">Simon Coudeville</a>
-            </p>
-            <p class="c-header__meta">
-                {{ .Date.Format "2 January 2006" }}
-            </p>
-            <p class="c-header__title">
-                {{ .Title }}
-            </p>
-        </div>
+    <div class="c-header">
+        <p class="c-header__logo c-logo">
+            <a href="/" class="c-logo__link">Simon Coudeville</a>
+        </p>
+        <p class="c-header__meta">
+            {{ .Date.Format "2 January 2006" }}
+        </p>
+        <p class="c-header__title">
+            {{ .Title }}
+        </p>
     </div>
 </header>
 <article class="o-row o-row--main">
-    {{ if .Params.Cover }}
-    <div class="o-row o-row--cover">
-        <div class="o-container o-container--cover">
-            <figure class="c-cover">
-                {{ $cover := .Resources.GetMatch .Params.Cover }}
-                <img class="c-cover__img" src="{{ $cover.Permalink }}" alt="{{ .Title }} illustration">
-            </figure>
-        </div>
-    </div>
-    {{ end }}
-    <header class="o-row {{ if not .Params.Cover }} o-row--intro{{ end }}">
-        <div class="o-container">
-            <h1 class="js-title">
-                {{ .Title }}
-            </h1>
-        </div>
-    </header>
     {{ .Content }}
     <aside class="o-row o-row--lg">
         <div class="o-container s-content">

@@ -46,7 +46,7 @@ h1,
     // font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-base);
     font-size: var(--global-fontSize-xxxl);
-    line-height: calc(calc(var(--global-baseline-multiplier) + 3) * var(--global-baseline));
+    line-height: calc(calc(var(--global-baseline-multiplier) + 2) * var(--global-baseline));
 }
 
 h2,
