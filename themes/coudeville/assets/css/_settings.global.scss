@@ -8,6 +8,11 @@
 // Typography
 // ---
 
+$modularscale: (
+  base: 19px 50px,
+  ratio: 1.25
+);
+
 $root-font-size-sm: 17px; // for mobile
 $root-font-size: 19px; // for larger screens
 

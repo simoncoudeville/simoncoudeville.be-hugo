@@ -5,9 +5,13 @@
 */
 
 
-// .c-example {
-//     padding: var(--global-whitespace-double) 0 var(--global-whitespace-base);
-// }
+.c-example {
+    z-index: 10;
+
+    .c-baseline-overlay {
+        z-index: 110;
+    }
+}
 
 .c-example__title {
     position: relative;
@@ -45,13 +49,12 @@
 
 .c-example__content {
     position: relative;
-    z-index: 110;
+    z-index: 120;
 }
 
 .c-example__toggle {
     position: relative;
     display: flex;
     justify-content: flex-end;
-    // margin-top: var(--global-whitespace-double);
     margin-bottom: calc(var(--global-whitespace-base) * -1);
 }

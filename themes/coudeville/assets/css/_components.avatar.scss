@@ -11,9 +11,11 @@
     height: var(--c-avatar-dimension);
     border-radius: 100%;
     overflow: hidden;
+    background-color: var(--global-color-neutral-100);
     // background-color: rgba(black,.15);
+    // background-color: rgba(white,1);
     // background-color: var(--global-color-gamma);
-    background-color: hsla(var(--global-hue-color-beta),100%, 10%,.15);
+    // background-color: hsla(var(--global-hue-color-beta),100%,50%,.25);
     // background-color: var(--c-avatar-backgroundColor, var(--global-color-neutral-200));
 
     img {

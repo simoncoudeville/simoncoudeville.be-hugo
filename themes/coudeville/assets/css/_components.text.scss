@@ -25,17 +25,17 @@
 
 .c-text-xxxl {
   font-size: var(--global-fontSize-xxxl);
-  line-height: calc(calc(var(--global-baseline-multiplier) + 2) * var(--global-baseline));
+  line-height: calc(calc(var(--global-baseline-multiplier) * 2) * var(--global-baseline));
 }
 
 .c-text-xxl {
   font-size: var(--global-fontSize-xxl);
-  line-height: calc(calc(var(--global-baseline-multiplier) + 1) * var(--global-baseline));
+  line-height: calc(calc(var(--global-baseline-multiplier) + 3) * var(--global-baseline));
 }
 
 .c-text-xl {
   font-size: var(--global-fontSize-xl);
-  line-height: calc(calc(var(--global-baseline-multiplier) + 1) * var(--global-baseline));
+  line-height: calc(calc(var(--global-baseline-multiplier) + 2) * var(--global-baseline));
 }
 
 .c-text-lg {

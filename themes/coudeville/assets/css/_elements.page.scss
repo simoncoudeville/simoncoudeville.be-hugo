@@ -54,12 +54,13 @@
     --global-baseline-background: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .25);
 
     /* type scale */
-    --global-modular-scale-ratio: 1.125;
+    --global-modular-scale-ratio: 1.215;
     --global-root-fontSize: #{$root-font-size-sm/16px*100%};
 
-    --global-fontSize-xxs: calc(var(--global-fontSize-xs) / var(--global-modular-scale-ratio));
-    --global-fontSize-xs: calc(var(--global-fontSize-sm) / var(--global-modular-scale-ratio));
-    --global-fontSize-sm: calc(var(--global-fontSize) / var(--global-modular-scale-ratio));
+    // --global-fontSize-xs: calc(var(--global-fontSize-sm) / var(--global-modular-scale-ratio));
+    // --global-fontSize-sm: calc(var(--global-fontSize) / var(--global-modular-scale-ratio));
+    --global-fontSize-xs: #{pxtorem(15px)};
+    --global-fontSize-sm: #{pxtorem(17px)};
     --global-fontSize: 1rem;
     --global-fontSize-md: calc(var(--global-fontSize) * var(--global-modular-scale-ratio));
     --global-fontSize-lg: calc(var(--global-fontSize-md) * var(--global-modular-scale-ratio));
@@ -112,8 +113,8 @@ html {
     color: var(--global-text-color);
     font-family: $alpha-font-family;
     font-size: var(--global-root-fontSize);
-    // font-weight: $beta-font-weight;
-    font-feature-settings: "zero", "liga";
+    // font-feature-settings: "zero", "liga";
+    font-feature-settings: "zero", "liga", "ss02";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
