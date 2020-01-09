@@ -22,23 +22,12 @@
         grid-gap: var(--global-whitespace-base);
         grid-template-columns: auto 1fr;
     }
-
-    @include mq(bp5) {
-        display: grid;
-        grid: inherit;
-        grid-gap: inherit;
-        grid-column: 1/-1;
-    }
 }
 
 .c-header__logo {
     position: relative;
     margin-bottom: 0;
     grid-row: 1;
-
-    @include mq(bp5) {
-        grid-column: left;
-    }
 }
 
 .c-header__meta,
@@ -53,10 +42,6 @@
     transition-property: opacity, transform;
     transition-duration: $animation-duration-alpha;
     transition-timing-function: $animation-easing-out;
-
-    @include mq(bp5) {
-        grid-column: content;
-    }
 }
 
 .c-header__title {

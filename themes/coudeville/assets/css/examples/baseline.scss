@@ -14,12 +14,12 @@
 @import '../settings.global';
 
 .e-columns {
-    column-width: calc((var(--global-container-maxWidth) / 2) - #{var(--global-whitespace-base)});
+    column-width: calc((var(--global-content-maxWidth) / 2) - #{var(--global-whitespace-base)});
     column-gap: var(--global-whitespace-base);
     margin-bottom: calc(var(--global-whitespace-base) * -1);
 }
 
 .e-baseline-title {
-    font-size: calc(var(--global-fontSize-xxxl) * 1.4);
+    font-size: var(--global-fontSize-xxxl);
     line-height: calc(calc(var(--global-baseline-multiplier) * 2) * var(--global-baseline));
 }

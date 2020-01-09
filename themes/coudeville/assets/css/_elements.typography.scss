@@ -41,17 +41,12 @@ ul {
 
 h1,
 .h1 {
-    font-feature-settings: "zero", "liga", "ss01", "ss02";
+    // font-feature-settings: "zero", "liga", "ss01", "ss02";
     // font-weight: $alpha-font-weight;
     font-weight: $beta-font-weight;
     margin-bottom: var(--global-whitespace-base);
-    font-size: var(--global-fontSize-xxl);
-    line-height: calc(calc(var(--global-baseline-multiplier) + 3) * var(--global-baseline));
-
-    @include mq(bp3) {
-        font-size: var(--global-fontSize-xxxl);
-        line-height: calc(calc(var(--global-baseline-multiplier) * 2) * var(--global-baseline));
-    }
+    font-size: var(--global-fontSize-xxxl);
+    line-height: calc(calc(var(--global-baseline-multiplier) + 2) * var(--global-baseline));
 }
 
 h2,

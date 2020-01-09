@@ -17,7 +17,7 @@
 .e-grid {
     display: grid;
     grid-column-gap: var(--global-whitespace-base);
-    grid-template-columns: repeat(auto-fill, minmax(calc((var(--global-container-maxWidth) / 2) - #{var(--global-whitespace-base)}), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(calc((var(--global-content-maxWidth) / 2) - #{var(--global-whitespace-base)}), 1fr));
 }
 
 .e-grid__item {

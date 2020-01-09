@@ -65,6 +65,6 @@ function rotateGradient() {
 document.addEventListener("DOMContentLoaded", function() {
     toggleBaselines();
     // rotateGradient();
-    observeHeader();
-    observeIntroTitle();
+    // observeHeader();
+    // observeIntroTitle();
 });

@@ -12,7 +12,7 @@
 @import 'settings.global';
 
 .test {
-    column-width: calc((var(--global-container-maxWidth) / 2) - #{var(--global-whitespace-base)});
+    column-width: calc((var(--global-content-maxWidth) / 2) - #{var(--global-whitespace-base)});
     column-gap: var(--global-whitespace-base);
 }
 
