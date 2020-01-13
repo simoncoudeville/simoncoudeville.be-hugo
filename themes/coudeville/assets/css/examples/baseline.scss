@@ -20,6 +20,6 @@
 }
 
 .e-baseline-title {
-    font-size: var(--global-fontSize-xxxl);
+    font-size: pxtorem(50px);
     line-height: calc(calc(var(--global-baseline-multiplier) * 2) * var(--global-baseline));
 }

@@ -23,6 +23,11 @@ pre[class*="language-"] {
 	--prism-text-color: var(--global-text-color);
     --prism-comment-color: var(--global-meta-color);
     --prism-backgroundColor: var(--global-backgroundColor);
+
+	--prism-text-color: var(--global-color-neutral-100);
+    --prism-comment-color: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 51.75%);
+    --prism-backgroundColor: var(--global-color-neutral-800);
+
     --prism-keyword-color: var(--global-color-beta);
     --prism-function-color: var(--global-color-alpha);
     --prism-variable-color: var(--global-color-gamma);
@@ -38,7 +43,6 @@ pre[class*="language-"] {
 	word-break: normal;
 	word-wrap: normal;
 	font-size: var(--global-fontSize-sm);
-	line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -61,9 +65,14 @@ pre[class*="language-"] {
 pre[class*="language-"] {
 	padding: baseline(var(--global-baseline-multiplier));
 	overflow: auto;
-	box-shadow: 0 0 0 1px var(--global-shadow-border-color);
-	margin-left: baseline(calc(var(--global-baseline-multiplier) * -1));
-	margin-right: baseline(calc(var(--global-baseline-multiplier) * -1));
+	// margin-left: baseline(calc(var(--global-baseline-multiplier) * -1));
+	// margin-right: baseline(calc(var(--global-baseline-multiplier) * -1));
+}
+
+@media (prefers-color-scheme: dark) {
+	pre[class*="language-"] {
+		box-shadow: 0 0 0 1px var(--global-shadow-border-color);
+	}
 }
 
 :not(pre) > code[class*="language-"],

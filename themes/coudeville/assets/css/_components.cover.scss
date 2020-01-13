@@ -9,19 +9,33 @@
     // margin-left: auto;
     // margin-right: auto;
     // background-color: var(--global-backgroundColor--alt);
-    background-color: var(--cover-backgroundColor, var(--global-meta-color));
+    background-color: var(--cover-backgroundColor, var(--global-backgroundColor));
     // background-color: var(--global-border-color-hard);
     // margin-bottom: 0;
+    margin-left: baseline(calc(var(--global-baseline-multiplier) * -1));
+	margin-right: baseline(calc(var(--global-baseline-multiplier) * -1));
+
+    @include mq(bp3) {
+        margin-left: baseline(calc(var(--global-baseline-multiplier) * -2));
+    	margin-right: baseline(calc(var(--global-baseline-multiplier) * -2));
+    }
+
+    @include mq(bp4) {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 .c-cover__img {
     display: block;
     width: 100%;
+    height: auto;
 }
 
 .c-cover__path {
     fill: var(--cover-fill-color, var(--global-backgroundColor));
 }
+
 //
 // @media (prefers-color-scheme: dark) {
 //     .c-cover {

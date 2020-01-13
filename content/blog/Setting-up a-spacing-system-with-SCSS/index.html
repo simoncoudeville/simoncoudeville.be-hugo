@@ -3,19 +3,57 @@ date: 2019-10-06T21:40:40+01:00
 title: Creating vertical rhythm on the web
 description: In this article I describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing perfect control and a predictable outcome.
 draft: false
-code: true
-cover: test-cover-4.png
+prism: true
+script: js/blogposts/post-1.js
 ---
 
 <!-- {{< inline-css scss="css/blogposts/post-2.scss" >}} -->
 
+
 <header class="o-row o-row--intro">
     <div class="o-container">
         <h1 class="js-title">
-            Creating vertical rhythm on the web
+            Vertical rhythm on the web
         </h1>
     </div>
 </header>
+
+<div class="o-row o-row--cover">
+    <div class="o-container">
+        <figure class="c-cover">
+            <svg class="c-cover__img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="665" height="361" viewBox="0 0 665 361">
+                <defs>
+                  <style>
+                    .c-cover__path {
+
+                      /* stroke: var(--global-color-beta); */
+                      stroke: var(--global-text-color);
+                      stroke-width: 2px;
+                      /* opacity: .75; */
+                    }
+                  </style>
+                </defs>
+              <g id="cover-5">
+                <path class="c-cover__path" d="M0,0H665" transform="translate(0 1)" />
+                <path class="c-cover__path" d="M0,0H665" transform="matrix(1, 0.017, -0.017, 1, 0.051, 27.197)" />
+                <path class="c-cover__path" d="M0,0H665" transform="matrix(0.999, 0.035, -0.035, 0.999, 0.203, 53.396)" />
+                <path class="c-cover__path" d="M0,0H665" transform="matrix(1, 0.017, -0.017, 1, 0.051, 91.197)" />
+                <path class="c-cover__path" d="M0,0H665" transform="matrix(1, -0.017, 0.017, 1, 0.051, 134.803)" />
+                <path class="c-cover__path" d="M0,0H665" transform="matrix(0.999, -0.035, 0.035, 0.999, 0.203, 172.604)" />
+                <path class="c-cover__path" d="M0,0H665" transform="translate(0 193)" />
+                <path class="c-cover__path" d="M0,0H665" transform="matrix(1, 0.017, -0.017, 1, 0.051, 219.197)" />
+                <path class="c-cover__path" d="M0,0H665" transform="matrix(1, -0.017, 0.017, 1, 0.051, 262.803)" />
+                <path class="c-cover__path" d="M0,0H665" transform="matrix(0.999, -0.035, 0.035, 0.999, 0.203, 300.604)" />
+                <path class="c-cover__path" d="M0,0H665" transform="matrix(1, 0.017, -0.017, 1, 0.051, 315.197)" />
+                <path class="c-cover__path" d="M0,0H665" transform="matrix(1, -0.017, 0.017, 1, 0.051, 358.803)" />
+              </g>
+            </svg>
+
+            <!-- <img class="c-cover__img" src="cover-5.svg" alt=""> -->
+            <!-- <img src="https://www.airstudios.com/wp-content/uploads/2019/09/AIR_SPIRO_-1.png" alt=""> -->
+        </figure>
+    </div>
+</div>
 <!-- <div class="o-row o-row--cover">
     <div class="o-container o-container--cover">
         <figure class="c-cover">

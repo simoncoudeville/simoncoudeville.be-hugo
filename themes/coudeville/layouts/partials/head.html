@@ -12,7 +12,7 @@
     {{ $css := resources.Get "css/screen.scss" | toCSS | postCSS }}
     <link rel="stylesheet" href="{{ $css.Permalink }}">
     {{/* Conditional css if the post needs code highlighting */}}
-    {{ if .Params.Code }}
+    {{ if .Params.Prism }}
     {{ $prismcss := resources.Get "css/prism.scss" | toCSS | postCSS }}
     <link rel="stylesheet" href="{{ $prismcss.Permalink }}">
     {{ end }}
@@ -24,7 +24,7 @@
     {{ $css := resources.Get "css/screen.scss" | toCSS | postCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $css.Permalink }}">
     {{/* Conditional css if the post needs code highlighting */}}
-    {{ if .Params.Code }}
+    {{ if .Params.Prism }}
     {{ $prismcss := resources.Get "css/prism.scss" | toCSS | postCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $prismcss.Permalink }}">
     {{ end }}

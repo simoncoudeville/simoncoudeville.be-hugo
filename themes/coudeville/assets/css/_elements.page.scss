@@ -13,10 +13,15 @@
     --global-saturation-color-alpha: #{saturation($color-alpha)};
     --global-lightness-color-alpha: #{lightness($color-alpha)};
 
-    --global-color-beta: #{$color-beta};
+    // --global-color-beta: #{$color-beta};
     --global-hue-color-beta: #{hue($color-beta)};
     --global-saturation-color-beta: #{saturation($color-beta)};
     --global-lightness-color-beta: #{lightness($color-beta)};
+    --global-lightness-color-beta: 70%;
+    --global-color-beta: hsl(var(--global-hue-color-beta), var(--global-saturation-color-beta), var(--global-lightness-color-beta));
+
+    --global-lightness-color-beta-dark: 62%;
+    --global-color-beta-dark: hsl(var(--global-hue-color-beta), var(--global-saturation-color-beta), var(--global-lightness-color-beta-dark));
 
     --global-color-gamma: #{$color-gamma};
     --global-hue-color-gamma: #{hue($color-gamma)};

@@ -56,7 +56,7 @@
 
 .e-grid__title {
     margin-bottom: baseline(calc(var(--global-baseline-multiplier) - 3));
-    color: var(--global-color-beta);
+    color: var(--global-color-beta-dark);
     font-size: 1rem;
     line-height: calc(calc(var(--global-baseline-multiplier) - .5) * var(--global-baseline));
 }
@@ -64,4 +64,10 @@
 .e-grid__paragraph {
     font-size: var(--global-fontSize-sm);
     line-height: calc(calc(var(--global-baseline-multiplier) - .5) * var(--global-baseline));
+}
+
+@media (prefers-color-scheme: dark) {
+    .e-grid__title {
+        color: var(--global-color-beta);
+    }
 }

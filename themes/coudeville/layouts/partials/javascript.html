@@ -1,11 +1,20 @@
+{{/*
 {{ $app := resources.Get "js/app.js" }}
 {{ $js := slice $app | resources.Concat "js/app.js" | resources.Minify }}
 {{ $secureJS := $js | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+*/}}
 {{/* Conditional javascript if the post needs code highlighting */}}
-{{ if .Params.Code }}
+{{ if .Params.Prism }}
 {{ $prism := resources.Get "js/prism.js" }}
-{{ $prsimjs := slice $prism | resources.Concat "js/prism.js" | resources.Minify }}
-{{ $prismsecureJS := $prsimjs | resources.Fingerprint "sha512" }}
+{{ $prismjs := slice $prism | resources.Concat "js/prism.js" | resources.Minify }}
+{{ $prismsecureJS := $prismjs | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $prismsecureJS.Permalink }}" integrity="{{ $prismsecureJS.Data.Integrity }}"></script>
+{{ end }}
+{{/* Specific javascript per post */}}
+{{ if .Params.Script }}
+{{ $script := resources.Get .Params.Script }}
+{{ $scriptjs := slice $script | resources.Concat "js/script.js" | resources.Minify }}
+{{ $scriptsecureJS := $scriptjs | resources.Fingerprint "sha512" }}
+<script type="text/javascript" src="{{ $scriptsecureJS.Permalink }}" integrity="{{ $scriptsecureJS.Data.Integrity }}"></script>
 {{ end }}

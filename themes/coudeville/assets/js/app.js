@@ -38,33 +38,7 @@ function observeIntroTitle() {
     observer.observe(title);
 }
 
-function toggleBaselines() {
-    const toggles = document.querySelectorAll(".js-toggle-baseline-example");
-
-    for(t of toggles) {
-        t.addEventListener('change', function() {
-            this.closest(".js-baseline-example").classList.toggle("has-baseline");
-        });
-    }
-}
-
-function rotateGradient() {
-    const gradientBackground = document.querySelector('body');
-
-    gradientBackground.addEventListener('mousemove', (e) => {
-        const homeBackgroundImage = document.querySelector('.js-gradient-background-image');
-        const mouseX = (homeBackgroundImage.getBoundingClientRect().left);
-        const mouseY = (homeBackgroundImage.getBoundingClientRect().top);
-        const radianDegrees = Math.atan2(e.pageX - mouseX, e.pageY - mouseY);
-        const rotationDegrees = (radianDegrees * (180/ Math.PI) * -1) + 180;
-        homeBackgroundImage.style.transform = `rotate(${rotationDegrees}deg)`;
-        // homeBackgroundImage.style.setProperty('--deg', rotationDegrees + "deg");
-    });
-}
-
 document.addEventListener("DOMContentLoaded", function() {
-    toggleBaselines();
-    // rotateGradient();
     // observeHeader();
     // observeIntroTitle();
 });

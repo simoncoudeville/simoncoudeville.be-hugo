@@ -51,11 +51,8 @@
     padding: var(--global-whitespace-base) 0;
     z-index: 100;
     background-color: var(--global-backgroundColor);
-    // opacity: .9;
-    // background-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 94%, .9);
-    // backdrop-filter: blur(10px);
 
-    @include mq(bp3) {
+    // @include mq(bp3) {
         // position: sticky;
         // top: 0;
         // right: 0;
@@ -75,29 +72,29 @@
         //     backdrop-filter: blur(20px);
         // }
 
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background-color: var(--global-shadow-border-color);
-            opacity: 0;
-            transition: all $animation-duration-alpha;
-
-            .is-sticky & {
-                opacity: 1;
-            }
-        }
-
-        &.is-sticky {
-            &::after {
-                opacity: 1;
-            }
-        }
-    }
+        // &::after {
+        //     content: '';
+        //     display: block;
+        //     position: absolute;
+        //     bottom: -1px;
+        //     left: 0;
+        //     right: 0;
+        //     height: 1px;
+        //     background-color: var(--global-shadow-border-color);
+        //     opacity: 0;
+        //     transition: all $animation-duration-alpha;
+        //
+        //     .is-sticky & {
+        //         opacity: 1;
+        //     }
+        // }
+        //
+        // &.is-sticky {
+        //     &::after {
+        //         opacity: 1;
+        //     }
+        // }
+    // }
 }
 
 .o-row--main {
@@ -124,12 +121,12 @@
 }
 
 .o-row--cover {
-    background-color: var(--row--cover-backgroundColor, var(--global-meta-color));
-    margin-bottom: var(--global-whitespace-base);
+    // background-color: var(--row--cover-backgroundColor, var(--global-meta-color));
+    // margin-bottom: var(--global-whitespace-base);
 
-    @include mq(bp5) {
-        margin-bottom: calc(var(--global-whitespace-double) + var(--global-whitespace-base));
-    }
+    // @include mq(bp5) {
+    //     margin-bottom: calc(var(--global-whitespace-double) + var(--global-whitespace-base));
+    // }
 }
 
 .o-container {

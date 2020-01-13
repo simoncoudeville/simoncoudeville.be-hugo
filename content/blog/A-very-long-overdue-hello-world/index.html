@@ -3,27 +3,25 @@ date: 2019-09-11T21:40:40+01:00
 title: A very long overdue hello world
 description: In this article I describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing perfect control and a predictable outcome.
 draft: false
-code: true
 ---
 
-
-<header class="o-row o-row--intro">
+<div class="o-row o-row--cover">
+    <div class="o-container o-container--cover">
+        <figure class="c-cover" style="--cover-backgroundColor: var(--global-color-beta);">
+            <!-- <svg class="c-cover__img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1330 560">
+                <path class="c-cover__path" d="M192.287-225.06v131.5H72.351v-131.5H31.659V85.916H72.351V-55.008H192.287V85.916h40.692V-225.06ZM410.312,91.484c53.971,0,89.952-30.841,99.375-74.531H469c-8.138,26.129-25.272,42.406-59.539,42.406-36.409,0-62.109-30.412-62.109-76.673H513.114c3-82.242-35.552-131.5-102.8-131.5-60.824,0-104.515,46.261-104.515,120.364C305.8,39.655,340.493,91.484,410.312,91.484Zm0-207.746c40.264,0,61.253,28.7,60.824,66.393H347.775C349.488-94.416,373.047-116.261,410.312-116.261Zm191.9-108.37v33.411h65.108v243.3H602.209V85.916H772.261V52.077H706.725V-224.632Zm276.709,0v33.411h65.108v243.3H878.918V85.916h170.052V52.077H983.433V-224.632Zm295.127,196.18c0-61.253,29.984-86.953,65.108-86.953s65.108,25.7,65.108,86.953S1274.277,58.5,1239.153,58.5,1174.045,32.8,1174.045-28.451Zm-41.549,0c0,83.527,53.971,119.936,106.657,119.936S1345.81,55.075,1345.81-28.451s-53.971-119.936-106.657-119.936S1132.5-111.978,1132.5-28.451ZM113.472,277.564,79.2,401.783,56.074,231.3H15.81L54.361,461.751H94.2L131.891,322.54l37.694,139.211H209.42L247.971,231.3H208.135l-23.559,170.48L150.309,277.564Zm230.448,69.82c0-61.253,29.984-86.953,65.108-86.953s65.108,25.7,65.108,86.953-29.984,86.953-65.108,86.953S343.919,408.637,343.919,347.384Zm-41.549,0c0,83.527,53.971,119.936,106.657,119.936S515.684,430.91,515.684,347.384,461.713,227.448,409.027,227.448,302.37,263.857,302.37,347.384ZM584.219,231.3v33.839h65.536v162.77H584.647v33.839h183.33V427.912H689.163V346.955c0-50.544,17.134-79.672,61.253-79.672h38.979V231.3H749.987c-28.271,0-50.544,15.42-61.681,41.121V231.3Zm294.7-80.1v33.411h65.108v243.3H878.918v33.839h170.052V427.912H983.433V151.2ZM1290.982,266c-12.85-22.274-33.411-38.551-68.106-38.551-53.114,0-92.95,44.119-92.95,119.936,0,76.245,39.836,119.936,92.95,119.936,34.7,0,55.256-16.277,68.106-38.122l.428,32.554h38.979V151.2h-39.407Zm1.713,81.385c0,60.4-28.7,87.382-61.681,87.382-39.407,0-59.539-32.554-59.539-87.382s20.132-86.953,59.539-86.953C1264,260.43,1292.7,286.559,1292.7,347.384Z" transform="translate(-15.81 159.06)"/>
+            </svg> -->
+            <img src="test-cover-4.png" alt="">
+        </figure>
+    </div>
+</div>
+<header class="o-row">
     <div class="o-container">
         <h1 class="js-title">
             A very long overdue hello world
         </h1>
     </div>
 </header>
-<div class="o-row">
-<!-- <div class="o-row o-row--cover" style="--row--cover-backgroundColor: var(--global-backgroundColor)"> -->
-    <div class="o-container">
-        <figure class="c-cover" style="--cover-backgroundColor: var(--global-color-beta);">
-            <svg class="c-cover__img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1330 560">
-                <path class="c-cover__path" d="M192.287-225.06v131.5H72.351v-131.5H31.659V85.916H72.351V-55.008H192.287V85.916h40.692V-225.06ZM410.312,91.484c53.971,0,89.952-30.841,99.375-74.531H469c-8.138,26.129-25.272,42.406-59.539,42.406-36.409,0-62.109-30.412-62.109-76.673H513.114c3-82.242-35.552-131.5-102.8-131.5-60.824,0-104.515,46.261-104.515,120.364C305.8,39.655,340.493,91.484,410.312,91.484Zm0-207.746c40.264,0,61.253,28.7,60.824,66.393H347.775C349.488-94.416,373.047-116.261,410.312-116.261Zm191.9-108.37v33.411h65.108v243.3H602.209V85.916H772.261V52.077H706.725V-224.632Zm276.709,0v33.411h65.108v243.3H878.918V85.916h170.052V52.077H983.433V-224.632Zm295.127,196.18c0-61.253,29.984-86.953,65.108-86.953s65.108,25.7,65.108,86.953S1274.277,58.5,1239.153,58.5,1174.045,32.8,1174.045-28.451Zm-41.549,0c0,83.527,53.971,119.936,106.657,119.936S1345.81,55.075,1345.81-28.451s-53.971-119.936-106.657-119.936S1132.5-111.978,1132.5-28.451ZM113.472,277.564,79.2,401.783,56.074,231.3H15.81L54.361,461.751H94.2L131.891,322.54l37.694,139.211H209.42L247.971,231.3H208.135l-23.559,170.48L150.309,277.564Zm230.448,69.82c0-61.253,29.984-86.953,65.108-86.953s65.108,25.7,65.108,86.953-29.984,86.953-65.108,86.953S343.919,408.637,343.919,347.384Zm-41.549,0c0,83.527,53.971,119.936,106.657,119.936S515.684,430.91,515.684,347.384,461.713,227.448,409.027,227.448,302.37,263.857,302.37,347.384ZM584.219,231.3v33.839h65.536v162.77H584.647v33.839h183.33V427.912H689.163V346.955c0-50.544,17.134-79.672,61.253-79.672h38.979V231.3H749.987c-28.271,0-50.544,15.42-61.681,41.121V231.3Zm294.7-80.1v33.411h65.108v243.3H878.918v33.839h170.052V427.912H983.433V151.2ZM1290.982,266c-12.85-22.274-33.411-38.551-68.106-38.551-53.114,0-92.95,44.119-92.95,119.936,0,76.245,39.836,119.936,92.95,119.936,34.7,0,55.256-16.277,68.106-38.122l.428,32.554h38.979V151.2h-39.407Zm1.713,81.385c0,60.4-28.7,87.382-61.681,87.382-39.407,0-59.539-32.554-59.539-87.382s20.132-86.953,59.539-86.953C1264,260.43,1292.7,286.559,1292.7,347.384Z" transform="translate(-15.81 159.06)"/>
-            </svg>
-        </figure>
-    </div>
-</div>
 <div class="o-row">
     <div class="o-container s-content">
         <p>
@@ -37,70 +35,15 @@ code: true
         <p>
             Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.
         </p>
-
-        {{< code scss >}}// Baseline settings
-// Think in pixels, let SCSS and the browser do the converting
-$baseline: 7px;
-$root-font-size: ms(0); // Modular scale size 0
-$root-baseline-multiplier: 5;
-$root-line-height: $baseline * $root-baseline-multiplier; // In this setup this equals a line-height of 28px
-
-// Default whitespace settings for margins and paddings between elements
-$alpha-whitespace: baseline($root-baseline-multiplier); // Default whitespace between elements e.g. paragraphs, titles
-$beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace between elements e.g. between paragraphs and h2{{< /code >}}
-
         <p>
             Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.
         </p>
-
-        {{< code scss >}}// Font height mixin
-@mixin font-height($font-size,$baseline-multiplier) {
-    font-size: pxtorem($font-size); // font-size in rem
-    line-height: #{$baseline-multiplier * $baseline / round($font-size)}em; // line-height in em
-}{{< /code >}}
-
-        {{< code scss >}}h2 {
-    margin-bottom: baseline($root-baseline-multiplier);
-    @include font-height(ms(2),$root-baseline-multiplier);
-}{{< /code >}}
-
-        {{< code scss >}}// simple px to rem converter
-@function pxtorem($pixelvalue) {
-    @return #{round($pixelvalue) / $root-font-size}rem;
-}
-
-// Simple baseline-unit multiplier converted to rem
-@function baseline($multiplier) {
-    @return pxtorem($baseline * $multiplier);
-}{{< /code >}}
-
         <h2>Baseline Grid</h2>
-
         <p>
             In order to align text to a baseline grid on the web you. With this technique you have the possibility to align text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that line-height and if the margin between the items is the same as the base line-height you these items will all align to eachother. It's simple math, really.
         </p>
-
     </div>
 </div>
-
-{{< example type="baseline" title="Baseline grid example" scss="css/examples/baseline.scss" >}}
-<div class="e-columns">
-    <h2 class="e-baseline-title">
-        Legibility, <br> readability, <br> &amp; aesthetics
-    </h2>
-    <p class="e-baseline-paragraph">
-        Three fundamental aspects of typography are legibility, readability, and aesthetics. Although in a non-technical sense "legible" and "readable" are often used synonymously, typographically they are separate but related concepts. Legibility and readability tend to support aesthetic aspects of a product.
-    </p>
-    <p class="e-baseline-paragraph">
-        Recent research in psychology has studied the effects of typography on human cognition.
-        The research points toward multiple applications such as helping readers remember the content better and strategically use fonts to help dyslexic readers.
-    </p>
-    <p class="e-baseline-paragraph">
-        Traditionally, text is composed to create a readable, coherent, and visually satisfying typeface that works invisibly, without the awareness of the reader. Even distribution of typeset material, with a minimum of distractions and anomalies, is aimed at producing clarity and transparency.
-    </p>
-</div>
-{{< /example  >}}
-
 <div class="o-row">
     <div class="o-container s-content">
         <h2>Profile component</h2>
@@ -109,24 +52,6 @@ $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace 
         </p>
     </div>
 </div>
-
-{{< example type="baseline" size="xl" title="Profile card component example" scss="css/examples/profile.scss" >}}
-    <div class="e-card">
-        <div class="c-baseline-overlay c-baseline-overlay--unit"></div>
-        <div class="e-card__body">
-            <div class="e-profile">
-                <img class="e-profile__avatar" src="https://cdn.dribbble.com/users/44218/avatars/normal/me3.jpg?1361562828" alt="Avatar">
-                <h4 class="e-profile__name c-highlight">Simon Coudeville</h4>
-                <p class="e-profile__location c-highlight">Bruges, Belgium</p>
-                <p class="e-profile__occupation c-highlight">Designer &amp; teacher at MCT Howest.</p>
-                <p>
-                    <a href="#!" class="e-button e-button--small">Message</a>
-                </p>
-            </div>
-        </div>
-    </div>
-{{< /example  >}}
-
 <div class="o-row">
     <div class="o-container s-content">
         <p>
@@ -138,33 +63,6 @@ $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace 
         </p>
     </div>
 </div>
-{{< example type="baseline" size="xl" title="Profile card component example" scss="css/examples/features.scss" >}}
-    <div class="e-grid">
-        <div class="e-grid__item">
-            <span class="e-grid__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>monkey</title><path d="M21.5,7.5c0-5.5-4.5-7-9.5-7S2.5,2,2.5,7.5a2.906,2.906,0,0,0-2,3,3.972,3.972,0,0,0,2,3.5c0,5.5,2,9.5,9.5,9.5s9.5-4,9.5-9.5a3.972,3.972,0,0,0,2-3.5A2.906,2.906,0,0,0,21.5,7.5ZM12.005,21h-.012c-1.781,0-3.836-.481-4.662-2.2a.25.25,0,0,1,.291-.349A16.745,16.745,0,0,0,12,19a16.757,16.757,0,0,0,4.378-.55.25.25,0,0,1,.291.349C15.842,20.52,13.786,21,12.005,21Zm4.743-8.843a1,1,0,0,0-.606,1.3,11.293,11.293,0,0,1,.822,2.484.251.251,0,0,1-.156.271A13.485,13.485,0,0,1,12,17a13.5,13.5,0,0,1-4.808-.791.249.249,0,0,1-.156-.271,11.189,11.189,0,0,1,.822-2.484,1,1,0,0,0-.606-1.3,3.484,3.484,0,0,1-2.127-3.49A3.667,3.667,0,0,1,8.792,5h6.416a3.667,3.667,0,0,1,3.667,3.667A3.484,3.484,0,0,1,16.748,12.157Z"/><circle cx="9" cy="9" r="1.25"/><circle cx="15" cy="9" r="1.25"/><path d="M11.073,12.93a1,1,0,1,0-1.9.633l.25.75a1,1,0,1,0,1.9-.633Z"/><path d="M14.191,12.3a1,1,0,0,0-1.264.632l-.25.75a1,1,0,1,0,1.9.633l.25-.75A1,1,0,0,0,14.191,12.3Z"/></svg>
-            </span>
-            <h3 class="e-grid__title c-highlight">
-                Lorem ipsum dolor sit amet consectetur adipisicing
-            </h3>
-            <p class="e-grid__paragraph c-highlight">
-                Excepteur sint occaecat cupidatat non proident. Adipisicing sed do eiusmod tempor incididunt ut labore. Duis aute irure dolor in reprehenderit.
-            </p>
-        </div>
-        <div class="e-grid__item">
-            <span class="e-grid__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>skull-1</title><path d="M12,0A10.261,10.261,0,0,0,1.75,10.25a10.156,10.156,0,0,0,3,7.236V21.25a2.749,2.749,0,0,0,5,1.58,2.748,2.748,0,0,0,4.5,0,2.749,2.749,0,0,0,5-1.58V17.486a10.157,10.157,0,0,0,3-7.236A10.261,10.261,0,0,0,12,0Zm2.25,10.25A2.25,2.25,0,1,1,16.5,12.5,2.25,2.25,0,0,1,14.25,10.25Zm-.5,6.868a.25.25,0,0,1-.22.132H10.467a.25.25,0,0,1-.208-.388l1.533-2.3a.249.249,0,0,1,.416,0l1.533,2.3A.25.25,0,0,1,13.753,17.118ZM5.25,10.25A2.25,2.25,0,1,1,7.5,12.5,2.25,2.25,0,0,1,5.25,10.25Z"/></svg>
-            </span>
-            <h3 class="e-grid__title c-highlight">
-                Ut enim ad minim
-            </h3>
-            <p class="e-grid__paragraph c-highlight">
-                Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident. Sunt in culpa qui officia deserunt mollit anim id est.
-            </p>
-        </div>
-    </div>
-{{< /example  >}}
-
 <div class="o-row">
     <div class="o-container s-content">
         <h2>Final thoughts</h2>
