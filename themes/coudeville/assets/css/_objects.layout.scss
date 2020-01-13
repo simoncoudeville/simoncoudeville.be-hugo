@@ -129,6 +129,10 @@
     // }
 }
 
+.o-aside {
+    grid-column: left;
+}
+
 .o-container {
     grid-column: content;
 }

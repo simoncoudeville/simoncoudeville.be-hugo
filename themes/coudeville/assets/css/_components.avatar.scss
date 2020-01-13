@@ -5,7 +5,7 @@
 */
 
 .c-avatar {
-    --c-avatar-dimension: var(--global-whitespace-quadruple);
+    --c-avatar-dimension: calc(var(--global-whitespace-base) * 5);
     display: inline-block;
     width: var(--c-avatar-dimension);
     height: var(--c-avatar-dimension);
@@ -21,6 +21,7 @@
     img {
         // opacity: var(--avatar__img-opacity, .75);
         // opacity: 0;
+        // will-change: mix-blend-mode;
         mix-blend-mode: multiply;
     }
 }
