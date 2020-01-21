@@ -23,62 +23,6 @@
     }
 }
 
-@mixin dark-mode {
-    @media (prefers-color-scheme: dark) {
-        :root {
-            @content;
-        }
-    }
-
-    .is-inverted {
-        @content;
-    }
-}
-
-@mixin light-mode {
-    :root {
-        @content;
-    }
-
-    @media (prefers-color-scheme: dark) {
-        .is-inverted {
-            @content;
-        }
-    }
-}
-
-// Font height mixin
-@mixin font-height($font-size,$baseline-multiplier) {
-  font-size: pxtorem(round($font-size)); // font-size in rem
-  line-height: calc(#{$baseline-multiplier} * var(--global-baseline)); // line-height with calc in rem
-}
-
-/// Mixin to customize scrollbars
-/// Beware, this does not work in all browsers
-/// @author Hugo Giraudel
-/// @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
-/// @param {Color} $foreground-color - Scrollbar's color
-/// @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
-/// @example scss - Scrollbar styling
-///   @include scrollbars(.5em, slategray);
-@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
-  // For Google Chrome
-  &::-webkit-scrollbar {
-      width:  $size;
-      height: $size;
-  }
-
-  &::-webkit-scrollbar-thumb {
-      background: $foreground-color;
-      // border-radius: $size;
-      // border: baseline(1) solid $background-color;
-  }
-
-  &::-webkit-scrollbar-track {
-      background: $background-color;
-  }
-}
-
 // return css color variable with different opacity value
 @function alpha($color, $opacity){
   $color: str-replace($color, 'var(');
@@ -87,14 +31,4 @@
   $color-s: var(#{$color+'-s'});
   $color-l: var(#{$color+'-l'});
   @return hsla($color-h, $color-s, $color-l, $opacity);
-}
-
-// replace substring with another string
-// credits: https://css-tricks.com/snippets/sass/str-replace-function/
-@function str-replace($string, $search, $replace: '') {
-  $index: str-index($string, $search);
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-  }
-  @return $string;
 }

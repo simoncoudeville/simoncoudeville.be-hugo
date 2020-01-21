@@ -11,17 +11,12 @@
  */
 
 // Tools
-@import 'modularscale';
 @import 'tools.mixins';
 @import 'tools.functions';
 
 // Settings
 @import 'settings.colors';
 @import 'settings.global';
-
-/* Generic */
-// @import 'generic.normalize';
-// @import 'generic.box-sizing';
 
 /* Elements */
 @import 'elements.fonts';
@@ -30,6 +25,7 @@
 @import 'elements.images';
 
 /* Objects */
+@import 'objects.button-reset';
 @import 'objects.layout';
 @import 'objects.list';
 
@@ -40,20 +36,13 @@
 @import 'components.footer';
 @import 'components.brand';
 @import 'components.text';
-// @import 'components.toggle';
-@import 'components.toggle-2';
-// @import 'components.toggle-3';
 @import 'components.list';
 @import 'components.example';
 @import 'components.about';
 @import 'components.avatar';
-@import 'components.baseline';
 
 /* Scoping */
 @import 'scoping.content';
-
-
-/* Plugins */
 
 /* Utilities */
 @import 'utilities.spacing';

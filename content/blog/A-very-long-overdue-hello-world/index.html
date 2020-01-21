@@ -3,19 +3,19 @@ date: 2019-09-11T21:40:40+01:00
 title: A very long overdue hello world
 description: In this article I describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing perfect control and a predictable outcome.
 draft: false
+script: js/blogposts/post-2.js
+style: css/blogposts/post-1.scss
 ---
 
-<div class="o-row o-row--cover">
-    <div class="o-container o-container--cover">
-        <figure class="c-cover" style="--cover-backgroundColor: var(--global-color-beta);">
-            <!-- <svg class="c-cover__img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1330 560">
-                <path class="c-cover__path" d="M192.287-225.06v131.5H72.351v-131.5H31.659V85.916H72.351V-55.008H192.287V85.916h40.692V-225.06ZM410.312,91.484c53.971,0,89.952-30.841,99.375-74.531H469c-8.138,26.129-25.272,42.406-59.539,42.406-36.409,0-62.109-30.412-62.109-76.673H513.114c3-82.242-35.552-131.5-102.8-131.5-60.824,0-104.515,46.261-104.515,120.364C305.8,39.655,340.493,91.484,410.312,91.484Zm0-207.746c40.264,0,61.253,28.7,60.824,66.393H347.775C349.488-94.416,373.047-116.261,410.312-116.261Zm191.9-108.37v33.411h65.108v243.3H602.209V85.916H772.261V52.077H706.725V-224.632Zm276.709,0v33.411h65.108v243.3H878.918V85.916h170.052V52.077H983.433V-224.632Zm295.127,196.18c0-61.253,29.984-86.953,65.108-86.953s65.108,25.7,65.108,86.953S1274.277,58.5,1239.153,58.5,1174.045,32.8,1174.045-28.451Zm-41.549,0c0,83.527,53.971,119.936,106.657,119.936S1345.81,55.075,1345.81-28.451s-53.971-119.936-106.657-119.936S1132.5-111.978,1132.5-28.451ZM113.472,277.564,79.2,401.783,56.074,231.3H15.81L54.361,461.751H94.2L131.891,322.54l37.694,139.211H209.42L247.971,231.3H208.135l-23.559,170.48L150.309,277.564Zm230.448,69.82c0-61.253,29.984-86.953,65.108-86.953s65.108,25.7,65.108,86.953-29.984,86.953-65.108,86.953S343.919,408.637,343.919,347.384Zm-41.549,0c0,83.527,53.971,119.936,106.657,119.936S515.684,430.91,515.684,347.384,461.713,227.448,409.027,227.448,302.37,263.857,302.37,347.384ZM584.219,231.3v33.839h65.536v162.77H584.647v33.839h183.33V427.912H689.163V346.955c0-50.544,17.134-79.672,61.253-79.672h38.979V231.3H749.987c-28.271,0-50.544,15.42-61.681,41.121V231.3Zm294.7-80.1v33.411h65.108v243.3H878.918v33.839h170.052V427.912H983.433V151.2ZM1290.982,266c-12.85-22.274-33.411-38.551-68.106-38.551-53.114,0-92.95,44.119-92.95,119.936,0,76.245,39.836,119.936,92.95,119.936,34.7,0,55.256-16.277,68.106-38.122l.428,32.554h38.979V151.2h-39.407Zm1.713,81.385c0,60.4-28.7,87.382-61.681,87.382-39.407,0-59.539-32.554-59.539-87.382s20.132-86.953,59.539-86.953C1264,260.43,1292.7,286.559,1292.7,347.384Z" transform="translate(-15.81 159.06)"/>
-            </svg> -->
-            <img src="test-cover-4.png" alt="">
-        </figure>
+<!--
+<figure class="o-row o-row--cover">
+    <div class="o-container o-container--left-right">
+        <div class="c-cover">
+            <img src="test-cover-2.png" alt="">
+        </div>
     </div>
-</div>
-<header class="o-row">
+</figure> -->
+<header class="o-row o-row--intro">
     <div class="o-container">
         <h1 class="js-title">
             A very long overdue hello world
@@ -25,35 +25,47 @@ draft: false
 <div class="o-row">
     <div class="o-container s-content">
         <p>
+            I've been creating websites for over a decade. More then a third of my life has been dedicated to writing HTML & CSS.
             In this article I will describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing perfect control and a predictable outcome.
         </p>
         <h2>Flexible foundations</h2>
         <p>
             Pixels are easy to work with. 10% of what I do. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.
         </p>
-        <h3>Round computed pixels</h3>
         <p>
             Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.
         </p>
         <p>
             Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.
         </p>
-        <h2>Baseline Grid</h2>
+        <h2>Dark mode</h2>
         <p>
-            In order to align text to a baseline grid on the web you. With this technique you have the possibility to align text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that line-height and if the margin between the items is the same as the base line-height you these items will all align to eachother. It's simple math, really.
+            If you happen to visit this page with your OS's appearance setting set to dark you'll see the dark theme in all it's glory. Which personnaly I think is the only reason or time to provide a dark theme. But especially for this page I made a button to toggle dark or light theme:
         </p>
-    </div>
-</div>
-<div class="o-row">
-    <div class="o-container s-content">
+        <div class="c-theme-switcher">
+            <p>
+                <button aria-label="Enable light theme" aria-pressed="false" role="switch" type="button" id="theme-light-button" class="o-button-reset c-theme-button enabled" onclick="enableTheme('light', true)">
+                    Turn on light theme
+                    <svg class="c-theme-button__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                        <path id="circle" d="M12,24h0A12,12,0,0,1,3.515,3.515,12,12,0,0,1,20.486,20.486,11.925,11.925,0,0,1,12,24Zm0-2A10,10,0,1,0,12,2V22Z" transform="translate(0 0)"/>
+                    </svg>
+                </button>
+                <button aria-label="Enable dark theme"  aria-pressed="false" role="switch" type="button" id="theme-dark-button" class="o-button-reset c-theme-button" onclick="enableTheme('dark', true)">
+                    Turn on dark theme
+                    <svg class="c-theme-button__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                        <path id="circle" d="M12,24h0A12,12,0,0,1,3.515,3.515,12,12,0,0,1,20.486,20.486,11.925,11.925,0,0,1,12,24Zm0-2A10,10,0,1,0,12,2V22Z" transform="translate(0 0)"/>
+                    </svg>
+                </button>
+            </p>
+        </div>
+
+        <p>
+            The technique is largely based on <a href="https://www.kooslooijesteijn.net/">Koos Looijesteijn's</a> excellent article on <a href="https://www.kooslooijesteijn.net/blog/add-dark-mode-to-website">implementing dark modes on websites</a>. The only downside to me is that it relies on javascript rather then CSS's built in prefers-color-scheme media query.
+        </p>
         <h2>Profile component</h2>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
-    </div>
-</div>
-<div class="o-row">
-    <div class="o-container s-content">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
@@ -61,10 +73,6 @@ draft: false
         <p>
             In order to align text to a baseline grid on the web you. With this technique you have the possibility to align text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that line-height and if the margin between the items is the same as the base line-height you these items will all align to eachother. It's simple math, really.
         </p>
-    </div>
-</div>
-<div class="o-row">
-    <div class="o-container s-content">
         <h2>Final thoughts</h2>
         <p>
             In order to align text to a baseline grid on the web you. With this technique you have the possibility to align text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that line-height and if the margin between the items is the same as the base line-height you these items will all align to eachother. It's simple math, really.

@@ -137,23 +137,20 @@
     grid-column: content;
 }
 
-.o-container--cover {
-    // grid-column: start/end;
-    //
-    // @include mq(bp4) {
+.o-container--left-right {
+    @include mq(bp4) {
         grid-column: left/right;
-    // }
+    }
 }
 
-.o-container--header {
-    grid-column: left/right;
-}
-
-.o-container--intro {
-    // grid-column: left/content;
-    grid-column: content;
-
+.o-container--left-content {
     @include mq(bp5) {
         grid-column: left/content;
+    }
+}
+
+.o-container--content-right {
+    @include mq(bp5) {
+        grid-column: content/right;
     }
 }

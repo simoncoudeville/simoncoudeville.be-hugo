@@ -7,31 +7,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="{{ .Params.Description }}">
 <meta name="author" content="{{ .Site.Params.Author }}">
-
 {{ if .Site.IsServer }}
-    {{ $css := resources.Get "css/screen.scss" | toCSS | postCSS }}
+    {{- $css := resources.Get "css/screen.scss" | toCSS | postCSS -}}
     <link rel="stylesheet" href="{{ $css.Permalink }}">
     {{/* Conditional css if the post needs code highlighting */}}
-    {{ if .Params.Prism }}
-    {{ $prismcss := resources.Get "css/prism.scss" | toCSS | postCSS }}
+    {{- if .Params.Prism -}}
+    {{- $prismcss := resources.Get "css/prism.scss" | toCSS | postCSS -}}
     <link rel="stylesheet" href="{{ $prismcss.Permalink }}">
-    {{ end }}
-    {{ if .Params.Style }}
-    {{ $styleguide := resources.Get "css/styleguide.scss" | toCSS | postCSS }}
-    <link rel="stylesheet" href="{{ $styleguide.Permalink }}">
-    {{ end }}
+    {{- end }}   
+    {{/* Specific CSS per post or page */}}
+    {{- if .Params.Style -}}
+    {{- $pagestyle := resources.Get .Params.Style | toCSS | postCSS -}}
+    <link rel="stylesheet" href="{{ $pagestyle.Permalink }}">
+    {{- end -}}
 {{ else }}
-    {{ $css := resources.Get "css/screen.scss" | toCSS | postCSS | minify | fingerprint }}
+    {{- $css := resources.Get "css/screen.scss" | toCSS | postCSS | minify | fingerprint -}}
     <link rel="stylesheet" href="{{ $css.Permalink }}">
     {{/* Conditional css if the post needs code highlighting */}}
-    {{ if .Params.Prism }}
+    {{- if .Params.Prism -}}
     {{ $prismcss := resources.Get "css/prism.scss" | toCSS | postCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $prismcss.Permalink }}">
-    {{ end }}
-    {{ if .Params.Style }}
-    {{ $styleguide := resources.Get "css/styleguide.scss" | toCSS | postCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $styleguide.Permalink }}">
-    {{ end }}
+    {{- end }}
+    {{/* Specific CSS per post or page */}}
+    {{- if .Params.Style -}}
+    {{- $pagestyle := resources.Get .Params.Style | toCSS | postCSS | minify | fingerprint -}}
+    <link rel="stylesheet" href="{{ $pagestyle.Permalink }}">
+    {{- end -}}
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -41,5 +42,5 @@
         ga('create', 'UA-72285109-1', 'auto');
         ga('send', 'pageview');
     </script>
-{{ end }}
+{{- end }}
 <link rel="icon" href="/favicon.png">

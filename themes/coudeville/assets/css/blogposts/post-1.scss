@@ -5,7 +5,6 @@
 //
 
 // Tools
-@import '../modularscale';
 @import '../tools.mixins';
 @import '../tools.functions';
 
@@ -13,6 +12,40 @@
 @import '../settings.colors';
 @import '../settings.global';
 
-h1 {
-    
+.c-theme-switcher {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.c-theme-switcher p + p {
+    margin-left: var(--global-whitespace-m);
+}
+
+.c-theme-button {
+    display: none;
+    background-color: var(--global-text-color);
+    color: var(--global-backgroundColor);
+    font-size: var(--global-fontSize-sm);
+    /* font-weight: 500; */
+    line-height: var(--global-whitespace-base);
+    padding: var(--global-whitespace-xs) var(--global-whitespace-s) var(--global-whitespace-xs) var(--global-whitespace-m);
+    border-radius: var(--global-whitespace-base);
+    outline: none;
+}
+
+.c-theme-button:focus {
+    box-shadow: var(--theme-button-focus-shadow, 0 0 0 2px var(--global-backgroundColor), 0 0 0 4px var(--global-text-color));
+}
+
+.c-theme-button.is-enabled {
+    display: flex;
+    align-items: center;
+}
+
+.c-theme-button__icon {
+    fill: currentColor;
+    width: var(--global-whitespace-m);
+    height: var(--global-whitespace-m);
+    margin-left: var(--global-whitespace-s);
 }

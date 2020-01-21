@@ -8,17 +8,13 @@
 // Typography
 // ---
 
-$modularscale: (
-  base: 19px 50px,
-  ratio: 1.25
-);
-
 $root-font-size-sm: 17px; // for mobile
 $root-font-size: 19px; // for larger screens
 
 // Basic font settings
 
 $alpha-font-family          : "Suisse Intl Web", sans-serif;
+$beta-font-family           : "Suisse Works trial", sans-serif;
 $code-font-family           : "Suisse Intl Web Mono", monospace;
 
 $alpha-font-weight          : 400;
@@ -33,12 +29,12 @@ $content-max-width: 36rem;
 // ---
 
 $breakpoints: (
-    bp1                     : 320/16*1em,
-    bp2                     : 424/16*1em,
-    bp3                     : 680/16*1em,
-    bp4                     : 800/16*1em,
-    bp5                     : 1280/16*1em,
-    bp6                     : 1440/16*1em
+    bp1                     : 320/16*1rem,
+    bp2                     : 424/16*1rem,
+    bp3                     : 680/16*1rem,
+    bp4                     : 960/16*1rem,
+    bp5                     : 1280/16*1rem,
+    bp6                     : 1440/16*1rem
 ) !default;
 
 // ---

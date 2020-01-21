@@ -6,6 +6,30 @@
 
 // CSS vars
 
+@mixin theme-light {
+    --global-backgroundColor: var(--global-color-neutral-200);
+    --global-text-color: var(--global-color-neutral-900);
+    --global-heading-color: var(--global-color-neutral-900);
+    --global-meta-color: var(--global-color-neutral-500);
+    --global-border-color: var(--global-color-neutral-300);
+    --global-border-color-hard: var(--global-color-neutral-400);
+    --global-shadow-border-color: rgba(0, 0, 0, .1);
+    --global-link-color: var(--global-heading-color);
+    --global-link-hover-color: var(--global-text-color);
+    --global-selection-backgroundColor: var(--global-text-color);
+    --global-selection-color: var(--global-backgroundColor);
+}
+
+@mixin theme-dark {
+    --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 51.75%);
+    --global-backgroundColor: var(--global-color-neutral-800);
+    --global-text-color: var(--global-color-neutral-100);
+    --global-heading-color: var(--global-color-neutral-100);
+    --global-border-color: var(--global-color-neutral-700);
+    --global-border-color-hard: var(--global-color-neutral-600);
+    --global-shadow-border-color: rgba(255, 255, 255, .1);
+}
+
 :root {
     /* colors */
     --global-color-alpha: #{$color-alpha};
@@ -41,19 +65,7 @@
     --global-color-neutral-800: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 10%);
     --global-color-neutral-900: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 5%);
 
-    /* Light theme */
-    --global-backgroundColor: var(--global-color-neutral-200);
-    --global-backgroundColor--alt: var(--global-color-neutral-200);
-    --global-text-color: var(--global-color-neutral-900);
-    --global-heading-color: var(--global-color-neutral-900);
-    --global-meta-color: var(--global-color-neutral-500);
-    --global-border-color: var(--global-color-neutral-300);
-    --global-border-color-hard: var(--global-color-neutral-400);
-    --global-shadow-border-color: rgba(0, 0, 0, .1);
-    --global-link-color: var(--global-heading-color);
-    --global-link-hover-color: var(--global-text-color);
-    --global-selection-backgroundColor: var(--global-text-color);
-    --global-selection-color: var(--global-backgroundColor);
+    @include theme-light;
 
     --global-baseline-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .50);
     --global-baseline-background: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .25);
@@ -99,16 +111,16 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 51.75%);
-
-        --global-backgroundColor: var(--global-color-neutral-800);
-        --global-backgroundColor--alt: var(--global-color-neutral-900);
-        --global-text-color: var(--global-color-neutral-100);
-        --global-heading-color: var(--global-color-neutral-100);
-        --global-border-color: var(--global-color-neutral-700);
-        --global-border-color-hard: var(--global-color-neutral-600);
-        --global-shadow-border-color: rgba(255, 255, 255, .1);
+        @include theme-dark;
     }
+}
+
+.theme-light {
+    @include theme-light;
+}
+
+.theme-dark {
+    @include theme-dark;
 }
 
 // styles

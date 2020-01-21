@@ -12,18 +12,18 @@
     background-color: var(--cover-backgroundColor, var(--global-backgroundColor));
     // background-color: var(--global-border-color-hard);
     // margin-bottom: 0;
-    margin-left: baseline(calc(var(--global-baseline-multiplier) * -1));
-	margin-right: baseline(calc(var(--global-baseline-multiplier) * -1));
-
-    @include mq(bp3) {
-        margin-left: baseline(calc(var(--global-baseline-multiplier) * -2));
-    	margin-right: baseline(calc(var(--global-baseline-multiplier) * -2));
-    }
-
-    @include mq(bp4) {
-        margin-left: 0;
-        margin-right: 0;
-    }
+    // margin-left: baseline(calc(var(--global-baseline-multiplier) * -1));
+	// margin-right: baseline(calc(var(--global-baseline-multiplier) * -1));
+    //
+    // @include mq(bp3) {
+    //     margin-left: baseline(calc(var(--global-baseline-multiplier) * -2));
+    // 	margin-right: baseline(calc(var(--global-baseline-multiplier) * -2));
+    // }
+    //
+    // @include mq(bp4) {
+    //     margin-left: 0;
+    //     margin-right: 0;
+    // }
 }
 
 .c-cover__img {

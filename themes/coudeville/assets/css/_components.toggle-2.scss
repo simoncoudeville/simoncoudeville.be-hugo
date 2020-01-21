@@ -7,7 +7,6 @@
     align-items: center;
     margin-bottom: var(--global-whitespace-base);
     color: var(--toggle-color, var(--global-meta-color));
-    font-feature-settings: "zero", "liga", "ss02";
     font-size: var(--global-fontSize-sm);
     line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
 }
@@ -48,7 +47,6 @@
             box-shadow: var(--toggle__switch-focus-shadow, 0 0 0 3px hsla(0,0%,0%,.15));
         }
     }
-
 }
 
 @media (prefers-color-scheme: dark) {

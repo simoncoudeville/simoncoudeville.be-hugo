@@ -3,18 +3,12 @@
  */
 
 // Tools
-@import 'modularscale';
 @import 'tools.mixins';
 @import 'tools.functions';
 
 // Settings
 @import 'settings.colors';
 @import 'settings.global';
-
-.test {
-    column-width: calc((var(--global-content-maxWidth) / 2) - #{var(--global-whitespace-base)});
-    column-gap: var(--global-whitespace-base);
-}
 
 // Modular scale
 
@@ -99,12 +93,9 @@
 // examples
 
 .s-example {
-    // background-color: var(--global-backgroundColor--alt);
     box-shadow: inset 0 0 0 1px var(--global-border-color);
     padding: var(--global-whitespace-base);
     margin: 0 calc(var(--global-whitespace-base) * -1) var(--global-whitespace-base);
-    // margin-bottom: var(--global-whitespace-base);
-
 
     & > *:last-child {
         margin-bottom: 0;
@@ -124,10 +115,7 @@
 .s-squarespace {
     background-color: var(--global-baseline-background);
     width: var(--global-whitespace-base);
-    // width: var(--squarespace__dimension);
     height: var(--squarespace__dimension);
-    // height: var(--global-whitespace-xxs);
-    // height: var(--global-whitespace-base);
 
     .s-squarespace-scale & {
         justify-self: end;

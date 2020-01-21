@@ -5,7 +5,8 @@
 */
 
 .c-logo {
-    font-weight: $beta-font-weight;
+    // font-weight: $beta-font-weight;
+    font-weight: $alpha-font-weight;
     color: var(--logo-color, var(--global-heading-color));
 }
 
