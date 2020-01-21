@@ -42,8 +42,8 @@ ul {
 h1,
 .h1 {
     // font-feature-settings: "zero", "liga", "ss01";
-    font-weight: $alpha-font-weight;
-    // font-weight: $beta-font-weight;
+    // font-weight: $alpha-font-weight;
+    font-weight: $beta-font-weight;
     margin-bottom: var(--global-whitespace-base);
     font-size: var(--global-fontSize-xxxl);
     line-height: calc(calc(var(--global-baseline-multiplier) + 2) * var(--global-baseline));
@@ -51,8 +51,8 @@ h1,
 
 h2,
 .h2 {
-    // font-weight: $beta-font-weight;
-    font-weight: $alpha-font-weight;
+    font-weight: $beta-font-weight;
+    // font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-base);
     font-size: var(--global-fontSize-lg);
     line-height: calc(calc(var(--global-baseline-multiplier) + 1) * var(--global-baseline));
@@ -60,8 +60,8 @@ h2,
 
 h3,
 .h3 {
-    // font-weight: $beta-font-weight;
-    font-weight: $alpha-font-weight;
+    font-weight: $beta-font-weight;
+    // font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-base);
     font-size: var(--global-fontSize);
     line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));

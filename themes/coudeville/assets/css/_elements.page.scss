@@ -6,30 +6,6 @@
 
 // CSS vars
 
-@mixin theme-light {
-    --global-backgroundColor: var(--global-color-neutral-200);
-    --global-text-color: var(--global-color-neutral-900);
-    --global-heading-color: var(--global-color-neutral-900);
-    --global-meta-color: var(--global-color-neutral-500);
-    --global-border-color: var(--global-color-neutral-300);
-    --global-border-color-hard: var(--global-color-neutral-400);
-    --global-shadow-border-color: rgba(0, 0, 0, .1);
-    --global-link-color: var(--global-heading-color);
-    --global-link-hover-color: var(--global-text-color);
-    --global-selection-backgroundColor: var(--global-text-color);
-    --global-selection-color: var(--global-backgroundColor);
-}
-
-@mixin theme-dark {
-    --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 51.75%);
-    --global-backgroundColor: var(--global-color-neutral-800);
-    --global-text-color: var(--global-color-neutral-100);
-    --global-heading-color: var(--global-color-neutral-100);
-    --global-border-color: var(--global-color-neutral-700);
-    --global-border-color-hard: var(--global-color-neutral-600);
-    --global-shadow-border-color: rgba(255, 255, 255, .1);
-}
-
 :root {
     /* colors */
     --global-color-alpha: #{$color-alpha};
@@ -37,13 +13,10 @@
     --global-saturation-color-alpha: #{saturation($color-alpha)};
     --global-lightness-color-alpha: #{lightness($color-alpha)};
 
-    // --global-color-beta: #{$color-beta};
     --global-hue-color-beta: #{hue($color-beta)};
     --global-saturation-color-beta: #{saturation($color-beta)};
-    --global-lightness-color-beta: #{lightness($color-beta)};
-    --global-lightness-color-beta: 70%;
+    --global-lightness-color-beta: 69%;
     --global-color-beta: hsl(var(--global-hue-color-beta), var(--global-saturation-color-beta), var(--global-lightness-color-beta));
-
     --global-lightness-color-beta-dark: 62%;
     --global-color-beta-dark: hsl(var(--global-hue-color-beta), var(--global-saturation-color-beta), var(--global-lightness-color-beta-dark));
 
@@ -65,10 +38,8 @@
     --global-color-neutral-800: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 10%);
     --global-color-neutral-900: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 5%);
 
-    @include theme-light;
-
-    --global-baseline-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .50);
-    --global-baseline-background: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .25);
+    // Include theme light from tools.themes so it's reuasable if I ever add a dark/light theme switch
+    @include theme-light;    
 
     /* type scale */
     --global-modular-scale-ratio: 1.125;
@@ -113,14 +84,6 @@
     :root {
         @include theme-dark;
     }
-}
-
-.theme-light {
-    @include theme-light;
-}
-
-.theme-dark {
-    @include theme-dark;
 }
 
 // styles

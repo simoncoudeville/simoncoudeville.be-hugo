@@ -4,7 +4,7 @@ title: Creating vertical rhythm on the web
 description: In this article I describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing perfect control and a predictable outcome.
 draft: false
 prism: true
-script: js/blogposts/post-1.js
+script: js/blogposts/post-2.js
 style: css/blogposts/post-2.scss
 ---
 
@@ -73,6 +73,8 @@ $baseline: 7px;
 $root-font-size: ms(0); // Modular scale size 0
 $root-baseline-multiplier: 5;
 $root-line-height: $baseline * $root-baseline-multiplier; // In this setup this equals a line-height of 28px
+
+@function alpha($color, $opacity){
 
 // Default whitespace settings for margins and paddings between elements
 $alpha-whitespace: baseline($root-baseline-multiplier); // Default whitespace between elements e.g. paragraphs, titles

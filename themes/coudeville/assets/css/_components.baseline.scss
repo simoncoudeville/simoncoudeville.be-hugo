@@ -4,6 +4,22 @@
     Baseline grid overlay
 */
 
+.has-baseline {
+    --global-baseline-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .50);
+    --global-baseline-background: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .25);
+
+    .c-baseline-overlay {
+        display: block;
+    }
+
+    h2,
+    h3,
+    h4,
+    p {
+        background-color: var(--global-baseline-background);
+    }
+}
+
 .c-baseline-overlay {
     display: none;
     position: absolute;

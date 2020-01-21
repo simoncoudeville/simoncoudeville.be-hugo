@@ -7,19 +7,18 @@
 // Tools
 @import '../tools.mixins';
 @import '../tools.functions';
+@import '../tools.themes';
 
 // Settings
 @import '../settings.colors';
 @import '../settings.global';
 
-.c-theme-switcher {
-    display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
+.theme-light {
+    @include theme-light;
 }
 
-.c-theme-switcher p + p {
-    margin-left: var(--global-whitespace-m);
+.theme-dark {
+    @include theme-dark;
 }
 
 .c-theme-button {
@@ -27,7 +26,7 @@
     background-color: var(--global-text-color);
     color: var(--global-backgroundColor);
     font-size: var(--global-fontSize-sm);
-    /* font-weight: 500; */
+    font-weight: $beta-font-weight;
     line-height: var(--global-whitespace-base);
     padding: var(--global-whitespace-xs) var(--global-whitespace-s) var(--global-whitespace-xs) var(--global-whitespace-m);
     border-radius: var(--global-whitespace-base);

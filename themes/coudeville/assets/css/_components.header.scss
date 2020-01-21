@@ -17,7 +17,7 @@
     z-index: 1000;
     grid-column: content;
 
-    @include mq(bp3) {
+    @include mq(bp2) {
         display: grid;
         grid-gap: var(--global-whitespace-base);
         grid-template-columns: auto 1fr;

@@ -1,0 +1,29 @@
+//
+//  Tools: Themes
+//  ---
+//  Separated theme colors
+//
+
+@mixin theme-light {
+    --global-backgroundColor: var(--global-color-neutral-200);
+    --global-text-color: var(--global-color-neutral-900);
+    --global-heading-color: var(--global-color-neutral-900);
+    --global-meta-color: var(--global-color-neutral-500);
+    --global-border-color: var(--global-color-neutral-300);
+    --global-border-color-hard: var(--global-color-neutral-400);
+    --global-shadow-border-color: rgba(0, 0, 0, .1);
+    --global-link-color: var(--global-heading-color);
+    --global-link-hover-color: var(--global-text-color);
+    --global-selection-backgroundColor: var(--global-text-color);
+    --global-selection-color: var(--global-backgroundColor);
+}
+
+@mixin theme-dark {
+    --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 51.75%);
+    --global-backgroundColor: var(--global-color-neutral-800);
+    --global-text-color: var(--global-color-neutral-100);
+    --global-heading-color: var(--global-color-neutral-100);
+    --global-border-color: var(--global-color-neutral-700);
+    --global-border-color-hard: var(--global-color-neutral-600);
+    --global-shadow-border-color: rgba(255, 255, 255, .1);
+}

@@ -19,20 +19,6 @@
     display: flex;
     flex-direction: column;
     margin-bottom: var(--global-whitespace-base);
-
-    .has-baseline & {
-
-        .c-baseline-overlay {
-            display: block;
-        }
-
-        h2,
-        h3,
-        h4,
-        p {
-            background-color: var(--global-baseline-background);
-        }
-    }
 }
 
 .c-example__body--xl {
