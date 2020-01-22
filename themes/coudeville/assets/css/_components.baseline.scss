@@ -5,8 +5,8 @@
 */
 
 .has-baseline {
-    --global-baseline-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .50);
-    --global-baseline-background: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .25);
+    --baseline-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .50);
+    --baseline-background: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .25);
 
     .c-baseline-overlay {
         display: block;
@@ -16,7 +16,7 @@
     h3,
     h4,
     p {
-        background-color: var(--global-baseline-background);
+        background-color: var(--baseline-background);
     }
 }
 
@@ -38,7 +38,7 @@
         top: -1px;
         right: 0;
         left: 0;
-        background-color: var(--global-baseline-color);
+        background-color: var(--baseline-color);
     }
 }
 
@@ -47,8 +47,8 @@
         to bottom,
         transparent,
         transparent calc(var(--global-baseline) - 1px),
-        var(--global-baseline-color) calc(var(--global-baseline) - 1px),
-        var(--global-baseline-color) var(--global-baseline)
+        var(--baseline-color) calc(var(--global-baseline) - 1px),
+        var(--baseline-color) var(--global-baseline)
     );
 
     background-size: 100% var(--global-baseline);

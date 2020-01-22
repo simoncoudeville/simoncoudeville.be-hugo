@@ -32,6 +32,12 @@
 .c-example__content {
     position: relative;
     z-index: 120;
+    margin-bottom: var(--global-whitespace-base);
+}
+
+.c-example__wrapper {
+    position: relative;
+    z-index: 120;    
 }
 
 .c-example__toggle {
