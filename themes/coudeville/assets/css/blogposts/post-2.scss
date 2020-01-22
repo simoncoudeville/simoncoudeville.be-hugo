@@ -20,13 +20,14 @@
 .e-columns {
     column-width: calc((var(--global-content-maxWidth) / 2) - #{var(--global-whitespace-base)});
     column-gap: var(--global-whitespace-base);
-    margin-bottom: calc(var(--global-whitespace-base) * -1);
+    margin-bottom: calc(var(--global-whitespace-base) * -2);
 }
 
-.e-baseline-title {
-    font-size: pxtorem(50px);
-    line-height: calc(calc(var(--global-baseline-multiplier) * 2) * var(--global-baseline));
-}
+// .e-baseline-title {
+//     font-size: var(--global-fontSize-xxxl);
+//     // font-size: pxtorem(50px);
+//     line-height: calc(calc(var(--global-baseline-multiplier) * 2) * var(--global-baseline));
+// }
 
 // Example: profile card
 
@@ -77,7 +78,7 @@
 .e-profile__name {
     margin-bottom: 0;
     color: var(--global-color-neutral-800);
-    font-size: var(--global-fontSize-sm);
+    font-size: var(--global-fontSize-s);
     font-weight: $beta-font-weight;
     line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
 }
@@ -93,7 +94,7 @@
 .e-profile__occupation {
     margin-bottom: baseline(4);
     color: var(--global-color-neutral-800);
-    font-size: var(--global-fontSize-sm);
+    font-size: var(--global-fontSize-s);
     line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
 }
 
@@ -193,7 +194,7 @@
 }
 
 .e-grid__paragraph {
-    font-size: var(--global-fontSize-sm);
+    font-size: var(--global-fontSize-s);
     line-height: calc(calc(var(--global-baseline-multiplier) - .5) * var(--global-baseline));
 }
 

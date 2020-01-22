@@ -42,19 +42,26 @@
     @include theme-light;    
 
     /* type scale */
-    --global-modular-scale-ratio: 1.125;
+    --global-modular-scale-ratio: 1.25;
     --global-root-fontSize: #{$root-font-size-sm/16px*100%};
 
-    // --global-fontSize-xs: calc(var(--global-fontSize-sm) / var(--global-modular-scale-ratio));
-    // --global-fontSize-sm: calc(var(--global-fontSize) / var(--global-modular-scale-ratio));
+    // --global-fontSize-xs: calc(var(--global-fontSize-s) / var(--global-modular-scale-ratio));
+    // --global-fontSize-s: calc(var(--global-fontSize) / var(--global-modular-scale-ratio));
     --global-fontSize-xs: #{pxtorem(15px)};
-    --global-fontSize-sm: #{pxtorem(17px)};
-    --global-fontSize: 1rem;
-    --global-fontSize-md: calc(var(--global-fontSize) * var(--global-modular-scale-ratio));
-    --global-fontSize-lg: calc(var(--global-fontSize-md) * var(--global-modular-scale-ratio));
-    --global-fontSize-xl: calc(var(--global-fontSize-lg) * var(--global-modular-scale-ratio));
-    --global-fontSize-xxl: calc(var(--global-fontSize-xl) * var(--global-modular-scale-ratio));
-    --global-fontSize-xxxl: calc(var(--global-fontSize-xxl) * var(--global-modular-scale-ratio));
+    --global-fontSize-s: #{pxtorem(17px)}; 
+    --global-fontSize: 1rem; 
+    --global-fontSize-m: #{pxtorem(22px)}; 
+    --global-fontSize-l: #{pxtorem(25px)}; 
+    --global-fontSize-xl: #{pxtorem(28px)}; 
+    --global-fontSize-xxl: #{pxtorem(33px)}; 
+    --global-fontSize-xxxl: #{pxtorem(38px)}; 
+    --global-fontSize-xxxxl: #{pxtorem(43px)}; 
+    --global-fontSize-xxxxxl: #{pxtorem(50px)}; 
+    // --global-fontSize-m: calc(var(--global-fontSize) * var(--global-modular-scale-ratio));
+    // --global-fontSize-l: calc(var(--global-fontSize-m) * var(--global-modular-scale-ratio));
+    // --global-fontSize-xl: calc(var(--global-fontSize-l) * var(--global-modular-scale-ratio));
+    // --global-fontSize-xxl: calc(var(--global-fontSize-xl) * var(--global-modular-scale-ratio));
+    // --global-fontSize-xxxl: calc(var(--global-fontSize-xxl) * var(--global-modular-scale-ratio));
 
     /* baseline */
     --global-baseline: #{5px / $root-font-size-sm}rem;
@@ -92,6 +99,7 @@ html {
     background-color: var(--global-backgroundColor);
     color: var(--global-text-color);
     font-family: $alpha-font-family;
+    // font-family: $beta-font-family;
     font-size: var(--global-root-fontSize);
     font-feature-settings: "zero", "liga";
     // font-feature-settings: "zero", "liga", "ss02";

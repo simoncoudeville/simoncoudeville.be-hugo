@@ -58,7 +58,7 @@
 .e-profile__name {
     margin-bottom: 0;
     color: var(--global-color-neutral-800);
-    font-size: var(--global-fontSize-sm);
+    font-size: var(--global-fontSize-s);
     font-weight: $beta-font-weight;
     line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
 }
@@ -74,7 +74,7 @@
 .e-profile__occupation {
     margin-bottom: baseline(4);
     color: var(--global-color-neutral-800);
-    font-size: var(--global-fontSize-sm);
+    font-size: var(--global-fontSize-s);
     line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
 }
 

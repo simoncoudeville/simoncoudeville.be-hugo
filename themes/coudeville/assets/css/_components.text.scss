@@ -9,64 +9,58 @@
     display: block;
     padding: calc(var(--global-baseline) / 2) 0;
     font-family: $code-font-family;
-    font-size: var(--global-fontSize-xs);
-    line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline) );
     text-transform: uppercase;
     color: var(--text-caption-color, var(--global-meta-color));
+    @include ms-xs;
 }
 
 .c-text-label {
-    font-feature-settings: "zero", "liga", "ss02";
-    font-size: var(--global-fontSize-sm);
-    line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline) );
+    font-feature-settings: "zero", "liga", "ss02";    
     padding: calc(var(--global-baseline) / 2) 0;
     color: var(--toggle-color, var(--global-meta-color));
+    @include ms-s;
+}
+
+.c-text-xxxxxl {
+  @include ms-xxxxxl;
+}
+
+.c-text-xxxxl {
+  @include ms-xxxxl;
 }
 
 .c-text-xxxl {
-  font-size: var(--global-fontSize-xxxl);
-  line-height: calc(calc(var(--global-baseline-multiplier) * 2) * var(--global-baseline));
+  @include ms-xxxl;
 }
 
 .c-text-xxl {
-  font-size: var(--global-fontSize-xxl);
-  line-height: calc(calc(var(--global-baseline-multiplier) + 3) * var(--global-baseline));
+  @include ms-xxl;
 }
 
 .c-text-xl {
-  font-size: var(--global-fontSize-xl);
-  line-height: calc(calc(var(--global-baseline-multiplier) + 2) * var(--global-baseline));
+  @include ms-xl;
 }
 
-.c-text-lg {
-  font-size: var(--global-fontSize-lg);
-  line-height: calc(calc(var(--global-baseline-multiplier) + 1) * var(--global-baseline));
+.c-text-l {
+  @include ms-l;
 }
 
 .c-text-base {
-  font-size: var(--global-fontSize-base);
-  line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
+  @include ms-base;
 }
 
-.c-text-md {
-  font-size: var(--global-fontSize-md);
-  line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
+.c-text-m {
+  @include ms-m;
 }
 
-.c-text-sm {
-  font-size: var(--global-fontSize-sm);
-  line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
+.c-text-s {
+  @include ms-s;
 }
 
 .c-text-xs {
-  font-size: var(--global-fontSize-xs);
-  line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
+  @include ms-xs;
 }
 
 .c-text-code {
     font-family: $code-font-family;
 }
-
-// .c-text-intro {
-//     font-weight: $beta-font-weight;
-// }

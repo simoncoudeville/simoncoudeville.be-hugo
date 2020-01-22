@@ -25,13 +25,13 @@ style: css/styleguide.scss
                 This site uses Suisse Int’l for text and Suisse Int’l Mono for code snippets and captions.
             </p>
             <div class="s-example">
-                <p class="c-text-lg u-no-curvy-l">
+                <p class="c-text-l u-no-curvy-l">
                     Suisse Int’l Regular
                 </p>
-                <p class="c-text-lg u-fw-beta u-no-curvy-l">
+                <p class="c-text-l u-fw-beta u-no-curvy-l">
                     Suisse Int’l Book
                 </p>
-                <p class="c-text-lg c-text-code">
+                <p class="c-text-l c-text-code">
                     Suisse Int’l Mono Regular
                 </p>
             </div>
@@ -42,7 +42,7 @@ style: css/styleguide.scss
                 In standard body text every straight lowercase <span class="u-no-curvy-l">‘l’</span> is replaced by a curvy lowercase ‘l’ for maximum readability.
             </p>
             <div class="s-example">
-                <p class="c-text-lg u-no-curvy-l">
+                <p class="c-text-l u-no-curvy-l">
                     <span class="u-muted">I</span>ll<span class="u-muted">ustration</span> <span class="u-muted">→</span> <span class="u-curvy-l"><span class="u-muted">I</span>ll<span class="u-muted">ustration</span></span>
                 </p>
             </div>
@@ -50,7 +50,7 @@ style: css/styleguide.scss
                 For the same reason and because it's cool every zero is a slashed one.
             </p>
             <div class="s-example">
-                <p class="c-text-lg u-no-slashed-zero">
+                <p class="c-text-l u-no-slashed-zero">
                     <span class="u-muted">2</span>0<span class="u-muted">2</span>0 <span class="u-muted">→</span> <span class="u-muted">2</span><span class="u-slashed-zero">0</span><span class="u-muted">2</span><span class="u-slashed-zero">0</span> <br>
                     <!-- 0<span class="u-muted">123456789</span> <span class="u-muted">→</span> <span class="u-slashed-zero">0<span class="u-muted">123456789</span></span> -->
                 </p>
@@ -61,8 +61,21 @@ style: css/styleguide.scss
             <p>
                 Standard body text is 17px on small screens and 19px on larger screens (calculated to percentages obviously). Additional sizes are calculated by a 8:9 ratio modular scale.
             </p>
+   
             <div class="s-example">
-                <dl class="c-modularscale-list">
+                <dl class="c-modularscale-list">         
+                    <dd class="c-modularscale-list__description c-text-xxxxxl">
+                        Nymphs blitz quick vex dwarf jog
+                    </dd>
+                    <dt class="c-modularscale-list__term c-text-caption">
+                        XXXXXL
+                    </dt>
+                    <dd class="c-modularscale-list__description c-text-xxxxl">
+                        Nymphs blitz quick vex dwarf jog
+                    </dd>
+                    <dt class="c-modularscale-list__term c-text-caption">
+                        XXXXL
+                    </dt>
                     <dd class="c-modularscale-list__description c-text-xxxl">
                         Nymphs blitz quick vex dwarf jog
                     </dd>
@@ -81,13 +94,13 @@ style: css/styleguide.scss
                     <dt class="c-modularscale-list__term c-text-caption">
                         XL
                     </dt>
-                    <dd class="c-modularscale-list__description c-text-lg">
+                    <dd class="c-modularscale-list__description c-text-l">
                         Nymphs blitz quick vex dwarf jog
                     </dd>
                     <dt class="c-modularscale-list__term c-text-caption">
                         L
                     </dt>
-                    <dd class="c-modularscale-list__description c-text-md">
+                    <dd class="c-modularscale-list__description c-text-m">
                         Nymphs blitz quick vex dwarf jog
                     </dd>
                     <dt class="c-modularscale-list__term c-text-caption">
@@ -99,7 +112,7 @@ style: css/styleguide.scss
                     <dt class="c-modularscale-list__term c-text-caption">
                         BASE
                     </dt>
-                    <dd class="c-modularscale-list__description c-text-sm">
+                    <dd class="c-modularscale-list__description c-text-s">
                         Nymphs blitz quick vex dwarf jog
                     </dd>
                     <dt class="c-modularscale-list__term c-text-caption">
@@ -113,13 +126,78 @@ style: css/styleguide.scss
                     </dt>
                 </dl>
             </div>
+
+            <div class="c-example">
+                
+                <p class="c-text-caption u-mb-clear">
+                    XXXXXL
+                </p>
+                <p class="c-text-xxxxxl">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam?
+                </p>
+                <p class="c-text-caption u-mb-clear">
+                    XXXXL
+                </p>
+                <p class="c-text-xxxxl">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam quidem.
+                </p>
+                <p class="c-text-caption u-mb-clear">
+                    XXXL
+                </p>
+                <p class="c-text-xxxl">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam quidem quam, quasi eius.
+                </p>
+                <p class="c-text-caption u-mb-clear">
+                    XXL
+                </p>
+                <p class="c-text-xxl">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam quidem quam, quasi eius sapiente laboriosam.
+                </p>
+                <p class="c-text-caption u-mb-clear">
+                    XL
+                </p>
+                <p class="c-text-xl">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam quidem quam, quasi eius sapiente laboriosam odit animi reprehenderit.
+                </p>
+                <p class="c-text-caption u-mb-clear">
+                    L
+                </p>
+                <p class="c-text-l">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam quidem quam, quasi eius sapiente laboriosam odit animi reprehenderit possimus temporibus.
+                </p>
+                <p class="c-text-caption u-mb-clear">
+                    M
+                </p>
+                <p class="c-text-m">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam quidem quam, quasi eius sapiente laboriosam odit animi reprehenderit possimus temporibus sunt natus nam dolorum.
+                </p>
+                <p class="c-text-caption u-mb-clear">
+                    BASE
+                </p>
+                <p class="c-text-base">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam quidem quam, quasi eius sapiente laboriosam odit animi reprehenderit possimus temporibus sunt natus nam dolorum aspernatur repellat magni?
+                </p>
+                <p class="c-text-caption u-mb-clear">
+                    S
+                </p>
+                <p class="c-text-s">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam quidem quam, quasi eius sapiente laboriosam odit animi reprehenderit possimus temporibus sunt natus nam dolorum aspernatur repellat magni?
+                </p>
+                <p class="c-text-caption u-mb-clear">
+                    XS
+                </p>
+                <p class="c-text-xs">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam quidem quam, quasi eius sapiente laboriosam odit animi reprehenderit possimus temporibus sunt natus nam dolorum aspernatur repellat magni?
+                </p>
+            </div>
+        
             <h3>Text styles</h3>
             <div class="s-example">
                 <h1 class="u-mb-xxs">
                     Heading 1
                 </h1>
                 <p class="c-text-caption">
-                    Suisse Int’l Book - Scale XXXL
+                    Suisse Int’l Book - Scale XXL
                 </p>
                 <h2 class="u-mt-clear u-mb-xxs">Heading 2</h2>
                 <p class="c-text-caption">
@@ -314,7 +392,7 @@ style: css/styleguide.scss
                 Line heights are set in increments of the same baseline unit. This means Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos doloremque tempora nostrum esse minus, repudiandae!
             </p>
             <div class="s-example">
-                <div class="s-baseline">
+                <div class="s-baseline has-baseline">
                     <div class="c-baseline-overlay c-baseline-overlay--unit"></div>
                     <div class="s-baseline__item">
                         <h1 class="s-baseline__example">

@@ -25,10 +25,9 @@
     margin-bottom: var(--global-whitespace-xs) !important;
 }
 
-.u-mb-sm {
+.u-mb-s {
     margin-bottom: var(--global-whitespace-s) !important;
 }
-
 
 .u-mb-double {
     margin-bottom: var(--global-whitespace-double) !important;
@@ -36,4 +35,8 @@
 
 .u-mt-clear {
     margin-top: 0 !important;
+}
+
+.u-mt-neg-base {
+    margin-top: calc(var(--global-whitespace-base) * -1);
 }
