@@ -50,13 +50,21 @@
     --global-fontSize-xs: #{pxtorem(15px)};
     --global-fontSize-s: #{pxtorem(17px)}; 
     --global-fontSize: 1rem; 
+    // --global-fontSize-m: #{pxtorem(22px)}; 
+    // --global-fontSize-l: #{pxtorem(25px)}; 
+    // --global-fontSize-xl: #{pxtorem(28px)}; 
+    // --global-fontSize-xxl: #{pxtorem(33px)}; 
+    // --global-fontSize-xxxl: #{pxtorem(38px)}; 
+    // --global-fontSize-xxxxl: #{pxtorem(43px)}; 
+    // --global-fontSize-xxxxxl: #{pxtorem(50px)}; 
+    
     --global-fontSize-m: #{pxtorem(22px)}; 
     --global-fontSize-l: #{pxtorem(25px)}; 
-    --global-fontSize-xl: #{pxtorem(28px)}; 
-    --global-fontSize-xxl: #{pxtorem(33px)}; 
-    --global-fontSize-xxxl: #{pxtorem(38px)}; 
-    --global-fontSize-xxxxl: #{pxtorem(43px)}; 
-    --global-fontSize-xxxxxl: #{pxtorem(50px)}; 
+    --global-fontSize-xl: #{pxtorem(30px)}; 
+    --global-fontSize-xxl: #{pxtorem(36px)}; 
+    --global-fontSize-xxxl: #{pxtorem(42px)}; 
+    --global-fontSize-xxxxl: #{pxtorem(49px)};     
+    --global-fontSize-xxxxxl: #{pxtorem(54px)}; 
     // --global-fontSize-m: calc(var(--global-fontSize) * var(--global-modular-scale-ratio));
     // --global-fontSize-l: calc(var(--global-fontSize-m) * var(--global-modular-scale-ratio));
     // --global-fontSize-xl: calc(var(--global-fontSize-l) * var(--global-modular-scale-ratio));
