@@ -21,14 +21,6 @@
     @include ms-s;
 }
 
-.c-text-xxxxxl {
-  @include ms-xxxxxl;
-}
-
-.c-text-xxxxl {
-  @include ms-xxxxl;
-}
-
 .c-text-xxxl {
   @include ms-xxxl;
 }
@@ -63,4 +55,10 @@
 
 .c-text-code {
     font-family: $code-font-family;
+}
+
+.c-text-intro {  
+  font-weight: $beta-font-weight;
+  margin-bottom: var(--global-whitespace-double);
+  @include ms-m;
 }

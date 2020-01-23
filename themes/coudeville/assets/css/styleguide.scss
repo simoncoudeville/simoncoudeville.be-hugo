@@ -97,11 +97,16 @@
 .s-example {
     box-shadow: inset 0 0 0 1px var(--global-border-color);
     padding: var(--global-whitespace-base);
+    margin-bottom: var(--global-whitespace-base);
     margin: 0 calc(var(--global-whitespace-base) * -1) var(--global-whitespace-base);
 
     & > *:last-child {
         margin-bottom: 0;
     }
+
+    // @include mq(28rem) {
+
+    // }
 }
 
 // Squarespace

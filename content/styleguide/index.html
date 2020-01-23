@@ -25,13 +25,13 @@ style: css/styleguide.scss
                 This site uses Suisse Int’l for text and Suisse Int’l Mono for code snippets and captions.
             </p>
             <div class="s-example">
-                <p class="c-text-l u-no-curvy-l">
+                <p class="c-text-m u-no-curvy-l">
                     Suisse Int’l Regular
                 </p>
-                <p class="c-text-l u-fw-beta u-no-curvy-l">
+                <p class="c-text-m u-fw-beta u-no-curvy-l">
                     Suisse Int’l Book
                 </p>
-                <p class="c-text-l c-text-code">
+                <p class="c-text-m c-text-code">
                     Suisse Int’l Mono Regular
                 </p>
             </div>
@@ -42,7 +42,7 @@ style: css/styleguide.scss
                 In standard body text every straight lowercase <span class="u-no-curvy-l">‘l’</span> is replaced by a curvy lowercase ‘l’ for maximum readability.
             </p>
             <div class="s-example">
-                <p class="c-text-l u-no-curvy-l">
+                <p class="c-text-m u-no-curvy-l">
                     <span class="u-muted">I</span>ll<span class="u-muted">ustration</span> <span class="u-muted">→</span> <span class="u-curvy-l"><span class="u-muted">I</span>ll<span class="u-muted">ustration</span></span>
                 </p>
             </div>
@@ -50,27 +50,20 @@ style: css/styleguide.scss
                 For the same reason and because it's cool every zero is a slashed one.
             </p>
             <div class="s-example">
-                <p class="c-text-l u-no-slashed-zero">
+                <p class="c-text-m u-no-slashed-zero">
                     <span class="u-muted">2</span>0<span class="u-muted">2</span>0 <span class="u-muted">→</span> <span class="u-muted">2</span><span class="u-slashed-zero">0</span><span class="u-muted">2</span><span class="u-slashed-zero">0</span> <br>
                     <!-- 0<span class="u-muted">123456789</span> <span class="u-muted">→</span> <span class="u-slashed-zero">0<span class="u-muted">123456789</span></span> -->
                 </p>
             </div>
             <h3>
-                Modular scale
+                Type scale
             </h3>
             <p>
-                Standard body text is 17px on small screens and 19px on larger screens (calculated to percentages obviously). Additional sizes are calculated by a 8:9 ratio modular scale.
+                Standard body text is 17px on small screens and 19px on larger screens. These pixel values are converted to percentages based on 16px, the default browser font size. Additional sizes are converted to rem. I don't use a modular scale. All additional sizes are handpicked and based on the baseline unit.
             </p>
    
             <div class="s-example">
-                <dl class="c-modularscale-list">         
-                   
-                    <dd class="c-modularscale-list__description c-text-xxxxl">
-                        Nymphs blitz quick vex dwarf jog
-                    </dd>
-                    <dt class="c-modularscale-list__term c-text-caption">
-                        XXXXL
-                    </dt>
+                <dl class="c-modularscale-list">                                              
                     <dd class="c-modularscale-list__description c-text-xxxl">
                         Nymphs blitz quick vex dwarf jog
                     </dd>
@@ -122,45 +115,39 @@ style: css/styleguide.scss
                 </dl>
             </div>
 
-            <div class="c-example">                               
+            <div class="c-example">                                              
                 <p class="c-text-caption u-mb-clear">
-                    XXXXL
-                </p>
-                <p class="c-text-xxxxl">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam.
-                </p>
-                <p class="c-text-caption u-mb-clear">
-                    XXXL
+                    XXXL - 50/60 - 1,2
                 </p>
                 <p class="c-text-xxxl">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam quidem quam.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam!
                 </p>
                 <p class="c-text-caption u-mb-clear">
-                    XXL
+                    XXL - 42/54 - 1,3
                 </p>
                 <p class="c-text-xxl">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam quidem quam, quasi eius sapiente!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam!
                 </p>
                 <p class="c-text-caption u-mb-clear">
-                    XL
+                    XL - 36/48 - 1,3
                 </p>
                 <p class="c-text-xl">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam quidem quam, quasi eius sapiente.
+                </p>
+                <p class="c-text-caption u-mb-clear">
+                    L - 30/42 - 1,4
+                </p>
+                <p class="c-text-l">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam quidem quam, quasi eius sapiente laboriosam odit animi.
                 </p>
                 <p class="c-text-caption u-mb-clear">
-                    L
-                </p>
-                <p class="c-text-l">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam quidem quam, quasi eius sapiente laboriosam odit animi reprehenderit possimus temporibus.
-                </p>
-                <p class="c-text-caption u-mb-clear">
-                    M
+                    M - 24/36 - 1,5
                 </p>
                 <p class="c-text-m">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam quidem quam, quasi eius sapiente laboriosam odit animi reprehenderit possimus temporibus sunt natus nam dolorum.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam quidem quam, quasi eius sapiente laboriosam odit animi reprehenderit possimus temporibus sunt.
                 </p>
                 <p class="c-text-caption u-mb-clear">
-                    BASE
+                    BASE - 19/30 - 1,6
                 </p>
                 <p class="c-text-base">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla vero esse ullam quidem quam, quasi eius sapiente laboriosam odit animi reprehenderit possimus temporibus sunt natus nam dolorum aspernatur repellat magni?

@@ -1,37 +1,27 @@
 
-@mixin ms-xxxxxl {
-    font-size: var(--global-fontSize-xxxxxl);
-    line-height: calc(calc(var(--global-baseline-multiplier) * 2) * var(--global-baseline));
-}
-
-@mixin ms-xxxxl {
-    font-size: var(--global-fontSize-xxxxl);
-    line-height: calc(calc(var(--global-baseline-multiplier) * 2) * var(--global-baseline));
-}
-
 @mixin ms-xxxl {
     font-size: var(--global-fontSize-xxxl);
-    line-height: calc(calc(var(--global-baseline-multiplier) + 4) * var(--global-baseline));
+    line-height: calc(calc(var(--global-baseline-multiplier) * 2) * var(--global-baseline));
 }
 
 @mixin ms-xxl {
     font-size: var(--global-fontSize-xxl);
-    line-height: calc(calc(var(--global-baseline-multiplier) + 3) * var(--global-baseline));
+    line-height: calc(calc(var(--global-baseline-multiplier) + 4) * var(--global-baseline));
 }
 
 @mixin ms-xl {
     font-size: var(--global-fontSize-xl);
-    line-height: calc(calc(var(--global-baseline-multiplier) + 2) * var(--global-baseline));
+    line-height: calc(calc(var(--global-baseline-multiplier) + 3) * var(--global-baseline));
 }
 
 @mixin ms-l {
     font-size: var(--global-fontSize-l);
-    line-height: calc(calc(var(--global-baseline-multiplier) + 1) * var(--global-baseline));
+    line-height: calc(calc(var(--global-baseline-multiplier) + 2) * var(--global-baseline));
 }
 
 @mixin ms-m {
     font-size: var(--global-fontSize-m);
-    line-height: calc(calc(var(--global-baseline-multiplier ) + 0) * var(--global-baseline));
+    line-height: calc(calc(var(--global-baseline-multiplier ) + 1) * var(--global-baseline));
 }
 
 @mixin ms-base {
