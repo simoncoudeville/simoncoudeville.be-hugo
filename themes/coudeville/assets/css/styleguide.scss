@@ -120,7 +120,7 @@
 }
 
 .s-squarespace {
-    background-color: var(--global-baseline-background);
+    background-color: var(--baseline-background);
     width: var(--global-whitespace-base);
     height: var(--squarespace__dimension);
 
@@ -253,7 +253,7 @@
 
     .c-baseline-overlay {
         display: block;
-        right: calc(var(--global-whitespace-base));
+        right: calc(var(--global-whitespace-base) + var(--global-baseline));
     }
 
 }
@@ -288,13 +288,70 @@
     display: flex;
     align-items: center;
     position: relative;
-    width: var(--global-whitespace-base);
+    width: calc(var(--global-whitespace-base) + var(--global-baseline));
 
     .s-space {
         height: 100%;
     }
 
     .c-text-caption {
-        margin-left: auto;
+        margin-left: var(--global-whitespace-xxs);
     }
+}
+
+
+.u-bgcolor-neutral-10 {
+    background-color: var(--global-color-neutral-100);
+}
+
+.u-bgcolor-neutral-20 {
+    background-color: var(--global-color-neutral-200);
+}
+
+.u-bgcolor-neutral-30 {
+    background-color: var(--global-color-neutral-300);
+}
+
+.u-bgcolor-neutral-40 {
+    background-color: var(--global-color-neutral-400);
+}
+
+.u-bgcolor-neutral-50 {
+    background-color: var(--global-color-neutral-500);
+}
+
+.u-bgcolor-neutral-60 {
+    background-color: var(--global-color-neutral-600);
+}
+
+.u-bgcolor-neutral-70 {
+    background-color: var(--global-color-neutral-700);
+}
+
+.u-bgcolor-neutral-80 {
+    background-color: var(--global-color-neutral-800);
+}
+
+.u-bgcolor-neutral-90 {
+    background-color: var(--global-color-neutral-900);
+}
+
+.u-bgcolor-global-page-backgroundColor {
+    background-color: var(--global-backgroundColor);
+}
+
+.u-bgcolor-global-borderColor {
+    background-color: var(--global-border-color);
+}
+
+.u-bgcolor-global-meta-color {
+    background-color: var(--global-meta-color);
+}
+
+.u-bgcolor-global-page-color {
+    background-color: var(--global-text-color);
+}
+
+.u-bgcolor-global-heading-color {
+    background-color: var(--global-heading-color);
 }

@@ -11,12 +11,20 @@
     height: var(--c-avatar-dimension);
     border-radius: 100%;
     overflow: hidden;
-    background-color: var(--global-color-neutral-100);
+    // background-color: var(--global-color-neutral-100);
+    // background-color: var(--global-color-neutral-300);
     // background-color: rgba(black,.15);
     // background-color: rgba(white,1);
     // background-color: var(--global-color-gamma);
-    // background-color: hsla(var(--global-hue-color-beta),100%,50%,.25);
+    // background-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .5);
+    // background-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-beta), var(--global-lightness-color-beta), .25);
+    // background-color: hsla(var(--global-hue-color-beta), 70%, 90%, 1);
+    background-color: hsla(var(--global-hue-color-gamma), 65%, 90%, 1);
+    // background-color: hsla(var(--global-hue-color-beta), 50%, 90%, 1);
+    // background-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .25);
+    // background-color: hsla(var(--global-hue-color-beta),100%,50%,.125);
     // background-color: var(--c-avatar-backgroundColor, var(--global-color-neutral-200));
+    // box-shadow: 0 5px 50px rgba(black,.1);
 
     img {
         // opacity: var(--avatar__img-opacity, .75);

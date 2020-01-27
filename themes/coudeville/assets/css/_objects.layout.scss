@@ -50,7 +50,7 @@
 .o-row--header {
     padding: var(--global-whitespace-base) 0;
     z-index: 100;
-    background-color: var(--global-backgroundColor);
+    // background-color: var(--global-backgroundColor);
 
     // @include mq(bp3) {
         // position: sticky;
@@ -102,9 +102,11 @@
 }
 
 .o-row--intro {
-    // min-height: calc(50vh - calc(var(--global-whitespace-base) * 6));
+    // min-height: calc(50vh - calc(var(--global-whitespace-base) * 5));
     padding-top: var(--global-whitespace-double);
+    // padding-top: var(--global-whitespace-base);
     align-items: end;
+    // align-items: center;
     grid-template-rows: auto;
 }
 
@@ -138,19 +140,19 @@
 }
 
 .o-container--left-right {
-    @include mq(bp4) {
+    // @include mq(bp4) {
         grid-column: left/right;
-    }
+    // }
 }
 
 .o-container--left-content {
-    @include mq(bp5) {
+    // @include mq(bp5) {
         grid-column: left/content;
-    }
+    // }
 }
 
 .o-container--content-right {
-    @include mq(bp5) {
+    // @include mq(bp5) {
         grid-column: content/right;
-    }
+    // }
 }

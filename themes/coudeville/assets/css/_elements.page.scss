@@ -26,7 +26,7 @@
     --global-lightness-color-gamma: #{lightness($color-gamma)};
 
     --global-neutral-hue: var(--global-hue-color-beta);
-    --global-neutral-saturation: 3%;
+    --global-neutral-saturation: 5%;
 
     --global-color-neutral-100: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 97%);
     --global-color-neutral-200: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 94%);
@@ -104,6 +104,7 @@
 html {
     background-color: var(--global-backgroundColor);
     color: var(--global-text-color);
+    font-weight: $alpha-font-weight;
     font-family: $alpha-font-family;
     // font-family: $beta-font-family;
     font-size: var(--global-root-fontSize);

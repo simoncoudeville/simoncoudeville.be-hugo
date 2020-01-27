@@ -22,7 +22,11 @@
 }
 
 .c-text-xxxl {
-  @include ms-xxxl;
+  @include ms-xxl;
+
+  @include mq(bp4) {
+    @include ms-xxxl;
+  }
 }
 
 .c-text-xxl {

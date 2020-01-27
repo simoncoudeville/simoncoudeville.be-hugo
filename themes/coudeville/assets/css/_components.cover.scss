@@ -6,6 +6,11 @@
 
 .c-cover {
     background-color: var(--cover-backgroundColor, var(--global-backgroundColor));
+
+    img {
+        // mix-blend-mode: screen;
+        transform: scaleX(-1);;
+    }
 }
 
 .c-cover__img {

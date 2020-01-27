@@ -1,29 +1,18 @@
 {{ define "main" }}
-<!-- <header class="o-row o-row--header js-header">
-    <div class="o-container">
-        <div class="c-header">
-            <p class="c-header__logo c-logo">
-                <a href="/" class="c-logo__link">Simon Coudeville</a>
-            </p>
-            <h1 class="c-header__meta c-text-base">
-                {{ .Title }}
-            </h1>
-        </div>
-    </div>
-</header> -->
 <main class="o-row o-row--main">
-    <div class="o-row o-row--intro-home">        
+    <!-- <div class="o-row o-row--intro"> 
         <div class="o-container">
+            <figure class="c-avatar">
+                <img src="/img/me@2x.png" alt="Avatar">
+            </figure>
+        </div>
+    </div> -->
+    <div class="o-row o-row--intro-home">              
+        <div class="o-container ">
             <h1 class="c-text-xxl">
-                Hey there, my name is Simon. <br>
-                Designer & teacher.
-            </h1>
-            <!-- <p>
-                Hey, I’m Simon, a designer and teacher from Belgium with over 10 years industry experience. I worked as a senior designer for <a href="http://wijs.be">Wijs</a> for 7 years. I specialize in responsive web-design, HTML &amp; CSS, typography and animation.
-                Recently I started teaching UX and UI design at <a href="http://mct.be"title="mct.be">MCT</a> Howest in Kortrijk.
-
-                Some of my work is on <a href="https://dribbble.com/coudeville">Dribbble</a>. My code expermiments are on <a href="https://codepen.io/simoncoudeville/">Codepen</a>. You can send me an <a href="mailto:coudeville.simon@gmail.com">email</a> or follow me on <a href="https://twitter.com/simoncoudeville">Twitter</a>.
-            </p> -->
+                Hey there, my name is Simon, <br>
+                designer & teacher.
+            </h1>           
         </div>
     </div>
     <div class="o-row">
@@ -32,14 +21,17 @@
                 <p>
                     I love connecting brands and companies with their customers through good design, I can help you with logo, identity & digital design.
                     Recently I started teaching design and frontend at <a href="http://mct.be"title="mct.be">MCT</a> Howest in Kortrijk.
-                    Some of my work is on <a href="https://dribbble.com/coudeville">Dribbble</a>. My code expermiments are on <a href="https://codepen.io/simoncoudeville/">Codepen</a>. You can send me an <a href="mailto:coudeville.simon@gmail.com">email</a> or follow me on <a href="https://twitter.com/simoncoudeville">Twitter</a>.
-                </p>
+                    Some of my work is on <a href="https://dribbble.com/coudeville">Dribbble</a>. My code expermiments are on <a href="https://codepen.io/simoncoudeville/">Codepen</a>. You can send me an <a href="mailto:coudeville.simon@gmail.com">email</a> or follow me on <a href="https://twitter.com/simoncoudeville">Twitter</a>. I write about design, typography and CSS.
+                </p>                
             </div>
         </div>
     </div>
     <div class="o-row">
         <div class="o-container">
-            <h3>Latest Articles</h3>
+            <!-- <h3>Latest Articles</h3> -->
+            <!-- <p>
+                I write about design &amp; css
+            </p> -->
             <ul class="c-list">
                 {{ range (where .Site.RegularPages "Section" "blog") }}
                     <li class="c-list__item">
@@ -47,11 +39,14 @@
                         <h3 class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></h3>
                     </li>
                 {{ end }}
-                <li class="c-list__item">
+                <p class="u-muted">
+                    This list will get longer&hellip;
+                </p>
+                <!-- <li class="c-list__item">
                     <p class="c-list__title">
                         <a href="blog" class="c-list__link">view all</a>
                     </p>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>

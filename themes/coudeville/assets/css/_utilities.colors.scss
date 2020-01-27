@@ -9,85 +9,25 @@
 }
 
 .u-color-alpha {
-    color: $color-alpha;
+    color: var(--global-color-alpha);
 }
 
 .u-bgcolor-alpha {
-    background-color: $color-alpha;
+    background-color: var(--global-color-alpha);
 }
 
 .u-color-beta {
-    color: $color-beta;
+    color: var(--global-color-beta);
 }
 
 .u-bgcolor-beta {
-    background-color: $color-beta;
+    background-color: var(--global-color-beta);
 }
 
 .u-color-gamma {
-    color: $color-gamma;
+    color: var(--global-color-gamma);
 }
 
 .u-bgcolor-gamma {
-    background-color: $color-gamma;
-}
-
-.u-bgcolor-neutral-10 {
-    background-color: var(--global-color-neutral-100);
-}
-
-.u-bgcolor-neutral-20 {
-    background-color: var(--global-color-neutral-200);
-}
-
-.u-bgcolor-neutral-30 {
-    background-color: var(--global-color-neutral-300);
-}
-
-.u-bgcolor-neutral-40 {
-    background-color: var(--global-color-neutral-400);
-}
-
-.u-bgcolor-neutral-50 {
-    background-color: var(--global-color-neutral-500);
-}
-
-.u-bgcolor-neutral-60 {
-    background-color: var(--global-color-neutral-600);
-}
-
-.u-bgcolor-neutral-70 {
-    background-color: var(--global-color-neutral-700);
-}
-
-.u-bgcolor-neutral-80 {
-    background-color: var(--global-color-neutral-800);
-}
-
-.u-bgcolor-neutral-90 {
-    background-color: var(--global-color-neutral-900);
-}
-
-.u-bgcolor-global-page-backgroundColor {
-    background-color: var(--global-backgroundColor);
-}
-
-.u-bgcolor-global-page-backgroundColor--alt {
-    background-color: var(--global-backgroundColor--alt);
-}
-
-.u-bgcolor-global-borderColor {
-    background-color: var(--global-border-color);
-}
-
-.u-bgcolor-global-meta-color {
-    background-color: var(--global-meta-color);
-}
-
-.u-bgcolor-global-page-color {
-    background-color: var(--global-text-color);
-}
-
-.u-bgcolor-global-heading-color {
-    background-color: var(--global-heading-color);
+    background-color: var(--global-color-gamma);
 }

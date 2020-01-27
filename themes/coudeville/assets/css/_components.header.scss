@@ -33,7 +33,8 @@
 .c-header__meta,
 .c-header__title {
     position: relative;
-    font-weight: $alpha-font-weight;
+    // font-family: $alpha-font-family;
+    // font-weight: $alpha-font-weight;
     color: var(--header__meta-color, var(--global-meta-color));
     grid-column: 2;
     grid-row: 1;
