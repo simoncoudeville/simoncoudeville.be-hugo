@@ -63,6 +63,6 @@
 
 .c-text-intro {  
   font-weight: $beta-font-weight;
-  margin-bottom: var(--global-whitespace-double);
+  // margin-bottom: var(--global-whitespace-double);
   @include ms-m;
 }

@@ -7,20 +7,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="{{ .Params.Description }}">
 <meta name="author" content="{{ .Site.Params.Author }}">
-{{ if .Site.IsServer }}
-    {{- $css := resources.Get "css/screen.scss" | toCSS | postCSS -}}
+{{ if .Site.IsServer -}}
+    {{- $css := resources.Get "css/screen.scss" | toCSS -}}
     <link rel="stylesheet" href="{{ $css.Permalink }}">
     {{/* Conditional css if the post needs code highlighting */}}
     {{- if .Params.Prism -}}
-    {{- $prismcss := resources.Get "css/prism.scss" | toCSS | postCSS -}}
+    {{- $prismcss := resources.Get "css/prism.scss" | toCSS -}}
     <link rel="stylesheet" href="{{ $prismcss.Permalink }}">
-    {{- end }}   
+    {{- end -}}   
     {{/* Specific CSS per post or page */}}
     {{- if .Params.Style -}}
-    {{- $pagestyle := resources.Get .Params.Style | toCSS | postCSS -}}
+    {{- $pagestyle := resources.Get .Params.Style | toCSS -}}
     <link rel="stylesheet" href="{{ $pagestyle.Permalink }}">
     {{- end -}}
-{{ else }}
+{{- else -}}
     {{- $css := resources.Get "css/screen.scss" | toCSS | postCSS | minify | fingerprint -}}
     <link rel="stylesheet" href="{{ $css.Permalink }}">
     {{/* Conditional css if the post needs code highlighting */}}

@@ -8,28 +8,33 @@
     font-weight: $beta-font-weight;
     // font-weight: $alpha-font-weight;
     color: var(--logo-color, var(--global-heading-color));
+    @include ms-base;
 }
 
 .c-logo__link {
     // text-decoration: none;
+    // text-decoration-color: var(--global-backgroundColor);
 
     &:hover,
     &:focus,
     &:active {
-        text-decoration: underline;
+        // text-decoration: underline;
+        // text-decoration-color: var(--global-link-color-hover);
     }
-    //
-    // &::before {
-    //     content:'←';
-    //     display: inline-block;
-    //     width: var(--global-whitespace-base);
-    //     text-align: right;
-    //     margin-left: calc(var(--global-whitespace-base) * -1);
-    //     opacity: 0;
-    //     transform: translateX(calc(var(--global-whitespace-xxs) * -1));
-    //     transition: all $animation-duration-alpha $animation-easing-in;
-    // }
-    //
+    
+    &::before {
+        // content:'←';
+        display: inline-block;
+        width: var(--global-whitespace-base);
+        text-align: right;
+        margin-left: calc(var(--global-whitespace-base) * -1);
+        // margin-right: var(--global-whitespace-base);
+        // opacity: 0;
+        // transform: translateX(calc(var(--global-whitespace-xxs) * -1));
+        transform: translateX(calc(var(--global-whitespace-m) * -1));
+        transition: all $animation-duration-alpha $animation-easing-in;
+    }
+    
     // &:hover {
     //     &::before {
     //         opacity: 1;

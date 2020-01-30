@@ -1,4 +1,17 @@
 {{ define "main" }}
+
+<header class="o-row o-row--header js-header">
+    <div class="o-container">
+        <div class="c-header">
+            <p class="c-header__logo c-logo">
+                Simon Coudeville
+            </p>
+            <p class="c-header__meta">
+                Designer, Developer & Teacher
+            </p>
+        </div>       
+    </div>
+</header>
 <main class="o-row o-row--main">
     <!-- <div class="o-row o-row--intro"> 
         <div class="o-container">
@@ -7,28 +20,50 @@
             </figure>
         </div>
     </div> -->
-    <div class="o-row o-row--intro-home">              
+    <!-- <div class="o-row o-row--intro">              
         <div class="o-container ">
-            <h1 class="c-text-xxl">
+            <p>
+                Hey there, I'm
+            </p>
+            <h1 class="c-text-xxxl">
+                Simon
+                Coudeville
+            </h1>           
+            <h1 class="c-text-xxxl">
                 Hey there, my name is Simon, <br>
                 designer & teacher.
             </h1>           
         </div>
-    </div>
+    </div> -->
+    <!-- <div class="o-row o-row--intro">
+        <div class="o-container">
+            <h1 class="c-logo u-mb-clear">
+                Simon Coudeville
+            </h1>
+            <div class="s-content">
+                <p class="u-muted">
+                    Designer, Developer & Teacher
+                </p>                                
+            </div>
+        </div>
+    </div> -->
     <div class="o-row">
         <div class="o-container">
-            <div class="s-content">
-                <p>
-                    I love connecting brands and companies with their customers through good design, I can help you with logo, identity & digital design.
-                    Recently I started teaching design and frontend at <a href="http://mct.be"title="mct.be">MCT</a> Howest in Kortrijk.
-                    Some of my work is on <a href="https://dribbble.com/coudeville">Dribbble</a>. My code expermiments are on <a href="https://codepen.io/simoncoudeville/">Codepen</a>. You can send me an <a href="mailto:coudeville.simon@gmail.com">email</a> or follow me on <a href="https://twitter.com/simoncoudeville">Twitter</a>. I write about design, typography and CSS.
-                </p>                
-            </div>
+            <p>
+                I love connecting brands and companies with their customers through good design, I can help you with logo, identity
+                & digital design.
+                Recently I started teaching design and frontend at <a href="http://mct.be" title="mct.be">MCT</a> Howest in
+                Kortrijk.
+                Some of my work is on <a href="https://dribbble.com/coudeville">Dribbble</a>. My code expermiments are on <a
+                    href="https://codepen.io/simoncoudeville/">Codepen</a>. You can send me an <a
+                    href="mailto:coudeville.simon@gmail.com">email</a> or follow me on <a
+                    href="https://twitter.com/simoncoudeville">Twitter</a>. I write about design, typography and CSS.
+            </p>           
         </div>
     </div>
     <div class="o-row">
-        <div class="o-container">
-            <!-- <h3>Latest Articles</h3> -->
+        <div class="o-container">            
+            <h3>Latest Articles</h3>
             <!-- <p>
                 I write about design &amp; css
             </p> -->
@@ -38,18 +73,18 @@
                         <span class="c-list__meta">{{ .Date.Format "2 January 2006" }}</span>
                         <h3 class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></h3>
                     </li>
-                {{ end }}
-                <p class="u-muted">
-                    This list will get longer&hellip;
-                </p>
+                {{ end }}                
                 <!-- <li class="c-list__item">
                     <p class="c-list__title">
                         <a href="blog" class="c-list__link">view all</a>
                     </p>
                 </li> -->
             </ul>
+            <p class="u-muted">
+                More soon&hellip;
+            </p>
         </div>
     </div>
 </main>
-{{ partial "footer.html" . }}
+<!-- {{ partial "footer.html" . }} -->
 {{ end }}

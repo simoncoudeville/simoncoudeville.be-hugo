@@ -5,15 +5,20 @@
 */
 
 .c-intro {
-    min-height: calc(50vh - #{baseline(calc(var(--global-baseline-multiplier) * 5))});
-
-    @include mq(bp3) {
-        min-height: calc(50vh - #{baseline(calc(var(--global-baseline-multiplier) * 4))});
-    }
+    
 }
 
-.c-intro__title {
-    color: var(--global-heading-color);
-    grid-column: content;
-    align-self: flex-end;
-}
+// .c-intro__title {
+//     transition-property: opacity, transform;
+//     transition-duration: $animation-duration-beta;
+//     transition-timing-function: $animation-easing-out;
+//     transition-delay: $animation-duration-alpha;
+
+//     .has-scrolled & {
+//         transition-timing-function: $animation-easing-in;
+//         transition-delay: 0s;
+//         transition-property: opacity, transform;
+//         opacity: 0;
+//         transform: translateY(calc(var(--global-whitespace-base) * -1));
+//     }
+// }

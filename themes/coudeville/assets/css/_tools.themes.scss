@@ -6,6 +6,7 @@
 
 @mixin theme-light {
     --global-backgroundColor: var(--global-color-neutral-200);
+    // --global-backgroundColor: white;
     --global-text-color: var(--global-color-neutral-900);
     --global-heading-color: var(--global-color-neutral-900);
     --global-meta-color: var(--global-color-neutral-500);

@@ -1,4 +1,4 @@
 ---
 title: Designer & teacher
-description: Personal website for Simon Coudeville
+description: Personal website of Simon Coudeville
 ---

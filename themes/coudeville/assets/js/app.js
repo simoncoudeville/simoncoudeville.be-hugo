@@ -39,6 +39,6 @@ function observeIntroTitle() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    // observeHeader();
-    // observeIntroTitle();
+    observeHeader();
+    observeIntroTitle();
 });
