@@ -7,9 +7,10 @@
 
 .o-grid {
     --grid-whitespace: var(--global-whitespace-base);
+    --grid-content-width: minmax(0, var(--global-content-maxWidth));
     min-height: 100vh;
     display: grid;
-    grid: "start left content right end" / var(--grid-whitespace) minmax(0,var(--grid-container-width, 1fr)) minmax(0, var(--global-content-maxWidth)) minmax(0,var(--grid-container-width, 1fr)) var(--grid-whitespace);
+    grid: "start . left content right . end" / var(--grid-whitespace) 1fr minmax(0,var(--grid-container-width, 1fr)) var(--grid-content-width) minmax(0,var(--grid-container-width, 1fr)) 1fr var(--grid-whitespace);    
     grid-row-gap: var(--global-whitespace-base);
     align-content: start;
 
@@ -17,8 +18,8 @@
         --grid-whitespace: var(--global-whitespace-double);
     }
 
-    @include mq($content-max-width * 2.5) {
-        --grid-whitespace: 1fr;
+    @include mq(bp4) {
+        --grid-content-width: var(--global-content-maxWidth);
         --grid-container-width: calc(var(--global-content-maxWidth) / 2);
     }
 }
@@ -109,10 +110,9 @@
 }
 
 .o-row--intro {
-    // min-height: calc(50vh - calc(var(--global-whitespace-base) * 5));
+    min-height: calc(50vh - calc(var(--global-whitespace-base) * 5));
     padding-top: var(--global-whitespace-double);
     // padding-bottom: var(--global-whitespace-double);
-    // padding-top: var(--global-whitespace-base);
     align-items: end;
     // align-items: center;
     grid-template-rows: auto;
@@ -145,6 +145,10 @@
 
 .o-container {
     grid-column: content;
+
+    @include mq(bp4) {
+        
+    }
 }
 
 .o-container--left-right {

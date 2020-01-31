@@ -46,7 +46,15 @@ h1,
     // font-weight: $alpha-font-weight;
     font-weight: $beta-font-weight;
     margin-bottom: var(--global-whitespace-base);
-    @include ms-xl;
+    @include ms-l;
+
+    @include mq(bp3) {
+        @include ms-xl;
+    }
+
+    @include mq(bp5) {
+        @include ms-xxl;
+    }
 }
 
 h2,
@@ -63,8 +71,8 @@ h3,
     font-weight: $beta-font-weight;
     // font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-base);
+    // color: var(--global-meta-color);
     @include ms-base;
-    // @include ms-s;
 }
 
 h4,
