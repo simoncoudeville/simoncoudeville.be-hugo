@@ -15,6 +15,7 @@ $root-font-size: 19px; // for larger screens
 
 $alpha-font-family          : "Suisse Intl Web", sans-serif;
 $beta-font-family           : "Suisse Works trial", serif;
+// $beta-font-family           : "Suisse Intl Web", serif;
 $code-font-family           : "Suisse Intl Web Mono", monospace;
 
 $alpha-font-weight          : 400;
@@ -30,9 +31,9 @@ $content-max-width: 36rem;
 
 $breakpoints: (
     bp1                     : 320/16*1rem,
-    bp2                     : 424/16*1rem,
-    bp3                     : 680/16*1rem,
-    bp4                     : 960/16*1rem,
+    bp2                     : 420/16*1rem,
+    bp3                     : 640/16*1rem,
+    bp4                     : 1020/16*1rem,
     bp5                     : 1280/16*1rem,
     bp6                     : 1440/16*1rem
 ) !default;

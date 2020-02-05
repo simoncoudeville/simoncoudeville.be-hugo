@@ -23,7 +23,7 @@
         grid-template-columns: auto 1fr;
     }
 
-    @include mq(bp5) {
+    @include mq(bp4) {
         grid-column: 1 / -1;
         display: grid;
         grid: inherit;
@@ -36,7 +36,7 @@
     margin-bottom: 0;
     grid-row: 1;
 
-    @include mq(bp5) {
+    @include mq(bp4) {
         grid-column: left;
     }
 }
@@ -44,7 +44,7 @@
 .c-header__meta,
 .c-header__title {
     position: relative;
-    // font-family: $alpha-font-family;
+    font-family: $alpha-font-family;
     font-weight: $alpha-font-weight;
     color: var(--header__meta-color, var(--global-meta-color));   
     margin-bottom: 0;
@@ -55,7 +55,7 @@
     grid-row: 1;
     grid-column: 2;
 
-    @include mq(bp5) {
+    @include mq(bp4) {
         grid-column: content;        
     }
 }
