@@ -10,7 +10,7 @@
     --grid-content-width: minmax(0, var(--global-content-maxWidth));
     min-height: 100vh;
     display: grid;
-    grid: "start . content . end" / var(--grid-whitespace) 1fr  minmax(0, var(--global-content-maxWidth)) 1fr var(--grid-whitespace);        
+    grid: "start restleft left content right restright end" / var(--grid-whitespace) var(--grid-rest-width, 0) minmax(0,(var(--grid-container-width, 1fr))) var(--grid-content-width) minmax(0,(var(--grid-container-width, 1fr))) var(--grid-rest-width, 0) var(--grid-whitespace);        
     grid-row-gap: var(--global-whitespace-base);
     align-content: start;
 
@@ -20,11 +20,8 @@
 
     @include mq(bp4) {
         --grid-container-width: calc(var(--global-content-maxWidth) / 2);
-        grid: "start . left content . end" / var(--grid-whitespace) 1fr minmax(0,var(--grid-container-width)) var(--global-content-maxWidth) 1fr var(--grid-whitespace);    
-    }
-
-    @include mq(bp5) {
-        grid: "start . left content right . end" / var(--grid-whitespace) 1fr minmax(0,var(--grid-container-width)) var(--global-content-maxWidth) minmax(0,var(--grid-container-width)) 1fr var(--grid-whitespace);    
+        --grid-rest-width: 1fr;
+        --grid-content-width: var(--global-content-maxWidth);
     }
 }
 
@@ -111,11 +108,10 @@
 }
 
 .o-row--intro {
-    min-height: calc(50vh - calc(var(--global-whitespace-base) * 5));
+    min-height: calc(50vh - calc(var(--global-whitespace-base) * 6));
     padding-top: var(--global-whitespace-double);
     // padding-bottom: var(--global-whitespace-double);
     align-items: end;
-    // align-items: center;
     grid-template-rows: auto;
 }
 
@@ -146,14 +142,14 @@
 
 .o-container {
     grid-column: content;
-
-    @include mq(bp4) {
-        
-    }
 }
 
 .o-container--left-right {
-    @include mq(bp5) {
+    // @include mq(bp3) {
+    //     grid-column: left/content;
+    // }
+
+    @include mq(bp3) {
         grid-column: left/right;
     }
 }

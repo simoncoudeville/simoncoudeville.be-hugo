@@ -15,9 +15,10 @@
 
     --global-hue-color-beta: #{hue($color-beta)};
     --global-saturation-color-beta: #{saturation($color-beta)};
-    --global-lightness-color-beta: 69%;
+    --global-lightness-color-beta: 71%;
+    // --global-lightness-color-beta: #{lightness($color-beta)};
     --global-color-beta: hsl(var(--global-hue-color-beta), var(--global-saturation-color-beta), var(--global-lightness-color-beta));
-    --global-lightness-color-beta-dark: 62%;
+    --global-lightness-color-beta-dark: 65%;
     --global-color-beta-dark: hsl(var(--global-hue-color-beta), var(--global-saturation-color-beta), var(--global-lightness-color-beta-dark));
 
     --global-color-gamma: #{$color-gamma};
@@ -32,7 +33,7 @@
     --global-color-neutral-200: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 94%);
     --global-color-neutral-300: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 85%);
     --global-color-neutral-400: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 80%);
-    --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 45.75%);
+    --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 44.5%);
     --global-color-neutral-600: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 30%);
     --global-color-neutral-700: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 20%);
     --global-color-neutral-800: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 10%);

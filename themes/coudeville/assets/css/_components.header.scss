@@ -15,7 +15,7 @@
 .c-header {
     --c-header__meta-offset: var(--global-whitespace-s);
     z-index: 1000;
-    grid-column: content;
+    grid-column: left/right;
 
     @include mq(bp3) {
         display: grid;
@@ -23,7 +23,7 @@
         grid-template-columns: auto 1fr;
     }
 
-    @include mq(bp4) {
+    @include mq(bp5) {
         grid-column: 1 / -1;
         display: grid;
         grid: inherit;
@@ -36,7 +36,7 @@
     margin-bottom: 0;
     grid-row: 1;
 
-    @include mq(bp4) {
+    @include mq(bp5) {
         grid-column: left;
     }
 }
@@ -55,7 +55,7 @@
     grid-row: 1;
     grid-column: 2;
 
-    @include mq(bp4) {
+    @include mq(bp5) {
         grid-column: content;        
     }
 }

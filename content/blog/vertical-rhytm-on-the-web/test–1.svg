@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="690" height="690" viewBox="0 0 690 690">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-test_1);
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        stroke: rgba(250,128,114,0.5);
+        stroke-width: 6px;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect class="cls-1" width="690" height="690"/>
+    </clipPath>
+    <clipPath id="clip-test_1">
+      <rect width="690" height="690"/>
+    </clipPath>
+  </defs>
+  <g id="test_1" data-name="test–1" class="cls-2">
+    <g id="Repeat_Grid_1" data-name="Repeat Grid 1" class="cls-3">
+      <path id="Path_1" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      <g transform="translate(0 36)">
+        <path id="Path_1-2" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      </g>
+      <g transform="translate(0 72)">
+        <path id="Path_1-3" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      </g>
+      <g transform="translate(0 108)">
+        <path id="Path_1-4" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      </g>
+      <g transform="translate(0 144)">
+        <path id="Path_1-5" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      </g>
+      <g transform="translate(0 180)">
+        <path id="Path_1-6" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      </g>
+      <g transform="translate(0 216)">
+        <path id="Path_1-7" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      </g>
+      <g transform="translate(0 252)">
+        <path id="Path_1-8" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      </g>
+      <g transform="translate(0 288)">
+        <path id="Path_1-9" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      </g>
+      <g transform="translate(0 324)">
+        <path id="Path_1-10" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      </g>
+      <g transform="translate(0 360)">
+        <path id="Path_1-11" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      </g>
+      <g transform="translate(0 396)">
+        <path id="Path_1-12" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      </g>
+      <g transform="translate(0 432)">
+        <path id="Path_1-13" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      </g>
+      <g transform="translate(0 468)">
+        <path id="Path_1-14" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      </g>
+      <g transform="translate(0 504)">
+        <path id="Path_1-15" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      </g>
+      <g transform="translate(0 540)">
+        <path id="Path_1-16" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      </g>
+      <g transform="translate(0 576)">
+        <path id="Path_1-17" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      </g>
+      <g transform="translate(0 612)">
+        <path id="Path_1-18" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      </g>
+      <g transform="translate(0 648)">
+        <path id="Path_1-19" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      </g>
+      <g transform="translate(0 684)">
+        <path id="Path_1-20" data-name="Path 1" class="cls-4" d="M0,0H690" transform="translate(0 3)"/>
+      </g>
+    </g>
+  </g>
+</svg>

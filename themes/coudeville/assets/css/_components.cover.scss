@@ -5,20 +5,28 @@
 */
 
 .c-cover {
-    background-color: var(--cover-backgroundColor, var(--global-backgroundColor));
+    // grid-column: start / end;
+    grid-column: content;
+    // padding: var(--global-whitespace-base);
 
-    img {
-        // mix-blend-mode: screen;
-        // transform: scaleX(-1);
+    // @include mq(bp3) {
+    //     padding: var(--global-whitespace-double);
+    // }
+
+    @include mq(bp3) {
+        // padding: 0;
+        grid-column: left / right;
+    }
+
+    @include mq(bp5) {
+        grid-column: left / right;
     }
 }
 
 .c-cover__img {
     display: block;
     width: 100%;
+    // max-width: var(--global-content-maxWidth);
     height: auto;
-}
-
-.c-cover__path {
-    fill: var(--cover-fill-color, var(--global-backgroundColor));
+    margin: 0 auto;
 }
