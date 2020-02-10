@@ -5,20 +5,10 @@
 */
 
 .c-cover {
-    // grid-column: start / end;
-    grid-column: content;
-    // padding: var(--global-whitespace-base);
+    grid-column: start / end;
+    // grid-column: content;    
 
-    // @include mq(bp3) {
-    //     padding: var(--global-whitespace-double);
-    // }
-
-    @include mq(bp3) {
-        // padding: 0;
-        grid-column: left / right;
-    }
-
-    @include mq(bp5) {
+    @include mq(bp4) {
         grid-column: left / right;
     }
 }
