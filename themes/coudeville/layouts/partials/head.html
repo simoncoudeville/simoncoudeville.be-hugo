@@ -8,7 +8,7 @@
 <meta name="description" content="{{ .Params.Description }}">
 <meta name="author" content="{{ .Site.Params.Author }}">
 {{ if .Site.IsServer -}}
-    {{- $css := resources.Get "css/screen.scss" | toCSS -}}
+    {{- $css := resources.Get "css/screen.scss" | toCSS | postCSS -}}
     <link rel="stylesheet" href="{{ $css.Permalink }}">
     {{/* Conditional css if the post needs code highlighting */}}
     {{- if .Params.Prism -}}
@@ -17,7 +17,7 @@
     {{- end -}}   
     {{/* Specific CSS per post or page */}}
     {{- if .Params.Style -}}
-    {{- $pagestyle := resources.Get .Params.Style | toCSS -}}
+    {{- $pagestyle := resources.Get .Params.Style | toCSS | postCSS -}}
     <link rel="stylesheet" href="{{ $pagestyle.Permalink }}">
     {{- end -}}
 {{- else -}}

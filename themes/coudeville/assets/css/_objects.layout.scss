@@ -155,7 +155,7 @@
 }
 
 .o-container--left-content {
-    @include mq(bp4) {
+    @include mq(bp3) {
         grid-column: left/content;
     }
 }

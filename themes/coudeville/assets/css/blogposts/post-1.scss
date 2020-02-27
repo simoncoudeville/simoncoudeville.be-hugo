@@ -24,18 +24,22 @@
 
 .c-theme-button {
     display: none;
-    background-color: var(--global-text-color);
-    color: var(--global-backgroundColor);
+    // background-color: var(--global-text-color);
+    // color: var(--global-backgroundColor);
     font-size: var(--global-fontSize-s);
     font-weight: $beta-font-weight;
     line-height: var(--global-whitespace-base);
-    padding: var(--global-whitespace-xs) var(--global-whitespace-s) var(--global-whitespace-xs) var(--global-whitespace-m);
-    border-radius: var(--global-whitespace-base);
+    // padding: var(--global-whitespace-xs) var(--global-whitespace-s) var(--global-whitespace-xs) var(--global-whitespace-m);
+    // border-radius: var(--global-whitespace-base);
     outline: none;
 }
 
 .c-theme-button:focus {
     box-shadow: var(--theme-button-focus-shadow, 0 0 0 2px var(--global-backgroundColor), 0 0 0 4px var(--global-text-color));
+}
+
+.c-theme-button:active {
+    box-shadow: none;
 }
 
 .c-theme-button.is-enabled {
@@ -47,7 +51,8 @@
     fill: currentColor;
     width: var(--global-whitespace-m);
     height: var(--global-whitespace-m);
-    margin-left: var(--global-whitespace-s);
+    // margin-left: var(--global-whitespace-s);
+    margin-right: var(--global-whitespace-s);
 }
 
 .c-post-cover {

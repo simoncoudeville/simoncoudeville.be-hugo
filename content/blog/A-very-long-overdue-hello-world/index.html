@@ -9,7 +9,7 @@ style: css/blogposts/post-1.scss
 ---
 
 <header class="o-row o-row--intro">
-    <div class="o-container o-container--left-content">
+    <div class="o-container o-container--content-right">
         <div class="c-intro js-title">
             <h1 class="c-intro__title u-mb-clear">
                 A very long overdue hello world
@@ -20,16 +20,16 @@ style: css/blogposts/post-1.scss
         </p>
     </div>
 </header>
-<figure class="o-row o-row--cover">
+<!-- <figure class="o-row o-row--cover">
     <div class="o-container o-container--left-right">
         <div class="c-cover">
             <img src="https://d2tcm8odh6x6oa.cloudfront.net/app/uploads/2018/11/13144345/NewsThought-Illustration_Rethink_1440x810.png" alt="">
         </div>
-        <!-- <div class="c-post-cover">
+        <div class="c-post-cover">
             <p class="c-post-cover__text">Hello world</p>
-        </div>         -->
+        </div>        
     </div>
-</figure>
+</figure> -->
 <div class="o-row">
     <div class="o-container s-content">
         <p>
@@ -63,16 +63,22 @@ style: css/blogposts/post-1.scss
         <div class="c-theme-switcher">
             <p>
                 <button aria-label="Enable light theme" aria-pressed="false" role="switch" type="button" id="theme-light-button" class="o-button-reset c-theme-button enabled" onclick="enableTheme('light', true)">
-                    Turn on light theme
-                    <svg class="c-theme-button__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
-                        <path id="circle" d="M12,24h0A12,12,0,0,1,3.515,3.515,12,12,0,0,1,20.486,20.486,11.925,11.925,0,0,1,12,24Zm0-2A10,10,0,1,0,12,2V22Z" transform="translate(0 0)"/>
+                    <svg class="c-theme-button__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 24 24">
+                        <path id="circle"
+                            d="M12,24h0A12,12,0,0,1,3.515,3.515,12,12,0,0,1,20.486,20.486,11.925,11.925,0,0,1,12,24Zm0-2A10,10,0,1,0,12,2V22Z"
+                            transform="translate(0 0)" />
                     </svg>
+                    Turn off dark theme                    
                 </button>
                 <button aria-label="Enable dark theme"  aria-pressed="false" role="switch" type="button" id="theme-dark-button" class="o-button-reset c-theme-button" onclick="enableTheme('dark', true)">
-                    Turn on dark theme
-                    <svg class="c-theme-button__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
-                        <path id="circle" d="M12,24h0A12,12,0,0,1,3.515,3.515,12,12,0,0,1,20.486,20.486,11.925,11.925,0,0,1,12,24Zm0-2A10,10,0,1,0,12,2V22Z" transform="translate(0 0)"/>
+                    <svg class="c-theme-button__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 24 24">
+                        <path id="circle"
+                            d="M12,24h0A12,12,0,0,1,3.515,3.515,12,12,0,0,1,20.486,20.486,11.925,11.925,0,0,1,12,24Zm0-2A10,10,0,1,0,12,2V22Z"
+                            transform="translate(0 0)" />
                     </svg>
+                    Turn on dark theme                   
                 </button>
             </p>
         </div>

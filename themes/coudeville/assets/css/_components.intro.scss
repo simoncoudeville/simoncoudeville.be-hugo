@@ -8,6 +8,11 @@
     
 }
 
+.c-intro__title,
+.c-intro__paragraph {
+    display: inline-block;
+}
+
 // .c-intro__title {
 //     transition-property: opacity, transform;
 //     transition-duration: $animation-duration-beta;
