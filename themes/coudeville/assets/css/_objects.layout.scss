@@ -4,7 +4,6 @@
     Global layout styles
 */
 
-
 .o-grid {
     --grid-whitespace: var(--global-whitespace-base);
     --grid-content-width: minmax(0, var(--global-content-maxWidth));
@@ -48,10 +47,12 @@
 }
 
 .o-row--alternate {
-    border: 1px solid var(--global-shadow-border-color);
-    border-width: 1px 0;
-    margin-bottom: var(--global-whitespace-base);
-    padding: var(--global-whitespace-double) 0 var(--global-whitespace-base) 0;
+    // border: 1px solid var(--global-shadow-border-color);
+    // border-width: 1px 0;    
+    // background-color: var(--global-surfaceColor-2);
+    // margin-bottom: var(--global-whitespace-base);
+    // padding: var(--global-whitespace-double) 0 var(--global-whitespace-base) 0;
+    padding: var(--global-whitespace-base) 0 var(--global-whitespace-base) 0;
 }
 
 .o-row--header {

@@ -8,9 +8,9 @@
     grid-column: start / end;
     // grid-column: content;    
 
-    @include mq(bp4) {
-        grid-column: left / right;
-    }
+    // @include mq(bp4) {
+    //     grid-column: left / right;
+    // }
 }
 
 .c-cover__img {

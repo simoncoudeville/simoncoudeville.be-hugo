@@ -23,7 +23,7 @@
     &:after {
         content: "";
         display: block;
-        background-color: var(--toggle__switch-backgroundColor, var(--global-backgroundColor));
+        background-color: var(--toggle__switch-backgroundColor, var(--global-surfaceColor));
         border: 1px solid var(--toggle__switch-borderColor, var(--global-border-color-hard));
         border-radius: 100%;
         width: 20px;
@@ -35,7 +35,7 @@
     &:checked {
         &:after {
             transform: translate(15px,-9.5px);
-            background-color: var(--toggle__switch-checked-backgroundColor, var(--global-backgroundColor));
+            background-color: var(--toggle__switch-checked-backgroundColor, var(--global-surfaceColor));
             border-color: var(--toggle__switch-checked-borderColor, var(--global-border-color-hard));
         }
     }

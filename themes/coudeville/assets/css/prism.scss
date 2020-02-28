@@ -17,11 +17,9 @@ code[class*="language-"],
 pre[class*="language-"] {
 	--prism-text-color: var(--global-text-color);
     --prism-comment-color: var(--global-meta-color);
-    --prism-backgroundColor: var(--global-backgroundColor);
-
+	--prism-backgroundColor: var(--global-color-neutral-800);
 	--prism-text-color: var(--global-color-neutral-100);
-    --prism-comment-color: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 51.75%);
-    --prism-backgroundColor: var(--global-color-neutral-800);
+    --prism-comment-color: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 51.75%);    
 
     --prism-keyword-color: var(--global-color-beta);
     --prism-function-color: var(--global-color-alpha);
