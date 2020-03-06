@@ -44,6 +44,7 @@ h1,
 .h1 {
     // font-feature-settings: "zero", "liga", "ss01";
     // font-weight: $alpha-font-weight;
+    // letter-spacing: -.015em;
     font-weight: $beta-font-weight;
     margin-bottom: var(--global-whitespace-base);
     @include ms-l;
@@ -52,8 +53,12 @@ h1,
         @include ms-xl;
     }
 
-    @include mq(bp5) {
+    @include mq(bp4) {
         @include ms-xxl;
+    }
+
+    @include mq(bp5) {
+        @include ms-xxxl;
     }
 }
 
@@ -119,7 +124,6 @@ strong {
 // Links
 
 a {
-    font-family: $alpha-font-family;
     font-weight: $beta-font-weight;
     color: var(--global-link-color);
     transition: all $animation-duration-alpha $animation-easing-out;

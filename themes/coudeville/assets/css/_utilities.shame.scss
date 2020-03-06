@@ -9,46 +9,6 @@
 // }
 
 .hr-small {
-    // height: 1px;
     height: 0;
     margin: var(--global-whitespace-base) 0;
-}
-
-
-.u-fw-beta {
-    font-weight: $beta-font-weight;
-}
-
-.c-social-links {
-    --c-social-links__icon-dimension: var(--global-whitespace-m);
-    display: flex;
-    align-items: center;
-}
-
-.c-social-links__item {
-    // margin: 0 var(--global-whitespace-xxs);
-    & + & {
-        margin-left: var(--global-whitespace-xs);
-    }
-}
-
-.c-social-links__link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-
-    &,
-    &:visited {
-        color: var(--global-meta-color);
-    }
-
-    &:hover,
-    &:active {
-        color: var(--global-link-color);
-    }
-}
-
-.c-social-links__icon {
-    fill: currentColor;
-    height: var(--c-social-links__icon-dimension);
 }

@@ -27,7 +27,7 @@
     --global-lightness-color-gamma: #{lightness($color-gamma)};
 
     --global-neutral-hue: var(--global-hue-color-beta);
-    --global-neutral-saturation: 3%;
+    --global-neutral-saturation: 0%;
 
     --global-color-neutral-100: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 97%);
     --global-color-neutral-200: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 94%);
@@ -35,9 +35,9 @@
     --global-color-neutral-400: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 80%);
     --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 44.5%);
     --global-color-neutral-600: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 30%);
-    --global-color-neutral-700: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 12.5%);
-    --global-color-neutral-800: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 10%);
-    --global-color-neutral-900: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 7.5%);
+    --global-color-neutral-700: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 17.5%);
+    --global-color-neutral-800: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 12.5%);
+    --global-color-neutral-900: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 10%);
 
     // Include theme light from tools.themes so it's reuasable if I ever add a dark/light theme switch
     @include theme-light;    

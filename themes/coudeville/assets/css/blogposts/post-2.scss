@@ -13,7 +13,7 @@
 // components
 @import '../components.example';
 @import '../components.baseline';
-@import '../components.toggle-2';
+@import '../components.toggle-4';
 
 .c-cover {
     // --cover-backgroundColor: var(--global-color-beta-dark);
@@ -52,7 +52,6 @@
     border-radius: baseline(1);
     box-shadow: 0 0 0 1px rgba(black, 0.05), 0 2px 4px rgba(black,.075);
     // box-shadow: 0 0 0 1px var(--global-color-neutral-300);
-    margin-bottom: var(--global-whitespace-base);
     overflow: hidden;
 }
 

@@ -7,9 +7,10 @@
 .o-grid {
     --grid-whitespace: var(--global-whitespace-base);
     --grid-content-width: minmax(0, var(--global-content-maxWidth));
+    --grid-cell: calc(var(--global-content-maxWidth) / 2);
     min-height: 100vh;
     display: grid;
-    grid: "start restleft left content right restright end" / var(--grid-whitespace) var(--grid-rest-width, 0) minmax(0,(var(--grid-container-width, 1fr))) var(--grid-content-width) minmax(0,(var(--grid-container-width, 1fr))) var(--grid-rest-width, 0) var(--grid-whitespace);        
+    grid: "start left startContent endContent right end" / var(--grid-whitespace) minmax(0,(var(--grid-container-width, 1fr))) var(--grid-cell) var(--grid-cell) minmax(0,(var(--grid-container-width, 1fr))) var(--grid-whitespace);        
     grid-row-gap: var(--global-whitespace-base);
     align-content: start;
 
@@ -19,7 +20,6 @@
 
     @include mq(bp4) {
         --grid-container-width: calc(var(--global-content-maxWidth) / 2);
-        --grid-rest-width: 1fr;
         --grid-content-width: var(--global-content-maxWidth);
     }
 }
@@ -31,41 +31,47 @@
     grid: inherit;
     grid-gap: inherit;
 
-    .o-row .o-row {
+    .o-row {
         grid-row-gap: 0
     }
 }
 
 .o-row--lg {
-    padding: var(--global-whitespace-base) 0;
+    padding: var(--global-whitespace-base) 0 0;
 }
 
 .o-row--xl {
     @include mq(bp5) {
-        padding: var(--global-whitespace-double) 0;
+        padding: var(--global-whitespace-double) 0 var(--global-whitespace-base);
     }
 }
 
+.o-row--footer {
+    padding-top: var(--global-whitespace-base);
+}
+
 .o-row--alternate {
-    // border: 1px solid var(--global-shadow-border-color);
+    // border: 1px solid var(--global-backgroundColor);
+    // border: 1px solid var(--global-border-color);
     // border-width: 1px 0;    
     // background-color: var(--global-surfaceColor-2);
     // margin-bottom: var(--global-whitespace-base);
     // padding: var(--global-whitespace-double) 0 var(--global-whitespace-base) 0;
-    padding: var(--global-whitespace-base) 0 var(--global-whitespace-base) 0;
+    padding: var(--global-whitespace-base) 0 0;
 }
 
 .o-row--header {
-    padding: var(--global-whitespace-base) 0;
+    padding-top: var(--global-whitespace-base);
     z-index: 100;
     // background-color: var(--global-backgroundColor);
+    margin-bottom: var(--global-whitespace-base); 
 
     @include mq(bp3) {
         // position: sticky;
         // top: 0;
         // right: 0;
         // left: 0;
-        margin-top: var(--global-whitespace-base);
+        // margin-top: var(--global-whitespace-base);        
 
         // &::before {
         //     content: '';
@@ -109,7 +115,7 @@
 }
 
 .o-row--intro {
-    min-height: calc(50vh - calc(var(--global-whitespace-base) * 6));
+    min-height: calc(50vh - calc(var(--global-whitespace-base) * 4));
     padding-top: var(--global-whitespace-double);
     // padding-bottom: var(--global-whitespace-double);
     align-items: end;
@@ -138,11 +144,15 @@
 }
 
 .o-aside {
-    grid-column: left;
+    grid-column: startContent/endContent;
+
+    @include mq(bp5) {
+        grid-column: left;
+    }
 }
 
 .o-container {
-    grid-column: content;
+    grid-column: startContent/endContent;;
 }
 
 .o-container--left-right {
@@ -157,12 +167,12 @@
 
 .o-container--left-content {
     @include mq(bp3) {
-        grid-column: left/content;
+        grid-column: left/endContent;
     }
 }
 
 .o-container--content-right {
     @include mq(bp5) {
-        grid-column: content/right;
+        grid-column: startContent/right;
     }
 }

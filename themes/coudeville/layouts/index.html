@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<header class="o-row o-row--header js-header">
+<!-- <header class="o-row o-row--header js-header">
     <div class="o-container">
         <div class="c-header">
             <p class="c-header__logo c-logo">
@@ -11,6 +11,36 @@
             </p>
         </div>       
     </div>
+</header> -->
+<header id="header" class="o-row o-row--header js-header">
+    <!-- <div class="o-container o-container--left-content"> -->
+    <div class="c-header">
+        <h1 class="c-header__logo c-logo">
+            Simon Coudeville
+        </h1>
+        <p class="c-header__meta">
+            Designer & Teacher
+        </p>
+    </div>
+    <!-- </div> -->
+</header>
+<header class="o-row o-row--intro">
+    <!-- <div class="o-container o-container--left-content"> -->
+        <!-- <p class="c-text-caption u-mb-xxs">
+            Hello
+        </p> -->
+        <div class="c-intro js-title">
+            <p class="h1 c-intro__title ">
+                Hi, I’m Simon. I’m a digital product designer that likes working with code. <span class="u-muted">Why and how I finally made this place</span>
+            </p>
+            <!-- <h1 class="c-intro__title u-mb-clear">
+                We are a design studio in Cape Town creating strategy-informed identities for brands of the world.
+            </h1> -->
+        </div>
+        <!-- <p class="h1 u-muted">
+            Why and how I finally made this place
+        </p> -->
+    <!-- </div> -->
 </header>
 <main class="o-row o-row--main">
     <!-- <div class="o-row o-row--intro"> 
@@ -47,7 +77,7 @@
             </div>
         </div>
     </div> -->
-    <div class="o-row">
+    <!-- <div class="o-row">
         <div class="o-container">
             <p>
                 I love connecting brands and companies with their customers through good design, I can help you with logo, identity
@@ -60,10 +90,12 @@
                     href="https://twitter.com/simoncoudeville">Twitter</a>. I write about design, typography and CSS.
             </p>           
         </div>
-    </div>
-    <div class="o-row">
-        <div class="o-container">            
+    </div> -->
+    <div class="o-row o-row--xl">
+        <div class="o-aside">
             <h3>Latest Articles</h3>
+        </div>
+        <div class="o-container">                        
             <!-- <p>
                 I write about design &amp; css
             </p> -->
@@ -86,5 +118,5 @@
         </div>
     </div>
 </main>
-<!-- {{ partial "footer.html" . }} -->
+{{ partial "footer.html" . }}
 {{ end }}

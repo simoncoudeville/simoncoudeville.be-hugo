@@ -5,12 +5,17 @@
 */
 
 .c-intro {
-    
+    margin-bottom: var(--global-whitespace-base);
+    grid-column: startContent/right;
+
+    @include mq(bp5) {
+        grid-column: left/endContent;
+    }
 }
 
 .c-intro__title,
 .c-intro__paragraph {
-    display: inline-block;
+    display: inline;
 }
 
 // .c-intro__title {

@@ -17,7 +17,7 @@ code[class*="language-"],
 pre[class*="language-"] {
 	--prism-text-color: var(--global-text-color);
     --prism-comment-color: var(--global-meta-color);
-	--prism-backgroundColor: var(--global-color-neutral-800);
+	--prism-backgroundColor: var(--global-color-neutral-900);
 	--prism-text-color: var(--global-color-neutral-100);
     --prism-comment-color: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 51.75%);    
 
@@ -62,11 +62,11 @@ pre[class*="language-"] {
 	margin-right: baseline(calc(var(--global-baseline-multiplier) * -1));
 }
 
-@media (prefers-color-scheme: dark) {
-	pre[class*="language-"] {
-		box-shadow: 0 0 0 1px var(--global-shadow-border-color);
-	}
-}
+// @media (prefers-color-scheme: dark) {
+// 	pre[class*="language-"] {
+// 		box-shadow: 0 0 0 1px var(--global-shadow-border-color);
+// 	}
+// }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
