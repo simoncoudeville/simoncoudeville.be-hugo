@@ -7,6 +7,7 @@
     align-items: center;
     margin-bottom: var(--global-whitespace-base);
     color: var(--toggle-color, var(--global-meta-color));
+    font-family: $alpha-font-family;
     font-size: var(--global-fontSize-s);
     line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
 }

@@ -5,11 +5,12 @@
 */
 
 .c-avatar {
-    --c-avatar-dimension: calc(var(--global-whitespace-base) * 5);
+    --c-avatar-dimension: calc(var(--global-whitespace-base) * 6);
+    position: relative;
     display: inline-block;
     width: var(--c-avatar-dimension);
-    height: var(--c-avatar-dimension);
-    border-radius: 100%;
+    // height: var(--c-avatar-dimension);
+    border-radius: 0 0 var(--c-avatar-dimension) var(--c-avatar-dimension);
     overflow: hidden;
     // background-color: var(--global-color-neutral-100);
     // background-color: var(--global-color-neutral-300);
@@ -19,17 +20,50 @@
     // background-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .5);
     // background-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-beta), var(--global-lightness-color-beta), .25);
     // background-color: hsla(var(--global-hue-color-beta), 70%, 90%, 1);
-    background-color: hsla(var(--global-hue-color-gamma), 65%, 90%, 1);
+    // background-color: hsla(var(--global-hue-color-gamma), 65%, 90%, 1);
     // background-color: hsla(var(--global-hue-color-beta), 50%, 90%, 1);
     // background-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .25);
     // background-color: hsla(var(--global-hue-color-beta),100%,50%,.125);
     // background-color: var(--c-avatar-backgroundColor, var(--global-color-neutral-200));
     // box-shadow: 0 5px 50px rgba(black,.1);
 
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: var(--c-avatar-dimension);
+        width: var(--c-avatar-dimension);
+        border-radius: 100%;
+        // background-color: hsla(var(--global-hue-color-gamma), 50%, 90%, 1);
+        // background-color: hsla(var(--global-hue-color-beta), var(--global-saturation-color-beta), var(--global-lightness-color-beta), .25);
+        // background-color: hsla(var(--global-hue-color-beta), 50%, 90%, 1);
+        // background-color: yellow;
+        // background-color: khaki;
+        // background-color: LightGoldenRodYellow;
+        // background-color: palegoldenrod;
+        background-color: var(--global-backgroundColor);
+    }
+
     img {
+        position: relative;
+        // filter: grayscale(100%) sepia(10%) hue-rotate(220deg) contrast(120%);
+        // filter: grayscale(100%);
         // opacity: var(--avatar__img-opacity, .75);
         // opacity: 0;
         // will-change: mix-blend-mode;
-        mix-blend-mode: multiply;
+        // mix-blend-mode: multiply;
+
+        .theme-dark & {
+            filter: grayscale(100%) sepia(10%) hue-rotate(220deg) contrast(120%);    
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .c-avatar img {
+        filter: grayscale(100%) sepia(10%) hue-rotate(220deg) contrast(120%);
     }
 }

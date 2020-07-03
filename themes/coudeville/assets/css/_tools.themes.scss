@@ -6,7 +6,6 @@
 
 @mixin theme-light {
     --global-backgroundColor: var(--global-color-neutral-200);
-    // --global-backgroundColor: var(--global-color-neutral-900);
     --global-surfaceColor: white;
     --global-surfaceColor-2: var(--global-color-neutral-100);
     --global-text-color: var(--global-color-neutral-900);
@@ -22,7 +21,7 @@
 }
 
 @mixin theme-dark {
-    --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 52.75%);
+    --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 53.5%);
     --global-backgroundColor: var(--global-color-neutral-900);
     --global-surfaceColor: var(--global-color-neutral-800);
     --global-surfaceColor-2: var(--global-color-neutral-700);

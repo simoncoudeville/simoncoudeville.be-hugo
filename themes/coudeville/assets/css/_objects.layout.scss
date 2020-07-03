@@ -6,21 +6,19 @@
 
 .o-grid {
     --grid-whitespace: var(--global-whitespace-base);
-    --grid-content-width: minmax(0, var(--global-content-maxWidth));
-    --grid-cell: calc(var(--global-content-maxWidth) / 2);
+    --grid-cell: minmax(0,calc(var(--global-content-maxWidth) / 2));
     min-height: 100vh;
     display: grid;
     grid: "start left startContent endContent right end" / var(--grid-whitespace) minmax(0,(var(--grid-container-width, 1fr))) var(--grid-cell) var(--grid-cell) minmax(0,(var(--grid-container-width, 1fr))) var(--grid-whitespace);        
     grid-row-gap: var(--global-whitespace-base);
-    align-content: start;
 
     @include mq(bp3) {
         --grid-whitespace: var(--global-whitespace-double);
     }
 
     @include mq(bp4) {
-        --grid-container-width: calc(var(--global-content-maxWidth) / 2);
-        --grid-content-width: var(--global-content-maxWidth);
+        --grid-container-width: var(--grid-cell);
+        --grid-cell: calc(var(--global-content-maxWidth) / 2);
     }
 }
 
@@ -62,52 +60,7 @@
 
 .o-row--header {
     padding-top: var(--global-whitespace-base);
-    z-index: 100;
-    // background-color: var(--global-backgroundColor);
-    margin-bottom: var(--global-whitespace-base); 
-
-    @include mq(bp3) {
-        // position: sticky;
-        // top: 0;
-        // right: 0;
-        // left: 0;
-        // margin-top: var(--global-whitespace-base);        
-
-        // &::before {
-        //     content: '';
-        //     display: block;
-        //     position: absolute;
-        //     top: 0;
-        //     right: 0;
-        //     bottom: 0;
-        //     left: 0;
-        //     background-color: var(--global-backgroundColor);
-        // }
-
-        // &::after {
-        //     content: '';
-        //     display: block;
-        //     position: absolute;
-        //     bottom: -1px;
-        //     // bottom: 0;
-        //     left: 0;
-        //     right: 0;
-        //     height: 1px;
-        //     background-color: var(--global-shadow-border-color);
-        //     opacity: 0;
-        //     transition: all $animation-duration-alpha;
-        
-        //     .is-sticky & {
-        //         opacity: 1;
-        //     }
-        // }
-        
-        // &.is-sticky {
-        //     &::after {
-        //         opacity: 1;
-        //     }
-        // }
-    }
+    margin-bottom: var(--global-whitespace-base);     
 }
 
 .o-row--main {
@@ -117,9 +70,7 @@
 .o-row--intro {
     min-height: calc(50vh - calc(var(--global-whitespace-base) * 4));
     padding-top: var(--global-whitespace-double);
-    // padding-bottom: var(--global-whitespace-double);
     align-items: end;
-    grid-template-rows: auto;
 }
 
 .o-row--intro-home {
@@ -132,15 +83,6 @@
 .o-row--divide {
     border-top: 1px solid var(--global-shadow-border-color);
     padding-top: var(--global-whitespace-double);
-}
-
-.o-row--cover {
-    // background-color: var(--row--cover-backgroundColor, var(--global-meta-color));
-    // margin-bottom: var(--global-whitespace-base);
-
-    // @include mq(bp5) {
-    //     margin-bottom: calc(var(--global-whitespace-double) + var(--global-whitespace-base));
-    // }
 }
 
 .o-aside {
@@ -156,10 +98,6 @@
 }
 
 .o-container--left-right {
-    // @include mq(bp3) {
-    //     grid-column: left/content;
-    // }
-
     @include mq(bp3) {
         grid-column: left/right;
     }

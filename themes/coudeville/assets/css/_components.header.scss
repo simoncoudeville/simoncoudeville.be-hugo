@@ -31,8 +31,8 @@
 }
 
 .c-header__meta {
-    font-family: $alpha-font-family;
-    font-weight: $alpha-font-weight;
+    // font-family: $alpha-font-family;
+    // font-weight: $alpha-font-weight;
     color: var(--header__meta-color, var(--global-meta-color));   
     margin-bottom: 0;   
     grid-column: 2;

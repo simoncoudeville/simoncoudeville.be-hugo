@@ -5,8 +5,9 @@
 */
 
 .c-logo {
-    font-weight: $beta-font-weight;
+    // font-weight: $beta-font-weight;
     // font-weight: $alpha-font-weight;
+    font-family: $alpha-font-family;
     color: var(--logo-color, var(--global-heading-color));
     @include ms-base;
 }

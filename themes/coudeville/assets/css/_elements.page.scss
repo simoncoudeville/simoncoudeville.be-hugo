@@ -27,16 +27,16 @@
     --global-lightness-color-gamma: #{lightness($color-gamma)};
 
     --global-neutral-hue: var(--global-hue-color-beta);
-    --global-neutral-saturation: 0%;
+    --global-neutral-saturation: 3%;
 
     --global-color-neutral-100: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 97%);
     --global-color-neutral-200: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 94%);
     --global-color-neutral-300: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 85%);
-    --global-color-neutral-400: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 80%);
-    --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 44.5%);
+    --global-color-neutral-400: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 75%);
+    --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 47.5%);
     --global-color-neutral-600: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 30%);
     --global-color-neutral-700: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 17.5%);
-    --global-color-neutral-800: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 12.5%);
+    --global-color-neutral-800: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 15%);
     --global-color-neutral-900: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 10%);
 
     // Include theme light from tools.themes so it's reuasable if I ever add a dark/light theme switch
@@ -107,8 +107,8 @@ html {
     background-color: var(--global-backgroundColor);
     color: var(--global-text-color);
     // font-weight: $alpha-font-weight;
-    font-family: $alpha-font-family;
-    // font-family: $beta-font-family;
+    // font-family: $alpha-font-family;
+    font-family: $beta-font-family;
     font-size: var(--global-root-fontSize);
     font-feature-settings: "zero", "liga";
     // font-feature-settings: "zero", "liga", "ss02";
