@@ -88,6 +88,7 @@
     /* layout */
     // --global-content-maxWidth: #{$content-max-width};
     --global-content-maxWidth: calc(var(--global-baseline) * 120);
+    --global-container-maxWidth: calc(var(--global-content-maxWidth) * 2);
 
     @include mq(bp3) {
         --global-root-fontSize: #{$root-font-size/16px*100%};
@@ -106,12 +107,9 @@
 html {
     background-color: var(--global-backgroundColor);
     color: var(--global-text-color);
-    // font-weight: $alpha-font-weight;
-    // font-family: $alpha-font-family;
     font-family: $beta-font-family;
     font-size: var(--global-root-fontSize);
     font-feature-settings: "zero", "liga";
-    // font-feature-settings: "zero", "liga", "ss02";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
@@ -128,7 +126,7 @@ html {
 
 body {
     background-color: var(--global-surfaceColor);
-    max-width: 1440px;
+    max-width: var(--global-container-maxWidth);
     margin: 0 auto;
     font-size: var(--global-fontSize);
     line-height: baseline(var(--global-baseline-multiplier));

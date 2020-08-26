@@ -7,26 +7,22 @@
 .o-grid {
     --grid-whitespace: var(--global-whitespace-base);
     --grid-cell: minmax(0,calc(var(--global-content-maxWidth) / 2));
+    --grid: "start left startContent endContent right end" / var(--grid-whitespace) 1fr var(--grid-cell) var(--grid-cell) 1fr var(--grid-whitespace);            
     min-height: 100vh;
-    display: grid;
-    grid: "start left startContent endContent right end" / var(--grid-whitespace) minmax(0,(var(--grid-container-width, 1fr))) var(--grid-cell) var(--grid-cell) minmax(0,(var(--grid-container-width, 1fr))) var(--grid-whitespace);        
+    display: grid;    
+    grid: var(--grid);
     grid-row-gap: var(--global-whitespace-base);
 
     @include mq(bp3) {
         --grid-whitespace: var(--global-whitespace-double);
     }
-
-    @include mq(bp4) {
-        --grid-container-width: var(--grid-cell);
-        --grid-cell: calc(var(--global-content-maxWidth) / 2);
-    }
 }
 
 .o-row {
     position: relative;
-    grid-column: 1 / -1;
+    grid-column: start / end;
     display: grid;
-    grid: inherit;
+    grid: var(--grid);
     grid-gap: inherit;
 
     .o-row {
@@ -94,7 +90,12 @@
 }
 
 .o-container {
-    grid-column: startContent/endContent;;
+    grid-column: startContent/endContent;
+    // max-width: calc(var(--grid-container-width) * 2);
+}
+
+.o-container--start-end {    
+    grid-column: start/end;
 }
 
 .o-container--left-right {

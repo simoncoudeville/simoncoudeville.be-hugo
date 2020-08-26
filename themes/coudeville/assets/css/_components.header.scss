@@ -16,7 +16,7 @@
     @include mq(bp5) {
         grid-column: 1 / -1;
         display: grid;
-        grid: inherit;
+        grid: var(--grid);
         grid-gap: inherit;
     }
 }

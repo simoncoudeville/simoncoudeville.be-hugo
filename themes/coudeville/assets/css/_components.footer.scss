@@ -21,15 +21,13 @@
     grid-template-columns: auto 1fr;
 
     @include mq(bp3) {
-        display: grid;
         grid-column-gap: var(--global-whitespace-base);
         grid-template-columns: auto 1fr auto;
     }
 
     @include mq(bp5) {
         grid-column: 1 / -1;
-        display: grid;
-        grid: inherit;
+        grid: var(--grid);
         grid-gap: inherit;
     }
 }

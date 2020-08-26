@@ -24,7 +24,7 @@
 .c-text-xxxl {
   @include ms-xxl;
 
-  @include mq(bp4) {
+  @include mq(bp3) {
     @include ms-xxxl;
   }
 }
