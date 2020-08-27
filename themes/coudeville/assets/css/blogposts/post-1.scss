@@ -72,7 +72,7 @@
 }
 
 .c-cursor-text {    
-    display: inline-flex;
+    // display: inline-flex;
     color: var(--global-color-neutral-100);
     font-family: $code-font-family;
     // @include ms-s;
@@ -81,11 +81,12 @@
         content: "";
         // content: "\007C";
         // content: "▮";
-        display: inline-block;
-        width: 0.65em;
-        height: 1.35em;
+        content: "_";
+        // display: inline-block;
+        // width: 0.65em;
+        // height: 1.35em;
         // background-color: var(--global-color-beta);
-        background-color: currentColor;
+        // background-color: currentColor;
         animation: 1s blink step-end infinite;
     }
 
@@ -103,16 +104,23 @@
 }
 
 .c-terminal {
-    --c-terminal-borderColor: var(--global-color-neutral-500);
+    --c-terminal-borderColor: var(--global-color-neutral-600);
     max-width: var(--global-content-maxWidth);
     margin: 0 auto;
     border: 2px solid var(--c-terminal-borderColor);
     border-radius: var(--global-whitespace-base);
+    // background-color: var(--global-color-neutral-700);
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 6 / 5;
 }
 
 .c-terminal__top {
     // height: var(--global-whitespace-double);
     display: flex;
+    // background-color: var(--global-color-neutral-600);
+    // background-color: var(--c-terminal-borderColor);
     border-bottom: 2px solid var(--c-terminal-borderColor);    
 }
 
@@ -125,15 +133,16 @@
     border-radius: 100%;
     border: 2px solid var(--c-terminal-borderColor);
     margin: var(--c-terminal__buttonMargin);
+    // background-color: var(--global-color-neutral-800);
 
     & + & {
-        margin-left: 0;
+        margin-left: calc(var(--c-terminal__buttonMargin) / -2);
     }
 }
 
 .c-terminal__body {
     padding: var(--global-whitespace-base);
-    min-height: 50vh;
+    // min-height: 50vh;
 
     @include mq(bp3) {
        padding: var(--global-whitespace-double); 
@@ -148,6 +157,12 @@
 }
 
 @media (prefers-color-scheme: dark) {
+
+    .c-terminal-cover {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     .c-post-cover {
         // box-shadow: 0 0 0 1px var(--global-backgroundColor);
         // background-color: rgba(0,0,0,.15);

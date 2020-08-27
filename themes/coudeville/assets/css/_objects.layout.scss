@@ -64,9 +64,13 @@
 }
 
 .o-row--intro {
-    min-height: calc(50vh - calc(var(--global-whitespace-base) * 4));
+    min-height: calc(50vh - calc(var(--global-whitespace-base) * 6));    
     padding-top: var(--global-whitespace-double);
     align-items: end;
+
+    @include mq(bp3) {
+        min-height: calc(50vh - calc(var(--global-whitespace-base) * 5));    
+    }
 }
 
 .o-row--intro-home {
