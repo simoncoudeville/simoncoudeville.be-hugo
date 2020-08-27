@@ -13,9 +13,9 @@
     grid: var(--grid);
     grid-row-gap: var(--global-whitespace-base);
 
-    @include mq(bp3) {
-        --grid-whitespace: var(--global-whitespace-double);
-    }
+    // @include mq(bp3) {
+    //     --grid-whitespace: var(--global-whitespace-double);
+    // }
 }
 
 .o-row {
