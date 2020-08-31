@@ -11,7 +11,7 @@
 
 .c-example__title {
     position: relative;
-    margin-top: calc(var(--global-whitespace-base) * -1);
+    // margin-top: calc(var(--global-whitespace-base) * -1);
 }
 
 .c-example__body {
@@ -44,5 +44,4 @@
     position: relative;
     display: flex;
     justify-content: flex-end;
-    margin-bottom: var(--global-whitespace-base);
 }

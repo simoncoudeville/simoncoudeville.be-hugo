@@ -9,56 +9,23 @@ style: css/blogposts/post-2.scss
 ---
 
 <header class="o-row o-row--intro">
-    <!-- <div class="o-container o-container--left-content"> -->
-        <div class="c-intro js-title">
+    <div class="o-container">
+        <div class="c-intro">
             <h1 class="c-intro__title u-mb-clear">
-                Vertical rhythm on the web.               
+                Vertical rhythm on the web.
             </h1>
             <p class="h1 c-intro__paragraph u-muted">
                 A look at how to achieve a workable baseline grid.
             </p>
-        </div>         
-    <!-- </div> -->
+        </div>
+    </div>    
 </header>
 <div class="o-row o-row--cover" >
-    <!-- <div class="o-container o-container--left-right">
-        <img class="c-cover__img" src="https://www.airstudios.com/wp-content/uploads/2019/09/AIR_SPIRO_-1.png" alt="">
-    </div> -->
-    <div class="o-container">
-        <img class="c-cover__img"
-            src="https://freight.cargo.site/w/900/q/94/i/17319b48fe91fd4476990dc8b33640c9e6f95f3c6fb266fba61c09a3174f02a3/Artboard-1.png"
-            alt="">
-        <!-- <img class="c-cover__img" src="https://d2tcm8odh6x6oa.cloudfront.net/app/uploads/2020/01/04161837/NewsThought_Thumb_StandSTill.jpg" alt=""> -->
-        <!-- <img class="c-cover__img" src="test.png" alt=""> -->
-    </div>
-    <!-- <figure class="c-cover">                               -->
-        
-        <!-- <img class="c-cover__img" src="https://freight.cargo.site/w/900/q/94/i/ef92b287ddf96ac1b0302394c0dcf624379c1d4188738cebdf97894516c7f82b/Artboard-4.png" alt="">  -->
-        <!-- <img class="c-cover__img" src="test.png" alt=""> -->
-        <!-- <img class="c-cover__img" src="https://d2tcm8odh6x6oa.cloudfront.net/app/uploads/2020/01/04161837/NewsThought_Thumb_StandSTill.jpg" alt=""> -->
-        <!-- <img class="c-cover__img" src="cover-test-46.svg" alt=""> -->
-        <!-- <img class="c-cover__img" src="cover-test-47.svg" alt=""> -->
-        <!-- <img class="c-cover__img" src="cover-test-50.svg" alt=""> -->
-        <!-- <svg class="c-cover__img" viewBox="0 0 583 583" xmlns="http://www.w3.org/2000/svg">                
-            <path class="c-cover__path" d="m1.3 1.3v580.3h580.3v-580.3zm2 2h119.8v58.9h-119.8zm0 60.9h119.8v150.2h-119.8zm0 152.2h119.8v59h-119.8zm0 61h239.8l-239.8 209.7zm241.5 1.2v209.8h-239.8zm91.4 301.1h-332.9v-89.3h332.8v89.3zm243.5 0h-241.5v-89.3h241.5zm0-91.4h-332.9v-211h332.8v211zm0-212.9h-454.6v-59h454.6zm0-61h-454.6v-58.9h454.6zm0-60.9h-454.6v-89.3h454.6zm0-91.3h-454.6v-58.9h454.6z"></path>
-        </svg> -->
-        <!-- <img class="c-cover__img" src="cover-test-48.svg" alt=""> -->
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 840">
-            <defs>
-                <style>            
-                    .cls-2 {
-                        fill: var(--c-cover__path-fill-color);
-                    }
-                </style>
-            </defs>
-            <g id="Mask_Group_7" data-name="Mask Group 7" class="cls-1" transform="translate(-156 -402)">
-                <path id="Path_901" data-name="Path 901" class="cls-2"
-                    d="M-4790-2147v-120l120,60v120Zm-480,0-120-60,120-60v120l120-60,120,60-120,60Zm-720,0,240-120,120,60-240,120Zm840-180,120-60,120,60-120,60Zm-600-60v-120l360,180-120,60Zm-240,0-120,60v-120l120,60,120,60-120,60Zm1080-60,120-60,120,60-240,120Zm-480,0,240-120v120l-120,60Zm-240-120,120-60,120,60v120Zm480,0,120-60,120,60-120,60Zm-960,0,240-120v120l-120,60Zm1320-60,120-60v120Zm-120-60,120-60v120Zm-480,0,120-60,120,60-120,60Zm-480,0,120-60,120,60-120,60Zm240-120,120-60,120,60v120Zm480,0,240-120,120,60-240,120Zm-960,0v-120l120,60v120Z"
-                    transform="translate(6266 3329)" />
-            </g>
-        </svg> -->
-        <!-- <img class="c-cover__img" src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/MDA.gif" alt="">             -->
-    </figure>
+    <div class="o-container o-container--left-content">
+        <p>
+            <img class="c-cover__img" src="test.png" alt="">`
+        </p>        
+    </div>    
 </div>
 <div class="o-row">
     <div class="o-container">
@@ -97,7 +64,7 @@ $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace 
         </div>
     </div>
 </div>
-<div class="o-row o-row--alternate">
+<div class="o-row">
     <div class="o-container">
         <div class="c-example">
             <h3 class="c-example__title c-text-caption">Baseline grid example</h3>
@@ -159,7 +126,7 @@ $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace 
     </div>
 </div>
 
-<div class="o-row o-row--alternate">
+<div class="o-row">
     <div class="o-container">
         <div class="c-example">
             <h3 class="c-example__title c-text-caption">Profile card component example</h3>
@@ -222,7 +189,7 @@ $beta-whitespace: baseline($root-baseline-multiplier * 2); // Double whitespace 
     </div>
 </div>
 
-<div class="o-row o-row--alternate">
+<div class="o-row">
     <div class="o-container">
         <div class="c-example">
             <h3 class="c-example__title c-text-caption">2 column feature example</h3>

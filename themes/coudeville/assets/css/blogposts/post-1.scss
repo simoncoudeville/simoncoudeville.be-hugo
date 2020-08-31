@@ -94,34 +94,35 @@
 }
 
 .c-terminal-cover {
-    background-color: var(--global-color-neutral-800);
-    grid-column: start/end;
-    padding: var(--global-whitespace-base);
+    // background-color: var(--global-color-neutral-800);
+    grid-column: left/right;
+    // padding: var(--global-whitespace-base);
 
-    @include mq(bp3) {
-        padding: var(--global-whitespace-double);
-    }
+    // @include mq(bp3) {
+    //     padding: var(--global-whitespace-double);
+    // }
 }
 
 .c-terminal {
     --c-terminal-borderColor: var(--global-color-neutral-600);
-    max-width: var(--global-content-maxWidth);
-    margin: 0 auto;
-    border: 2px solid var(--c-terminal-borderColor);
+    // border: 2px solid var(--c-terminal-borderColor);
     border-radius: var(--global-whitespace-base);
-    // background-color: var(--global-color-neutral-700);
+    background-color: var(--global-color-neutral-800);
     overflow: hidden;
     width: 100%;
     height: auto;
-    aspect-ratio: 6 / 5;
+    // aspect-ratio: 6 / 5;
+    aspect-ratio: 3 / 2;
+    // aspect-ratio: 1 / 1;
+    color: var(--global-color-neutral-100);
 }
 
 .c-terminal__top {
     // height: var(--global-whitespace-double);
     display: flex;
-    // background-color: var(--global-color-neutral-600);
+    // background-color: var(--global-color-neutral-700);
     // background-color: var(--c-terminal-borderColor);
-    border-bottom: 2px solid var(--c-terminal-borderColor);    
+    // border-bottom: 2px solid var(--c-terminal-borderColor);    
 }
 
 .c-terminal__button {
@@ -131,9 +132,9 @@
     height: var(--c-terminal__buttonSize);
     width: var(--c-terminal__buttonSize);
     border-radius: 100%;
-    border: 2px solid var(--c-terminal-borderColor);
-    margin: var(--c-terminal__buttonMargin);
-    // background-color: var(--global-color-neutral-800);
+    // border: 2px solid var(--c-terminal-borderColor);
+    margin: var(--c-terminal__buttonMargin) var(--c-terminal__buttonMargin) 0;
+    background-color: var(--global-color-neutral-600);
 
     & + & {
         margin-left: calc(var(--c-terminal__buttonMargin) / -2);

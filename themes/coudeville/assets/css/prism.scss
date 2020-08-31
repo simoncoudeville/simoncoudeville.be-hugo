@@ -36,6 +36,7 @@ pre[class*="language-"] {
 	word-break: normal;
 	word-wrap: normal;
 	font-size: var(--global-fontSize-s);
+	border-radius: var(--global-whitespace-s);
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -58,8 +59,8 @@ pre[class*="language-"] {
 pre[class*="language-"] {
 	padding: baseline(var(--global-baseline-multiplier));
 	overflow: auto;
-	margin-left: baseline(calc(var(--global-baseline-multiplier) * -1));
-	margin-right: baseline(calc(var(--global-baseline-multiplier) * -1));
+	// margin-left: baseline(calc(var(--global-baseline-multiplier) * -1));
+	// margin-right: baseline(calc(var(--global-baseline-multiplier) * -1));
 }
 
 // @media (prefers-color-scheme: dark) {
