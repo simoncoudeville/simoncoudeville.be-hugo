@@ -24,7 +24,7 @@
     &:after {
         content: "";
         display: block;
-        background-color: var(--toggle__switch-backgroundColor, var(--global-surfaceColor));
+        background-color: var(--toggle__switch-backgroundColor, var(--global-backgroundColor));
         border: 1px solid var(--toggle__switch-borderColor, var(--global-border-color-hard));
         border-radius: 100%;
         width: 20px;

@@ -13,7 +13,7 @@
 // components
 @import '../components.example';
 @import '../components.baseline';
-@import '../components.toggle';
+@import '../components.toggle-4';
 
 // Example: Baseline grid
 
@@ -237,7 +237,7 @@
     width: var(--global-whitespace-base);
     height: var(--global-whitespace-base);
     // border: 1px solid var(--global-border-color-hard);
-    background-color: var(--global-surfaceColor-2);
+    background-color: var(--global-surfaceColor);
     border-radius: var(--global-whitespace-base);
     margin-left: var(--global-whitespace-xs);
     display: flex;

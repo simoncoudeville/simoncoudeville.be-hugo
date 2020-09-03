@@ -13,9 +13,9 @@
     grid: var(--grid);
     grid-row-gap: var(--global-whitespace-base);
 
-    @include mq(bp3) {
-        --grid-whitespace: var(--global-whitespace-double);
-    }
+    // @include mq(bp3) {
+    //     --grid-whitespace: var(--global-whitespace-double);
+    // }
 }
 
 .o-row {
@@ -58,9 +58,9 @@
     padding-top: var(--global-whitespace-base);
     // margin-bottom: var(--global-whitespace-base);    
     
-    @include mq(bp3) {
-        padding-top: var(--global-whitespace-double);
-    }
+    // @include mq(bp3) {
+    //     padding-top: var(--global-whitespace-double);
+    // }
 }
 
 .o-row--main {
@@ -68,12 +68,12 @@
 }
 
 .o-row--intro {
-    min-height: calc(50vh - calc(var(--global-whitespace-base) * 6));    
+    min-height: calc(50vh - calc(var(--global-whitespace-base) * 4));    
     padding-top: var(--global-whitespace-double);
     align-items: end;
 
     @include mq(bp3) {
-        min-height: calc(50vh - calc(var(--global-whitespace-base) * 5));    
+        min-height: calc(50vh - calc(var(--global-whitespace-base) * 3));    
     }
 }
 
