@@ -5,7 +5,7 @@
 */
 
 .c-header {
-    grid-column: startContent/endContent;
+    grid-column: left/endContent;
 
     @include mq(bp3) {
         display: grid;
@@ -34,7 +34,7 @@
     // font-family: $alpha-font-family;
     // font-weight: $alpha-font-weight;
     color: var(--header__meta-color, var(--global-meta-color));   
-    margin-bottom: 0;   
+    // margin-bottom: 0;   
     grid-column: 2;
 
     @include mq(bp5) {

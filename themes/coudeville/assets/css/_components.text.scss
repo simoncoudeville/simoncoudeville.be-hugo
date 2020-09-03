@@ -34,7 +34,15 @@
 }
 
 .c-text-xl {
-  @include ms-xl;
+  @include ms-m;
+
+  @include mq(bp2) {
+      @include ms-l;
+  }
+
+  @include mq(bp3) {
+      @include ms-xl;
+  }
 }
 
 .c-text-l {

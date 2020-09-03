@@ -1,0 +1,21 @@
+<main class="o-row o-row--main">
+    <div class="o-container">
+        <h3>Latest Articles</h3>
+        <ul class="c-list">
+            {{ range (where .Site.RegularPages "Section" "blog") }}
+            <li class="c-list__item">
+                <span class="c-list__meta">{{ .Date.Format "2 January 2006" }}</span>
+                <h3 class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></h3>
+            </li>
+            {{ end }}
+            <!-- <li class="c-list__item">
+                <p class="c-list__title">
+                    <a href="blog" class="c-list__link">view all</a>
+                </p>
+            </li> -->
+        </ul>
+        <p class="u-muted">
+            More soon&hellip;
+        </p>
+    </div>
+</main>

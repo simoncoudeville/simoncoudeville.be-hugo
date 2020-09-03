@@ -10,38 +10,16 @@
         </p>
     </div>
 </header>
-<header class="o-row o-row--intro">
+<header class="o-row">
     <div class="o-container o-container--left-content">
         <div class="c-intro">
-            <h1 class="c-intro__title c-text-xxxl">
-                Hi, I’m Simon. I’m a digital product designer that likes working with code.
-            </h1>
-            <p class="h1 u-muted c-intro__paragraph c-text-xxxl">
-                Why and how I finally made this place
-            </p>
+            <p class=" c-text-xl c-intro__title">
+                I'm a user interface designer from Bruges, Belgium. I specialize in responsive web-design, HTML & CSS, typography and animation. I teach UX, UI and frontend development at <a href="https://mct.be">MCT</a> at Howest University.
+                Some of my design work is on <a href="https://dribbble.com/coudeville">Dribbble</a>. Some of my code experiments are on <a href="https://codepen.io/simoncoudeville/">Codepen</a>. You can send me an <a href="mailto:coudeville.simon@gmail.com">email</a> or follow me
+                on <a href="https://twitter.com/simoncoudeville">Twitter</a>.
+            </p>            
         </div>
     </div>    
 </header>
-<main class="o-row o-row--main">    
-    <div class="o-container">    
-        <h3>Latest Articles</h3>
-        <ul class="c-list">
-            {{ range (where .Site.RegularPages "Section" "blog") }}
-                <li class="c-list__item">
-                    <span class="c-list__meta">{{ .Date.Format "2 January 2006" }}</span>
-                    <h3 class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></h3>
-                </li>
-            {{ end }}                
-            <!-- <li class="c-list__item">
-                <p class="c-list__title">
-                    <a href="blog" class="c-list__link">view all</a>
-                </p>
-            </li> -->
-        </ul>
-        <p class="u-muted">
-            More soon&hellip;
-        </p>
-    </div>
-</main>
 {{ partial "footer.html" . }}
 {{ end }}

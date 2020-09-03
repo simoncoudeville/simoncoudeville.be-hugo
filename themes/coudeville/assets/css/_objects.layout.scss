@@ -12,9 +12,11 @@
     display: grid;    
     grid: var(--grid);
     grid-row-gap: var(--global-whitespace-base);
+    align-content: space-between;
 
     // @include mq(bp3) {
     //     --grid-whitespace: var(--global-whitespace-double);
+    //     // padding: var(--global-whitespace-base);
     // }
 }
 
@@ -69,7 +71,7 @@
 
 .o-row--intro {
     min-height: calc(50vh - calc(var(--global-whitespace-base) * 4));    
-    padding-top: var(--global-whitespace-double);
+    // padding-top: var(--global-whitespace-double);
     align-items: end;
 
     @include mq(bp3) {
