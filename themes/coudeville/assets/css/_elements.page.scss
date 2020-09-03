@@ -35,7 +35,7 @@
     --global-color-neutral-400: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 75%);
     --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 47.5%);
     --global-color-neutral-600: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 30%);
-    --global-color-neutral-700: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 20%);
+    --global-color-neutral-700: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 22.5%);
     --global-color-neutral-800: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 15%);
     --global-color-neutral-900: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 10%);
 
@@ -94,6 +94,11 @@
         --global-root-fontSize: #{$root-font-size/16px*100%};
         --global-baseline: #{6px / $root-font-size}rem;
     }
+    
+    // @include mq(bp7) {
+    //     --global-root-fontSize: #{21px/16px*100%};
+    //     --global-baseline: #{7px/21px*1rem};
+    // }
 }
 
 @media (prefers-color-scheme: dark) {

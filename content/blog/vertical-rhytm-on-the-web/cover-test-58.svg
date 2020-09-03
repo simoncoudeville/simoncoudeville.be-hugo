@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720">
+  <g id="Cover" transform="translate(-156 -462)">
+    <rect id="Rectangle_365" data-name="Rectangle 365" width="1440" height="720" transform="translate(156 462)" fill="#fff"/>
+    <g id="colors">
+      <rect id="Rectangle_371" data-name="Rectangle 371" width="360" height="360" transform="translate(876 822)" fill="#5555f6"/>
+      <rect id="Rectangle_394" data-name="Rectangle 394" width="360" height="360" transform="translate(876 462)" fill="salmon"/>
+      <rect id="Rectangle_398" data-name="Rectangle 398" width="360" height="360" transform="translate(1236 462)" fill="#5555f6"/>
+      <rect id="Rectangle_399" data-name="Rectangle 399" width="360" height="360" transform="translate(1236 822)" fill="#40e0d0"/>
+      <rect id="Rectangle_396" data-name="Rectangle 396" width="360" height="360" transform="translate(516 822)" fill="salmon"/>
+      <rect id="Rectangle_397" data-name="Rectangle 397" width="360" height="360" transform="translate(156 822)" fill="#40e0d0"/>
+      <rect id="Rectangle_395" data-name="Rectangle 395" width="360" height="360" transform="translate(516 462)" fill="#40e0d0"/>
+      <rect id="Rectangle_402" data-name="Rectangle 402" width="360" height="360" transform="translate(156 462)" fill="#5555f6"/>
+    </g>
+    <g id="foreground">
+      <path id="Intersection_11" data-name="Intersection 11" d="M180,360a181.319,181.319,0,0,0-3.657-36.276,179.027,179.027,0,0,0-10.488-33.788,179.927,179.927,0,0,0-16.6-30.575,181.3,181.3,0,0,0-21.979-26.64,181.357,181.357,0,0,0-26.64-21.98,179.927,179.927,0,0,0-30.575-16.595,179.06,179.06,0,0,0-33.788-10.488A181.341,181.341,0,0,0,0,180V0A362.7,362.7,0,0,1,72.553,7.314a358.2,358.2,0,0,1,67.576,20.977,360.247,360.247,0,0,1,61.15,33.191,362.477,362.477,0,0,1,53.28,43.961,362.551,362.551,0,0,1,43.958,53.278,360.214,360.214,0,0,1,33.193,61.152,358.23,358.23,0,0,1,20.976,67.575A362.71,362.71,0,0,1,360,360Z" transform="translate(516 462)" fill="#19191a"/>
+      <path id="Path_1101" data-name="Path 1101" d="M180,360,0,0H180Z" transform="translate(516 1002) rotate(90)" fill="#19191a"/>
+      <path id="arrow" d="M0,360V0L180,180Z" transform="translate(1596 822) rotate(90)" fill="#19191a"/>
+      <path id="arrow-2" data-name="arrow" d="M0,360V0L180,180Z" transform="translate(1596 1002) rotate(90)" fill="#19191a"/>
+      <circle id="Ellipse_259" data-name="Ellipse 259" cx="90" cy="90" r="90" transform="translate(966 912)" fill="#19191a"/>
+      <g id="Group_96" data-name="Group 96" transform="translate(360)">
+        <rect id="Rectangle_390" data-name="Rectangle 390" width="360" height="60" transform="translate(876 462)" fill="#19191a"/>
+        <rect id="Rectangle_391" data-name="Rectangle 391" width="360" height="60" transform="translate(876 582)" fill="#19191a"/>
+        <rect id="Rectangle_392" data-name="Rectangle 392" width="360" height="60" transform="translate(876 702)" fill="#19191a"/>
+      </g>
+      <g id="Group_95" data-name="Group 95" transform="translate(516 822)">
+        <rect id="Rectangle_372" data-name="Rectangle 372" width="180" height="180" fill="#19191a"/>
+        <rect id="Rectangle_373" data-name="Rectangle 373" width="180" height="180" transform="translate(180 180)" fill="#19191a"/>
+      </g>
+      <rect id="Rectangle_393" data-name="Rectangle 393" width="360" height="180" transform="translate(876 642)" fill="#19191a"/>
+      <rect id="Rectangle_406" data-name="Rectangle 406" width="360" height="180" transform="translate(156 642)" fill="#19191a"/>
+      <g id="Ellipse_263" data-name="Ellipse 263" transform="translate(156 462)" fill="#19191a" stroke="#707070" stroke-width="1">
+        <circle cx="90" cy="90" r="90" stroke="none"/>
+        <circle cx="90" cy="90" r="89.5" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>
