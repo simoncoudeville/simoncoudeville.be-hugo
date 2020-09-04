@@ -1,0 +1,27 @@
+/*
+    Utilities: Shame
+    ---
+    Hacks and quick fixes
+*/
+
+// div:empty {
+//    display: none;
+// }
+
+.hr-small {
+    height: 0;
+    margin: var(--global-whitespace-base) 0;
+}
+
+.u-ff-alpha {
+    font-family: $alpha-font-family;
+}
+
+.u-ff-beta {
+    font-family: $beta-font-family;
+}
+
+.u-ff-code {
+    font-family: $code-font-family;
+}
+

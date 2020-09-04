@@ -1,0 +1,24 @@
+//
+// Example: Baseline grid
+// ---
+// This file will be inlined
+//
+
+// Tools
+@import '../tools.mixins';
+@import '../tools.functions';
+
+// Settings
+@import '../settings.colors';
+@import '../settings.global';
+
+.e-columns {
+    column-width: calc((var(--global-content-maxWidth) / 2) - #{var(--global-whitespace-base)});
+    column-gap: var(--global-whitespace-base);
+    margin-bottom: calc(var(--global-whitespace-base) * -1);
+}
+
+.e-baseline-title {
+    font-size: pxtorem(50px);
+    line-height: calc(calc(var(--global-baseline-multiplier) * 2) * var(--global-baseline));
+}

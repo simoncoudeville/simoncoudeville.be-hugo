@@ -1,8 +1,16 @@
 {{ define "main" }}
-<p class="c-type-intro u-max-width-sm">
-    I'm a designer from Belgium with over 10 years industry experience. I specialize in responsive web-design, HTML &amp; CSS, typography and animation.
-    I teach UX and UI design at <a href="http://mct.be"title="mct.be">MCT</a> Howest in Kortrijk.
-    In my spare time I designed and build the websites for <a href="http://nerdlab.be">Nerdlab</a> and <a href="http://mrhannes.be">Mr. Hannes</a>.
-    Some of my other work is on <a href="https://dribbble.com/coudeville">Dribbble</a>. Some of my code expermiments are on <a href="https://codepen.io/simoncoudeville/">Codepen</a>. You can send me an <a href="mailto:coudeville.simon@gmail.com">email</a> or follow me on <a href="https://twitter.com/simoncoudeville">Twitter</a>.
-</p>
+<header id="header" class="o-row o-row--header">
+    <div class="c-header">
+        <h1 class="c-header__logo c-logo">
+            Simon Coudeville
+        </h1>
+        <p class="c-header__meta">
+            Designer & Teacher
+        </p>
+    </div>
+</header>
+
+{{ .Content }}
+
+{{ partial "footer.html" . }}
 {{ end }}

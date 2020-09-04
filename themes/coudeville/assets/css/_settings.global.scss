@@ -1,0 +1,48 @@
+//
+//  Settings: Chopstick settings
+//  ---
+//  Your default settings
+//
+
+// ---
+// Typography
+// ---
+
+$root-font-size-sm: 17px; // for mobile
+$root-font-size: 19px; // for larger screens
+
+// Basic font settings
+
+$alpha-font-family          : "Suisse Intl Web", sans-serif;
+$beta-font-family           : "Suisse Works Web", serif;
+$code-font-family           : "Suisse Intl Web Mono", monospace;
+
+$alpha-font-weight          : 400;
+$beta-font-weight           : 400;
+
+// layout
+
+$content-max-width: 36rem;
+
+// ---
+// Breakpoints
+// ---
+
+$breakpoints: (
+    bp1                     : 320/16*1rem,
+    bp2                     : 420/16*1rem,
+    bp3                     : 640/16*1rem,
+    bp4                     : 1020/16*1rem,
+    bp5                     : 1200/16*1rem,
+    bp6                     : 1440/16*1rem
+) !default;
+
+// ---
+// Animations
+// ---
+
+$animation-duration-alpha   : .1s;
+$animation-duration-beta    : .15s;
+$animation-duration-gamma   : .2s;
+$animation-easing-out       : cubic-bezier(0.390, 0.575, 0.565, 1.000);
+$animation-easing-in        : cubic-bezier(0.470, 0.000, 0.745, 0.715);

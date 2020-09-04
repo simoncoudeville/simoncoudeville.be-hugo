@@ -1,0 +1,44 @@
+//
+// Example: Dropcap
+// ---
+// This file will be inlined
+//
+
+// Tools
+@import '../tools.mixins';
+@import '../tools.functions';
+
+// Settings
+@import '../settings.colors';
+@import '../settings.global';
+
+.e-dropcap {
+    margin-bottom: 0;
+}
+
+.e-dropcap__first-letter {
+    float: left;
+    display: block;
+    font-weight: $gamma-font-weight;
+    color: var(--global-heading-color);
+    margin: baseline(2) baseline(2) 0 baseline(-1.2);
+    @include font-height(100px, calc(var(--global-baseline-multiplier) * 3));
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+    }
+
+    &::before {
+        margin-top: baseline(-2);
+    }
+
+    &::after {
+        margin-bottom: baseline(-1);
+    }
+}
+
+.e-dropcap__first-word {
+    display: none;
+}

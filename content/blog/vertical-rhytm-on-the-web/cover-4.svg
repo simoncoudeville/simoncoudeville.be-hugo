@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="665" height="501" viewBox="0 0 665 501">
+  <defs>
+    <clipPath id="clip-cover-4">
+      <rect width="665" height="501"/>
+    </clipPath>
+  </defs>
+  <g id="cover-4" clip-path="url(#clip-cover-4)">
+    <rect width="665" height="501" fill="#19191a"/>
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="665" height="1" transform="translate(0 0)" fill="#727178"/>
+    <rect id="Rectangle_1-2" data-name="Rectangle 1" width="665" height="1" transform="matrix(1, -0.017, 0.017, 1, 0.042, 30.803)" fill="#727178"/>
+    <rect id="Rectangle_1-3" data-name="Rectangle 1" width="665" height="1" transform="matrix(0.999, -0.035, 0.035, 0.999, 0.185, 61.604)" fill="#727178"/>
+    <rect id="Rectangle_1-4" data-name="Rectangle 1" width="665" height="1" transform="matrix(1, -0.017, 0.017, 1, 0.042, 80.803)" fill="#727178"/>
+    <rect id="Rectangle_1-5" data-name="Rectangle 1" width="665" height="1" transform="translate(0 100)" fill="#727178"/>
+    <rect id="Rectangle_1-6" data-name="Rectangle 1" width="665" height="1" transform="matrix(1, 0.017, -0.017, 1, 0.059, 119.197)" fill="#727178"/>
+    <rect id="Rectangle_1-7" data-name="Rectangle 1" width="665" height="1" transform="matrix(0.999, 0.035, -0.035, 0.999, 0.22, 138.396)" fill="#727178"/>
+    <rect id="Rectangle_1-8" data-name="Rectangle 1" width="665" height="1" transform="matrix(1, 0.017, -0.017, 1, 0.059, 169.197)" fill="#727178"/>
+    <rect id="Rectangle_1-9" data-name="Rectangle 1" width="665" height="1" transform="translate(0 200)" fill="#727178"/>
+    <rect id="Rectangle_1-10" data-name="Rectangle 1" width="665" height="1" transform="matrix(1, -0.017, 0.017, 1, 0.042, 230.803)" fill="#727178"/>
+    <rect id="Rectangle_1-11" data-name="Rectangle 1" width="665" height="1" transform="matrix(0.999, -0.035, 0.035, 0.999, 0.185, 261.604)" fill="#727178"/>
+    <rect id="Rectangle_1-12" data-name="Rectangle 1" width="665" height="1" transform="matrix(1, -0.017, 0.017, 1, 0.042, 280.803)" fill="#727178"/>
+    <rect id="Rectangle_1-13" data-name="Rectangle 1" width="665" height="1" transform="translate(0 300)" fill="#727178"/>
+    <rect id="Rectangle_1-14" data-name="Rectangle 1" width="665" height="1" transform="matrix(1, 0.017, -0.017, 1, 0.059, 319.197)" fill="#727178"/>
+    <rect id="Rectangle_1-15" data-name="Rectangle 1" width="665" height="1" transform="matrix(0.999, 0.035, -0.035, 0.999, 0.22, 338.396)" fill="#727178"/>
+    <rect id="Rectangle_1-16" data-name="Rectangle 1" width="665" height="1" transform="matrix(1, 0.017, -0.017, 1, 0.059, 369.197)" fill="#727178"/>
+    <rect id="Rectangle_1-17" data-name="Rectangle 1" width="665" height="1" transform="translate(0 400)" fill="#727178"/>
+    <rect id="Rectangle_1-18" data-name="Rectangle 1" width="665" height="1" transform="matrix(1, -0.017, 0.017, 1, 0.042, 430.803)" fill="#727178"/>
+    <rect id="Rectangle_1-19" data-name="Rectangle 1" width="665" height="1" transform="matrix(0.999, -0.035, 0.035, 0.999, 0.185, 461.604)" fill="#727178"/>
+    <rect id="Rectangle_1-20" data-name="Rectangle 1" width="665" height="1" transform="matrix(1, -0.017, 0.017, 1, 0.042, 480.803)" fill="#727178"/>
+    <rect id="Rectangle_1-21" data-name="Rectangle 1" width="665" height="1" transform="translate(0 500)" fill="#727178"/>
+  </g>
+</svg>

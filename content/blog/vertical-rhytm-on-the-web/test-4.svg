@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1368" height="684" viewBox="0 0 1368 684">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2, .cls-4 {
+        isolation: isolate;
+      }
+
+      .cls-3, .cls-5 {
+        fill: salmon;
+      }
+
+      .cls-3 {
+        opacity: 0.102;
+      }
+
+      .cls-4 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-5 {
+        opacity: 0.103;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect class="cls-1" width="1368" height="570"/>
+    </clipPath>
+  </defs>
+  <g id="Cover" class="cls-2" transform="translate(-156 -462)">
+    <rect id="Cover-2" data-name="Cover" class="cls-3" width="1368" height="684" transform="translate(156 462)"/>
+    <g id="Repeat_Grid_5" data-name="Repeat Grid 5" class="cls-4" transform="translate(156 576)">
+      <g transform="translate(-156 -498)">
+        <rect id="Rectangle_11" data-name="Rectangle 11" class="cls-5" width="1368" height="570" transform="translate(156 498)"/>
+      </g>
+      <g transform="translate(-156 -384)">
+        <rect id="Rectangle_11-2" data-name="Rectangle 11" class="cls-5" width="1368" height="570" transform="translate(156 498)"/>
+      </g>
+      <g transform="translate(-156 -270)">
+        <rect id="Rectangle_11-3" data-name="Rectangle 11" class="cls-5" width="1368" height="570" transform="translate(156 498)"/>
+      </g>
+      <g transform="translate(-156 -156)">
+        <rect id="Rectangle_11-4" data-name="Rectangle 11" class="cls-5" width="1368" height="570" transform="translate(156 498)"/>
+      </g>
+      <g transform="translate(-156 -42)">
+        <rect id="Rectangle_11-5" data-name="Rectangle 11" class="cls-5" width="1368" height="570" transform="translate(156 498)"/>
+      </g>
+    </g>
+  </g>
+</svg>

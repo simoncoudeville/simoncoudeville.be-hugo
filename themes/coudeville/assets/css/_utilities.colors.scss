@@ -1,0 +1,33 @@
+/*
+    Utilities: Colors
+    ---
+    Color utility classes.
+*/
+
+.u-muted {
+    color: var(--global-meta-color);
+}
+
+.u-color-alpha {
+    color: var(--global-color-alpha);
+}
+
+.u-bgcolor-alpha {
+    background-color: var(--global-color-alpha);
+}
+
+.u-color-beta {
+    color: var(--global-color-beta);
+}
+
+.u-bgcolor-beta {
+    background-color: var(--global-color-beta);
+}
+
+.u-color-gamma {
+    color: var(--global-color-gamma);
+}
+
+.u-bgcolor-gamma {
+    background-color: var(--global-color-gamma);
+}

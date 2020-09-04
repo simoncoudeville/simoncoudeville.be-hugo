@@ -1,0 +1,56 @@
+/*
+    Components: Brand
+    ---
+    Brand image/logo
+*/
+
+.c-logo {
+    // font-weight: $beta-font-weight;
+    // font-weight: $alpha-font-weight;
+    font-family: $alpha-font-family;
+    color: var(--logo-color, var(--global-heading-color));
+    @include ms-base;
+}
+
+.c-logo__link {
+    // text-decoration: none;
+    // text-decoration-color: var(--global-backgroundColor);
+    
+    // &,
+    // &:visited {
+    //     color: var(--global-backgroundColor);
+    // }    
+
+    // &:hover,
+    // &:focus,
+    // &:active {
+    //     // text-decoration: underline;
+    //     // text-decoration-color: var(--global-link-color-hover);
+    // }
+    
+    &::before {
+        // content:'←';
+        position: relative;
+        display: inline-block;
+        // width: var(--global-whitespace-base);
+        // line-height: var(--global-whitespace-m);
+        // text-align: right;
+        // margin-left: calc(var(--global-whitespace-base) * -1);
+        margin-right: var(--global-whitespace-s);
+        // opacity: 0;
+        // transform: translateX(calc(var(--global-whitespace-xxs) * -1));
+        top: -1px;
+        // transform: translateX(calc(var(--global-whitespace-s) * -1));
+        transition: all $animation-duration-alpha $animation-easing-in;
+        color: var(--global-heading-color);
+    }
+    
+    // &:hover {
+    //     &::before {
+    //         opacity: 1;
+    //         transform: translateX(calc(var(--global-whitespace-xs) * -1));
+    //         transition-timing-function: $animation-easing-out;
+    //     }
+    // }
+}
+

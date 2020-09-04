@@ -1,0 +1,180 @@
+//
+// Example: Baseline grid
+// ---
+// This file will be inlined
+//
+
+// Tools
+@import '../tools.mixins';
+@import '../tools.functions';
+@import '../tools.themes';
+@import '../tools.ms';
+
+// Settings
+@import '../settings.colors';
+@import '../settings.global';
+
+.theme-light {
+    @include theme-light;
+}
+
+.theme-dark {
+    @include theme-dark;
+}
+
+.c-theme-button {
+    display: none;
+    // background-color: var(--global-text-color);
+    // color: var(--global-backgroundColor);
+    font-size: var(--global-fontSize-s);
+    font-family: $alpha-font-family;
+    font-weight: $beta-font-weight;
+    line-height: var(--global-whitespace-base);
+    // padding: var(--global-whitespace-xs) var(--global-whitespace-s) var(--global-whitespace-xs) var(--global-whitespace-m);
+    // border-radius: var(--global-whitespace-base);
+    outline: none;
+}
+
+.c-theme-button:focus {
+    box-shadow: var(--theme-button-focus-shadow, 0 0 0 2px var(--global-backgroundColor), 0 0 0 4px var(--global-text-color));
+}
+
+.c-theme-button:active {
+    box-shadow: none;
+}
+
+.c-theme-button.is-enabled {
+    display: flex;
+    align-items: center;
+}
+
+.c-theme-button__icon {
+    fill: currentColor;
+    width: var(--global-whitespace-m);
+    height: var(--global-whitespace-m);
+    // margin-left: var(--global-whitespace-s);
+    margin-right: var(--global-whitespace-s);
+}
+
+.c-post-cover {
+    background-color: var(--global-color-neutral-800);        
+    height: 0;
+    padding-bottom: 50%;
+    overflow: hidden;    
+}
+
+.c-post-cover__body {
+    padding: var(--global-whitespace-base);
+
+    @include mq(bp3) {
+        padding: var(--global-whitespace-double);
+    }
+}
+
+.c-cursor-text {    
+    // display: inline-flex;
+    color: var(--global-color-neutral-100);
+    font-family: $code-font-family;
+    // @include ms-s;
+
+    &:after {
+        content: "";
+        // content: "\007C";
+        // content: "▮";
+        content: "_";
+        // display: inline-block;
+        // width: 0.65em;
+        // height: 1.35em;
+        // background-color: var(--global-color-beta);
+        // background-color: currentColor;
+        animation: 1s blink step-end infinite;
+    }
+
+    
+}
+
+.c-terminal-cover {
+    // background-color: var(--global-color-neutral-800);
+    grid-column: left/right;
+    // padding: var(--global-whitespace-base);
+
+    // @include mq(bp3) {
+    //     padding: var(--global-whitespace-double);
+    // }
+}
+
+.c-terminal {
+    --c-terminal-borderColor: var(--global-color-neutral-600);
+    // border: 2px solid var(--c-terminal-borderColor);
+    border-radius: var(--global-whitespace-base);
+    background-color: var(--global-color-neutral-800);
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    // aspect-ratio: 6 / 5;
+    aspect-ratio: 3 / 2;
+    // aspect-ratio: 1 / 1;
+    color: var(--global-color-neutral-100);
+}
+
+.c-terminal__top {
+    // height: var(--global-whitespace-double);
+    display: flex;
+    // background-color: var(--global-color-neutral-700);
+    // background-color: var(--c-terminal-borderColor);
+    // border-bottom: 2px solid var(--c-terminal-borderColor);    
+}
+
+.c-terminal__button {
+    --c-terminal__buttonSize: var(--global-whitespace-s);
+    --c-terminal__buttonMargin: calc(calc(var(--global-whitespace-double) - var(--c-terminal__buttonSize)) / 2);
+    display: inline-block;
+    height: var(--c-terminal__buttonSize);
+    width: var(--c-terminal__buttonSize);
+    border-radius: 100%;
+    // border: 2px solid var(--c-terminal-borderColor);
+    margin: var(--c-terminal__buttonMargin) var(--c-terminal__buttonMargin) 0;
+    background-color: var(--global-color-neutral-600);
+
+    & + & {
+        margin-left: calc(var(--c-terminal__buttonMargin) / -2);
+    }
+}
+
+.c-terminal__body {
+    padding: var(--global-whitespace-base);
+    // min-height: 50vh;
+
+    @include mq(bp3) {
+       padding: var(--global-whitespace-double); 
+    }
+}
+
+.theme-dark {
+    .c-post-cover {
+        // box-shadow: 0 0 0 1px var(--global-backgroundColor);
+        // background-color: rgba(0,0,0,.15);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .c-terminal-cover {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .c-post-cover {
+        // box-shadow: 0 0 0 1px var(--global-backgroundColor);
+        // background-color: rgba(0,0,0,.15);
+    }
+}
+
+@keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

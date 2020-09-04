@@ -1,0 +1,34 @@
+//
+//  Tools: Mixins
+//  ---
+//  Global mixins
+//
+
+//
+// Media Query mixin
+// @include mq(#point, #query1, #query2);
+//
+
+@mixin mq($breakpoint, $query1: min, $query2: width) {
+    $query: map-get($breakpoints, $breakpoint);
+
+    @if $query != null {
+        @media (#{$query1}-#{$query2}: #{$query}) {
+            @content;
+        }
+    } @else {
+        @media (#{$query1}-#{$query2}: $breakpoint) {
+            @content;
+        }
+    }
+}
+
+// return css color variable with different opacity value
+@function alpha($color, $opacity){
+  $color: str-replace($color, 'var(');
+  $color: str-replace($color, ')');
+  $color-h: var(#{$color+'-h'});
+  $color-s: var(#{$color+'-s'});
+  $color-l: var(#{$color+'-l'});
+  @return hsla($color-h, $color-s, $color-l, $opacity);
+}
