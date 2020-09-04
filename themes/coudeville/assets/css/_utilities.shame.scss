@@ -25,3 +25,14 @@
     font-family: $code-font-family;
 }
 
+.c-social-links {
+    @include mq(bp3) {
+        display: flex;
+        gap: var(--global-whitespace-base);
+    }
+
+    @include mq(bp5) { 
+        display: block;
+    }
+}
+
