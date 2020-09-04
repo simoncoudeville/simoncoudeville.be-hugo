@@ -1,0 +1,21 @@
+/*
+    Utilities: Opentype features
+    ---
+    Opentype features utility classes.
+*/
+
+.u-no-curvy-l {
+    font-feature-settings: "zero", "liga" !important;
+}
+
+.u-curvy-l {
+    font-feature-settings: "zero", "liga", "ss02" !important;
+}
+
+.u-no-slashed-zero {
+    font-feature-settings: "liga", "ss02" !important;
+}
+
+.u-slashed-zero {
+    font-feature-settings: "zero", "liga", "ss02" !important;
+}

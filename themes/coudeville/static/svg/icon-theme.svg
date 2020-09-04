@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-icon-theme">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="icon-theme" clip-path="url(#clip-icon-theme)">
+    <path id="circle" d="M12,24h0A12,12,0,0,1,3.515,3.515,12,12,0,0,1,20.486,20.486,11.925,11.925,0,0,1,12,24Zm0-2A10,10,0,1,0,12,2V22Z" transform="translate(0 0)"/>
+  </g>
+</svg>

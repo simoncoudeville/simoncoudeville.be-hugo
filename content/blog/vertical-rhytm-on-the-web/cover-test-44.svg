@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="840" viewBox="0 0 1440 840">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-2 {
+        fill: #19191c;
+      }
+    </style>
+    <clipPath id="clip-path"/>
+  </defs>
+  <g id="Mask_Group_7" data-name="Mask Group 7" class="cls-1" transform="translate(-156 -402)">
+    <path id="Path_901" data-name="Path 901" class="cls-2" d="M-4790-2147v-120l120,60v120Zm-480,0-120-60,120-60v120l120-60,120,60-120,60Zm-720,0,240-120,120,60-240,120Zm840-180,120-60,120,60-120,60Zm-600-60v-120l360,180-120,60Zm-240,0-120,60v-120l120,60,120,60-120,60Zm1080-60,120-60,120,60-240,120Zm-480,0,240-120v120l-120,60Zm-240-120,120-60,120,60v120Zm480,0,120-60,120,60-120,60Zm-960,0,240-120v120l-120,60Zm1320-60,120-60v120Zm-120-60,120-60v120Zm-480,0,120-60,120,60-120,60Zm-480,0,120-60,120,60-120,60Zm240-120,120-60,120,60v120Zm480,0,240-120,120,60-240,120Zm-960,0v-120l120,60v120Z" transform="translate(6266 3329)"/>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+/*
+    Components: Baseline
+    ---
+    Baseline grid overlay
+*/
+
+.has-baseline {
+    --baseline-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .50);
+    --baseline-background: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .25);
+
+    .c-baseline-overlay {
+        display: block;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+        background-color: var(--baseline-background);
+    }
+}
+
+.c-baseline-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    pointer-events: none;
+
+    &::before {
+        content: '';
+        display: block;
+        height: 1px;
+        position: absolute;
+        top: -1px;
+        right: 0;
+        left: 0;
+        background-color: var(--baseline-color);
+    }
+}
+
+.c-baseline-overlay--unit {
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent calc(var(--global-baseline) - 1px),
+        var(--baseline-color) calc(var(--global-baseline) - 1px),
+        var(--baseline-color) var(--global-baseline)
+    );
+
+    background-size: 100% var(--global-baseline);
+}

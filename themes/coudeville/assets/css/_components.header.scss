@@ -1,0 +1,44 @@
+/*
+    Components: Header
+    ---
+    Header section of a post
+*/
+
+.c-header {
+    grid-column: left/endContent;
+
+    @include mq(bp3) {
+        display: grid;
+        grid-gap: var(--global-whitespace-base);
+        grid-template-columns: auto 1fr;
+    }
+
+    @include mq(bp5) {
+        grid-column: 1 / -1;
+        display: grid;
+        grid: var(--grid);
+        grid-gap: inherit;
+    }
+}
+
+.c-header__logo {
+    margin-bottom: 0;
+    grid-row: 1;
+
+    @include mq(bp5) {
+        grid-column: left;
+    }
+}
+
+.c-header__meta {
+    // font-family: $alpha-font-family;
+    // font-weight: $alpha-font-weight;
+    color: var(--header__meta-color, var(--global-meta-color));   
+    // margin-bottom: 0;   
+    grid-column: 2;
+    // @include ms-s;
+
+    @include mq(bp5) {
+        grid-column: startContent/endContent;        
+    }
+}

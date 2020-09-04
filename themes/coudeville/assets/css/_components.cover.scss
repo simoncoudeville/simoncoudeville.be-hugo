@@ -1,0 +1,38 @@
+/*
+    Components: Cover
+    ---
+    Cover section of a post
+*/
+
+.c-cover {
+    // --c-cover-background-color: var(--global-color-neutral-800);
+    // --c-cover-background-color: yellow;
+    // --c-cover__path-fill-color:var(--global-color-neutral-800);
+    --c-cover__path-fill-color: var(--global-text-color);
+    // --c-cover__path-fill-color: yellow;
+    // --c-cover__path-fill-color: var(--global-color-beta);
+    grid-column: start / end;
+    // display: grid;
+    // grid: inherit;
+    // background-color: var(--c-cover-background-color);
+    // padding: var(--global-whitespace-double) 0;
+}
+
+.c-cover__img {
+    display: block;
+    width: 100%;
+    // grid-column: startContent/endContent;
+}
+
+.c-cover__path {
+    fill: var(--c-cover__path-fill-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    .c-cover {
+        // --c-cover-background-color: var(--global-color-neutral-900);
+        // --c-cover__path-fill-color: var(--global-color-neutral-100);
+        // --c-cover__path-fill-color: yellow;
+        // --c-cover__path-fill-color: #FFFE2F;
+    }
+}

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="665" height="361" viewBox="0 0 665 361">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-cover-5);
+      }
+
+      .cls-2, .cls-4 {
+        fill: none;
+        stroke: salmon;
+      }
+
+      .cls-2 {
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        opacity: 0.289;
+      }
+
+      .cls-4 {
+        stroke-width: 20px;
+      }
+    </style>
+    <clipPath id="clip-cover-5">
+      <rect width="665" height="361"/>
+    </clipPath>
+  </defs>
+  <g id="cover-5" class="cls-1">
+    <g id="Group_4" data-name="Group 4">
+      <path id="Path_8" data-name="Path 8" class="cls-2" d="M0,0H665" transform="translate(0 1)"/>
+      <path id="Path_9" data-name="Path 9" class="cls-2" d="M0,0H665" transform="matrix(1, 0.017, -0.017, 1, 0.051, 27.197)"/>
+      <path id="Path_10" data-name="Path 10" class="cls-2" d="M0,0H665" transform="matrix(0.999, 0.035, -0.035, 0.999, 0.203, 53.396)"/>
+      <path id="Path_11" data-name="Path 11" class="cls-2" d="M0,0H665" transform="matrix(1, 0.017, -0.017, 1, 0.051, 91.197)"/>
+      <path id="Path_12" data-name="Path 12" class="cls-2" d="M0,0H665" transform="matrix(1, -0.017, 0.017, 1, 0.051, 134.803)"/>
+      <path id="Path_13" data-name="Path 13" class="cls-2" d="M0,0H665" transform="matrix(0.999, -0.035, 0.035, 0.999, 0.203, 172.604)"/>
+      <path id="Path_14" data-name="Path 14" class="cls-2" d="M0,0H665" transform="translate(0 193)"/>
+      <path id="Path_15" data-name="Path 15" class="cls-2" d="M0,0H665" transform="matrix(1, 0.017, -0.017, 1, 0.051, 219.197)"/>
+      <path id="Path_16" data-name="Path 16" class="cls-2" d="M0,0H665" transform="matrix(1, -0.017, 0.017, 1, 0.051, 262.803)"/>
+      <path id="Path_17" data-name="Path 17" class="cls-2" d="M0,0H665" transform="matrix(0.999, -0.035, 0.035, 0.999, 0.203, 300.604)"/>
+      <path id="Path_18" data-name="Path 18" class="cls-2" d="M0,0H665" transform="matrix(1, 0.017, -0.017, 1, 0.051, 315.197)"/>
+      <path id="Path_19" data-name="Path 19" class="cls-2" d="M0,0H665" transform="matrix(1, -0.017, 0.017, 1, 0.051, 358.803)"/>
+    </g>
+    <g id="Group_5" data-name="Group 5" class="cls-3" transform="translate(0 10)">
+      <path id="Path_8-2" data-name="Path 8" class="cls-4" d="M665,0H0" transform="translate(0 0)"/>
+      <path id="Path_9-2" data-name="Path 9" class="cls-4" d="M0,0H665" transform="matrix(-1, 0.017, -0.017, -1, 664.949, 26.197)"/>
+      <path id="Path_10-2" data-name="Path 10" class="cls-4" d="M0,0H665" transform="matrix(-0.999, 0.035, -0.035, -0.999, 664.797, 51.316)"/>
+      <path id="Path_11-2" data-name="Path 11" class="cls-4" d="M0,0H665" transform="matrix(-1, 0.017, -0.017, -1, 664.949, 85.819)"/>
+      <path id="Path_12-2" data-name="Path 12" class="cls-4" d="M0,0H665" transform="matrix(-1, -0.017, 0.017, -1, 664.949, 127.872)"/>
+      <path id="Path_13-2" data-name="Path 13" class="cls-4" d="M0,0H665" transform="matrix(-0.999, -0.035, 0.035, -0.999, 664.797, 164.152)"/>
+      <path id="Path_14-2" data-name="Path 14" class="cls-4" d="M665,0H0" transform="translate(0 182.983)"/>
+      <path id="Path_15-2" data-name="Path 15" class="cls-4" d="M0,0H665" transform="matrix(-1, 0.017, -0.017, -1, 664.949, 207.607)"/>
+      <path id="Path_16-2" data-name="Path 16" class="cls-4" d="M0,0H665" transform="matrix(-1, -0.017, 0.017, -1, 664.949, 249.659)"/>
+      <path id="Path_17-2" data-name="Path 17" class="cls-4" d="M0,0H665" transform="matrix(-0.999, -0.035, 0.035, -0.999, 664.797, 285.724)"/>
+      <path id="Path_18-2" data-name="Path 18" class="cls-4" d="M0,0H665" transform="matrix(-1, 0.017, -0.017, -1, 664.949, 297.394)"/>
+      <path id="Path_19-2" data-name="Path 19" class="cls-4" d="M0,0H665" transform="matrix(-1, -0.017, 0.017, -1, 664.949, 341)"/>
+    </g>
+  </g>
+</svg>

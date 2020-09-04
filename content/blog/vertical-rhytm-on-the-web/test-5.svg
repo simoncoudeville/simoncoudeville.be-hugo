@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1368" height="684" viewBox="0 0 1368 684">
+  <defs>
+    <style>
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: salmon;
+      }
+
+      .cls-2 {
+        opacity: 0.102;
+      }
+
+      .cls-3 {
+        opacity: 0.103;
+      }
+
+      .cls-4 {
+        opacity: 0.103;
+      }
+    </style>
+  </defs>
+  <g id="Cover" class="cls-1" transform="translate(-156 -462)">
+    <rect id="Rectangle" class="cls-2" width="1368" height="684" transform="translate(156 462)"/>
+    <rect id="Rectangle-2" data-name="Rectangle" class="cls-3" width="1368" height="570" transform="translate(156 576)"/>
+    <rect id="Rectangle-3" data-name="Rectangle" class="cls-3" width="1368" height="456" transform="translate(156 690)"/>
+    <rect id="Rectangle-4" data-name="Rectangle" class="cls-3" width="1368" height="342" transform="translate(156 804)"/>
+    <rect id="Rectangle-5" data-name="Rectangle" class="cls-3" width="1368" height="228" transform="translate(156 918)"/>
+    <rect id="Rectangle-6" data-name="Rectangle" class="cls-3" width="1368" height="114" transform="translate(156 1032)"/>
+    <rect id="Rectangle_10" data-name="Rectangle 10" class="cls-4" width="684" height="114" transform="translate(156 576)"/>
+    <rect id="Rectangle_16" data-name="Rectangle 16" class="cls-4" width="684" height="114" transform="translate(156 804)"/>
+    <rect id="Rectangle_20" data-name="Rectangle 20" class="cls-4" width="684" height="114" transform="translate(156 1032)"/>
+    <rect id="Rectangle_13" data-name="Rectangle 13" class="cls-4" width="684" height="114" transform="translate(840 690)"/>
+    <rect id="Rectangle_19" data-name="Rectangle 19" class="cls-4" width="684" height="114" transform="translate(840 918)"/>
+    <rect id="Rectangle_15" data-name="Rectangle 15" class="cls-4" width="684" height="114" transform="translate(840 462)"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" class="cls-4" width="342" height="114" transform="translate(1182 576)"/>
+    <rect id="Rectangle_17" data-name="Rectangle 17" class="cls-4" width="342" height="114" transform="translate(1182 804)"/>
+    <rect id="Rectangle_21" data-name="Rectangle 21" class="cls-4" width="342" height="114" transform="translate(1182 1032)"/>
+    <rect id="Rectangle_14" data-name="Rectangle 14" class="cls-4" width="342" height="114" transform="translate(156 462)"/>
+    <rect id="Rectangle_12" data-name="Rectangle 12" class="cls-4" width="342" height="114" transform="translate(156 690)"/>
+    <rect id="Rectangle_18" data-name="Rectangle 18" class="cls-4" width="342" height="114" transform="translate(156 918)"/>
+  </g>
+</svg>

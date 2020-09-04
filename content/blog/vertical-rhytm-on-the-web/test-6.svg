@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1368" height="684" viewBox="0 0 1368 684">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #efeff0;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        isolation: isolate;
+      }
+
+      .cls-4 {
+        fill: #303036;
+      }
+
+      .cls-5 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-6 {
+        clip-path: url(#clip-path-2);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_11" data-name="Ellipse 11" class="cls-1" cx="306" cy="306" r="306" transform="translate(498 462)"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect class="cls-2" width="612" height="612"/>
+    </clipPath>
+  </defs>
+  <g id="Cover" class="cls-3" transform="translate(-156 -462)">
+    <rect id="Rectangle" class="cls-4" width="1368" height="684" transform="translate(156 462)"/>
+    <g id="Mask_Group_2" data-name="Mask Group 2" class="cls-5" transform="translate(36 36)">
+      <g id="Repeat_Grid_5" data-name="Repeat Grid 5" class="cls-6" transform="translate(498 462)">
+        <g transform="translate(-498 -498)">
+          <rect id="Rectangle_22" data-name="Rectangle 22" class="cls-1" width="684" height="36" transform="translate(498 498)"/>
+        </g>
+        <g transform="translate(-498 -426)">
+          <rect id="Rectangle_22-2" data-name="Rectangle 22" class="cls-1" width="684" height="36" transform="translate(498 498)"/>
+        </g>
+        <g transform="translate(-498 -354)">
+          <rect id="Rectangle_22-3" data-name="Rectangle 22" class="cls-1" width="684" height="36" transform="translate(498 498)"/>
+        </g>
+        <g transform="translate(-498 -282)">
+          <rect id="Rectangle_22-4" data-name="Rectangle 22" class="cls-1" width="684" height="36" transform="translate(498 498)"/>
+        </g>
+        <g transform="translate(-498 -210)">
+          <rect id="Rectangle_22-5" data-name="Rectangle 22" class="cls-1" width="684" height="36" transform="translate(498 498)"/>
+        </g>
+        <g transform="translate(-498 -138)">
+          <rect id="Rectangle_22-6" data-name="Rectangle 22" class="cls-1" width="684" height="36" transform="translate(498 498)"/>
+        </g>
+        <g transform="translate(-498 -66)">
+          <rect id="Rectangle_22-7" data-name="Rectangle 22" class="cls-1" width="684" height="36" transform="translate(498 498)"/>
+        </g>
+        <g transform="translate(-498 6)">
+          <rect id="Rectangle_22-8" data-name="Rectangle 22" class="cls-1" width="684" height="36" transform="translate(498 498)"/>
+        </g>
+        <g transform="translate(-498 78)">
+          <rect id="Rectangle_22-9" data-name="Rectangle 22" class="cls-1" width="684" height="36" transform="translate(498 498)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

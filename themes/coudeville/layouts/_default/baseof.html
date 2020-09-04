@@ -1,15 +1,10 @@
 <!DOCTYPE html>
-<html class="">
+<html lang="en">
     <head>
         {{- partial "head.html" . -}}
     </head>
-    <body>
-        {{- partial "header.html" . -}}
-
-        <div class="c-row">
-            {{- block "main" . }}{{- end }}
-        </div>
-
-        {{- partial "footer.html" . -}}
+    <body class="o-grid">
+        {{- block "main" . }}{{- end -}}
+        {{- partial "javascript.html" . -}}
     </body>
 </html>

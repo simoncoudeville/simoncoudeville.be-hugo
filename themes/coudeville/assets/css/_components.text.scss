@@ -1,0 +1,71 @@
+/*
+    Components: Text
+    ---
+    Scecific text styles
+*/
+
+
+.c-text-caption {
+    display: block;
+    padding: calc(var(--global-baseline) / 2) 0;
+    font-family: $code-font-family;
+    text-transform: uppercase;
+    color: var(--text-caption-color, var(--global-meta-color));
+    @include ms-xs;
+}
+
+.c-text-label {
+    font-feature-settings: "zero", "liga", "ss02";    
+    padding: calc(var(--global-baseline) / 2) 0;
+    color: var(--toggle-color, var(--global-meta-color));
+    @include ms-s;
+}
+
+.c-text-xxxl {
+  @include ms-xxl;
+
+  @include mq(bp3) {
+    @include ms-xxxl;
+  }
+}
+
+.c-text-xxl {
+  @include ms-xxl;
+}
+
+.c-text-xl {
+  @include ms-m;
+
+  @include mq(bp2) {
+      @include ms-l;
+  }
+
+  @include mq(bp3) {
+      @include ms-xl;
+  }
+}
+
+.c-text-l {
+  @include ms-l;
+}
+
+.c-text-base {
+  @include ms-base;
+}
+
+.c-text-m {
+  @include ms-m;
+}
+
+.c-text-s {
+  @include ms-s;
+}
+
+.c-text-xs {
+  @include ms-xs;
+}
+
+.c-text-intro {  
+  font-weight: $beta-font-weight;
+  @include ms-m;
+}

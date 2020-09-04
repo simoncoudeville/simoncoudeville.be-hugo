@@ -1,0 +1,60 @@
+// Component: toggle checkbox
+
+.c-toggle {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    width: auto;
+    align-items: center;
+    margin-bottom: var(--global-whitespace-base);
+    color: var(--toggle-color, var(--global-meta-color));
+    font-size: var(--global-fontSize-s);
+    font-family: $alpha-font-family;
+    line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
+}
+
+.c-toggle__checkbox {
+    margin: 0 0 0 var(--global-whitespace-s);
+    appearance: none;
+    width: 35px;
+    height: 1px;
+    transition: all $animation-duration-alpha $animation-easing-out;
+    outline: none;
+    background-color: var(--toggle__checkbox-backgroundColor, var(--global-border-color-hard));
+
+    &:after {
+        content: "";
+        display: block;
+        background-color: var(--toggle__switch-backgroundColor, var(--global-backgroundColor));
+        border: 1px solid var(--toggle__switch-borderColor, var(--global-border-color-hard));
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+        transform: translate(0,-9.5px);
+        transition: all $animation-duration-alpha $animation-easing-out;
+    }
+
+    &:checked {
+        &:after {
+            transform: translate(15px,-9.5px);
+            background-color: var(--toggle__switch-checked-backgroundColor, var(--global-surfaceColor));
+            border-color: var(--toggle__switch-checked-borderColor, var(--global-border-color-hard));
+        }
+    }
+
+    &:focus,
+    &:active {
+        &:after {
+            border-color: var(--toggle__switch-focus-borderColor, var(--global-color-neutral-500));
+            box-shadow: var(--toggle__switch-focus-shadow, 0 0 0 3px hsla(0,0%,0%,.15));
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .c-toggle {
+        --toggle__switch-checked-backgroundColor: var(--global-color-neutral-100);
+        --toggle__switch-checked-borderColor: var(--global-color-neutral-100);
+        --toggle__switch-focus-borderColor: var(--global-color-neutral-100);
+        --toggle__switch-focus-shadow: 0 0 0 3px hsla(0,0%,100%,.5);
+    }
+}

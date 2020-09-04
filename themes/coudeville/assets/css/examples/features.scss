@@ -1,0 +1,72 @@
+//
+// Example: Profile card
+// ---
+// This file will be inlined
+//
+
+// Tools
+@import '../tools.mixins';
+@import '../tools.functions';
+
+// Settings
+@import '../settings.colors';
+@import '../settings.global';
+
+
+.e-grid {
+    display: grid;
+    grid-column-gap: var(--global-whitespace-base);
+    grid-template-columns: repeat(auto-fill, minmax(calc((var(--global-content-maxWidth) / 2) - #{var(--global-whitespace-base)}), 1fr));
+}
+
+.e-grid__item {
+    grid-column: auto;
+}
+
+.e-grid__icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: baseline(calc(var(--global-baseline-multiplier) * 2));
+    height: baseline(calc(var(--global-baseline-multiplier) * 2));
+    margin-bottom: baseline(calc(var(--global-baseline-multiplier) - 2));
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: var(--global-color-beta);
+        border-radius: 100%;
+        opacity: .25;
+    }
+
+    svg {
+        position: relative;
+        width: baseline(var(--global-baseline-multiplier));
+        height: baseline(var(--global-baseline-multiplier));
+        fill: var(--global-color-beta);
+    }
+}
+
+.e-grid__title {
+    margin-bottom: baseline(calc(var(--global-baseline-multiplier) - 3));
+    color: var(--global-color-beta-dark);
+    font-size: 1rem;
+    line-height: calc(calc(var(--global-baseline-multiplier) - .5) * var(--global-baseline));
+}
+
+.e-grid__paragraph {
+    font-size: var(--global-fontSize-s);
+    line-height: calc(calc(var(--global-baseline-multiplier) - .5) * var(--global-baseline));
+}
+
+@media (prefers-color-scheme: dark) {
+    .e-grid__title {
+        color: var(--global-color-beta);
+    }
+}

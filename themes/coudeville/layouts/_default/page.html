@@ -1,0 +1,16 @@
+{{ define "main" }}
+<header class="o-row o-row--header js-header">
+    <div class="c-header">
+        <p class="c-header__logo c-logo">
+            <a href="/" class="c-logo__link">Simon Coudeville</a>
+        </p>
+        <h1 class="c-header__meta c-text-base u-ff-beta">
+            {{ .Title }}
+        </h1>
+    </div>    
+</header>
+<main class="o-row">
+    {{ .Content }}
+</main>
+{{ partial "footer.html" . }}
+{{ end }}

@@ -1,0 +1,16 @@
+//
+//  Tools: Functions
+//  ---
+//  Global functions
+//
+
+// simple px to rem converter
+@function pxtorem($pixelvalue) {
+    @return #{$pixelvalue / $root-font-size}rem;
+}
+
+// Simple baseline-unit multiplier converted to rem
+@function baseline($multiplier) {
+    // @return pxtorem($baseline * $multiplier);
+    @return calc(var(--global-baseline) * #{$multiplier});
+}

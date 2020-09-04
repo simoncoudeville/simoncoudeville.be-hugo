@@ -1,0 +1,47 @@
+/*
+    Components: Example
+    ---
+    Example container for blogposts
+*/
+
+
+.c-example {
+    z-index: 10;
+}
+
+.c-example__title {
+    position: relative;
+    // margin-top: calc(var(--global-whitespace-base) * -1);
+}
+
+.c-example__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--global-whitespace-base);
+}
+
+.c-example__body--xl {
+    padding: var(--global-whitespace-base) 0 0;
+
+    @include mq(bp3) {
+        padding: var(--global-whitespace-double) 0 var(--global-whitespace-base);
+    }
+}
+
+.c-example__content {
+    position: relative;
+    z-index: 120;
+    margin-bottom: var(--global-whitespace-base);
+}
+
+.c-example__wrapper {
+    position: relative;
+    z-index: 120;    
+}
+
+.c-example__toggle {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
