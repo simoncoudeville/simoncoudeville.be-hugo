@@ -36,6 +36,7 @@
     color: var(--header__meta-color, var(--global-meta-color));   
     // margin-bottom: 0;   
     grid-column: 2;
+    // @include ms-s;
 
     @include mq(bp5) {
         grid-column: startContent/endContent;        

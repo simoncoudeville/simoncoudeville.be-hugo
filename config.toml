@@ -5,8 +5,8 @@ theme = "Coudeville"
 relativeURLS = false
 canonifyurls = true
 enableEmoji = true
-disableKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomy", "taxonomyTerm", "section", "RSS", "sitemap"]
 
 [params]
   author = "Simon Coudeville"
-  description = "Tesla's Awesome Hugo Site"
+  description = "Personal website of Simon Coudeville"

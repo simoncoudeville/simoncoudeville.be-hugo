@@ -1,6 +1,5 @@
 {{ define "main" }}
-
-<header id="header" class="o-row o-row--header js-header">
+<header id="header" class="o-row o-row--header">
     <div class="c-header">
         <h1 class="c-header__logo c-logo">
             Simon Coudeville
@@ -10,16 +9,8 @@
         </p>
     </div>
 </header>
-<header class="o-row">
-    <div class="o-container o-container--left-content">
-        <div class="c-intro">
-            <p class=" c-text-xl c-intro__title">
-                I'm a user interface designer from Bruges, Belgium. I specialize in responsive web-design, HTML & CSS, typography and animation. I teach UX, UI and frontend development at <a href="https://mct.be">MCT</a> at Howest University.
-                Some of my design work is on <a href="https://dribbble.com/coudeville">Dribbble</a>. Some of my code experiments are on <a href="https://codepen.io/simoncoudeville/">Codepen</a>. You can send me an <a href="mailto:coudeville.simon@gmail.com">email</a> or follow me
-                on <a href="https://twitter.com/simoncoudeville">Twitter</a>.
-            </p>            
-        </div>
-    </div>    
-</header>
+
+{{ .Content }}
+
 {{ partial "footer.html" . }}
 {{ end }}

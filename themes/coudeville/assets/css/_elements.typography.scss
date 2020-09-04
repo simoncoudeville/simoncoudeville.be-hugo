@@ -22,7 +22,6 @@ $h4-baseline-multiplier: var(--global-baseline-multiplier);
 // ---
 
 h1,
-.h1,
 h2,
 h3,
 h4 {
@@ -49,7 +48,11 @@ h1,
     // font-family: serif;
     font-weight: $beta-font-weight;
     margin-bottom: var(--global-whitespace-base);
-    @include ms-l;
+    @include ms-m;
+
+    @include mq(bp2) {
+        @include ms-l;
+    }
 
     @include mq(bp3) {
         @include ms-xl;
