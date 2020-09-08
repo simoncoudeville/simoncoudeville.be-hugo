@@ -43,32 +43,15 @@
     @include theme-light;    
 
     /* type scale */
-    --global-modular-scale-ratio: 1.25;
     --global-root-fontSize: #{$root-font-size-sm/16px*100%};
-
-    // --global-fontSize-xs: calc(var(--global-fontSize-s) / var(--global-modular-scale-ratio));
-    // --global-fontSize-s: calc(var(--global-fontSize) / var(--global-modular-scale-ratio));
     --global-fontSize-xs: #{pxtorem(15px)};
     --global-fontSize-s: #{pxtorem(17px)}; 
     --global-fontSize: 1rem; 
-    // --global-fontSize-m: #{pxtorem(22px)}; 
-    // --global-fontSize-l: #{pxtorem(25px)}; 
-    // --global-fontSize-xl: #{pxtorem(28px)}; 
-    // --global-fontSize-xxl: #{pxtorem(33px)}; 
-    // --global-fontSize-xxxl: #{pxtorem(38px)}; 
-    // --global-fontSize-xxxxl: #{pxtorem(43px)}; 
-    // --global-fontSize-xxxxxl: #{pxtorem(50px)}; 
-    
     --global-fontSize-m: #{pxtorem(24px)}; 
     --global-fontSize-l: #{pxtorem(30px)}; 
     --global-fontSize-xl: #{pxtorem(36px)}; 
     --global-fontSize-xxl: #{pxtorem(42px)}; 
-    --global-fontSize-xxxl: #{pxtorem(50px)}; 
-    // --global-fontSize-m: calc(var(--global-fontSize) * var(--global-modular-scale-ratio));
-    // --global-fontSize-l: calc(var(--global-fontSize-m) * var(--global-modular-scale-ratio));
-    // --global-fontSize-xl: calc(var(--global-fontSize-l) * var(--global-modular-scale-ratio));
-    // --global-fontSize-xxl: calc(var(--global-fontSize-xl) * var(--global-modular-scale-ratio));
-    // --global-fontSize-xxxl: calc(var(--global-fontSize-xxl) * var(--global-modular-scale-ratio));
+    --global-fontSize-xxxl: #{pxtorem(50px)};     
 
     /* baseline */
     --global-baseline: #{5px / $root-font-size-sm}rem;
@@ -86,7 +69,6 @@
     --global-whitespace-quadruple: calc(var(--global-whitespace-double) * 2);
 
     /* layout */
-    // --global-content-maxWidth: #{$content-max-width};
     --global-content-maxWidth: calc(var(--global-baseline) * 120);
     --global-container-maxWidth: calc(var(--global-content-maxWidth) * 2);
 
