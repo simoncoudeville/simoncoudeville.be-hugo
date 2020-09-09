@@ -5,77 +5,20 @@
 */
 
 // CSS vars
+// These are separate files so I can use them seperately on specific pages.
 
-:root {
-    /* colors */
-    --global-color-alpha: #{$color-alpha};
-    --global-hue-color-alpha: #{hue($color-alpha)};
-    --global-saturation-color-alpha: #{saturation($color-alpha)};
-    --global-lightness-color-alpha: #{lightness($color-alpha)};
+/* colors */  
+@import 'variables.colors';
 
-    --global-hue-color-beta: #{hue($color-beta)};
-    --global-saturation-color-beta: #{saturation($color-beta)};
-    --global-lightness-color-beta: 71%;
-    // --global-lightness-color-beta: #{lightness($color-beta)};
-    --global-color-beta: hsl(var(--global-hue-color-beta), var(--global-saturation-color-beta), var(--global-lightness-color-beta));
-    --global-lightness-color-beta-dark: 65%;
-    --global-color-beta-dark: hsl(var(--global-hue-color-beta), var(--global-saturation-color-beta), var(--global-lightness-color-beta-dark));
+/* type scale */
+@import 'variables.type';
 
-    --global-color-gamma: #{$color-gamma};
-    --global-hue-color-gamma: #{hue($color-gamma)};
-    --global-saturation-color-gamma: #{saturation($color-gamma)};
-    --global-lightness-color-gamma: #{lightness($color-gamma)};
+/* baseline */
+@import 'variables.baseline';
 
-    --global-neutral-hue: var(--global-hue-color-beta);
-    --global-neutral-saturation: 3%;
-
-    --global-color-neutral-100: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 97%);
-    --global-color-neutral-200: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 94%);
-    --global-color-neutral-300: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 85%);
-    --global-color-neutral-400: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 75%);
-    --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 47.5%);
-    --global-color-neutral-600: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 30%);
-    --global-color-neutral-700: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 20%);
-    --global-color-neutral-800: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 15%);
-    --global-color-neutral-900: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 10%);
-
+:root {  
     // Include theme light from tools.themes so it's reuasable if I ever add a dark/light theme switch
-    @include theme-light;    
-
-    /* type scale */
-    --global-root-fontSize: #{$root-font-size-sm/16px*100%};
-    --global-fontSize-xs: #{pxtorem(15px)};
-    --global-fontSize-s: #{pxtorem(17px)}; 
-    --global-fontSize: 1rem; 
-    --global-fontSize-m: #{pxtorem(24px)}; 
-    --global-fontSize-l: #{pxtorem(30px)}; 
-    --global-fontSize-xl: #{pxtorem(36px)}; 
-    --global-fontSize-xxl: #{pxtorem(42px)}; 
-    --global-fontSize-xxxl: #{pxtorem(50px)};     
-
-    /* baseline */
-    --global-baseline: #{5px / $root-font-size-sm}rem;
-    --global-baseline-multiplier: 5;
-
-    --global-whitespace-xxs: var(--global-baseline);
-    --global-whitespace-xs: calc(var(--global-baseline) * calc(var(--global-baseline-multiplier) - 3));
-    --global-whitespace-s: calc(var(--global-baseline) * calc(var(--global-baseline-multiplier) - 2));
-    --global-whitespace-m: calc(var(--global-baseline) * calc(var(--global-baseline-multiplier) - 1));
-    --global-whitespace-l: calc(var(--global-baseline) * var(--global-baseline-multiplier));
-
-    --global-whitespace-base: var(--global-whitespace-l);
-    --global-whitespace-double: calc(var(--global-whitespace-base) * 2);
-    --global-whitespace-triple: calc(var(--global-whitespace-base) * 3);
-    --global-whitespace-quadruple: calc(var(--global-whitespace-double) * 2);
-
-    /* layout */
-    --global-content-maxWidth: calc(var(--global-baseline) * 120);
-    --global-container-maxWidth: calc(var(--global-content-maxWidth) * 2);
-
-    @include mq(bp3) {
-        --global-root-fontSize: #{$root-font-size/16px*100%};
-        --global-baseline: #{6px / $root-font-size}rem;
-    }
+    @include theme-light;              
 }
 
 @media (prefers-color-scheme: dark) {

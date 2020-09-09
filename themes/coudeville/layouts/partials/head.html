@@ -1,4 +1,4 @@
-<title>{{ block "title" . }}{{ with .Site.Title }}{{ . }}{{ end }} - {{ .Params.Title }}{{ end }}</title>
+<title>{{ block "title" . }}{{ .Params.Title }} - {{ with .Site.Title }}{{ . }}{{ end }}{{ end }}</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta charset="utf-8">
 <meta http-equiv="cleartype" content="on">
@@ -8,8 +8,11 @@
 <meta name="description" content="{{ .Params.Description }}">
 <meta name="author" content="{{ .Site.Params.Author }}">
 {{ if .Site.IsServer -}}
+    {{/* Check if screen.css is needed */}}
+    {{- if not .Params.noscreencss -}}
     {{- $css := resources.Get "css/screen.scss" | toCSS | postCSS -}}
     <link rel="stylesheet" href="{{ $css.Permalink }}">
+    {{- end -}}
     {{/* Conditional css if the post needs code highlighting */}}
     {{- if .Params.Prism -}}
     {{- $prismcss := resources.Get "css/prism.scss" | toCSS -}}
@@ -21,8 +24,11 @@
     <link rel="stylesheet" href="{{ $pagestyle.Permalink }}">
     {{- end -}}
 {{- else -}}
+    {{/* Check if screen.css is needed */}}
+    {{- if not .Params.noscreencss -}}
     {{- $css := resources.Get "css/screen.scss" | toCSS | postCSS | minify | fingerprint -}}
     <link rel="stylesheet" href="{{ $css.Permalink }}">
+    {{- end -}}
     {{/* Conditional css if the post needs code highlighting */}}
     {{- if .Params.Prism -}}
     {{ $prismcss := resources.Get "css/prism.scss" | toCSS | postCSS | minify | fingerprint }}
