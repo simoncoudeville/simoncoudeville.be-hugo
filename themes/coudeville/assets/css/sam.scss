@@ -67,9 +67,9 @@ html {
 }
 
 body {
-    --body-whitespace: 5vw;
+    --body-whitespace: calc(1em + 5vw);
     margin: 0;
-    padding: var(--body-whitespace);     
+    padding: var(--body-whitespace) var(--body-whitespace) calc(var(--body-whitespace) / 2);     
     min-height: 100vh;
     display: flex; 
     flex-direction: column;   
@@ -99,11 +99,11 @@ a:focus {
 
 .info {
     text-align: right;
-    margin-bottom: calc(var(--body-whitespace) * -2);
+    margin-bottom: calc(var(--body-whitespace) * -1);
 }
 
 .sam {
     pointer-events: none;
     fill: var(--global-surface-color);
-    // max-height: calc(100vh - var(--body-whitespace) * 2);
+    max-height: calc(100vh - var(--body-whitespace));
 }
