@@ -7,7 +7,7 @@
 @import 'settings.global';
 
 $color-alpha: darkblue;
-$color-beta: pink;
+$color-beta: palegreen;
 
 // fonts
 
@@ -15,6 +15,15 @@ $color-beta: pink;
     font-family: 'Suisse Intl Web Mono';
     src: url('../fonts/SuisseIntlMono-Regular-WebXL.woff2') format('woff2'),
     url('../fonts/SuisseIntlMono-Regular-WebXL.woff') format('woff');
+    font-weight:  400;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Suisse Intl Web';
+    src: url('../fonts/SuisseIntl-Regular-WebXL.woff2') format('woff2'),
+    url('../fonts/SuisseIntl-Regular-WebXL.woff') format('woff');
     font-weight:  400;
     font-style:   normal;
     font-stretch: normal;
@@ -42,7 +51,7 @@ html {
     font-size: clamp(1em, 1.25vw, 2em);
     line-height: 1.5em;
     font-family: $code-font-family;
-    font-feature-settings: "liga", "ss01";
+    font-feature-settings: "liga";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
@@ -93,9 +102,8 @@ a:focus {
     margin-bottom: calc(var(--body-whitespace) * -2);
 }
 
-.ida {
+.sam {
     pointer-events: none;
-    // margin-top: var(--body-whitespace);    
     fill: var(--global-surface-color);
     // max-height: calc(100vh - var(--body-whitespace) * 2);
 }
