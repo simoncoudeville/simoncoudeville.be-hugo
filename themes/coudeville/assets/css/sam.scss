@@ -4,7 +4,6 @@
 
 @import 'tools.mixins';
 @import 'tools.functions';
-@import 'settings.global';
 
 $color-alpha: darkblue;
 $color-beta: palegreen;
@@ -20,15 +19,6 @@ $color-beta: palegreen;
     font-stretch: normal;
 }
 
-@font-face {
-    font-family: 'Suisse Intl Web';
-    src: url('../fonts/SuisseIntl-Regular-WebXL.woff2') format('woff2'),
-    url('../fonts/SuisseIntl-Regular-WebXL.woff') format('woff');
-    font-weight:  400;
-    font-style:   normal;
-    font-stretch: normal;
-}
-
 :root {  
     --global-hue-color-alpha: #{hue($color-alpha)};
     --global-surface-color: #{$color-alpha};
@@ -38,7 +28,6 @@ $color-beta: palegreen;
 @media (prefers-color-scheme: dark) { 
     :root {
         --global-surface-color: #{$color-beta};        
-        --global-background-color: #{$color-alpha};
         --global-background-color: hsl(var(--global-hue-color-alpha),35%,20%);
     }
 }
@@ -49,8 +38,8 @@ html {
     background-color: var(--global-background-color);
     color: var(--global-surface-color);
     font-size: clamp(1em, 1.25vw, 2em);
-    line-height: 1.5em;
-    font-family: $code-font-family;
+    line-height: 1.5;
+    font-family: "Suisse Intl Web Mono", monospace;;
     font-feature-settings: "liga";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -59,15 +48,21 @@ html {
 }
 
 * {
+    margin: 0;
+
     &,
     &:before,
     &:after {
         box-sizing: inherit;
     }
+
+    & + & {
+        margin-top: 1.5rem;
+    }
 }
 
 body {
-    --body-whitespace: calc(1em + 5vw);
+    --body-whitespace: calc(1rem + 5vw);
     margin: 0;
     padding: var(--body-whitespace) var(--body-whitespace) calc(var(--body-whitespace) / 2);     
     min-height: 100vh;
@@ -82,19 +77,16 @@ body {
     text-shadow: none;
 }
 
-* {
-    margin: 0;
-
-    & + & {
-        margin-top: 1.5rem;
-    }
-}
-
 a,
 a:visited,
 a:active,
 a:focus {
     color: inherit;
+    transition: .2s;
+}
+
+a:hover {
+    opacity: 0.5;
 }
 
 .info {
