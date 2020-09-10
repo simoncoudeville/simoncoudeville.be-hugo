@@ -40,9 +40,9 @@ html {
     background-color: var(--global-background-color);
     color: var(--global-surface-color);
     font-size: clamp(1em, 1.25vw, 2em);
-    line-height: 1.5em;
-    font-family: $code-font-family;
-    font-feature-settings: "liga", "ss01";
+    line-height: 1.5;
+    font-family: "Suisse Intl Web Mono", monospace;;
+    font-feature-settings: "liga";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
@@ -50,21 +50,27 @@ html {
 }
 
 * {
+    margin: 0;
+
     &,
     &:before,
     &:after {
         box-sizing: inherit;
     }
+
+    & + & {
+        margin-top: 1.5rem;
+    }
 }
 
 body {
-    --body-whitespace: calc(1em + 5vw);
+    --body-whitespace: calc(1rem + 5vw);
     margin: 0;
-    padding: var(--body-whitespace) var(--body-whitespace) calc(var(--body-whitespace) / 2);       
+    padding: var(--body-whitespace) var(--body-whitespace) calc(var(--body-whitespace) / 2);     
     min-height: 100vh;
     display: flex; 
     flex-direction: column;   
-    justify-content: space-between;       
+    justify-content: space-between;    
 }
 
 ::selection {
@@ -73,19 +79,16 @@ body {
     text-shadow: none;
 }
 
-* {
-    margin: 0;
-
-    & + & {
-        margin-top: 1.5rem;
-    }
-}
-
 a,
 a:visited,
 a:active,
 a:focus {
     color: inherit;
+    transition: .2s;
+}
+
+a:hover {
+    opacity: 0.5;
 }
 
 .ida {
