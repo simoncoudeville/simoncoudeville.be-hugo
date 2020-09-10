@@ -1,0 +1,24 @@
+:root {
+    --global-baseline: #{5px / $root-font-size-sm}rem;
+    --global-baseline-multiplier: 5;
+
+    --global-whitespace-xxs: var(--global-baseline);
+    --global-whitespace-xs: calc(var(--global-baseline) * calc(var(--global-baseline-multiplier) - 3));
+    --global-whitespace-s: calc(var(--global-baseline) * calc(var(--global-baseline-multiplier) - 2));
+    --global-whitespace-m: calc(var(--global-baseline) * calc(var(--global-baseline-multiplier) - 1));
+    --global-whitespace-l: calc(var(--global-baseline) * var(--global-baseline-multiplier));
+
+    --global-whitespace-base: var(--global-whitespace-l);
+    --global-whitespace-double: calc(var(--global-whitespace-base) * 2);
+    --global-whitespace-triple: calc(var(--global-whitespace-base) * 3);
+    --global-whitespace-quadruple: calc(var(--global-whitespace-double) * 2);
+
+    /* layout */
+    --global-content-maxWidth: calc(var(--global-baseline) * 120);
+    --global-container-maxWidth: calc(var(--global-content-maxWidth) * 2);
+
+    @include mq(bp3) {
+        --global-root-fontSize: #{$root-font-size/16px*100%};
+        --global-baseline: #{6px / $root-font-size}rem;
+    }  
+}

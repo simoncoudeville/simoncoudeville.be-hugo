@@ -45,6 +45,16 @@
   }
 }
 
+.c-fluid-text-l-xl {
+  line-height: 1.33333;  
+  font-size: clamp(var(--global-fontSize-l), 4vw, var(--global-fontSize-xl));
+}
+
+.c-fluid-text-m-xl {
+  line-height: 1.33333;  
+  font-size: clamp(var(--global-fontSize-l), 4vw, var(--global-fontSize-xl));
+}
+
 .c-text-l {
   @include ms-l;
 }

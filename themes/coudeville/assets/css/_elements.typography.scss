@@ -48,7 +48,7 @@ h1,
     // font-family: serif;
     font-weight: $beta-font-weight;
     margin-bottom: var(--global-whitespace-base);
-    @include ms-m;
+    @include ms-l;
 
     @include mq(bp2) {
         @include ms-l;
