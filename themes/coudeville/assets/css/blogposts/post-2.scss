@@ -71,7 +71,8 @@
     margin-bottom: 0;
     color: var(--global-color-neutral-800);
     font-size: var(--global-fontSize-s);
-    font-weight: $beta-font-weight;
+    // font-weight: $beta-font-weight;
+    font-weight: $alpha-font-weight;
     line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
 }
 
