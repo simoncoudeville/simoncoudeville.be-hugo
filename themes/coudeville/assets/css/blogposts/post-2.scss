@@ -13,7 +13,7 @@
 // components
 @import '../components.example';
 @import '../components.baseline';
-@import '../components.toggle-4';
+@import '../components.toggle-2';
 
 // Example: Baseline grid
 
@@ -28,7 +28,7 @@
 .e-card {
     position: relative;
     margin: 0 auto;
-    max-width: 16em;
+    max-width: 16rem;
     background-color: white;
     border-radius: baseline(1);
     box-shadow: 0 0 0 1px rgba(black, 0.05), 0 2px 4px rgba(black,.075);
@@ -71,7 +71,7 @@
     margin-bottom: 0;
     color: var(--global-color-neutral-800);
     font-size: var(--global-fontSize-s);
-    font-weight: $beta-font-weight;
+    font-weight: $alpha-font-weight;
     line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
 }
 
