@@ -46,7 +46,7 @@ h1,
     // font-weight: $alpha-font-weight;
     // letter-spacing: -.015em;
     // font-family: serif;
-    font-weight: $beta-font-weight;
+    font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-base);
     @include ms-l;
 
@@ -58,13 +58,13 @@ h1,
         @include ms-xl;
     }
 
-    // @include mq(bp4) {
-    //     @include ms-xxl;
-    // }
+    @include mq(bp4) {
+        @include ms-xxl;
+    }
 
-    // @include mq(bp5) {
-    //     @include ms-xxxl;
-    // }
+    @include mq(bp5) {
+        @include ms-xxxl;
+    }
 }
 
 h2,

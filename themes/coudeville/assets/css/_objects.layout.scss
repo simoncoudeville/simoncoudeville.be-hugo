@@ -14,10 +14,10 @@
     grid-row-gap: var(--global-whitespace-base);
     align-content: space-between;
 
-    // @include mq(bp3) {
-    //     --grid-whitespace: var(--global-whitespace-double);
-    //     // padding: var(--global-whitespace-base);
-    // }
+    @include mq(bp3) {
+        --grid-whitespace: var(--global-whitespace-double);
+        // padding: var(--global-whitespace-base);
+    }
 }
 
 .o-row {

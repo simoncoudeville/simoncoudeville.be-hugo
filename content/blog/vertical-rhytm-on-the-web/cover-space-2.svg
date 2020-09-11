@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="720" viewBox="0 0 1440 720">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="salmon"/>
+      <stop offset="1" stop-color="#252527"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d8d8da"/>
+      <stop offset="1" stop-color="#7b68ee"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7b68ee"/>
+      <stop offset="1" stop-color="#19191a"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffb6c1"/>
+      <stop offset="1" stop-color="#252527"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="1" x2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d8d8da"/>
+      <stop offset="1" stop-color="#252527"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-7" x1="1" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7b68ee"/>
+      <stop offset="1" stop-color="#d8d8da"/>
+    </linearGradient>
+  </defs>
+  <g id="Cover_space" data-name="Cover space" transform="translate(-120 -462)">
+    <rect id="Rectangle_416" data-name="Rectangle 416" width="360" height="720" transform="translate(120 462)" fill="#7b68ee"/>
+    <rect id="Rectangle_419" data-name="Rectangle 419" width="360" height="360" transform="translate(480 822)" fill="#252527"/>
+    <circle id="Ellipse_284" data-name="Ellipse 284" cx="180" cy="180" r="180" transform="translate(1020 822) rotate(90)" fill="url(#linear-gradient)"/>
+    <circle id="Ellipse_293" data-name="Ellipse 293" cx="180" cy="180" r="180" transform="translate(1020 822) rotate(90)" fill="url(#linear-gradient)"/>
+    <rect id="Rectangle_424" data-name="Rectangle 424" width="360" height="360" transform="translate(1200 462)" fill="#252527"/>
+    <rect id="Rectangle_418" data-name="Rectangle 418" width="360" height="360" transform="translate(840 462)" fill="#252527"/>
+    <rect id="Rectangle_421" data-name="Rectangle 421" width="360" height="360" transform="translate(1200 822)" fill="#d8d8da"/>
+    <rect id="Rectangle_417" data-name="Rectangle 417" width="360" height="360" transform="translate(480 462)" fill="#ffb6c1"/>
+    <rect id="Rectangle_420" data-name="Rectangle 420" width="360" height="360" transform="translate(840 822)" fill="salmon"/>
+    <circle id="Ellipse_290" data-name="Ellipse 290" cx="90" cy="90" r="90" transform="translate(1289.721 911.721)" fill="url(#linear-gradient-3)"/>
+    <circle id="Ellipse_282" data-name="Ellipse 282" cx="90" cy="90" r="90" transform="translate(210 552)" fill="url(#linear-gradient-4)"/>
+    <path id="Path_1147" data-name="Path 1147" d="M0,0,360,360H0Z" transform="translate(480 822) rotate(-90)" fill="url(#linear-gradient-5)"/>
+    <path id="Path_1149" data-name="Path 1149" d="M0,0,360,360H0Z" transform="translate(1200 822) rotate(-90)" fill="url(#linear-gradient-6)"/>
+    <rect id="Rectangle_429" data-name="Rectangle 429" width="360" height="180" transform="translate(120 1002)" fill="url(#linear-gradient-7)"/>
+  </g>
+</svg>
