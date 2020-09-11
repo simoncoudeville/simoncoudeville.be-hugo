@@ -1,5 +1,5 @@
 :root {
-    --global-baseline: #{5px / $root-font-size-sm}rem;
+    --global-baseline: #{8px / $root-font-size}rem;
     --global-baseline-multiplier: 5;
 
     --global-whitespace-xxs: var(--global-baseline);
@@ -18,7 +18,6 @@
     --global-container-maxWidth: calc(var(--global-content-maxWidth) * 2);
 
     @include mq(bp3) {
-        --global-root-fontSize: #{$root-font-size/16px*100%};
         --global-baseline: #{6px / $root-font-size}rem;
     }  
 }

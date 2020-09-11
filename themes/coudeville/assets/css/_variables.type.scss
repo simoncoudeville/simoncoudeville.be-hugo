@@ -8,4 +8,8 @@
     --global-fontSize-xl: #{pxtorem(36px)}; 
     --global-fontSize-xxl: #{pxtorem(42px)}; 
     --global-fontSize-xxxl: #{pxtorem(50px)};   
+
+    @include mq(bp3) {
+        --global-root-fontSize: #{$root-font-size/16px*100%};
+    }  
 }

@@ -34,6 +34,7 @@ html {
     color: var(--global-text-color);
     font-family: $beta-font-family;
     font-size: var(--global-root-fontSize);
+    // font-size: clamp($root-font-size-sm,calc(25% + 1vw),$root-font-size);
     font-feature-settings: "zero", "liga";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
