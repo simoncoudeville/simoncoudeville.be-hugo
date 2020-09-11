@@ -18,6 +18,7 @@
     font-feature-settings: "zero", "liga", "ss02";    
     padding: calc(var(--global-baseline) / 2) 0;
     color: var(--toggle-color, var(--global-meta-color));
+    font-family: $alpha-font-family;
     @include ms-s;
 }
 
@@ -47,12 +48,12 @@
 
 .c-fluid-text-l-xl {
   line-height: 1.33333;  
-  font-size: clamp(var(--global-fontSize-l), 4vw, var(--global-fontSize-xl));
+  font-size: clamp(var(--global-fontSize-l), 3vw, var(--global-fontSize-xl));
 }
 
 .c-fluid-text-m-xl {
   line-height: 1.33333;  
-  font-size: clamp(var(--global-fontSize-l), 4vw, var(--global-fontSize-xl));
+  font-size: clamp(var(--global-fontSize-m), 3vw, var(--global-fontSize-xl));
 }
 
 .c-text-l {
