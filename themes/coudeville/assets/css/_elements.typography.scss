@@ -69,8 +69,8 @@ h1,
 
 h2,
 .h2 {
-    font-weight: $beta-font-weight;
-    // font-weight: $alpha-font-weight;
+    // font-weight: $beta-font-weight;
+    font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-base);
     @include ms-m;
 }
@@ -129,7 +129,7 @@ strong {
 // Links
 
 a {
-    font-weight: $beta-font-weight;
+    // font-weight: $beta-font-weight;
     font-family: $alpha-font-family;
     color: var(--global-link-color);
     transition: all $animation-duration-alpha $animation-easing-out;
