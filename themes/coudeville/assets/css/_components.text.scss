@@ -51,6 +51,11 @@
   font-size: clamp(var(--global-fontSize-l), 3vw, var(--global-fontSize-xl));
 }
 
+.c-fluid-text-l-xxxl {
+  line-height: 1.33333;  
+  font-size: clamp(var(--global-fontSize-l), 3vw, var(--global-fontSize-xxxl));
+}
+
 .c-fluid-text-m-xl {
   line-height: 1.33333;  
   font-size: clamp(var(--global-fontSize-m), 3vw, var(--global-fontSize-xl));
