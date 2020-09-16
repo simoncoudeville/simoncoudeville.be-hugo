@@ -55,13 +55,13 @@
 }
 
 .o-row--intro {
-    min-height: calc(50vh - calc(var(--global-whitespace-base) * 4));    
-    // padding-top: var(--global-whitespace-double);
-    align-items: end;
+    // min-height: calc(50vh - calc(var(--global-whitespace-base) * 4));    
+    padding-top: var(--global-whitespace-double);
+    // align-items: end;
 
-    @include mq(bp3) {
-        min-height: calc(50vh - calc(var(--global-whitespace-base) * 4));    
-    }
+    // @include mq(bp3) {
+    //     min-height: calc(50vh - calc(var(--global-whitespace-base) * 4));    
+    // }
 }
 
 .o-row--intro-home {
