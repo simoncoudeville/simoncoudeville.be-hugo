@@ -46,7 +46,8 @@ h1,
     // font-weight: $alpha-font-weight;
     // letter-spacing: -.015em;
     // font-family: serif;
-    font-weight: $alpha-font-weight;
+    // font-weight: $alpha-font-weight;
+    font-weight: $beta-font-weight;
     margin-bottom: var(--global-whitespace-base);
     @include ms-l;
 
@@ -58,19 +59,19 @@ h1,
         @include ms-xl;
     }
 
-    @include mq(bp4) {
-        @include ms-xxl;
-    }
+    // @include mq(bp4) {
+    //     @include ms-xxl;
+    // }
 
-    @include mq(bp5) {
-        @include ms-xxxl;
-    }
+    // @include mq(bp5) {
+    //     @include ms-xxxl;
+    // }
 }
 
 h2,
 .h2 {
-    // font-weight: $beta-font-weight;
-    font-weight: $alpha-font-weight;
+    font-weight: $beta-font-weight;
+    // font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-base);
     @include ms-m;
 }
@@ -78,8 +79,8 @@ h2,
 h3,
 .h3 {
     // text-transform: uppercase;
-    // font-weight: $beta-font-weight;
-    font-weight: $alpha-font-weight;
+    font-weight: $beta-font-weight;
+    // font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-base);
     // color: var(--global-meta-color);
     @include ms-base;
@@ -130,7 +131,7 @@ strong {
 // Links
 
 a {
-    // font-weight: $beta-font-weight;
+    font-weight: $beta-font-weight;
     font-family: $alpha-font-family;
     color: var(--global-link-color);
     transition: all $animation-duration-alpha $animation-easing-out;

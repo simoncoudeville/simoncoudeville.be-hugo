@@ -15,8 +15,8 @@
     align-content: space-between;
 
     @include mq(bp3) {
-        --grid-whitespace: var(--global-whitespace-double);
-        // padding: var(--global-whitespace-base);
+        // --grid-whitespace: var(--global-whitespace-double);
+        padding: var(--global-whitespace-base);
     }
 }
 
@@ -60,7 +60,7 @@
     align-items: end;
 
     @include mq(bp3) {
-        min-height: calc(50vh - calc(var(--global-whitespace-base) * 3));    
+        min-height: calc(50vh - calc(var(--global-whitespace-base) * 4));    
     }
 }
 

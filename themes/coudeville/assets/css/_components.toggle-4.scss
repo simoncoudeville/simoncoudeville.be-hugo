@@ -9,6 +9,7 @@
     color: var(--toggle-color, var(--global-meta-color));
     font-size: var(--global-fontSize-s);
     font-family: $alpha-font-family;
+    font-weight: $beta-font-weight;
     line-height: calc(var(--global-baseline-multiplier) * var(--global-baseline));
 }
 

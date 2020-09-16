@@ -18,8 +18,15 @@
     --global-saturation-color-gamma: #{saturation($color-gamma)};
     --global-lightness-color-gamma: #{lightness($color-gamma)};
 
-    --global-neutral-hue: var(--global-hue-color-beta);
+    --global-color-light: #{$color-light};
+    --global-hue-color-light: #{hue($color-light)};
+    --global-saturation-color-light: #{saturation($color-light)};
+    --global-lightness-color-light: #{lightness($color-light)};
+
+    // --global-neutral-hue: var(--global-hue-color-beta);
+    --global-neutral-hue: var(--global-hue-color-light);
     --global-neutral-saturation: 3%;
+    // --global-neutral-saturation: var(--global-saturation-color-light);
 
     --global-color-neutral-100: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 97%);
     --global-color-neutral-200: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 94%);

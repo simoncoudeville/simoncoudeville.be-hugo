@@ -13,11 +13,15 @@
         grid-template-columns: auto 1fr;
     }
 
+    // @include mq(bp5) {
+    //     grid-column: 1 / -1;
+    //     display: grid;
+    //     grid: var(--grid);
+    //     grid-gap: inherit;
+    // }
+
     @include mq(bp5) {
-        grid-column: 1 / -1;
-        display: grid;
-        grid: var(--grid);
-        grid-gap: inherit;
+        grid-column: startContent/endContent;
     }
 }
 
@@ -25,9 +29,9 @@
     margin-bottom: 0;
     grid-row: 1;
 
-    @include mq(bp5) {
-        grid-column: left;
-    }
+    // @include mq(bp5) {
+    //     grid-column: left;
+    // }
 }
 
 .c-header__meta {
@@ -38,7 +42,7 @@
     grid-column: 2;
     // @include ms-s;
 
-    @include mq(bp5) {
-        grid-column: startContent/endContent;        
-    }
+    // @include mq(bp5) {
+    //     grid-column: startContent/endContent;        
+    // }
 }
