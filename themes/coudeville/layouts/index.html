@@ -1,5 +1,5 @@
 {{ define "main" }}
-<header id="header" class="o-row o-row--header">
+<!-- <header id="header" class="o-row o-row--header">
     <div class="c-header">
         <h1 class="c-header__logo c-logo">
             <a href="/" class="c-logo__link">Simon Coudeville</a>
@@ -8,9 +8,11 @@
             Designer & Teacher
         </p>
     </div>
-</header>
+</header> -->
 
 {{ .Content }}
+
+{{ partial "home-articles.html" . -}}
 
 {{ partial "footer.html" . }}
 {{ end }}

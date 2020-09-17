@@ -106,7 +106,7 @@
 .c-terminal {
     --c-terminal-borderColor: var(--global-color-neutral-600);
     // border: 2px solid var(--c-terminal-borderColor);
-    border-radius: var(--global-whitespace-base);
+    border-radius: var(--global-whitespace-xs);
     background-color: var(--global-color-neutral-800);
     overflow: hidden;
     width: 100%;
@@ -127,6 +127,7 @@
 
 .c-terminal__button {
     --c-terminal__buttonSize: var(--global-whitespace-s);
+    --c-terminal__buttonSize: .75rem;
     --c-terminal__buttonMargin: calc(calc(var(--global-whitespace-double) - var(--c-terminal__buttonSize)) / 2);
     display: inline-block;
     height: var(--c-terminal__buttonSize);
