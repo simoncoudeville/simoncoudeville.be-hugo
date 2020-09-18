@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #252527;
+      }      
+      }      
+    </style>
+  </defs>
+  <g id="Cover" transform="translate(-516 -462)">
+    <path id="Intersection_11" data-name="Intersection 11" class="cls-1" d="M180,360a181.319,181.319,0,0,0-3.657-36.276,179.027,179.027,0,0,0-10.488-33.788,179.927,179.927,0,0,0-16.6-30.575,181.3,181.3,0,0,0-21.979-26.64,181.357,181.357,0,0,0-26.64-21.98,179.927,179.927,0,0,0-30.575-16.595,179.06,179.06,0,0,0-33.788-10.488A181.341,181.341,0,0,0,0,180V0A362.7,362.7,0,0,1,72.553,7.314a358.2,358.2,0,0,1,67.576,20.977,360.247,360.247,0,0,1,61.15,33.191,362.477,362.477,0,0,1,53.28,43.961,362.551,362.551,0,0,1,43.958,53.278,360.214,360.214,0,0,1,33.193,61.152,358.23,358.23,0,0,1,20.976,67.575A362.71,362.71,0,0,1,360,360Z" transform="translate(876 462)"/>
+    <path id="Path_1101" data-name="Path 1101" class="cls-1" d="M180,0,0,360H180Z" transform="translate(876 1182) rotate(-90)"/>
+    <path id="Path_1109" data-name="Path 1109" class="cls-1" d="M180,0,0,360H180Z" transform="translate(1236 822) rotate(90)"/>
+    <circle id="Ellipse_259" data-name="Ellipse 259" class="cls-1" cx="90" cy="90" r="90" transform="translate(516 462)"/>
+    <g id="Group_96" data-name="Group 96" transform="translate(-360 420)">
+      <rect id="Rectangle_390" data-name="Rectangle 390" class="cls-1" width="360" height="60" transform="translate(876 462)"/>
+      <rect id="Rectangle_391" data-name="Rectangle 391" class="cls-1" width="360" height="60" transform="translate(876 582)"/>
+      <rect id="Rectangle_392" data-name="Rectangle 392" class="cls-1" width="360" height="60" transform="translate(876 702)"/>
+    </g>
+    <rect id="Rectangle_406" data-name="Rectangle 406" class="cls-1" width="360" height="180" transform="translate(516 642)"/>
+  </g>
+</svg>

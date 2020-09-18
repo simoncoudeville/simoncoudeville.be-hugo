@@ -5,7 +5,7 @@
 */
 
 .c-footer {
-    grid-column: left/right;
+    grid-column: startContent/endContent;
     display: grid;
     grid-template-columns: auto 1fr;
 
@@ -14,7 +14,7 @@
         grid-template-columns: auto 1fr auto;
     }
 
-    @include mq(bp5) {
+    @include mq(bp4) {
         grid-column: 1 / -1;
         grid: var(--grid);
         grid-gap: inherit;
@@ -28,7 +28,7 @@
         grid-row: 1;
     }
 
-    @include mq(bp5) {
+    @include mq(bp4) {
         grid-row: 1;
         grid-column: left;
     }
@@ -42,7 +42,7 @@
         grid-column: 2;
     }
 
-    @include mq(bp5) {
+    @include mq(bp4) {
         grid-row: 1;
         grid-column: startContent/endContent;        
     }
@@ -57,7 +57,7 @@
         grid-column: 3;
     }
 
-    @include mq(bp5) {
+    @include mq(bp4) {
         grid-row: 1;
         grid-column: right;
     }

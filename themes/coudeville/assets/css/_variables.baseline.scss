@@ -14,11 +14,11 @@
     --global-whitespace-quadruple: calc(var(--global-whitespace-double) * 2);
 
     /* layout */
-    --global-content-maxWidth: calc(var(--global-baseline) * 120);
+    --global-content-maxWidth: calc(var(--global-baseline) * 115);
     --global-container-maxWidth: calc(var(--global-content-maxWidth) * 2);
 
     @include mq(bp3) {
         --global-root-fontSize: #{$root-font-size/16px*100%};
         --global-baseline: #{6px / $root-font-size}rem;
-    }  
+    }     
 }

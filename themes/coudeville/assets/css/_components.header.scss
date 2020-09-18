@@ -5,15 +5,15 @@
 */
 
 .c-header {
-    grid-column: left/endContent;
+    grid-column: startContent/endContent;
 
-    @include mq(bp3) {
+    // @include mq(bp3) {
         display: grid;
         grid-gap: var(--global-whitespace-base);
         grid-template-columns: auto 1fr;
-    }
+    // }
 
-    @include mq(bp5) {
+    @include mq(bp4) {
         grid-column: 1 / -1;
         display: grid;
         grid: var(--grid);
@@ -30,20 +30,17 @@
     margin-bottom: 0;
     grid-row: 1;
 
-    @include mq(bp5) {
+    @include mq(bp4) {
         grid-column: left;
     }
 }
 
-.c-header__meta {
-    // font-family: $alpha-font-family;
-    // font-weight: $alpha-font-weight;
-    color: var(--header__meta-color, var(--global-meta-color));   
-    // margin-bottom: 0;   
+.c-header__meta { 
     grid-column: 2;
-    // @include ms-s;
+    text-align: right;
 
-    @include mq(bp5) {
+    @include mq(bp4) {
+        text-align: left;
         grid-column: startContent/endContent;        
     }
 }

@@ -7,7 +7,8 @@
 .o-grid {
     --grid-whitespace: var(--global-whitespace-base);
     --grid-cell: minmax(0,calc(var(--global-content-maxWidth) / 2));
-    --grid: "start left startContent endContent right end" / var(--grid-whitespace) 1fr var(--grid-cell) var(--grid-cell) 1fr var(--grid-whitespace);            
+    --grid-left-side: 1fr;
+    --grid: "start left startContent endContent right end" / var(--grid-whitespace) var(--grid-left-side) var(--grid-cell) var(--grid-cell) 1fr var(--grid-whitespace);
     min-height: 100vh;
     display: grid;    
     grid: var(--grid);
@@ -17,6 +18,14 @@
     @include mq(bp3) {
         // --grid-whitespace: var(--global-whitespace-double);
         padding: var(--global-whitespace-base);
+    }
+
+    @include mq(bp4) {
+        --grid-left-side: 10fr;
+    }
+
+    @include mq(bp5) {
+        --grid-left-side: 1fr;
     }
 }
 
@@ -33,7 +42,7 @@
 }
 
 .o-row--lg {
-    padding: var(--global-whitespace-base) 0 0;
+    padding: var(--global-whitespace-base) 0;
 }
 
 .o-row--xl {
@@ -57,18 +66,21 @@
 .o-row--intro {
     // min-height: calc(50vh - calc(var(--global-whitespace-base) * 4));    
     padding-top: var(--global-whitespace-double);
-    // align-items: end;
+    // padding-bottom: var(--global-whitespace-double);
+    align-items: end;
+    // align-items: center;
 
     // @include mq(bp3) {
-    //     min-height: calc(50vh - calc(var(--global-whitespace-base) * 4));    
+    //     min-height: calc(50vh - calc(var(--global-whitespace-base) * 5));    
     // }
 }
 
 .o-row--intro-home {
-    min-height: calc(50vh - var(--global-whitespace-base) * 1);
-    padding-top: calc(var(--global-whitespace-double) * 2);
-    align-items: end;
-    grid-template-rows: auto;
+    // min-height: calc(50vh - var(--global-whitespace-base) * 1);
+    // padding-top: calc(var(--global-whitespace-double) * 2);
+    padding-top: var(--global-whitespace-base);
+    // align-items: end;
+    // grid-template-rows: auto;
 }
 
 .o-row--divide {
@@ -79,7 +91,7 @@
 .o-aside {
     grid-column: startContent/endContent;
 
-    @include mq(bp5) {
+    @include mq(bp4) {
         grid-column: left;
     }
 }

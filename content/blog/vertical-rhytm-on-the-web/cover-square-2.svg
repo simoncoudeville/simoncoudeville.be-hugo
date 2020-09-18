@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="716" height="716" viewBox="0 0 716 716">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #40e0d0;
+      }
+
+      .cls-2 {
+        fill: #252527;
+      }
+
+      .cls-3 {
+        fill: #d8d8da;
+      }
+
+      .cls-4 {
+        fill: #6a5acd;
+      }
+    </style>
+  </defs>
+  <g id="Cover" transform="translate(-518 -464)">
+    <circle id="Ellipse_259" data-name="Ellipse 259" class="cls-1" cx="178" cy="178" r="178" transform="translate(878 464)"/>
+    <rect id="Rectangle_406" data-name="Rectangle 406" class="cls-2" width="352" height="176" rx="88" transform="translate(518 644)"/>
+    <rect id="Rectangle_432" data-name="Rectangle 432" class="cls-3" width="352" height="176" rx="88" transform="translate(518 464)"/>
+    <rect id="Rectangle_431" data-name="Rectangle 431" class="cls-4" width="712" height="356" rx="178" transform="translate(518 824)"/>
+  </g>
+</svg>

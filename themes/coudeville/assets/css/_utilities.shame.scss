@@ -35,7 +35,7 @@
         gap: var(--global-whitespace-base);
     }
 
-    @include mq(bp5) { 
+    @include mq(bp4) { 
         display: block;
     }
 }
