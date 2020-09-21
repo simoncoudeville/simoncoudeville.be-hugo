@@ -12,12 +12,14 @@
     min-height: 100vh;
     display: grid;    
     grid: var(--grid);
-    grid-row-gap: var(--global-whitespace-base);
+    // grid-gap: var(--global-whitespace-base);
     align-content: space-between;
+    position: relative;
 
     @include mq(bp3) {
         // --grid-whitespace: var(--global-whitespace-double);
         padding: var(--global-whitespace-base);
+        // grid-gap: var(--global-whitespace-double);
     }
 
     @include mq(bp4) {
@@ -27,6 +29,22 @@
     @include mq(bp5) {
         --grid-left-side: 1fr;
     }
+
+    @include mq(bp7) {
+        // --grid-left-side: max(var(--global-content-maxWidth));
+    }
+
+
+    // &:after {
+    //     content: "";
+    //     display: block;
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     grid-column: right/end;
+    //     grid-row: 1/9999;
+    //     background-color: #fff;
+    // }
 }
 
 .o-row {
@@ -57,6 +75,10 @@
 
 .o-row--header {
     padding-top: var(--global-whitespace-base);    
+
+    // @include mq(bp3) {
+    //     padding-top: var(--global-whitespace-double);    
+    // }
 }
 
 .o-row--main {
