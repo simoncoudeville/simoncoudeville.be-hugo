@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="961" height="1440.854" viewBox="0 0 961 1440.854">
+  <g id="grid" transform="translate(-1199.5 0.354)">
+    <line id="Line_37" data-name="Line 37" y1="239" transform="translate(1440 720.5)" fill="none" stroke="#d8d8da" stroke-linecap="square" stroke-width="1"/>
+    <circle id="Ellipse_298" data-name="Ellipse 298" cx="240" cy="240" r="240" transform="translate(1680 240)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <ellipse id="Ellipse_299" data-name="Ellipse 299" cx="120.5" cy="120" rx="120.5" ry="120" transform="translate(1320 600)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <line id="Line_47" data-name="Line 47" x2="480" y2="240" transform="translate(1440 960)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <line id="Line_49" data-name="Line 49" x1="241" y2="240" transform="translate(1200)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <line id="Line_50" data-name="Line 50" x1="241" y1="240" transform="translate(1200 240)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1881" data-name="Path 1881" d="M0,0V240" transform="translate(1440)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1881-2" data-name="Path 1881" d="M0,0V240" transform="translate(1680)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1881-3" data-name="Path 1881" d="M0,0V240" transform="translate(1920)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1883" data-name="Path 1883" d="M0,0V240" transform="translate(1920 240)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1881-4" data-name="Path 1881" d="M0,0V1440" transform="translate(1200)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1881-5" data-name="Path 1881" d="M0,0V240" transform="translate(1680 240)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1881-6" data-name="Path 1881" d="M0,0V240" transform="translate(1920 240)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1881-7" data-name="Path 1881" d="M0,0V240" transform="translate(1200 480)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1881-8" data-name="Path 1881" d="M0,0V240" transform="translate(1440 480)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1881-9" data-name="Path 1881" d="M0,0V240" transform="translate(1920 480)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1881-10" data-name="Path 1881" d="M0,0V240" transform="translate(1200 720)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1881-11" data-name="Path 1881" d="M0,0V240" transform="translate(1440 720)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1881-12" data-name="Path 1881" d="M0,0V240" transform="translate(1680 720)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1881-13" data-name="Path 1881" d="M0,0V240" transform="translate(1920 720)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1881-14" data-name="Path 1881" d="M0,0V240" transform="translate(1200 960)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1881-15" data-name="Path 1881" d="M0,0V240" transform="translate(1440 960)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1881-16" data-name="Path 1881" d="M0,0V240" transform="translate(1920 960)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1881-17" data-name="Path 1881" d="M0,0V240" transform="translate(1200 1200)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1881-18" data-name="Path 1881" d="M0,0V240" transform="translate(1440 1200)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1881-19" data-name="Path 1881" d="M0,0V240" transform="translate(1680 1200)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882" data-name="Path 1882" d="M-.5,0h240" transform="translate(1200.5 240)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882-2" data-name="Path 1882" d="M-.5,0h240" transform="translate(1440.5 240)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882-3" data-name="Path 1882" d="M-.5,0h240" transform="translate(1200.5 480)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882-4" data-name="Path 1882" d="M-.5,0h240" transform="translate(1440.5 480)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882-5" data-name="Path 1882" d="M-.5,0h240" transform="translate(1920.5 480)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882-6" data-name="Path 1882" d="M-.5,0h240" transform="translate(1440.5 720)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882-7" data-name="Path 1882" d="M-.5,0h240" transform="translate(1680.5 720)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882-8" data-name="Path 1882" d="M-.5,0h240" transform="translate(1920.5 720)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882-9" data-name="Path 1882" d="M-.5,0h240" transform="translate(1200.5 960)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882-10" data-name="Path 1882" d="M-.5,0h240" transform="translate(1440.5 960)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882-11" data-name="Path 1882" d="M-.5,0h240" transform="translate(1680.5 960)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882-12" data-name="Path 1882" d="M-.5,0h240" transform="translate(1920.5 960)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882-13" data-name="Path 1882" d="M-.5,0h240" transform="translate(1200.5 1200)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882-14" data-name="Path 1882" d="M-.5,0h240" transform="translate(1440.5 1200)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882-15" data-name="Path 1882" d="M-.5,0h240" transform="translate(1680.5 1200)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882-16" data-name="Path 1882" d="M-.5,0h240" transform="translate(1920.5 1200)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882-17" data-name="Path 1882" d="M-.5,0h240" transform="translate(1200.5 1440)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882-18" data-name="Path 1882" d="M-.5,0h240" transform="translate(1440.5 1440)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882-19" data-name="Path 1882" d="M-.5,0h240" transform="translate(1680.5 1440)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+    <path id="Path_1882-20" data-name="Path 1882" d="M-.5,0h240" transform="translate(1920.5 1440)" fill="none" stroke="#d8d8da" stroke-width="1"/>
+  </g>
+</svg>

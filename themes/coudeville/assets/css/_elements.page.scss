@@ -32,8 +32,8 @@
 html {
     background-color: var(--global-backgroundColor);
     color: var(--global-text-color);
-    // font-family: $beta-font-family;
-    font-family: $alpha-font-family;
+    font-family: $beta-font-family;
+    // font-family: $alpha-font-family;
     font-size: var(--global-root-fontSize);
     font-feature-settings: "zero", "liga";
     -webkit-font-smoothing: antialiased;

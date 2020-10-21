@@ -5,7 +5,7 @@
 */
 
 .c-footer {
-    grid-column: startContent/endContent;
+    grid-column: content;
     display: grid;
     grid-template-columns: auto 1fr;
 
@@ -44,7 +44,7 @@
 
     @include mq(bp4) {
         grid-row: 1;
-        grid-column: startContent/endContent;        
+        grid-column: content;        
     }
 }
 
@@ -59,6 +59,10 @@
 
     @include mq(bp4) {
         grid-row: 1;
+        grid-column: content;
+    }
+
+    @include mq(bp5) {
         grid-column: right;
     }
 }

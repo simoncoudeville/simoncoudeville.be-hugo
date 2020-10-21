@@ -5,7 +5,7 @@
 */
 
 .c-header {
-    grid-column: startContent/endContent;
+    grid-column: content;
 
     // @include mq(bp3) {
         display: grid;
@@ -21,7 +21,7 @@
     }
 
     // @include mq(bp5) {
-    //     grid-column: startContent/endContent;
+    //     grid-column: content;
     // }
 }
 
@@ -41,6 +41,6 @@
 
     @include mq(bp4) {
         text-align: left;
-        grid-column: startContent/endContent;        
+        grid-column: content;        
     }
 }

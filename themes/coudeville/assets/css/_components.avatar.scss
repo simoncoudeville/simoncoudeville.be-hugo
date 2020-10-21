@@ -44,7 +44,8 @@
         // background-color: khaki;
         // background-color: LightGoldenRodYellow;
         // background-color: palegoldenrod;
-        background-color: var(--global-surfaceColor);
+        // background-color: var(--global-surfaceColor);
+        box-shadow: inset 0 0 0 1px var(--global-border-color);
     }
 
     img {

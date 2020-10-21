@@ -14,11 +14,18 @@
     --global-whitespace-quadruple: calc(var(--global-whitespace-double) * 2);
 
     /* layout */
-    --global-content-maxWidth: calc(var(--global-baseline) * 115);
+    // --global-content-maxWidth: calc(var(--global-baseline) * 120);
+    --global-content-maxWidth: 37rem;
     --global-container-maxWidth: calc(var(--global-content-maxWidth) * 2);
 
     @include mq(bp3) {
         --global-root-fontSize: #{$root-font-size/16px*100%};
         --global-baseline: #{6px / $root-font-size}rem;
     }     
+    
+    // @include mq(bp7) {
+    //     --global-root-fontSize: #{$root-font-size-lg/16px*100%};
+    //     --global-baseline: #{6px / $root-font-size-lg}rem;
+    //     --global-baseline-multiplier: 5.5;
+    // }     
 }

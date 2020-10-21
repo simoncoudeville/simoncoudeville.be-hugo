@@ -28,11 +28,19 @@
     // color: var(--global-backgroundColor);
     font-size: var(--global-fontSize-s);
     font-family: $alpha-font-family;
-    font-weight: $beta-font-weight;
+    // font-weight: $beta-font-weight;
     line-height: var(--global-whitespace-base);
-    // padding: var(--global-whitespace-xs) var(--global-whitespace-s) var(--global-whitespace-xs) var(--global-whitespace-m);
-    // border-radius: var(--global-whitespace-base);
+    padding: var(--global-whitespace-xs) var(--global-whitespace-s) var(--global-whitespace-xs) var(--global-whitespace-s);
+    border-radius: var(--global-whitespace-double);
+    // border-radius: var(--global-whitespace-xxs);
+    border: 1px solid var(--global-border-color);
     outline: none;
+    transition: all $animation-duration-alpha $animation-easing-out;
+}
+
+.c-theme-button:hover {
+    background-color: var(--global-surfaceColor);
+    // box-shadow: 0 2px 10px hsla(0,0,0,.1) ;
 }
 
 .c-theme-button:focus {
@@ -41,6 +49,8 @@
 
 .c-theme-button:active {
     box-shadow: none;
+    background-color: var(--global-border-color);
+
 }
 
 .c-theme-button.is-enabled {
@@ -50,10 +60,11 @@
 
 .c-theme-button__icon {
     fill: currentColor;
-    width: var(--global-whitespace-m);
-    height: var(--global-whitespace-m);
+    // width: var(--global-whitespace-m);
+    width: var(--global-whitespace-s);
+    // height: var(--global-whitespace-m);
     // margin-left: var(--global-whitespace-s);
-    margin-right: var(--global-whitespace-s);
+    margin-right: var(--global-whitespace-xs);
 }
 
 .c-post-cover {
@@ -104,10 +115,10 @@
 }
 
 .c-terminal {
-    --c-terminal-borderColor: var(--global-color-neutral-600);
-    // border: 2px solid var(--c-terminal-borderColor);
+    --c-terminal-borderColor: var(--global-color-neutral-700);
+    border: 1px solid var(--c-terminal-borderColor);
     border-radius: var(--global-whitespace-xs);
-    background-color: var(--global-color-neutral-800);
+    background-color: var(--global-color-neutral-900);
     overflow: hidden;
     width: 100%;
     height: auto;
@@ -133,9 +144,9 @@
     height: var(--c-terminal__buttonSize);
     width: var(--c-terminal__buttonSize);
     border-radius: 100%;
-    // border: 2px solid var(--c-terminal-borderColor);
+    border: 1px solid var(--c-terminal-borderColor);
     margin: var(--c-terminal__buttonMargin) var(--c-terminal__buttonMargin) 0;
-    background-color: var(--global-color-neutral-600);
+    background-color: var(--global-color-neutral-700);
 
     & + & {
         margin-left: calc(var(--c-terminal__buttonMargin) / -2);

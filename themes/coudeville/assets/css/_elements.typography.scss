@@ -51,10 +51,6 @@ h1,
     margin-bottom: var(--global-whitespace-base);
     @include ms-l;
 
-    @include mq(bp2) {
-        @include ms-l;
-    }
-
     @include mq(bp3) {
         @include ms-xl;
     }
@@ -136,6 +132,7 @@ a {
     color: var(--global-link-color);
     transition: all $animation-duration-alpha $animation-easing-out;
     display: inline-block;
+    text-decoration-thickness: from-font;
     // text-decoration: underline var(--global-meta-color);
 
     &:visited {

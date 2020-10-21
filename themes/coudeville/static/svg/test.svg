@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="480" height="960" viewBox="0 0 480 960">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#40e0d0"/>
+      <stop offset="1" stop-color="#efeff0"/>
+    </linearGradient>
+  </defs>
+  <g id="Test" transform="translate(-1200)">
+    <rect id="Rectangle_440" data-name="Rectangle 440" width="480" height="480" transform="translate(1200)" fill="#d8d8da"/>
+    <rect id="Rectangle_446" data-name="Rectangle 446" width="480" height="480" transform="translate(1200)" fill="#d8d8da"/>
+    <rect id="Rectangle_441" data-name="Rectangle 441" width="240" height="240" transform="translate(1440 240)" fill="#ffb6c1"/>
+    <rect id="Rectangle_442" data-name="Rectangle 442" width="240" height="240" transform="translate(1200 240)" fill="#efeff0"/>
+    <rect id="Rectangle_443" data-name="Rectangle 443" width="240" height="240" transform="translate(1200 480)" fill="#40e0d0"/>
+    <rect id="Rectangle_448" data-name="Rectangle 448" width="240" height="480" transform="translate(1440 480)" fill="url(#linear-gradient)"/>
+    <rect id="Rectangle_447" data-name="Rectangle 447" width="240" height="240" transform="translate(1200 720)" fill="#19191a"/>
+  </g>
+</svg>

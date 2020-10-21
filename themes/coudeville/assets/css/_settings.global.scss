@@ -10,6 +10,7 @@
 
 $root-font-size-sm: 17px; // for mobile
 $root-font-size: 19px; // for larger screens
+$root-font-size-lg: 21px; // for larger screens
 
 // Basic font settings
 
@@ -32,10 +33,10 @@ $breakpoints: (
     bp1                     : 320/16*1rem,
     bp2                     : 420/16*1rem,
     bp3                     : 640/16*1rem,
-    bp4                     : 1020/16*1rem,
-    bp5                     : 1200/16*1rem,
+    bp4                     : 1035/16*1rem,
+    bp5                     : 1235/16*1rem,
     bp6                     : 1440/16*1rem,
-    bp7                     : 1920/16*1rem
+    bp7                     : 1800/16*1rem
 ) !default;
 
 // ---

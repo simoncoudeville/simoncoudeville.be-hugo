@@ -3,7 +3,7 @@
     <head>
         {{- partial "head.html" . -}}
     </head>
-    <body class="o-grid">
+    <body class="o-grid{{ if .Params.Homepage }} is-home{{ end }}">
         {{- block "main" . }}{{- end -}}
         {{- partial "javascript.html" . -}}
     </body>
