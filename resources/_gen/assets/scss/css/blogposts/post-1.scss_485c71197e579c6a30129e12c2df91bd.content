@@ -1,0 +1,122 @@
+.theme-light {
+  --global-backgroundColor: var(--global-color-neutral-200);
+  --global-surfaceColor: white;
+  --global-surfaceColor-2: var(--global-color-neutral-100);
+  --global-text-color: var(--global-color-neutral-900);
+  --global-heading-color: var(--global-color-neutral-900);
+  --global-meta-color: var(--global-color-neutral-500);
+  --global-border-color: var(--global-color-neutral-300);
+  --global-border-color-hard: var(--global-color-neutral-400);
+  --global-shadow-border-color: rgba(0, 0, 0, .1);
+  --global-link-color: var(--global-heading-color);
+  --global-link-hover-color: var(--global-text-color);
+  --global-selection-backgroundColor: var(--global-text-color);
+  --global-selection-color: var(--global-backgroundColor); }
+
+.theme-dark {
+  --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 53.5%);
+  --global-backgroundColor: var(--global-color-neutral-900);
+  --global-surfaceColor: var(--global-color-neutral-800);
+  --global-surfaceColor-2: var(--global-color-neutral-700);
+  --global-text-color: var(--global-color-neutral-100);
+  --global-heading-color: var(--global-color-neutral-100);
+  --global-border-color: var(--global-color-neutral-700);
+  --global-border-color-hard: var(--global-color-neutral-600);
+  --global-shadow-border-color: rgba(255, 255, 255, .1); }
+
+.c-theme-button {
+  display: none;
+  font-size: var(--global-fontSize-s);
+  font-family: "Suisse Intl Web", sans-serif;
+  font-weight: 500;
+  line-height: var(--global-whitespace-base);
+  outline: none; }
+
+.c-theme-button:focus {
+  box-shadow: var(--theme-button-focus-shadow, 0 0 0 2px var(--global-backgroundColor), 0 0 0 4px var(--global-text-color)); }
+
+.c-theme-button:active {
+  box-shadow: none; }
+
+.c-theme-button.is-enabled {
+  display: flex;
+  align-items: center; }
+
+.c-theme-button__icon {
+  fill: currentColor;
+  width: var(--global-whitespace-m);
+  height: var(--global-whitespace-m);
+  margin-right: var(--global-whitespace-s); }
+
+.c-post-cover {
+  background-color: var(--global-color-neutral-800);
+  height: 0;
+  padding-bottom: 50%;
+  overflow: hidden; }
+
+.c-post-cover__body {
+  padding: var(--global-whitespace-base); }
+  @media (min-width: 40rem) {
+    .c-post-cover__body {
+      padding: var(--global-whitespace-double); } }
+
+.c-cursor-text {
+  color: var(--global-color-neutral-100);
+  font-family: "Suisse Intl Web Mono", monospace; }
+  .c-cursor-text:after {
+    content: "";
+    content: "_";
+    -webkit-animation: 1s blink step-end infinite;
+            animation: 1s blink step-end infinite; }
+
+.c-terminal-cover {
+  grid-column: left/right; }
+
+.c-terminal {
+  --c-terminal-borderColor: var(--global-color-neutral-600);
+  border-radius: var(--global-whitespace-xs);
+  background-color: var(--global-color-neutral-800);
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  color: var(--global-color-neutral-100); }
+
+.c-terminal__top {
+  display: flex; }
+
+.c-terminal__button {
+  --c-terminal__buttonSize: var(--global-whitespace-s);
+  --c-terminal__buttonSize: .75rem;
+  --c-terminal__buttonMargin: calc(calc(var(--global-whitespace-double) - var(--c-terminal__buttonSize)) / 2);
+  display: inline-block;
+  height: var(--c-terminal__buttonSize);
+  width: var(--c-terminal__buttonSize);
+  border-radius: 100%;
+  margin: var(--c-terminal__buttonMargin) var(--c-terminal__buttonMargin) 0;
+  background-color: var(--global-color-neutral-600); }
+  .c-terminal__button + .c-terminal__button {
+    margin-left: calc(var(--c-terminal__buttonMargin) / -2); }
+
+.c-terminal__body {
+  padding: var(--global-whitespace-base); }
+  @media (min-width: 40rem) {
+    .c-terminal__body {
+      padding: var(--global-whitespace-double); } }
+
+@media (prefers-color-scheme: dark) {
+  .c-terminal-cover {
+    padding-top: 0;
+    padding-bottom: 0; } }
+
+@-webkit-keyframes "blink" {
+  from, to {
+    opacity: 0; }
+  50% {
+    opacity: 1; } }
+
+@keyframes "blink" {
+  from, to {
+    opacity: 0; }
+  50% {
+    opacity: 1; } }
