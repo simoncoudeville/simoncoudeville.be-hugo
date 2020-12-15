@@ -40,7 +40,7 @@ html {
     font-size: clamp(1em, 1.25vw, 2em);
     line-height: 1.5;
     font-family: "Suisse Intl Web Mono", monospace;;
-    font-feature-settings: "liga";
+    font-feature-settings: "liga", "ss01";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
@@ -92,9 +92,12 @@ a:hover {
 .info {
     text-align: right;
     margin-bottom: calc(var(--body-whitespace) * -1);
+    // margin-bottom: calc(var(--body-whitespace) * 1);
+    // margin-bottom: 1.5rem;
 }
 
 .sam {
+    // margin-top: 0;
     pointer-events: none;
     fill: var(--global-surface-color);
     max-height: calc(100vh - var(--body-whitespace));
