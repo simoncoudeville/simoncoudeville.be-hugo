@@ -1,22 +1,17 @@
 {{ define "main" }}
-<header id="header" class="o-row o-row--top" id="top">
+<header class="o-row o-row--top" id="top">
     <div class="c-header">
-        <!-- <p class="c-header__logo c-logo">
+        <p class="c-header__logo c-logo">
             <a href="/" class="c-logo__link">Simon Coudeville</a>
-        </p> -->
-        <p class="c-header__back">
-            <a href="/" class="c-back-link">
-                <!-- ← -->
-                <svg class="c-back-link__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18 18">
-                    <path id="Path_1886" data-name="Path 1886"
-                        d="M3.325,14.725H14.459V13.053H3.325L7.353,9.044,6.289,7.98.38,13.889,6.289,19.8l1.064-1.045Z"
-                        transform="translate(1.62 -4.98)" fill="currentColor" />
-                </svg>
-            </a>
         </p>
+        <!-- <p class="c-header__back">
+            <a href="/" class="c-back-link">
+                ←               
+            </a>
+        </p> -->
         <p class="c-header__meta u-muted">
             {{ .Date.Format "2 January 2006" }}
-        </p>        
+        </p>         
     </div>
 </header>
 <article class="o-row">

@@ -16,7 +16,7 @@
     /* layout */
     // --global-content-maxWidth: calc(var(--global-baseline) * 120);
     --global-content-maxWidth: 37rem;
-    --global-container-maxWidth: calc(var(--global-content-maxWidth) * 2);
+    --global-container-maxWidth: calc(var(--global-content-maxWidth) * 3);
 
     @include mq(bp3) {
         --global-root-fontSize: #{$root-font-size/16px*100%};

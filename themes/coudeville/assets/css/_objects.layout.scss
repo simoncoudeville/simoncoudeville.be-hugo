@@ -4,43 +4,36 @@
     Global layout styles
 */
 
-.o-grid {
-    --grid-start: var(--global-whitespace-base);
-    --grid-end: var(--global-whitespace-base);
+.o-grid {    
     --grid-content: minmax(0,var(--global-content-maxWidth));
     --grid-left: 1fr;
     --grid-right: 1fr;
     --grid: "left content right" / var(--grid-left) var(--grid-content) var(--grid-right);
+    --grid-whitespace: var(--global-whitespace-base);
     min-height: 100vh;
     display: grid;    
     grid: var(--grid);
     grid-row-gap: var(--global-whitespace-base);
     align-content: space-between;
     position: relative;
-    padding: 0 var(--global-whitespace-base);
+    // padding: var(--global-whitespace-base) var(--global-whitespace-base) 0;
+    padding: 0 var(--grid-whitespace) calc(var(--grid-whitespace) - var(--global-whitespace-base));    
 
     @include mq(bp3) {
-        --grid-start: 0;
-        --grid-end: 0;
-        padding: 0 var(--global-whitespace-double) var(--global-whitespace-base);  
+        --grid-whitespace: var(--global-whitespace-double);
+        // padding: var(--global-whitespace-double) var(--global-whitespace-double) var(--global-whitespace-base);  
     }
 
     @include mq(bp4) {
-        --grid-start: var(--global-whitespace-base);
-        --grid-right: 0;
+        --grid: "left content" / var(--grid-left) var(--grid-content);
         grid-column-gap: var(--global-whitespace-base);    
-        padding: 0 var(--global-whitespace-base) var(--global-whitespace-base) var(--global-whitespace-double);
     }
 
     @include mq(bp5) {
-        --grid-end: var(--global-whitespace-base);
-        --grid-right: 1fr;   
-        grid-column-gap: var(--global-whitespace-double);    
-        padding: 0 var(--global-whitespace-double) var(--global-whitespace-base);
-    }
-
-    @include mq(bp7) {
-        // --grid-left: minmax(auto, calc(calc(1800px - var(--global-content-maxWidth))/2 - calc(var(--global-whitespace-base) * 3)));
+        --grid-whitespace: calc(var(--global-whitespace-base) + 5vw);
+        --grid: "left content right" / var(--grid-left) var(--grid-content) var(--grid-right);
+        grid-column-gap: var(--global-whitespace-double);
+        // padding: var(--grid-whitespace) var(--grid-whitespace) calc(var(--grid-whitespace) - var(--global-whitespace-base));    
     }
     
 }
@@ -55,23 +48,30 @@
     .o-row {
         grid-row-gap: 0
     }
-}
 
-.o-row--top {
-    padding-top: var(--global-whitespace-base);    
+    @include mq(bp4) {
+        grid-column: left / content;
+    }
 
-    @include mq(bp3) {
-        padding-top: var(--global-whitespace-double);    
+    @include mq(bp5) {
+        grid-column: left / right;
     }
 }
 
+.o-row--top {
+    padding-top: var(--grid-whitespace);    
+}
+
 .o-row--intro {
-    min-height: calc(50vh - calc(var(--global-whitespace-base) * 4));    
-    padding-top: var(--global-whitespace-double);
+    min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-double));    
+    // min-height: calc(50vh - calc(var(--global-whitespace-base) * 4));    
+    // padding-top: var(--global-whitespace-double);
+    // padding-top: calc(var(--grid-whitespace) - var(--global-whitespace-double));
     align-items: end;
 
     @include mq(bp3) {
-        min-height: calc(50vh - calc(var(--global-whitespace-base) * 5));    
+        // min-height: calc(50vh - calc(var(--global-whitespace-base) * 5));    
+        // min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-double));    
     }
 }
 

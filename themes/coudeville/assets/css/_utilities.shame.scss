@@ -41,30 +41,39 @@
 }
 
 .c-back-link {
+    --c-back-link__icon-size: var(--global-whitespace-s);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    width: var(--global-whitespace-double);
-    height: var(--global-whitespace-double);
-    border-radius: 100%;
-    margin-top: calc(var(--global-whitespace-base) * -1);
-    border: 1px solid var(--global-border-color);
+    // height: var(--global-whitespace-base);
+    // width: var(--global-whitespace-double);
+    // height: var(--global-whitespace-double);
+    // margin-left: calc(var(--global-whitespace-double) - var(--c-back-link__icon-size) / 2);
+    // border-radius: 100%;
+    padding: var(--global-whitespace-xs) var(--global-whitespace-s);
+    margin-top: calc(var(--global-whitespace-xs) * -1);
+    margin-left: calc(var(--global-whitespace-s) * -1);
+    // border: 1px solid var(--global-border-color);
 
-    &:hover {
-        background-color: var(--global-surfaceColor);
-    }
+    // &:hover {
+    //     background-color: var(--global-surfaceColor);
+    // }
 
-    &:active {
-        background-color: var(--global-border-color);
-    }
+    // &:active {
+    //     background-color: var(--global-border-color);
+    // }   
 }
 
 .c-back-link__icon {
-    width: var(--global-whitespace-s);
+    width: var(--c-back-link__icon-size);
 }
 
 .is-home {
+
+    grid-row-gap: calc(var(--grid-whitespace) - var(--global-whitespace-base));
+    // background-color: lavender;
+
     @include mq(bp5) {
         &:before {
             content: "";
@@ -81,7 +90,7 @@
             // background: transparent url("../svg/space.svg");
             // background-repeat: no-repeat;
             // background-size: cover;
-            background: transparent url("../svg/grid-2.svg");
+            // background: transparent url("../svg/grid-2.svg");
             // background: transparent url("../img/grid.png");
             // background: transparent url("../svg/test.svg");
 
@@ -92,18 +101,17 @@
             // mix-blend-mode: darken;
             // background-position: 100% 100%;
             // opacity: .25;        
-            image-rendering: pixelated;    
-            // image-rendering: crisp-edges;    
+            // image-rendering: pixelated;    
 
             // background-image: url("../img/gradient-noise.gif");
             // background-size: 2500px auto;
             // background-repeat: repeat-y;
-            // mix-blend-mode: screen;
-            mix-blend-mode: darken;
+            // // mix-blend-mode: screen;
+            // mix-blend-mode: darken;
             // filter: invert(100%);
             // background-position: 100% 100%;
             // opacity: .25;        
-            image-rendering: pixelated;    
+            // image-rendering: pixelated;    
 
             // background-image: url("../img/wallpaper-516.gif");
             // background-size: 4800px auto;
