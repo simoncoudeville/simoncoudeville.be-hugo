@@ -22,6 +22,7 @@
 }
 
 .c-footer__copy {
+    font-family: $beta-font-family;
     grid-row: 2;    
 
     @include mq(bp3) {

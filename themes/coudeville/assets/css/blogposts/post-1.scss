@@ -25,10 +25,10 @@
 .c-theme-button {
     display: none;
     // background-color: var(--global-text-color);
-    // color: var(--global-backgroundColor);
+    color: var(--global-heading-color);
     font-size: var(--global-fontSize-s);
     font-family: $alpha-font-family;
-    // font-weight: $beta-font-weight;
+    font-weight: $beta-font-weight;
     line-height: var(--global-whitespace-base);
     padding: var(--global-whitespace-xs) var(--global-whitespace-s) var(--global-whitespace-xs) var(--global-whitespace-s);
     border-radius: var(--global-whitespace-double);

@@ -15,7 +15,7 @@
 
     /* layout */
     // --global-content-maxWidth: calc(var(--global-baseline) * 120);
-    --global-content-maxWidth: 37rem;
+    --global-content-maxWidth: 36rem;
     --global-container-maxWidth: calc(var(--global-content-maxWidth) * 3);
 
     @include mq(bp3) {
@@ -23,9 +23,9 @@
         --global-baseline: #{6px / $root-font-size}rem;
     }     
     
-    // @include mq(bp7) {
-    //     --global-root-fontSize: #{$root-font-size-lg/16px*100%};
-    //     --global-baseline: #{6px / $root-font-size-lg}rem;
-    //     --global-baseline-multiplier: 5.5;
-    // }     
+    @include mq(bp5) {
+        // --global-root-fontSize: #{$root-font-size-lg/16px*100%};
+        // --global-baseline: #{6px / $root-font-size-lg}rem;
+        // --global-baseline-multiplier: 4;
+    }     
 }

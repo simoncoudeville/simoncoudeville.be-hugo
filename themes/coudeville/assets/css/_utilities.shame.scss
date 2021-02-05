@@ -71,7 +71,7 @@
 
 .is-home {
 
-    grid-row-gap: calc(var(--grid-whitespace) - var(--global-whitespace-base));
+    // grid-row-gap: calc(var(--grid-whitespace) - var(--global-whitespace-base));
     // background-color: lavender;
 
     @include mq(bp5) {
@@ -97,10 +97,9 @@
             // background-attachment: fixed;
 
             // background-image: url("../img/wallpaper-516.gif");
-            // background-size: 3600px auto;
-            // mix-blend-mode: darken;
+            // background-size: 1800px auto;
+            // mix-blend-mode: lighten;
             // background-position: 100% 100%;
-            // opacity: .25;        
             // image-rendering: pixelated;    
 
             // background-image: url("../img/gradient-noise.gif");
