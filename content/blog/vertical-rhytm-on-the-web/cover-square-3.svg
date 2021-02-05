@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="720" height="720" viewBox="0 0 720 720">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" y1="0.34" x2="0" y2="0.339" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="salmon"/>
+      <stop offset="1" stop-color="#eb8677" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Cover" transform="translate(-516 -462)">
+    <path id="Union_142" data-name="Union 142" d="M-8008-2807v-120l720,120v120Z" transform="translate(8524 3389)" fill="#bebdc1"/>
+    <rect id="Rectangle_406" data-name="Rectangle 406" width="720" height="120" transform="translate(516 702)" fill="url(#linear-gradient)"/>
+    <rect id="Rectangle_453" data-name="Rectangle 453" width="720" height="120" transform="translate(516 822)" fill="salmon"/>
+    <path id="Path_1887" data-name="Path 1887" d="M720,0,0-120V0L720,120Z" transform="translate(516 1062)" fill="#38383b"/>
+  </g>
+</svg>

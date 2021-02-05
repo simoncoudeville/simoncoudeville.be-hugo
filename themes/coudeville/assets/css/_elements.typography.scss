@@ -79,7 +79,7 @@ h3,
 .h3 {
     // text-transform: uppercase;
     // font-weight: $beta-font-weight;
-    font-weight: $alpha-font-weight;
+    // font-weight: $alpha-font-weight;
     font-family: $alpha-font-family;
     // margin-top: calc(var(--global-whitespace-base) + var(--global-whitespace-xs));
     // margin-bottom: var(--global-whitespace-s);
@@ -91,7 +91,7 @@ h3,
 h4,
 .h4 {
     font-family: $alpha-font-family;
-    font-weight: $beta-font-weight;
+    // font-weight: $beta-font-weight;
     // font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-base);
     @include ms-base;

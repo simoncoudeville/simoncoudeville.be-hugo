@@ -40,13 +40,7 @@
                 <span class="c-list__meta">{{ .Date.Format "2 January 2006" }}</span>
                 <h3 class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></h3>
             </li>
-            {{ end }}
-            {{ range .Pages }}
-            <li class="c-list__item">
-                <span class="c-list__meta">{{ .Date.Format "2 January 2006" }}</span>
-                <h3 class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></h3>
-            </li>
-            {{ end }}
+            {{ end }}            
         </ul>
     </div>
 </main>
