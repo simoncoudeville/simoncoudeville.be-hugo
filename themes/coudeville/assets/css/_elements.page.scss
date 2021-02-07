@@ -52,7 +52,7 @@ html {
 
 body {
     // background-color: var(--global-surfaceColor);
-    // max-width: var(--global-container-maxWidth);
+    max-width: var(--global-container-maxWidth);
     margin: 0 auto;
     font-size: var(--global-fontSize);
     line-height: baseline(var(--global-baseline-multiplier));    

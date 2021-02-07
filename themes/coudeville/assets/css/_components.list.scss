@@ -18,10 +18,13 @@
     margin-bottom: 0;
 }
 
-.c-list__meta {
-    font-family: $beta-font-family;
-    color: var(--global-meta-color);
-}
+// .c-list__meta {
+    // font-family: $code-font-family;
+    // // text-transform: uppercase;
+    // @include ms-xs;
+    // font-family: $beta-font-family;
+    // color: var(--global-meta-color);
+// }
 
 .c-list__link {
     &::after {
