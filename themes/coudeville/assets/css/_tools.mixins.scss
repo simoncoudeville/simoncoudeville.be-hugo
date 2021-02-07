@@ -11,7 +11,7 @@
 
 @mixin mq($breakpoint, $query1: min, $query2: width) {
     $query: map-get($breakpoints, $breakpoint);
-
+    
     @if $query != null {
         @media (#{$query1}-#{$query2}: #{$query}) {
             @content;
@@ -25,10 +25,36 @@
 
 // return css color variable with different opacity value
 @function alpha($color, $opacity){
-  $color: str-replace($color, 'var(');
-  $color: str-replace($color, ')');
-  $color-h: var(#{$color+'-h'});
-  $color-s: var(#{$color+'-s'});
-  $color-l: var(#{$color+'-l'});
-  @return hsla($color-h, $color-s, $color-l, $opacity);
+    $color: str-replace($color, 'var(');
+    $color: str-replace($color, ')');
+    $color-h: var(#{$color+'-h'});
+    $color-s: var(#{$color+'-s'});
+    $color-l: var(#{$color+'-l'});
+    @return hsla($color-h, $color-s, $color-l, $opacity);
+}
+
+/// Mixin to customize scrollbars
+/// Beware, this does not work in all browsers
+/// @author Hugo Giraudel
+/// @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
+/// @param {Color} $foreground-color - Scrollbar's color
+/// @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
+/// @example scss - Scrollbar styling
+///   @include scrollbars(.5em, slategray);
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+    // For Google Chrome
+    &::-webkit-scrollbar {
+        width:  $size;
+        height: $size;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+        // border-radius: $size;
+        // border: baseline(1) solid $background-color;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: $background-color;
+    }
 }

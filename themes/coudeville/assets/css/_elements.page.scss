@@ -63,3 +63,5 @@ body {
     color: var(--global-selection-color);
     text-shadow: none;
 }
+
+@include scrollbars(var(--global-baseline), var(--scrollbar-thumb-color), var(--scrollbar-track-color));
