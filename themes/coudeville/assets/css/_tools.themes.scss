@@ -19,6 +19,10 @@
     --global-link-hover-color: var(--global-text-color);
     --global-selection-backgroundColor: var(--global-text-color);
     --global-selection-color: var(--global-backgroundColor);
+    --global-scrollbar-thumb-color: var(--global-color-beta);
+    // --global-scrollbar-thumb-color: var(--global-heading-color);
+    --global-scrollbar-track-color: var(--global-backgroundColor);
+    // --global-scrollbar-track-color: var(--global-border-color-hard);
 }
 
 @mixin theme-dark {
