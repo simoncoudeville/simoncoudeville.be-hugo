@@ -8,6 +8,7 @@
     grid-column: content;
     display: grid;
     grid-template-columns: auto 1fr;
+    // font-size: var(--global-fontSize-s);
 
     @include mq(bp3) {
         grid-column-gap: var(--global-whitespace-base);
@@ -22,7 +23,7 @@
 }
 
 .c-footer__copy {
-    font-family: $beta-font-family;
+    // font-family: $beta-font-family;
     grid-row: 2;    
 
     @include mq(bp3) {

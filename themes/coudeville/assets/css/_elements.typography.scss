@@ -27,9 +27,9 @@ h3,
 h4 {
     color: var(--global-heading-color);
     font-family: $alpha-font-family;
-    // font-weight: $beta-font-weight;
+    font-weight: $beta-font-weight;
     // font-family: $beta-font-family;
-    font-weight: $alpha-font-weight;
+    // font-weight: $alpha-font-weight;
 }
 
 
@@ -73,6 +73,7 @@ h2,
     // font-weight: $alpha-font-weight;
     margin-bottom: var(--global-whitespace-base);
     @include ms-m;
+    // @include ms-l;
 }
 
 h3,
@@ -86,6 +87,7 @@ h3,
     margin-bottom: var(--global-whitespace-base);
     // color: var(--global-meta-color);
     @include ms-base;
+    // @include ms-m;
 }
 
 h4,
@@ -134,7 +136,7 @@ strong {
 // Links
 
 a {
-    // font-weight: $beta-font-weight;
+    font-weight: $beta-font-weight;
     font-family: $alpha-font-family;
     color: var(--global-link-color);
     transition: all $animation-duration-alpha $animation-easing-out;
