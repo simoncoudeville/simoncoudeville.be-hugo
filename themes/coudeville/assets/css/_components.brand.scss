@@ -7,11 +7,11 @@
 .c-logo {
     font-family: $alpha-font-family;
     color: var(--logo-color, var(--global-heading-color));    
-    @include ms-base;
+    // @include ms-base;
 }
 
 .c-logo__link {
-    // text-decoration: none;
+    text-decoration: none;
     // text-decoration-color: var(--global-backgroundColor);
     
     // &,

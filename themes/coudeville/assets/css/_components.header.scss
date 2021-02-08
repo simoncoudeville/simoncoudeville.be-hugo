@@ -7,6 +7,7 @@
 .c-header {
     grid-column: content;
     // font-size: var(--global-fontSize-s);
+    @include ms-s;
 
     // @include mq(bp3) {
         display: grid;
@@ -14,12 +15,12 @@
         grid-template-columns: auto 1fr;
     // }
 
-    @include mq(bp4) {
-        grid-column: 1 / -1;
-        display: grid;
-        grid: var(--grid);
-        grid-gap: inherit;
-    }
+    // @include mq(bp4) {
+    //     grid-column: 1 / -1;
+    //     display: grid;
+    //     grid: var(--grid);
+    //     grid-gap: inherit;
+    // }
 
     // @include mq(bp5) {
     //     grid-column: content;
@@ -31,9 +32,9 @@
     margin-bottom: 0;
     grid-row: 1;
 
-    @include mq(bp4) {
-        grid-column: left;
-    }
+    // @include mq(bp4) {
+    //     grid-column: left;
+    // }
 }
 
 .c-header__meta { 
@@ -41,10 +42,10 @@
     // font-family: $beta-font-family;
     grid-column: 2;
     // margin-bottom: 0;
-    text-align: right;
+    // text-align: right;
 
-    @include mq(bp4) {
-        text-align: left;
-        grid-column: content;        
-    }
+    // @include mq(bp4) {
+    //     text-align: left;
+    //     grid-column: content;        
+    // }
 }

@@ -9,17 +9,18 @@
     display: grid;
     grid-template-columns: auto 1fr;
     // font-size: var(--global-fontSize-s);
+    @include ms-s;
 
     @include mq(bp3) {
         grid-column-gap: var(--global-whitespace-base);
         grid-template-columns: auto 1fr auto;
     }
 
-    @include mq(bp4) {
-        grid-column: 1 / -1;
-        grid: var(--grid);
-        grid-gap: inherit;
-    }
+    // @include mq(bp4) {
+    //     grid-column: 1 / -1;
+    //     grid: var(--grid);
+    //     grid-gap: inherit;
+    // }
 }
 
 .c-footer__copy {
@@ -30,10 +31,10 @@
         grid-row: 1;
     }
 
-    @include mq(bp4) {
-        grid-row: 1;
-        grid-column: left;
-    }
+    // @include mq(bp4) {
+    //     grid-row: 1;
+    //     grid-column: left;
+    // }
 }
 
 .c-footer__links {
@@ -44,10 +45,10 @@
         grid-column: 2;
     }
 
-    @include mq(bp4) {
-        grid-row: 1;
-        grid-column: content;        
-    }
+    // @include mq(bp4) {
+    //     grid-row: 1;
+    //     grid-column: content;        
+    // }
 }
 
 .c-footer__top {

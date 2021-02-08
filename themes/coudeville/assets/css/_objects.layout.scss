@@ -31,7 +31,7 @@
     }
 
     @include mq(bp6) {
-        --grid-whitespace: calc(var(--global-whitespace-base) + 4vw);
+        // --grid-whitespace: calc(var(--global-whitespace-base) + 4vw);
         // --grid-whitespace: var(--global-whitespace-triple);
         // --grid: "left content right" / var(--grid-left) var(--grid-content) var(--grid-right);
         grid-column-gap: var(--global-whitespace-double);
@@ -66,7 +66,7 @@
 }
 
 .o-row--intro {
-    min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-double));    
+    // min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-double));    
     // min-height: calc(50vh - calc(var(--global-whitespace-base) * 4));    
     // padding-top: var(--global-whitespace-double);
     // padding-top: calc(var(--grid-whitespace) - var(--global-whitespace-double));
