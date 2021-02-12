@@ -18,7 +18,7 @@
 // Example: Baseline grid
 
 .e-columns {
-    column-width: calc((var(--global-content-maxWidth) / 2) - #{var(--global-whitespace-base)});
+    column-width: calc((var(--global-content-maxWidth) / 2) - #{var(--global-whitespace-quadruple)});
     column-gap: var(--global-whitespace-base);
     margin-bottom: calc(var(--global-whitespace-base) * -2);
 }
@@ -141,7 +141,9 @@
 .e-grid {
     display: grid;
     grid-column-gap: var(--global-whitespace-base);
-    grid-template-columns: repeat(auto-fill, minmax(calc((var(--global-content-maxWidth) / 2) - #{var(--global-whitespace-base)}), 1fr));
+    // grid-template-columns: repeat(auto-fit, minmax(calc((var(--global-content-maxWidth) / 2) - #{var(--global-whitespace-base)}), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    // grid-template-columns: repeat(auto-fit, min(50%, 400px));
 }
 
 .e-grid__item {

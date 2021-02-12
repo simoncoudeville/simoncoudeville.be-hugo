@@ -21,6 +21,7 @@
 .c-list__meta {
     // font-family: $code-font-family;
     // text-transform: uppercase;
+    display: block;
     @include ms-s;
     // @include ms-xs;
     // font-family: $beta-font-family;

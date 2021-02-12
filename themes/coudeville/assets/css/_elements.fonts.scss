@@ -48,3 +48,21 @@ Font-face declarations
     font-style:   normal;
     font-stretch: normal;
 }
+
+@font-face {
+    font-family: 'Everett Trial Web';
+    src: url('../fonts/EverettTrial-Regular-web.woff2') format('woff2'),
+    url('../fonts/EverettTrial-Regular-web.woff') format('woff');
+    font-weight:  400;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Everett Trial Web';
+    src: url('../fonts/EverettTrial-Medium-web.woff2') format('woff2'),
+    url('../fonts/EverettTrial-Medium-web.woff') format('woff');
+    font-weight:  500;
+    font-style:   normal;
+    font-stretch: normal;
+}

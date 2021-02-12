@@ -22,6 +22,10 @@
     @include ms-s;
 }
 
+.c-text-meta {
+  font-family: $beta-font-family;
+}
+
 .c-text-xxxl {
   @include ms-xxl;
 
@@ -52,8 +56,18 @@
 }
 
 .c-fluid-text-m-xl {
-  line-height: 1.33333;  
-  font-size: clamp(var(--global-fontSize-m), 3vw, var(--global-fontSize-xl));
+  line-height: 1.2;  
+  font-size: clamp(var(--global-fontSize-m), 6vw, var(--global-fontSize-xl));
+}
+
+.c-fluid-text-m-xxxl {
+  line-height: 1.1;  
+  font-size: clamp(var(--global-fontSize-m), 6vw, var(--global-fontSize-xxxl));
+}
+
+.c-fluid-text-m-xxl {
+  line-height: 1.1;  
+  font-size: clamp(var(--global-fontSize-m), 6vw, var(--global-fontSize-xxl));
 }
 
 .c-text-l {

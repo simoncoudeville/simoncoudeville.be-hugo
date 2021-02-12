@@ -72,6 +72,7 @@ pre[class*="language-"] {
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
 	background: var(--prism-backgroundColor);
+	@include scrollbars(var(--global-baseline), var(--prism-comment-color), var(--prism-backgroundColor));
 }
 
 /* Inline code */
