@@ -58,9 +58,9 @@ h1,
         @include ms-xl;
     }
 
-    // @include mq(bp4) {
-    //     @include ms-xxl;
-    // }
+    @include mq(bp4) {
+        @include ms-xxl;
+    }
 
     // @include mq(bp5) {
     //     @include ms-xxxl;
