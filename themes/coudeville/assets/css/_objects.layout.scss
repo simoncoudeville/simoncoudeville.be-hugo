@@ -16,6 +16,7 @@
     grid-row-gap: var(--global-whitespace-base);
     // grid-row-gap: var(--global-whitespace-triple);
     align-content: space-between;
+    align-content: start;
     position: relative;
     // padding: var(--global-whitespace-base) var(--global-whitespace-base) 0;
     padding: 0 var(--grid-whitespace) calc(var(--grid-whitespace) - var(--global-whitespace-base));    
@@ -66,12 +67,14 @@
 }
 
 .o-row--intro {
-    min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-double));    
+    // min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-double));    
     // min-height: calc(50vh - calc(var(--global-whitespace-base) * 4));    
     // padding-top: var(--global-whitespace-double);
     // padding-top: calc(var(--grid-whitespace) - var(--global-whitespace-double));
     // padding-top: var(--grid-whitespace);
     // align-items: end;
+    min-height: 50vh;
+    min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-triple));
     align-items: center;
 
     @include mq(bp3) {
@@ -82,13 +85,15 @@
 
 .o-row--intro-home {
     // min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-double));    
-    // min-height: calc(50vh - calc(var(--global-whitespace-base) * 4));    
-    min-height: 50vh;
+    // min-height: calc(50vh - var(--global-whitespace-double));    
+    // min-height: calc(50vh - var(--global-whitespace-base));    
+    min-height: 50vh;    
     // padding-top: var(--global-whitespace-double);
     // padding-top: calc(var(--grid-whitespace) - var(--global-whitespace-double));
     // padding-top: var(--grid-whitespace);
-    // align-items: end;
-    align-items: center;
+    // align-content: flex-end;
+    align-items: end;
+    // align-items: center;
 }
 
 .o-aside {
