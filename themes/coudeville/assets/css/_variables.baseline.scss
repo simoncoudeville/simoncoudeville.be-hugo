@@ -15,7 +15,7 @@
 
     /* layout */
     // --global-content-maxWidth: calc(var(--global-baseline) * 120);
-    --global-content-maxWidth: 36rem;
+    --global-content-maxWidth: 35rem;
     --global-container-maxWidth: calc(var(--global-content-maxWidth) * 3);
 
     @include mq(bp3) {

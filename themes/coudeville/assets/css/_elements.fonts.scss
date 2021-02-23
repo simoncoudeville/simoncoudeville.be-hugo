@@ -66,3 +66,12 @@ Font-face declarations
     font-style:   normal;
     font-stretch: normal;
 }
+
+@font-face {
+    font-family: 'Everett Mono Trial Web';
+    src: url('../fonts/EverettMonoTrial-Regular-web.woff2') format('woff2'),
+    url('../fonts/EverettMonoTrial-Regular-web.woff') format('woff');
+    font-weight:  400;
+    font-style:   normal;
+    font-stretch: normal;
+}

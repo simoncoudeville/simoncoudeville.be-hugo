@@ -51,22 +51,25 @@ h1,
     // font-family: $beta-font-family;
     // font-weight: $alpha-font-weight;
     // font-weight: $beta-font-weight;
+    // font-weight: 400;
     margin-bottom: var(--global-whitespace-base);
-    @include ms-l;
+    line-height: 1.1;  
+    font-size: clamp(var(--global-fontSize-xl), 8vw, var(--global-fontSize-xxxl));
+    // @include ms-l;
 
-    @include mq(bp2) {
-        @include ms-xl;
-    }
+    // @include mq(bp2) {
+    //     @include ms-xl;
+    // }
 
-    @include mq(bp3) {
-        @include ms-xxl;
-    }
+    // @include mq(bp2) {
+    //     @include ms-xxl;
+    // }
 
     // @include mq(bp4) {
     //     @include ms-xxl;
     // }
 
-    // @include mq(bp5) {
+    // @include mq(bp3) {
     //     @include ms-xxxl;
     // }
 }
@@ -140,25 +143,32 @@ strong {
 // Links
 
 a {
-    font-weight: $beta-font-weight;
+    // font-weight: $beta-font-weight;
     font-family: $alpha-font-family;
-    color: var(--global-link-color);
+    color: var(--link-color, var(--global-link-color));
+    will-change: color, text-decoration-thickness;
     transition: all $animation-duration-alpha $animation-easing-out;
     display: inline-block;
+    // text-decoration-color: var(--global-meta-color);
+    text-decoration-color: var(--link-decoration-color, var(--global-link-decoration-color));
     text-decoration-thickness: from-font;
+    // text-decoration-thickness: 1px;
+    // text-decoration-thickness: .0675em;
+    // text-decoration-thickness: 2px;
     // text-decoration: underline var(--global-meta-color);
 
     &:visited {
-        color: var(--global-link-color);
+        color: var(--link-color, var(--global-link-color));
     }
 
     &:hover {
-        color: var(--global-link-hover-color);
+        color: var(--link-hover-color, var(--global-link-hover-color));
+        text-decoration-color: var(--link-hover-color, var(--global-link-hover-color));
     }
 
     &:focus {
         outline: thin dotted;
-        color: var(--global-link-hover-color);
+        color: var(--link-hover-color, var(--global-link-hover-color));
     }
 
     &:hover,

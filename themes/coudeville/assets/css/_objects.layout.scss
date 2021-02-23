@@ -47,13 +47,14 @@
 }
 
 .o-row--intro {
-    // min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-double));    
-    min-height: calc(50vh - calc(var(--global-baseline) * 33));  
+    min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-double));    
+    min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-triple));    
+    // min-height: calc(50vh - calc(var(--global-baseline) * 33));  
     // min-height: calc(50vh - var(--grid-whitespace));  
     // min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-quadruple));    
     // padding-top: var(--grid-whitespace);
-    // align-items: end;
-    align-items: center;
+    align-items: end;
+    // align-items: center;
 
     @include mq(bp3) {
         // min-height: calc(50vh - calc(var(--global-whitespace-base) * 5));    
@@ -64,6 +65,7 @@
 .o-row--intro-home {
     // min-height: calc(50vh - calc(var(--global-baseline) * 2));  
     min-height: calc(50vh - var(--grid-whitespace));    
+    // padding-top: var(--grid-whitespace);
     // min-height: 50vh;
     // align-items: center;
     align-items: flex-end;
@@ -71,6 +73,10 @@
 
 .o-row--footer {
     margin-top: auto;
+}
+
+.o-row--top {
+    scroll-margin-top: var(--grid-whitespace);
 }
 
 .o-aside {

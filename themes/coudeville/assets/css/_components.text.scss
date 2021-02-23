@@ -8,14 +8,13 @@
 .c-text-caption {
     display: block;
     padding: calc(var(--global-baseline) / 2) 0;
-    font-family: $code-font-family;
-    text-transform: uppercase;
     color: var(--text-caption-color, var(--global-meta-color));
-    @include ms-xs;
+    font-weight: normal;
+    @include ms-s;
 }
 
 .c-text-label {
-    font-feature-settings: "zero", "liga", "ss02";    
+    // font-feature-settings: "zero", "liga";    
     padding: calc(var(--global-baseline) / 2) 0;
     color: var(--toggle-color, var(--global-meta-color));
     font-family: $alpha-font-family;

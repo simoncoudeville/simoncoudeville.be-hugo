@@ -15,8 +15,12 @@
     --global-border-color: var(--global-color-neutral-300);
     --global-border-color-hard: var(--global-color-neutral-400);
     --global-shadow-border-color: rgba(0, 0, 0, .1);
-    --global-link-color: var(--global-heading-color);
-    --global-link-hover-color: var(--global-text-color);
+    --global-link-color: var(--global-heading-color);    
+    // --global-link-decoration-color: var(--global-link-color);
+    // --global-link-decoration-color: var(--global-color-beta);
+    --global-link-decoration-color: var(--global-meta-color);   
+    --global-link-hover-color: var(--global-link-color);
+    // --global-link-hover-color: var(--global-color-beta);
     --global-selection-backgroundColor: var(--global-text-color);
     --global-selection-color: var(--global-backgroundColor);
     --global-scrollbar-thumb-color: var(--global-color-beta);
@@ -32,6 +36,7 @@
     --global-surfaceColor-2: var(--global-color-neutral-700);
     --global-text-color: var(--global-color-neutral-100);
     --global-heading-color: var(--global-color-neutral-100);
+    --global-link-decoration-color: var(--global-link-color);   
     --global-border-color: var(--global-color-neutral-700);
     --global-border-color-hard: var(--global-color-neutral-600);
     --global-shadow-border-color: rgba(255, 255, 255, .1);

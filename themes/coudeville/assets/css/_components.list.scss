@@ -14,7 +14,7 @@
 }
 
 .c-list__title {
-    font-size: var(--global-fontSize);
+    // font-size: var(--global-fontSize);
     margin-bottom: 0;
 }
 
@@ -22,7 +22,11 @@
     // font-family: $code-font-family;
     // text-transform: uppercase;
     display: block;
-    @include ms-s;
+    // padding: calc(var(--global-baseline) / 2) 0;
+    color: var(--text-caption-color, var(--global-meta-color));
+    // font-weight: normal;
+    // @include ms-s;
+    // @include ms-s;
     // @include ms-xs;
     // font-family: $beta-font-family;
     // color: var(--global-meta-color);

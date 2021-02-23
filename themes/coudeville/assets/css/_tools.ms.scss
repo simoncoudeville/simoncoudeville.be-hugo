@@ -6,7 +6,7 @@
 
 @mixin ms-xxl {
     font-size: var(--global-fontSize-xxl);
-    line-height: calc(calc(var(--global-baseline-multiplier) + 3) * var(--global-baseline));
+    line-height: calc(calc(var(--global-baseline-multiplier) + 4) * var(--global-baseline));
 }
 
 @mixin ms-xl {

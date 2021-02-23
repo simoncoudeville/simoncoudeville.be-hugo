@@ -1,9 +1,13 @@
-.s-content {
+.s-content {    
     // max-width: var(--global-content-maxWidth);
 
     * + h2 {
         margin-top: var(--global-whitespace-double); // Add extra margin on top
     }
+
+    // p {
+    //     text-align: justify;
+    // }
 
     // a {
         // font-weight: $beta-font-weight;

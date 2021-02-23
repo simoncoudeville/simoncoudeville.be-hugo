@@ -3,8 +3,14 @@
         <h3 class="u-mb-clear">Latest articles</h3>
     </div> -->
     <div class="o-container">        
-        <h2 class="h3">Articles</h2>
+        <h2 class="h4">Articles</h2>
         <ul class="c-list">
+            {{ range (where .Site.RegularPages "Section" "blog") }}
+            <li class="c-list__item">
+                <span class="c-list__meta u-muted">{{ .Date.Format "2 January 2006" }}</span>
+                <p class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></p>
+            </li>
+            {{ end }}                       
             {{ range (where .Site.RegularPages "Section" "blog") }}
             <li class="c-list__item">
                 <span class="c-list__meta u-muted">{{ .Date.Format "2 January 2006" }}</span>
@@ -17,7 +23,7 @@
                 </p>
             </li> -->
         </ul>
-        <p>
+        <p class="u-muted">
             More soon&hellip;
         </p>
     </div>
