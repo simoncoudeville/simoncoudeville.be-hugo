@@ -30,6 +30,9 @@
 }
 
 .c-social-links {
+    padding: calc(var(--global-baseline) / 2) 0;
+    @include ms-s;
+
     @include mq(bp3) {
         display: flex;
         gap: var(--global-whitespace-base);
@@ -40,9 +43,19 @@
     // }
 }
 
-// .c-social-links__link {
-//     text-decoration: none;
-// }
+.c-social-links__link {
+    // text-decoration: none;    
+
+    &,
+    &:visited {
+        color: var(--global-meta-color);
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--global-link-hover-color);
+    }
+}
 
 .c-back-link {
     --c-back-link__icon-size: var(--global-whitespace-m);

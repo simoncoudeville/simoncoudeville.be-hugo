@@ -1,0 +1,11 @@
+{
+    "name": "Simon Coudeville",
+    "short_name": "Simon C.",
+    "icons": [
+        {
+            "src": "google-touch-icon.png",
+            "sizes": "512x512"
+        }
+    ],    
+    "display": "standalone"
+}

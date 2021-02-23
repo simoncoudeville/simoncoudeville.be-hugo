@@ -11,6 +11,10 @@
 
 .c-list__item {
     margin-bottom: var(--global-whitespace-base);
+
+    // display: flex;
+    // justify-content: space-between;
+    // flex-direction: column-reverse;
 }
 
 .c-list__title {
@@ -33,6 +37,9 @@
 }
 
 .c-list__link {
+    // font-weight: $beta-font-weight;
+    // text-decoration: none;    
+
     &::after {
         content:'→';
         display: inline-block;

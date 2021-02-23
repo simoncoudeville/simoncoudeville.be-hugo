@@ -6,7 +6,7 @@
 
 .c-footer {
     --link-decoration-color: var(--global-meta-color);
-    --link-hover-color: var(--global-meta-color);
+    --link-hover-color: var(--global-link-hover-color);
     grid-column: content;
     display: grid;
     grid-template-columns: auto 1fr;
@@ -27,6 +27,8 @@
 
 .c-footer__copy {
     // font-family: $beta-font-family;
+    @include ms-s;
+    padding: calc(var(--global-baseline) / 2) 0;
     color: var(--global-meta-color);
     grid-row: 2;            
 
