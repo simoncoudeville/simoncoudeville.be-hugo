@@ -23,4 +23,20 @@
     // @include mq(bp3) {
     //     grid-gap: var(--global-whitespace-double);
     // }
+
+    .c-avatar {
+        display: none;
+        // float: right;
+        // margin-bottom: calc(var(--global-whitespace-base) * -2);
+
+        @include mq(bp3) {
+            display: block;
+            // float: none;
+            // margin-bottom: var(--global-whitespace-base);
+        }
+
+        // @include mq(bp4) {
+        //     margin-bottom: calc(var(--global-whitespace-base) * -2);
+        // }
+    }
 }

@@ -18,7 +18,7 @@
         grid-template-columns: auto 1fr;
     // }
 
-    @include mq(bp4) {
+    @include mq(bp5) {
         grid-column: 1 / -1;
         display: grid;
         grid: var(--grid);
@@ -36,10 +36,12 @@
     margin-bottom: 0;
     grid-row: 1;
 
-    @include mq(bp4) {
+    @include mq(bp5) {
         grid-column: left;
     }
 }
+
+// 192.168.1.57
 
 // .c-header__back {
 //     @include mq(bp5) {
@@ -58,12 +60,13 @@
 
 .c-header__meta { 
     font-weight: $alpha-font-weight;
+    font-feature-settings: "zero", "liga", "tnum";
     // font-family: $beta-font-family;
     grid-column: 2;
     margin-bottom: 0;
     text-align: right;
 
-    @include mq(bp4) {
+    @include mq(bp5) {
         text-align: left;
         grid-column: content;        
     }

@@ -30,8 +30,9 @@
 }
 
 .c-social-links {
-    padding: calc(var(--global-baseline) / 2) 0;
-    @include ms-s;
+    // padding: calc(var(--global-baseline) / 2) 0;
+    color: var(--global-meta-color);
+    // @include ms-s;
 
     @include mq(bp3) {
         display: flex;
@@ -44,7 +45,7 @@
 }
 
 .c-social-links__link {
-    // text-decoration: none;    
+    text-decoration: none;    
 
     &,
     &:visited {
@@ -63,6 +64,7 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    // font-feature-settings: "zero", "liga", "case";
     // height: var(--global-whitespace-base);
     // width: var(--global-whitespace-double);
     // height: var(--global-whitespace-double);
@@ -100,15 +102,31 @@
     // background-color: ghostwhite;
     // background-color: snow;
 
-    @include mq(bp5) {
+    @include mq(bp5) {        
+
         &:before {
-            content: "";
+            // content: "";
             display: block;
             position: absolute;
             width: 100%;
             height: 100%;
-            grid-column: right/end;
-            grid-row: 1/9999;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: url(../img/hero-gradient.png);
+            background-repeat: no-repeat;
+            background-size: 2000px 2000px;
+            mix-blend-mode: darken;
+            mix-blend-mode: multiply;
+            // opacity: .45;
+            position: fixed;
+            // background-position: 0 -1500px;
+            // opacity: .5;
+            // image-rendering: pixelated;    
+
+            // grid-column: right/end;
+            // grid-row: 1/9999;            
             // border-left: 1px solid var(--global-border-color);
             // margin-left: var(--global-whitespace-base);
             // background: transparent url("../svg/terrazzo.svg");
@@ -156,8 +174,9 @@
 @media (prefers-color-scheme: dark) {
     .is-home::before {
         // filter: invert(100%);
-        mix-blend-mode: screen;
-        filter: none;
+        // mix-blend-mode: screen;
+        // opacity: .5;
+        // filter: none;
         // mix-blend-mode: darken;
         // background-image: url("../img/wallpaper-516.gif");
         // mix-blend-mode: screen;

@@ -16,9 +16,10 @@
     @include mq(bp3) {
         grid-column-gap: var(--global-whitespace-base);
         grid-template-columns: auto 1fr auto;
+        // justify-items: space-between;
     }
 
-    @include mq(bp5) {
+    @include mq(bp4) {
         grid-column: 1 / -1;
         grid: var(--grid);
         grid-gap: inherit;
@@ -36,7 +37,7 @@
         grid-row: 1;
     }
 
-    @include mq(bp5) {
+    @include mq(bp4) {
         grid-row: 1;
         grid-column: left;
         margin: 0;          
@@ -51,6 +52,7 @@
 }
 
 .c-footer__logo {
+    // font-weight: $beta-font-weight;
     grid-row: 2;            
 
     @include mq(bp3) {
@@ -66,7 +68,7 @@
         grid-column: 2;
     }
 
-    @include mq(bp5) {
+    @include mq(bp4) {
         grid-row: 1;
         grid-column: content;        
     }
@@ -81,12 +83,12 @@
         grid-column: 3;
     }
 
-    @include mq(bp5) {
+    @include mq(bp4) {
         grid-row: 1;
         grid-column: content;
     }
 
-    @include mq(bp5) {
+    @include mq(bp4) {
         grid-column: right;
     }
 }

@@ -11,7 +11,8 @@
     width: var(--c-avatar-dimension);
     // height: var(--c-avatar-dimension);
     border-radius: 0 0 var(--c-avatar-dimension) var(--c-avatar-dimension);
-    overflow: hidden;
+    overflow: hidden;    
+    // margin-bottom: calc(var(--c-avatar-dimension) * -.5);
     // background-color: var(--global-color-neutral-100);
     // background-color: var(--global-color-neutral-300);
     // background-color: rgba(black,.15);

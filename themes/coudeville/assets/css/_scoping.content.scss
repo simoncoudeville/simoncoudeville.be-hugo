@@ -10,14 +10,13 @@
     // }
 
     // a {
-        // font-weight: $beta-font-weight;
-        // text-decoration: underline;
+    //     font-weight: $beta-font-weight;
+    //     // text-decoration: underline;
     // }
 
     p,
     ul,
     ol {
-        // font-feature-settings: "zero", "liga", "ss02";
         hyphens: auto;
         hyphenate-limit-chars: 6 3 3;
         hyphenate-limit-lines: 2;

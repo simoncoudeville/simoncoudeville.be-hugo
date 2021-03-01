@@ -6,7 +6,11 @@
 
 .c-list {
     list-style: none;
-    padding: 0;
+    padding: 0;    
+
+    @include mq(bp3) {
+        border-bottom: 1px solid var(--global-border-color);
+    }
 }
 
 .c-list__item {
@@ -14,7 +18,27 @@
 
     // display: flex;
     // justify-content: space-between;
-    // flex-direction: column-reverse;
+    // // flex-direction: column-reverse;
+    // flex-direction: row-reverse;
+    // // align-items: center;
+    // column-gap: var(--global-whitespace-s);
+
+    // & + & {
+        // padding-top: var(--global-whitespace-base);
+        // border-top: 1px solid var(--global-border-color);
+    // }
+
+    @include mq(bp3) {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        column-gap: var(--global-whitespace-base);
+        // margin-bottom: var(--global-whitespace-s);
+        // margin-bottom: var(--global-whitespace-base);
+        // padding-top: var(--global-whitespace-s);
+        padding-top: var(--global-whitespace-base);
+        border-top: 1px solid var(--global-border-color);
+    }
 }
 
 .c-list__title {
@@ -27,29 +51,37 @@
     // text-transform: uppercase;
     display: block;
     // padding: calc(var(--global-baseline) / 2) 0;
+    // padding-top: var(--global-baseline);
     color: var(--text-caption-color, var(--global-meta-color));
+    font-feature-settings: "zero", "liga", "tnum";
+    // font-feature-settings: "zero", "liga", "onum";
+    // font-feature-settings: "zero", "liga", "c2sc", "smcp";
     // font-weight: normal;
     // @include ms-s;
     // @include ms-s;
     // @include ms-xs;
     // font-family: $beta-font-family;
     // color: var(--global-meta-color);
+    flex-shrink: 0;
 }
 
 .c-list__link {
     // font-weight: $beta-font-weight;
-    // text-decoration: none;    
+    // text-decoration: none;   
+    // padding-right: var(--global-whitespace-base); 
 
-    &::after {
-        content:'→';
-        display: inline-block;
-        margin-left: var(--global-whitespace-xs);
-        opacity: 0;
-        transform: translateX(calc(var(--global-whitespace-xxs) * -1));
-        transition: all $animation-duration-alpha $animation-easing-in;
-    }
+    // &::after {
+    //     content:'→';
+    //     display: inline-block;
+    //     margin-left: var(--global-whitespace-xs);
+    //     opacity: 0;
+    //     transform: translateX(calc(var(--global-whitespace-xxs) * -1));
+    //     transition: all $animation-duration-alpha $animation-easing-in;
+    // }
 
     &:hover {
+        // text-decoration: underline;
+
         &::after {
             opacity: 1;
             transform: none;

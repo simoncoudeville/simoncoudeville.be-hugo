@@ -5,8 +5,10 @@ theme = "Coudeville"
 relativeURLS = false
 canonifyurls = true
 enableEmoji = true
-disableKinds = ["taxonomy", "taxonomyTerm", "RSS", "sitemap"]
+disableKinds = ["taxonomy", "taxonomyTerm", "sitemap"]
 
 [params]
   author = "Simon Coudeville"
   description = "Personal website of Simon Coudeville"
+
+#hugo serve --bind=192.168.1.57 --baseURL=http://192.168.1.57:1313 -D

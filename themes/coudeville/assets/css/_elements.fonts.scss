@@ -75,3 +75,48 @@ Font-face declarations
     font-style:   normal;
     font-stretch: normal;
 }
+
+@font-face {
+    font-family: 'Graphik web';
+    src: url('../fonts/Graphik-Regular-Web.woff2') format('woff2'),
+    url('../fonts/Graphik-Regular-Web.woff') format('woff');
+    font-weight:  400;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Graphik web';
+    src: url('../fonts/Graphik-Medium-Web.woff2') format('woff2'),
+    url('../fonts/Graphik-Medium-Web.woff') format('woff');
+    font-weight:  500;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Allrounder Grotesk web';
+    src: url('../fonts/AllrounderGrotesk-Book.woff2') format('woff2'),
+    url('../fonts/AllrounderGrotesk-Book.woff') format('woff');
+    font-weight:  300;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Allrounder Grotesk web';
+    src: url('../fonts/AllrounderGrotesk-Regular.woff2') format('woff2'),
+    url('../fonts/AllrounderGrotesk-Regular.woff') format('woff');
+    font-weight:  400;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Allrounder Grotesk web';
+    src: url('../fonts/AllrounderGrotesk-Medium.woff2') format('woff2'),
+    url('../fonts/AllrounderGrotesk-Medium.woff') format('woff');
+    font-weight:  500;
+    font-style:   normal;
+    font-stretch: normal;
+}
