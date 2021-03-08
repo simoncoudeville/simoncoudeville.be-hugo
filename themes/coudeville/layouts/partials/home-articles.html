@@ -15,16 +15,7 @@
                 <p class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></p>
             </li>
             {{ end }}                                                      
-            {{ range (where .Site.RegularPages "Section" "blog") }}
-            <li class="c-list__item">
-                <!-- <span class="c-list__meta u-muted">{{ .Date.Format "2 January 2006" }}</span> -->
-                <!-- <span class="c-list__meta u-muted">{{ .Date.Format "02 Jan 2006" }}</span> -->
-                <!-- <span class="c-list__meta u-muted">{{ .Date.Format "2th January 2006" }}</span> -->
-                <!-- <span class="c-list__meta u-muted">{{ .Date.Format "02.01.06" }}</span> -->
-                <span class="c-list__meta u-muted">{{ .Date.Format "02.01.2006" }}</span>
-                <p class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></p>
-            </li>
-            {{ end }}                                                      
+                                                                
             <!-- <li class="c-list__item">
                 <p class="c-list__title">
                     <a href="blog" class="c-list__link">view all</a>

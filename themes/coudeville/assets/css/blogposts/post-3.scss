@@ -1,0 +1,80 @@
+//
+// Specific CSS styles for post 2
+//
+
+// Tools
+@import '../tools.mixins';
+@import '../tools.functions';
+
+// Settings
+@import '../settings.colors';
+@import '../settings.global';
+
+// components
+@import '../components.example';
+
+.c-palette {
+    --palette-hue: var(--global-hue-color-beta);
+    --palette-saturation: var(--global-saturation-color-beta);
+    --palette-lightness: var(--global-lightness-color-beta);
+    // aspect-ratio: 3 / 2;
+    // height: 0;
+    // padding-bottom: calc(100% / 3 * 2);
+    // height: 800px;
+    // min-height: calc(100vh - calc(var(--grid-whitespace) * 4));
+    min-height: 50vh;
+    max-height: 75vh;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+
+
+}
+
+// .c-info::after {
+//     content: "HSL(#{round(hue($color-beta))}, #{round(lightness($color-beta))}, #{round(saturation($color-beta))}), 
+//               HSL(#{round(hue($color-alpha))}, #{round(lightness($color-alpha))}, #{round(saturation($color-alpha))}),
+//               HSL(#{round(hue($color-gamma))}, #{round(lightness($color-gamma))}, #{round(saturation($color-gamma))})
+//               ";
+// }
+
+.c-palette__item:nth-child(1) {
+    background-color: hsl(var(--palette-hue),calc(var(--palette-saturation) - 10% ),calc(var(--palette-lightness) - 15%));
+}
+
+.c-palette__item:nth-child(2) {
+    background-color: hsl(var(--palette-hue),calc(var(--palette-saturation) - 7.5% ),calc(var(--palette-lightness) - 10%));
+}
+
+.c-palette__item:nth-child(3) {
+    background-color: hsl(var(--palette-hue),calc(var(--palette-saturation) - 5% ),calc(var(--palette-lightness) - 5%));
+}
+
+.c-palette__item:nth-child(4) {
+    background-color: hsl(var(--palette-hue),var(--palette-saturation),var(--palette-lightness));
+}
+
+.c-palette__item:nth-child(5) {
+    background-color: hsl(var(--palette-hue),calc(var(--palette-saturation) + 5% ),calc(var(--palette-lightness) + 5%));
+}
+
+// //
+
+// .c-palette__item:nth-child(1) {
+//     background-color: hsl(var(--palette-hue),calc(var(--palette-saturation) - 10% ),30%);
+// }
+
+// .c-palette__item:nth-child(2) {
+//     background-color: hsl(var(--palette-hue),calc(var(--palette-saturation) - 10% ),40%);
+// }
+
+// .c-palette__item:nth-child(3) {
+//     background-color: hsl(var(--palette-hue),calc(var(--palette-saturation) - 15% ),50%);
+// }
+
+// .c-palette__item:nth-child(4) {
+//     background-color: hsl(var(--palette-hue),var(--palette-saturation),60%);
+// }
+
+// .c-palette__item:nth-child(5) {
+//     background-color: hsl(var(--palette-hue),calc(var(--palette-saturation) - 5% ),70%);
+// }

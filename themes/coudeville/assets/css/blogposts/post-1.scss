@@ -119,6 +119,7 @@
     border: 1px solid var(--c-terminal-borderColor);
     border-radius: var(--global-whitespace-xs);
     background-color: var(--global-color-neutral-900);
+    // background-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 0%, .7);
     overflow: hidden;
     width: 100%;
     height: auto;

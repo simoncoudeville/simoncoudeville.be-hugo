@@ -28,8 +28,8 @@
 
 .c-footer__copy {
     // font-family: $beta-font-family;
-    @include ms-s;
-    padding: calc(var(--global-baseline) / 2) 0;
+    // @include ms-s;
+    // padding: calc(var(--global-baseline) / 2) 0;
     color: var(--global-meta-color);
     grid-row: 2;            
 
@@ -40,11 +40,11 @@
     @include mq(bp4) {
         grid-row: 1;
         grid-column: left;
-        margin: 0;          
-        transform: rotate(-90deg);
-        transform-origin: top left;
-        position: relative;
-        bottom: calc(var(--global-whitespace-base) * -1);
+        // margin: 0;          
+        // transform: rotate(-90deg);
+        // transform-origin: top left;
+        // position: relative;
+        // bottom: calc(var(--global-whitespace-base) * -1);
         // position: fixed;
         // bottom: calc(var(--grid-whitespace) - var(--global-whitespace-base));
         // left: var(--grid-whitespace);          

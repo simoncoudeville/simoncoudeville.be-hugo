@@ -1,6 +1,10 @@
 .s-content {    
     // max-width: var(--global-content-maxWidth);
 
+    // * + * {
+    //     margin-top: var(--global-whitespace-base);
+    // }
+
     * + h2 {
         margin-top: var(--global-whitespace-double); // Add extra margin on top
     }

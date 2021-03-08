@@ -14,13 +14,16 @@
     display: grid;    
     grid: var(--grid);
     grid-row-gap: var(--global-whitespace-base);
-    // align-content: space-between;
+    // grid-row-gap: calc(var(--grid-whitespace) - var(--global-whitespace-base));
+    align-content: space-between;
     // align-content: start;
     position: relative;
     padding: var(--grid-whitespace) var(--grid-whitespace) calc(var(--grid-whitespace) - var(--global-whitespace-base));    
+    // padding: var(--grid-whitespace) ;    
 
     @include mq(bp3) {
         --grid-whitespace: var(--global-whitespace-double);
+        // grid-row-gap: calc(var(--grid-whitespace) - var(--global-whitespace-base));
     }
 
     @include mq(bp4) {
@@ -29,7 +32,8 @@
     }
 
     @include mq(bp6) {
-        // --grid-whitespace: calc(var(--global-whitespace-base) + 4vw);
+        --grid-whitespace: calc(var(--global-whitespace-base) + 5vw);
+        // --grid-whitespace: calc(4vw - var(--global-whitespace-base) );
         // --grid-whitespace: var(--global-whitespace-triple);
         // --grid: "left content right" / var(--grid-left) var(--grid-content) var(--grid-right);
         // grid-column-gap: var(--global-whitespace-double);
@@ -44,6 +48,10 @@
     display: grid;
     grid: var(--grid);
     grid-gap: inherit;    
+
+    .o-row {
+        grid-gap: 0;
+    }
 }
 
 .o-row--intro {
@@ -70,15 +78,15 @@
     // // align-items: center;
     // align-items: flex-end;
 
-    @include mq(bp3) {
+    // @include mq(bp3) {
         min-height: calc(50vh - var(--grid-whitespace));    
         align-items: flex-end;
-    }
+    // }
 }
 
-.o-row--footer {
-    margin-top: auto;
-}
+// .o-row--footer {
+//     margin-top: auto;
+// }
 
 .o-row--top {
     scroll-margin-top: var(--grid-whitespace);

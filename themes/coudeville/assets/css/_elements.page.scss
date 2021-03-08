@@ -61,6 +61,7 @@ body {
     margin: 0 auto;
     font-size: var(--global-fontSize);
     line-height: baseline(var(--global-baseline-multiplier));    
+    // box-sizing: content-box;
 }
 
 ::selection {

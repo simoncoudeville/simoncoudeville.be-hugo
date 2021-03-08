@@ -144,6 +144,7 @@
     // grid-template-columns: repeat(auto-fit, minmax(calc((var(--global-content-maxWidth) / 2) - #{var(--global-whitespace-base)}), 1fr));
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     // grid-template-columns: repeat(auto-fit, min(50%, 400px));
+    color: var(--global-meta-color);
 }
 
 .e-grid__item {

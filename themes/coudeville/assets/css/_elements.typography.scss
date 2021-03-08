@@ -51,13 +51,13 @@ h1,
     // font-weight: $beta-font-weight;
     // font-weight: 400;
     margin-bottom: var(--global-whitespace-base);
-    line-height: 1.1;  
-    font-size: clamp(var(--global-fontSize-xl), 8vw, var(--global-fontSize-xxxl));
+    // line-height: 1.1;  
+    // font-size: clamp(var(--global-fontSize-xl), 8vw, var(--global-fontSize-xxxl));
     // font-weight: $alpha-font-weight;
     font-weight: $beta-font-weight;
     letter-spacing: -.02em;
     // letter-spacing: -.0475em;
-    // @include ms-l;
+    @include ms-xl;
 
     // @include mq(bp2) {
     //     @include ms-xl;

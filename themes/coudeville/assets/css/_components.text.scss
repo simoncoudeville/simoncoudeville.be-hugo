@@ -50,12 +50,12 @@
 }
 
 .c-fluid-text-l-xl {
-  line-height: 1.33333;  
+  line-height: 1.1;  
   font-size: clamp(var(--global-fontSize-l), 3vw, var(--global-fontSize-xl));
 }
 
 .c-fluid-text-m-xl {
-  line-height: 1.2;  
+  line-height: 1.1;  
   font-size: clamp(var(--global-fontSize-m), 6vw, var(--global-fontSize-xl));
 }
 
@@ -72,6 +72,11 @@
 .c-fluid-text-l-xxl {
   line-height: 1.1;  
   font-size: clamp(var(--global-fontSize-l), 6vw, var(--global-fontSize-xxl));
+}
+
+.c-fluid-text-xl-xxxl {
+  line-height: 1.1;  
+  font-size: clamp(var(--global-fontSize-xl), 8vw, var(--global-fontSize-xxxl));
 }
 
 .c-text-l {
