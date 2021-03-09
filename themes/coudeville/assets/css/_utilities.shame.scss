@@ -25,6 +25,10 @@
     font-family: $beta-font-family;
 }
 
+.u-fw-alpha {
+    font-weight: $alpha-font-weight;
+}
+
 .u-ff-code {
     font-family: $code-font-family;
 }
@@ -98,10 +102,16 @@
 .is-home {
     // grid-row-gap: var(--grid-whitespace);
     // align-items: center;
-    // grid-row-gap: calc(var(--grid-whitespace) - var(--global-whitespace-base));
+    // --grid-row-gap: 0;
+    // grid-row-gap: calc(var(--grid-whitespace) - var(--grid-row-gap));
+    // background: conic-gradient(from -90deg at 50% -25%, lavender, ghostwhite);
     // background-color: lavender;
     // background-color: ghostwhite;
     // background-color: snow;
+
+    @include mq(bp3) {
+        grid-row-gap: calc(var(--grid-whitespace) - var(--grid-row-gap));
+    }
 
     // @include mq(bp5) {      
         &:before {

@@ -10,18 +10,20 @@
     --grid-right: minmax(auto,1fr);
     --grid: "left content right" / var(--grid-left) var(--grid-content) var(--grid-right);
     --grid-whitespace: var(--global-whitespace-base);
+    --grid-row-gap: var(--global-whitespace-base);
     min-height: 100vh;
     display: grid;    
     grid: var(--grid);
-    grid-row-gap: var(--global-whitespace-base);
+    grid-row-gap: var(--grid-row-gap);
     // grid-row-gap: calc(var(--grid-whitespace) - var(--global-whitespace-base));
     align-content: space-between;
     // align-content: start;
     position: relative;
-    padding: var(--grid-whitespace) var(--grid-whitespace) calc(var(--grid-whitespace) - var(--global-whitespace-base));    
+    padding: var(--grid-whitespace) var(--grid-whitespace) calc(var(--grid-whitespace) - var(--grid-row-gap));    
     // padding: var(--grid-whitespace) ;    
 
     @include mq(bp3) {
+        // --grid-whitespace: calc(var(--global-whitespace-base) + 5vw);
         --grid-whitespace: var(--global-whitespace-double);
         // grid-row-gap: calc(var(--grid-whitespace) - var(--global-whitespace-base));
     }
@@ -31,7 +33,7 @@
         // grid-column-gap: var(--global-whitespace-base);    
     }
 
-    @include mq(bp6) {
+    @include mq(bp4) {
         --grid-whitespace: calc(var(--global-whitespace-base) + 5vw);
         // --grid-whitespace: calc(4vw - var(--global-whitespace-base) );
         // --grid-whitespace: var(--global-whitespace-triple);

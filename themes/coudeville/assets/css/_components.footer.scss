@@ -19,7 +19,7 @@
         // justify-items: space-between;
     }
 
-    @include mq(bp4) {
+    @include mq(bp6) {
         grid-column: 1 / -1;
         grid: var(--grid);
         grid-gap: inherit;
@@ -37,7 +37,7 @@
         grid-row: 1;
     }
 
-    @include mq(bp4) {
+    @include mq(bp6) {
         grid-row: 1;
         grid-column: left;
         // margin: 0;          
@@ -68,7 +68,7 @@
         grid-column: 2;
     }
 
-    @include mq(bp4) {
+    @include mq(bp6) {
         grid-row: 1;
         grid-column: content;        
     }
@@ -83,12 +83,12 @@
         grid-column: 3;
     }
 
-    @include mq(bp4) {
+    @include mq(bp6) {
         grid-row: 1;
         grid-column: content;
     }
 
-    @include mq(bp4) {
+    @include mq(bp6) {
         grid-column: right;
     }
 }
@@ -97,5 +97,5 @@
     text-decoration: none;
     display: inline-block;
     text-align: center;
-    width: var(--global-whitespace-base);
+    // width: var(--global-whitespace-base);
 }
