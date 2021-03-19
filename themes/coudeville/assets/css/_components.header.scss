@@ -71,3 +71,8 @@
         grid-column: content;        
     }
 }
+
+.c-header__meta--sm {
+    padding: var(--global-whitespace-xxxs) 0;
+    @include ms-s;
+}

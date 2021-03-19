@@ -2,6 +2,7 @@
     --global-baseline: #{6px / $root-font-size-sm}rem;
     --global-baseline-multiplier: 4;
 
+    --global-whitespace-xxxs: calc(var(--global-baseline) / 2);
     --global-whitespace-xxs: var(--global-baseline);
     --global-whitespace-xs: calc(var(--global-baseline) * calc(var(--global-baseline-multiplier) - 3));
     --global-whitespace-s: calc(var(--global-baseline) * calc(var(--global-baseline-multiplier) - 2));
@@ -17,6 +18,8 @@
     // --global-content-maxWidth: calc(var(--global-baseline) * 120);
     --global-content-maxWidth: 35rem;
     --global-container-maxWidth: calc(var(--global-content-maxWidth) * 3);
+
+    --global-borderRadius: var(--global-whitespace-xs);
 
     @include mq(bp3) {
         --global-baseline: #{6px / $root-font-size}rem;
