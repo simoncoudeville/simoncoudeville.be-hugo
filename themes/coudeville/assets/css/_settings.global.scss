@@ -8,8 +8,8 @@
 // Typography
 // ---
 
-$root-font-size-sm: 17px; // for mobile
-$root-font-size: 20px; // for larger screens
+$root-font-size-sm: 18px; // for mobile
+$root-font-size: 19px; // for larger screens
 $root-font-size-lg: 21px; // for larger screens
 
 // Basic font settings
@@ -18,9 +18,10 @@ $alpha-font-family          : "Suisse Intl Web", sans-serif;
 $beta-font-family           : "Suisse Works Web", serif;
 // $alpha-font-family          : "acumin-pro", sans-serif;
 // $alpha-font-family          : "Basis Grotesque Trial", sans-serif;
-$alpha-font-family          : "Allrounder Grotesk web", sans-serif;
+// $alpha-font-family          : "Allrounder Grotesk web", sans-serif;
 // $alpha-font-family          : "Untitled Sans Test", sans-serif;
 // $alpha-font-family          : "Sohne Test", sans-serif;
+// $alpha-font-family          : "Moderat Trial", sans-serif;
 // $alpha-font-family          : "Sneak Trial", sans-serif;
 // $alpha-font-family          : "Noi Grotesk Trial", sans-serif;
 // $alpha-font-family          : "UniversalSans-500", sans-serif;
@@ -33,16 +34,16 @@ $alpha-font-family          : "Allrounder Grotesk web", sans-serif;
 // $beta-font-family           : "graphik", serif;
 // $alpha-font-family          : "Helvetica Neue", sans-serif;
 // $beta-font-family           : "Helvetica Neue", serif;
-// $code-font-family           : "Suisse Intl Web Mono", monospace;
+$code-font-family           : "Suisse Intl Web Mono", monospace;
 // $code-font-family           : "Everett Mono Trial Web", monospace;
-$code-font-family             : "Roboto Mono",SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+// $code-font-family             : "Roboto Mono",SFMono-Regular,Menlo,Monaco,Consolas,monospace;
 // $code-font-family: Consolas, "Roboto Mono", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
 
 $alpha-font-weight          : 400;
 // $alpha-font-weight          : 300;
-$beta-font-weight           : 500;
-// $beta-font-weight           : 400;
+// $beta-font-weight           : 500;
+$beta-font-weight           : 400;
 // $beta-font-weight           : 600;
 
 // layout

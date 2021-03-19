@@ -11,6 +11,10 @@
     // flex-wrap: wrap;
     gap: 0 var(--global-whitespace-base);
     margin-bottom: var(--global-whitespace-base);    
+    padding: var(--global-whitespace-xxxs) 0;
+    @include ms-xs;
+    text-transform: uppercase;
+    letter-spacing: .05em;
 
     // @include mq(bp3) {
         display: grid;
@@ -41,6 +45,15 @@
     }
 }
 
+.c-header__links {
+    grid-row: 1;
+
+    @include mq(bp5) {
+        grid-column: right;
+        justify-self: end;
+    }
+}
+
 // 192.168.1.57
 
 // .c-header__back {
@@ -62,6 +75,7 @@
     font-weight: $alpha-font-weight;
     font-feature-settings: "zero", "liga", "tnum";
     // font-family: $beta-font-family;
+    // font-family: $code-font-family;
     grid-column: 2;
     margin-bottom: 0;
     text-align: right;

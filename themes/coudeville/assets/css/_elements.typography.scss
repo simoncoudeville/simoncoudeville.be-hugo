@@ -51,13 +51,15 @@ h1,
     // font-weight: $beta-font-weight;
     // font-weight: 400;
     margin-bottom: var(--global-whitespace-base);
-    // line-height: 1.1;  
-    // font-size: clamp(var(--global-fontSize-xl), 8vw, var(--global-fontSize-xxxl));
+    line-height: 1.1;  
+    font-size: clamp(var(--global-fontSize-xl), 8vw, var(--global-fontSize-xxxl));
+    // font-size: clamp(var(--global-fontSize-xl), 8vw, var(--global-fontSize-xxxxl));
+    // font-size: clamp(var(--global-fontSize-xl), 6vw, var(--global-fontSize-xxl));
     // font-weight: $alpha-font-weight;
     font-weight: $beta-font-weight;
-    letter-spacing: -.02em;
+    // letter-spacing: -.02em;
     // letter-spacing: -.0475em;
-    @include ms-xl;
+    // @include ms-xl;
 
     // @include mq(bp2) {
     //     @include ms-xl;
@@ -160,6 +162,7 @@ a {
     text-decoration-thickness: from-font;
     // text-decoration-thickness: 1px;
     // text-decoration-thickness: .0675em;
+    // text-decoration-thickness: .05em;
     // text-decoration-thickness: 2px;
     // text-decoration: underline var(--global-meta-color);
 

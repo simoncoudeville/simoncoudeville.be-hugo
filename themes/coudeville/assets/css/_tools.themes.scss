@@ -21,7 +21,7 @@
 
     --global-text-color: var(--global-heading-color);
     --global-link-color: var(--global-text-color);    
-    --global-link-decoration-color: var(--global-meta-color);   
+    --global-link-decoration-color: var(--global-text-color);   
     --global-link-hover-color: var(--global-link-color);
     --global-selection-backgroundColor: var(--global-text-color);
     --global-selection-color: var(--global-backgroundColor);
@@ -36,9 +36,9 @@
     // --global-border-color: var(--global-color-neutral-700);
     // --global-border-color-hard: var(--global-color-neutral-600);
 
-    --global-backgroundColor: var(--global-color-neutral-800);
+    --global-backgroundColor: var(--global-color-neutral-900);
     // --global-backgroundColor: hsl(var(--global-neutral-hue), 90%, 10%);   
-    --global-surfaceColor: var(--global-color-neutral-900);
+    --global-surfaceColor: var(--global-color-neutral-800);
     --global-heading-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 100%, .9);        
     --global-meta-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 100%, .455);
     --global-border-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 100%, .1);

@@ -1,8 +1,8 @@
 :root {
-    --global-scale-ratio: 1.25;
+    --global-scale-ratio: 1.225;
     --global-root-fontSize: #{$root-font-size-sm/16px*100%};
     --global-fontSize-xs: #{pxtorem(16px)};
-    --global-fontSize-s: #{pxtorem(18px)}; 
+    --global-fontSize-s: #{pxtorem($root-font-size-sm)}; 
     --global-fontSize: 1rem; 
 
     --global-fontSize-m: calc(var(--global-fontSize) * var(--global-scale-ratio));
@@ -11,6 +11,7 @@
     --global-fontSize-xxl: calc(var(--global-fontSize-xl) * var(--global-scale-ratio)); 
     // --global-fontSize-xxxl: #{pxtorem(50px)};   
     --global-fontSize-xxxl: calc(var(--global-fontSize-xxl) * var(--global-scale-ratio));  
+    --global-fontSize-xxxxl: calc(var(--global-fontSize-xxxl) * var(--global-scale-ratio));  
 
     // --global-fontSize-m: #{pxtorem(25px)}; 
     // --global-fontSize-l: #{pxtorem(30px)}; 

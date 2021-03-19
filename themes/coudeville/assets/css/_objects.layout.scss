@@ -18,6 +18,7 @@
     // grid-row-gap: calc(var(--grid-whitespace) - var(--global-whitespace-base));
     align-content: space-between;
     // align-content: start;
+    // align-items: start;
     position: relative;
     padding: var(--grid-whitespace) var(--grid-whitespace) calc(var(--grid-whitespace) - var(--grid-row-gap));    
     // padding: var(--grid-whitespace) ;    
@@ -34,7 +35,7 @@
     }
 
     @include mq(bp4) {
-        --grid-whitespace: calc(var(--global-whitespace-base) + 5vw);
+        // --grid-whitespace: calc(var(--global-whitespace-base) + 5vw);
         // --grid-whitespace: calc(4vw - var(--global-whitespace-base) );
         // --grid-whitespace: var(--global-whitespace-triple);
         // --grid: "left content right" / var(--grid-left) var(--grid-content) var(--grid-right);
@@ -57,12 +58,12 @@
 }
 
 .o-row--intro {
-    min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-double));    
+    // min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-double));    
     min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-triple));    
     // min-height: calc(50vh - calc(var(--global-baseline) * 33));  
     // min-height: calc(50vh - var(--grid-whitespace));  
     // min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-quadruple));    
-    // padding-top: var(--grid-whitespace);
+    // padding: calc(var(--grid-whitespace) - var(--global-whitespace-base)) 0;
     align-items: end;
     // align-items: center;
 
@@ -86,9 +87,9 @@
     // }
 }
 
-// .o-row--footer {
-//     margin-top: auto;
-// }
+.o-row--footer {
+    margin-top: auto;
+}
 
 .o-row--top {
     scroll-margin-top: var(--grid-whitespace);

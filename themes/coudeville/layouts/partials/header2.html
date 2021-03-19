@@ -6,33 +6,31 @@
             <!-- <p class="c-header__logo">               
                 S&#x0306;
             </p>        -->
+            <p class="c-header__meta u-muted">
+                <!-- {{ .Date.Format "02.01.2006" }} -->
+                {{ .Date.Format "02 january 2006" }}
+            </p>
             <div class="c-header__links">
-                <ul class="o-list c-social-links">
-                    <!-- <li class="c-social-links__item">
-                        &copy;                        
-                        2021
-                    </li> -->
-                    <li class="c-social-links__item">
-                        <a href="/" class="c-social-links__link">                           
-                            Index
-                        </a>                
-                    </li>
-                    <li class="c-social-links__item">
-                        <a href="/blog" class="c-social-links__link">                           
-                            Blog
-                        </a>                
-                    </li>
-                    <li class="c-social-links__item">
-                        <a href="/blog" class="c-social-links__link">
-                            Projects
-                        </a>                
-                    </li>
-                    <li class="c-social-links__item">
-                        <a href="/about" class="c-social-links__link">                            
-                            About
-                        </a>
-                    </li>
-                </ul>
+                <nav class="c-nav">
+                    <ul class="o-list c-nav__list">
+                        <li class="c-nav__item">
+                            <a href="/blog" class="c-nav__link">
+                                Index
+                            </a>
+                        </li>
+                        <li class="c-nav__item">
+                            <a href="/blog" class="c-nav__link">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="c-nav__item">
+                            <a href="/about" class="c-nav__link">
+                                About
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
             </div>        
         </div>
 </header>

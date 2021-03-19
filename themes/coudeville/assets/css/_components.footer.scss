@@ -10,8 +10,10 @@
     grid-column: content;
     display: grid;
     grid-template-columns: auto 1fr;
-    // font-size: var(--global-fontSize-s);
-    // @include ms-s;
+     padding: var(--global-whitespace-xxxs) 0;
+    @include ms-xs;
+    text-transform: uppercase;
+    letter-spacing: .05em;
 
     @include mq(bp3) {
         grid-column-gap: var(--global-whitespace-base);

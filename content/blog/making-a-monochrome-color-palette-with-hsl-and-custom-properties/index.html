@@ -4,6 +4,7 @@ title: Monochrome color palettes with hsl and custom properties
 description: In this article I describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing perfect control and a predictable outcome.
 draft: true
 code: true
+script: js/blogposts/post-3.js
 style: css/blogposts/post-3.scss
 ---
 <header class="o-row o-row--intro">
@@ -16,22 +17,38 @@ style: css/blogposts/post-3.scss
         </h1>        
     </div>
 </header>
-<figure class="o-row o-row--cover">
+<div class="o-row o-row--cover">
     <!-- <div class="o-container o-container--left-right"> -->
-    <div class="o-container">
-        <div class="c-palette">            
-            <!-- <div class="c-palette__item"></div>
-            <div class="c-palette__item"></div> -->
-            <div class="c-palette__item"></div>
-            <div class="c-palette__item"></div>
-            <div class="c-palette__item"></div>
-            <div class="c-palette__item"></div>
-            <div class="c-palette__item"></div>
+    <div class="o-container"> 
+        <div class="c-palette js-palette">
+            <svg class="c-palette__visual" viewBox="0 0 100 100">
+                <rect class="c-palette__item" x="0" y="0" width="20" height="100"></rect>
+                <rect class="c-palette__item" x="20" y="0" width="20" height="100"></rect>
+                <rect class="c-palette__item" x="40" y="0" width="20" height="100"></rect>
+                <rect class="c-palette__item" x="60" y="0" width="20" height="100"></rect>
+                <rect class="c-palette__item" x="80" y="0" width="20" height="100"></rect>
+            </svg>     
+            <!-- <div class="c-palette__controls">
+                <div class="c-palette__control">                    
+                    <input class="c-palette__slider c-palette__slider--hue js-hue-input" id="hue" type="range" value="249" max="360">
+                    <output class="c-palette__output c-palette__output--hue js-hue-output" for="hue"></output>
+                </div>
+                <div class="c-palette__control">
+                    <input class="c-palette__slider c-palette__slider--saturation js-saturation-input" id="saturation" type="range"
+                    value="80" max="100">
+                    <output class="c-palette__output c-palette__output--saturation js-saturation-output" for="saturation"></output>
+                </div>
+                <div class="c-palette__control">
+                    <input class="c-palette__slider c-palette__slider--lightness js-lightness-input" id="lightness" type="range" value="67"
+                    max="100">
+                    <output class="c-palette__output c-palette__output--lightness js-lightness-output" for="lightness"></output>
+                </div>
+            </div>                    -->
         </div>
-        <div class="c-info">
-        </div>
+        
+        <!-- <div class="c-info"></div> -->
     </div>
-</figure>
+</div>
 <div class="o-row">
     <div class="o-container s-content">
         <p>
@@ -41,6 +58,67 @@ style: css/blogposts/post-3.scss
         <p>
             Pixels are easy to work with. 10% of what I do. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.
         </p>
+        <!-- <div class="c-grayscale">
+            <div class="c-grayscale__item">100</div>
+            <div class="c-grayscale__item">200</div>
+            <div class="c-grayscale__item">300</div>
+            <div class="c-grayscale__item">400</div>
+            <div class="c-grayscale__item">500</div>
+            <div class="c-grayscale__item">600</div>
+            <div class="c-grayscale__item">700</div>
+            <div class="c-grayscale__item">800</div>
+            <div class="c-grayscale__item">900</div>
+        </div> -->
+        <div class="c-example">
+            <div class="c-swatches">
+                <div class="c-swatch c-swatch--neutral-10 u-bgcolor-neutral-10">
+                    <span class="c-swatch__name c-text-caption">
+                        100
+                    </span>
+                </div>
+                <div class="c-swatch c-swatch--neutral-20 u-bgcolor-neutral-20">
+                    <span class="c-swatch__name c-text-caption">
+                        200
+                    </span>
+                </div>
+                <div class="c-swatch c-swatch--neutral-30 u-bgcolor-neutral-30">
+                    <span class="c-swatch__name c-text-caption">
+                        300
+                    </span>
+                </div>
+                <div class="c-swatch c-swatch--neutral-40 u-bgcolor-neutral-40">
+                    <span class="c-swatch__name c-text-caption">
+                        400
+                    </span>
+                </div>
+                <div class="c-swatch c-swatch--neutral-50 u-bgcolor-neutral-50">
+                    <span class="c-swatch__name c-text-caption">
+                        500
+                    </span>
+                </div>
+                <div class="c-swatch c-swatch--neutral-60 u-bgcolor-neutral-60">
+                    <span class="c-swatch__name c-text-caption">
+                        600
+                    </span>
+                </div>
+                <div class="c-swatch c-swatch--neutral-70 u-bgcolor-neutral-70">
+                    <span class="c-swatch__name c-text-caption">
+                        700
+                    </span>
+                </div>
+                <div class="c-swatch c-swatch--neutral-80 u-bgcolor-neutral-80">
+                    <span class="c-swatch__name c-text-caption">
+                        800
+                    </span>
+                </div>
+                <div class="c-swatch c-swatch--neutral-90 u-bgcolor-neutral-90">
+                    <span class="c-swatch__name c-text-caption">
+                        900
+                    </span>
+                </div>
+            </div>
+        </div>
+        
         <h3>Round computed pixels</h3>
         <p>
             Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.

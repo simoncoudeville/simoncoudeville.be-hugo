@@ -6,10 +6,10 @@
 
 .c-avatar {
     --c-avatar-dimension: calc(var(--global-whitespace-base) * 6);
+    --c-avatar-border: 1px;
+    --c-avatar-border-color: var(--global-border-color);
     position: relative;
-    display: inline-block;
     width: var(--c-avatar-dimension);
-    // height: var(--c-avatar-dimension);
     border-radius: 0 0 var(--c-avatar-dimension) var(--c-avatar-dimension);
     overflow: hidden;    
     // margin-bottom: calc(var(--c-avatar-dimension) * -.5);
@@ -45,12 +45,17 @@
         // background-color: khaki;
         // background-color: LightGoldenRodYellow;
         // background-color: palegoldenrod;
-        // background-color: var(--global-surfaceColor);
-        box-shadow: inset 0 0 0 1px var(--global-border-color);
+        background-color: var(--global-surfaceColor);
+        // box-shadow: inset 0 0 0 var(--c-avatar-border) var(--c-avatar-border-color);
     }
 
     img {
         position: relative;
+        width: calc(var(--c-avatar-dimension) - calc(var(--c-avatar-border) * 2));
+        margin-bottom: var(--c-avatar-border);
+        margin-left: var(--c-avatar-border);
+        margin-right: var(--c-avatar-border);
+        border-radius: 0 0 var(--c-avatar-dimension) var(--c-avatar-dimension);
         // filter: grayscale(100%) sepia(10%) hue-rotate(220deg) contrast(120%);
         // filter: grayscale(100%);
         // opacity: var(--avatar__img-opacity, .75);
