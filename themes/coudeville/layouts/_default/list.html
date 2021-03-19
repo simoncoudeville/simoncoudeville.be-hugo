@@ -24,7 +24,7 @@
             <nav class="c-nav">
                 <ul class="o-list c-nav__list">
                     <li class="c-nav__item">
-                        <a href="/blog" class="c-nav__link">
+                        <a href="/" class="c-nav__link">
                             Index
                         </a>
                     </li>
@@ -53,7 +53,8 @@
         <ul class="c-list">
             {{ range .Pages }}
                 <li class="c-list__item">
-                    <span class="c-list__meta u-muted">{{ .Date.Format "02 January 2006" }}</span>
+                    <!-- <span class="c-list__meta u-muted">{{ .Date.Format "02 January 2006" }}</span> -->
+                    <span class="c-list__meta u-muted">{{ .Date.Format "02.01.2006" }}</span>
                     <h3 class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></h3>
                 </li>
             {{ end }}            

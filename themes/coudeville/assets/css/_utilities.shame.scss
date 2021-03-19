@@ -39,7 +39,7 @@
 
 .c-nav__list {
     margin-bottom: 0;
-    
+
     @include mq(bp3) {
         display: flex;
         gap: var(--global-whitespace-base);
@@ -52,6 +52,10 @@
     &,
     &:visited {
         color: var(--global-text-color);
+
+        .c-nav--meta & {
+            color: var(--global-meta-color);
+        }
     }
 
     &:hover,
@@ -81,7 +85,7 @@
 
     &,
     &:visited {
-        color: var(--global-text-color);
+        color: var(--global-text-color);        
     }
 
     &:hover,
@@ -89,6 +93,7 @@
         color: var(--global-link-hover-color);
     }
 }
+
 
 .c-back-link {
     --c-back-link__icon-size: var(--global-whitespace-m);

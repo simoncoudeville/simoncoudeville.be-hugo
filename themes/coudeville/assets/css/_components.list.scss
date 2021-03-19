@@ -63,6 +63,11 @@
     // font-family: $beta-font-family;
     // color: var(--global-meta-color);
     flex-shrink: 0;
+
+    padding: var(--global-whitespace-xxxs) 0;
+    @include ms-xs;
+    text-transform: uppercase;
+    letter-spacing: .05em;
 }
 
 .c-list__link {
