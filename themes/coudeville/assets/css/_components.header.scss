@@ -18,12 +18,12 @@
         grid-template-columns: auto 1fr;
     // }
 
-    @include mq(bp5) {
-        grid-column: 1 / -1;
-        display: grid;
-        grid: var(--grid);
-        grid-gap: inherit;
-    }
+    // @include mq(bp5) {
+    //     grid-column: 1 / -1;
+    //     display: grid;
+    //     grid: var(--grid);
+    //     grid-gap: inherit;
+    // }
 
     // @include mq(bp5) {
     //     grid-column: content;
@@ -36,9 +36,9 @@
     margin-bottom: 0;
     grid-row: 1;
 
-    @include mq(bp5) {
-        grid-column: left;
-    }
+    // @include mq(bp5) {
+    //     grid-column: left;
+    // }
 }
 
 // 192.168.1.57
@@ -66,10 +66,10 @@
     margin-bottom: 0;
     text-align: right;
 
-    @include mq(bp5) {
-        text-align: left;
-        grid-column: content;        
-    }
+    // @include mq(bp5) {
+    //     text-align: left;
+    //     grid-column: content;        
+    // }
 }
 
 .c-header__meta--sm {

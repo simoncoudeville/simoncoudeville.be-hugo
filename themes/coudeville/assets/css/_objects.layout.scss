@@ -34,7 +34,7 @@
     }
 
     @include mq(bp4) {
-        --grid-whitespace: calc(var(--global-whitespace-double) + 3vw);
+        // --grid-whitespace: calc(var(--global-whitespace-double) + 3vw);
         // --grid-whitespace: 5vw;
         // --grid-whitespace: calc(4vw - var(--global-whitespace-base) );
         // --grid-whitespace: var(--global-whitespace-triple);

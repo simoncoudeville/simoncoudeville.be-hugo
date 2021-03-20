@@ -1,8 +1,8 @@
 :root {
-    --global-scale-ratio: 1.25;
+    --global-scale-ratio: 1.2825;
     --global-root-fontSize: #{$root-font-size-sm/16px*100%};
     --global-fontSize-xs: #{pxtorem(15px)};
-    --global-fontSize-s: #{pxtorem(17px)}; 
+    --global-fontSize-s: #{pxtorem(18px)}; 
     --global-fontSize: 1rem; 
 
     --global-fontSize-m: calc(var(--global-fontSize) * var(--global-scale-ratio));

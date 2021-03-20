@@ -109,9 +109,9 @@
     // background-color: ghostwhite;
     // background-color: snow;
 
-    @include mq(bp3) {
-        grid-row-gap: calc(var(--grid-whitespace) - var(--grid-row-gap));
-    }
+    // @include mq(bp3) {
+    //     grid-row-gap: calc(var(--grid-whitespace) - var(--grid-row-gap));
+    // }
 
     // @include mq(bp5) {      
         &:before {
@@ -183,8 +183,8 @@
 
 @media (prefers-color-scheme: dark) {
     body::before {
-        filter: invert(100%);
-        mix-blend-mode:screen;
+        // filter: invert(100%);
+        // mix-blend-mode: screen;
         // opacity: .5;
         // filter: none;
         // mix-blend-mode: darken;

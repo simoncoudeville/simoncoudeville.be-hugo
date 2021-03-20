@@ -19,11 +19,11 @@
         // justify-items: space-between;
     }
 
-    @include mq(bp6) {
-        grid-column: 1 / -1;
-        grid: var(--grid);
-        grid-gap: inherit;
-    }
+    // @include mq(bp6) {
+    //     grid-column: 1 / -1;
+    //     grid: var(--grid);
+    //     grid-gap: inherit;
+    // }
 }
 
 .c-footer__copy {
@@ -38,8 +38,8 @@
     }
 
     @include mq(bp6) {
-        grid-row: 1;
-        grid-column: left;
+        // grid-row: 1;
+        // grid-column: left;
         // margin: 0;          
         // transform: rotate(-90deg);
         // transform-origin: top left;
@@ -68,10 +68,10 @@
         grid-column: 2;
     }
 
-    @include mq(bp6) {
-        grid-row: 1;
-        grid-column: content;        
-    }
+    // @include mq(bp6) {
+    //     grid-row: 1;
+    //     grid-column: content;        
+    // }
 }
 
 .c-footer__top {
