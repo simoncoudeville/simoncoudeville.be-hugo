@@ -31,7 +31,7 @@
 
 @mixin ms-s {
     font-size: var(--global-fontSize-s);
-    line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
+    line-height: calc(calc(var(--global-baseline-multiplier) - .5) * var(--global-baseline));
 }
 
 @mixin ms-xs {

@@ -10,7 +10,9 @@
     grid-column: content;
     display: grid;
     grid-template-columns: auto 1fr;
+    align-items: center;
     // font-size: var(--global-fontSize-s);
+    // padding: calc(var(--global-baseline) / 4) 0;
     // @include ms-s;
 
     @include mq(bp3) {
@@ -28,7 +30,7 @@
 
 .c-footer__copy {
     // font-family: $beta-font-family;
-    // @include ms-s;
+    @include ms-s;
     // padding: calc(var(--global-baseline) / 2) 0;
     color: var(--global-meta-color);
     grid-row: 2;            
@@ -63,6 +65,7 @@
 .c-footer__links {
     grid-column: 1;
     grid-row: 1;
+    @include ms-s;
 
     @include mq(bp3) {
         grid-column: 2;
@@ -98,4 +101,9 @@
     display: inline-block;
     text-align: center;
     // width: var(--global-whitespace-base);
+
+    &:hover,
+    &:focus {
+        color: var(--global-link-color);
+    }
 }

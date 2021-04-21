@@ -6,14 +6,20 @@
 
 .c-logo {
     font-family: $alpha-font-family;
+    font-weight: $alpha-font-weight;
     color: var(--logo-color, var(--global-heading-color));    
     // @include ms-base;
 }
 
 .c-logo__link {
-    font-weight: $beta-font-weight;
+    // font-weight: $beta-font-weight;
     // text-decoration: none;
     // text-decoration-color: var(--global-backgroundColor);
+
+    &:hover,
+    &:focus {
+        color: var(--global-link-color);
+    }
     
     // &,
     // &:visited {

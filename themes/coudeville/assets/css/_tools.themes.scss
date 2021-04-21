@@ -21,12 +21,14 @@
 
     --global-text-color: var(--global-heading-color);
     --global-link-color: var(--global-text-color);    
+    // --global-link-decoration-color: var(--global-color-beta);   
     --global-link-decoration-color: var(--global-meta-color);   
+    // --global-link-hover-color: var(--global-color-beta);   
     --global-link-hover-color: var(--global-link-color);
     --global-selection-backgroundColor: var(--global-text-color);
     --global-selection-color: var(--global-backgroundColor);
     --global-scrollbar-thumb-color: var(--global-color-beta);
-    --global-scrollbar-track-color: var(--global-backgroundColor);
+    --global-scrollbar-track-color: transparent;
 }
 
 @mixin theme-dark {    

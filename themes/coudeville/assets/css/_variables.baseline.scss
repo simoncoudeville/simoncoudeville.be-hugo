@@ -1,22 +1,21 @@
 :root {
     --global-baseline: #{6px / $root-font-size-sm}rem;
     --global-baseline-multiplier: 4;
+    
+    --global-whitespace-base: calc(var(--global-baseline) * var(--global-baseline-multiplier));
 
     --global-whitespace-xxxs: calc(var(--global-baseline) / 2);
     --global-whitespace-xxs: var(--global-baseline);
-    --global-whitespace-xs: calc(var(--global-baseline) * calc(var(--global-baseline-multiplier) - 3));
-    --global-whitespace-s: calc(var(--global-baseline) * calc(var(--global-baseline-multiplier) - 2));
-    --global-whitespace-m: calc(var(--global-baseline) * calc(var(--global-baseline-multiplier) - 1));
-    --global-whitespace-l: calc(var(--global-baseline) * var(--global-baseline-multiplier));
-
-    --global-whitespace-base: var(--global-whitespace-l);
+    --global-whitespace-xs: calc(var(--global-whitespace-base) - calc(var(--global-baseline) * 3));
+    --global-whitespace-s: calc(var(--global-whitespace-base) - calc(var(--global-baseline) * 2));
+    --global-whitespace-m: calc(var(--global-whitespace-base) - var(--global-baseline));
     --global-whitespace-double: calc(var(--global-whitespace-base) * 2);
     --global-whitespace-triple: calc(var(--global-whitespace-base) * 3);
     --global-whitespace-quadruple: calc(var(--global-whitespace-double) * 2);
 
     /* layout */
     // --global-content-maxWidth: calc(var(--global-baseline) * 120);
-    --global-content-maxWidth: 35rem;
+    --global-content-maxWidth: 36rem;
     --global-container-maxWidth: calc(var(--global-content-maxWidth) * 3);
 
     --global-borderRadius: var(--global-whitespace-xs);

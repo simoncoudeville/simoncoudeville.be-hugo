@@ -43,7 +43,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;    
     // border-bottom: var(--global-baseline) solid var(--global-color-beta);
 }
 
@@ -57,10 +57,17 @@ html {
 
 body {
     // background-color: var(--global-surfaceColor);
+    // background-image: linear-gradient(
+    //     -15deg,
+    //     hsla(var(--global-hue-color-gamma), 50%, 70%, .2),
+    //     hsla(var(--global-hue-color-beta), 50%, 30%, .2)
+    // );
+    // background-attachment: fixed;
     max-width: var(--global-container-maxWidth);
     margin: 0 auto;
     font-size: var(--global-fontSize);
-    line-height: baseline(var(--global-baseline-multiplier));    
+    line-height: baseline(var(--global-baseline-multiplier));  
+    overflow-x: hidden;  
     // box-sizing: content-box;
 }
 

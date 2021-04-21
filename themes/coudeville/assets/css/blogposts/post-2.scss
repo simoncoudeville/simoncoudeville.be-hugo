@@ -79,7 +79,7 @@
 .e-profile__location {
     position: relative;
     margin-bottom: baseline(3);
-    color: var(--global-meta-color);
+    color: var(--global-color-neutral-500);
     font-size: var(--global-fontSize-xs);
     line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
 }

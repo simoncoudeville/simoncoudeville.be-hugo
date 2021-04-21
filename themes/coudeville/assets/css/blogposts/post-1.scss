@@ -30,7 +30,7 @@
     font-family: $alpha-font-family;
     font-weight: $beta-font-weight;
     line-height: var(--global-whitespace-base);
-    padding: var(--global-whitespace-xs) var(--global-whitespace-s);
+    padding: baseline(2) baseline(3) baseline(2);
     border-radius: var(--global-whitespace-double);
     // border-radius: var(--global-whitespace-xxs);
     border: 1px solid var(--global-border-color);
@@ -124,11 +124,13 @@
     width: 100%;
     height: auto;
     // aspect-ratio: 6 / 5;
-    aspect-ratio: 3 / 2;
-    // aspect-ratio: 1 / 1;
+    // aspect-ratio: 3 / 2;
+    aspect-ratio: 1 / 1;
     color: var(--global-color-neutral-100);
     height: 0;
-    padding-bottom: calc(100% / 3 * 2);
+    padding-bottom: 50vh;
+    // padding-bottom: calc(100% / 3 * 2);
+    // padding-bottom: 100%;
 }
 
 .c-terminal__top {

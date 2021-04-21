@@ -10,12 +10,15 @@
     // display: flex;
     // flex-wrap: wrap;
     gap: 0 var(--global-whitespace-base);
-    margin-bottom: var(--global-whitespace-base);    
+    margin-bottom: var(--global-whitespace-base);  
+    // padding: calc(var(--global-baseline) / 4) 0;
+    // @include ms-s;  
 
     // @include mq(bp3) {
         display: grid;
         grid-gap: var(--global-whitespace-base);
         grid-template-columns: auto 1fr;
+        align-items: baseline;
     // }
 
     // @include mq(bp5) {
@@ -73,6 +76,6 @@
 }
 
 .c-header__meta--sm {
-    padding: var(--global-whitespace-xxxs) 0;
+    // padding: var(--global-whitespace-xxxs) 0;
     @include ms-s;
 }

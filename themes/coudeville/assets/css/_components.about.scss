@@ -7,7 +7,7 @@
 .c-about {
     @include mq(bp2) {
         display: grid;
-        grid-gap: var(--global-whitespace-double);
+        grid-gap: var(--global-whitespace-base);
         grid-template-columns: auto 1fr;
         align-items: center;
     }
@@ -25,12 +25,15 @@
     // }
 
     .c-avatar {
-        display: none;
-        // float: right;
-        // margin-bottom: calc(var(--global-whitespace-base) * -2);
 
-        @include mq(bp3) {
-            display: block;
+        @include mq(bp2,max) {
+            // float: right;
+            // margin-top: calc(var(--global-whitespace-base) * -.5);
+            // margin-bottom: 0;
+            // --c-avatar-dimension: calc(var(--global-whitespace-base) * 4);
+            // margin-left: var(--global-whitespace-base);
+            // margin-right: calc(var(--global-whitespace-base) * -2.5);
+            display: none;
             // float: none;
             // margin-bottom: var(--global-whitespace-base);
         }

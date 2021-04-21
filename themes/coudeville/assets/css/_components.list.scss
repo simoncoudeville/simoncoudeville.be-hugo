@@ -70,6 +70,7 @@
 .c-list__link {
     // font-weight: $beta-font-weight;
     // text-decoration: none;   
+    // text-decoration-color: transparent;
     // padding-right: var(--global-whitespace-base); 
 
     // &::after {
@@ -83,6 +84,7 @@
 
     &:hover {
         // text-decoration: underline;
+        // text-decoration-color: var(--global-link-decoration-color);
 
         &::after {
             opacity: 1;

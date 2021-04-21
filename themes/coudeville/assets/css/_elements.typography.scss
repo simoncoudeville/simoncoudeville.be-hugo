@@ -56,16 +56,14 @@ h1,
     // font-weight: $alpha-font-weight;
     font-weight: $beta-font-weight;
     letter-spacing: -.02em;
+    // line-height: 1.1;  
+    // font-size: clamp(var(--global-fontSize-l), 6vw, var(--global-fontSize-xl));
     // letter-spacing: -.0475em;
-    @include ms-xl;
+    @include ms-l;
 
-    // @include mq(bp2) {
-    //     @include ms-xl;
-    // }
-
-    // @include mq(bp2) {
-    //     @include ms-xxl;
-    // }
+    @include mq(bp3) {
+        @include ms-xl;
+    }
 
     // @include mq(bp4) {
     //     @include ms-xxl;

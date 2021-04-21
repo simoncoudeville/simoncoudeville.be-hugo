@@ -1,5 +1,5 @@
 :root {
-    --global-scale-ratio: 1.2825;
+    --global-scale-ratio: 1.3;
     --global-root-fontSize: #{$root-font-size-sm/16px*100%};
     --global-fontSize-xs: #{pxtorem(15px)};
     --global-fontSize-s: #{pxtorem(18px)}; 
@@ -9,7 +9,6 @@
     --global-fontSize-l: calc(var(--global-fontSize-m) * var(--global-scale-ratio)); 
     --global-fontSize-xl: calc(var(--global-fontSize-l) * var(--global-scale-ratio)); 
     --global-fontSize-xxl: calc(var(--global-fontSize-xl) * var(--global-scale-ratio)); 
-    // --global-fontSize-xxxl: #{pxtorem(50px)};   
     --global-fontSize-xxxl: calc(var(--global-fontSize-xxl) * var(--global-scale-ratio));  
 
     // --global-fontSize-m: #{pxtorem(25px)}; 
