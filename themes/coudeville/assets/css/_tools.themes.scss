@@ -14,13 +14,14 @@
     --global-backgroundColor: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 94%);   
     // --global-backgroundColor: hsl(var(--global-neutral-hue), 100%, 98%);   
     --global-surfaceColor: white;
-    --global-heading-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 0%, .9);        
+    --global-heading-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 0%, .9);            
     --global-meta-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 0%, .545);
     --global-border-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 0%, .1);
     --global-border-color-hard: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 0%, .2);
 
     --global-text-color: var(--global-heading-color);
-    --global-link-color: var(--global-text-color);    
+    // --global-text-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 0%, .7);        
+    --global-link-color: var(--global-heading-color);    
     // --global-link-decoration-color: var(--global-color-beta);   
     --global-link-decoration-color: var(--global-meta-color);   
     // --global-link-hover-color: var(--global-color-beta);   

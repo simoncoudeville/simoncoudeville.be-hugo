@@ -120,3 +120,36 @@ Font-face declarations
     font-style:   normal;
     font-stretch: normal;
 }
+
+@font-face {
+    font-family: 'Antarctica web';
+    src: url('../fonts/AntarcticaBeta-Light.woff2') format('woff2');
+    font-weight:  400;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Antarctica web';
+    src: url('../fonts/AntarcticaBeta-Regular.woff2') format('woff2');
+    font-weight:  500;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Antarctica web';
+    src: url('../fonts/AntarcticaBeta-Medium.woff2') format('woff2');
+    font-weight:  600;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi web';
+    src: url('../fonts/Satoshi-Variable.woff2') format('woff2'),
+    url('../fonts/Satoshi-Variable.woff') format('woff');
+    font-weight:  300 900;
+    font-style:   normal;
+    font-stretch: normal;
+}

@@ -37,7 +37,7 @@ html {
     font-size: var(--global-root-fontSize);
     font-weight: $alpha-font-weight;
     // font-feature-settings: "zero", "liga", "lnum";
-    font-feature-settings: "zero", "liga";
+    font-feature-settings: "zero", "liga", "dlig";
     // font-feature-settings: "liga", "case";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
