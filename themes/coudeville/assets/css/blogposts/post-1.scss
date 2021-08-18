@@ -14,6 +14,14 @@
 @import '../settings.colors';
 @import '../settings.global';
 
+:root {
+    --global-color-primary-base: azure;
+    --global-color-primary-base-hue: #{hue(azure)};
+
+    --global-color-primary-saturation: 70%;
+    --global-color-primary-lightness: 60%;
+}
+
 .theme-light {
     @include theme-light;
 }
@@ -115,7 +123,7 @@
 }
 
 .c-terminal {
-    --c-terminal-borderColor: var(--global-color-neutral-700);
+    --c-terminal-borderColor: var(--global-border-color);
     border: 1px solid var(--c-terminal-borderColor);
     border-radius: var(--global-whitespace-xs);
     background-color: var(--global-color-neutral-900);
@@ -149,7 +157,7 @@
     height: var(--c-terminal__buttonSize);
     width: var(--c-terminal__buttonSize);
     border-radius: 100%;
-    border: 1px solid var(--c-terminal-borderColor);
+    // border: 1px solid var(--c-terminal-borderColor);
     margin: var(--c-terminal__buttonMargin) var(--c-terminal__buttonMargin) 0;
     background-color: var(--global-color-neutral-700);
 

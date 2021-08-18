@@ -45,8 +45,8 @@
         // background-color: khaki;
         // background-color: LightGoldenRodYellow;
         // background-color: palegoldenrod;
-        background-color: var(--global-surfaceColor);
-        // box-shadow: inset 0 0 0 var(--c-avatar-border) var(--c-avatar-border-color);
+        // background-color: var(--global-surfaceColor);
+        box-shadow: inset 0 0 0 var(--c-avatar-border) var(--c-avatar-border-color);
     }
 
     img {
@@ -63,14 +63,17 @@
         // will-change: mix-blend-mode;
         // mix-blend-mode: multiply;
 
-        .theme-dark & {
-            filter: grayscale(100%) sepia(10%) hue-rotate(220deg) contrast(120%);    
-        }
+        // .theme-dark & {
+            // filter: grayscale(100%) sepia(10%) hue-rotate(220deg) contrast(120%);    
+            filter: grayscale(100%) sepia(10%) hue-rotate(var(--global-color-primary-hue)) contrast(120%);    
+            // filter: grayscale(100%) sepia(10%) contrast(120%);    
+            // filter: grayscale(100%) sepia(50%) hue-rotate(var(--global-color-primary-hue)) contrast(80%);    
+        // }
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    .c-avatar img {
-        filter: grayscale(100%) sepia(10%) hue-rotate(220deg) contrast(120%);
-    }
-}
+// @media (prefers-color-scheme: dark) {
+//     .c-avatar img {
+//         filter: grayscale(100%) sepia(10%) hue-rotate(220deg) contrast(120%);
+//     }
+// }

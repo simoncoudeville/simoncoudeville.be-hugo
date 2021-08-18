@@ -5,8 +5,12 @@
 */
 
 .has-baseline {
-    --baseline-color: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .50);
-    --baseline-background: hsla(var(--global-hue-color-gamma), var(--global-saturation-color-gamma), var(--global-lightness-color-gamma), .25);
+    --baseline-color: hsla(var(--global-color-primary-hsl), .25);
+    --baseline-background: hsla(var(--global-color-primary-hsl), .25);
+    // --baseline-color: hsla(var(--global-hue-color-beta), var(--global-saturation-color-beta), var(--global-lightness-color-beta), .50);
+    // // // --baseline-background: hsla(var(--global-hue-color-beta), var(--global-saturation-color-beta), var(--global-lightness-color-beta), .25);
+    // --baseline-color: var(--global-border-color-hard);
+    // --baseline-background: var(--global-border-color);
 
     .c-baseline-overlay {
         display: block;

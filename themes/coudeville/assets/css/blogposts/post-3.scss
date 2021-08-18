@@ -13,10 +13,18 @@
 // components
 @import '../components.example';
 
+// :root {
+//     --global-color-primary-base: whitesmoke;
+//     --global-color-primary-base-hue: #{hue(whitesmoke)};
+
+//     --global-color-primary-saturation: 80%;
+//     --global-color-primary-lightness: 70%;
+// }
+
 .c-palette {
-    --palette-hue: var(--global-hue-color-beta);
-    --palette-saturation: var(--global-saturation-color-beta);
-    --palette-lightness: var(--global-lightness-color-beta);
+    --palette-hue: var(--global-color-primary-hue);
+    --palette-saturation: var(--global-color-primary-saturation);
+    --palette-lightness: var(--global-color-primary-lightness);
 }
 
 .c-palette__visual {
@@ -24,7 +32,7 @@
 }
 
 // .c-info::after {
-//     content: "HSL(#{round(hue($color-beta))}, #{round(lightness($color-beta))}, #{round(saturation($color-beta))}), 
+//     content: "HSL(#{round(huecolor-primary))}, #{round(lightnesscolor-primary))}, #{round(saturationcolor-primary))}), 
 //               HSL(#{round(hue($color-alpha))}, #{round(lightness($color-alpha))}, #{round(saturation($color-alpha))}),
 //               HSL(#{round(hue($color-gamma))}, #{round(lightness($color-gamma))}, #{round(saturation($color-gamma))})
 //               ";

@@ -10,7 +10,9 @@
     grid-column: content;
     display: grid;
     grid-template-columns: auto 1fr;
-    align-items: center;
+    align-items: baseline;
+    // border-top: 1px solid var(--global-border-color);
+    // padding-top: var(--global-whitespace-double);
     // font-size: var(--global-fontSize-s);
     // padding: calc(var(--global-baseline) / 4) 0;
     // @include ms-s;

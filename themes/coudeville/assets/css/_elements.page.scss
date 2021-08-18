@@ -30,7 +30,7 @@
 // styles
 
 html {
-    background-color: var(--global-backgroundColor);
+    background-color: var(--html-backroundColor, var(--global-backgroundColor));
     color: var(--global-text-color);
     // font-family: $beta-font-family;
     font-family: $alpha-font-family;
@@ -44,7 +44,6 @@ html {
     box-sizing: border-box;
     scroll-behavior: smooth;
     text-rendering: optimizeLegibility;    
-    // border-bottom: var(--global-baseline) solid var(--global-color-beta);
 }
 
 * {
@@ -80,17 +79,17 @@ body {
 // @include scrollbars(var(--global-baseline), var(--scrollbar-thumb-color), var(--scrollbar-track-color));
 
 /* Works on Chrome, Edge, and Safari */
-::-webkit-scrollbar {
-    // width: calc(var(--global-baseline) * 3);
-    width: var(--global-baseline);
-}
+// ::-webkit-scrollbar {
+//     // width: calc(var(--global-baseline) * 3);    
+//     width: var(--global-baseline);
+// }
 
-::-webkit-scrollbar-track {
-    background: var(--global-scrollbar-track-color);
-}
+// ::-webkit-scrollbar-track {
+//     background: var(--global-scrollbar-track-color);
+// }
 
-::-webkit-scrollbar-thumb {
-    background-color: var(--global-scrollbar-thumb-color);
-    // border-radius: 1em;
-    // border: var(--global-baseline) solid var(--global-scrollbar-track-color);
-}
+// ::-webkit-scrollbar-thumb {
+//     background-color: var(--global-scrollbar-thumb-color);
+//     // border-radius: 1em;
+//     // border: var(--global-baseline) solid var(--global-scrollbar-track-color);
+// }

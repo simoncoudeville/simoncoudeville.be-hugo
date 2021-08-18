@@ -23,10 +23,10 @@
     // // align-items: center;
     // column-gap: var(--global-whitespace-s);
 
-    & + & {
+    // & + & {
         padding-top: var(--global-whitespace-base);
         border-top: 1px solid var(--global-border-color);
-    }
+    // }
 
     @include mq(bp3) {
         display: flex;

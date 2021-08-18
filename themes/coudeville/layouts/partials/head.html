@@ -12,6 +12,10 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.json">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400&display=swap" rel="stylesheet">
+
 {{ if .Site.IsServer -}}
     {{/* Check if screen.css is needed */}}
     {{- if not .Params.noscreencss -}}

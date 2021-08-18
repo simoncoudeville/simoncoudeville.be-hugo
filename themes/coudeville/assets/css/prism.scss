@@ -15,16 +15,17 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
 
 code[class*="language-"],
 pre[class*="language-"] {
-	--prism-text-color: var(--global-text-color);
     --prism-comment-color: var(--global-meta-color);
 	--prism-backgroundColor: var(--global-color-neutral-800);
 	--prism-text-color: var(--global-color-neutral-100);
     --prism-comment-color: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 51.75%);    
 
-    --prism-keyword-color: var(--global-color-beta);
-    --prism-function-color: var(--global-color-alpha);
-    --prism-variable-color: var(--global-color-gamma);
-    --prism-selector-color: var(--global-color-gamma);
+    --prism-keyword-color: var(--global-color-neutral-400);
+    --prism-function-color: var(--prism-text-color);
+    --prism-variable-color: var(--prism-text-color);
+    --prism-selector-color: var(--global-color-neutral-400);
+    --prism-punctuation-color: var(--global-color-neutral-400);
+    --prism-operator-color: var(--global-color-neutral-400);
     --prism-property-color: var(--prism-text-color);
 
 	color: var(--prism-text-color);
@@ -35,7 +36,8 @@ pre[class*="language-"] {
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-	font-size: var(--global-fontSize-s);
+	font-size: .85rem;
+    line-height: calc(calc(var(--global-baseline-multiplier) - 1) * var(--global-baseline));
 	// border-radius: var(--global-whitespace-s);
 
 	-moz-tab-size: 4;
@@ -64,7 +66,7 @@ pre[class*="language-"] {
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
 	background: var(--prism-backgroundColor);
-	@include scrollbars(var(--global-baseline), var(--prism-comment-color), var(--prism-backgroundColor));
+	// @include scrollbars(var(--global-baseline), var(--prism-comment-color), var(--prism-backgroundColor));
 }
 
 /* Inline code */
@@ -111,7 +113,7 @@ pre[class*="language-"] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-	// color: var(--highlight-color);
+	color: var(--prism-operator-color);
 }
 
 .token.atrule,
@@ -119,6 +121,10 @@ pre[class*="language-"] {
 .token.keyword {
 	color: var(--prism-keyword-color);
 }
+
+// .token.function {
+// 	font-weight: 700;
+// }
 
 .token.function,
 .token.class-name {

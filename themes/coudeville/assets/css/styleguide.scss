@@ -45,13 +45,13 @@
     margin-bottom: var(--global-whitespace-base);
 }
 
-.c-swatch--neutral-20,
+.c-swatch--neutral-10,
 .c-swatch--page-backgroundColor {
     box-shadow: inset 0 0 0 1px var(--global-border-color);
 }
 
 @media (prefers-color-scheme: dark) {
-    .c-swatch--neutral-20 {
+    .c-swatch--neutral-10 {
         box-shadow: none;
     }
 

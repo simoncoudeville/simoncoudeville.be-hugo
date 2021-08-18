@@ -23,7 +23,7 @@
     // padding: var(--grid-whitespace) ;    
 
     @include mq(bp3) {
-        // --grid-whitespace: calc(var(--global-whitespace-base) + 5vw);
+        // --grid-whitespace: calc(var(--global-whitespace-base) + 2vw);
         --grid-whitespace: var(--global-whitespace-double);
         // grid-row-gap: calc(var(--grid-whitespace) - var(--global-whitespace-base));
     }
@@ -59,10 +59,10 @@
 
 .o-row--intro {
     min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-double));    
-    min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-triple));    
+    // min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-triple));    
     // min-height: calc(50vh - calc(var(--global-baseline) * 33));  
     // min-height: calc(50vh - var(--grid-whitespace));  
-    // min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-quadruple));    
+    min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-quadruple));    
     // padding-top: var(--grid-whitespace);
     align-items: end;
     // align-items: center;

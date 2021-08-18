@@ -105,7 +105,7 @@
     // --grid-row-gap: 0;
     // grid-row-gap: calc(var(--grid-whitespace) - var(--grid-row-gap));
     // background: conic-gradient(from -90deg at 50% -25%, lavender, ghostwhite);
-    // background-color: lavender;
+    // --html-backroundColor: lavender;
     // background-color: ghostwhite;
     // background-color: snow;
     // background-image: linear-gradient(
@@ -113,6 +113,30 @@
     //     hsla(var(--global-hue-color-gamma), 50%, 70%, .2),
     //     hsla(var(--global-hue-color-beta), 50%, 30%, .2)
     // );
+
+    --global-color-primary-base: floralwhite;
+    --global-color-primary-hue: #{hue(floralwhite)};
+
+    --global-color-primary-base: lavenderblush;
+    --global-color-primary-hue: #{hue(lavenderblush)};
+
+    --global-color-primary-base: mistyrose;
+    --global-color-primary-hue: #{hue(mistyrose)};
+
+    // --global-color-primary-base: linen;
+    // --global-color-primary-hue: #{hue(linen)};
+
+    // --global-color-primary-base: seashell;
+    // --global-color-primary-hue: #{hue(seashell)};
+
+    --global-color-primary-base: mintcream;
+    --global-color-primary-hue: #{hue(mintcream)};
+
+    // --global-color-primary-base: #e5fff2;
+    // --global-color-primary-hue: #{hue(#e5fff2)};
+
+    --global-color-primary-saturation: 70%;
+    --global-color-primary-lightness: 60%;
 
     background-attachment: fixed;
 
@@ -201,3 +225,7 @@
     }
 }
 
+.u-plus {
+    position: relative;
+    bottom: -.075em;
+}
