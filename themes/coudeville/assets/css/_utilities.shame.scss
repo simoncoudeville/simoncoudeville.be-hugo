@@ -114,14 +114,14 @@
     //     hsla(var(--global-hue-color-beta), 50%, 30%, .2)
     // );
 
-    --global-color-primary-base: floralwhite;
-    --global-color-primary-hue: #{hue(floralwhite)};
+    // --global-color-primary-base: floralwhite;
+    // --global-color-primary-hue: #{hue(floralwhite)};
 
-    --global-color-primary-base: lavenderblush;
-    --global-color-primary-hue: #{hue(lavenderblush)};
+    // --global-color-primary-base: lavenderblush;
+    // --global-color-primary-hue: #{hue(lavenderblush)};
 
-    --global-color-primary-base: mistyrose;
-    --global-color-primary-hue: #{hue(mistyrose)};
+    // --global-color-primary-base: mistyrose;
+    // --global-color-primary-hue: #{hue(mistyrose)};
 
     // --global-color-primary-base: linen;
     // --global-color-primary-hue: #{hue(linen)};
@@ -129,14 +129,17 @@
     // --global-color-primary-base: seashell;
     // --global-color-primary-hue: #{hue(seashell)};
 
-    --global-color-primary-base: mintcream;
-    --global-color-primary-hue: #{hue(mintcream)};
+    // --global-color-primary-base: mintcream;
+    // --global-color-primary-hue: #{hue(mintcream)};
+
+    // --global-color-primary-base: snow;
+    // --global-color-primary-hue: #{hue(snow)};
 
     // --global-color-primary-base: #e5fff2;
     // --global-color-primary-hue: #{hue(#e5fff2)};
 
-    --global-color-primary-saturation: 70%;
-    --global-color-primary-lightness: 60%;
+    // --global-color-primary-saturation: 70%;
+    // --global-color-primary-lightness: 60%;
 
     background-attachment: fixed;
 

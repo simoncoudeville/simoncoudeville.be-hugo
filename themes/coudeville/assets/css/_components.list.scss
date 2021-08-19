@@ -40,11 +40,17 @@
         // padding-top: var(--global-whitespace-base);
         // border-top: 1px solid var(--global-border-color);
     }
+
+    // &:after {
+    //     content: "test";
+    //     order: 1;
+    // }
 }
 
 .c-list__title {
     // font-size: var(--global-fontSize);
     margin-bottom: 0;
+    
 }
 
 .c-list__meta {
@@ -86,10 +92,11 @@
         // text-decoration: underline;
         // text-decoration-color: var(--global-link-decoration-color);
 
-        &::after {
-            opacity: 1;
-            transform: none;
-            transition-timing-function: $animation-easing-out;
-        }
+        // &::after {
+        //     opacity: 1;
+        //     transform: none;
+        //     transition-timing-function: $animation-easing-out;
+        // }
     }
+   
 }

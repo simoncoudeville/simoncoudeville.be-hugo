@@ -48,8 +48,7 @@
         }
     }
 
-    &:focus,
-    &:active {
+    &:focus-visible {
         &:after {
             background-color: var(--toggle__switch-focus-backgroundColor, white);
             border-color: var(--toggle__switch-focus-borderColor, hsl(var(--global-hue-color-alpha),var(--global-saturation-color-alpha),var(--global-lightness-color-alpha)));

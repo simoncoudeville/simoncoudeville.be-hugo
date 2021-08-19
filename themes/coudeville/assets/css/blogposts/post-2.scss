@@ -15,6 +15,20 @@
 @import '../components.baseline';
 @import '../components.toggle-4';
 
+:root {
+    // --global-color-primary-base: whitesmoke;
+    // --global-color-primary-base-hue: #{hue(whitesmoke)};
+    
+    --global-color-primary-base: #fbfaff;
+    --global-color-primary-base-hue: #{hue(#fbfaff)};
+    
+    // --global-color-primary-base: aliceblue;
+    // --global-color-primary-base-hue: #{hue(aliceblue)};
+
+    --global-color-primary-saturation: 75%;
+    --global-color-primary-lightness: 65%;
+}
+
 // Example: Baseline grid
 
 .e-columns {
@@ -209,7 +223,7 @@
     outline: none;
 }
 
-.c-baseline-button:focus {
+.c-baseline-button:focus-visible {
     box-shadow: var(--baseline-button-focus-shadow, 0 0 0 2px var(--global-backgroundColor), 0 0 0 4px var(--global-text-color));
 }
 
@@ -220,16 +234,31 @@
 .c-baseline-button.is-enabled {
     display: flex;
     align-items: center;
+    gap: var(--global-whitespace-s);
+}
+
+.c-baseline-button__icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(var(--global-whitespace-base) * 1.5);
+    height: calc(var(--global-whitespace-base) * 1.5);
+    background-color: var(--global-surfaceColor);
+    border: 1px solid var(--global-border-color-hard);
+    border-radius: 100%;
 }
 
 .c-baseline-button__icon {
     // fill: var(--global-text-color);
     fill: none;
-    stroke: var(--global-text-color);
+    // stroke: var(--global-meta-color);
+    // fill: var(--global-backgroundColor);
+    stroke: var(--global-meta-color);
+    // stroke: var(--global-border-color-hard);
+    stroke-width: 1;
     width: 24px;
     height: 24px;
     // margin-left: var(--global-whitespace-s);
-    margin-left: var(--global-whitespace-xs);
 }
 
 .c-baseline__button-check {

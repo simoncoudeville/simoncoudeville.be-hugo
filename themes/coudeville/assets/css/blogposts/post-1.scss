@@ -14,13 +14,13 @@
 @import '../settings.colors';
 @import '../settings.global';
 
-:root {
-    --global-color-primary-base: azure;
-    --global-color-primary-base-hue: #{hue(azure)};
+// :root {
+//     --global-color-primary-base: whitesmoke;
+//     --global-color-primary-base-hue: #{hue(whitesmoke)};
 
-    --global-color-primary-saturation: 70%;
-    --global-color-primary-lightness: 60%;
-}
+//     --global-color-primary-saturation: 70%;
+//     --global-color-primary-lightness: 60%;
+// }
 
 .theme-light {
     @include theme-light;

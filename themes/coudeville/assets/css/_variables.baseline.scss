@@ -1,6 +1,9 @@
 :root {
-    --global-baseline: #{6px / $root-font-size-sm}rem;
-    --global-baseline-multiplier: 4;
+    // --global-baseline: #{6px / $root-font-size-sm}rem;
+    // --global-baseline-multiplier: 4;
+
+    --global-baseline: #{6px / $root-font-size}rem;
+    --global-baseline-multiplier: 5;
     
     --global-whitespace-base: calc(var(--global-baseline) * var(--global-baseline-multiplier));
 

@@ -1,8 +1,8 @@
 :root {
-    --global-color-primary-base: #fbfaff;
-    --global-color-primary-base-hue: #{hue(#fbfaff)};
-    --global-color-primary-base-saturation: #{saturation(#fbfaff)};
-    --global-color-primary-base-lightness: #{lightness(#fbfaff)};
+    --global-color-primary-base: ghostwhite;
+    --global-color-primary-base-hue: #{hue(ghostwhite)};
+    --global-color-primary-base-saturation: #{saturation(ghostwhite)};
+    --global-color-primary-base-lightness: #{lightness(ghostwhite)};
 
     --global-color-primary-hue: var(--global-color-primary-base-hue);
     --global-color-primary-saturation: 80%;
