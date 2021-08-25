@@ -1,5 +1,5 @@
 {{ define "main" }}
-<header class="o-row o-row--top" id="top">
+<!-- <header class="o-row o-row--top" id="top">
     <div class="c-header">
         <p class="c-header__logo c-logo">
             <a href="/" class="c-logo__link">Simon Coudeville</a>
@@ -8,38 +8,62 @@
             {{ .Title }}
         </h1>
     </div>
+</header> -->
+<header class="o-row o-row--top" id="top">
+    <div class="c-header">
+        <p class="c-header__logo c-logo">
+            <a href="/" class="c-logo__link">Simon Coudeville</a>
+        </p>
+        <p class="c-header__meta u-muted">
+            {{ .Title }}
+        </p>
+        <nav class="c-header__links">
+            <ul class="o-list c-social-links">
+                <li class="c-social-links__item">
+                    <a href="/blog" class="c-social-links__link">
+                        Blog
+                    </a>
+                </li>
+                <li class="c-social-links__item">
+                    <a href="/about" class="c-social-links__link">
+                        About
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 {{ .Content }}
 <main class="o-row">
     <div class="o-aside">
-        <h3 class="u-mb-clear">2021</h3>
+        <h3 class="u-ms-s u-muted">2021</h3>
     </div>
     <div class="o-container">
         <ul class="c-list">
             {{ range .Pages }}
-                <li class="c-list__item">
-                    <span class="c-list__meta u-muted">{{ .Date.Format "2 January 2006" }}</span>
+                <li class="c-list__item">                
                     <h3 class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></h3>
+                    <span class="c-list__meta u-muted">{{ .Date.Format "02.01.2006" }}</span>
                 </li>
             {{ end }}
             {{ range .Pages }}
-                <li class="c-list__item">
-                    <span class="c-list__meta u-muted">{{ .Date.Format "2 January 2006" }}</span>
+                <li class="c-list__item">                    
                     <h3 class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></h3>
+                    <span class="c-list__meta u-muted">{{ .Date.Format "02.01.2006" }}</span>
                 </li>
             {{ end }}
         </ul>
     </div>
 
     <div class="o-aside">
-        <h3 class="u-mb-clear">2020</h3>
+        <h3 class="u-ms-s u-muted">2020</h3>
     </div>
     <div class="o-container">
         <ul class="c-list">
             {{ range .Pages }}
             <li class="c-list__item">
-                <span class="c-list__meta u-muted">{{ .Date.Format "2 January 2006" }}</span>
                 <h3 class="c-list__title"><a class="c-list__link" href="{{.Permalink}}">{{.Title}}</a></h3>
+                <span class="c-list__meta u-muted">{{ .Date.Format "02.01.2006" }}</span>   
             </li>
             {{ end }}            
         </ul>

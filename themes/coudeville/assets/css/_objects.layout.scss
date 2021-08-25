@@ -24,7 +24,7 @@
 
     @include mq(bp3) {
         // --grid-whitespace: calc(var(--global-whitespace-base) + 5vw);
-        --grid-whitespace: var(--global-whitespace-double);
+        // --grid-whitespace: var(--global-whitespace-double);
         // grid-row-gap: calc(var(--grid-whitespace) - var(--global-whitespace-base));
     }
 
@@ -64,8 +64,8 @@
     // min-height: calc(50vh - var(--grid-whitespace));  
     min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-quadruple));    
     // padding-top: var(--grid-whitespace);
-    align-items: end;
-    // align-items: center;
+    // align-items: end;
+    align-items: center;
 
     @include mq(bp3) {
         // min-height: calc(50vh - calc(var(--global-whitespace-base) * 5));    
@@ -78,12 +78,14 @@
     // min-height: calc(50vh - var(--grid-whitespace));    
     // // padding-top: var(--grid-whitespace);
     // // min-height: 50vh;
-    // // align-items: center;
+    // align-items: center;
     // align-items: flex-end;
+
+    // min-height: calc(100vh - var(--grid-whitespace) - var(--global-whitespace-quadruple));    
 
     // @include mq(bp3) {
         min-height: calc(50vh - var(--grid-whitespace));    
-        align-items: flex-end;
+        // align-items: flex-end;
     // }
 }
 

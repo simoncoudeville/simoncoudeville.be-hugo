@@ -33,6 +33,10 @@
     font-family: $code-font-family;
 }
 
+.u-ms-s {
+    @include ms-s;
+}
+
 .c-social-links {
     // padding: calc(var(--global-baseline) / 2) 0;
     color: var(--global-meta-color);
@@ -46,6 +50,10 @@
     // @include mq(bp4) { 
     //     display: block;
     // }
+
+    .c-header__links & {
+        justify-content: flex-end;
+    }
 }
 
 .c-social-links__link {

@@ -60,6 +60,7 @@ h1,
     // font-size: clamp(var(--global-fontSize-l), 6vw, var(--global-fontSize-xl));
     // letter-spacing: -.0475em;
     // font-feature-settings: "case";
+    // white-space: pre-wrap;    
 
     @include ms-l;
 
@@ -67,13 +68,13 @@ h1,
         @include ms-xl;
     }
 
-    // @include mq(bp4) {
-    //     @include ms-xxl;
-    // }
+    @include mq(bp4) {
+        @include ms-xxl;
+    }
 
-    // @include mq(bp5) {
-    //     @include ms-xxxl;
-    // }
+    @include mq(bp5) {
+        @include ms-xxxl;
+    }
 }
 
 h2,

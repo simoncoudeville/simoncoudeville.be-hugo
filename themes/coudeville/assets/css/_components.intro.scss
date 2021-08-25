@@ -10,6 +10,12 @@
     // @include mq(bp5) {
     //     grid-column: left/endContent;
     // }
+    text-indent: 450px;
+    text-indent: calc(100vw / 2 - var(--global-content-maxWidth) / 2 - var(--grid-whitespace));
+
+    a {
+        text-indent: 0;
+    }
 }
 
 // .c-intro__paragraph {
@@ -18,7 +24,9 @@
 
 .c-intro__title,
 .c-intro__paragraph {
-    display: inline;
+    // display: inline;
+    // max-width: 24em;
+    // text-align: justify;
     // font-family: $alpha-font-family;
     // font-family: $beta-font-family;
 }
