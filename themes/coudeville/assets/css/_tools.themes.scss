@@ -12,7 +12,7 @@
     // --global-border-color: var(--global-color-neutral-300);
     // --global-border-color-hard: var(--global-color-neutral-400);
 
-    --global-backgroundColor: var(--global-color-primary-base);   
+    --global-backgroundColor: var(--global-color-neutral-100); 
     --global-surfaceColor: white;
     --global-heading-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 0%, .9);            
     // --global-meta-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 0%, .43);
@@ -22,7 +22,9 @@
 
     --global-text-color: var(--global-heading-color);
     --global-link-color: var(--global-heading-color);    
+    // --global-link-color: var(--global-color-primary);    
     --global-link-decoration-color: var(--global-meta-color);   
+    // --global-link-decoration-color: var(--global-color-primary);   
     --global-link-hover-color: var(--global-link-color);
     --global-selection-backgroundColor: var(--global-text-color);
     --global-selection-color: var(--global-backgroundColor);

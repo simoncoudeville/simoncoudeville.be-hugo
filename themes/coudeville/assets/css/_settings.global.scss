@@ -8,7 +8,7 @@
 // Typography
 // ---
 
-$root-font-size-sm: 17px; // for mobile
+$root-font-size-sm: 16px; // for mobile
 $root-font-size: 20px; // for larger screens
 $root-font-size-lg: 21px; // for larger screens
 
@@ -53,8 +53,8 @@ $code-font-family             : "Roboto Mono",SFMono-Regular,Menlo,Monaco,Consol
 
 $alpha-font-weight          : 400;
 // $alpha-font-weight          : 300;
-$beta-font-weight           : 500;
-// $beta-font-weight           : 400;
+// $beta-font-weight           : 500;
+$beta-font-weight           : 400;
 // $beta-font-weight           : 600;
 
 // layout
@@ -70,7 +70,7 @@ $breakpoints: (
     bp2                     : 420/16*1rem,
     bp3                     : 640/16*1rem,
     bp4                     : 1035/16*1rem,
-    bp5                     : 1235/16*1rem,
+    bp5                     : 1200/16*1rem,
     bp6                     : 1440/16*1rem,
     bp7                     : 1800/16*1rem
 ) !default;

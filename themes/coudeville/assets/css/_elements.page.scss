@@ -35,7 +35,7 @@ html {
     // font-family: $beta-font-family;
     font-family: $alpha-font-family;
     font-size: var(--global-root-fontSize);
-    font-size: clamp(#{$root-font-size-sm/16px*100%},2.35vw,#{$root-font-size/16px*100%});
+    // font-size: clamp(#{$root-font-size-sm/16px*100%},2.35vw,#{$root-font-size/16px*100%});
     font-weight: $alpha-font-weight;
     // font-feature-settings: "zero", "liga", "lnum";
     font-feature-settings: "zero", "liga", "dlig";

@@ -59,3 +59,10 @@
     // }
 }
 
+.c-logo__mark {
+    --c-logo__mark-size: var(--global-whitespace-base);
+    fill: var(--global-heading-color);
+    stroke: var(--global-heading-color);
+    height: var(--c-logo__mark-size);
+}
+

@@ -43,3 +43,30 @@
         // }
     }
 }
+
+.c-about__more-content {
+    display: none;
+}
+
+.c-about__show-more-content {
+    // color: var(--global-color-primary);
+    color: var(--global-meta-color);
+    // color: var(--global-link-color);
+    // text-decoration: underline;
+    // text-decoration-color: var(--global-link-decoration-color);
+    // text-decoration-thickness: from-font;
+    // border: 1px solid var(--global-color-primary);
+    // height: var(--global-whitespace-base);
+    // border-radius: .2em;
+    // display: inline-flex;
+    font-weight: $beta-font-weight;
+    // // text-transform: uppercase;
+    // // align-items: center;
+    // padding: 0 .5em;
+    // @include ms-xs;
+
+    // &::after {
+    //     display: inline-block;
+    //     content: "↓";
+    // }
+}

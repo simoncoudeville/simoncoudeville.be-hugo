@@ -14,10 +14,13 @@
 }
 
 .c-toggle__checkbox {
+    --toggle__checkbox-width: 38px;
+    --toggle__checkbox-height: 1px;
+    --toggle__switch-size: 22px;
     margin: 0 0 0 var(--global-whitespace-s);
     appearance: none;
-    width: 1.75rem;
-    height: 1px;
+    width: var(--toggle__checkbox-width);
+    height: var(--toggle__checkbox-height);
     transition: all $animation-duration-alpha $animation-easing-out;
     outline: none;
     background-color: var(--toggle__checkbox-backgroundColor, var(--global-border-color-hard));
@@ -28,9 +31,9 @@
         background-color: var(--toggle__switch-backgroundColor, var(--global-backgroundColor));
         border: 1px solid var(--toggle__switch-borderColor, var(--global-border-color-hard));
         border-radius: 100%;
-        width: 1rem;
-        height: 1rem;
-        transform: translate(0,calc(-.5rem + .5px));
+        width: var(--toggle__switch-size);
+        height: var(--toggle__switch-size);
+        transform: translate(0,calc(calc(var(--toggle__switch-size) / -2) + calc(var(--toggle__checkbox-height) / 2)));
         transition: all $animation-duration-alpha $animation-easing-out;
     }
 
@@ -39,7 +42,7 @@
         background-color: var(--toggle__checkbox-checked-backgroundColor, var(--global-border-color-hard));
 
         &:after {
-            transform: translate(calc(1.75rem / 2),calc(-.5rem + .5px));
+            transform: translate(calc(var(--toggle__checkbox-width) - var(--toggle__switch-size)),calc(calc(var(--toggle__switch-size) / -2) + calc(var(--toggle__checkbox-height) / 2)));
             // background-color: var(--toggle__switch-checked-backgroundColor, var(--global-surfaceColor));
             background-color: var(--toggle__switch-checked-backgroundColor, var(--global-color-primary));            
             // border-color: var(--toggle__switch-checked-borderColor, var(--global-border-color-hard));
@@ -50,7 +53,7 @@
     &:focus-visible {
         &:after {
             border-color: var(--toggle__switch-focus-borderColor, var(--global-color-primary));
-            box-shadow: var(--toggle__switch-focus-shadow, 0 0 0 .2rem hsla(var(--global-color-primary-hue),var(--global-color-primary-saturation),var(--global-color-primary-lightness),.25));
+            box-shadow: var(--toggle__switch-focus-shadow, 0 0 0 .2rem hsla(var(--global-color-primary-hue),var(--global-color-primary-saturation),var(--global-color-primary-lightness),.35));
         }
     }
 }
@@ -61,7 +64,7 @@
         // --toggle__switch-checked-borderColor: var(--global-color-neutral-100);
         --toggle__switch-checked-borderColor: var(--global-color-primary);
         // --toggle__checkbox-checked-backgroundColor: var(--global-color-primary);
-        --toggle__switch-focus-borderColor: var(--global-color-neutral-100);
-        --toggle__switch-focus-shadow: 0 0 0 3px hsla(0,0%,100%,.5);
+        // --toggle__switch-focus-borderColor: var(--global-color-neutral-100);
+        // --toggle__switch-focus-shadow: 0 0 0 3px hsla(0,0%,100%,.5);
     }
 }
