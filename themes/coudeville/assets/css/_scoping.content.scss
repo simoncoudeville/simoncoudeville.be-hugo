@@ -9,6 +9,11 @@
         margin-top: var(--global-whitespace-double); // Add extra margin on top
     }
 
+    h2,
+    h3 {
+        font-weight: $beta-font-weight;
+    }
+
     // p {
     //     text-align: justify;
     // }
@@ -21,6 +26,7 @@
     p,
     ul,
     ol {
+        font-feature-settings: "ss02";
         hyphens: auto;
         hyphenate-limit-chars: 6 3 3;
         hyphenate-limit-lines: 2;

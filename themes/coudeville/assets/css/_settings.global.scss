@@ -9,7 +9,7 @@
 // ---
 
 $root-font-size-sm: 16px; // for mobile
-$root-font-size: 20px; // for larger screens
+$root-font-size: 19px; // for larger screens
 $root-font-size-lg: 21px; // for larger screens
 
 // Basic font settings
@@ -18,7 +18,7 @@ $alpha-font-family          : "Suisse Intl Web", sans-serif;
 $beta-font-family           : "Suisse Works Web", serif;
 // $alpha-font-family          : "acumin-pro", sans-serif;
 // $alpha-font-family          : "Basis Grotesque Trial", sans-serif;
-$alpha-font-family          : "Allrounder Grotesk web", sans-serif;
+// $alpha-font-family          : "Allrounder Grotesk web", sans-serif;
 // $alpha-font-family          : "Newsreader", serif;
 // $alpha-font-family          : "Satoshi web", sans-serif;
 // $alpha-font-family          : "Passenger Sans", sans-serif;
@@ -35,26 +35,22 @@ $alpha-font-family          : "Allrounder Grotesk web", sans-serif;
 // $alpha-font-family          : "Noi Grotesk Trial", sans-serif;
 // $alpha-font-family          : "UniversalSans-500", sans-serif;
 // $alpha-font-family          : "Everett Trial Web", sans-serif;
-// $beta-font-family           : "acumin-pro-wide", serif;
 // $alpha-font-family          : "Inter", sans-serif;
 // $alpha-font-family          : "Space Grotesk", sans-serif;
-// $beta-font-family           : "Inter", serif;
 // $alpha-font-family          : "Graphik web", sans-serif;
 // $alpha-font-family          : "Antarctica Web", sans-serif;
-// $beta-font-family           : "graphik", serif;
-// $beta-font-family           : "graphik", serif;
 // $alpha-font-family          : "Helvetica Neue", sans-serif;
 // $beta-font-family           : "Helvetica Neue", serif;
-// $code-font-family           : "Suisse Intl Web Mono", monospace;
+$code-font-family           : "Suisse Intl Web Mono", monospace;
 // $code-font-family           : "Everett Mono Trial Web", monospace;
-$code-font-family             : "Roboto Mono",SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+// $code-font-family             : "Roboto Mono",SFMono-Regular,Menlo,Monaco,Consolas,monospace;
 // $code-font-family: Consolas, "Roboto Mono", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
 
 $alpha-font-weight          : 400;
 // $alpha-font-weight          : 300;
-// $beta-font-weight           : 500;
-$beta-font-weight           : 400;
+$beta-font-weight           : 500;
+// $beta-font-weight           : 400;
 // $beta-font-weight           : 600;
 
 // layout
@@ -70,7 +66,7 @@ $breakpoints: (
     bp2                     : 420/16*1rem,
     bp3                     : 640/16*1rem,
     bp4                     : 1035/16*1rem,
-    bp5                     : 1200/16*1rem,
+    bp5                     : 1280/16*1rem,
     bp6                     : 1440/16*1rem,
     bp7                     : 1800/16*1rem
 ) !default;

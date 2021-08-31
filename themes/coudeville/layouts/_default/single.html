@@ -20,22 +20,26 @@
             <a href="/" class="c-logo__link">Simon Coudeville</a>
         </p>
         <p class="c-header__meta c-header__meta--sm u-muted">
-            {{ .Date.Format "02.01.2006" }}
+            <!-- {{ .Date.Format "02.01.2006" }} -->
+            <!-- {{ .Date.Format "January 2006" }} -->
+            {{ .Date.Format "1 January 2006" }}
         </p>
-        <nav class="c-header__links">
-            <ul class="o-list c-social-links">
-                <li class="c-social-links__item">
-                    <a href="/blog" class="c-social-links__link">
-                        Blog
-                    </a>
-                </li>
-                <li class="c-social-links__item">
-                    <a href="/about" class="c-social-links__link">
-                        About
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <div class="c-header__links">
+            <nav class="c-nav">
+                <ul class="o-list c-nav__list u-mb-clear">
+                    <li class="c-nav__item">
+                        <a href="/blog" class="c-nav__link">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="c-nav__item">
+                        <a href="/about" class="c-nav__link">
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </nav>            
+        </div>
     </div>
 </header>
 <article class="o-row">

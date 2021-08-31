@@ -7,9 +7,9 @@
 .o-grid {    
     --grid-content: minmax(0,var(--global-content-maxWidth));
     --grid-left: 1fr;
-    --grid-right: minmax(auto,1fr);
-    --grid: "left content right" / var(--grid-left) var(--grid-content) var(--grid-right);
+    --grid-right: 1fr;
     --grid-whitespace: var(--global-whitespace-base);
+    --grid: "start left content right end" / var(--grid-whitespace) var(--grid-left) var(--grid-content) var(--grid-right) var(--grid-whitespace);    
     --grid-row-gap: var(--global-whitespace-base);
     min-height: 100vh;
     display: grid;    
@@ -19,7 +19,7 @@
     align-content: space-between;
     // align-content: start;
     position: relative;
-    padding: var(--grid-whitespace) var(--grid-whitespace) calc(var(--grid-whitespace) - var(--grid-row-gap));    
+    padding: var(--grid-whitespace) 0 calc(var(--grid-whitespace) - var(--grid-row-gap));    
     // padding: var(--grid-whitespace) ;    
 
     @include mq(bp3) {
@@ -29,12 +29,14 @@
     }
 
     @include mq(bp4) {
-        // --grid: "left content" / var(--grid-left) var(--grid-content);
-        // grid-column-gap: var(--global-whitespace-base);    
+        --grid-right: 0;
+        // --grid-whitespace: var(--global-whitespace-double);
+        // --grid-whitespace: calc(var(--global-whitespace-base) + 3vw);
     }
 
-    @include mq(bp4) {
-        // --grid-whitespace: calc(var(--global-whitespace-double) + 3vw);
+    @include mq(bp5) {
+        --grid-right: 1fr;
+        // --grid-whitespace: calc(var(--global-whitespace-base) + 3vw);
         // --grid-whitespace: 5vw;
         // --grid-whitespace: calc(4vw - var(--global-whitespace-base) );
         // --grid-whitespace: var(--global-whitespace-triple);
@@ -47,7 +49,7 @@
 
 .o-row {
     position: relative;
-    grid-column: left / right;
+    grid-column: start / end;
     display: grid;
     grid: var(--grid);
     grid-gap: inherit;    
@@ -58,7 +60,7 @@
 }
 
 .o-row--intro {
-    min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-double));    
+    // min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-double));    
     // min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-triple));    
     // min-height: calc(50vh - calc(var(--global-baseline) * 33));  
     // min-height: calc(50vh - var(--grid-whitespace));  
@@ -78,8 +80,8 @@
     // min-height: calc(50vh - var(--grid-whitespace));    
     // // padding-top: var(--grid-whitespace);
     // // min-height: 50vh;
-    // align-items: center;
-    // align-items: flex-end;
+    align-items: center;
+    // align-items: start;
 
     // min-height: calc(100vh - var(--grid-whitespace) - var(--global-whitespace-quadruple));    
 
@@ -92,6 +94,10 @@
 // .o-row--footer {
 //     margin-top: auto;
 // }
+
+.o-row--main {
+    align-self: start;
+}
 
 .o-row--top {
     scroll-margin-top: var(--grid-whitespace);
@@ -110,17 +116,17 @@
 }
 
 .o-container--start-end {    
-    grid-column: left/right;
+    grid-column: start/end;
 }
 
 .o-container--left-right {
-    @include mq(bp3) {
+    @include mq(bp4) {
         grid-column: left/right;
     }
 }
 
 .o-container--left-content {
-    @include mq(bp3) {
+    @include mq(bp4) {
         grid-column: left/content;
     }
 }

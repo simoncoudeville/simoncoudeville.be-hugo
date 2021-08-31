@@ -70,6 +70,30 @@
     }
 }
 
+.c-nav__list {
+    display: flex;
+    gap: var(--global-whitespace-base);
+    margin-bottom: 0;
+
+    .c-header__links & {
+        justify-content: flex-end;
+    }
+}
+
+.c-nav__link {
+    text-decoration: none;    
+
+    // &,
+    // &:visited {
+    //     color: var(--global-meta-color);
+    // }
+
+    &:hover,
+    &:focus {
+        color: var(--global-meta-color);
+    }
+}
+
 .c-back-link {
     --c-back-link__icon-size: var(--global-whitespace-m);
     display: inline-flex;
@@ -149,77 +173,77 @@
     // --global-color-primary-saturation: 70%;
     // --global-color-primary-lightness: 60%;
 
-    background-attachment: fixed;
+    // background-attachment: fixed;
 
     // @include mq(bp3) {
     //     grid-row-gap: calc(var(--grid-whitespace) - var(--grid-row-gap));
     // }
 
     // @include mq(bp5) {      
-        &:before {
-            // content: "";
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-image: url(../img/gradient-2.png);
-            background-repeat: no-repeat;
-            background-size: 1670px auto;
-            // background-size: 2670px auto;
-            // opacity: .45;
-            position: fixed;
-            // background-position: 0 -1500px;
-            // background-position: 0 -50%;
-            // opacity: .5;
-            // image-rendering: pixelated;    
+        // &:before {
+        //     // content: "";
+        //     display: block;
+        //     position: absolute;
+        //     width: 100%;
+        //     height: 100%;
+        //     top: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     left: 0;
+        //     background-image: url(../img/gradient-2.png);
+        //     background-repeat: no-repeat;
+        //     background-size: 1670px auto;
+        //     // background-size: 2670px auto;
+        //     // opacity: .45;
+        //     position: fixed;
+        //     // background-position: 0 -1500px;
+        //     // background-position: 0 -50%;
+        //     // opacity: .5;
+        //     // image-rendering: pixelated;    
 
-            // grid-column: right/end;
-            // grid-row: 1/9999;            
-            // border-left: 1px solid var(--global-border-color);
-            // margin-left: var(--global-whitespace-base);
-            // background: transparent url("../svg/terrazzo.svg");
-            // background-repeat: no-repeat;
-            // background: transparent url("../svg/space.svg");
-            // background-repeat: no-repeat;
-            // background-size: cover;
-            // background: transparent url("../svg/grid-2.svg");
-            // background: transparent url("../img/grid.png");
-            // background: transparent url("../svg/test.svg");
+        //     // grid-column: right/end;
+        //     // grid-row: 1/9999;            
+        //     // border-left: 1px solid var(--global-border-color);
+        //     // margin-left: var(--global-whitespace-base);
+        //     // background: transparent url("../svg/terrazzo.svg");
+        //     // background-repeat: no-repeat;
+        //     // background: transparent url("../svg/space.svg");
+        //     // background-repeat: no-repeat;
+        //     // background-size: cover;
+        //     // background: transparent url("../svg/grid-2.svg");
+        //     // background: transparent url("../img/grid.png");
+        //     // background: transparent url("../svg/test.svg");
 
-            // background-attachment: fixed;
+        //     // background-attachment: fixed;
 
-            // background-image: url("../img/wallpaper-516.gif");
-            // background-size: 1800px auto;
-            // mix-blend-mode: lighten;
-            // background-position: 100% 100%;
-            // image-rendering: pixelated;    
+        //     // background-image: url("../img/wallpaper-516.gif");
+        //     // background-size: 1800px auto;
+        //     // mix-blend-mode: lighten;
+        //     // background-position: 100% 100%;
+        //     // image-rendering: pixelated;    
 
-            // background-image: url("../img/gradient-noise.gif");
-            // background-size: 2500px auto;
-            // background-repeat: repeat-y;
-            // // mix-blend-mode: screen;
-            // mix-blend-mode: darken;
-            // filter: invert(100%);
-            // background-position: 100% 100%;
-            // opacity: .25;        
-            // image-rendering: pixelated;    
+        //     // background-image: url("../img/gradient-noise.gif");
+        //     // background-size: 2500px auto;
+        //     // background-repeat: repeat-y;
+        //     // // mix-blend-mode: screen;
+        //     // mix-blend-mode: darken;
+        //     // filter: invert(100%);
+        //     // background-position: 100% 100%;
+        //     // opacity: .25;        
+        //     // image-rendering: pixelated;    
 
-            // background-image: url("../img/wallpaper-516.gif");
-            // background-size: 4800px auto;
-            // mix-blend-mode: lighten;
-            // image-rendering: pixelated;
-            // background-position: 0 50%;
+        //     // background-image: url("../img/wallpaper-516.gif");
+        //     // background-size: 4800px auto;
+        //     // mix-blend-mode: lighten;
+        //     // image-rendering: pixelated;
+        //     // background-position: 0 50%;
 
-            // background-image: url("../img/pile.png");            
-            // background-size: contain;
-            // background-size: cover;
-            // background-position: 100% 100%;
+        //     // background-image: url("../img/pile.png");            
+        //     // background-size: contain;
+        //     // background-size: cover;
+        //     // background-position: 100% 100%;
         
-        }
+        // }
     // }
 }
 
@@ -236,7 +260,7 @@
     }
 }
 
-.u-plus {
-    position: relative;
-    bottom: -.075em;
-}
+// .u-plus {
+//     position: relative;
+//     bottom: -.075em;
+// }

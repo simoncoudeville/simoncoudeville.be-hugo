@@ -54,19 +54,19 @@
 }
 
 .c-list__meta {
-    // font-family: $code-font-family;
+    // font-family: $beta-font-family;
     // text-transform: uppercase;
     display: block;
     // padding: calc(var(--global-baseline) / 2) 0;
     // padding-top: var(--global-baseline);    
     color: var(--text-caption-color, var(--global-meta-color));
-    font-feature-settings: "zero", "liga", "tnum";
+    // font-feature-settings: "zero", "liga", "tnum";
     // font-feature-settings: "zero", "liga", "onum";
     // font-feature-settings: "zero", "liga", "c2sc", "smcp";
     // font-weight: normal;
     // @include ms-s;
     // padding: var(--global-whitespace-xxs) 0 0;
-    @include ms-s;
+    // @include ms-s;
     // @include ms-xs;
     // font-family: $beta-font-family;
     // color: var(--global-meta-color);
@@ -76,7 +76,7 @@
 .c-list__link {
     // font-weight: $beta-font-weight;
     // text-decoration: none;   
-    // text-decoration-color: transparent;
+    text-decoration-color: transparent;
     // padding-right: var(--global-whitespace-base); 
 
     // &::after {
@@ -90,7 +90,7 @@
 
     &:hover {
         // text-decoration: underline;
-        // text-decoration-color: var(--global-link-decoration-color);
+        text-decoration-color: var(--global-link-decoration-color);
 
         // &::after {
         //     opacity: 1;

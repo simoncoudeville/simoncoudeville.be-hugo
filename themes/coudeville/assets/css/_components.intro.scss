@@ -6,26 +6,29 @@
 
 .c-intro {
     margin-bottom: var(--global-whitespace-base);
-    // grid-column: startContent/right;
-    // @include mq(bp5) {
-    //     grid-column: left/endContent;
-    // }
-    text-indent: 450px;
-    text-indent: calc(100vw / 2 - var(--global-content-maxWidth) / 2 - var(--grid-whitespace));
 
     a {
         text-indent: 0;
     }
-}
 
-// .c-intro__paragraph {
-//     font-family: $beta-font-family;
-// }
+    @include mq(bp4) {
+        text-indent: calc(100vw - var(--global-content-maxWidth) - var(--grid-whitespace) * 2);
+    }
+    
+    // @include mq(bp5) {
+    //     text-indent: calc(var(--global-container-maxWidth) / 2 - var(--global-content-maxWidth) / 2 - var(--grid-whitespace));
+    // }
+
+    @include mq(bp5) {
+        text-indent: calc(min(calc(100vw - var(--grid-whitespace) * 2), var(--global-container-maxWidth)) / 2 - var(--global-content-maxWidth) / 2 - var(--grid-whitespace));
+        // text-indent: calc(min(100vw, var(--global-container-maxWidth)) / 2 - var(--global-content-maxWidth) / 2 - var(--grid-whitespace));
+    }
+}
 
 .c-intro__title,
 .c-intro__paragraph {
     // display: inline;
-    // max-width: 24em;
+    // max-width: 21em;
     // text-align: justify;
     // font-family: $alpha-font-family;
     // font-family: $beta-font-family;
