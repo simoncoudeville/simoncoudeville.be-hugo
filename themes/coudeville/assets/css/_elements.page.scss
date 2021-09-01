@@ -38,7 +38,8 @@ html {
     // font-size: clamp(#{$root-font-size-sm/16px*100%},2.35vw,#{$root-font-size/16px*100%});
     font-weight: $alpha-font-weight;
     // font-feature-settings: "zero", "liga", "lnum";
-    font-feature-settings: "zero", "liga", "dlig";
+    // font-feature-settings: "zero", "liga", "dlig";
+    font-feature-settings: "liga", "dlig", "lnum";
     // font-feature-settings: "liga", "case";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

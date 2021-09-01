@@ -141,16 +141,17 @@ homepage: true
                     <span class="u-muted">Hello. I am Simon.</span>
                     I'm a designer and teacher specialized in CSS, typography and animation.
                 </h1> -->
-                <p>
-                    Hi, my name is Simon.
-                    I'm a designer specialized in CSS, typography and animation, currently teaching all of that stuff at <a href="https://mct.be">MCT</a>. 
+                <p id="aboutContent">
+                    Hi, I'm Simon.
+                    I write about design, CSS, typography, interaction and animation and other web relatad topics.
+                    <!-- I'm a designer specialized in CSS, typography and animation,  -->
+                    Currently teaching at <a href="https://mct.be">MCT</a>. 
                     Some of my old design work is on <a href="https://dribbble.com/coudeville">Dribbble</a>. Some of my recent code
                     experiments are on <a href="https://codepen.io/simoncoudeville/">Codepen</a>. Send me an <a
                         href="mailto:coudeville.simon@gmail.com">email</a> or follow me
-                    on <a href="https://twitter.com/simoncoudeville">Twitter</a>.
+                    on <a href="https://twitter.com/simoncoudeville">Twitter</a><span style="display: none;" id="dot">.</span><span id="dots">&hellip;</span>                                         
                     
-                    
-                    <span class="c-about__more-content" id="moreContent">
+                    <span class="c-about__more-content" id="more">
                         <br>
                         <br>
                         I've been designing and writing CSS for more than 15 years. I discovered CSS when it was first introduced in ... and
@@ -160,17 +161,14 @@ homepage: true
                         laborum corporis? 
                         <br>
                         <br>
-                        Aspernatur aliquid harum iusto, officiis obcaecati tempore, repudiandae in excepturi aut voluptatem ex
-                        deserunt vel quasi alias quisquam pariatur!
-                        <br>
-                        <br>
                     </span>
                     <!-- If you're <span id="not" style="display: none;">not</span> interested you <span id="can">can</span> <span id="should" style="display: none">should</span>
                     <button class="o-button-reset c-about__show-more-content" id="buttonReadMore" onclick="readMoreFunction()">
                         read more
                     </button>
                     about me. -->
-                    <button class="o-button-reset c-about__show-more-content" id="buttonReadMore" onclick="readMoreFunction()">
+
+                    <button class="o-button-reset c-about__show-more-content" id="myBtn" onclick="readMoreFunction()">
                         Read more
                     </button>
                 </p>                                
@@ -185,26 +183,23 @@ homepage: true
 
 <script>
     function readMoreFunction() {
-        var can = document.getElementById("can");
-        var not = document.getElementById("not");
-        var should = document.getElementById("should");
-        var contentText = document.getElementById("moreContent");
-        var btnText = document.getElementById("buttonReadMore");
+            var dots = document.getElementById("dots");
+            var dot = document.getElementById("dot");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
 
-        if (can.style.display === "none") {
-            can.style.display = "inline";
-            not.style.display = "none";
-            should.style.display = "none";
-            btnText.innerHTML = "read more";
-            contentText.style.display = "none";
-        } else {
-            can.style.display = "none";
-            not.style.display = "inline";
-            should.style.display = "inline";
-            btnText.innerHTML = "read less";
-            contentText.style.display = "inline";
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                dot.style.display = "none";                
+                moreText.style.display = "none";
+                btnText.innerHTML = "Read more";
+            } else {
+                dots.style.display = "none";
+                dot.style.display = "inline";                
+                moreText.style.display = "inline";
+                btnText.innerHTML = "Read less";
+            }
         }
-    }
 </script>
 
 <!-- <section class="o-row">

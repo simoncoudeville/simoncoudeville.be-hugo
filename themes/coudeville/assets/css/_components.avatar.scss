@@ -70,6 +70,11 @@
             // filter: grayscale(100%) sepia(50%) hue-rotate(var(--global-color-primary-hue)) contrast(80%);    
         // }
     }
+
+    .c-about__more-content & {
+        float: right;
+        margin: calc(var(--global-whitespace-base) * -.5) 0 0 var(--global-whitespace-base);
+    }
 }
 
 // @media (prefers-color-scheme: dark) {

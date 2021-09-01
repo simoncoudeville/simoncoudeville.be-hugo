@@ -60,13 +60,13 @@
     // padding: calc(var(--global-baseline) / 2) 0;
     // padding-top: var(--global-baseline);    
     color: var(--text-caption-color, var(--global-meta-color));
-    font-feature-settings: "zero", "liga", "tnum";
+    // font-feature-settings: "zero", "liga", "tnum";
     // font-feature-settings: "zero", "liga", "onum";
     // font-feature-settings: "zero", "liga", "c2sc", "smcp";
     // font-weight: normal;
     // @include ms-s;
     // padding: var(--global-whitespace-xxs) 0 0;
-    @include ms-s;
+    // @include ms-s;
     // @include ms-xs;
     // font-family: $beta-font-family;
     // color: var(--global-meta-color);

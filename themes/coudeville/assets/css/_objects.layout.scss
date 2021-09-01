@@ -64,8 +64,8 @@
     // min-height: calc(50vh - var(--grid-whitespace));  
     min-height: calc(50vh - var(--grid-whitespace) - var(--global-whitespace-quadruple));    
     // padding-top: var(--grid-whitespace);
-    align-items: end;
-    // align-items: center;
+    // align-items: end;
+    align-items: center;
 
     @include mq(bp3) {
         // min-height: calc(50vh - calc(var(--global-whitespace-base) * 5));    
