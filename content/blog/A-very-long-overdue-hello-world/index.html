@@ -1,133 +1,188 @@
 ---
-date: 2019-09-11T21:40:40+01:00
-title: A very long overdue hello world
-description: In this article I describe how I set up a spacing system with SCSS. It’s based on a single pixel value I use to calculate heights, widths, margin paddings and even line-heights of all components on a web page. This pixel value is computed to flexible units using SCSS. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing perfect control and a predictable outcome.
-draft: true
+date: 2021-09-03T00:00:00+01:00
+title: A long overdue hello world
+description: Why and how I finally made this place
 prism: false
 script: js/blogposts/post-1.js
 style: css/blogposts/post-1.scss
 ---
 
-<header class="o-row o-row--intro">
+<!-- <header class="o-row o-row--intro">
     <div class="o-container">
         <div class="c-intro">
             <h1 class="c-intro__title">
-                A very long overdue hello world
-                <!-- A very long overdue hello world&hellip; -->
+                A very long overdue hello world. 
             </h1>
-            <!-- <p class="h1 c-intro__paragraph u-muted">
+            <p class="h1 c-intro__paragraph u-muted">
                 Why and how I finally made this place.
-            </p> -->
-        </div>
-    </div>        
-</header>
-<figure class="o-row o-row--cover">
-    <div class="o-container">
-        <div class="c-terminal">
-            <div class="c-terminal__top">
-                <div class="c-terminal__button"></div>
-                <div class="c-terminal__button"></div>
-                <div class="c-terminal__button"></div>
-            </div>
-            <div class="c-terminal__body">
-                <p class="c-cursor-text">Hello world</p>
-            </div>
-        </div>
-    </div>
-</figure>
-<div class="o-row">
-    <div class="o-container s-content">
-        <p>
-            I've been creating websites for over a decade. More then a third of my life has been dedicated to writing HTML & CSS.           
-            Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. 
-        </p>  
-        <h2>Profile component</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <h2>Working with half values</h2>
-        <p>
-            In order to align text to a baseline grid on the web you. With this technique you have the possibility to align text
-            to a baseline grid. In a way. If every element has the same line-height or if you double or triple that line-height
-            and if the margin between the items is the same as the base line-height you these items will all align to eachother.
-            It's simple math, really.
-        </p>
-        <h2>Dark mode</h2>
-        <p>
-            If you happen to visit this page with your OS's appearance setting set to dark you'll see the dark theme in all it's glory. Which personnaly I think is the only reason or time to provide a dark theme. But especially for this page I made a button to toggle dark or light theme:
-        </p>
-        <div class="c-theme-switcher">
-            <p>
-                <button aria-label="Enable light theme" aria-pressed="false" role="switch" type="button" id="theme-light-button" class="o-button-reset c-theme-button enabled" onclick="enableTheme('light', true)">
-                    <!-- <svg class="c-theme-button__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        viewBox="0 0 24 24">
-                        <path id="circle"
-                            d="M12,24h0A12,12,0,0,1,3.515,3.515,12,12,0,0,1,20.486,20.486,11.925,11.925,0,0,1,12,24Zm0-2A10,10,0,1,0,12,2V22Z"
-                            transform="translate(0 0)" />
-                    </svg> -->
-                    <!-- <svg class="c-theme-button__icon" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M8.146 9.146l-.353.354.707.707.354-.353-.708-.708zM10.5 7.5l.354.354.353-.354-.353-.354-.354.354zM8.854 5.146L8.5 4.793l-.707.707.353.354.708-.708zm0 4.708l2-2-.708-.708-2 2 .708.708zm2-2.708l-2-2-.708.708 2 2 .708-.708zM10.5 7H4v1h6.5V7zm-3 7A6.5 6.5 0 011 7.5H0A7.5 7.5 0 007.5 15v-1zM14 7.5A6.5 6.5 0 017.5 14v1A7.5 7.5 0 0015 7.5h-1zM7.5 1A6.5 6.5 0 0114 7.5h1A7.5 7.5 0 007.5 0v1zm0-1A7.5 7.5 0 000 7.5h1A6.5 6.5 0 017.5 1V0z"
-                            fill="currentColor"></path>
-                    </svg> -->
-                    <!-- <svg class="c-theme-button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-                        <title>darkmode</title>
-                        <path d="M9,18H9A9,9,0,0,1,2.64,2.64,8.88,8.88,0,0,1,9,0Z" />
-                        <circle cx="9" cy="9" r="8.5" fill="none" stroke="currentColor" stroke-miterlimit="10" />
-                    </svg> -->
-                    <svg class="c-theme-button__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18 18">
-                        <path id="Path_1884" data-name="Path 1884" d="M9,18H9A9,9,0,0,1,2.636,2.636,8.94,8.94,0,0,1,9,0V18Z"
-                            fill="currentColor" />
-                        <path id="Path_1885" data-name="Path 1885" d="M8.25,0A8.25,8.25,0,1,1,0,8.25,8.25,8.25,0,0,1,8.25,0Z"
-                            transform="translate(0.75 0.75)" fill="none" stroke="currentColor" stroke-width="1.5" />
-                    </svg>
-                    Turn off dark theme                    
-                </button>
-                <button aria-label="Enable dark theme"  aria-pressed="false" role="switch" type="button" id="theme-dark-button" class="o-button-reset c-theme-button" onclick="enableTheme('dark', true)">
-                    <!-- <svg class="c-theme-button__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        viewBox="0 0 24 24">
-                        <path id="circle"
-                            d="M12,24h0A12,12,0,0,1,3.515,3.515,12,12,0,0,1,20.486,20.486,11.925,11.925,0,0,1,12,24Zm0-2A10,10,0,1,0,12,2V22Z"
-                            transform="translate(0 0)" />
-                    </svg> -->
-                    <!-- <svg class="c-theme-button__icon" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M8.146 9.146l-.353.354.707.707.354-.353-.708-.708zM10.5 7.5l.354.354.353-.354-.353-.354-.354.354zM8.854 5.146L8.5 4.793l-.707.707.353.354.708-.708zm0 4.708l2-2-.708-.708-2 2 .708.708zm2-2.708l-2-2-.708.708 2 2 .708-.708zM10.5 7H4v1h6.5V7zm-3 7A6.5 6.5 0 011 7.5H0A7.5 7.5 0 007.5 15v-1zM14 7.5A6.5 6.5 0 017.5 14v1A7.5 7.5 0 0015 7.5h-1zM7.5 1A6.5 6.5 0 0114 7.5h1A7.5 7.5 0 007.5 0v1zm0-1A7.5 7.5 0 000 7.5h1A6.5 6.5 0 017.5 1V0z"
-                            fill="currentColor"></path>
-                    </svg> -->
-                    <!-- <svg class="c-theme-button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-                        <title>darkmode</title>
-                        <path d="M9,18H9A9,9,0,0,1,2.64,2.64,8.88,8.88,0,0,1,9,0Z" />
-                        <circle cx="9" cy="9" r="8.5" fill="none" stroke="currentColor" stroke-miterlimit="10" />
-                    </svg> -->
-                    <svg class="c-theme-button__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        viewBox="0 0 18 18">
-                        <path id="Path_1884" data-name="Path 1884" d="M9,18H9A9,9,0,0,1,2.636,2.636,8.94,8.94,0,0,1,9,0V18Z"
-                            fill="currentColor" />
-                        <path id="Path_1885" data-name="Path 1885" d="M8.25,0A8.25,8.25,0,1,1,0,8.25,8.25,8.25,0,0,1,8.25,0Z"
-                            transform="translate(0.75 0.75)" fill="none" stroke="currentColor" stroke-width="1.5" />
-                    </svg>
-                    Turn on dark theme                   
-                </button>
             </p>
         </div>
-
-        <p>
-            The technique is largely based on <a href="https://www.kooslooijesteijn.net/">Koos Looijesteijn's</a> excellent article on <a href="https://www.kooslooijesteijn.net/blog/add-dark-mode-to-website">implementing dark modes on websites</a>. The only downside to me is that it relies on javascript rather then CSS's built in prefers-color-scheme media query.
-        </p>
-       
-        <h2>Final thoughts</h2>
-        <p>
-            In order to align text to a baseline grid on the web you. With this technique you have the possibility to align text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that line-height and if the margin between the items is the same as the base line-height you these items will all align to eachother. It's simple math, really.
-        </p>       
+    </div>        
+</header> -->
+<figure class="o-row o-row--cover">
+  <div class="o-container">
+    <div class="c-terminal">
+      <div class="c-terminal__top">
+        <div class="c-terminal__button"></div>
+        <div class="c-terminal__button"></div>
+        <div class="c-terminal__button"></div>
+      </div>
+      <div class="c-terminal__body">
+        <p class="c-cursor-text">Hello world</p>
+      </div>
     </div>
+  </div>
+</figure>
+<div class="o-row">
+  <div class="o-container s-content">
+    <p>
+      I've been creating websites for over a decade. More then a third of my life has been dedicated to writing HTML &
+      CSS. Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px
+      looks like. In the end the browser computes all units to pixels.
+    </p>
+    <h2>Profile component</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <h2>Working with half values</h2>
+    <p>
+      In order to align text to a baseline grid on the web you. With this technique you have the possibility to align
+      text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that
+      line-height and if the margin between the items is the same as the base line-height you these items will all align
+      to eachother. It's simple math, really.
+    </p>
+    <h2>Dark mode</h2>
+    <p>
+      If you happen to visit this page with your OS's appearance setting set to dark you'll see the dark theme in all
+      it's glory. Which personnaly I think is the only reason or time to provide a dark theme. But especially for this
+      page I made a button to toggle dark or light theme:
+    </p>
+    <div class="c-theme-switcher">
+      <p>
+        <button
+          aria-label="Enable light theme"
+          aria-pressed="false"
+          role="switch"
+          type="button"
+          id="theme-light-button"
+          class="o-button-reset c-theme-button enabled"
+          onclick="enableTheme('light', true)"
+        >
+          <!-- <svg class="c-theme-button__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 24 24">
+                        <path id="circle"
+                            d="M12,24h0A12,12,0,0,1,3.515,3.515,12,12,0,0,1,20.486,20.486,11.925,11.925,0,0,1,12,24Zm0-2A10,10,0,1,0,12,2V22Z"
+                            transform="translate(0 0)" />
+                    </svg> -->
+          <!-- <svg class="c-theme-button__icon" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.146 9.146l-.353.354.707.707.354-.353-.708-.708zM10.5 7.5l.354.354.353-.354-.353-.354-.354.354zM8.854 5.146L8.5 4.793l-.707.707.353.354.708-.708zm0 4.708l2-2-.708-.708-2 2 .708.708zm2-2.708l-2-2-.708.708 2 2 .708-.708zM10.5 7H4v1h6.5V7zm-3 7A6.5 6.5 0 011 7.5H0A7.5 7.5 0 007.5 15v-1zM14 7.5A6.5 6.5 0 017.5 14v1A7.5 7.5 0 0015 7.5h-1zM7.5 1A6.5 6.5 0 0114 7.5h1A7.5 7.5 0 007.5 0v1zm0-1A7.5 7.5 0 000 7.5h1A6.5 6.5 0 017.5 1V0z"
+                            fill="currentColor"></path>
+                    </svg> -->
+          <!-- <svg class="c-theme-button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+                        <title>darkmode</title>
+                        <path d="M9,18H9A9,9,0,0,1,2.64,2.64,8.88,8.88,0,0,1,9,0Z" />
+                        <circle cx="9" cy="9" r="8.5" fill="none" stroke="currentColor" stroke-miterlimit="10" />
+                    </svg> -->
+          <svg
+            class="c-theme-button__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 18 18"
+          >
+            <path
+              id="Path_1884"
+              data-name="Path 1884"
+              d="M9,18H9A9,9,0,0,1,2.636,2.636,8.94,8.94,0,0,1,9,0V18Z"
+              fill="currentColor"
+            />
+            <path
+              id="Path_1885"
+              data-name="Path 1885"
+              d="M8.25,0A8.25,8.25,0,1,1,0,8.25,8.25,8.25,0,0,1,8.25,0Z"
+              transform="translate(0.75 0.75)"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            />
+          </svg>
+          Turn off dark theme
+        </button>
+        <button
+          aria-label="Enable dark theme"
+          aria-pressed="false"
+          role="switch"
+          type="button"
+          id="theme-dark-button"
+          class="o-button-reset c-theme-button"
+          onclick="enableTheme('dark', true)"
+        >
+          <!-- <svg class="c-theme-button__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 24 24">
+                        <path id="circle"
+                            d="M12,24h0A12,12,0,0,1,3.515,3.515,12,12,0,0,1,20.486,20.486,11.925,11.925,0,0,1,12,24Zm0-2A10,10,0,1,0,12,2V22Z"
+                            transform="translate(0 0)" />
+                    </svg> -->
+          <!-- <svg class="c-theme-button__icon" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.146 9.146l-.353.354.707.707.354-.353-.708-.708zM10.5 7.5l.354.354.353-.354-.353-.354-.354.354zM8.854 5.146L8.5 4.793l-.707.707.353.354.708-.708zm0 4.708l2-2-.708-.708-2 2 .708.708zm2-2.708l-2-2-.708.708 2 2 .708-.708zM10.5 7H4v1h6.5V7zm-3 7A6.5 6.5 0 011 7.5H0A7.5 7.5 0 007.5 15v-1zM14 7.5A6.5 6.5 0 017.5 14v1A7.5 7.5 0 0015 7.5h-1zM7.5 1A6.5 6.5 0 0114 7.5h1A7.5 7.5 0 007.5 0v1zm0-1A7.5 7.5 0 000 7.5h1A6.5 6.5 0 017.5 1V0z"
+                            fill="currentColor"></path>
+                    </svg> -->
+          <!-- <svg class="c-theme-button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+                        <title>darkmode</title>
+                        <path d="M9,18H9A9,9,0,0,1,2.64,2.64,8.88,8.88,0,0,1,9,0Z" />
+                        <circle cx="9" cy="9" r="8.5" fill="none" stroke="currentColor" stroke-miterlimit="10" />
+                    </svg> -->
+          <svg
+            class="c-theme-button__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 18 18"
+          >
+            <path
+              id="Path_1884"
+              data-name="Path 1884"
+              d="M9,18H9A9,9,0,0,1,2.636,2.636,8.94,8.94,0,0,1,9,0V18Z"
+              fill="currentColor"
+            />
+            <path
+              id="Path_1885"
+              data-name="Path 1885"
+              d="M8.25,0A8.25,8.25,0,1,1,0,8.25,8.25,8.25,0,0,1,8.25,0Z"
+              transform="translate(0.75 0.75)"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            />
+          </svg>
+          Turn on dark theme
+        </button>
+      </p>
+    </div>
+
+    <p>
+      The technique is largely based on <a href="https://www.kooslooijesteijn.net/">Koos Looijesteijn's</a> excellent
+      article on
+      <a href="https://www.kooslooijesteijn.net/blog/add-dark-mode-to-website">implementing dark modes on websites</a>.
+      The only downside to me is that it relies on javascript rather then CSS's built in prefers-color-scheme media
+      query.
+    </p>
+
+    <h2>Final thoughts</h2>
+    <p>
+      In order to align text to a baseline grid on the web you. With this technique you have the possibility to align
+      text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that
+      line-height and if the margin between the items is the same as the base line-height you these items will all align
+      to eachother. It's simple math, really.
+    </p>
+  </div>
 </div>

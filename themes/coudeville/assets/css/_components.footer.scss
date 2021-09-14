@@ -5,111 +5,113 @@
 */
 
 .c-footer {
-    --link-decoration-color: var(--global-meta-color);
-    --link-hover-color: var(--global-link-hover-color);
-    grid-column: content;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: baseline;
-    // border-top: 1px solid var(--global-border-color);
-    // padding-top: var(--global-whitespace-double);
-    // font-size: var(--global-fontSize-s);
-    // padding: calc(var(--global-baseline) / 4) 0;
-    // @include ms-s;
+  --link-decoration-color: var(--global-meta-color);
+  --link-hover-color: var(--global-link-hover-color);
+  grid-column: content;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  // border-top: 1px solid var(--global-border-color);
+  padding-top: var(--global-whitespace-double);
+  // font-size: var(--global-fontSize-s);
+  // padding: calc(var(--global-baseline) / 4) 0;
+  //   @include ms-s;
+  // @include ms-xs;
 
-    @include mq(bp3) {
-        grid-column-gap: var(--global-whitespace-base);
-        grid-template-columns: auto 1fr auto;
-        // justify-items: space-between;
-    }
+  @include mq(bp3) {
+    grid-column-gap: var(--global-whitespace-base);
+    grid-template-columns: auto 1fr auto;
+    // justify-items: space-between;
+  }
 
-    @include mq(bp5) {
-        grid-column: 1 / -1;
-        grid: var(--grid);
-        grid-gap: inherit;
-    }
+  // @include mq(bp5) {
+  //   grid-column: 1 / -1;
+  //   grid: var(--grid);
+  //   grid-gap: inherit;
+  // }
 }
 
 .c-footer__copy {
-    // font-family: $beta-font-family;
-    // @include ms-s;
-    // padding: calc(var(--global-baseline) / 2) 0;
-    color: var(--global-meta-color);
-    grid-row: 2;            
+  // font-family: $beta-font-family;
+  font-feature-settings: 'zero', 'liga', 'tnum';
+  @include ms-s;
+  // padding: calc(var(--global-baseline) / 2) 0;
+  color: var(--global-meta-color);
+  grid-row: 2;
 
-    @include mq(bp3) {
-        grid-row: 1;
-    }
+  @include mq(bp3) {
+    grid-row: 1;
+  }
 
-    @include mq(bp5) {
-        // grid-row: 1;
-        // grid-column: left;
-        // margin: 0;          
-        // transform: rotate(-90deg);
-        // transform-origin: top left;
-        // position: relative;
-        // bottom: calc(var(--global-whitespace-base) * -1);
-        // position: fixed;
-        // bottom: calc(var(--grid-whitespace) - var(--global-whitespace-base));
-        // left: var(--grid-whitespace);          
-    }
+  @include mq(bp5) {
+    // grid-row: 1;
+    // grid-column: left;
+    // margin: 0;
+    // transform: rotate(-90deg);
+    // transform-origin: top left;
+    // position: relative;
+    // bottom: calc(var(--global-whitespace-base) * -1);
+    // position: fixed;
+    // bottom: calc(var(--grid-whitespace) - var(--global-whitespace-base));
+    // left: var(--grid-whitespace);
+  }
 }
 
 .c-footer__logo {
-    // font-weight: $beta-font-weight;
-    grid-row: 2;            
+  // font-weight: $beta-font-weight;
+  grid-row: 2;
 
-    @include mq(bp3) {
-        grid-row: 1;
-    }
+  // @include mq(bp3) {
+  //   grid-row: 1;
+  // }
 }
 
 .c-footer__links {
-    grid-column: 1;
-    grid-row: 1;
-    // @include ms-s;
+  grid-column: 1;
+  grid-row: 1;
+  // @include ms-s;
 
-    @include mq(bp3) {
-        grid-column: 2;
-    }
+  @include mq(bp3) {
+    grid-column: 2;
+  }
 
-    // @include mq(bp6) {
-    //     grid-row: 1;
-    //     grid-column: content;        
-    // }
+  // @include mq(bp6) {
+  //     grid-row: 1;
+  //     grid-column: content;
+  // }
 
-    .c-social-links {
-        margin-bottom: 0;
-    }
+  .c-social-links {
+    margin-bottom: 0;
+  }
 }
 
 .c-footer__top {
-    text-align: right;
-    grid-row: 2;
+  text-align: right;
+  grid-row: 2;
 
-    @include mq(bp3) {
-        grid-row: 1;
-        grid-column: 3;
-    }
+  @include mq(bp3) {
+    grid-row: 1;
+    grid-column: 3;
+  }
 
-    @include mq(bp6) {
-        grid-row: 1;
-        grid-column: content;
-    }
+  // @include mq(bp6) {
+  //   grid-row: 1;
+  //   grid-column: content;
+  // }
 
-    @include mq(bp6) {
-        grid-column: right;
-    }
+  // @include mq(bp6) {
+  //   grid-column: right;
+  // }
 }
 
 .c-footer__top-link {
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    // width: var(--global-whitespace-base);
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  // width: var(--global-whitespace-base);
 
-    &:hover,
-    &:focus {
-        color: var(--global-link-color);
-    }
+  &:hover,
+  &:focus {
+    color: var(--global-link-color);
+  }
 }

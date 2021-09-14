@@ -47,7 +47,8 @@
 }
 
 .c-theme-button:hover {
-    background-color: var(--global-surfaceColor);
+    background-color: var(--global-border-color);
+    // background-color: var(--global-surfaceColor);
     // box-shadow: 0 2px 10px hsla(0,0,0,.1) ;
 }
 
@@ -58,7 +59,6 @@
 .c-theme-button:active {
     box-shadow: none;
     background-color: var(--global-border-color);
-
 }
 
 .c-theme-button.is-enabled {
@@ -124,14 +124,15 @@
 
 .c-terminal {
     --c-terminal-borderColor: var(--global-border-color);
+    --c-terminal-backgroundColor: var(--global-color-neutral-900);
     border: 1px solid var(--c-terminal-borderColor);
     border-radius: var(--global-whitespace-xs);
-    background-color: var(--global-color-neutral-900);
+    background-color: var(--c-terminal-backgroundColor);
     // background-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 0%, .7);
     overflow: hidden;
     width: 100%;
     height: auto;
-    // aspect-ratio: 6 / 5;
+    aspect-ratio: 6 / 5;
     aspect-ratio: 3 / 2;
     // aspect-ratio: 1 / 1;
     color: var(--global-color-neutral-100);
@@ -158,8 +159,10 @@
     width: var(--c-terminal__buttonSize);
     border-radius: 100%;
     // border: 1px solid var(--c-terminal-borderColor);
+    // border: 1px solid hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 100%, .15);
     margin: var(--c-terminal__buttonMargin) var(--c-terminal__buttonMargin) 0;
-    background-color: var(--global-color-neutral-700);
+    // background-color: var(--global-color-neutral-700);
+    background-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 100%, .15);
 
     & + & {
         margin-left: calc(var(--c-terminal__buttonMargin) / -2);
@@ -176,6 +179,11 @@
 }
 
 .theme-dark {
+
+    .c-terminal {
+        --c-terminal-backgroundColor: transparent;
+    }    
+
     .c-post-cover {
         // box-shadow: 0 0 0 1px var(--global-backgroundColor);
         // background-color: rgba(0,0,0,.15);
@@ -183,6 +191,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
+
+    .c-terminal {
+        --c-terminal-backgroundColor: transparent;
+    }    
 
     .c-terminal-cover {
         padding-top: 0;

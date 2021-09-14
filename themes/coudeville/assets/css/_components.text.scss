@@ -22,7 +22,11 @@
 }
 
 .c-text-meta {
-  font-family: $beta-font-family;
+  // font-family: $beta-font-family;
+  font-weight: $alpha-font-weight;
+  font-feature-settings: "zero", "liga", "tnum";
+  color: var(--global-meta-color);
+  @include ms-s;
 }
 
 .c-text-xxxl {

@@ -161,3 +161,19 @@ Font-face declarations
     font-style:   normal;
     font-stretch: normal;
 }
+
+@font-face {
+    font-family: 'Diatype web';
+    src: url('../fonts/ABCDiatype-Regular-Trial.woff2') format('woff2');
+    font-weight:  400;
+    font-style:   normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'Diatype web';
+    src: url('../fonts/ABCDiatype-Medium-Trial.woff2') format('woff2');
+    font-weight:  500;
+    font-style:   normal;
+    font-stretch: normal;
+}

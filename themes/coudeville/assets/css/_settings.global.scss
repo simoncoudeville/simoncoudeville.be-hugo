@@ -8,23 +8,25 @@
 // Typography
 // ---
 
-$root-font-size-sm: 16px; // for mobile
-$root-font-size: 20px; // for larger screens
+$root-font-size-sm: 17px; // for mobile
+$root-font-size: 19px; // for larger screens
 $root-font-size-lg: 21px; // for larger screens
 
 // Basic font settings
 
-$alpha-font-family          : "Suisse Intl Web", sans-serif;
-$beta-font-family           : "Suisse Works Web", serif;
+$alpha-font-family: 'Suisse Intl Web', sans-serif;
+$beta-font-family: 'Suisse Works Web', serif;
 // $alpha-font-family          : "acumin-pro", sans-serif;
 // $alpha-font-family          : "Basis Grotesque Trial", sans-serif;
-$alpha-font-family          : "Allrounder Grotesk web", sans-serif;
+$alpha-font-family: 'Allrounder Grotesk web', sans-serif;
+// $alpha-font-family          : "Diatype web", sans-serif;
 // $alpha-font-family          : "Newsreader", serif;
 // $alpha-font-family          : "Satoshi web", sans-serif;
 // $alpha-font-family          : "Passenger Sans", sans-serif;
 // $alpha-font-family          : "Manrope", sans-serif;
 // $alpha-font-family          : "NT Bau", sans-serif;
 // $alpha-font-family          : "Untitled Sans Test", sans-serif;
+// $alpha-font-family          : "APK Protocol", sans-serif;
 // $alpha-font-family          : "FK Grotesk Trial", sans-serif;
 // $alpha-font-family          : "FK Grotesk Neue Trial", sans-serif;
 // $alpha-font-family          : "Sohne Test", sans-serif;
@@ -46,16 +48,17 @@ $alpha-font-family          : "Allrounder Grotesk web", sans-serif;
 // $beta-font-family           : "graphik", serif;
 // $alpha-font-family          : "Helvetica Neue", sans-serif;
 // $beta-font-family           : "Helvetica Neue", serif;
-// $code-font-family           : "Suisse Intl Web Mono", monospace;
+// $code-font-family: "Suisse Intl Web Mono", monospace;
 // $code-font-family           : "Everett Mono Trial Web", monospace;
-$code-font-family             : "Roboto Mono",SFMono-Regular,Menlo,Monaco,Consolas,monospace;
-// $code-font-family: Consolas, "Roboto Mono", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+$code-font-family: SFMono-Regular, 'Roboto Mono', Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono',
+  'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+// $code-font-family             : SFMono-Regular,"Roboto Mono",Menlo,Monaco,Consolas,monospace;
+// $code-font-family             : Consolas, "Roboto Mono", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
-
-$alpha-font-weight          : 400;
+$alpha-font-weight: 400;
 // $alpha-font-weight          : 300;
-// $beta-font-weight           : 500;
-$beta-font-weight           : 400;
+// $beta-font-weight: 500;
+$beta-font-weight: 400;
 // $beta-font-weight           : 600;
 
 // layout
@@ -67,21 +70,21 @@ $content-max-width: 36rem;
 // ---
 
 $breakpoints: (
-    bp1                     : 320/16*1rem,
-    bp2                     : 420/16*1rem,
-    bp3                     : 640/16*1rem,
-    bp4                     : 1035/16*1rem,
-    bp5                     : 1200/16*1rem,
-    bp6                     : 1440/16*1rem,
-    bp7                     : 1800/16*1rem
+  bp1: 320/16 * 1rem,
+  bp2: 420/16 * 1rem,
+  bp3: 640/16 * 1rem,
+  bp4: 1035/16 * 1rem,
+  bp5: 1200/16 * 1rem,
+  bp6: 1440/16 * 1rem,
+  bp7: 1800/16 * 1rem,
 ) !default;
 
 // ---
 // Animations
 // ---
 
-$animation-duration-alpha   : .1s;
-$animation-duration-beta    : .15s;
-$animation-duration-gamma   : .2s;
-$animation-easing-out       : cubic-bezier(0.390, 0.575, 0.565, 1.000);
-$animation-easing-in        : cubic-bezier(0.470, 0.000, 0.745, 0.715);
+$animation-duration-alpha: 0.1s;
+$animation-duration-beta: 0.15s;
+$animation-duration-gamma: 0.2s;
+$animation-easing-out: cubic-bezier(0.39, 0.575, 0.565, 1);
+$animation-easing-in: cubic-bezier(0.47, 0, 0.745, 0.715);

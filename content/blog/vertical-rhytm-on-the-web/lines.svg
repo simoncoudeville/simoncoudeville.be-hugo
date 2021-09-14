@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #efeff0;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="lines" transform="translate(-480 -462)">
+    <line id="Line_32" data-name="Line 32" class="cls-1" x2="720" transform="translate(480 912)"/>
+    <line id="Line_35" data-name="Line 35" class="cls-1" x2="720" transform="translate(480 852)"/>
+    <line id="Line_36" data-name="Line 36" class="cls-1" x2="720" transform="translate(480 762)"/>
+    <line id="Line_33" data-name="Line 33" class="cls-1" x2="720" transform="translate(480 492)"/>
+    <line id="Line_34" data-name="Line 34" class="cls-1" x2="720" transform="translate(480 552)"/>
+    <line id="Line_37" data-name="Line 37" class="cls-1" x2="720" transform="translate(480 642)"/>
+    <line id="Line_40" data-name="Line 40" class="cls-1" y2="480" transform="translate(1170 462)"/>
+    <line id="Line_43" data-name="Line 43" class="cls-1" y2="480" transform="translate(1110 462)"/>
+    <line id="Line_44" data-name="Line 44" class="cls-1" y2="480" transform="translate(1020 462)"/>
+    <line id="Line_47" data-name="Line 47" class="cls-1" y2="480" transform="translate(900 462)"/>
+    <line id="Line_41" data-name="Line 41" class="cls-1" y2="480" transform="translate(510 462)"/>
+    <line id="Line_42" data-name="Line 42" class="cls-1" y2="480" transform="translate(570 462)"/>
+    <line id="Line_45" data-name="Line 45" class="cls-1" y2="480" transform="translate(660 462)"/>
+    <line id="Line_46" data-name="Line 46" class="cls-1" y2="480" transform="translate(780 462)"/>
+  </g>
+</svg>

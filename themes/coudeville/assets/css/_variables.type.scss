@@ -1,29 +1,29 @@
 :root {
-    --global-scale-ratio: 1.3;
-    --global-root-fontSize: #{$root-font-size-sm/16px*100%};
-    --global-fontSize-xs: #{pxtorem(15px)};
-    --global-fontSize-s: #{pxtorem(18px)}; 
-    --global-fontSize: 1rem; 
+  --global-scale-ratio: 1.3;
+  --global-root-fontSize: #{$root-font-size-sm/16px * 100%};
+  --global-fontSize-xs: #{pxtorem(15px)};
+  --global-fontSize-s: #{pxtorem(17px)};
+  --global-fontSize: 1rem;
 
-    --global-fontSize-m: calc(var(--global-fontSize) * var(--global-scale-ratio));
-    --global-fontSize-l: calc(var(--global-fontSize-m) * var(--global-scale-ratio)); 
-    --global-fontSize-xl: calc(var(--global-fontSize-l) * var(--global-scale-ratio)); 
-    --global-fontSize-xxl: calc(var(--global-fontSize-xl) * var(--global-scale-ratio)); 
-    --global-fontSize-xxxl: calc(var(--global-fontSize-xxl) * var(--global-scale-ratio));  
+  --global-fontSize-m: calc(var(--global-fontSize) * var(--global-scale-ratio));
+  --global-fontSize-l: calc(var(--global-fontSize-m) * var(--global-scale-ratio));
+  --global-fontSize-xl: calc(var(--global-fontSize-l) * var(--global-scale-ratio));
+  --global-fontSize-xxl: calc(var(--global-fontSize-xl) * var(--global-scale-ratio));
+  --global-fontSize-xxxl: calc(var(--global-fontSize-xxl) * var(--global-scale-ratio));
 
-    // --global-fontSize-m: #{pxtorem(25px)}; 
-    // --global-fontSize-l: #{pxtorem(30px)}; 
-    // --global-fontSize-xl: #{pxtorem(36px)}; 
-    // --global-fontSize-xxl: #{pxtorem(42px)}; 
-    // --global-fontSize-xxxl: #{pxtorem(50px)};   
+  // --global-fontSize-m: #{pxtorem(25px)};
+  // --global-fontSize-l: #{pxtorem(30px)};
+  // --global-fontSize-xl: #{pxtorem(36px)};
+  // --global-fontSize-xxl: #{pxtorem(42px)};
+  // --global-fontSize-xxxl: #{pxtorem(50px)};
 
-    // --global-fontSize-m: #{pxtorem(24px)}; 
-    // --global-fontSize-l: #{pxtorem(30px)}; 
-    // --global-fontSize-xl: #{pxtorem(36px)}; 
-    // --global-fontSize-xxl: #{pxtorem(42px)}; 
-    // --global-fontSize-xxxl: #{pxtorem(50px)};   
+  // --global-fontSize-m: #{pxtorem(24px)};
+  // --global-fontSize-l: #{pxtorem(30px)};
+  // --global-fontSize-xl: #{pxtorem(36px)};
+  // --global-fontSize-xxl: #{pxtorem(42px)};
+  // --global-fontSize-xxxl: #{pxtorem(50px)};
 
-    @include mq(bp3) {
-        --global-root-fontSize: #{$root-font-size/16px*100%};
-    }
+  @include mq(bp3) {
+    --global-root-fontSize: #{$root-font-size/16px * 100%};
+  }
 }

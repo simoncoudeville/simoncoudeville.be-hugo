@@ -7,7 +7,7 @@
 // CSS vars
 // These are separate files so I can use them seperately on specific pages.
 
-/* colors */  
+/* colors */
 @import 'variables.colors';
 
 /* type scale */
@@ -16,73 +16,199 @@
 /* baseline */
 @import 'variables.baseline';
 
-:root {  
-    // Include theme light from tools.themes so it's reuasable if I ever add a dark/light theme switch
-    @include theme-light;              
+:root {
+  // Include theme light from tools.themes so it's reuasable if I ever add a dark/light theme switch
+  @include theme-light;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        @include theme-dark;
-    }
+  :root {
+    @include theme-dark;
+  }
 }
 
 // styles
 
 html {
-    background-color: var(--html-backroundColor, var(--global-backgroundColor));
-    color: var(--global-text-color);
-    // font-family: $beta-font-family;
-    font-family: $alpha-font-family;
-    font-size: var(--global-root-fontSize);
-    // font-size: clamp(#{$root-font-size-sm/16px*100%},2.35vw,#{$root-font-size/16px*100%});
-    font-weight: $alpha-font-weight;
-    // font-feature-settings: "zero", "liga", "lnum";
-    // font-feature-settings: "zero", "liga", "dlig";
-    font-feature-settings: "liga", "dlig", "lnum";
-    // font-feature-settings: "liga", "case";
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    text-rendering: optimizeLegibility;    
+  background-color: var(--html-backroundColor, var(--global-backgroundColor));
+  color: var(--global-text-color);
+  // font-family: $beta-font-family;
+  font-family: $alpha-font-family;
+  font-size: var(--global-root-fontSize);
+  // font-size: clamp(#{$root-font-size-sm/16px*100%},2.35vw,#{$root-font-size/16px*100%});
+  font-weight: $alpha-font-weight;
+  // font-feature-settings: "zero", "liga", "lnum";
+  // font-feature-settings: "zero", "liga", "dlig";
+  font-feature-settings: 'liga', 'dlig', 'lnum';
+  // font-feature-settings: "liga", "case";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+
+  // &::before {
+  //     content: "";
+  //     display: block;
+  //     position: fixed;
+  //     top: 0;
+  //     right: 0;
+  //     bottom: 0;
+  //     left: 0;
+
+  //     background-position: 50% 50%;
+  //     // background-size: cover;
+  //     background-size: 100% 100%;
+  //     background-attachment: fixed;
+
+  // background-image: url("../img/meshes/Mesh 3.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 8.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 9.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 10.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 14.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 18.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 20.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 23.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 27.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 28.jpg");
+  // opacity: .5;
+
+  // background-image: url("../img/meshes/Mesh 42.jpg");
+  // opacity: .125;
+
+  // background-image: url("../img/meshes/Mesh 43.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 46.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 48.jpg");
+  // opacity: .125;
+
+  // background-image: url("../img/meshes/Mesh 49.jpg");
+  // opacity: .125;
+
+  // background-image: url("../img/meshes/Mesh 51.jpg");
+  // opacity: .125;
+
+  // background-image: url("../img/meshes/Mesh 56.jpg");
+  // opacity: .125;
+
+  // background-image: url("../img/meshes/Mesh 59.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 61.jpg");
+  // opacity: .125;
+
+  // background-image: url("../img/meshes/Mesh 63.jpg");
+  // opacity: .125;
+
+  // background-image: url("../img/meshes/Mesh 68.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 69.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 70.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 72.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 75.jpg");
+  // opacity: .35;
+
+  // background-image: url("../img/meshes/Mesh 74.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 76.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 78.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 79.jpg");
+  // opacity: .2;
+
+  // background-image: url("../img/meshes/Mesh 82.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 84.jpg");
+  // opacity: .125;
+
+  // background-image: url("../img/meshes/Mesh 86.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 89.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 90.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 91.jpg");
+  // opacity: .25;
+
+  // background-image: url("../img/meshes/Mesh 92.jpg");
+  // opacity: .2;
+
+  // background-image: url("../img/meshes/Mesh 98.jpg");
+  // opacity: .2;
+  // }
 }
 
 * {
-    &,
-    &:before,
-    &:after {
-        box-sizing: inherit;
-    }
+  &,
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
 }
 
 body {
-    // background-color: var(--global-surfaceColor);
-    // background-image: linear-gradient(
-    //     -15deg,
-    //     hsla(var(--global-hue-color-gamma), 50%, 70%, .2),
-    //     hsla(var(--global-hue-color-beta), 50%, 30%, .2)
-    // );
-    // background-attachment: fixed;
-    max-width: var(--global-container-maxWidth);
-    margin: 0 auto;
-    font-size: var(--global-fontSize);
-    line-height: baseline(var(--global-baseline-multiplier));  
-    overflow-x: hidden;  
-    // box-sizing: content-box;
+  // background-color: var(--global-surfaceColor);
+  // background-image: linear-gradient(
+  //     -15deg,
+  //     hsla(var(--global-hue-color-gamma), 50%, 70%, .2),
+  //     hsla(var(--global-hue-color-beta), 50%, 30%, .2)
+  // );
+  // background-attachment: fixed;
+  max-width: var(--global-container-maxWidth);
+  margin: 0 auto;
+  font-size: var(--global-fontSize);
+  line-height: baseline(var(--global-baseline-multiplier));
+  overflow-x: hidden;
+  // box-sizing: content-box;
 }
 
 ::selection {
-    background-color: var(--global-selection-backgroundColor);
-    color: var(--global-selection-color);
-    text-shadow: none;
+  background-color: var(--global-selection-backgroundColor);
+  color: var(--global-selection-color);
+  text-shadow: none;
 }
 
 // @include scrollbars(var(--global-baseline), var(--scrollbar-thumb-color), var(--scrollbar-track-color));
 
 /* Works on Chrome, Edge, and Safari */
 // ::-webkit-scrollbar {
-//     // width: calc(var(--global-baseline) * 3);    
+//     // width: calc(var(--global-baseline) * 3);
 //     width: var(--global-baseline);
 // }
 

@@ -16,6 +16,8 @@
     // grid: inherit;
     // background-color: var(--c-cover-background-color);
     // padding: var(--global-whitespace-double) 0;
+    border-radius: var(--global-borderRadius);
+    overflow: hidden;
 }
 
 .c-cover__img {

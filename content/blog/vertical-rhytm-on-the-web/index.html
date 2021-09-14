@@ -1,29 +1,25 @@
 ---
 date: 2021-01-06T21:40:40+01:00
 title: Vertical rhythm on the web
-description: A look at how to achieve a workable baseline grid
-draft: true
+description: How to achieve a workable baseline grid
 prism: true
 script: js/blogposts/post-2.js
 style: css/blogposts/post-2.scss
 ---
 
+<!-- 
 <header class="o-row o-row--intro">   
-    <!-- <div class="o-container"> -->
     <div class="o-container">
         <div class="c-intro">        
-            <!-- <p class="u-muted">23 february 2021</p>            -->
-            <h1 class="c-intro__title u-mb-clear">
-            <!-- <h1 class="c-fluid-text-m-xxl u-max-width-optical u-mb-clear"> -->
-                <!-- Vertical rhythm on the web. -->
-                Creating a spacing system with custom properties
+            <h1 class="c-intro__title">
+                Creating a spacing system with custom properties.
             </h1>
-            <!-- <p class="h1 c-intro__paragraph u-muted">
+            <p class="h1 c-intro__paragraph u-muted">
                 A look at how to achieve a workable baseline grid.
-            </p> -->
+            </p>
         </div>
     </div>    
-</header>
+</header> -->
 <!-- <div class="o-row o-row--cover" >
     <div class="o-container o-container--left-content">
         <p>
@@ -38,44 +34,46 @@ style: css/blogposts/post-2.scss
         </figure>        
     </div>    
 </div> -->
-<!-- <div class="o-row o-row--cover" >
-    <div class="o-container">
-        <figure>
-            <img src="spiro.png" alt=""> 
+<div class="o-row o-row--cover">
+  <div class="o-container">
+    <figure class="c-cover">
+      <!-- <img src="spiro.png" alt=""> 
             <img src="cover-test-51.svg" alt=""> 
             <img src="cover-square-3.svg" alt=""> 
             <img src="cover-new.png" alt=""> 
-            <img src="cover-square-4.svg"` alt=""> 
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 719.999 719.999">
-                <defs>
-                    <style>
-                        .cls-1 {
-                            fill: var(--global-text-color);
-                        }
-                    </style>
-                </defs>
-                <path id="Intersection_190" data-name="Intersection 190" class="cls-1"
-                    d="M-7168-2147l120-60,120,60Zm-.008,0-120-60,120-60v120ZM-7648-2267l120,60-120,60Zm0-120v-120l360,180-120,60Zm600,60,120-60v120Zm-240-120-240-120,120-60,120,60v120l240-120v120l-120,60Zm240-120,120-60v120Zm-240-120-240-120,120-60h.008L-7288-2807v120l120-60,120,60-120,60Zm-360-60,120,60-120,60Zm600-60,120-60h0v120Z"
-                    transform="translate(7647.999 2866.999)" />
-            </svg>
-        </figure>        
-    </div>    
-</div> -->
+            <img src="cover-square-4.svg"` alt="">  -->
+      <svg class="c-cover__post-2" viewBox="0 0 720 480" xmlns="http://www.w3.org/2000/svg" stroke-width="3">
+        <path d="M0 450h720M0 390h720M0 300h720M0 30h720M0 90h720M0 180h720" />
+        <path d="M690 0v480M630 0v480M540 0v480M420 0v480M30 0v480M90 0v480M180 0v480M300 0v480" />
+      </svg>
+    </figure>
+  </div>
+</div>
 <div class="o-row">
-    <div class="o-container">
-        <div class="s-content">
-            <p>
-                In this article I will describe how I set up a sp*acing system with SCSS. It’s* based on a single pixel value used to calculate heights, widths, margin paddings and line-heights of all components on a web page. This technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing perfect control and a predictable outcome.
-            </p>
-            <h2>Flexible foundations</h2>
-            <p>
-                Pixels are easy to work with. 10% of what I do. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.
-            </p>
-            <h3>Round computed pixels</h3>
-            <p>
-                Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.
-            </p>
-            <pre class="c-code"><code class="language-scss">// Baseline settings
+  <div class="o-container">
+    <div class="s-content">
+      <p>
+        In this article I will describe how I set up a sp*acing system with SCSS. It’s* based on a single pixel value
+        used to calculate heights, widths, margin paddings and line-heights of all components on a web page. This
+        technique creates vertical rhythm and a consistent use of whitespace throughout the whole design while providing
+        perfect control and a predictable outcome.
+      </p>
+      <h2>Flexible foundations</h2>
+      <p>
+        Pixels are easy to work with. 10% of what I do. I still think in pixels. I can imagine what a title with
+        font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is
+        that they aren’t flexible. The web is based on the idea that the user has control over the way they see a
+        webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to
+        control it.
+      </p>
+      <h3>Round computed pixels</h3>
+      <p>
+        Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks
+        like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible.
+        The web is based on the idea that the user has control over the way they see a webpage. The moment you set the
+        value of a property with pixels they become fixed and a user is unable to control it.
+      </p>
+      <pre class="c-code"><code class="language-scss">// Baseline settings
 :root {
     --global-baseline: #{6px / $root-font-size-sm}rem;
     --global-baseline-multiplier: 4;
@@ -92,162 +90,183 @@ style: css/blogposts/post-2.scss
 .container .prefix {
     order: 2;
 }</code></pre>
-            <p>
-                Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible. The web is based on the idea that the user has control over the way they see a webpage. The moment you set the value of a property with pixels they become fixed and a user is unable to control it.
-            </p>
-            <h2>Baseline Grid</h2>
+      <p>
+        Pixels are easy to work with. I still think in pixels. I can imagine what a title with font-size of 66px looks
+        like. In the end the browser computes all units to pixels. The problem with pixels is that they aren’t flexible.
+        The web is based on the idea that the user has control over the way they see a webpage. The moment you set the
+        value of a property with pixels they become fixed and a user is unable to control it.
+      </p>
+      <h2>Baseline Grid</h2>
 
-            <p>
-                In order to align text to a baseline grid on the web you. With this technique you have the possibility to align text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that line-height and if the margin between the items is the same as the base line-height you these items will all align to eachother. It's simple math, really.
-            </p>
+      <p>
+        In order to align text to a baseline grid on the web you. With this technique you have the possibility to align
+        text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that
+        line-height and if the margin between the items is the same as the base line-height you these items will all
+        align to eachother. It's simple math, really.
+      </p>
 
-            <div class="c-example">
-                <h3 class="c-example__title c-text-caption">Baseline grid example</h3>
-                <div class="has-baseline js-baseline-example">
-                    <div class="c-example__body">
-                        <div class="c-example__content">
-                            <div class="e-columns s-content">
-                                <h2 class="c-text-xxl">
-                                    Legibility, <br> readability, <br> &amp; aesthetics
-                                </h2>
-                                <p class="e-baseline-paragraph">
-                                    Three fundamental aspects of typography are legibility, readability, and aesthetics. Although in a non-technical
-                                    sense "legible" and "readable" are often used synonymously, typographically they are separate but related
-                                    concepts. Legibility and readability tend to support aesthetic aspects of a product.
-                                </p>
-                                <p class="e-baseline-paragraph">
-                                    Recent research in psychology has studied the effects of typography on human cognition.
-                                    The research points toward multiple applications such as helping readers remember the content better and
-                                    strategically use fonts to help dyslexic readers.
-                                </p>
-                                <p class="e-baseline-paragraph">
-                                    Traditionally, text is composed to create a readable, coherent, and visually satisfying typeface that works
-                                    invisibly, without the awareness of the reader. Even distribution of typeset material, with a minimum of
-                                    distractions and anomalies, is aimed at producing clarity and transparency.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="c-baseline-overlay c-baseline-overlay--unit"></div>
-                    </div>
-                    <!-- <div class="c-example__toggle">
+      <div class="c-example">
+        <h3 class="c-example__title c-text-caption">Baseline grid example</h3>
+        <div class="has-baseline js-baseline-example">
+          <div class="c-example__body">
+            <div class="c-example__content">
+              <div class="e-columns s-content">
+                <h2 class="c-text-xxl">
+                  Legibility, <br />
+                  readability, <br />
+                  &amp; aesthetics
+                </h2>
+                <p class="e-baseline-paragraph">
+                  Three fundamental aspects of typography are legibility, readability, and aesthetics. Although in a
+                  non-technical sense "legible" and "readable" are often used synonymously, typographically they are
+                  separate but related concepts. Legibility and readability tend to support aesthetic aspects of a
+                  product.
+                </p>
+                <p class="e-baseline-paragraph">
+                  Recent research in psychology has studied the effects of typography on human cognition. The research
+                  points toward multiple applications such as helping readers remember the content better and
+                  strategically use fonts to help dyslexic readers.
+                </p>
+                <p class="e-baseline-paragraph">
+                  Traditionally, text is composed to create a readable, coherent, and visually satisfying typeface that
+                  works invisibly, without the awareness of the reader. Even distribution of typeset material, with a
+                  minimum of distractions and anomalies, is aimed at producing clarity and transparency.
+                </p>
+              </div>
+            </div>
+            <div class="c-baseline-overlay c-baseline-overlay--unit"></div>
+          </div>
+          <!-- <div class="c-example__toggle">
                         <label class="c-toggle">
                             <input class="c-toggle__checkbox js-toggle-baseline-example" type="checkbox" checked> Show baseline
                         </label>
                     </div> -->
-                    <div class="c-example__toggle">
-                        <label class="c-toggle">
-                            <input class="c-toggle__checkbox js-toggle-baseline-example" type="checkbox" checked> Show baseline
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-            <h2>Profile component</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>    
-            <div class="c-example">
-                <h3 class="c-example__title c-text-caption">Profile card component example</h3>
-                <div class="has-baseline js-baseline-example">
-                    <div class="c-example__body c-example__body--xl">
-                        <div class="c-example__content">
-                            <div class="e-card">
-                                <div class="c-baseline-overlay c-baseline-overlay--unit"></div>
-                                <div class="e-card__body">
-                                    <div class="e-profile">
-                                        <div class="e-profile__avatar">
-                                            
-                                        </div>
-                                        <h4 class="e-profile__name c-highlight">Simon Coudeville</h4>
-                                        <p class="e-profile__location c-highlight">Bruges, Belgium</p>
-                                        <p class="e-profile__occupation c-highlight">Designer &amp; teacher at MCT Howest.</p>
-                                        <p>
-                                            <a href="#!" class="e-button e-button--small">Message</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="c-baseline-overlay c-baseline-overlay--unit"></div>
-                    </div>
-                    <!-- <div class="c-example__toggle">
-                        <label class="c-toggle">
-                            <input class="c-toggle__checkbox js-toggle-baseline-example" type="checkbox" checked> Show baseline
-                        </label>
-                    </div> -->
-                    <div class="c-example__toggle">
-                        <label class="c-toggle">
-                            <input class="c-toggle__checkbox js-toggle-baseline-example" type="checkbox" checked> Show baseline
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <h2>Working with half values</h2>
-            <p>
-                In order to align text to a baseline grid on the web you. With this technique you have the possibility to align text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that line-height and if the margin between the items is the same as the base line-height you these items will all align to eachother. It's simple math, really.
-            </p>
-        
-            <div class="c-example">
-                <h3 class="c-example__title c-text-caption">2 column feature example</h3>
-                <div class="has-baseline js-baseline-example">
-                    <div class="c-example__body c-example__body--xl">
-                        <div class="c-example__content">
-                            <div class="e-grid s-content">
-                                <div class="e-grid__item">
-                                    <span class="e-grid__icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                            <title>monkey</title>
-                                            <path
-                                                d="M21.5,7.5c0-5.5-4.5-7-9.5-7S2.5,2,2.5,7.5a2.906,2.906,0,0,0-2,3,3.972,3.972,0,0,0,2,3.5c0,5.5,2,9.5,9.5,9.5s9.5-4,9.5-9.5a3.972,3.972,0,0,0,2-3.5A2.906,2.906,0,0,0,21.5,7.5ZM12.005,21h-.012c-1.781,0-3.836-.481-4.662-2.2a.25.25,0,0,1,.291-.349A16.745,16.745,0,0,0,12,19a16.757,16.757,0,0,0,4.378-.55.25.25,0,0,1,.291.349C15.842,20.52,13.786,21,12.005,21Zm4.743-8.843a1,1,0,0,0-.606,1.3,11.293,11.293,0,0,1,.822,2.484.251.251,0,0,1-.156.271A13.485,13.485,0,0,1,12,17a13.5,13.5,0,0,1-4.808-.791.249.249,0,0,1-.156-.271,11.189,11.189,0,0,1,.822-2.484,1,1,0,0,0-.606-1.3,3.484,3.484,0,0,1-2.127-3.49A3.667,3.667,0,0,1,8.792,5h6.416a3.667,3.667,0,0,1,3.667,3.667A3.484,3.484,0,0,1,16.748,12.157Z" />
-                                            <circle cx="9" cy="9" r="1.25" />
-                                            <circle cx="15" cy="9" r="1.25" />
-                                            <path d="M11.073,12.93a1,1,0,1,0-1.9.633l.25.75a1,1,0,1,0,1.9-.633Z" />
-                                            <path d="M14.191,12.3a1,1,0,0,0-1.264.632l-.25.75a1,1,0,1,0,1.9.633l.25-.75A1,1,0,0,0,14.191,12.3Z" />
-                                        </svg>
-                                    </span>
-                                    <h3 class="e-grid__title c-highlight">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing
-                                    </h3>
-                                    <p class="e-grid__paragraph c-highlight">
-                                        Excepteur sint occaecat cupidatat non proident. Adipisicing sed do eiusmod tempor incididunt ut labore. Duis
-                                        aute irure dolor in reprehenderit.
-                                    </p>
-                                </div>
-                                <div class="e-grid__item">
-                                    <span class="e-grid__icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                            <title>skull-1</title>
-                                            <path
-                                                d="M12,0A10.261,10.261,0,0,0,1.75,10.25a10.156,10.156,0,0,0,3,7.236V21.25a2.749,2.749,0,0,0,5,1.58,2.748,2.748,0,0,0,4.5,0,2.749,2.749,0,0,0,5-1.58V17.486a10.157,10.157,0,0,0,3-7.236A10.261,10.261,0,0,0,12,0Zm2.25,10.25A2.25,2.25,0,1,1,16.5,12.5,2.25,2.25,0,0,1,14.25,10.25Zm-.5,6.868a.25.25,0,0,1-.22.132H10.467a.25.25,0,0,1-.208-.388l1.533-2.3a.249.249,0,0,1,.416,0l1.533,2.3A.25.25,0,0,1,13.753,17.118ZM5.25,10.25A2.25,2.25,0,1,1,7.5,12.5,2.25,2.25,0,0,1,5.25,10.25Z" />
-                                        </svg>
-                                    </span>
-                                    <h3 class="e-grid__title c-highlight">
-                                        Ut enim ad minim
-                                    </h3>
-                                    <p class="e-grid__paragraph c-highlight">
-                                        Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat
-                                        cupidatat non proident. Sunt in culpa qui officia deserunt mollit anim id est.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="c-baseline-overlay c-baseline-overlay--unit"></div>
-                    </div>
-                    <div class="c-example__toggle">
-                        <label class="c-toggle">
-                            <input class="c-toggle__checkbox js-toggle-baseline-example" type="checkbox" checked> Show baseline
-                        </label>
-                    </div>
-                </div>
-            </div>
-        
-            <h2>Final thoughts</h2>
-            <p>
-                In order to align text to a baseline grid on the web you. With this technique you have the possibility to align text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that line-height and if the margin between the items is the same as the base line-height you these items will all align to eachother. It's simple math, really.
-            </p>
+          <div class="c-example__toggle">
+            <label class="c-toggle">
+              <input class="c-toggle__checkbox js-toggle-baseline-example" type="checkbox" checked /> Show baseline
+            </label>
+          </div>
         </div>
+      </div>
+
+      <h2>Profile component</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+      <div class="c-example">
+        <h3 class="c-example__title c-text-caption">Profile card component example</h3>
+        <div class="has-baseline js-baseline-example">
+          <div class="c-example__body c-example__body--xl">
+            <div class="c-example__content">
+              <div class="e-card">
+                <div class="c-baseline-overlay c-baseline-overlay--unit"></div>
+                <div class="e-card__body">
+                  <div class="e-profile">
+                    <div class="e-profile__avatar"></div>
+                    <h4 class="e-profile__name c-highlight">Simon Coudeville</h4>
+                    <p class="e-profile__location c-highlight">Bruges, Belgium</p>
+                    <p class="e-profile__occupation c-highlight">Designer &amp; teacher at MCT Howest.</p>
+                    <p>
+                      <a href="#!" class="e-button e-button--small">Message</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="c-baseline-overlay c-baseline-overlay--unit"></div>
+          </div>
+          <!-- <div class="c-example__toggle">
+                        <label class="c-toggle">
+                            <input class="c-toggle__checkbox js-toggle-baseline-example" type="checkbox" checked> Show baseline
+                        </label>
+                    </div> -->
+          <div class="c-example__toggle">
+            <label class="c-toggle">
+              <input class="c-toggle__checkbox js-toggle-baseline-example" type="checkbox" checked /> Show baseline
+            </label>
+          </div>
+        </div>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </p>
+      <h2>Working with half values</h2>
+      <p>
+        In order to align text to a baseline grid on the web you. With this technique you have the possibility to align
+        text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that
+        line-height and if the margin between the items is the same as the base line-height you these items will all
+        align to eachother. It's simple math, really.
+      </p>
+
+      <div class="c-example">
+        <h3 class="c-example__title c-text-caption">2 column feature example</h3>
+        <div class="has-baseline js-baseline-example">
+          <div class="c-example__body c-example__body--xl">
+            <div class="c-example__content">
+              <div class="e-grid s-content">
+                <div class="e-grid__item">
+                  <span class="e-grid__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <title>monkey</title>
+                      <path
+                        d="M21.5,7.5c0-5.5-4.5-7-9.5-7S2.5,2,2.5,7.5a2.906,2.906,0,0,0-2,3,3.972,3.972,0,0,0,2,3.5c0,5.5,2,9.5,9.5,9.5s9.5-4,9.5-9.5a3.972,3.972,0,0,0,2-3.5A2.906,2.906,0,0,0,21.5,7.5ZM12.005,21h-.012c-1.781,0-3.836-.481-4.662-2.2a.25.25,0,0,1,.291-.349A16.745,16.745,0,0,0,12,19a16.757,16.757,0,0,0,4.378-.55.25.25,0,0,1,.291.349C15.842,20.52,13.786,21,12.005,21Zm4.743-8.843a1,1,0,0,0-.606,1.3,11.293,11.293,0,0,1,.822,2.484.251.251,0,0,1-.156.271A13.485,13.485,0,0,1,12,17a13.5,13.5,0,0,1-4.808-.791.249.249,0,0,1-.156-.271,11.189,11.189,0,0,1,.822-2.484,1,1,0,0,0-.606-1.3,3.484,3.484,0,0,1-2.127-3.49A3.667,3.667,0,0,1,8.792,5h6.416a3.667,3.667,0,0,1,3.667,3.667A3.484,3.484,0,0,1,16.748,12.157Z"
+                      />
+                      <circle cx="9" cy="9" r="1.25" />
+                      <circle cx="15" cy="9" r="1.25" />
+                      <path d="M11.073,12.93a1,1,0,1,0-1.9.633l.25.75a1,1,0,1,0,1.9-.633Z" />
+                      <path
+                        d="M14.191,12.3a1,1,0,0,0-1.264.632l-.25.75a1,1,0,1,0,1.9.633l.25-.75A1,1,0,0,0,14.191,12.3Z"
+                      />
+                    </svg>
+                  </span>
+                  <h3 class="e-grid__title c-highlight">Lorem ipsum dolor sit amet consectetur adipisicing</h3>
+                  <p class="e-grid__paragraph c-highlight">
+                    Excepteur sint occaecat cupidatat non proident. Adipisicing sed do eiusmod tempor incididunt ut
+                    labore. Duis aute irure dolor in reprehenderit.
+                  </p>
+                </div>
+                <div class="e-grid__item">
+                  <span class="e-grid__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <title>skull-1</title>
+                      <path
+                        d="M12,0A10.261,10.261,0,0,0,1.75,10.25a10.156,10.156,0,0,0,3,7.236V21.25a2.749,2.749,0,0,0,5,1.58,2.748,2.748,0,0,0,4.5,0,2.749,2.749,0,0,0,5-1.58V17.486a10.157,10.157,0,0,0,3-7.236A10.261,10.261,0,0,0,12,0Zm2.25,10.25A2.25,2.25,0,1,1,16.5,12.5,2.25,2.25,0,0,1,14.25,10.25Zm-.5,6.868a.25.25,0,0,1-.22.132H10.467a.25.25,0,0,1-.208-.388l1.533-2.3a.249.249,0,0,1,.416,0l1.533,2.3A.25.25,0,0,1,13.753,17.118ZM5.25,10.25A2.25,2.25,0,1,1,7.5,12.5,2.25,2.25,0,0,1,5.25,10.25Z"
+                      />
+                    </svg>
+                  </span>
+                  <h3 class="e-grid__title c-highlight">Ut enim ad minim</h3>
+                  <p class="e-grid__paragraph c-highlight">
+                    Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+                    occaecat cupidatat non proident. Sunt in culpa qui officia deserunt mollit anim id est.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="c-baseline-overlay c-baseline-overlay--unit"></div>
+          </div>
+          <div class="c-example__toggle">
+            <label class="c-toggle">
+              <input class="c-toggle__checkbox js-toggle-baseline-example" type="checkbox" checked /> Show baseline
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <h2>Final thoughts</h2>
+      <p>
+        In order to align text to a baseline grid on the web you. With this technique you have the possibility to align
+        text to a baseline grid. In a way. If every element has the same line-height or if you double or triple that
+        line-height and if the margin between the items is the same as the base line-height you these items will all
+        align to eachother. It's simple math, really.
+      </p>
     </div>
+  </div>
 </div>

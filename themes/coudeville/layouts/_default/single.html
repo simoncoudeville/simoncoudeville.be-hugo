@@ -1,43 +1,57 @@
 {{ define "main" }}
 <header class="o-row o-row--top" id="top">
-    <div class="c-header">
-        <p class="c-header__logo c-logo">
-            <a href="/" class="c-logo__link">Simon Coudeville</a>
-        </p>
-        <!-- <p class="c-header__back">
-            <a href="/" class="c-back-link">
-                ←      
-            </a>
-        </p> -->
-        <p class="c-header__meta u-muted">
-            <!-- {{ .Date.Format "02.01.2006" }} -->
-            {{ .Date.Format "January 2006" }}
-        </p>         
-    </div>
+  <div class="c-header">
+    <p class="c-header__logo c-logo">
+      <a href="/" class="c-logo__link">Simon Coudeville</a>
+    </p>
+    <!-- <p class="c-header__back">
+      <a href="/" class="c-back-link">
+        ←
+        Simon Coudeville
+        Index
+        <svg class="c-back-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                    <path d="M10.84 13.94l4.9-4.92L14.7 8 8 14.72l6.72 6.72 1.04-1.04-4.92-4.9h11.7v-1.56z" />
+                </svg>
+      </a>
+    </p> -->
+    <p class="c-header__meta c-header__meta--sm u-muted">{{ .Date.Format "02.01.2006" }}</p>
+  </div>
 </header>
 <!-- {{ partial "header2.html" . -}} -->
 <article class="o-row">
-    {{ .Content }}
-    <aside class="o-row">
-        <div class="o-container">
-            <div class="c-about">                
-                <div class="s-content">
-                    <p>  
-                        Hi, my name is Simon.
-                        I <a href="/">write</a> about design, CSS, typography, interaction and animation and other web relatad topics.                    
-                        <!-- I'm a designer into CSS, typography and animation, -->
-                        <!-- currently teaching all of that stuff at <a href="https://mct.be">MCT</a>. -->
-                        <!-- Occasionally I <a href="/">write</a> about that stuff.  -->
-                        Send me an <a href="mailto:coudeville.simon@gmail.com">email</a> or follow me
-                        on <a href="https://twitter.com/simoncoudeville">Twitter</a>.
-                    </p>
-                </div>    
-                <figure class="c-avatar">
-                    <img src="/img/test-avatar-3.png" alt="Avatar">
-                </figure>
-            </div>
+  <header class="o-row o-row--intro">
+    <div class="o-container">
+      <div class="c-intro">
+        <!-- <p class="c-text-meta u-mb-xxs">
+                    {{ .Date.Format "02.01.2006" }}
+                </p>            -->
+        <h1 class="c-intro__title">{{ .Title }}</h1>
+        <p class="h1 c-intro__paragraph u-muted">– {{ .Description }}</p>
+      </div>
+    </div>
+  </header>
+  {{ .Content }}
+  <aside class="o-row">
+    <div class="o-container">
+      <div class="c-about">
+        <div class="s-content">
+          <p>
+            <!-- <strong class="u-color-primary">Hi, I'm Simon.</strong> -->
+            <strong>Hi, I'm Simon.</strong>
+            I <a href="/">write</a> about CSS, typography, interaction design, animation and other web relatad topics.
+            Currently teaching these topics at <a href="https://mct.be">MCT</a>.
+            <!-- I'm a designer into CSS, typography and animation, -->
+            <!-- currently teaching all of that stuff at <a href="https://mct.be">MCT</a>. -->
+            <!-- Occasionally I <a href="/">write</a> about that stuff.  -->
+            Send me an <a href="mailto:coudeville.simon@gmail.com">email</a> or follow me on
+            <a href="https://twitter.com/simoncoudeville">Twitter</a>.
+          </p>
         </div>
-    </aside>
+        <figure class="c-avatar">
+          <img src="/img/test-avatar-3.png" alt="Avatar" />
+        </figure>
+      </div>
+    </div>
+  </aside>
 </article>
-{{ partial "footer.html" . -}}
-{{- end -}}
+{{ partial "footer.html" . -}} {{- end -}}

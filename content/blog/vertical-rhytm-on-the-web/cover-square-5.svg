@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="720" height="720" viewBox="0 0 720 720">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        stroke: #707070;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        fill: #40e0d0;
+      }
+
+      .cls-5 {
+        fill: #5555f6;
+      }
+
+      .cls-6 {
+        fill: #19191a;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_465" data-name="Rectangle 465" class="cls-1" width="720" height="720" transform="translate(480 462)"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_15" data-name="Mask Group 15" class="cls-2" transform="translate(-480 -462)">
+    <g id="Cover" transform="translate(-36)">
+      <rect id="Rectangle_365" data-name="Rectangle 365" class="cls-3" width="1440" height="720" transform="translate(156 462)"/>
+      <g id="Group_99" data-name="Group 99">
+        <rect id="Rectangle_395" data-name="Rectangle 395" class="cls-4" width="360" height="360" transform="translate(876 462)"/>
+        <rect id="Rectangle_397" data-name="Rectangle 397" class="cls-4" width="360" height="360" transform="translate(516 822)"/>
+        <rect id="Rectangle_399" data-name="Rectangle 399" class="cls-4" width="360" height="360" transform="translate(1236 822)"/>
+        <rect id="Rectangle_371" data-name="Rectangle 371" class="cls-5" width="360" height="360" transform="translate(156 462)"/>
+        <rect id="Rectangle_398" data-name="Rectangle 398" class="cls-5" width="360" height="360" transform="translate(1236 462)"/>
+        <rect id="Rectangle_396" data-name="Rectangle 396" class="cls-4" width="360" height="360" transform="translate(156 822)"/>
+        <rect id="Rectangle_394" data-name="Rectangle 394" class="cls-5" width="360" height="360" transform="translate(876 822)"/>
+        <rect id="Rectangle_402" data-name="Rectangle 402" class="cls-5" width="360" height="360" transform="translate(516 462)"/>
+      </g>
+      <path id="Intersection_11" data-name="Intersection 11" class="cls-6" d="M180,360a181.319,181.319,0,0,0-3.657-36.276,179.027,179.027,0,0,0-10.488-33.788,179.927,179.927,0,0,0-16.6-30.575,181.3,181.3,0,0,0-21.979-26.64,181.357,181.357,0,0,0-26.64-21.98,179.927,179.927,0,0,0-30.575-16.595,179.06,179.06,0,0,0-33.788-10.488A181.341,181.341,0,0,0,0,180V0A362.7,362.7,0,0,1,72.553,7.314a358.2,358.2,0,0,1,67.576,20.977,360.247,360.247,0,0,1,61.15,33.191,362.477,362.477,0,0,1,53.28,43.961,362.551,362.551,0,0,1,43.958,53.278,360.214,360.214,0,0,1,33.193,61.152,358.23,358.23,0,0,1,20.976,67.575A362.71,362.71,0,0,1,360,360Z" transform="translate(876 462)"/>
+      <path id="arrow" class="cls-6" d="M0,360V0L180,180Z" transform="translate(1596 822) rotate(90)"/>
+      <circle id="Ellipse_259" data-name="Ellipse 259" class="cls-6" cx="90" cy="90" r="90" transform="translate(966 912)"/>
+      <g id="Group_96" data-name="Group 96" transform="translate(-360 420)">
+        <rect id="Rectangle_390" data-name="Rectangle 390" class="cls-6" width="360" height="60" transform="translate(876 462)"/>
+        <rect id="Rectangle_391" data-name="Rectangle 391" class="cls-6" width="360" height="60" transform="translate(876 582)"/>
+        <rect id="Rectangle_392" data-name="Rectangle 392" class="cls-6" width="360" height="60" transform="translate(876 702)"/>
+      </g>
+      <g id="Group_95" data-name="Group 95" transform="translate(156 822)">
+        <rect id="Rectangle_372" data-name="Rectangle 372" class="cls-6" width="180" height="180"/>
+        <rect id="Rectangle_373" data-name="Rectangle 373" class="cls-6" width="180" height="180" transform="translate(180 180)"/>
+      </g>
+      <rect id="Rectangle_406" data-name="Rectangle 406" class="cls-6" width="360" height="180" transform="translate(516 642)"/>
+      <rect id="Rectangle_407" data-name="Rectangle 407" class="cls-6" width="180" height="360" transform="translate(1236 462)"/>
+    </g>
+  </g>
+</svg>
