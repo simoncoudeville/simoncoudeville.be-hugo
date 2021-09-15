@@ -57,6 +57,17 @@ body {
   margin: 0 auto;
   font-size: var(--global-fontSize);
   line-height: baseline(var(--global-baseline-multiplier));
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../img);
+  }
 }
 
 ::selection {
