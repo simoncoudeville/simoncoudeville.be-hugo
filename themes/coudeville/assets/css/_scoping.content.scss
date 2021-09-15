@@ -1,23 +1,23 @@
 .s-content {
-    // max-width: var(--global-content-maxWidth);
+  // max-width: var(--global-content-maxWidth);
 
-    * + h2 {
-        margin-top: var(--global-whitespace-double); // Add extra margin on top
-    }
+  * + h2 {
+    margin-top: var(--global-whitespace-double); // Add extra margin on top
+  }
 
-    // a {
-        // font-weight: $beta-font-weight;
-        // text-decoration: underline;
-    // }
+  // a {
+  // font-weight: $beta-font-weight;
+  // text-decoration: underline;
+  // }
 
-    p,
-    ul,
-    ol {
-        font-feature-settings: "zero", "liga";
-        hyphens: auto;
-        hyphenate-limit-chars: 6 3 3;
-        hyphenate-limit-lines: 2;
-        hyphenate-limit-last: always;
-        hyphenate-limit-zone: 8%;
-    }
+  p,
+  ul,
+  ol {
+    font-feature-settings: 'zero', 'liga', 'dlig';
+    hyphens: auto;
+    hyphenate-limit-chars: 6 3 3;
+    hyphenate-limit-lines: 2;
+    hyphenate-limit-last: always;
+    hyphenate-limit-zone: 8%;
+  }
 }

@@ -1,31 +1,29 @@
 {{ define "main" }}
 <header id="header" class="o-row o-row--header">
-    <div class="c-header">
-        <p class="c-header__logo c-logo">
-            <a href="/" class="c-logo__link">Simon Coudeville</a>
-        </p>
-        <p class="c-header__meta">
-            {{ .Date.Format "2 January 2006" }}
-        </p>
-    </div>
+  <div class="c-header">
+    <p class="c-header__logo c-logo">
+      <a href="/" class="c-logo__link">Simon Coudeville</a>
+    </p>
+    <p class="c-header__meta">{{ .Date.Format "2 January 2006" }}</p>
+  </div>
 </header>
 <article class="o-row">
-    {{ .Content }}
-    <aside class="o-row">
-        <div class="o-container">
-            <div class="c-about">                
-                <div class="s-content">
-                    <p>
-                        Hi! I’m Simon. I’m a designer & teacher. This site is dedicated to my thoughts and observations about design. Read a bit more <a href="/">about me</a>, <a href="#!">email
-                            me</a>, or follow me on <a href="">Twitter</a>.
-                    </p>
-                </div>    
-                <figure class="c-avatar">
-                    <img src="/img/test-avatar-3.png" alt="Avatar">
-                </figure>
-            </div>
+  {{ .Content }}
+  <aside class="o-row">
+    <div class="o-container">
+      <div class="c-about">
+        <div class="s-content">
+          <p>
+            Hi! I’m Simon. I’m a designer & teacher. This site is dedicated to my thoughts and observations about
+            design. Read a bit more <a href="/">about me</a>, <a href="#!">email me</a>, or follow me on
+            <a href="">Twitter</a>.
+          </p>
         </div>
-    </aside>
+        <figure class="c-avatar">
+          <img src="/img/test-avatar-3.png" alt="Avatar" />
+        </figure>
+      </div>
+    </div>
+  </aside>
 </article>
-{{ partial "footer.html" . -}}
-{{- end -}}
+{{ partial "footer.html" . -}} {{- end -}}

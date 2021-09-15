@@ -25,10 +25,9 @@ h1,
 h2,
 h3,
 h4 {
-    color: var(--global-heading-color);
-    font-family: $alpha-font-family;
+  color: var(--global-heading-color);
+  font-family: $alpha-font-family;
 }
-
 
 h1,
 h2,
@@ -42,54 +41,54 @@ ul {
 
 h1,
 .h1 {
-    // font-feature-settings: "zero", "liga", "ss01";
-    // font-weight: $alpha-font-weight;
-    // letter-spacing: -.015em;
-    // font-family: serif;
-    font-weight: $alpha-font-weight;
-    margin-bottom: var(--global-whitespace-base);
+  // font-feature-settings: "zero", "liga", "ss01";
+  // font-weight: $alpha-font-weight;
+  // letter-spacing: -.015em;
+  // font-family: serif;
+  font-weight: $alpha-font-weight;
+  margin-bottom: var(--global-whitespace-base);
+  @include ms-l;
+
+  @include mq(bp2) {
     @include ms-l;
+  }
 
-    @include mq(bp2) {
-        @include ms-l;
-    }
+  @include mq(bp3) {
+    @include ms-xl;
+  }
 
-    @include mq(bp3) {
-        @include ms-xl;
-    }
+  @include mq(bp4) {
+    @include ms-xxl;
+  }
 
-    @include mq(bp4) {
-        @include ms-xxl;
-    }
-
-    @include mq(bp5) {
-        @include ms-xxxl;
-    }
+  @include mq(bp5) {
+    @include ms-xxxl;
+  }
 }
 
 h2,
 .h2 {
-    // font-weight: $beta-font-weight;
-    font-weight: $alpha-font-weight;
-    margin-bottom: var(--global-whitespace-base);
-    @include ms-m;
+  // font-weight: $beta-font-weight;
+  font-weight: $alpha-font-weight;
+  margin-bottom: var(--global-whitespace-base);
+  @include ms-m;
 }
 
 h3,
 .h3 {
-    // text-transform: uppercase;
-    font-weight: $beta-font-weight;
-    // font-weight: $alpha-font-weight;
-    margin-bottom: var(--global-whitespace-base);
-    // color: var(--global-meta-color);
-    @include ms-base;
+  // text-transform: uppercase;
+  font-weight: $beta-font-weight;
+  // font-weight: $alpha-font-weight;
+  margin-bottom: var(--global-whitespace-base);
+  // color: var(--global-meta-color);
+  @include ms-base;
 }
 
 h4,
 .h4 {
-    font-weight: $beta-font-weight;
-    margin-bottom: var(--global-whitespace-base);
-    @include ms-base;
+  font-weight: $beta-font-weight;
+  margin-bottom: var(--global-whitespace-base);
+  @include ms-base;
 }
 
 p,
@@ -97,68 +96,68 @@ ul,
 ol,
 dl,
 figure {
-    margin: 0 0 var(--global-whitespace-base);
+  margin: 0 0 var(--global-whitespace-base);
 }
 
-
 dd {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 blockquote {
-    margin: var(--global-whitespace-base);
+  margin: var(--global-whitespace-base);
 }
 
 pre {
-    white-space: pre-wrap;
-    margin-bottom: var(--global-whitespace-base);
-    font-family: $code-font-family;
-    font-size: var(--global-fontSize-s);
-    line-height: calc(var(--global-baseline) * var(--global-baseline-multiplier));
+  white-space: pre-wrap;
+  margin-bottom: var(--global-whitespace-base);
+  font-family: $code-font-family;
+  font-size: var(--global-fontSize-s);
+  line-height: calc(var(--global-baseline) * var(--global-baseline-multiplier));
 }
 
 small {
-    display: inline-block;
-    @include ms-s;
+  display: inline-block;
+  @include ms-s;
 }
 
 strong {
-    font-weight: $beta-font-weight;
+  font-weight: $beta-font-weight;
 }
 
 // Links
 
 a {
-    // font-weight: $beta-font-weight;
-    font-family: $alpha-font-family;
+  // font-weight: $beta-font-weight;
+  font-family: $alpha-font-family;
+  color: var(--global-link-color);
+  transition: all $animation-duration-alpha $animation-easing-out;
+  display: inline-block;
+  text-decoration-thickness: 0.075em;
+  text-decoration-color: var(--global-meta-color);
+
+  &:visited {
     color: var(--global-link-color);
-    transition: all $animation-duration-alpha $animation-easing-out;
-    display: inline-block;
-    // text-decoration: underline var(--global-meta-color);
+  }
 
-    &:visited {
-        color: var(--global-link-color);
-    }
+  &:hover {
+    color: var(--global-link-hover-color);
+  }
 
-    &:hover {
-        color: var(--global-link-hover-color);
-    }
+  &:focus {
+    outline: thin dotted;
+    color: var(--global-link-hover-color);
+  }
 
-    &:focus {
-        outline: thin dotted;
-        color: var(--global-link-hover-color);
-    }
-
-    &:hover,
-    &:active {
-        outline: 0;
-    }
+  &:hover,
+  &:active {
+    outline: 0;
+  }
 }
 
 hr {
-    display: block;
-    border: none;
-    height: 1px;
-    margin: var(--global-whitespace-double) 0;
-    background-color: var(--global-border-color);
+  display: block;
+  border: none;
+  height: 1px;
+  margin: var(--global-whitespace-double) 0;
+  background-color: var(--global-border-color);
 }

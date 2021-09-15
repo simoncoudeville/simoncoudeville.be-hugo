@@ -4,39 +4,38 @@
     Hacks and quick fixes
 */
 
-// div:empty {
-//    display: none;
-// }
+div:empty {
+  display: none;
+}
 
 .u-max-width-optical {
-    max-width: 32em;
+  max-width: 32em;
 }
 
 .hr-small {
-    height: 0;
-    margin: var(--global-whitespace-base) 0;
+  height: 0;
+  margin: var(--global-whitespace-base) 0;
 }
 
 .u-ff-alpha {
-    font-family: $alpha-font-family;
+  font-family: $alpha-font-family;
 }
 
 .u-ff-beta {
-    font-family: $beta-font-family;
+  font-family: $beta-font-family;
 }
 
 .u-ff-code {
-    font-family: $code-font-family;
+  font-family: $code-font-family;
 }
 
 .c-social-links {
-    @include mq(bp3) {
-        display: flex;
-        gap: var(--global-whitespace-base);
-    }
+  @include mq(bp3) {
+    display: flex;
+    gap: var(--global-whitespace-base);
+  }
 
-    @include mq(bp5) { 
-        display: block;
-    }
+  @include mq(bp5) {
+    display: block;
+  }
 }
-

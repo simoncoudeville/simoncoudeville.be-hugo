@@ -4,22 +4,21 @@
     Scecific text styles
 */
 
-
 .c-text-caption {
-    display: block;
-    padding: calc(var(--global-baseline) / 2) 0;
-    font-family: $code-font-family;
-    text-transform: uppercase;
-    color: var(--text-caption-color, var(--global-meta-color));
-    @include ms-xs;
+  display: block;
+  padding: calc(var(--global-baseline) / 2) 0;
+  font-family: $code-font-family;
+  text-transform: uppercase;
+  color: var(--text-caption-color, var(--global-meta-color));
+  @include ms-xs;
 }
 
 .c-text-label {
-    font-feature-settings: "zero", "liga", "ss02";    
-    padding: calc(var(--global-baseline) / 2) 0;
-    color: var(--toggle-color, var(--global-meta-color));
-    font-family: $alpha-font-family;
-    @include ms-s;
+  font-feature-settings: 'zero', 'liga', 'ss02';
+  padding: calc(var(--global-baseline) / 2) 0;
+  color: var(--toggle-color, var(--global-meta-color));
+  font-family: $alpha-font-family;
+  @include ms-s;
 }
 
 .c-text-xxxl {
@@ -38,21 +37,23 @@
   @include ms-m;
 
   @include mq(bp2) {
-      @include ms-l;
+    @include ms-l;
   }
 
   @include mq(bp3) {
-      @include ms-xl;
+    @include ms-xl;
   }
 }
 
 .c-fluid-text-l-xl {
-  line-height: 1.33333;  
+  line-height: 1.33333;
+  letter-spacing: -0.02em;
   font-size: clamp(var(--global-fontSize-l), 3vw, var(--global-fontSize-xl));
 }
 
 .c-fluid-text-m-xl {
-  line-height: 1.33333;  
+  line-height: 1.2;
+  letter-spacing: -0.02em;
   font-size: clamp(var(--global-fontSize-m), 3vw, var(--global-fontSize-xl));
 }
 
@@ -76,7 +77,12 @@
   @include ms-xs;
 }
 
-.c-text-intro {  
+.c-text-intro {
   font-weight: $beta-font-weight;
   @include ms-m;
+}
+
+.c-link-meta {
+  color: var(--global-meta-color);
+  text-decoration: none;
 }

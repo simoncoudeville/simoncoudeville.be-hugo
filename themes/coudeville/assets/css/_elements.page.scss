@@ -7,7 +7,7 @@
 // CSS vars
 // These are separate files so I can use them seperately on specific pages.
 
-/* colors */  
+/* colors */
 @import 'variables.colors';
 
 /* type scale */
@@ -16,49 +16,51 @@
 /* baseline */
 @import 'variables.baseline';
 
-:root {  
-    // Include theme light from tools.themes so it's reuasable if I ever add a dark/light theme switch
-    @include theme-light;              
+:root {
+  // Include theme light from tools.themes so it's reuasable if I ever add a dark/light theme switch
+  @include theme-light;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        @include theme-dark;
-    }
+  :root {
+    @include theme-dark;
+  }
 }
 
 // styles
 
 html {
-    background-color: var(--global-backgroundColor);
-    color: var(--global-text-color);
-    font-family: $beta-font-family;
-    font-size: var(--global-root-fontSize);
-    font-feature-settings: "zero", "liga";
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  background-color: var(--global-backgroundColor);
+  color: var(--global-text-color);
+  font-family: $alpha-font-family;
+  // font-family: $beta-font-family;
+  //   font-weight: $beta-font-weight;
+  font-size: var(--global-root-fontSize);
+  font-feature-settings: 'zero', 'liga', 'dlig';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 * {
-    &,
-    &:before,
-    &:after {
-        box-sizing: inherit;
-    }
+  &,
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
 }
 
 body {
-    // background-color: var(--global-surfaceColor);
-    // max-width: var(--global-container-maxWidth);
-    margin: 0 auto;
-    font-size: var(--global-fontSize);
-    line-height: baseline(var(--global-baseline-multiplier));    
+  // background-color: var(--global-surfaceColor);
+  // max-width: var(--global-container-maxWidth);
+  margin: 0 auto;
+  font-size: var(--global-fontSize);
+  line-height: baseline(var(--global-baseline-multiplier));
 }
 
 ::selection {
-    background-color: var(--global-selection-backgroundColor);
-    color: var(--global-selection-color);
-    text-shadow: none;
+  background-color: var(--global-selection-backgroundColor);
+  color: var(--global-selection-color);
+  text-shadow: none;
 }
