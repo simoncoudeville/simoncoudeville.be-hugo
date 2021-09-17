@@ -57,6 +57,12 @@
   font-size: clamp(var(--global-fontSize-m), 3vw, var(--global-fontSize-xl));
 }
 
+.c-fluid-text-m-xxl {
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-size: clamp(var(--global-fontSize-m), 3vw, var(--global-fontSize-xxl));
+}
+
 .c-text-l {
   @include ms-l;
 }
@@ -85,4 +91,14 @@
 .c-link-meta {
   color: var(--global-meta-color);
   text-decoration: none;
+}
+
+.c-link-more {
+  font-weight: $alpha-font-weight;
+  color: var(--global-meta-color);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--global-link-color);
+  }
 }

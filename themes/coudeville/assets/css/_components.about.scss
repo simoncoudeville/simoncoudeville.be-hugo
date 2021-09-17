@@ -5,22 +5,26 @@
 */
 
 .c-about {
-    @include mq(bp2) {
-        display: grid;
-        grid-gap: var(--global-whitespace-double);
-        grid-template-columns: auto 1fr;
-        align-items: center;
-    }
-    // display: flex;
-    // align-items: center;
-    // flex-wrap: wrap;
-    //
-    // p {
-    //     width: 100%;
-    //     flex-basis: 325px;
-    // }
+  @include mq(bp2) {
+    display: grid;
+    grid-gap: var(--global-whitespace-double);
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+  // display: flex;
+  // align-items: center;
+  // flex-wrap: wrap;
+  //
+  // p {
+  //     width: 100%;
+  //     flex-basis: 325px;
+  // }
 
-    // @include mq(bp3) {
-    //     grid-gap: var(--global-whitespace-double);
-    // }
+  // @include mq(bp3) {
+  //     grid-gap: var(--global-whitespace-double);
+  // }
+}
+
+.c-about__more-content {
+  display: none;
 }

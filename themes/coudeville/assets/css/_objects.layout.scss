@@ -15,7 +15,7 @@
   grid-row-gap: var(--global-whitespace-base);
   // align-content: space-between;
   // align-content: end;
-  // align-content: center;
+  align-content: center;
   padding: var(--grid-whitespace) 0 calc(var(--grid-whitespace) / 2);
 
   @include mq(bp3) {

@@ -5,29 +5,33 @@
 */
 
 .c-intro {
-    margin-bottom: var(--global-whitespace-base);
-    // grid-column: startContent/right;
-    // @include mq(bp5) {
-    //     grid-column: left/endContent;
-    // }
+  // margin-bottom: var(--global-whitespace-base);
+  // grid-column: startContent/right;
+  // @include mq(bp5) {
+  //     grid-column: left/endContent;
+  // }
 }
 
 .c-intro__title,
 .c-intro__paragraph {
-    display: inline;
+  display: inline;
 }
 
 // .c-intro__title {
-//     transition-property: opacity, transform;
-//     transition-duration: $animation-duration-beta;
-//     transition-timing-function: $animation-easing-out;
-//     transition-delay: $animation-duration-alpha;
+//   transition-property: opacity, transform;
+//   transition-duration: $animation-duration-beta;
+//   transition-timing-function: $animation-easing-out;
+//   transition-delay: $animation-duration-alpha;
 
-//     .has-scrolled & {
-//         transition-timing-function: $animation-easing-in;
-//         transition-delay: 0s;
-//         transition-property: opacity, transform;
-//         opacity: 0;
-//         transform: translateY(calc(var(--global-whitespace-base) * -1));
-//     }
+//   .has-scrolled & {
+//     transition-timing-function: $animation-easing-in;
+//     transition-delay: 0s;
+//     transition-property: opacity, transform;
+//     opacity: 0;
+//     transform: translateY(calc(var(--global-whitespace-base) * -1));
+//   }
 // }
+
+.c-intro__more-content {
+  display: none;
+}
