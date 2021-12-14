@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: simoncoudeville.be
+Token: 854dd2abbab839df742d29e99955866054b0d4a89ec27b283e1b13358460dbcc
