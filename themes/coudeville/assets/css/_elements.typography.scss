@@ -121,14 +121,14 @@ small {
 }
 
 strong {
-  font-weight: $beta-font-weight;
+  font-weight: $alpha-font-weight;
   color: var(--global-link-color);
 }
 
 // Links
 
 a {
-  font-weight: $beta-font-weight;
+  font-weight: $alpha-font-weight;
   font-family: $alpha-font-family;
   color: var(--global-link-color);
   transition: all $animation-duration-alpha $animation-easing-out;

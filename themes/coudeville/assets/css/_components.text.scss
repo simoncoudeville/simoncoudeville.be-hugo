@@ -60,7 +60,9 @@
 .c-fluid-text-m-xxl {
   line-height: 1.2;
   letter-spacing: -0.02em;
-  font-size: clamp(var(--global-fontSize-m), 2.5vw, var(--global-fontSize-xxl));
+  // font-size: clamp(var(--global-fontSize-m), 2.5vw, var(--global-fontSize-xxl));
+  // font-size: clamp(1rem, unquote("-0.5000rem + 6.6667vw"), 3rem);
+  font-size: clamp(1rem, unquote("-0.1250rem + 5.0000vw"), 2.5rem);
 }
 
 .c-text-l {

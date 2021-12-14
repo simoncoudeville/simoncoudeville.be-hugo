@@ -57,19 +57,6 @@ body {
   margin: 0 auto;
   font-size: var(--global-fontSize);
   line-height: baseline(var(--global-baseline-multiplier));
-
-  &::before {
-    content: '';
-    display: block;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: url('../img/meshes/Mesh 8.jpg');
-    background-size: cover;
-    opacity: 0.25;
-  }
 }
 
 ::selection {
