@@ -26,8 +26,8 @@ h2,
 h3,
 h4 {
   color: var(--global-heading-color);
-  font-family: $alpha-font-family;
-  // font-weight: $alpha-font-weight;
+  // font-family: $alpha-font-family;
+  // font-family: $beta-font-family;
 }
 
 h1,
@@ -42,70 +42,32 @@ ul {
 
 h1,
 .h1 {
-  // font-feature-settings: "zero", "liga", "ss01";
-  // font-weight: $alpha-font-weight;
-  // letter-spacing: -.015em;
-  // font-family: $beta-font-family;
-  // font-weight: $alpha-font-weight;
-  // font-weight: $beta-font-weight;
-  // font-weight: 400;
   margin-bottom: var(--global-whitespace-base);
-  // line-height: 1.1;
-  // font-size: clamp(var(--global-fontSize-l), 5vw, var(--global-fontSize-xl));
-  // font-weight: $alpha-font-weight;
   font-weight: $beta-font-weight;
   letter-spacing: -0.02em;
-  // line-height: 1.1;
-  // font-size: clamp(var(--global-fontSize-l), 6vw, var(--global-fontSize-xl));
-  // letter-spacing: -.0475em;
-  // font-feature-settings: "case";
-
   @include ms-l;
-
-  //   @include mq(bp3) {
-  //     @include ms-xl;
-  //   }
-
-  // @include mq(bp4) {
-  //     @include ms-xl;
-  // }
-
-  // @include mq(bp5) {
-  //     @include ms-xxxl;
-  // }
 }
 
 h2,
 .h2 {
   font-weight: $beta-font-weight;
-  // font-weight: $alpha-font-weight;
-  // font-weight: $beta-font-weight;
   margin-bottom: var(--global-whitespace-base);
   @include ms-m;
-  // @include ms-l;
 }
 
 h3,
 .h3 {
-  // text-transform: uppercase;
   font-weight: $beta-font-weight;
-  // font-weight: $alpha-font-weight;
-  font-family: $alpha-font-family;
-  // margin-top: calc(var(--global-whitespace-base) + var(--global-whitespace-xs));
-  // margin-bottom: var(--global-whitespace-s);
+  // font-family: $alpha-font-family;
   margin-bottom: var(--global-whitespace-base);
   letter-spacing: 0;
-  // margin-bottom: 0;
-  // color: var(--global-meta-color);
   @include ms-base;
-  // @include ms-s;
 }
 
 h4,
 .h4 {
   font-family: $alpha-font-family;
   font-weight: $beta-font-weight;
-  // font-weight: $alpha-font-weight;
   margin-bottom: var(--global-whitespace-base);
   letter-spacing: 0;
   @include ms-base;
@@ -117,6 +79,23 @@ ol,
 dl,
 figure {
   margin: 0 0 var(--global-whitespace-base);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  padding-left: var(--global-whitespace-base);
+
+  li::before {
+    content: "–";
+    content: "-";
+    // content: "◦";
+    // content: "•";
+    // content: "∙";
+    // content: "⋅";
+    display: inline-block;
+    text-indent: calc(var(--global-whitespace-base) * -1);
+  }
 }
 
 dd {
@@ -147,19 +126,13 @@ strong {
 // Links
 
 a {
-  // font-weight: $beta-font-weight;
   font-family: $alpha-font-family;
   color: var(--link-color, var(--global-link-color));
   will-change: color, text-decoration-thickness;
   transition: all $animation-duration-alpha $animation-easing-out;
   display: inline-block;
-  // text-decoration-color: var(--global-meta-color);
   text-decoration-color: var(--link-decoration-color, var(--global-link-decoration-color));
-  // text-decoration-thickness: from-font;
-  // text-decoration-thickness: 1px;
   text-decoration-thickness: 0.0675em;
-  // text-decoration-thickness: 2px;
-  // text-decoration: underline var(--global-meta-color);
 
   &:visited {
     color: var(--link-color, var(--global-link-color));

@@ -4,16 +4,16 @@
         <!-- <p class="c-header__back">
             <a href="/" class="c-back-link">←</a>
         </p> -->
-        <p class="c-header__logo c-logo">
+        <h1 class="c-header__logo c-logo">
             <a href="/" class="c-logo__link">Simon Coudeville</a>
-        </p>
+        </h1>
         <p class="c-header__meta u-muted">
             {{ .Title }}
         </p>
-    </div>    
+    </div>
 </header>
-<main class="o-row">
+<article class="o-row">
     {{ .Content }}
-</main>
+</article>
 {{ partial "footer.html" . }}
 {{ end }}

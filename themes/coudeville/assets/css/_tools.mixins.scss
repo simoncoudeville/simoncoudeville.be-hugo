@@ -42,19 +42,17 @@
 /// @example scss - Scrollbar styling
 ///   @include scrollbars(.5em, slategray);
 @mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
-    // For Google Chrome
-    &::-webkit-scrollbar {
-        width:  $size;
-        height: $size;
-    }
-    
-    &::-webkit-scrollbar-thumb {
-        background: $foreground-color;
-        // border-radius: $size;
-        // border: baseline(1) solid $background-color;
-    }
-    
-    &::-webkit-scrollbar-track {
-        background: $background-color;
-    }
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width:  $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
 }

@@ -1,9 +1,9 @@
 {{ define "main" }}
 <header class="o-row o-row--top" id="top">
   <div class="c-header">
-    <p class="c-header__logo c-logo">
+    <h1 class="c-header__logo c-logo">
       <a href="/" class="c-logo__link">Simon Coudeville</a>
-    </p>
+    </h1>
     <!-- <p class="c-header__back">
       <a href="/" class="c-back-link">
         ←
@@ -14,7 +14,8 @@
                 </svg>
       </a>
     </p> -->
-    <p class="c-header__meta c-header__meta--sm u-muted">{{ .Date.Format "02.01.2006" }}</p>
+    <p class="c-header__meta c-header__meta--sm c-header__meta--date u-muted">{{ .Date.Format "02.01.2006" }}</p>
+    <!-- <p class="c-header__meta u-muted">{{ .Date.Format "January 2006" }}</p> -->
   </div>
 </header>
 <!-- {{ partial "header2.html" . -}} -->
@@ -26,7 +27,7 @@
                     {{ .Date.Format "02.01.2006" }}
                 </p>            -->
         <h1 class="c-intro__title">{{ .Title }}</h1>
-        <p class="h1 c-intro__paragraph u-muted">– {{ .Description }}</p>
+        <!-- <p class="h1 c-intro__paragraph u-muted">– {{ .Description }}</p> -->
       </div>
     </div>
   </header>
@@ -36,16 +37,14 @@
       <div class="c-about">
         <div class="s-content">
           <p>
-            <!-- <strong class="u-color-primary">Hi, I'm Simon.</strong> -->
-            <strong>Hi, I'm Simon.</strong>
-            I <a href="/">write</a> about CSS, typography, interaction design, animation and other web relatad topics.
-            Currently teaching these topics at <a href="https://mct.be">MCT</a>.
-            <!-- I'm a designer into CSS, typography and animation, -->
-            <!-- currently teaching all of that stuff at <a href="https://mct.be">MCT</a>. -->
-            <!-- Occasionally I <a href="/">write</a> about that stuff.  -->
-            Send me an <a href="mailto:coudeville.simon@gmail.com">email</a> or follow me on
+            Hi, I'm Simon. I'm a designer writing about HTML &amp; CSS,
+            Javascript, typography and animation.
+            Currently teaching these topics at <a href="https://mct.be">MCT</a> &amp;
+            <a href="https://devine.be">Devine</a>. Send me an
+            <a href="mailto:coudeville.simon@gmail.com">email</a> or follow me on
             <a href="https://twitter.com/simoncoudeville">Twitter</a>.
           </p>
+
         </div>
         <figure class="c-avatar">
           <img src="/img/test-avatar-3.png" alt="Avatar" />

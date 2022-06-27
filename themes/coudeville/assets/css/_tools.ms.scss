@@ -16,7 +16,7 @@
 
 @mixin ms-l {
     font-size: var(--global-fontSize-l);
-    line-height: calc(calc(var(--global-baseline-multiplier) + 1) * var(--global-baseline));
+    line-height: calc(calc(var(--global-baseline-multiplier) + 2) * var(--global-baseline));
 }
 
 @mixin ms-m {

@@ -5,50 +5,27 @@
 //
 
 @mixin theme-light {
-  // --global-backgroundColor: var(--global-color-neutral-100);
-  // --global-surfaceColor: white;
-  // --global-heading-color: var(--global-color-neutral-900);
-  // --global-meta-color: var(--global-color-neutral-500);
-  // --global-border-color: var(--global-color-neutral-300);
-  // --global-border-color-hard: var(--global-color-neutral-400);
-
   --global-backgroundColor: var(--global-color-neutral-100);
   --global-surfaceColor: white;
-  --global-heading-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 0%, 0.9);
-  // --global-meta-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 0%, .43);
-  --global-meta-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 0%, 0.54);
-  --global-border-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 0%, 0.1);
-  --global-border-color-hard: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 0%, 0.2);
-
+  --global-heading-color: var(--global-color-neutral-900);
+  --global-meta-color: var(--global-color-neutral-500);
+  --global-border-color: var(--global-color-neutral-300);
+  --global-border-color-hard: var(--global-color-neutral-400);
   --global-text-color: var(--global-heading-color);
   --global-link-color: var(--global-heading-color);
-  // --global-link-color: var(--global-color-primary);
   --global-link-decoration-color: var(--global-meta-color);
-  // --global-link-decoration-color: var(--global-color-primary);
-  // --global-link-hover-color: var(--global-link-color);
   --global-link-hover-color: var(--global-meta-color);
-  // --global-link-hover-color: var(--global-color-primary);
   --global-selection-backgroundColor: var(--global-text-color);
   --global-selection-color: var(--global-backgroundColor);
-  --global-scrollbar-thumb-color: var(--global-color-primary);
+  --global-scrollbar-thumb-color: var(--global-meta-color);
   --global-scrollbar-track-color: var(--global-backgroundColor);
 }
 
 @mixin theme-dark {
-  // --global-backgroundColor: var(--global-color-neutral-900);
-  // --global-surfaceColor: var(--global-color-neutral-800);
-  // --global-heading-color: var(--global-color-neutral-100);
-  // // --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 53.5%); // for --global-color-meta
-  // --global-border-color: var(--global-color-neutral-700);
-  // --global-border-color-hard: var(--global-color-neutral-600);
-
+  --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 51.675%);
   --global-backgroundColor: var(--global-color-neutral-900);
   --global-surfaceColor: var(--global-color-neutral-800);
-  // --global-heading-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 100%, .9);
   --global-heading-color: var(--global-color-neutral-100);
-  --global-meta-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 100%, 0.455);
-  --global-border-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 100%, 0.15);
-  --global-border-color-hard: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 100%, 0.2);
-
-  // --global-link-decoration-color: var(--global-link-color);
+  --global-border-color: var(--global-color-neutral-700);
+  --global-border-color-hard: var(--global-color-neutral-600);
 }

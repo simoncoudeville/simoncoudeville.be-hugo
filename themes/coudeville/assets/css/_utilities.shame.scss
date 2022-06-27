@@ -42,29 +42,29 @@
   color: var(--global-meta-color);
   // @include ms-s;
 
-  @include mq(bp3) {
-    display: flex;
-    gap: var(--global-whitespace-base);
-  }
+  // @include mq(bp3) {
+  //   display: flex;
+  //   gap: var(--global-whitespace-base);
+  // }
 
   // @include mq(bp4) {
   //     display: block;
   // }
 }
 
-.c-social-links__link {
-  text-decoration: none;
+// .c-social-links__link {
+//   text-decoration: none;
 
-  &,
-  &:visited {
-    color: var(--global-meta-color);
-  }
+//   &,
+//   &:visited {
+//     color: var(--global-meta-color);
+//   }
 
-  &:hover,
-  &:focus {
-    color: var(--global-text-color);
-  }
-}
+//   &:hover,
+//   &:focus {
+//     color: var(--global-text-color);
+//   }
+// }
 
 .c-back-link {
   --c-back-link__icon-size: var(--global-whitespace-base);

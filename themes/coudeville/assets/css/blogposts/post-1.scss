@@ -14,14 +14,6 @@
 @import '../settings.colors';
 @import '../settings.global';
 
-// :root {
-//     --global-color-primary-base: whitesmoke;
-//     --global-color-primary-base-hue: #{hue(whitesmoke)};
-
-//     --global-color-primary-saturation: 70%;
-//     --global-color-primary-lightness: 60%;
-// }
-
 .theme-light {
     @include theme-light;
 }
@@ -32,7 +24,6 @@
 
 .c-theme-button {
     display: none;
-    // background-color: var(--global-text-color);
     color: var(--global-heading-color);
     font-size: var(--global-fontSize-s);
     font-family: $alpha-font-family;
@@ -40,7 +31,6 @@
     line-height: var(--global-whitespace-base);
     padding: baseline(2) baseline(3) baseline(2);
     border-radius: var(--global-whitespace-double);
-    // border-radius: var(--global-whitespace-xxs);
     border: 1px solid var(--global-border-color);
     outline: none;
     transition: all $animation-duration-alpha $animation-easing-out;
@@ -48,8 +38,6 @@
 
 .c-theme-button:hover {
     background-color: var(--global-border-color);
-    // background-color: var(--global-surfaceColor);
-    // box-shadow: 0 2px 10px hsla(0,0,0,.1) ;
 }
 
 .c-theme-button:focus {
@@ -68,86 +56,39 @@
 
 .c-theme-button__icon {
     fill: currentColor;
-    // width: var(--global-whitespace-m);
     width: var(--global-whitespace-s);
-    // height: var(--global-whitespace-m);
-    // margin-left: var(--global-whitespace-s);
     margin-right: var(--global-whitespace-xs);
 }
 
-.c-post-cover {
-    background-color: var(--global-color-neutral-800);        
-    height: 0;
-    padding-bottom: 50%;
-    overflow: hidden;    
-}
-
-.c-post-cover__body {
-    padding: var(--global-whitespace-base);
-
-    @include mq(bp3) {
-        padding: var(--global-whitespace-double);
-    }
-}
-
 .c-cursor-text {    
-    // display: inline-flex;
     color: var(--global-color-neutral-100);
     font-family: $code-font-family;
     @include ms-s;
 
     &:after {
         content: "";
-        // content: "\007C";
-        // content: "▮";
-        content: "_";
-        // display: inline-block;
-        // width: 0.65em;
-        // height: 1.35em;
-        // background-color: var(--global-color-beta);
-        // background-color: currentColor;
+        
+        content: "_";        
         animation: 1s blink step-end infinite;
     }
 
     
 }
 
-.c-terminal-cover {
-    // background-color: var(--global-color-neutral-800);
-    grid-column: left/right;
-    // padding: var(--global-whitespace-base);
-
-    // @include mq(bp3) {
-    //     padding: var(--global-whitespace-double);
-    // }
-}
-
 .c-terminal {
-    --c-terminal-borderColor: var(--global-border-color);
     --c-terminal-backgroundColor: var(--global-color-neutral-900);
-    border: 1px solid var(--c-terminal-borderColor);
+    border: 1px solid var(--c-terminal-borderColor, var(--c-terminal-backgroundColor));
     border-radius: var(--global-whitespace-xs);
     background-color: var(--c-terminal-backgroundColor);
-    // background-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 0%, .7);
     overflow: hidden;
     width: 100%;
     height: auto;
-    aspect-ratio: 6 / 5;
     aspect-ratio: 3 / 2;
-    // aspect-ratio: 1 / 1;
     color: var(--global-color-neutral-100);
-    // height: 0;
-    // padding-bottom: 50vh;
-    // padding-bottom: calc(100% / 3 * 2);
-    // padding-bottom: 100%;
 }
 
 .c-terminal__top {
-    // height: var(--global-whitespace-double);
     display: flex;
-    // background-color: var(--global-color-neutral-700);
-    // background-color: var(--c-terminal-borderColor);
-    // border-bottom: 2px solid var(--c-terminal-borderColor);    
 }
 
 .c-terminal__button {
@@ -157,11 +98,8 @@
     display: inline-block;
     height: var(--c-terminal__buttonSize);
     width: var(--c-terminal__buttonSize);
-    border-radius: 100%;
-    // border: 1px solid var(--c-terminal-borderColor);
-    // border: 1px solid hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 100%, .15);
+    border-radius: 100%;    
     margin: var(--c-terminal__buttonMargin) var(--c-terminal__buttonMargin) 0;
-    // background-color: var(--global-color-neutral-700);
     background-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 100%, .15);
 
     & + & {
@@ -171,7 +109,6 @@
 
 .c-terminal__body {
     padding: var(--global-whitespace-base);
-    // min-height: 50vh;
 
     @include mq(bp3) {
        padding: var(--global-whitespace-double); 
@@ -179,32 +116,18 @@
 }
 
 .theme-dark {
-
     .c-terminal {
         --c-terminal-backgroundColor: transparent;
+        --c-terminal-borderColor: var(--global-border-color);
     }    
-
-    .c-post-cover {
-        // box-shadow: 0 0 0 1px var(--global-backgroundColor);
-        // background-color: rgba(0,0,0,.15);
-    }
 }
 
-@media (prefers-color-scheme: dark) {
 
+@media (prefers-color-scheme: dark) {
     .c-terminal {
         --c-terminal-backgroundColor: transparent;
+        --c-terminal-borderColor: var(--global-border-color);
     }    
-
-    .c-terminal-cover {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-
-    .c-post-cover {
-        // box-shadow: 0 0 0 1px var(--global-backgroundColor);
-        // background-color: rgba(0,0,0,.15);
-    }
 }
 
 @keyframes "blink" {

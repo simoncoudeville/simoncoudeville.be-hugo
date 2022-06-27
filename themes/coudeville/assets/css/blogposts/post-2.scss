@@ -30,23 +30,19 @@
 }
 
 .c-cover__post-2 {
-  //   background-color: var(--global-meta-color);
   background-color: var(--global-text-color);
-  // background-color: var(--global-color-primary);
-  width: 100%;
-  height: auto;
-  display: block;
 
   path {
     stroke: var(--global-backgroundColor);
   }
 }
 
-// @media (prefers-color-scheme: dark) {
-//     .c-cover__post-2 {
-//         background-color: var(--global-meta-color);
-//     }
-// }
+@media (prefers-color-scheme: dark) {
+    .c-cover__post-2 {
+        // background-color: var(--global-color-neutral-600);
+        background-color: var(--global-text-color);
+    }
+}
 
 // Example: Baseline grid
 

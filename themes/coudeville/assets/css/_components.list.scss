@@ -11,10 +11,19 @@
   // @include mq(bp3) {
   // border-bottom: 1px solid var(--global-border-color);
   // }
+
+  display: grid;
+  gap: var(--global-whitespace-base);
+}
+
+.c-list--dates {
+  @include mq(bp3) {
+    gap: var(--global-whitespace-xs);
+  }  
 }
 
 .c-list__item {
-  margin-bottom: var(--global-whitespace-base);
+  // margin-bottom: var(--global-whitespace-base);
 
   // display: flex;
   // justify-content: space-between;
@@ -25,20 +34,24 @@
 
   & + & {
     // padding-top: var(--global-whitespace-base);
+    // padding-top: var(--global-whitespace-xs);
     // border-top: 1px solid var(--global-border-color);
   }
 
   @include mq(bp3) {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    align-items: baseline;
-    column-gap: var(--global-whitespace-base);
-    // margin-bottom: var(--global-whitespace-s);
-    // margin-bottom: var(--global-whitespace-base);
-    // padding-top: var(--global-whitespace-s);
-    // padding-top: var(--global-whitespace-base);
-    // border-top: 1px solid var(--global-border-color);
+
+    .c-list--dates & {
+      display: flex;
+      justify-content: space-between;
+      // flex-direction: row-reverse;
+      align-items: baseline;
+      column-gap: var(--global-whitespace-base);
+      // margin-bottom: var(--global-whitespace-s);
+      // margin-bottom: var(--global-whitespace-base);
+      // padding-top: var(--global-whitespace-s);
+      // padding-top: var(--global-whitespace-base);
+      // border-top: 1px solid var(--global-border-color);
+    }   
   }
 
   // &:after {
@@ -60,18 +73,21 @@
   // margin-right: 1rem;
   // padding: calc(var(--global-baseline) / 2) 0;
   // padding-top: var(--global-baseline);
-  // color: var(--text-caption-color, var(--global-meta-color));
-  font-feature-settings: "zero", "liga", "tnum";
+  // color: var(--text-caption-color, var(--global-meta-color));  
   // font-feature-settings: "zero", "liga", "onum";
   // font-feature-settings: "zero", "liga", "c2sc", "smcp";
   // font-weight: normal;
   // @include ms-s;
-  // padding: var(--global-whitespace-xxs) 0 0;
-  @include ms-s;
+  // padding: var(--global-whitespace-xxs) 0 0;  
   // @include ms-xs;
   // font-family: $beta-font-family;
   // color: var(--global-meta-color);
   flex-shrink: 0;
+}
+
+.c-list__meta--date {
+  font-feature-settings: "zero", "liga", "tnum";
+  @include ms-s;
 }
 
 .c-list__meta--draft {

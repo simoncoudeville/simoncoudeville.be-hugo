@@ -8,21 +8,15 @@
   --link-decoration-color: var(--global-meta-color);
   --link-hover-color: var(--global-link-hover-color);
   grid-column: content;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: baseline;
-  // border-top: 1px solid var(--global-border-color);
-  padding-top: var(--global-whitespace-double);
-  // font-size: var(--global-fontSize-s);
-  // padding: calc(var(--global-baseline) / 4) 0;
-  //   @include ms-s;
-  // @include ms-xs;
+  
+  // padding-top: var(--global-whitespace-double);
 
-  @include mq(bp3) {
+  // @include mq(bp3) {
     grid-column-gap: var(--global-whitespace-base);
-    grid-template-columns: auto 1fr auto;
-    // justify-items: space-between;
-  }
+    // grid-template-columns: auto 1fr auto;
+    display: grid;
+    // grid-template-columns: auto 1fr;
+  // }
 
   // @include mq(bp5) {
   //   grid-column: 1 / -1;
@@ -32,16 +26,16 @@
 }
 
 .c-footer__copy {
-  // font-family: $beta-font-family;
-  font-feature-settings: 'zero', 'liga', 'tnum';
-  @include ms-s;
-  // padding: calc(var(--global-baseline) / 2) 0;
+  font-feature-settings: 'zero', 'liga', 'tnum';  
   color: var(--global-meta-color);
-  grid-row: 2;
+  // grid-row: 2;
+  @include ms-s;
 
-  @include mq(bp3) {
-    grid-row: 1;
-  }
+  // @include mq(bp3) {
+  //   grid-row: 2;
+  //   justify-self: end;
+  //   align-self: end;
+  // }
 
   @include mq(bp5) {
     // grid-row: 1;
@@ -58,8 +52,7 @@
 }
 
 .c-footer__logo {
-  // font-weight: $beta-font-weight;
-  grid-row: 2;
+  // grid-row: 1;
 
   // @include mq(bp3) {
   //   grid-row: 1;
@@ -67,32 +60,33 @@
 }
 
 .c-footer__links {
-  grid-column: 1;
-  grid-row: 1;
+  // grid-column: 1;
+  grid-row: 2;
   // @include ms-s;
 
-  @include mq(bp3) {
-    grid-column: 2;
-  }
+  // @include mq(bp3) {
+    // grid-column: 2;
+  // }
 
   // @include mq(bp6) {
   //     grid-row: 1;
   //     grid-column: content;
   // }
 
-  .c-social-links {
-    margin-bottom: 0;
-  }
+  // .c-social-links {
+  //   margin-bottom: 0;
+  // }
 }
 
 .c-footer__top {
   text-align: right;
   grid-row: 2;
+  align-self: end;
 
-  @include mq(bp3) {
-    grid-row: 1;
-    grid-column: 3;
-  }
+  // @include mq(bp3) {
+    // grid-row: 1;
+    // grid-column: 3;
+  // }
 
   // @include mq(bp6) {
   //   grid-row: 1;
