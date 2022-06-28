@@ -14,7 +14,7 @@
   grid: var(--grid);
   grid-row-gap: var(--global-whitespace-base);
   // align-content: space-between;
-  align-content: end;
+  // align-content: end;
   // align-content: center;
   // padding: var(--grid-whitespace) 0 calc(var(--grid-whitespace) / 2);
   padding: clamp(1rem, unquote("-1.2500rem + 10.0000vw"), 5rem);

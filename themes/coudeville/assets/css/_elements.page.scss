@@ -34,7 +34,7 @@ html {
   color: var(--global-text-color);
   font-family: $alpha-font-family;
   // font-family: $beta-font-family;
-  //   font-weight: $beta-font-weight;
+    font-weight: $beta-font-weight;
   font-size: var(--global-root-fontSize);
   font-feature-settings: 'zero', 'liga', 'dlig';
   -webkit-font-smoothing: antialiased;

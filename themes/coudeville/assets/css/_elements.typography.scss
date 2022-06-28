@@ -121,20 +121,20 @@ small {
 }
 
 strong {
-  font-weight: $alpha-font-weight;
+  font-weight: $beta-font-weight;
   color: var(--global-link-color);
 }
 
 // Links
 
 a {
-  font-weight: $alpha-font-weight;
+  // font-weight: $alpha-font-weight;
   font-family: $alpha-font-family;
   color: var(--global-link-color);
   transition: all $animation-duration-alpha $animation-easing-out;
   display: inline-block;
   // text-decoration-thickness: 0.075em;
-  text-decoration-thickness: from-font;
+  // text-decoration-thickness: from-font;
   // text-decoration-color: var(--global-color-beta);
 
   &:visited {
