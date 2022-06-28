@@ -1,25 +1,9 @@
 :root {
     --global-color-alpha: #{$color-alpha};
     --global-hue-color-alpha: #{hue($color-alpha)};
-    --global-saturation-color-alpha: #{saturation($color-alpha)};
-    --global-lightness-color-alpha: #{lightness($color-alpha)};
 
-    --global-hue-color-beta: #{hue($color-beta)};
-    --global-saturation-color-beta: #{saturation($color-beta)};
-    // --global-lightness-color-beta: 71%;
-    --global-lightness-color-beta: #{lightness($color-beta)};
-    --global-color-beta: hsl(var(--global-hue-color-beta), var(--global-saturation-color-beta), var(--global-lightness-color-beta));
-    --global-lightness-color-beta-dark: 65%;
-    --global-color-beta-dark: hsl(var(--global-hue-color-beta), var(--global-saturation-color-beta), var(--global-lightness-color-beta-dark));
-    --global-color-beta-xxxx-light: hsl(var(--global-hue-color-beta), 10%, 94%);
-
-    --global-color-gamma: #{$color-gamma};
-    --global-hue-color-gamma: #{hue($color-gamma)};
-    --global-saturation-color-gamma: #{saturation($color-gamma)};
-    --global-lightness-color-gamma: #{lightness($color-gamma)};
-
-    --global-neutral-hue: var(--global-hue-color-beta);
-    --global-neutral-saturation: 3%;
+    --global-neutral-hue: var(--global-hue-color-alpha);
+    --global-neutral-saturation: 5%;
 
     --global-color-neutral-100: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 97%);
     --global-color-neutral-200: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 94%);

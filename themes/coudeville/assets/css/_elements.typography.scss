@@ -41,46 +41,24 @@ ul {
 
 h1,
 .h1 {
-  // font-feature-settings: "zero", "liga", "ss01";
-  // font-weight: $alpha-font-weight;
-  // letter-spacing: -.015em;
-  // font-family: serif;
-  font-weight: $alpha-font-weight;
+  font-weight: $beta-font-weight;
   margin-bottom: var(--global-whitespace-base);
-  @include ms-l;
-
-  @include mq(bp2) {
-    @include ms-l;
-  }
-
-  @include mq(bp3) {
-    @include ms-xl;
-  }
-
-  @include mq(bp4) {
-    @include ms-xxl;
-  }
-
-  @include mq(bp5) {
-    @include ms-xxxl;
-  }
+  font-size: clamp(1.5rem, unquote("0.9545rem + 2.4242vw"), 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 h2,
 .h2 {
-  // font-weight: $beta-font-weight;
-  font-weight: $alpha-font-weight;
+  font-weight: $beta-font-weight;
   margin-bottom: var(--global-whitespace-base);
   @include ms-m;
 }
 
 h3,
 .h3 {
-  // text-transform: uppercase;
   font-weight: $beta-font-weight;
-  // font-weight: $alpha-font-weight;
   margin-bottom: var(--global-whitespace-base);
-  // color: var(--global-meta-color);
   @include ms-base;
 }
 
@@ -128,14 +106,10 @@ strong {
 // Links
 
 a {
-  // font-weight: $alpha-font-weight;
   font-family: $alpha-font-family;
   color: var(--global-link-color);
-  transition: all $animation-duration-alpha $animation-easing-out;
+  transition: color $animation-duration-alpha $animation-easing-out;
   display: inline-block;
-  // text-decoration-thickness: 0.075em;
-  // text-decoration-thickness: from-font;
-  // text-decoration-color: var(--global-color-beta);
 
   &:visited {
     color: var(--global-link-color);

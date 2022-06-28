@@ -3,47 +3,42 @@ title: Designer & teacher
 description: Personal website of Simon Coudeville
 ---
 
-<main class="o-row">
-  <div class="o-container o-container--left-content">
-    <div class="c-intro s-content">
-      <p class="c-fluid-text-m-xxl u-max-width-optical">
-        <strong>Hi, my name is Simon.</strong> I'm a designer and coder into in responsive web-design, HTML & CSS,
-        Javascript, typography and animation. Currently teaching at <a href="https://mct.be">MCT</a> &amp;
-        <a href="https://devine.be">Devine</a>. Some of my design work is on
-        <a href="https://dribbble.com/coudeville">Dribbble</a>. Some of my code experiments are on
-        <a href="https://codepen.io/simoncoudeville/">Codepen</a>. Send me an
-        <a href="mailto:coudeville.simon@gmail.com">email</a> or follow me on
-        <a href="https://twitter.com/simoncoudeville">Twitter</a>.
-        <!-- <span id="moreContent" class="c-intro__more-content">
-          <br />
-          I've been designing interfaces and writing CSS for over 15 years. I love trying out all the new advancements
-          CSS is getting. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, laborum. Consequuntur
-          perferendis quis sapiente blanditiis numquam qui, quas doloribus accusantium sequi cupiditate pariatur,
-          dolorem dolorum. Nisi aut eveniet amet perspiciatis?
-          <br />
-          <br />
-          I live in the beautifull city of Bruges, Belgium with my wife and 2 kids: <a href="/ida">Ida</a> &
-          <a href="/sam">Sam</a>. <br />
-          <br />
-        </span>
-        <a id="moreContentButton" class="c-link-more" onclick="toggleContent()" href="#moreContent">Read more</a> -->
-      </p>
-      <!-- <p>
-        I'm Simon, a designer based in Bruges, Belgium. I've been doing design, front-end development and technical
-        writing for over 12 years and remote working for just over 2 years.
-      </p>
-      <p class="u-muted">Bruges, Belgium</p> -->
-    </div>
-  </div>
-</main>
+
+<p class="c-intro h1 u-max-width-optical">
+  <strong>Hi, my name is Simon.</strong> I'm a designer and coder into in responsive web-design, HTML & CSS,
+  Javascript, typography and animation. Currently teaching at <a href="https://mct.be">MCT</a> &amp;
+  <a href="https://devine.be">Devine</a>. Some of my design work is on
+  <a href="https://dribbble.com/coudeville">Dribbble</a>. Some of my code experiments are on
+  <a href="https://codepen.io/simoncoudeville/">Codepen</a>. Send me an
+  <a href="mailto:coudeville.simon@gmail.com">email</a> or follow me on
+  <a href="https://twitter.com/simoncoudeville">Twitter</a>.
+  <!-- <span id="moreContent" class="c-intro__more-content">
+    <br />
+    I've been designing interfaces and writing CSS for over 15 years. I love trying out all the new advancements
+    CSS is getting. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, laborum. Consequuntur
+    perferendis quis sapiente blanditiis numquam qui, quas doloribus accusantium sequi cupiditate pariatur,
+    dolorem dolorum. Nisi aut eveniet amet perspiciatis?
+    <br />
+    <br />
+    I live in the beautifull city of Bruges, Belgium with my wife and 2 kids: <a href="/ida">Ida</a> &
+    <a href="/sam">Sam</a>. <br />
+    <br />
+  </span>
+  <a id="moreContentButton" class="c-link-more" onclick="toggleContent()" href="#moreContent">Read more</a> -->
+</p>
+<!-- <p>
+  I'm Simon, a designer based in Bruges, Belgium. I've been doing design, front-end development and technical
+  writing for over 12 years and remote working for just over 2 years.
+</p>
+<p class="u-muted">Bruges, Belgium</p> -->
 
 <svg class="filter">
   <defs>
     <filter id="filter">
-      <feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.001 " numOctaves="8" result="NOISE">
+      <feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.0002" numOctaves="8" result="NOISE">
       </feTurbulence>
       <feGaussianBlur in="SourceGraphic" result="BLURRED" stdDeviation="0"></feGaussianBlur>
-      <feDisplacementMap id="displacer" in2="NOISE" in="BLURRED" scale="15" xChannelSelector="R" yChannelSelector="R" result="DISPLACED"></feDisplacementMap>
+      <feDisplacementMap id="displacer" in2="NOISE" in="BLURRED" scale="50" xChannelSelector="R" yChannelSelector="R" result="DISPLACED"></feDisplacementMap>
     </filter>
   </defs>
 </svg>

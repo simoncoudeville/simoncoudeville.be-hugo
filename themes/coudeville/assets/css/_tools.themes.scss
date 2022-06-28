@@ -5,35 +5,16 @@
 //
 
 @mixin theme-light {
-  --global-backgroundColor: var(--global-color-neutral-200);
-  // --global-backgroundColor: var(--global-color-beta-xxxx-light);
-  --global-backgroundColor: GHOSTWHITE;
-  // --global-backgroundColor: #F1F0F7;
-  // --global-backgroundColor: LAVENDER;
-  --global-surfaceColor: white;
-  --global-surfaceColor-2: var(--global-color-neutral-100);
-  --global-text-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 10%, 0.9);
-  --global-heading-color: var(--global-color-neutral-900);
-  // --global-meta-color: var(--global-color-neutral-500);
-  --global-meta-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 10%, 0.5);
-  --global-border-color: var(--global-color-neutral-300);
-  --global-border-color-hard: var(--global-color-neutral-400);
-  --global-shadow-border-color: rgba(0, 0, 0, 0.1);
-  --global-link-color: var(--global-color-neutral-900);
+  --global-backgroundColor: ghostwhite;
+  --global-text-color: var(--global-color-neutral-900);  
+  --global-meta-color: var(--global-color-neutral-500);  
+  --global-link-color: var(--global-text-color);
   --global-link-hover-color: var(--global-meta-color);
   --global-selection-backgroundColor: var(--global-text-color);
   --global-selection-color: var(--global-backgroundColor);
 }
 
 @mixin theme-dark {
-  --global-color-neutral-500: hsl(var(--global-neutral-hue), var(--global-neutral-saturation), 53.5%);
-  --global-backgroundColor: black;
-  --global-surfaceColor: var(--global-color-neutral-900);
-  --global-surfaceColor-2: var(--global-color-neutral-700);
-  --global-text-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 90%, 0.9);
-  --global-link-color: var(--global-color-neutral-100);
-  --global-meta-color: hsla(var(--global-neutral-hue), var(--global-neutral-saturation), 90%, 0.5);
-  --global-border-color: var(--global-color-neutral-700);
-  --global-border-color-hard: var(--global-color-neutral-600);
-  --global-shadow-border-color: rgba(255, 255, 255, 0.1);
+  --global-backgroundColor: var(--global-color-neutral-900);  
+  --global-text-color: ghostwhite;
 }

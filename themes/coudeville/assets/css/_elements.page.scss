@@ -33,8 +33,7 @@ html {
   background-color: var(--global-backgroundColor);
   color: var(--global-text-color);
   font-family: $alpha-font-family;
-  // font-family: $beta-font-family;
-    font-weight: $beta-font-weight;
+  font-weight: $beta-font-weight;
   font-size: var(--global-root-fontSize);
   font-feature-settings: 'zero', 'liga', 'dlig';
   -webkit-font-smoothing: antialiased;
@@ -52,11 +51,9 @@ html {
 }
 
 body {
-  //   background-color: var(--global-surfaceColor);
-  // max-width: var(--global-container-maxWidth);
-  margin: 0 auto;
+  margin: 0;
+  padding: clamp(1rem, unquote("-1.2500rem + 10.0000vw"), 5rem);
   font-size: var(--global-fontSize);
-  line-height: baseline(var(--global-baseline-multiplier));
 }
 
 ::selection {
