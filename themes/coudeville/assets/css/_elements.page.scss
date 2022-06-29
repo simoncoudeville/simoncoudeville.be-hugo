@@ -33,6 +33,7 @@ html {
   background-color: var(--global-backgroundColor);
   color: var(--global-text-color);
   font-family: $alpha-font-family;
+  // font-family: "Calvino Web";
   font-weight: $beta-font-weight;
   font-size: var(--global-root-fontSize);
   font-feature-settings: 'zero', 'liga', 'dlig';
@@ -52,8 +53,11 @@ html {
 
 body {
   margin: 0;
-  padding: clamp(1rem, unquote("-1.2500rem + 10.0000vw"), 5rem);
+  padding: clamp(1.5rem, unquote("-1.2500rem + 10.0000vw"), 5rem);
   font-size: var(--global-fontSize);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
 }
 
 ::selection {

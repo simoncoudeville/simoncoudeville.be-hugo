@@ -5,24 +5,6 @@ Font-face declarations
 */
 
 @font-face {
-  font-family: 'Suisse Intl Web Mono';
-  src: url('../fonts/SuisseIntlMono-Regular-WebS.woff2') format('woff2'),
-    url('../fonts/SuisseIntlMono-Regular-WebS.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal;
-}
-
-@font-face {
-  font-family: 'Suisse Intl Web';
-  src: url('../fonts/SuisseIntl-Regular-WebXL.woff2') format('woff2'),
-    url('../fonts/SuisseIntl-Regular-WebXL.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal;
-}
-
-@font-face {
   font-family: 'Suisse Intl Web';
   src: url('../fonts/SuisseIntl-Book-WebXL.woff2') format('woff2'),
     url('../fonts/SuisseIntl-Book-WebXL.woff') format('woff');
@@ -32,34 +14,17 @@ Font-face declarations
 }
 
 @font-face {
-  font-family: 'Suisse Works Web';
-  src: url('../fonts/SuisseWorks-Regular-WebXL.woff2') format('woff2'),
-    url('../fonts/SuisseWorks-Regular-WebXL.woff') format('woff');
-  font-weight: 400;
+  font-family: 'Calvino Grande Web';
+  src: url('../fonts/Calvino-Grande-Thin.woff2') format('woff2');
+  font-weight: 200;
   font-style: normal;
   font-stretch: normal;
 }
 
 @font-face {
-  font-family: 'NT Bau Web';
-  src: url('../fonts/NTBau-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal;
-}
-
-@font-face {
-  font-family: 'NT Bau Web';
-  src: url('../fonts/NTBau-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-}
-
-@font-face {
-  font-family: 'NT Bau Web';
-  src: url('../fonts/NTBau-Bold.woff2') format('woff2');
-  font-weight: 700;
+  font-family: 'Calvino Web';
+  src: url('../fonts/Calvino-Light.woff2') format('woff2');
+  font-weight: 200;
   font-style: normal;
   font-stretch: normal;
 }
